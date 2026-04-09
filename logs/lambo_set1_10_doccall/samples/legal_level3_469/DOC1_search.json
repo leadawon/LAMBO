@@ -1,0 +1,65 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "task_mode": "clustering",
+  "think": "The document seems to involve a case related to '执行案由-先予执行' based on the information provided in DOC1_A2 where it mentions王某1申请先予执行后续医疗费用30万元 (Wang applied for advance execution of subsequent medical expenses of 300,000 yuan). I will inspect DOC1_A2 first to confirm the details of the case and its classification.",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC1_A2",
+  "candidate_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 31.401,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "新疆生产建设兵团第四师融媒体中心不服新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定，申请复议。法院查明王某1与新疆生产建设兵团第四师广播电视台、胡秀健康权纠纷一案，已执行完毕。王某1申请先予执行后续医疗费用30万元，法院裁定同意。"
+    },
+    {
+      "anchor_id": "DOC1_A3",
+      "score": 31.114,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。"
+    },
+    {
+      "anchor_id": "DOC1_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "复议申请人是新疆生产建设兵团第四师融媒体中心，法定代表人是林玢，委托诉讼代理人是沈传武。申请执行人是王某1及其法定代理人王某2。被执行人是胡秀。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书1》. First coordinate candidate is DOC1_A2.",
+  "raw_plan_text": "<think>The document seems to involve a case related to '执行案由-先予执行' based on the information provided in DOC1_A2 where it mentions王某1申请先予执行后续医疗费用30万元 (Wang applied for advance execution of subsequent medical expenses of 300,000 yuan). I will inspect DOC1_A2 first to confirm the details of the case and its classification.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC1_A2\",\"candidate_anchor_ids\":[\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\"]}</search>",
+  "tagged_trace": "<think>The document seems to involve a case related to '执行案由-先予执行' based on the information provided in DOC1_A2 where it mentions王某1申请先予执行后续医疗费用30万元 (Wang applied for advance execution of subsequent medical expenses of 300,000 yuan). I will inspect DOC1_A2 first to confirm the details of the case and its classification.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\"], \"next_anchor_id\": \"DOC1_A2\"}</search>"
+}

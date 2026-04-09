@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "selected_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2"
+  ],
+  "final_current_query": "查找与'海事海商纠纷'相关的具体证据或描述",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到给定的案由类别中",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC6_A1",
+        "candidate_anchor_ids": [
+          "DOC6_A1",
+          "DOC6_A2",
+          "DOC6_A3",
+          "DOC6_A4"
+        ]
+      },
+      "anchor_id": "DOC6_A1",
+      "plan_think": "The document seems to be related to a maritime transportation contract dispute between Ningbo Logistics Company, Ningbo Company, and Zhejiang Company. The case involves issues such as cargo loss and liability. Based on the information provided, it appears that the case falls under the category of '海事海商纠纷'. I will inspect the first chunk to confirm the details.",
+      "info": {
+        "anchor_id": "DOC6_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "上诉人（原审被告）为宁波物流公司和宁波公司，被上诉人（原审原告）为浙江公司。",
+        "text": "上诉人（原审被告）：宁波物流公司。\n\n上诉人（原审被告）：宁波公司。\n\n被上诉人（原审原告）：浙江公司。"
+      },
+      "extract_think": "该段落提供了案件当事人的基本信息，但没有直接提到具体的案由类别。需要进一步查找文档中的其他部分来确定具体的案由。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "查找与'海事海商纠纷'相关的具体证据或描述"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "查找与'海事海商纠纷'相关的具体证据或描述",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC6_A2",
+        "candidate_anchor_ids": [
+          "DOC6_A2",
+          "DOC6_A3",
+          "DOC6_A4",
+          "DOC6_A5"
+        ]
+      },
+      "anchor_id": "DOC6_A2",
+      "plan_think": "考虑到当前文档涉及宁波物流公司和宁波公司与浙江公司之间的海上货物运输合同纠纷，这符合'海事海商纠纷'的案由。我将检查包含案件背景的锚点，以确认这一分类。",
+      "info": {
+        "anchor_id": "DOC6_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "宁波物流公司和宁波公司因与浙江公司之间的海上货物运输合同纠纷，不服宁波海事法院的民事判决，提起上诉。",
+        "text": "上诉人宁波物流公司、宁波公司因与被上诉人浙江公司（海上货物运输合同纠纷一案，不服宁波海事法院（2023）浙72民初958号民事判决，向本院提起上诉。本院于2023年11月15日受理后，依法组成合议庭进行了审理，并于2024年1月25日进行调查质证。本案现已审理终结。"
+      },
+      "extract_think": "该段落明确提到了宁波物流公司和宁波公司与浙江公司之间的海上货物运输合同纠纷，这符合'海事海商纠纷'的案由。因此，可以将此判决文书归类为'海事海商纠纷'。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "海事海商纠纷",
+            "value": "判决文书6",
+            "normalized_value": "判决文书6",
+            "evidence_text": "上诉人宁波物流公司、宁波公司因与被上诉人浙江公司（海上货物运输合同纠纷一案，不服宁波海事法院（2023）浙72民初958号民事判决，向本院提起上诉。",
+            "source_doc_id": "DOC6",
+            "source_anchor_id": "DOC6_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "海事海商纠纷",
+      "value": "判决文书6",
+      "normalized_value": "判决文书6",
+      "evidence_text": "上诉人宁波物流公司、宁波公司因与被上诉人浙江公司（海上货物运输合同纠纷一案，不服宁波海事法院（2023）浙72民初958号民事判决，向本院提起上诉。",
+      "source_doc_id": "DOC6",
+      "source_anchor_id": "DOC6_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to be related to a maritime transportation contract dispute between Ningbo Logistics Company, Ningbo Company, and Zhejiang Company. The case involves issues such as cargo loss and liability. Based on the information provided, it appears that the case falls under the category of '海事海商纠纷'. I will inspect the first chunk to confirm the details.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A1\", \"candidate_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC6_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人（原审被告）为宁波物流公司和宁波公司，被上诉人（原审原告）为浙江公司。\", \"text\": \"上诉人（原审被告）：宁波物流公司。\\n\\n上诉人（原审被告）：宁波公司。\\n\\n被上诉人（原审原告）：浙江公司。\"}</info>\n<think>该段落提供了案件当事人的基本信息，但没有直接提到具体的案由类别。需要进一步查找文档中的其他部分来确定具体的案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与'海事海商纠纷'相关的具体证据或描述\"}</retrieve>\n<think>考虑到当前文档涉及宁波物流公司和宁波公司与浙江公司之间的海上货物运输合同纠纷，这符合'海事海商纠纷'的案由。我将检查包含案件背景的锚点，以确认这一分类。</think>\n<search>{\"current_query\": \"查找与'海事海商纠纷'相关的具体证据或描述\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A2\", \"candidate_anchor_ids\": [\"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\", \"DOC6_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC6_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"宁波物流公司和宁波公司因与浙江公司之间的海上货物运输合同纠纷，不服宁波海事法院的民事判决，提起上诉。\", \"text\": \"上诉人宁波物流公司、宁波公司因与被上诉人浙江公司（海上货物运输合同纠纷一案，不服宁波海事法院（2023）浙72民初958号民事判决，向本院提起上诉。本院于2023年11月15日受理后，依法组成合议庭进行了审理，并于2024年1月25日进行调查质证。本案现已审理终结。\"}</info>\n<think>该段落明确提到了宁波物流公司和宁波公司与浙江公司之间的海上货物运输合同纠纷，这符合'海事海商纠纷'的案由。因此，可以将此判决文书归类为'海事海商纠纷'。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"海事海商纠纷\", \"value\": \"判决文书6\", \"normalized_value\": \"判决文书6\", \"evidence_text\": \"上诉人宁波物流公司、宁波公司因与被上诉人浙江公司（海上货物运输合同纠纷一案，不服宁波海事法院（2023）浙72民初958号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC6\", \"source_anchor_id\": \"DOC6_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to a maritime transportation contract dispute between Ningbo Logistics Company, Ningbo Company, and Zhejiang Company. The case involves issues such as cargo loss and liability. Based on the information provided, it appears that the case falls under the category of '海事海商纠纷'. I will inspect the first chunk to confirm the details.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A1\", \"candidate_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC6_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人（原审被告）为宁波物流公司和宁波公司，被上诉人（原审原告）为浙江公司。\", \"text\": \"上诉人（原审被告）：宁波物流公司。\\n\\n上诉人（原审被告）：宁波公司。\\n\\n被上诉人（原审原告）：浙江公司。\"}</info>\n<think>该段落提供了案件当事人的基本信息，但没有直接提到具体的案由类别。需要进一步查找文档中的其他部分来确定具体的案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与'海事海商纠纷'相关的具体证据或描述\"}</retrieve>\n<think>考虑到当前文档涉及宁波物流公司和宁波公司与浙江公司之间的海上货物运输合同纠纷，这符合'海事海商纠纷'的案由。我将检查包含案件背景的锚点，以确认这一分类。</think>\n<search>{\"current_query\": \"查找与'海事海商纠纷'相关的具体证据或描述\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A2\", \"candidate_anchor_ids\": [\"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\", \"DOC6_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC6_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"宁波物流公司和宁波公司因与浙江公司之间的海上货物运输合同纠纷，不服宁波海事法院的民事判决，提起上诉。\", \"text\": \"上诉人宁波物流公司、宁波公司因与被上诉人浙江公司（海上货物运输合同纠纷一案，不服宁波海事法院（2023）浙72民初958号民事判决，向本院提起上诉。本院于2023年11月15日受理后，依法组成合议庭进行了审理，并于2024年1月25日进行调查质证。本案现已审理终结。\"}</info>\n<think>该段落明确提到了宁波物流公司和宁波公司与浙江公司之间的海上货物运输合同纠纷，这符合'海事海商纠纷'的案由。因此，可以将此判决文书归类为'海事海商纠纷'。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"海事海商纠纷\", \"value\": \"判决文书6\", \"normalized_value\": \"判决文书6\", \"evidence_text\": \"上诉人宁波物流公司、宁波公司因与被上诉人浙江公司（海上货物运输合同纠纷一案，不服宁波海事法院（2023）浙72民初958号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC6\", \"source_anchor_id\": \"DOC6_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

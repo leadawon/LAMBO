@@ -1,0 +1,123 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "selected_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2"
+  ],
+  "final_current_query": "查找涉及'行政行为-行政裁决'或其他相关案由的具体描述。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A1",
+        "candidate_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4"
+        ]
+      },
+      "anchor_id": "DOC2_A1",
+      "plan_think": "The document seems to involve administrative actions related to a regulatory body's decision and a subsequent appeal. The case appears to fall under '行政行为-行政裁决'. I will inspect the first chunk to confirm if it contains more details about the administrative decision and the nature of the dispute.",
+      "info": {
+        "anchor_id": "DOC2_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "再审申请人郭某某，被申请人国家金融监督管理总局山东监管局和国家金融监督管理总局。",
+        "text": "再审申请人（一审原告、二审上诉人）郭某某。\n\n被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。\n\n被申请人（一审被告、二审被上诉人）国家金融监督管理总局。"
+      },
+      "extract_think": "该段落提供了案件当事人的基本信息，包括再审申请人郭某某以及被申请人国家金融监督管理总局山东监管局和国家金融监督管理总局。然而，这段文字并没有明确指出案件的具体案由。为了确定案件的分类，需要进一步查找有关案件性质的信息。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "document_title",
+            "value": "《判决文书2》",
+            "normalized_value": "判决文书2",
+            "evidence_text": "再审申请人（一审原告、二审上诉人）郭某某。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A1",
+            "confidence": 0.5
+          }
+        ],
+        "enough": false,
+        "followup_query": "查找涉及'行政行为-行政裁决'或其他相关案由的具体描述。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "查找涉及'行政行为-行政裁决'或其他相关案由的具体描述。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A2",
+        "candidate_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4"
+        ]
+      },
+      "anchor_id": "DOC2_A2",
+      "plan_think": "从之前的检索中，我们知道这个案件涉及到国家金融监督管理总局及其山东监管局。接下来应该查看案件背景部分，以确认案件是否属于'行政行为-行政裁决'类别。",
+      "info": {
+        "anchor_id": "DOC2_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "郭某某因山东监管局复查意见及金融监管总局行政复议不服，向北京金融法院申请再审，要求撤销二审裁定及一审裁定，驳回山东监管局和金融监管总局的诉讼请求。",
+        "text": "郭某某因诉原中国银行保险监督管理委员会山东监管局（现已变更为国家金融监督管理总局山东监管局，以下统称为山东监管局）复查意见及国家金融监督管理总局（以下简称金融监管总局）行政复议一案，不服北京金融法院（以下简称二审法院）作出的（2023）京74行终11号行政裁定（以下简称二审裁定），向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n郭某某向本院申请再审，请求撤销二审裁定及北京市西城区人民法院（以下简称一审法院）作出的（2022）京0102行初388号行政裁定，驳回山东监管局、金融监管总局全部诉讼请求，并对该案进行再审。主要理由为，原审法院作出的裁定存在驳回起诉确有错误，认定事实的主要证据不足、未经质证，适用法律错误，违反法律规定的诉讼程序、可能影响公正审判，且有新的证据足以推翻原判决等情形。"
+      },
+      "extract_think": "该段落详细描述了郭某某因不服山东监管局的复查意见及金融监管总局的行政复议而提起的再审申请。这表明案件涉及行政行为中的行政裁决，符合'行政行为-行政裁决'的案由。因此，可以将此判决文书归类到'行政行为-行政裁决'类别中。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政裁决",
+            "value": [
+              "《判决文书2》"
+            ],
+            "normalized_value": "判决文书2",
+            "evidence_text": "郭某某因诉原中国银行保险监督管理委员会山东监管局（现已变更为国家金融监督管理总局山东监管局，以下统称为山东监管局）复查意见及国家金融监督管理总局（以下简称金融监管总局）行政复议一案，不服北京金融法院（以下简称二审法院）作出的（2023）京74行终11号行政裁定（以下简称二审裁定），向本院申请再审。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A2",
+            "confidence": 0.9
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "document_title",
+      "value": "《判决文书2》",
+      "normalized_value": "判决文书2",
+      "evidence_text": "再审申请人（一审原告、二审上诉人）郭某某。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A1",
+      "confidence": 0.5
+    },
+    {
+      "answer_key": "行政行为-行政裁决",
+      "value": [
+        "《判决文书2》"
+      ],
+      "normalized_value": "判决文书2",
+      "evidence_text": "郭某某因诉原中国银行保险监督管理委员会山东监管局（现已变更为国家金融监督管理总局山东监管局，以下统称为山东监管局）复查意见及国家金融监督管理总局（以下简称金融监管总局）行政复议一案，不服北京金融法院（以下简称二审法院）作出的（2023）京74行终11号行政裁定（以下简称二审裁定），向本院申请再审。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "confidence": 0.9
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to involve administrative actions related to a regulatory body's decision and a subsequent appeal. The case appears to fall under '行政行为-行政裁决'. I will inspect the first chunk to confirm if it contains more details about the administrative decision and the nature of the dispute.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人郭某某，被申请人国家金融监督管理总局山东监管局和国家金融监督管理总局。\", \"text\": \"再审申请人（一审原告、二审上诉人）郭某某。\\n\\n被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。\\n\\n被申请人（一审被告、二审被上诉人）国家金融监督管理总局。\"}</info>\n<think>该段落提供了案件当事人的基本信息，包括再审申请人郭某某以及被申请人国家金融监督管理总局山东监管局和国家金融监督管理总局。然而，这段文字并没有明确指出案件的具体案由。为了确定案件的分类，需要进一步查找有关案件性质的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_title\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人（一审原告、二审上诉人）郭某某。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A1\", \"confidence\": 0.5}], \"enough\": false, \"followup_query\": \"查找涉及'行政行为-行政裁决'或其他相关案由的具体描述。\"}</retrieve>\n<think>从之前的检索中，我们知道这个案件涉及到国家金融监督管理总局及其山东监管局。接下来应该查看案件背景部分，以确认案件是否属于'行政行为-行政裁决'类别。</think>\n<search>{\"current_query\": \"查找涉及'行政行为-行政裁决'或其他相关案由的具体描述。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"郭某某因山东监管局复查意见及金融监管总局行政复议不服，向北京金融法院申请再审，要求撤销二审裁定及一审裁定，驳回山东监管局和金融监管总局的诉讼请求。\", \"text\": \"郭某某因诉原中国银行保险监督管理委员会山东监管局（现已变更为国家金融监督管理总局山东监管局，以下统称为山东监管局）复查意见及国家金融监督管理总局（以下简称金融监管总局）行政复议一案，不服北京金融法院（以下简称二审法院）作出的（2023）京74行终11号行政裁定（以下简称二审裁定），向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n郭某某向本院申请再审，请求撤销二审裁定及北京市西城区人民法院（以下简称一审法院）作出的（2022）京0102行初388号行政裁定，驳回山东监管局、金融监管总局全部诉讼请求，并对该案进行再审。主要理由为，原审法院作出的裁定存在驳回起诉确有错误，认定事实的主要证据不足、未经质证，适用法律错误，违反法律规定的诉讼程序、可能影响公正审判，且有新的证据足以推翻原判决等情形。\"}</info>\n<think>该段落详细描述了郭某某因不服山东监管局的复查意见及金融监管总局的行政复议而提起的再审申请。这表明案件涉及行政行为中的行政裁决，符合'行政行为-行政裁决'的案由。因此，可以将此判决文书归类到'行政行为-行政裁决'类别中。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": [\"《判决文书2》\"], \"normalized_value\": \"判决文书2\", \"evidence_text\": \"郭某某因诉原中国银行保险监督管理委员会山东监管局（现已变更为国家金融监督管理总局山东监管局，以下统称为山东监管局）复查意见及国家金融监督管理总局（以下简称金融监管总局）行政复议一案，不服北京金融法院（以下简称二审法院）作出的（2023）京74行终11号行政裁定（以下简称二审裁定），向本院申请再审。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve administrative actions related to a regulatory body's decision and a subsequent appeal. The case appears to fall under '行政行为-行政裁决'. I will inspect the first chunk to confirm if it contains more details about the administrative decision and the nature of the dispute.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人郭某某，被申请人国家金融监督管理总局山东监管局和国家金融监督管理总局。\", \"text\": \"再审申请人（一审原告、二审上诉人）郭某某。\\n\\n被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。\\n\\n被申请人（一审被告、二审被上诉人）国家金融监督管理总局。\"}</info>\n<think>该段落提供了案件当事人的基本信息，包括再审申请人郭某某以及被申请人国家金融监督管理总局山东监管局和国家金融监督管理总局。然而，这段文字并没有明确指出案件的具体案由。为了确定案件的分类，需要进一步查找有关案件性质的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_title\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人（一审原告、二审上诉人）郭某某。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。 被申请人（一审被告、二审被上诉人）国家金融监督管理总局。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A1\", \"confidence\": 0.5}], \"enough\": false, \"followup_query\": \"查找涉及'行政行为-行政裁决'或其他相关案由的具体描述。\"}</retrieve>\n<think>从之前的检索中，我们知道这个案件涉及到国家金融监督管理总局及其山东监管局。接下来应该查看案件背景部分，以确认案件是否属于'行政行为-行政裁决'类别。</think>\n<search>{\"current_query\": \"查找涉及'行政行为-行政裁决'或其他相关案由的具体描述。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"郭某某因山东监管局复查意见及金融监管总局行政复议不服，向北京金融法院申请再审，要求撤销二审裁定及一审裁定，驳回山东监管局和金融监管总局的诉讼请求。\", \"text\": \"郭某某因诉原中国银行保险监督管理委员会山东监管局（现已变更为国家金融监督管理总局山东监管局，以下统称为山东监管局）复查意见及国家金融监督管理总局（以下简称金融监管总局）行政复议一案，不服北京金融法院（以下简称二审法院）作出的（2023）京74行终11号行政裁定（以下简称二审裁定），向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n郭某某向本院申请再审，请求撤销二审裁定及北京市西城区人民法院（以下简称一审法院）作出的（2022）京0102行初388号行政裁定，驳回山东监管局、金融监管总局全部诉讼请求，并对该案进行再审。主要理由为，原审法院作出的裁定存在驳回起诉确有错误，认定事实的主要证据不足、未经质证，适用法律错误，违反法律规定的诉讼程序、可能影响公正审判，且有新的证据足以推翻原判决等情形。\"}</info>\n<think>该段落详细描述了郭某某因不服山东监管局的复查意见及金融监管总局的行政复议而提起的再审申请。这表明案件涉及行政行为中的行政裁决，符合'行政行为-行政裁决'的案由。因此，可以将此判决文书归类到'行政行为-行政裁决'类别中。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": [\"《判决文书2》\"], \"normalized_value\": \"判决文书2\", \"evidence_text\": \"郭某某因诉原中国银行保险监督管理委员会山东监管局（现已变更为国家金融监督管理总局山东监管局，以下统称为山东监管局）复查意见及国家金融监督管理总局（以下简称金融监管总局）行政复议一案，不服北京金融法院（以下简称二审法院）作出的（2023）京74行终11号行政裁定（以下简称二审裁定），向本院申请再审。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}
