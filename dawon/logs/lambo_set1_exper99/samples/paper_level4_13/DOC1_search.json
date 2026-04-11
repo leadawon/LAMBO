@@ -1,0 +1,92 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "LGDE: Local Graph-based Dictionary Expansion",
+  "task_mode": "chain",
+  "think": "The current query aims to find a citation chain among the provided papers. To start, I need to look at the references section of this document to identify any citations that might link to other documents in the collection.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC1_A15",
+  "candidate_anchor_ids": [
+    "DOC1_A15"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A15",
+    "DOC1_A5"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A15",
+    "DOC1_A5",
+    "DOC1_A1",
+    "DOC1_A12",
+    "DOC1_A9",
+    "DOC1_A4",
+    "DOC1_A6",
+    "DOC1_A7",
+    "DOC1_A10",
+    "DOC1_A8",
+    "DOC1_A11",
+    "DOC1_A13",
+    "DOC1_A14"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 63.401,
+      "reasons": [
+        "query_overlap=5",
+        "instruction_overlap=4",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=1.40"
+      ],
+      "summary": "The introduction discusses the importance of dictionary expansion in information retrieval tasks and the challenges in domains with evolving semantics. It introduces LGDE, a met..."
+    },
+    {
+      "anchor_id": "DOC1_A3",
+      "score": 63.114,
+      "reasons": [
+        "query_overlap=5",
+        "instruction_overlap=4",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=1.11"
+      ],
+      "summary": "The problem definition section outlines the task of expanding a seed dictionary by adding words from a domain-specific corpus to create a more representative dictionary, measure..."
+    },
+    {
+      "anchor_id": "DOC1_A15",
+      "score": 63.0,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=14",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=0.00"
+      ],
+      "summary": "The references section lists academic papers and resources cited throughout the document, providing a comprehensive bibliography of related work and methodologies."
+    },
+    {
+      "anchor_id": "DOC1_A5",
+      "score": 59.708,
+      "reasons": [
+        "query_overlap=4",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "task_prior=8",
+        "position_bonus=0.71"
+      ],
+      "summary": "The motivation section explains the limitations of thresholding approaches in capturing chains of word associations and introduces LGDE as a method to address these limitations..."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for LGDE: Local Graph-based Dictionary Expansion. First coordinate candidate is DOC1_A15.",
+  "raw_plan_text": "<think>The current query aims to find a citation chain among the provided papers. To start, I need to look at the references section of this document to identify any citations that might link to other documents in the collection.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"citation/reference evidence\"],\"next_anchor_id\":\"DOC1_A15\",\"candidate_anchor_ids\":[\"DOC1_A15\"]}</search>",
+  "tagged_trace": "<think>The current query aims to find a citation chain among the provided papers. To start, I need to look at the references section of this document to identify any citations that might link to other documents in the collection.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC1_A15\"], \"next_anchor_id\": \"DOC1_A15\"}</search>"
+}

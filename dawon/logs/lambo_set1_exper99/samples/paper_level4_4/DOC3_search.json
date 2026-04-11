@@ -1,0 +1,88 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation",
+  "task_mode": "chain",
+  "think": "The current query is focused on identifying citation chains among the provided papers. To start building a citation chain, I need to look at the references section of this document to find citations to other papers. This will help me understand if this paper cites any of the others in the collection.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "ordered relations or decision/result mappings",
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC3_A8",
+  "candidate_anchor_ids": [
+    "DOC3_A8"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A8",
+    "DOC3_A5",
+    "DOC3_A7",
+    "DOC3_A2"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A8",
+    "DOC3_A5",
+    "DOC3_A7",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A6",
+    "DOC3_A4",
+    "DOC3_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A8",
+      "score": 80.303,
+      "reasons": [
+        "query_overlap=4",
+        "instruction_overlap=4",
+        "section_prior=14",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.30"
+      ],
+      "summary": "The references section lists academic papers related to neural text generation, language models, and evaluation metrics."
+    },
+    {
+      "anchor_id": "DOC3_A5",
+      "score": 59.708,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.71"
+      ],
+      "summary": "Experiments are conducted on three benchmarks: Wikinews, Wikitext-103, and BookCorpus. The GPT2-XL model is used for comparisons. Automatic evaluations show that CD performs bet..."
+    },
+    {
+      "anchor_id": "DOC3_A7",
+      "score": 53.421,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=0.42"
+      ],
+      "summary": "The conclusion summarizes the empirical comparison between CD and CS, highlighting that while CD performs better on MAUVE, CS performs better on diversity and coherence. Human e..."
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 49.401,
+      "reasons": [
+        "query_overlap=2",
+        "instruction_overlap=2",
+        "section_prior=4",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "The study compares Contrastive Search (CS) and Contrastive Decoding (CD) for open-ended text generation. While CD performs better on the MAUVE metric, CS surpasses CD on diversi..."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation. First coordinate candidate is DOC3_A8.",
+  "raw_plan_text": "<think>The current query is focused on identifying citation chains among the provided papers. To start building a citation chain, I need to look at the references section of this document to find citations to other papers. This will help me understand if this paper cites any of the others in the collection.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"ordered relations or decision/result mappings\",\"citation/reference evidence\"],\"next_anchor_id\":\"DOC3_A8\",\"candidate_anchor_ids\":[\"DOC3_A8\"]}</search>",
+  "tagged_trace": "<think>The current query is focused on identifying citation chains among the provided papers. To start building a citation chain, I need to look at the references section of this document to find citations to other papers. This will help me understand if this paper cites any of the others in the collection.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC3_A8\"], \"next_anchor_id\": \"DOC3_A8\"}</search>"
+}

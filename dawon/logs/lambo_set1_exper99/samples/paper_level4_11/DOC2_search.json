@@ -1,0 +1,86 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models",
+  "task_mode": "chain",
+  "think": "The current query aims to find a citation chain among the provided papers. To start, I need to look at the references section of this document to identify any citations that might link to other papers in the set.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC2_A10",
+  "candidate_anchor_ids": [
+    "DOC2_A10"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A10",
+    "DOC2_A3",
+    "DOC2_A4",
+    "DOC2_A8"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A10",
+    "DOC2_A3",
+    "DOC2_A4",
+    "DOC2_A8",
+    "DOC2_A9",
+    "DOC2_A6",
+    "DOC2_A5",
+    "DOC2_A2",
+    "DOC2_A1",
+    "DOC2_A7"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A10",
+      "score": 63.102,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=14",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=0.10"
+      ],
+      "summary": "Lists references related to the research, covering various aspects of information retrieval, large language models, and reranking techniques."
+    },
+    {
+      "anchor_id": "DOC2_A3",
+      "score": 58.114,
+      "reasons": [
+        "query_overlap=4",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=12",
+        "position_bonus=1.11"
+      ],
+      "summary": "Provides background on text retrieval, including the evolution of reranking methods from pointwise to listwise approaches, and discusses the use of LLMs as prompt-decoders for r..."
+    },
+    {
+      "anchor_id": "DOC2_A4",
+      "score": 43.891,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=0.89"
+      ],
+      "summary": "Details the prompt design for zero-shot listwise reranking and describes the training process of RankVicuna, including the use of RankGPT 3.5 as a teacher model and data augment..."
+    },
+    {
+      "anchor_id": "DOC2_A8",
+      "score": 43.303,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=0.30"
+      ],
+      "summary": "Summarizes the contributions of RankVicuna, emphasizing its effectiveness, stability, and the potential for integrating large language models into information retrieval systems."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models. First coordinate candidate is DOC2_A10.",
+  "raw_plan_text": "<think>The current query aims to find a citation chain among the provided papers. To start, I need to look at the references section of this document to identify any citations that might link to other papers in the set.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"citation/reference evidence\"],\"next_anchor_id\":\"DOC2_A10\",\"candidate_anchor_ids\":[\"DOC2_A10\"]}</search>",
+  "tagged_trace": "<think>The current query aims to find a citation chain among the provided papers. To start, I need to look at the references section of this document to identify any citations that might link to other papers in the set.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC2_A10\"], \"next_anchor_id\": \"DOC2_A10\"}</search>"
+}

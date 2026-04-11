@@ -1,0 +1,350 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+  "selected_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A3",
+    "DOC1_A7"
+  ],
+  "final_current_query": "Acknowledgements",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "Scalable Pre-training of Large Autoregressive Image Models",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ]
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The abstract (DOC1_A1) is likely to contain information about the main contributions and references to other works that this paper builds upon. This could provide initial clues about the references and citations.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "Scalable Pre-training of Large Autoregressive Image Models > Abstract",
+        "summary": "This paper introduces AIM, a collection of vision models pre-trained with an autoregressive objective, inspired by Large Language Models (LLMs). AIM demonstrates improved performance with increased model capacity and data quantity, and its objective function value correlates with downstream performance. A 7 billion parameter AIM model achieves 84.0% on ImageNet1k with a frozen trunk.",
+        "text": "#### Abstract\n\nThis paper introduces AIM, a collection of vision models pre-trained with an autoregressive objective. These models are inspired by their textual counterparts, i.e., Large Language Models (LLMs), and exhibit similar scaling properties. Specifically, we highlight two key findings: (1) the performance of the visual features scale with both the model capacity and the quantity of data, (2) the value of the objective function correlates with the performance of the model on downstream tasks. We illustrate the practical implication of these findings by pre-training a 7 billion parameter AIM on 2 billion images that achieves $84.0 \\%$ on ImageNet$1 k$ with a frozen trunk. Interestingly, even at this scale, we observe no sign of saturation in performance, suggesting that AIM potentially represents a new frontier for training large-scale vision models. The pre-training of AIM is similar to the pre-training of LLMs, and does not require any image-specific strategy to stabilize the training at scale.\n\n[^0]\n## 1. Introduction"
+      },
+      "extract_think": "The abstract provides an overview of the paper's contributions and mentions inspiration from Large Language Models (LLMs). However, it does not explicitly cite or reference other provided papers. Additional sections such as the introduction or related work might contain explicit citations and references.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Introduction"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Introduction",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A3",
+        "candidate_anchor_ids": [
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5"
+        ]
+      },
+      "anchor_id": "DOC1_A3",
+      "plan_think": "The related work section (DOC1_A3) is likely to contain explicit references to other papers that this document builds upon or compares itself against. This section often includes detailed citations and references to prior work, which can help identify the reference and citation relationships.",
+      "info": {
+        "anchor_id": "DOC1_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "Scalable Pre-training of Large Autoregressive Image Models > 2. Related Work",
+        "summary": "The related work section covers autoregressive models for images, self-supervised pre-training, other generative pre-training methods, and pre-training at scale. It highlights advancements in autoregressive models for images and contrasts AIM with existing self-supervised methods, noting AIM's clear benefit from scale.",
+        "text": "## 2. Related Work\n\nAutoregressive models. While most of the literature on autoregressive models come from language modeling [9, 53, 64] or speech [56, 57], few works have explored the potential of this approach for images [18, 49, 61, 61, 68, 76].\nOf particular interest, Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31]. Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79]. More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements. Our work follows this line of research, and we benefit from training on significantly more data, and further improvement in architecture design [29], training [73, 75] and understanding of the scaling law [43]. Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).\n\nSelf-supervised pre-training. Pre-training vision models on datasets of images without supervision has been a fruitful area of research in recent years [10, 27, 28, 34, 54, 87, 88]. Different approaches have been employed, focusing on various proxy tasks for feature learning. For example, Noroozi and Favaro [55] learn to re-arrange the order of shuffled image patches. Some other works have relied on clustering $[7,14,17,83]$. Another popular approach involves the use of a contrastive objective, that resembles predictive coding, where the objective is to identify each image $[19,40]$. Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88]. In a similar vein, some works have proposed predictive approaches $[2,6]$ or a form of feature whitening [85]. Closer to our approach are works inspired by BERT [26] where patches are masked and predicted with an autoencoder in either their discrete [5] or pixel [41] form.\n\nOther generative pre-training. Autoregressive modeling is a form of generative modeling, and few other generative approaches have been considered to learn visual features. The first category leverages some form of autoencoding where the pretext task corresponds to some denoising task. For instance, the noise can be salt-and-pepper [81] or masking [5, 62]. Another line of work leverages Generative Adversarial Networks (GANs) [35]. Most notably, BigGAN [12] trains a large GAN and re-uses the image discriminator to produce image features. More recently, DiffMAE [82] used diffusion models to learn image features.\n\nPre-training at scale. There are numerous works on scaling the pre-training of visual features with no supervision $[15,36,37,58,70,72]$. The most salient work in this area is DINOv2 where they produce the best self-supervised features by scaling the iBot method [88] on a private dataset of $142 \\mathrm{M}$ images and a $460 \\mathrm{M}$ parameter model. The conclusion from this work is that a carefully tuned contrastive method scales reasonably well, but they do not exhibit the scaling law that we observe with language modeling. They\nalso rely on an intricate implementation of contrastive learning to avoid the pitfalls described by Chen et al. [20]. In parallel, Singh et al. [70] study the scaling of Masked Autoencoders (MAE) [39]. While the study focuses on a weaklysupervised setup, it does not showcase strong improvements to the self-supervised pre-training as the data is scaled to billions of images. In contrast, we observe a clear benefit of scale on the quality of our features, even at a scale of a few billions of parameters and billions of images."
+      },
+      "extract_think": "The related work section contains several citations to other papers, which can be used to identify the references for the current paper. However, there is no explicit mention of this paper being cited by others, so we cannot determine citations from this chunk alone. Further inspection of other sections might be necessary to find citations.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "Reference",
+            "value": "Van den Oord et al.",
+            "normalized_value": "van_den_oord_et_al",
+            "evidence_text": "Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31].",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "Parmar et al.",
+            "normalized_value": "parmar_et_al",
+            "evidence_text": "Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79].",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "Chen et al.",
+            "normalized_value": "chen_et_al",
+            "evidence_text": "More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "Bai et al.",
+            "normalized_value": "bai_et_al",
+            "evidence_text": "Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "Noroozi and Favaro",
+            "normalized_value": "noroozi_and_favaro",
+            "evidence_text": "For example, Noroozi and Favaro [55] learn to re-arrange the order of shuffled image patches.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "DINO",
+            "normalized_value": "dino",
+            "evidence_text": "Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "BYOL",
+            "normalized_value": "byol",
+            "evidence_text": "Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "iBot",
+            "normalized_value": "ibot",
+            "evidence_text": "Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "BigGAN",
+            "normalized_value": "biggan",
+            "evidence_text": "Most notably, BigGAN [12] trains a large GAN and re-uses the image discriminator to produce image features.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "DiffMAE",
+            "normalized_value": "diffmae",
+            "evidence_text": "More recently, DiffMAE [82] used diffusion models to learn image features.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "DINOv2",
+            "normalized_value": "dinov2",
+            "evidence_text": "The most salient work in this area is DINOv2 where they produce the best self-supervised features by scaling the iBot method [88] on a private dataset of $142 \\mathrm{M}$ images and a $460 \\mathrm{M}$ parameter model.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "Reference",
+            "value": "Singh et al.",
+            "normalized_value": "singh_et_al",
+            "evidence_text": "In parallel, Singh et al. [70] study the scaling of Masked Autoencoders (MAE) [39].",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0
+          }
+        ],
+        "enough": false,
+        "followup_query": "Conclusion"
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Conclusion",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A7",
+        "candidate_anchor_ids": [
+          "DOC1_A7",
+          "DOC1_A8",
+          "DOC1_A9"
+        ]
+      },
+      "anchor_id": "DOC1_A7",
+      "plan_think": "The conclusion section (DOC1_A7) may contain a summary of the paper's contributions and how they compare to or build upon previous work. This section could also provide insights into whether other papers cite this work, although it is less likely compared to the introduction or related work sections. Since we already have some references identified, checking the conclusion might help us find any additional references or confirm if this paper is cited by others.",
+      "info": {
+        "anchor_id": "DOC1_A7",
+        "anchor_type": "paragraph_region",
+        "section_path": "Scalable Pre-training of Large Autoregressive Image Models > 5. Results > 5.5. Low-Rank Adaptation",
+        "summary": "The discussion highlights AIM's seamless scalability, effective use of large uncurated datasets, and strong performance across benchmarks. Limitations include potential overfitting risks and challenges in scaling contrastive methods.",
+        "text": "### 5.5. Low-Rank Adaptation\n\nIn addition to frozen-trunk evaluation, we examine LowRank Adaptation (LoRA) [44], a popular and efficient finetuning method. We report the results of LoRA fintuning of AIM in Table 8. We observe that LoRA is compatible with AIM, leading to a large boost in performance compared to frozen-trunk evaluation. For example, AIM-7B improves by $3.9 \\%$ (compared to the last layer's performance) while finetuning only $0.1 \\%$ percent of the trunk parameters.\n\n|  | AIM-0.6B | AIM-1B | AIM-3B | AIM-7B |\n| :--- | :---: | :---: | :---: | :---: |\n| attentive | 78.5 | 80.6 | 82.2 | 82.4 |\n| LoRA (rank=8) | 81.0 | 83.6 | 85.5 | 86.3 |\n\nTable 8. Low-rank adaptation (IN-1k). AIM is compatible with LoRA showing large gains compared to frozen-trunk evaluations.\n\n## 6. Discussion\n\nIn this paper, we presented a simple and scalable method for pre-training vision models at scale without supervision. We employed a generative autoregressive objective during pretraining and proposed several technical contributions to better adapt it for downstream transfer. Consequently, we observed a number of desirable properties for our Autoregressive Image Models. First, the capacity of our models can be effortlessly scaled to 7 billion parameters using a vanilla transformer implementation, without resorting to stabilityinducing techniques or extensive adjustments of hyperparameters for each model scale. Second, AIM's performance on the pre-training task has a strong correlation with downstream performance. Third, AIM achieves strong performance across 15 recognition benchmarks, outperforming prior state-of-the-art methods like MAE and significantly narrowing the gap between generative and joint embedding pre-training approaches. Finally, we did not observe any clear signs of saturation as we scale either in terms of parameters or data, suggesting that there is a potential for further performance improvements with larger models trained for even longer schedules. We hope that AIM serves as a seed for future research in scalable vision models that effectively leverage uncurated datasets without any bias towards object-centric images or strong dependence on captions.\n\nLimitations. AIM excels in its seamless scalability and its effective utilization of large volumes of uncurated image data. However, alternative methods can offer different trade-offs. MAE [41] provides high sample efficiency and can learn good representations using a small amount of pretraining data, reducing the risk of overfitting [30] in contrast to our approach. Contrastive methods [17, 58, 88] currently result in stronger representations for a given model size compared to generative approaches such as MAE and AIM, but pose significant challenges in terms of scalability and loss tractability due to the complexity of their objective."
+      },
+      "extract_think": "The conclusion section provides a summary of the paper's contributions and limitations, but it does not introduce new references or citations beyond what was already found in the related work section. The only new reference mentioned here is LoRA [44], which was not previously identified. However, this section does not provide any evidence of this paper being cited by others. Therefore, we can add LoRA as a reference and continue searching for citations in other sections.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "Reference",
+            "value": "LoRA",
+            "normalized_value": "lora",
+            "evidence_text": "In addition to frozen-trunk evaluation, we examine LowRank Adaptation (LoRA) [44], a popular and efficient finetuning method.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A7",
+            "confidence": 1.0
+          }
+        ],
+        "enough": false,
+        "followup_query": "Acknowledgements"
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "Reference",
+      "value": "Van den Oord et al.",
+      "normalized_value": "van_den_oord_et_al",
+      "evidence_text": "Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31].",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "Parmar et al.",
+      "normalized_value": "parmar_et_al",
+      "evidence_text": "Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79].",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "Chen et al.",
+      "normalized_value": "chen_et_al",
+      "evidence_text": "More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "Bai et al.",
+      "normalized_value": "bai_et_al",
+      "evidence_text": "Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "Noroozi and Favaro",
+      "normalized_value": "noroozi_and_favaro",
+      "evidence_text": "For example, Noroozi and Favaro [55] learn to re-arrange the order of shuffled image patches.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "DINO",
+      "normalized_value": "dino",
+      "evidence_text": "Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "BYOL",
+      "normalized_value": "byol",
+      "evidence_text": "Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "iBot",
+      "normalized_value": "ibot",
+      "evidence_text": "Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "BigGAN",
+      "normalized_value": "biggan",
+      "evidence_text": "Most notably, BigGAN [12] trains a large GAN and re-uses the image discriminator to produce image features.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "DiffMAE",
+      "normalized_value": "diffmae",
+      "evidence_text": "More recently, DiffMAE [82] used diffusion models to learn image features.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "DINOv2",
+      "normalized_value": "dinov2",
+      "evidence_text": "The most salient work in this area is DINOv2 where they produce the best self-supervised features by scaling the iBot method [88] on a private dataset of $142 \\mathrm{M}$ images and a $460 \\mathrm{M}$ parameter model.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "Singh et al.",
+      "normalized_value": "singh_et_al",
+      "evidence_text": "In parallel, Singh et al. [70] study the scaling of Masked Autoencoders (MAE) [39].",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "Reference",
+      "value": "LoRA",
+      "normalized_value": "lora",
+      "evidence_text": "In addition to frozen-trunk evaluation, we examine LowRank Adaptation (LoRA) [44], a popular and efficient finetuning method.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A7",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The abstract (DOC1_A1) is likely to contain information about the main contributions and references to other works that this paper builds upon. This could provide initial clues about the references and citations.</think>\n<search>{\"current_query\": \"Scalable Pre-training of Large Autoregressive Image Models\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Scalable Pre-training of Large Autoregressive Image Models > Abstract\", \"summary\": \"This paper introduces AIM, a collection of vision models pre-trained with an autoregressive objective, inspired by Large Language Models (LLMs). AIM demonstrates improved performance with increased model capacity and data quantity, and its objective function value correlates with downstream performance. A 7 billion parameter AIM model achieves 84.0% on ImageNet1k with a frozen trunk.\", \"text\": \"#### Abstract\\n\\nThis paper introduces AIM, a collection of vision models pre-trained with an autoregressive objective. These models are inspired by their textual counterparts, i.e., Large Language Models (LLMs), and exhibit similar scaling properties. Specifically, we highlight two key findings: (1) the performance of the visual features scale with both the model capacity and the quantity of data, (2) the value of the objective function correlates with the performance of the model on downstream tasks. We illustrate the practical implication of these findings by pre-training a 7 billion parameter AIM on 2 billion images that achieves $84.0 \\\\%$ on ImageNet$1 k$ with a frozen trunk. Interestingly, even at this scale, we observe no sign of saturation in performance, suggesting that AIM potentially represents a new frontier for training large-scale vision models. The pre-training of AIM is similar to the pre-training of LLMs, and does not require any image-specific strategy to stabilize the training at scale.\\n\\n[^0]\\n## 1. Introduction\"}</info>\n<think>The abstract provides an overview of the paper's contributions and mentions inspiration from Large Language Models (LLMs). However, it does not explicitly cite or reference other provided papers. Additional sections such as the introduction or related work might contain explicit citations and references.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Introduction\"}</retrieve>\n<think>The related work section (DOC1_A3) is likely to contain explicit references to other papers that this document builds upon or compares itself against. This section often includes detailed citations and references to prior work, which can help identify the reference and citation relationships.</think>\n<search>{\"current_query\": \"Introduction\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Scalable Pre-training of Large Autoregressive Image Models > 2. Related Work\", \"summary\": \"The related work section covers autoregressive models for images, self-supervised pre-training, other generative pre-training methods, and pre-training at scale. It highlights advancements in autoregressive models for images and contrasts AIM with existing self-supervised methods, noting AIM's clear benefit from scale.\", \"text\": \"## 2. Related Work\\n\\nAutoregressive models. While most of the literature on autoregressive models come from language modeling [9, 53, 64] or speech [56, 57], few works have explored the potential of this approach for images [18, 49, 61, 61, 68, 76].\\nOf particular interest, Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31]. Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79]. More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements. Our work follows this line of research, and we benefit from training on significantly more data, and further improvement in architecture design [29], training [73, 75] and understanding of the scaling law [43]. Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).\\n\\nSelf-supervised pre-training. Pre-training vision models on datasets of images without supervision has been a fruitful area of research in recent years [10, 27, 28, 34, 54, 87, 88]. Different approaches have been employed, focusing on various proxy tasks for feature learning. For example, Noroozi and Favaro [55] learn to re-arrange the order of shuffled image patches. Some other works have relied on clustering $[7,14,17,83]$. Another popular approach involves the use of a contrastive objective, that resembles predictive coding, where the objective is to identify each image $[19,40]$. Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88]. In a similar vein, some works have proposed predictive approaches $[2,6]$ or a form of feature whitening [85]. Closer to our approach are works inspired by BERT [26] where patches are masked and predicted with an autoencoder in either their discrete [5] or pixel [41] form.\\n\\nOther generative pre-training. Autoregressive modeling is a form of generative modeling, and few other generative approaches have been considered to learn visual features. The first category leverages some form of autoencoding where the pretext task corresponds to some denoising task. For instance, the noise can be salt-and-pepper [81] or masking [5, 62]. Another line of work leverages Generative Adversarial Networks (GANs) [35]. Most notably, BigGAN [12] trains a large GAN and re-uses the image discriminator to produce image features. More recently, DiffMAE [82] used diffusion models to learn image features.\\n\\nPre-training at scale. There are numerous works on scaling the pre-training of visual features with no supervision $[15,36,37,58,70,72]$. The most salient work in this area is DINOv2 where they produce the best self-supervised features by scaling the iBot method [88] on a private dataset of $142 \\\\mathrm{M}$ images and a $460 \\\\mathrm{M}$ parameter model. The conclusion from this work is that a carefully tuned contrastive method scales reasonably well, but they do not exhibit the scaling law that we observe with language modeling. They\\nalso rely on an intricate implementation of contrastive learning to avoid the pitfalls described by Chen et al. [20]. In parallel, Singh et al. [70] study the scaling of Masked Autoencoders (MAE) [39]. While the study focuses on a weaklysupervised setup, it does not showcase strong improvements to the self-supervised pre-training as the data is scaled to billions of images. In contrast, we observe a clear benefit of scale on the quality of our features, even at a scale of a few billions of parameters and billions of images.\"}</info>\n<think>The related work section contains several citations to other papers, which can be used to identify the references for the current paper. However, there is no explicit mention of this paper being cited by others, so we cannot determine citations from this chunk alone. Further inspection of other sections might be necessary to find citations.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Van den Oord et al.\", \"normalized_value\": \"van_den_oord_et_al\", \"evidence_text\": \"Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Parmar et al.\", \"normalized_value\": \"parmar_et_al\", \"evidence_text\": \"Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Chen et al.\", \"normalized_value\": \"chen_et_al\", \"evidence_text\": \"More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Bai et al.\", \"normalized_value\": \"bai_et_al\", \"evidence_text\": \"Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Noroozi and Favaro\", \"normalized_value\": \"noroozi_and_favaro\", \"evidence_text\": \"For example, Noroozi and Favaro [55] learn to re-arrange the order of shuffled image patches.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"DINO\", \"normalized_value\": \"dino\", \"evidence_text\": \"Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"BYOL\", \"normalized_value\": \"byol\", \"evidence_text\": \"Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"iBot\", \"normalized_value\": \"ibot\", \"evidence_text\": \"Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"BigGAN\", \"normalized_value\": \"biggan\", \"evidence_text\": \"Most notably, BigGAN [12] trains a large GAN and re-uses the image discriminator to produce image features.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"DiffMAE\", \"normalized_value\": \"diffmae\", \"evidence_text\": \"More recently, DiffMAE [82] used diffusion models to learn image features.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"DINOv2\", \"normalized_value\": \"dinov2\", \"evidence_text\": \"The most salient work in this area is DINOv2 where they produce the best self-supervised features by scaling the iBot method [88] on a private dataset of $142 \\\\mathrm{M}$ images and a $460 \\\\mathrm{M}$ parameter model.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Singh et al.\", \"normalized_value\": \"singh_et_al\", \"evidence_text\": \"In parallel, Singh et al. [70] study the scaling of Masked Autoencoders (MAE) [39].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"Conclusion\"}</retrieve>\n<think>The conclusion section (DOC1_A7) may contain a summary of the paper's contributions and how they compare to or build upon previous work. This section could also provide insights into whether other papers cite this work, although it is less likely compared to the introduction or related work sections. Since we already have some references identified, checking the conclusion might help us find any additional references or confirm if this paper is cited by others.</think>\n<search>{\"current_query\": \"Conclusion\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A7\", \"candidate_anchor_ids\": [\"DOC1_A7\", \"DOC1_A8\", \"DOC1_A9\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Scalable Pre-training of Large Autoregressive Image Models > 5. Results > 5.5. Low-Rank Adaptation\", \"summary\": \"The discussion highlights AIM's seamless scalability, effective use of large uncurated datasets, and strong performance across benchmarks. Limitations include potential overfitting risks and challenges in scaling contrastive methods.\", \"text\": \"### 5.5. Low-Rank Adaptation\\n\\nIn addition to frozen-trunk evaluation, we examine LowRank Adaptation (LoRA) [44], a popular and efficient finetuning method. We report the results of LoRA fintuning of AIM in Table 8. We observe that LoRA is compatible with AIM, leading to a large boost in performance compared to frozen-trunk evaluation. For example, AIM-7B improves by $3.9 \\\\%$ (compared to the last layer's performance) while finetuning only $0.1 \\\\%$ percent of the trunk parameters.\\n\\n|  | AIM-0.6B | AIM-1B | AIM-3B | AIM-7B |\\n| :--- | :---: | :---: | :---: | :---: |\\n| attentive | 78.5 | 80.6 | 82.2 | 82.4 |\\n| LoRA (rank=8) | 81.0 | 83.6 | 85.5 | 86.3 |\\n\\nTable 8. Low-rank adaptation (IN-1k). AIM is compatible with LoRA showing large gains compared to frozen-trunk evaluations.\\n\\n## 6. Discussion\\n\\nIn this paper, we presented a simple and scalable method for pre-training vision models at scale without supervision. We employed a generative autoregressive objective during pretraining and proposed several technical contributions to better adapt it for downstream transfer. Consequently, we observed a number of desirable properties for our Autoregressive Image Models. First, the capacity of our models can be effortlessly scaled to 7 billion parameters using a vanilla transformer implementation, without resorting to stabilityinducing techniques or extensive adjustments of hyperparameters for each model scale. Second, AIM's performance on the pre-training task has a strong correlation with downstream performance. Third, AIM achieves strong performance across 15 recognition benchmarks, outperforming prior state-of-the-art methods like MAE and significantly narrowing the gap between generative and joint embedding pre-training approaches. Finally, we did not observe any clear signs of saturation as we scale either in terms of parameters or data, suggesting that there is a potential for further performance improvements with larger models trained for even longer schedules. We hope that AIM serves as a seed for future research in scalable vision models that effectively leverage uncurated datasets without any bias towards object-centric images or strong dependence on captions.\\n\\nLimitations. AIM excels in its seamless scalability and its effective utilization of large volumes of uncurated image data. However, alternative methods can offer different trade-offs. MAE [41] provides high sample efficiency and can learn good representations using a small amount of pretraining data, reducing the risk of overfitting [30] in contrast to our approach. Contrastive methods [17, 58, 88] currently result in stronger representations for a given model size compared to generative approaches such as MAE and AIM, but pose significant challenges in terms of scalability and loss tractability due to the complexity of their objective.\"}</info>\n<think>The conclusion section provides a summary of the paper's contributions and limitations, but it does not introduce new references or citations beyond what was already found in the related work section. The only new reference mentioned here is LoRA [44], which was not previously identified. However, this section does not provide any evidence of this paper being cited by others. Therefore, we can add LoRA as a reference and continue searching for citations in other sections.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"LoRA\", \"normalized_value\": \"lora\", \"evidence_text\": \"In addition to frozen-trunk evaluation, we examine LowRank Adaptation (LoRA) [44], a popular and efficient finetuning method.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A7\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"Acknowledgements\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The abstract (DOC1_A1) is likely to contain information about the main contributions and references to other works that this paper builds upon. This could provide initial clues about the references and citations.</think>\n<search>{\"current_query\": \"Scalable Pre-training of Large Autoregressive Image Models\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Scalable Pre-training of Large Autoregressive Image Models > Abstract\", \"summary\": \"This paper introduces AIM, a collection of vision models pre-trained with an autoregressive objective, inspired by Large Language Models (LLMs). AIM demonstrates improved performance with increased model capacity and data quantity, and its objective function value correlates with downstream performance. A 7 billion parameter AIM model achieves 84.0% on ImageNet1k with a frozen trunk.\", \"text\": \"#### Abstract\\n\\nThis paper introduces AIM, a collection of vision models pre-trained with an autoregressive objective. These models are inspired by their textual counterparts, i.e., Large Language Models (LLMs), and exhibit similar scaling properties. Specifically, we highlight two key findings: (1) the performance of the visual features scale with both the model capacity and the quantity of data, (2) the value of the objective function correlates with the performance of the model on downstream tasks. We illustrate the practical implication of these findings by pre-training a 7 billion parameter AIM on 2 billion images that achieves $84.0 \\\\%$ on ImageNet$1 k$ with a frozen trunk. Interestingly, even at this scale, we observe no sign of saturation in performance, suggesting that AIM potentially represents a new frontier for training large-scale vision models. The pre-training of AIM is similar to the pre-training of LLMs, and does not require any image-specific strategy to stabilize the training at scale.\\n\\n[^0]\\n## 1. Introduction\"}</info>\n<think>The abstract provides an overview of the paper's contributions and mentions inspiration from Large Language Models (LLMs). However, it does not explicitly cite or reference other provided papers. Additional sections such as the introduction or related work might contain explicit citations and references.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Introduction\"}</retrieve>\n<think>The related work section (DOC1_A3) is likely to contain explicit references to other papers that this document builds upon or compares itself against. This section often includes detailed citations and references to prior work, which can help identify the reference and citation relationships.</think>\n<search>{\"current_query\": \"Introduction\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Scalable Pre-training of Large Autoregressive Image Models > 2. Related Work\", \"summary\": \"The related work section covers autoregressive models for images, self-supervised pre-training, other generative pre-training methods, and pre-training at scale. It highlights advancements in autoregressive models for images and contrasts AIM with existing self-supervised methods, noting AIM's clear benefit from scale.\", \"text\": \"## 2. Related Work\\n\\nAutoregressive models. While most of the literature on autoregressive models come from language modeling [9, 53, 64] or speech [56, 57], few works have explored the potential of this approach for images [18, 49, 61, 61, 68, 76].\\nOf particular interest, Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31]. Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79]. More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements. Our work follows this line of research, and we benefit from training on significantly more data, and further improvement in architecture design [29], training [73, 75] and understanding of the scaling law [43]. Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).\\n\\nSelf-supervised pre-training. Pre-training vision models on datasets of images without supervision has been a fruitful area of research in recent years [10, 27, 28, 34, 54, 87, 88]. Different approaches have been employed, focusing on various proxy tasks for feature learning. For example, Noroozi and Favaro [55] learn to re-arrange the order of shuffled image patches. Some other works have relied on clustering $[7,14,17,83]$. Another popular approach involves the use of a contrastive objective, that resembles predictive coding, where the objective is to identify each image $[19,40]$. Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88]. In a similar vein, some works have proposed predictive approaches $[2,6]$ or a form of feature whitening [85]. Closer to our approach are works inspired by BERT [26] where patches are masked and predicted with an autoencoder in either their discrete [5] or pixel [41] form.\\n\\nOther generative pre-training. Autoregressive modeling is a form of generative modeling, and few other generative approaches have been considered to learn visual features. The first category leverages some form of autoencoding where the pretext task corresponds to some denoising task. For instance, the noise can be salt-and-pepper [81] or masking [5, 62]. Another line of work leverages Generative Adversarial Networks (GANs) [35]. Most notably, BigGAN [12] trains a large GAN and re-uses the image discriminator to produce image features. More recently, DiffMAE [82] used diffusion models to learn image features.\\n\\nPre-training at scale. There are numerous works on scaling the pre-training of visual features with no supervision $[15,36,37,58,70,72]$. The most salient work in this area is DINOv2 where they produce the best self-supervised features by scaling the iBot method [88] on a private dataset of $142 \\\\mathrm{M}$ images and a $460 \\\\mathrm{M}$ parameter model. The conclusion from this work is that a carefully tuned contrastive method scales reasonably well, but they do not exhibit the scaling law that we observe with language modeling. They\\nalso rely on an intricate implementation of contrastive learning to avoid the pitfalls described by Chen et al. [20]. In parallel, Singh et al. [70] study the scaling of Masked Autoencoders (MAE) [39]. While the study focuses on a weaklysupervised setup, it does not showcase strong improvements to the self-supervised pre-training as the data is scaled to billions of images. In contrast, we observe a clear benefit of scale on the quality of our features, even at a scale of a few billions of parameters and billions of images.\"}</info>\n<think>The related work section contains several citations to other papers, which can be used to identify the references for the current paper. However, there is no explicit mention of this paper being cited by others, so we cannot determine citations from this chunk alone. Further inspection of other sections might be necessary to find citations.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Van den Oord et al.\", \"normalized_value\": \"van_den_oord_et_al\", \"evidence_text\": \"Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Parmar et al.\", \"normalized_value\": \"parmar_et_al\", \"evidence_text\": \"Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Chen et al.\", \"normalized_value\": \"chen_et_al\", \"evidence_text\": \"More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Bai et al.\", \"normalized_value\": \"bai_et_al\", \"evidence_text\": \"Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Noroozi and Favaro\", \"normalized_value\": \"noroozi_and_favaro\", \"evidence_text\": \"For example, Noroozi and Favaro [55] learn to re-arrange the order of shuffled image patches.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"DINO\", \"normalized_value\": \"dino\", \"evidence_text\": \"Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"BYOL\", \"normalized_value\": \"byol\", \"evidence_text\": \"Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"iBot\", \"normalized_value\": \"ibot\", \"evidence_text\": \"Most recent contrastive approaches include DINO [58], BYOL [38] or iBot [88].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"BigGAN\", \"normalized_value\": \"biggan\", \"evidence_text\": \"Most notably, BigGAN [12] trains a large GAN and re-uses the image discriminator to produce image features.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"DiffMAE\", \"normalized_value\": \"diffmae\", \"evidence_text\": \"More recently, DiffMAE [82] used diffusion models to learn image features.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"DINOv2\", \"normalized_value\": \"dinov2\", \"evidence_text\": \"The most salient work in this area is DINOv2 where they produce the best self-supervised features by scaling the iBot method [88] on a private dataset of $142 \\\\mathrm{M}$ images and a $460 \\\\mathrm{M}$ parameter model.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}, {\"answer_key\": \"Reference\", \"value\": \"Singh et al.\", \"normalized_value\": \"singh_et_al\", \"evidence_text\": \"In parallel, Singh et al. [70] study the scaling of Masked Autoencoders (MAE) [39].\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"Conclusion\"}</retrieve>\n<think>The conclusion section (DOC1_A7) may contain a summary of the paper's contributions and how they compare to or build upon previous work. This section could also provide insights into whether other papers cite this work, although it is less likely compared to the introduction or related work sections. Since we already have some references identified, checking the conclusion might help us find any additional references or confirm if this paper is cited by others.</think>\n<search>{\"current_query\": \"Conclusion\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A7\", \"candidate_anchor_ids\": [\"DOC1_A7\", \"DOC1_A8\", \"DOC1_A9\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Scalable Pre-training of Large Autoregressive Image Models > 5. Results > 5.5. Low-Rank Adaptation\", \"summary\": \"The discussion highlights AIM's seamless scalability, effective use of large uncurated datasets, and strong performance across benchmarks. Limitations include potential overfitting risks and challenges in scaling contrastive methods.\", \"text\": \"### 5.5. Low-Rank Adaptation\\n\\nIn addition to frozen-trunk evaluation, we examine LowRank Adaptation (LoRA) [44], a popular and efficient finetuning method. We report the results of LoRA fintuning of AIM in Table 8. We observe that LoRA is compatible with AIM, leading to a large boost in performance compared to frozen-trunk evaluation. For example, AIM-7B improves by $3.9 \\\\%$ (compared to the last layer's performance) while finetuning only $0.1 \\\\%$ percent of the trunk parameters.\\n\\n|  | AIM-0.6B | AIM-1B | AIM-3B | AIM-7B |\\n| :--- | :---: | :---: | :---: | :---: |\\n| attentive | 78.5 | 80.6 | 82.2 | 82.4 |\\n| LoRA (rank=8) | 81.0 | 83.6 | 85.5 | 86.3 |\\n\\nTable 8. Low-rank adaptation (IN-1k). AIM is compatible with LoRA showing large gains compared to frozen-trunk evaluations.\\n\\n## 6. Discussion\\n\\nIn this paper, we presented a simple and scalable method for pre-training vision models at scale without supervision. We employed a generative autoregressive objective during pretraining and proposed several technical contributions to better adapt it for downstream transfer. Consequently, we observed a number of desirable properties for our Autoregressive Image Models. First, the capacity of our models can be effortlessly scaled to 7 billion parameters using a vanilla transformer implementation, without resorting to stabilityinducing techniques or extensive adjustments of hyperparameters for each model scale. Second, AIM's performance on the pre-training task has a strong correlation with downstream performance. Third, AIM achieves strong performance across 15 recognition benchmarks, outperforming prior state-of-the-art methods like MAE and significantly narrowing the gap between generative and joint embedding pre-training approaches. Finally, we did not observe any clear signs of saturation as we scale either in terms of parameters or data, suggesting that there is a potential for further performance improvements with larger models trained for even longer schedules. We hope that AIM serves as a seed for future research in scalable vision models that effectively leverage uncurated datasets without any bias towards object-centric images or strong dependence on captions.\\n\\nLimitations. AIM excels in its seamless scalability and its effective utilization of large volumes of uncurated image data. However, alternative methods can offer different trade-offs. MAE [41] provides high sample efficiency and can learn good representations using a small amount of pretraining data, reducing the risk of overfitting [30] in contrast to our approach. Contrastive methods [17, 58, 88] currently result in stronger representations for a given model size compared to generative approaches such as MAE and AIM, but pose significant challenges in terms of scalability and loss tractability due to the complexity of their objective.\"}</info>\n<think>The conclusion section provides a summary of the paper's contributions and limitations, but it does not introduce new references or citations beyond what was already found in the related work section. The only new reference mentioned here is LoRA [44], which was not previously identified. However, this section does not provide any evidence of this paper being cited by others. Therefore, we can add LoRA as a reference and continue searching for citations in other sections.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"LoRA\", \"normalized_value\": \"lora\", \"evidence_text\": \"In addition to frozen-trunk evaluation, we examine LowRank Adaptation (LoRA) [44], a popular and efficient finetuning method.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A7\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"Acknowledgements\"}</retrieve>"
+}

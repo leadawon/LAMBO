@@ -1,0 +1,90 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Query2doc: Query Expansion with Large Language Models",
+  "task_mode": "chain",
+  "think": "The current query is broad and does not specify a particular aspect of the document to focus on. However, the must-find checklist requires identifying ordered relations or decision/result mappings and citation/reference evidence. The most logical starting point would be the references section, as it directly provides citation evidence. Therefore, I will inspect the reference section of the document.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "ordered relations or decision/result mappings",
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC2_A10",
+  "candidate_anchor_ids": [
+    "DOC2_A10",
+    "DOC2_A3",
+    "DOC2_A5",
+    "DOC2_A7"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A10",
+    "DOC2_A3",
+    "DOC2_A5",
+    "DOC2_A7"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A10",
+    "DOC2_A3",
+    "DOC2_A5",
+    "DOC2_A7",
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A9",
+    "DOC2_A8",
+    "DOC2_A4",
+    "DOC2_A6"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A10",
+      "score": 77.102,
+      "reasons": [
+        "query_overlap=4",
+        "instruction_overlap=3",
+        "section_prior=14",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.10"
+      ],
+      "summary": "Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research."
+    },
+    {
+      "anchor_id": "DOC2_A3",
+      "score": 52.114,
+      "reasons": [
+        "query_overlap=4",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=1.11"
+      ],
+      "summary": "Describes the query2doc method, which uses few-shot prompting to generate pseudo-documents from LLMs. Details the process for sparse and dense retrieval, including concatenation..."
+    },
+    {
+      "anchor_id": "DOC2_A5",
+      "score": 43.708,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=0.71"
+      ],
+      "summary": "Details the experimental setup and main results, showing significant improvements in both in-domain and out-of-domain retrieval tasks when using query2doc with BM25 and dense re..."
+    },
+    {
+      "anchor_id": "DOC2_A7",
+      "score": 43.421,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=0.42"
+      ],
+      "summary": "Reviews query expansion and document expansion techniques, emphasizing the unique contributions of leveraging LLMs for query expansion and comparing with related work like HyDE..."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for Query2doc: Query Expansion with Large Language Models. First coordinate candidate is DOC2_A10.",
+  "raw_plan_text": "<think>The current query is broad and does not specify a particular aspect of the document to focus on. However, the must-find checklist requires identifying ordered relations or decision/result mappings and citation/reference evidence. The most logical starting point would be the references section, as it directly provides citation evidence. Therefore, I will inspect the reference section of the document.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"ordered relations or decision/result mappings\",\"citation\\/reference evidence\"],\"next_anchor_id\":\"DOC2_A10\",\"candidate_anchor_ids\":[\"DOC2_A10\",\"DOC2_A3\",\"DOC2_A5\",\"DOC2_A7\",\"DOC2_A1\",\"DOC2_A2\",\"DOC2_A9\",\"DOC2_A8\",\"DOC2_A4\",\"DOC2_A6\"]}</search>",
+  "tagged_trace": "<think>The current query is broad and does not specify a particular aspect of the document to focus on. However, the must-find checklist requires identifying ordered relations or decision/result mappings and citation/reference evidence. The most logical starting point would be the references section, as it directly provides citation evidence. Therefore, I will inspect the reference section of the document.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC2_A10\", \"DOC2_A3\", \"DOC2_A5\", \"DOC2_A7\"], \"next_anchor_id\": \"DOC2_A10\"}</search>"
+}

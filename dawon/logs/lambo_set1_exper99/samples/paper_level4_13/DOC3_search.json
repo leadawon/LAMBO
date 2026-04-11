@@ -1,0 +1,90 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "Query Expansion by Prompting Large Language Models",
+  "task_mode": "chain",
+  "think": "The current query is broad and does not specify a particular aspect of the document to focus on. However, the must-find checklist requires identifying ordered relations or citation/reference evidence. The most promising place to find citations would be in the references section of the document. Therefore, I will inspect the reference section next.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "ordered relations or decision/result mappings",
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC3_A10",
+  "candidate_anchor_ids": [
+    "DOC3_A10",
+    "DOC3_A3",
+    "DOC3_A7",
+    "DOC3_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A10",
+    "DOC3_A3",
+    "DOC3_A7",
+    "DOC3_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A10",
+    "DOC3_A3",
+    "DOC3_A7",
+    "DOC3_A4",
+    "DOC3_A5",
+    "DOC3_A6",
+    "DOC3_A9",
+    "DOC3_A1",
+    "DOC3_A8",
+    "DOC3_A2"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A10",
+      "score": 69.102,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=14",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.10"
+      ],
+      "summary": "The references section lists academic sources cited in the paper, covering topics such as probabilistic models, ontology-based query expansion, and the use of LLMs in informatio..."
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 49.114,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=2",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "task_prior=8",
+        "position_bonus=1.11"
+      ],
+      "summary": "The introduction discusses the limitations of traditional query expansion methods like PRF and introduces the use of LLMs for generating query expansions. It highlights the effe..."
+    },
+    {
+      "anchor_id": "DOC3_A7",
+      "score": 47.421,
+      "reasons": [
+        "query_overlap=4",
+        "instruction_overlap=3",
+        "section_prior=6",
+        "position_bonus=0.42"
+      ],
+      "summary": "The results section presents findings from the experiments, showing that CoT prompts perform best and that adding PRF documents improves top-heavy ranking metrics. It also discu..."
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 43.891,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "position_bonus=0.89"
+      ],
+      "summary": "The related work section reviews existing query expansion techniques and compares them with the proposed LLM-based approach, emphasizing the novelty of studying different prompt..."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for Query Expansion by Prompting Large Language Models. First coordinate candidate is DOC3_A10.",
+  "raw_plan_text": "<think>The current query is broad and does not specify a particular aspect of the document to focus on. However, the must-find checklist requires identifying ordered relations or citation/reference evidence. The most promising place to find citations would be in the references section of the document. Therefore, I will inspect the reference section next.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"ordered relations or decision/result mappings\", \"citation/reference evidence\"],\"next_anchor_id\":\"DOC3_A10\",\"candidate_anchor_ids\":[\"DOC3_A10\", \"DOC3_A3\", \"DOC3_A7\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A9\", \"DOC3_A1\", \"DOC3_A8\", \"DOC3_A2\"]}</search>",
+  "tagged_trace": "<think>The current query is broad and does not specify a particular aspect of the document to focus on. However, the must-find checklist requires identifying ordered relations or citation/reference evidence. The most promising place to find citations would be in the references section of the document. Therefore, I will inspect the reference section next.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC3_A10\", \"DOC3_A3\", \"DOC3_A7\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A10\"}</search>"
+}

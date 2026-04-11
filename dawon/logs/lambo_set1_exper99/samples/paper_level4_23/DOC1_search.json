@@ -1,0 +1,85 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing",
+  "task_mode": "chain",
+  "think": "The current query aims to find citation chains among the provided papers. To start, I should look at the references section of this document to identify any citations that might link to other papers in the set.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC1_A12",
+  "candidate_anchor_ids": [
+    "DOC1_A12"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A12",
+    "DOC1_A10",
+    "DOC1_A5",
+    "DOC1_A7"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A12",
+    "DOC1_A10",
+    "DOC1_A5",
+    "DOC1_A7",
+    "DOC1_A3",
+    "DOC1_A11",
+    "DOC1_A1",
+    "DOC1_A6",
+    "DOC1_A8",
+    "DOC1_A2",
+    "DOC1_A9",
+    "DOC1_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A12",
+      "score": 69.0,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "section_prior=14",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.00"
+      ],
+      "summary": "Lists the references cited in the paper, covering relevant literature on knowledge tracing, BERT, and related methodologies."
+    },
+    {
+      "anchor_id": "DOC1_A10",
+      "score": 58.102,
+      "reasons": [
+        "query_overlap=5",
+        "instruction_overlap=4",
+        "anchor_type_prior=6",
+        "position_bonus=0.10"
+      ],
+      "summary": "Analyzes the relevance between concepts using monotonic attention weights and visualizes the concept network derived from MonaCoBERT."
+    },
+    {
+      "anchor_id": "DOC1_A5",
+      "score": 50.708,
+      "reasons": [
+        "query_overlap=4",
+        "instruction_overlap=4",
+        "anchor_type_prior=6",
+        "position_bonus=0.71"
+      ],
+      "summary": "The section reviews recent advancements in knowledge tracing models, emphasizing the use of self-attention architectures and the introduction of new embedding methods."
+    },
+    {
+      "anchor_id": "DOC1_A7",
+      "score": 45.421,
+      "reasons": [
+        "query_overlap=3",
+        "instruction_overlap=3",
+        "anchor_type_prior=12",
+        "position_bonus=0.42"
+      ],
+      "summary": "Describes the problem statement, proposed model architecture, embedding strategy, pre-LN Transformer-based encoder, and monotonic convolutional multihead attention mechanism use..."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing. First coordinate candidate is DOC1_A12.",
+  "raw_plan_text": "<think>The current query aims to find citation chains among the provided papers. To start, I should look at the references section of this document to identify any citations that might link to other papers in the set.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"citation/reference evidence\"],\"next_anchor_id\":\"DOC1_A12\",\"candidate_anchor_ids\":[\"DOC1_A12\"]}</search>",
+  "tagged_trace": "<think>The current query aims to find citation chains among the provided papers. To start, I should look at the references section of this document to identify any citations that might link to other papers in the set.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC1_A12\"], \"next_anchor_id\": \"DOC1_A12\"}</search>"
+}

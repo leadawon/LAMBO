@@ -1,0 +1,391 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics",
+  "selected_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3"
+  ],
+  "final_current_query": "Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "Evolution of Heuristics: Towards Efficient Automatic Algorithm Design Using Large Language Model",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ]
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "The current query is about the evolution of heuristics towards efficient automatic algorithm design using large language models. The abstract (DOC3_A1) might provide insights into whether this document is relevant to the query and if it cites or references any other documents related to the topic. Therefore, inspecting the abstract seems like a good starting point.",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > Abstract",
+        "summary": "This research explores how Large Language Models (LLMs) can assist in path planning for robots in a human-in-the-loop manner. The proposed framework, LLM A*, combines the commonsense of LLMs with the utility-optimal A* algorithm to enable efficient path planning. Interactive prompts allow human feedback, making the process transparent and efficient compared to reinforcement learning.",
+        "text": "#### Abstract\n\nThis research focuses on how Large Language Models (LLMs) can help with path planning for mobile embodied agents such as robots, in a human-in-the-loop and interactive manner. A novel framework named $L L M A^{*}$, aims to leverage the commonsense of $L L M s$, and the utility-optimal $A^{*}$ is proposed to facilitate few-shot near-optimal path planning. Prompts are used to 1) provide LLMs with essential information like environment, cost, heuristics, etc.; 2) communicate human feedback to $L L M s$ on intermediate planning results. This makes the whole path planning process a 'white box' and human feedback guides LLM A* to converge quickly compared to other data-driven methods such as reinforcement learning-based (RL) path planning. In addition, it makes code-free path planning practical, henceforth promoting the inclusiveness of artificial intelligence techniques. Comparative analysis against $A^{*}$ and RL shows that LLM $A^{*}$ is more efficient in terms of search space and achieves an on-a-par path with $A^{*}$ and a better path than RL. The interactive nature of $L L M A^{*}$ also makes it a promising tool for deployment in collaborative human-robot tasks."
+      },
+      "extract_think": "The abstract provides details about the LLM A* framework and its comparison with other methods like A* and RL. However, it does not explicitly mention any citations or references to other provided documents. To find citation and reference relationships, we need to inspect sections that typically contain such information, such as the introduction, related work, or references section.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Introduction or Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Introduction or Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A2",
+          "DOC3_A3"
+        ]
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The introduction (DOC3_A2) often provides context and mentions prior work that the current paper builds upon, which could reveal references. The related work section (DOC3_A3) is also crucial as it directly discusses other papers and their relevance to the current research. Since both sections are important, I'll start with the introduction to see if there are any explicit mentions of other provided papers.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > I. INTRODUCTION",
+        "summary": "The introduction discusses the importance of path planning in robotics and categorizes existing methods. It highlights the limitations of data-driven methods like reinforcement learning and introduces LLM A*, a framework leveraging LLMs for path planning. Contributions include a novel LLM-based A* approach, interactive and code-free nature, and improved safety.",
+        "text": "## I. INTRODUCTION\n\nPath planning together with mapping, localisation, and motion planning has long been considered the cornerstone techniques to enable full autonomous agents such as robots [1]-[3]. Path planning usually takes the environment map, the initial and goal states as inputs and aims to find the (near) optimal path in terms of action cost to move the agent from the initial state to the goal state. A variety of path planning approaches have been proposed and they can be categorised into 1) search-based algorithms such as the classical A* search which is guaranteed to find an optimal path when heuristics are admissible and consistent; 2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.; and 3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].\n\n$\\mathrm{RL}$ is one of the most renowned data-driven planning methods. In a nutshell, RL achieves path planning through trial and error, i.e., when in state $s$, an agent will evaluate rewards it can get from performing a certain action $a$ and choose the action with the best rewards to perform. This helps the agent to learn a 'good' policy that generates an obstacle-free path from the initial state to the goal state. A variety of policies have been proposed [7] and the Proximal Policy Optimisation (PPO) is among these that achieve a balance between convergence efficiency and stability [8].[^0]\n\nWhile industries and academia are exhilarated by the performance of data-driven planning, they remain codingheavy and black boxes as they are mostly underpinned by deep neural networks. We believe that techniques should eventually improve human well-being, and accordingly, humans, especially normal civilians should be granted access to the underlying mechanisms of such techniques, to control or even terminate certain services whenever and wherever necessary.\n\nThe recent advancements in LLMs have made an 'overhaul of data-driven techniques' possible. LLMs are capable of human-like text generation and task completion [9]. The texts generated by LLMs constantly show that they can deal with commonsense information well to a human-like level, especially in a chain-of-prompts manner where humans can enforce/teach LLMs to find the answers in demand. This resembles RL apart from the rewards are assessed and granted by humans through interaction with LLMs. All these have partially distanced people from questioning the explainability of LLMs' horsepower, i.e., the 'transformer', which is a deep neural network itself and focused more on the models' ability to 'answer a question' in each prompt.\n\nThis paper harnesses the advantages of $\\mathrm{A}^{*}$ being able to find an optimal path and LLMs being able to consider commonsense knowledge when interacting with humans (agents) and proposes the LLM A* for robot path planning.\n\nBriefly, LLM A* can be summarised into three crucial stages. This first stage is to set up the workspace where a robot performs path planning. An environment model and how it will be used by the robot will be communicated to LLMs. The second stage entails the description of the initial state, the goal state, and the heuristics to be used. We have adopted a generic form of heuristic that considers obstacles, distances, and actions the robot can perform in the workspace. It is worth mentioning that the heuristic can be customised according to the setup. The LLMs will then work on finding the next valid 'moves' for path planning. These moves will be assessed against the cost function, which is the combination of the path cost up to now and the heuristic from the current state. This is similar to A*. The best 'move' with the minimum cost will be selected and communicated to humans on request, who can assess the move and decide whether to accept or decline the move, etc. The decision will be communicated to LLMs to carry on completing the planning. The involvement of humans' guidance and assessments can help to minimise the use of tokens, which remains a challenge to use LLMs such as ChatGPT [9].\n\nLLM A* follows a '\\{state, action, rewards\\}' pattern, which is similar to RL but no explicit coding is needed, and humans have full control of the planning process. To this end, we have compared it to the advanced RL algorithm PPO for performance evaluation. A quantitative comparison with $\\mathrm{A}^{*}$ is also conducted. The contributions of this paper include: 1). a first-of-its-kind LLM-based A* is proposed for mobile robot path planning; 2). The interactive and codingfree nature makes LLA* appealing to non-expert robotic users; 3). Improved safety assurance compared to $\\mathrm{A}^{*}$ and $\\mathrm{RL}$ as humans have full control of the planning process.\n\nThe remainder of the paper is organised as follows. Some related works are introduced in Section II. Section III elaborates on the approach. Experiments and discussions are provided in Section IV, and the paper is concluded in Section V."
+      },
+      "extract_think": "The introduction section provides several citations to other works, which can be considered as references for the current paper. However, it does not mention any citations to the current paper from other provided documents. To fully determine the citation and reference relationships, we should inspect the related work section next.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "reference",
+            "value": "[1]-[3]",
+            "normalized_value": "[1]-[3]",
+            "evidence_text": "Path planning together with mapping, localisation, and motion planning has long been considered the cornerstone techniques to enable full autonomous agents such as robots [1]-[3].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[4]",
+            "normalized_value": "[4]",
+            "evidence_text": "2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[5]",
+            "normalized_value": "[5]",
+            "evidence_text": "2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[6]",
+            "normalized_value": "[6]",
+            "evidence_text": "3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[7]",
+            "normalized_value": "[7]",
+            "evidence_text": "3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[8]",
+            "normalized_value": "[8]",
+            "evidence_text": "A variety of policies have been proposed [7] and the Proximal Policy Optimisation (PPO) is among these that achieve a balance between convergence efficiency and stability [8].[^0]",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[9]",
+            "normalized_value": "[9]",
+            "evidence_text": "LLMs are capable of human-like text generation and task completion [9].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[9]",
+            "normalized_value": "[9]",
+            "evidence_text": "The involvement of humans' guidance and assessments can help to minimise the use of tokens, which remains a challenge to use LLMs such as ChatGPT [9].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": false,
+        "followup_query": "Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics"
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A3",
+        "candidate_anchor_ids": [
+          "DOC3_A3"
+        ]
+      },
+      "anchor_id": "DOC3_A3",
+      "plan_think": "The related work section (DOC3_A3) is likely to contain more detailed comparisons and references to other papers that are relevant to the current research. This section may provide additional references that were not mentioned in the introduction. Inspecting this section will help us identify any further references and check if the current paper is cited by other provided documents.",
+      "info": {
+        "anchor_id": "DOC3_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > II. RELATED WORK",
+        "summary": "This section reviews related work on LLMs in robotic task planning and reinforcement learning for robotic planning. It discusses the integration of LLMs with path planning and compares LLM-based methods with traditional RL methods.",
+        "text": "## II. RELATED WORK\n\n## A. LLM in Robotic Task Planning\n\nCommanding robots through human language/instructions has long been a dream to robotists [10], [11]. Before the remarkable success of LLMs, Anderson et al. [10] have proposed the R2R navigation framework, where Transformers were used to achieve visually grounded natural language navigation by converting human instructions into robot action sequences. Each action will lead the robot to move from one viewpoint to another. How the path is planned between viewpoints were not elaborated and navigation errors up to 10 metres were reported.\n\nTrained on (text) datasets of immense size, LLM models come with commonsense knowledge, which is promising to help accelerate robotic task planning [12]. To the best of our knowledge, most research from literature follows the visual-linguistic grounding strategy and proposes to harness the commonsense knowledge of LLMs to build a better correspondence between human language/instructions and visual perceptions of the robots. Song et al. [12] have demonstrated that LLMs can help with few-shot planning, i.e., the commonsense knowledge of LLMs is used to generate hierarchical plans, with the high-level plan being a set of viable while commonsense aligned subgoals generated by LLMs. The high-level plan is next passed to a low-level planner that is independent of the instructions to plan paths between subgoals. Other works such as [13] still fall into visual-linguistic grounding but a collision check is proposed.\n\nIt is worth noting that the works mentioned above do not touch on how LLMs can be used to plan a path between subgoals or viewpoints. Aghzal et al. [14] propose path planning from natural language (PPNL), with a focus on utilising LLMs in spatial-temporal path planning. However, the method is purely prompt-based, without linking and comparing it to path planning methods such as $\\mathrm{A}^{*}$ and RL.\n\n## B. Reinforcement Learning for Robotic Planning\n\nReinforcement learning is another data-driven learningbased framework for path planning. In the RL framework, an agent learns a policy to select a sequence of actions that would lead the agent to efficiently move from one state to another, to eventually reach the goal. The learning process is guided by a policy that rewards good actions while penalising bad actions.\n\nThe capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].\n\nHowever, both RL and DRL still face the challenges of 1) low data efficiency that entails the demand for a significant number of interactions with the environment to learn the policies and the demand for large datasets for deep learning model training, and 2) the stability of convergence, i.e., RL/DRL models are not guaranteed to converge. Therefore, recent DRL models have focused on the optimisation for not only the fitness of states but also the measurement of convergence. The PPO model with actor-critic structures is one of the most renowned models. PPO is a policy gradient algorithm to maximise the horizon returns while the actorcritic structure provides a situation in which states and policy can be trained separately so that the agent achieves better planning performance and convergence [17].\n\nThe prompt-driven LLM-based path planning can be considered as a variant of RL models, with rewards provided by humans through prompts and policies implicitly learned by LLMs through interactions. We therefore compare the path planning performance of LLM-based methods and RL-based methods in this paper.\n\n## III. THE LLM A* APPROACH"
+      },
+      "extract_think": "The related work section provides several references to other works, which can be considered as references for the current paper. However, it does not mention any citations to the current paper from other provided documents. The references found here can be added to the list of references for the current paper. Since the related work section is typically comprehensive in referencing other works, it is likely that we have captured all relevant references within this document. No further inspection is needed for citations since the current document does not cite itself.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "reference",
+            "value": "[10]",
+            "normalized_value": "[10]",
+            "evidence_text": "Commanding robots through human language/instructions has long been a dream to robotists [10], [11].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[11]",
+            "normalized_value": "[11]",
+            "evidence_text": "Commanding robots through human language/instructions has long been a dream to robotists [10], [11].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[12]",
+            "normalized_value": "[12]",
+            "evidence_text": "To the best of our knowledge, most research from literature follows the visual-linguistic grounding strategy and proposes to harness the commonsense knowledge of LLMs to build a better correspondence between human language/instructions and visual perceptions of the robots. Song et al. [12] have demonstrated that LLMs can help with few-shot planning, i.e., the commonsense knowledge of LLMs is used to generate hierarchical plans, with the high-level plan being a set of viable while commonsense aligned subgoals generated by LLMs.",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[13]",
+            "normalized_value": "[13]",
+            "evidence_text": "Other works such as [13] still fall into visual-linguistic grounding but a collision check is proposed.",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[14]",
+            "normalized_value": "[14]",
+            "evidence_text": "It is worth noting that the works mentioned above do not touch on how LLMs can be used to plan a path between subgoals or viewpoints. Aghzal et al. [14] propose path planning from natural language (PPNL), with a focus on utilising LLMs in spatial-temporal path planning.",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[15]",
+            "normalized_value": "[15]",
+            "evidence_text": "The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[16]",
+            "normalized_value": "[16]",
+            "evidence_text": "The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          },
+          {
+            "answer_key": "reference",
+            "value": "[17]",
+            "normalized_value": "[17]",
+            "evidence_text": "The PPO model with actor-critic structures is one of the most renowned models. PPO is a policy gradient algorithm to maximise the horizon returns while the actorcritic structure provides a situation in which states and policy can be trained separately so that the agent achieves better planning performance and convergence [17].",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A3",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "reference",
+      "value": "[1]-[3]",
+      "normalized_value": "[1]-[3]",
+      "evidence_text": "Path planning together with mapping, localisation, and motion planning has long been considered the cornerstone techniques to enable full autonomous agents such as robots [1]-[3].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[4]",
+      "normalized_value": "[4]",
+      "evidence_text": "2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[5]",
+      "normalized_value": "[5]",
+      "evidence_text": "2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[6]",
+      "normalized_value": "[6]",
+      "evidence_text": "3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[7]",
+      "normalized_value": "[7]",
+      "evidence_text": "3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[8]",
+      "normalized_value": "[8]",
+      "evidence_text": "A variety of policies have been proposed [7] and the Proximal Policy Optimisation (PPO) is among these that achieve a balance between convergence efficiency and stability [8].[^0]",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[9]",
+      "normalized_value": "[9]",
+      "evidence_text": "LLMs are capable of human-like text generation and task completion [9].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[10]",
+      "normalized_value": "[10]",
+      "evidence_text": "Commanding robots through human language/instructions has long been a dream to robotists [10], [11].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[11]",
+      "normalized_value": "[11]",
+      "evidence_text": "Commanding robots through human language/instructions has long been a dream to robotists [10], [11].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[12]",
+      "normalized_value": "[12]",
+      "evidence_text": "To the best of our knowledge, most research from literature follows the visual-linguistic grounding strategy and proposes to harness the commonsense knowledge of LLMs to build a better correspondence between human language/instructions and visual perceptions of the robots. Song et al. [12] have demonstrated that LLMs can help with few-shot planning, i.e., the commonsense knowledge of LLMs is used to generate hierarchical plans, with the high-level plan being a set of viable while commonsense aligned subgoals generated by LLMs.",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[13]",
+      "normalized_value": "[13]",
+      "evidence_text": "Other works such as [13] still fall into visual-linguistic grounding but a collision check is proposed.",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[14]",
+      "normalized_value": "[14]",
+      "evidence_text": "It is worth noting that the works mentioned above do not touch on how LLMs can be used to plan a path between subgoals or viewpoints. Aghzal et al. [14] propose path planning from natural language (PPNL), with a focus on utilising LLMs in spatial-temporal path planning.",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[15]",
+      "normalized_value": "[15]",
+      "evidence_text": "The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[16]",
+      "normalized_value": "[16]",
+      "evidence_text": "The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    },
+    {
+      "answer_key": "reference",
+      "value": "[17]",
+      "normalized_value": "[17]",
+      "evidence_text": "The PPO model with actor-critic structures is one of the most renowned models. PPO is a policy gradient algorithm to maximise the horizon returns while the actorcritic structure provides a situation in which states and policy can be trained separately so that the agent achieves better planning performance and convergence [17].",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A3",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The current query is about the evolution of heuristics towards efficient automatic algorithm design using large language models. The abstract (DOC3_A1) might provide insights into whether this document is relevant to the query and if it cites or references any other documents related to the topic. Therefore, inspecting the abstract seems like a good starting point.</think>\n<search>{\"current_query\": \"Evolution of Heuristics: Towards Efficient Automatic Algorithm Design Using Large Language Model\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > Abstract\", \"summary\": \"This research explores how Large Language Models (LLMs) can assist in path planning for robots in a human-in-the-loop manner. The proposed framework, LLM A*, combines the commonsense of LLMs with the utility-optimal A* algorithm to enable efficient path planning. Interactive prompts allow human feedback, making the process transparent and efficient compared to reinforcement learning.\", \"text\": \"#### Abstract\\n\\nThis research focuses on how Large Language Models (LLMs) can help with path planning for mobile embodied agents such as robots, in a human-in-the-loop and interactive manner. A novel framework named $L L M A^{*}$, aims to leverage the commonsense of $L L M s$, and the utility-optimal $A^{*}$ is proposed to facilitate few-shot near-optimal path planning. Prompts are used to 1) provide LLMs with essential information like environment, cost, heuristics, etc.; 2) communicate human feedback to $L L M s$ on intermediate planning results. This makes the whole path planning process a 'white box' and human feedback guides LLM A* to converge quickly compared to other data-driven methods such as reinforcement learning-based (RL) path planning. In addition, it makes code-free path planning practical, henceforth promoting the inclusiveness of artificial intelligence techniques. Comparative analysis against $A^{*}$ and RL shows that LLM $A^{*}$ is more efficient in terms of search space and achieves an on-a-par path with $A^{*}$ and a better path than RL. The interactive nature of $L L M A^{*}$ also makes it a promising tool for deployment in collaborative human-robot tasks.\"}</info>\n<think>The abstract provides details about the LLM A* framework and its comparison with other methods like A* and RL. However, it does not explicitly mention any citations or references to other provided documents. To find citation and reference relationships, we need to inspect sections that typically contain such information, such as the introduction, related work, or references section.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Introduction or Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\"}</retrieve>\n<think>The introduction (DOC3_A2) often provides context and mentions prior work that the current paper builds upon, which could reveal references. The related work section (DOC3_A3) is also crucial as it directly discusses other papers and their relevance to the current research. Since both sections are important, I'll start with the introduction to see if there are any explicit mentions of other provided papers.</think>\n<search>{\"current_query\": \"Introduction or Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > I. INTRODUCTION\", \"summary\": \"The introduction discusses the importance of path planning in robotics and categorizes existing methods. It highlights the limitations of data-driven methods like reinforcement learning and introduces LLM A*, a framework leveraging LLMs for path planning. Contributions include a novel LLM-based A* approach, interactive and code-free nature, and improved safety.\", \"text\": \"## I. INTRODUCTION\\n\\nPath planning together with mapping, localisation, and motion planning has long been considered the cornerstone techniques to enable full autonomous agents such as robots [1]-[3]. Path planning usually takes the environment map, the initial and goal states as inputs and aims to find the (near) optimal path in terms of action cost to move the agent from the initial state to the goal state. A variety of path planning approaches have been proposed and they can be categorised into 1) search-based algorithms such as the classical A* search which is guaranteed to find an optimal path when heuristics are admissible and consistent; 2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.; and 3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].\\n\\n$\\\\mathrm{RL}$ is one of the most renowned data-driven planning methods. In a nutshell, RL achieves path planning through trial and error, i.e., when in state $s$, an agent will evaluate rewards it can get from performing a certain action $a$ and choose the action with the best rewards to perform. This helps the agent to learn a 'good' policy that generates an obstacle-free path from the initial state to the goal state. A variety of policies have been proposed [7] and the Proximal Policy Optimisation (PPO) is among these that achieve a balance between convergence efficiency and stability [8].[^0]\\n\\nWhile industries and academia are exhilarated by the performance of data-driven planning, they remain codingheavy and black boxes as they are mostly underpinned by deep neural networks. We believe that techniques should eventually improve human well-being, and accordingly, humans, especially normal civilians should be granted access to the underlying mechanisms of such techniques, to control or even terminate certain services whenever and wherever necessary.\\n\\nThe recent advancements in LLMs have made an 'overhaul of data-driven techniques' possible. LLMs are capable of human-like text generation and task completion [9]. The texts generated by LLMs constantly show that they can deal with commonsense information well to a human-like level, especially in a chain-of-prompts manner where humans can enforce/teach LLMs to find the answers in demand. This resembles RL apart from the rewards are assessed and granted by humans through interaction with LLMs. All these have partially distanced people from questioning the explainability of LLMs' horsepower, i.e., the 'transformer', which is a deep neural network itself and focused more on the models' ability to 'answer a question' in each prompt.\\n\\nThis paper harnesses the advantages of $\\\\mathrm{A}^{*}$ being able to find an optimal path and LLMs being able to consider commonsense knowledge when interacting with humans (agents) and proposes the LLM A* for robot path planning.\\n\\nBriefly, LLM A* can be summarised into three crucial stages. This first stage is to set up the workspace where a robot performs path planning. An environment model and how it will be used by the robot will be communicated to LLMs. The second stage entails the description of the initial state, the goal state, and the heuristics to be used. We have adopted a generic form of heuristic that considers obstacles, distances, and actions the robot can perform in the workspace. It is worth mentioning that the heuristic can be customised according to the setup. The LLMs will then work on finding the next valid 'moves' for path planning. These moves will be assessed against the cost function, which is the combination of the path cost up to now and the heuristic from the current state. This is similar to A*. The best 'move' with the minimum cost will be selected and communicated to humans on request, who can assess the move and decide whether to accept or decline the move, etc. The decision will be communicated to LLMs to carry on completing the planning. The involvement of humans' guidance and assessments can help to minimise the use of tokens, which remains a challenge to use LLMs such as ChatGPT [9].\\n\\nLLM A* follows a '\\\\{state, action, rewards\\\\}' pattern, which is similar to RL but no explicit coding is needed, and humans have full control of the planning process. To this end, we have compared it to the advanced RL algorithm PPO for performance evaluation. A quantitative comparison with $\\\\mathrm{A}^{*}$ is also conducted. The contributions of this paper include: 1). a first-of-its-kind LLM-based A* is proposed for mobile robot path planning; 2). The interactive and codingfree nature makes LLA* appealing to non-expert robotic users; 3). Improved safety assurance compared to $\\\\mathrm{A}^{*}$ and $\\\\mathrm{RL}$ as humans have full control of the planning process.\\n\\nThe remainder of the paper is organised as follows. Some related works are introduced in Section II. Section III elaborates on the approach. Experiments and discussions are provided in Section IV, and the paper is concluded in Section V.\"}</info>\n<think>The introduction section provides several citations to other works, which can be considered as references for the current paper. However, it does not mention any citations to the current paper from other provided documents. To fully determine the citation and reference relationships, we should inspect the related work section next.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"reference\", \"value\": \"[1]-[3]\", \"normalized_value\": \"[1]-[3]\", \"evidence_text\": \"Path planning together with mapping, localisation, and motion planning has long been considered the cornerstone techniques to enable full autonomous agents such as robots [1]-[3].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[4]\", \"normalized_value\": \"[4]\", \"evidence_text\": \"2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[5]\", \"normalized_value\": \"[5]\", \"evidence_text\": \"2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[6]\", \"normalized_value\": \"[6]\", \"evidence_text\": \"3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[7]\", \"normalized_value\": \"[7]\", \"evidence_text\": \"3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[8]\", \"normalized_value\": \"[8]\", \"evidence_text\": \"A variety of policies have been proposed [7] and the Proximal Policy Optimisation (PPO) is among these that achieve a balance between convergence efficiency and stability [8].[^0]\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[9]\", \"normalized_value\": \"[9]\", \"evidence_text\": \"LLMs are capable of human-like text generation and task completion [9].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[9]\", \"normalized_value\": \"[9]\", \"evidence_text\": \"The involvement of humans' guidance and assessments can help to minimise the use of tokens, which remains a challenge to use LLMs such as ChatGPT [9].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\"}</retrieve>\n<think>The related work section (DOC3_A3) is likely to contain more detailed comparisons and references to other papers that are relevant to the current research. This section may provide additional references that were not mentioned in the introduction. Inspecting this section will help us identify any further references and check if the current paper is cited by other provided documents.</think>\n<search>{\"current_query\": \"Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A3\", \"candidate_anchor_ids\": [\"DOC3_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > II. RELATED WORK\", \"summary\": \"This section reviews related work on LLMs in robotic task planning and reinforcement learning for robotic planning. It discusses the integration of LLMs with path planning and compares LLM-based methods with traditional RL methods.\", \"text\": \"## II. RELATED WORK\\n\\n## A. LLM in Robotic Task Planning\\n\\nCommanding robots through human language/instructions has long been a dream to robotists [10], [11]. Before the remarkable success of LLMs, Anderson et al. [10] have proposed the R2R navigation framework, where Transformers were used to achieve visually grounded natural language navigation by converting human instructions into robot action sequences. Each action will lead the robot to move from one viewpoint to another. How the path is planned between viewpoints were not elaborated and navigation errors up to 10 metres were reported.\\n\\nTrained on (text) datasets of immense size, LLM models come with commonsense knowledge, which is promising to help accelerate robotic task planning [12]. To the best of our knowledge, most research from literature follows the visual-linguistic grounding strategy and proposes to harness the commonsense knowledge of LLMs to build a better correspondence between human language/instructions and visual perceptions of the robots. Song et al. [12] have demonstrated that LLMs can help with few-shot planning, i.e., the commonsense knowledge of LLMs is used to generate hierarchical plans, with the high-level plan being a set of viable while commonsense aligned subgoals generated by LLMs. The high-level plan is next passed to a low-level planner that is independent of the instructions to plan paths between subgoals. Other works such as [13] still fall into visual-linguistic grounding but a collision check is proposed.\\n\\nIt is worth noting that the works mentioned above do not touch on how LLMs can be used to plan a path between subgoals or viewpoints. Aghzal et al. [14] propose path planning from natural language (PPNL), with a focus on utilising LLMs in spatial-temporal path planning. However, the method is purely prompt-based, without linking and comparing it to path planning methods such as $\\\\mathrm{A}^{*}$ and RL.\\n\\n## B. Reinforcement Learning for Robotic Planning\\n\\nReinforcement learning is another data-driven learningbased framework for path planning. In the RL framework, an agent learns a policy to select a sequence of actions that would lead the agent to efficiently move from one state to another, to eventually reach the goal. The learning process is guided by a policy that rewards good actions while penalising bad actions.\\n\\nThe capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].\\n\\nHowever, both RL and DRL still face the challenges of 1) low data efficiency that entails the demand for a significant number of interactions with the environment to learn the policies and the demand for large datasets for deep learning model training, and 2) the stability of convergence, i.e., RL/DRL models are not guaranteed to converge. Therefore, recent DRL models have focused on the optimisation for not only the fitness of states but also the measurement of convergence. The PPO model with actor-critic structures is one of the most renowned models. PPO is a policy gradient algorithm to maximise the horizon returns while the actorcritic structure provides a situation in which states and policy can be trained separately so that the agent achieves better planning performance and convergence [17].\\n\\nThe prompt-driven LLM-based path planning can be considered as a variant of RL models, with rewards provided by humans through prompts and policies implicitly learned by LLMs through interactions. We therefore compare the path planning performance of LLM-based methods and RL-based methods in this paper.\\n\\n## III. THE LLM A* APPROACH\"}</info>\n<think>The related work section provides several references to other works, which can be considered as references for the current paper. However, it does not mention any citations to the current paper from other provided documents. The references found here can be added to the list of references for the current paper. Since the related work section is typically comprehensive in referencing other works, it is likely that we have captured all relevant references within this document. No further inspection is needed for citations since the current document does not cite itself.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"reference\", \"value\": \"[10]\", \"normalized_value\": \"[10]\", \"evidence_text\": \"Commanding robots through human language/instructions has long been a dream to robotists [10], [11].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[11]\", \"normalized_value\": \"[11]\", \"evidence_text\": \"Commanding robots through human language/instructions has long been a dream to robotists [10], [11].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[12]\", \"normalized_value\": \"[12]\", \"evidence_text\": \"To the best of our knowledge, most research from literature follows the visual-linguistic grounding strategy and proposes to harness the commonsense knowledge of LLMs to build a better correspondence between human language/instructions and visual perceptions of the robots. Song et al. [12] have demonstrated that LLMs can help with few-shot planning, i.e., the commonsense knowledge of LLMs is used to generate hierarchical plans, with the high-level plan being a set of viable while commonsense aligned subgoals generated by LLMs.\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[13]\", \"normalized_value\": \"[13]\", \"evidence_text\": \"Other works such as [13] still fall into visual-linguistic grounding but a collision check is proposed.\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[14]\", \"normalized_value\": \"[14]\", \"evidence_text\": \"It is worth noting that the works mentioned above do not touch on how LLMs can be used to plan a path between subgoals or viewpoints. Aghzal et al. [14] propose path planning from natural language (PPNL), with a focus on utilising LLMs in spatial-temporal path planning.\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[15]\", \"normalized_value\": \"[15]\", \"evidence_text\": \"The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[16]\", \"normalized_value\": \"[16]\", \"evidence_text\": \"The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[17]\", \"normalized_value\": \"[17]\", \"evidence_text\": \"The PPO model with actor-critic structures is one of the most renowned models. PPO is a policy gradient algorithm to maximise the horizon returns while the actorcritic structure provides a situation in which states and policy can be trained separately so that the agent achieves better planning performance and convergence [17].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current query is about the evolution of heuristics towards efficient automatic algorithm design using large language models. The abstract (DOC3_A1) might provide insights into whether this document is relevant to the query and if it cites or references any other documents related to the topic. Therefore, inspecting the abstract seems like a good starting point.</think>\n<search>{\"current_query\": \"Evolution of Heuristics: Towards Efficient Automatic Algorithm Design Using Large Language Model\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > Abstract\", \"summary\": \"This research explores how Large Language Models (LLMs) can assist in path planning for robots in a human-in-the-loop manner. The proposed framework, LLM A*, combines the commonsense of LLMs with the utility-optimal A* algorithm to enable efficient path planning. Interactive prompts allow human feedback, making the process transparent and efficient compared to reinforcement learning.\", \"text\": \"#### Abstract\\n\\nThis research focuses on how Large Language Models (LLMs) can help with path planning for mobile embodied agents such as robots, in a human-in-the-loop and interactive manner. A novel framework named $L L M A^{*}$, aims to leverage the commonsense of $L L M s$, and the utility-optimal $A^{*}$ is proposed to facilitate few-shot near-optimal path planning. Prompts are used to 1) provide LLMs with essential information like environment, cost, heuristics, etc.; 2) communicate human feedback to $L L M s$ on intermediate planning results. This makes the whole path planning process a 'white box' and human feedback guides LLM A* to converge quickly compared to other data-driven methods such as reinforcement learning-based (RL) path planning. In addition, it makes code-free path planning practical, henceforth promoting the inclusiveness of artificial intelligence techniques. Comparative analysis against $A^{*}$ and RL shows that LLM $A^{*}$ is more efficient in terms of search space and achieves an on-a-par path with $A^{*}$ and a better path than RL. The interactive nature of $L L M A^{*}$ also makes it a promising tool for deployment in collaborative human-robot tasks.\"}</info>\n<think>The abstract provides details about the LLM A* framework and its comparison with other methods like A* and RL. However, it does not explicitly mention any citations or references to other provided documents. To find citation and reference relationships, we need to inspect sections that typically contain such information, such as the introduction, related work, or references section.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Introduction or Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\"}</retrieve>\n<think>The introduction (DOC3_A2) often provides context and mentions prior work that the current paper builds upon, which could reveal references. The related work section (DOC3_A3) is also crucial as it directly discusses other papers and their relevance to the current research. Since both sections are important, I'll start with the introduction to see if there are any explicit mentions of other provided papers.</think>\n<search>{\"current_query\": \"Introduction or Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > I. INTRODUCTION\", \"summary\": \"The introduction discusses the importance of path planning in robotics and categorizes existing methods. It highlights the limitations of data-driven methods like reinforcement learning and introduces LLM A*, a framework leveraging LLMs for path planning. Contributions include a novel LLM-based A* approach, interactive and code-free nature, and improved safety.\", \"text\": \"## I. INTRODUCTION\\n\\nPath planning together with mapping, localisation, and motion planning has long been considered the cornerstone techniques to enable full autonomous agents such as robots [1]-[3]. Path planning usually takes the environment map, the initial and goal states as inputs and aims to find the (near) optimal path in terms of action cost to move the agent from the initial state to the goal state. A variety of path planning approaches have been proposed and they can be categorised into 1) search-based algorithms such as the classical A* search which is guaranteed to find an optimal path when heuristics are admissible and consistent; 2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.; and 3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].\\n\\n$\\\\mathrm{RL}$ is one of the most renowned data-driven planning methods. In a nutshell, RL achieves path planning through trial and error, i.e., when in state $s$, an agent will evaluate rewards it can get from performing a certain action $a$ and choose the action with the best rewards to perform. This helps the agent to learn a 'good' policy that generates an obstacle-free path from the initial state to the goal state. A variety of policies have been proposed [7] and the Proximal Policy Optimisation (PPO) is among these that achieve a balance between convergence efficiency and stability [8].[^0]\\n\\nWhile industries and academia are exhilarated by the performance of data-driven planning, they remain codingheavy and black boxes as they are mostly underpinned by deep neural networks. We believe that techniques should eventually improve human well-being, and accordingly, humans, especially normal civilians should be granted access to the underlying mechanisms of such techniques, to control or even terminate certain services whenever and wherever necessary.\\n\\nThe recent advancements in LLMs have made an 'overhaul of data-driven techniques' possible. LLMs are capable of human-like text generation and task completion [9]. The texts generated by LLMs constantly show that they can deal with commonsense information well to a human-like level, especially in a chain-of-prompts manner where humans can enforce/teach LLMs to find the answers in demand. This resembles RL apart from the rewards are assessed and granted by humans through interaction with LLMs. All these have partially distanced people from questioning the explainability of LLMs' horsepower, i.e., the 'transformer', which is a deep neural network itself and focused more on the models' ability to 'answer a question' in each prompt.\\n\\nThis paper harnesses the advantages of $\\\\mathrm{A}^{*}$ being able to find an optimal path and LLMs being able to consider commonsense knowledge when interacting with humans (agents) and proposes the LLM A* for robot path planning.\\n\\nBriefly, LLM A* can be summarised into three crucial stages. This first stage is to set up the workspace where a robot performs path planning. An environment model and how it will be used by the robot will be communicated to LLMs. The second stage entails the description of the initial state, the goal state, and the heuristics to be used. We have adopted a generic form of heuristic that considers obstacles, distances, and actions the robot can perform in the workspace. It is worth mentioning that the heuristic can be customised according to the setup. The LLMs will then work on finding the next valid 'moves' for path planning. These moves will be assessed against the cost function, which is the combination of the path cost up to now and the heuristic from the current state. This is similar to A*. The best 'move' with the minimum cost will be selected and communicated to humans on request, who can assess the move and decide whether to accept or decline the move, etc. The decision will be communicated to LLMs to carry on completing the planning. The involvement of humans' guidance and assessments can help to minimise the use of tokens, which remains a challenge to use LLMs such as ChatGPT [9].\\n\\nLLM A* follows a '\\\\{state, action, rewards\\\\}' pattern, which is similar to RL but no explicit coding is needed, and humans have full control of the planning process. To this end, we have compared it to the advanced RL algorithm PPO for performance evaluation. A quantitative comparison with $\\\\mathrm{A}^{*}$ is also conducted. The contributions of this paper include: 1). a first-of-its-kind LLM-based A* is proposed for mobile robot path planning; 2). The interactive and codingfree nature makes LLA* appealing to non-expert robotic users; 3). Improved safety assurance compared to $\\\\mathrm{A}^{*}$ and $\\\\mathrm{RL}$ as humans have full control of the planning process.\\n\\nThe remainder of the paper is organised as follows. Some related works are introduced in Section II. Section III elaborates on the approach. Experiments and discussions are provided in Section IV, and the paper is concluded in Section V.\"}</info>\n<think>The introduction section provides several citations to other works, which can be considered as references for the current paper. However, it does not mention any citations to the current paper from other provided documents. To fully determine the citation and reference relationships, we should inspect the related work section next.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"reference\", \"value\": \"[1]-[3]\", \"normalized_value\": \"[1]-[3]\", \"evidence_text\": \"Path planning together with mapping, localisation, and motion planning has long been considered the cornerstone techniques to enable full autonomous agents such as robots [1]-[3].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[4]\", \"normalized_value\": \"[4]\", \"evidence_text\": \"2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[5]\", \"normalized_value\": \"[5]\", \"evidence_text\": \"2) samplingbased planning such as the Rapidly-exploring Random Tree (RRT) [4] and Ant Colony Optimisation (ACO) [5], etc.;\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[6]\", \"normalized_value\": \"[6]\", \"evidence_text\": \"3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[7]\", \"normalized_value\": \"[7]\", \"evidence_text\": \"3) Data-driven planning such as neural A* [6] and Reinforcement Learning (RL) based search [7].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[8]\", \"normalized_value\": \"[8]\", \"evidence_text\": \"A variety of policies have been proposed [7] and the Proximal Policy Optimisation (PPO) is among these that achieve a balance between convergence efficiency and stability [8].[^0]\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[9]\", \"normalized_value\": \"[9]\", \"evidence_text\": \"LLMs are capable of human-like text generation and task completion [9].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[9]\", \"normalized_value\": \"[9]\", \"evidence_text\": \"The involvement of humans' guidance and assessments can help to minimise the use of tokens, which remains a challenge to use LLMs such as ChatGPT [9].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\"}</retrieve>\n<think>The related work section (DOC3_A3) is likely to contain more detailed comparisons and references to other papers that are relevant to the current research. This section may provide additional references that were not mentioned in the introduction. Inspecting this section will help us identify any further references and check if the current paper is cited by other provided documents.</think>\n<search>{\"current_query\": \"Related Work section of LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A3\", \"candidate_anchor_ids\": [\"DOC3_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics > II. RELATED WORK\", \"summary\": \"This section reviews related work on LLMs in robotic task planning and reinforcement learning for robotic planning. It discusses the integration of LLMs with path planning and compares LLM-based methods with traditional RL methods.\", \"text\": \"## II. RELATED WORK\\n\\n## A. LLM in Robotic Task Planning\\n\\nCommanding robots through human language/instructions has long been a dream to robotists [10], [11]. Before the remarkable success of LLMs, Anderson et al. [10] have proposed the R2R navigation framework, where Transformers were used to achieve visually grounded natural language navigation by converting human instructions into robot action sequences. Each action will lead the robot to move from one viewpoint to another. How the path is planned between viewpoints were not elaborated and navigation errors up to 10 metres were reported.\\n\\nTrained on (text) datasets of immense size, LLM models come with commonsense knowledge, which is promising to help accelerate robotic task planning [12]. To the best of our knowledge, most research from literature follows the visual-linguistic grounding strategy and proposes to harness the commonsense knowledge of LLMs to build a better correspondence between human language/instructions and visual perceptions of the robots. Song et al. [12] have demonstrated that LLMs can help with few-shot planning, i.e., the commonsense knowledge of LLMs is used to generate hierarchical plans, with the high-level plan being a set of viable while commonsense aligned subgoals generated by LLMs. The high-level plan is next passed to a low-level planner that is independent of the instructions to plan paths between subgoals. Other works such as [13] still fall into visual-linguistic grounding but a collision check is proposed.\\n\\nIt is worth noting that the works mentioned above do not touch on how LLMs can be used to plan a path between subgoals or viewpoints. Aghzal et al. [14] propose path planning from natural language (PPNL), with a focus on utilising LLMs in spatial-temporal path planning. However, the method is purely prompt-based, without linking and comparing it to path planning methods such as $\\\\mathrm{A}^{*}$ and RL.\\n\\n## B. Reinforcement Learning for Robotic Planning\\n\\nReinforcement learning is another data-driven learningbased framework for path planning. In the RL framework, an agent learns a policy to select a sequence of actions that would lead the agent to efficiently move from one state to another, to eventually reach the goal. The learning process is guided by a policy that rewards good actions while penalising bad actions.\\n\\nThe capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].\\n\\nHowever, both RL and DRL still face the challenges of 1) low data efficiency that entails the demand for a significant number of interactions with the environment to learn the policies and the demand for large datasets for deep learning model training, and 2) the stability of convergence, i.e., RL/DRL models are not guaranteed to converge. Therefore, recent DRL models have focused on the optimisation for not only the fitness of states but also the measurement of convergence. The PPO model with actor-critic structures is one of the most renowned models. PPO is a policy gradient algorithm to maximise the horizon returns while the actorcritic structure provides a situation in which states and policy can be trained separately so that the agent achieves better planning performance and convergence [17].\\n\\nThe prompt-driven LLM-based path planning can be considered as a variant of RL models, with rewards provided by humans through prompts and policies implicitly learned by LLMs through interactions. We therefore compare the path planning performance of LLM-based methods and RL-based methods in this paper.\\n\\n## III. THE LLM A* APPROACH\"}</info>\n<think>The related work section provides several references to other works, which can be considered as references for the current paper. However, it does not mention any citations to the current paper from other provided documents. The references found here can be added to the list of references for the current paper. Since the related work section is typically comprehensive in referencing other works, it is likely that we have captured all relevant references within this document. No further inspection is needed for citations since the current document does not cite itself.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"reference\", \"value\": \"[10]\", \"normalized_value\": \"[10]\", \"evidence_text\": \"Commanding robots through human language/instructions has long been a dream to robotists [10], [11].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[11]\", \"normalized_value\": \"[11]\", \"evidence_text\": \"Commanding robots through human language/instructions has long been a dream to robotists [10], [11].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[12]\", \"normalized_value\": \"[12]\", \"evidence_text\": \"To the best of our knowledge, most research from literature follows the visual-linguistic grounding strategy and proposes to harness the commonsense knowledge of LLMs to build a better correspondence between human language/instructions and visual perceptions of the robots. Song et al. [12] have demonstrated that LLMs can help with few-shot planning, i.e., the commonsense knowledge of LLMs is used to generate hierarchical plans, with the high-level plan being a set of viable while commonsense aligned subgoals generated by LLMs.\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[13]\", \"normalized_value\": \"[13]\", \"evidence_text\": \"Other works such as [13] still fall into visual-linguistic grounding but a collision check is proposed.\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[14]\", \"normalized_value\": \"[14]\", \"evidence_text\": \"It is worth noting that the works mentioned above do not touch on how LLMs can be used to plan a path between subgoals or viewpoints. Aghzal et al. [14] propose path planning from natural language (PPNL), with a focus on utilising LLMs in spatial-temporal path planning.\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[15]\", \"normalized_value\": \"[15]\", \"evidence_text\": \"The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[16]\", \"normalized_value\": \"[16]\", \"evidence_text\": \"The capacity of deep learning in data representation and processing has drawn a lot of attention from the RL and robotic community. Deep learning models were then integrated into the RL framework and deep reinforcement learning (DRL) was coined [15] to enable more sophisticated and effective policy learning, for robotic task planning, etc. [16].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}, {\"answer_key\": \"reference\", \"value\": \"[17]\", \"normalized_value\": \"[17]\", \"evidence_text\": \"The PPO model with actor-critic structures is one of the most renowned models. PPO is a policy gradient algorithm to maximise the horizon returns while the actorcritic structure provides a situation in which states and policy can be trained separately so that the agent achieves better planning performance and convergence [17].\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A3\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}
