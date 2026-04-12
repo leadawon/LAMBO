@@ -2,8 +2,8 @@
   "doc_id": "DOC3",
   "doc_title": "《判决文书3》",
   "task_mode": "clustering",
-  "think": "The current document, titled '《判决文书3》', seems to involve a case related to administrative actions, specifically concerning the legality of a forced demolition by the叠彩区应急管理局 (Diacai District Emergency Management Bureau). The case does not appear to directly relate to '行政行为-行政许可' (administrative behavior - administrative permission), '渎职罪' (dereliction of duty crime), '行政主体-司法行政管理（司法行政）' (administrative entity - judicial administration management), '破坏社会主义市场经济秩序罪' (crime of disrupting the socialist market economic order), or '非刑事赔偿-错误执行赔偿' (non-criminal compensation - compensation for erroneous execution). However, it may fall under '行政主体-房屋拆迁管理（拆迁）' (administrative entity - house demolition management). I will inspect the next anchor to confirm this.",
-  "current_query": "分类判决文书3",
+  "think": "考虑到当前文档的内容涉及行政行为和行政主体，特别是叠彩区应急管理局的强制拆除行为及其合法性，因此应该选择一个包含这些信息的坐标进行检查。DOC3_A2提到了案件背景，包括强制拆除行为及其合法性的问题，这可能有助于确定文档所属的类别。",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
   "must_find": [
     "category labels and document-to-category assignments",
     "case cause, disposition, or verdict evidence"
@@ -25,13 +25,15 @@
     "DOC3_A1",
     "DOC3_A2",
     "DOC3_A3",
-    "DOC3_A4"
+    "DOC3_A4",
+    "DOC3_A5"
   ],
   "rule_hits": [
     {
       "anchor_id": "DOC3_A1",
-      "score": 15.807,
+      "score": 23.807,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=1.81"
@@ -40,8 +42,9 @@
     },
     {
       "anchor_id": "DOC3_A2",
-      "score": 15.401,
+      "score": 23.401,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=1.40"
@@ -50,26 +53,28 @@
     },
     {
       "anchor_id": "DOC3_A3",
-      "score": 15.114,
+      "score": 23.114,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=1.11"
       ],
-      "summary": "被申请人叠彩区应急管理局辩称其行为合法，且申请人已申请执行二审判决，不应再申请再审。"
+      "summary": "被申请人叠彩区应急管理局辩称其行为合法，且申请人已申请一审法院强制执行二审判决，不应再申请再审。"
     },
     {
       "anchor_id": "DOC3_A4",
-      "score": 14.891,
+      "score": 22.891,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=0.89"
       ],
-      "summary": "法院审查认为叠彩区应急管理局的强制拆除行为违法，但维持了二审判决，驳回了再审申请人的再审请求。"
+      "summary": "法院审查认为叠彩区应急管理局的强制拆除行为违法，但认为二审判决由某乙公司与叠彩区应急局共同承担补偿责任虽有不当，但符合实际情况。同时，法院驳回了申请人关于确认《公告》《危房通知书》《催告通知书》违法的诉讼请求。"
     }
   ],
   "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A2.",
-  "raw_plan_text": "<think>The current document, titled '《判决文书3》', seems to involve a case related to administrative actions, specifically concerning the legality of a forced demolition by the叠彩区应急管理局 (Diacai District Emergency Management Bureau). The case does not appear to directly relate to '行政行为-行政许可' (administrative behavior - administrative permission), '渎职罪' (dereliction of duty crime), '行政主体-司法行政管理（司法行政）' (administrative entity - judicial administration management), '破坏社会主义市场经济秩序罪' (crime of disrupting the socialist market economic order), or '非刑事赔偿-错误执行赔偿' (non-criminal compensation - compensation for erroneous execution). However, it may fall under '行政主体-房屋拆迁管理（拆迁）' (administrative entity - house demolition management). I will inspect the next anchor to confirm this.</think>\n<search>{\"current_query\":\"分类判决文书3\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A2\",\"candidate_anchor_ids\":[\"DOC3_A1\",\"DOC3_A2\",\"DOC3_A3\",\"DOC3_A4\"]}</search>",
-  "tagged_trace": "<think>The current document, titled '《判决文书3》', seems to involve a case related to administrative actions, specifically concerning the legality of a forced demolition by the叠彩区应急管理局 (Diacai District Emergency Management Bureau). The case does not appear to directly relate to '行政行为-行政许可' (administrative behavior - administrative permission), '渎职罪' (dereliction of duty crime), '行政主体-司法行政管理（司法行政）' (administrative entity - judicial administration management), '破坏社会主义市场经济秩序罪' (crime of disrupting the socialist market economic order), or '非刑事赔偿-错误执行赔偿' (non-criminal compensation - compensation for erroneous execution). However, it may fall under '行政主体-房屋拆迁管理（拆迁）' (administrative entity - house demolition management). I will inspect the next anchor to confirm this.</think>\n<search>{\"current_query\": \"分类判决文书3\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A2\"}</search>"
+  "raw_plan_text": "<think>考虑到当前文档的内容涉及行政行为和行政主体，特别是叠彩区应急管理局的强制拆除行为及其合法性，因此应该选择一个包含这些信息的坐标进行检查。DOC3_A2提到了案件背景，包括强制拆除行为及其合法性的问题，这可能有助于确定文档所属的类别。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A2\",\"candidate_anchor_ids\":[\"DOC3_A1\",\"DOC3_A2\",\"DOC3_A3\",\"DOC3_A4\",\"DOC3_A5\"]}</search>",
+  "tagged_trace": "<think>考虑到当前文档的内容涉及行政行为和行政主体，特别是叠彩区应急管理局的强制拆除行为及其合法性，因此应该选择一个包含这些信息的坐标进行检查。DOC3_A2提到了案件背景，包括强制拆除行为及其合法性的问题，这可能有助于确定文档所属的类别。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A2\"}</search>"
 }

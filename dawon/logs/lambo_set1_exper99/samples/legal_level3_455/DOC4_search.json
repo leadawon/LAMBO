@@ -2,18 +2,16 @@
   "doc_id": "DOC4",
   "doc_title": "《判决文书4》",
   "task_mode": "clustering",
-  "think": "The document seems to involve a dispute over administrative compensation related to the demolition of a house that lacked proper permits. The case involves an administrative body (焉耆回族自治县住房和城乡建设局) and appears to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the chunk that contains the court's review opinion to confirm the details and categorization.",
-  "current_query": "分类判决文书到给定的案由类别中",
+  "think": "考虑到当前文档标题为《判决文书4》，且必须找到案件的案由分类。从已有的摘要来看，该案涉及行政赔偿问题，因此可能属于\"非刑事赔偿-错误执行赔偿\"类别。接下来应该查看具体的案件背景和法院审查意见，以确定是否确实属于该类别。",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
   "must_find": [
     "category labels and document-to-category assignments",
     "case cause, disposition, or verdict evidence"
   ],
-  "next_anchor_id": "DOC4_A5",
+  "next_anchor_id": "DOC4_A3",
   "candidate_anchor_ids": [
-    "DOC4_A1",
-    "DOC4_A2",
     "DOC4_A3",
-    "DOC4_A4"
+    "DOC4_A5"
   ],
   "ranked_anchor_ids": [
     "DOC4_A1",
@@ -32,8 +30,9 @@
   "rule_hits": [
     {
       "anchor_id": "DOC4_A1",
-      "score": 15.807,
+      "score": 23.807,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=1.81"
@@ -42,8 +41,9 @@
     },
     {
       "anchor_id": "DOC4_A2",
-      "score": 15.401,
+      "score": 23.401,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=1.40"
@@ -52,8 +52,9 @@
     },
     {
       "anchor_id": "DOC4_A3",
-      "score": 15.114,
+      "score": 23.114,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=1.11"
@@ -62,8 +63,9 @@
     },
     {
       "anchor_id": "DOC4_A4",
-      "score": 14.891,
+      "score": 22.891,
       "reasons": [
+        "query_overlap=1",
         "anchor_type_prior=8",
         "legal_cue",
         "position_bonus=0.89"
@@ -71,7 +73,7 @@
       "summary": "被申请人认为案涉房屋是违法建筑，不应赔偿，并提供了拆除合同、清单及支付凭据作为证据。"
     }
   ],
-  "why_these_anchors": "Prepared iterative anchor search for 《判决文书4》. First coordinate candidate is DOC4_A5.",
-  "raw_plan_text": "<think>The document seems to involve a dispute over administrative compensation related to the demolition of a house that lacked proper permits. The case involves an administrative body (焉耆回族自治县住房和城乡建设局) and appears to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the chunk that contains the court's review opinion to confirm the details and categorization.</think>\n<search>{\"current_query\":\"分类判决文书到给定的案由类别中\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC4_A5\",\"candidate_anchor_ids\":[\"DOC4_A1\",\"DOC4_A2\",\"DOC4_A3\",\"DOC4_A4\",\"DOC4_A5\",\"DOC4_A6\"]}</search>",
-  "tagged_trace": "<think>The document seems to involve a dispute over administrative compensation related to the demolition of a house that lacked proper permits. The case involves an administrative body (焉耆回族自治县住房和城乡建设局) and appears to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the chunk that contains the court's review opinion to confirm the details and categorization.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"], \"next_anchor_id\": \"DOC4_A5\"}</search>"
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书4》. First coordinate candidate is DOC4_A3.",
+  "raw_plan_text": "<think>考虑到当前文档标题为《判决文书4》，且必须找到案件的案由分类。从已有的摘要来看，该案涉及行政赔偿问题，因此可能属于\"非刑事赔偿-错误执行赔偿\"类别。接下来应该查看具体的案件背景和法院审查意见，以确定是否确实属于该类别。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC4_A3\",\"candidate_anchor_ids\":[\"DOC4_A3\", \"DOC4_A5\"]}</search>",
+  "tagged_trace": "<think>考虑到当前文档标题为《判决文书4》，且必须找到案件的案由分类。从已有的摘要来看，该案涉及行政赔偿问题，因此可能属于\"非刑事赔偿-错误执行赔偿\"类别。接下来应该查看具体的案件背景和法院审查意见，以确定是否确实属于该类别。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC4_A3\", \"DOC4_A5\"], \"next_anchor_id\": \"DOC4_A3\"}</search>"
 }

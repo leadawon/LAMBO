@@ -2,9 +2,10 @@
   "doc_id": "DOC11",
   "doc_title": "《判决文书11》",
   "selected_anchor_ids": [
-    "DOC11_A2"
+    "DOC11_A2",
+    "DOC11_A3"
   ],
-  "final_current_query": "案件背景和当事人信息以确认案件类别",
+  "final_current_query": "进一步了解案件的具体行政行为类型",
   "rounds": [
     {
       "round_index": 1,
@@ -29,17 +30,55 @@
         "summary": "荆某、王某因拆迁安置纠纷向济南市中级人民法院申请再审，不服该法院的行政裁定。",
         "text": "荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n荆某、王某以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项规定为由，向本院申请再审。"
       },
-      "extract_think": "The selected chunk confirms that the case involves a dispute over拆迁安置 (relocation resettlement) between荆某、王某 and the 北园街道办, which aligns with the category '行政主体-房屋拆迁管理（拆迁）'. The chunk provides clear evidence of the case's nature but does not provide information on other potential categories or additional documents. Therefore, we can classify this document under '行政主体-房屋拆迁管理（拆迁）' based on the current information.",
+      "extract_think": "The selected chunk provides information about a case involving a dispute over拆迁安置 (relocation resettlement) between荆某、王某 and the北园街道办. This aligns with the category '行政主体-房屋拆迁管理（拆迁）'. The chunk does not provide enough information to categorize the case into other categories mentioned in the question. A follow-up query is needed to gather more details about the case.",
       "retrieve": {
         "items": [
           {
             "answer_key": "行政主体-房屋拆迁管理（拆迁）",
-            "value": "判决文书11",
+            "value": "《判决文书11》",
             "normalized_value": "判决文书11",
             "evidence_text": "荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。",
             "source_doc_id": "DOC11",
             "source_anchor_id": "DOC11_A2",
-            "confidence": 1.0
+            "confidence": 0.8
+          }
+        ],
+        "enough": false,
+        "followup_query": "进一步了解案件的具体行政行为类型"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "进一步了解案件的具体行政行为类型",
+        "must_find": [
+          "具体行政行为类型"
+        ],
+        "next_anchor_id": "DOC11_A3",
+        "candidate_anchor_ids": [
+          "DOC11_A3"
+        ]
+      },
+      "anchor_id": "DOC11_A3",
+      "plan_think": "The current evidence suggests that the case involves '行政主体-房屋拆迁管理（拆迁）'. However, we need to further investigate the specific administrative actions involved in the case to ensure there are no other relevant categories. I will inspect DOC11_A3, which contains the court's opinion, to look for any additional administrative actions or behaviors.",
+      "info": {
+        "anchor_id": "DOC11_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院意见",
+        "summary": "法院认为再审申请人提起诉讼已超过五年的法定起诉期限，裁定驳回起诉。",
+        "text": "本院认为：本案争议焦点是再审申请人提起本案诉讼是否超过法定起诉期限。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第九条第一款规定“行政诉讼法第二十条规定的‘因不动产提起的行政诉讼’是指因行政行为导致不动产物权变动而提起的诉讼”。经查，本案争议房屋并未进行不动产登记，尚未发生不动产物权变动。因此，不适用二十年的法定起诉期限。根据原审及本院查明，2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人，儿子荆桂林一家三口、儿子荆建强一家三口、儿子荆小波一家三口），选择安置房为60平方米1套、81平方米1套、94平方米1套、141平方米2套。同日，北园街道办、水屯居委会制作“户型选择说明”，其中在“房产姓名”栏，儿媳孟丽洁在60平方米和81平方米房屋处签字，荆小波在94平方米1套处签字，荆桂林、荆小波在141平方米2套处签字。以上在“户型选择说明”上签字的行为，属于再审申请人对安置房屋进行家庭内部分配，北园街道办、水屯居委会对此加盖公章系对安置房屋分配结果的确认。根据《中华人民共和国行政诉讼法》第四十六条规定，其他案件自行政行为作出之日起超过五年提起诉讼的，人民法院不予受理。北园街道办、水屯居委会对安置房屋分配结果的确认行为发生于2017年12月29日，至再审申请人于2023年5月5日提起本案违法之诉已超过五年的法定起诉期限。原审法院认为再审申请人所主张的“登记”行为实际系协议签订行为，其起诉已超过五年的法定起诉期限，并裁定驳回起诉，并无不当。现再审申请人主张由于二人身体不便由三子荆小波代替其办理拆迁安置手续，荆小波未经其授权在94平方米房屋处签字，被申请人将本属于再审申请人的房屋错误登记在荆小波名下，侵害其合法权益，其有权提起诉讼。本院认为，再审申请人虽基于利害关系有权提起诉讼，但是根据《中华人民共和国行政诉讼法》第四十六条规定，提起诉讼应当受起诉期限的限制。再审申请人认可由荆小波代替办理拆迁安置手续，应对其委托荆小波的行为自行承担不利的法律后果。对于荆小波侵害其合法权益事宜，再审申请人可另行向荆小波主张权利。对其再审主张，本院不予支持。"
+      },
+      "extract_think": "The selected chunk provides detailed information about the administrative actions taken in the case, specifically focusing on the signing of an安置补偿协议 (settlement compensation agreement) and the subsequent confirmation of the allocation of安置房屋 (resettlement housing). This aligns with the category '行政主体-房屋拆迁管理（拆迁）'. There is no clear indication of other administrative actions such as行政处罚 (administrative penalties) or贪污受贿罪 (embezzlement and bribery crimes). The chunk is sufficient to support the current classification.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政主体-房屋拆迁管理（拆迁）",
+            "value": "《判决文书11》",
+            "normalized_value": "判决文书11",
+            "evidence_text": "根据原审及本院查明，2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人，儿子荆桂林一家三口、儿子荆建强一家三口、儿子荆小波一家三口），选择安置房为60平方米1套、81平方米1套、94平方米1套、141平方米2套。同日，北园街道办、水屯居委会制作“户型选择说明”，其中在“房产姓名”栏，儿媳孟丽洁在60平方米和81平方米房屋处签字，荆小波在94平方米1套处签字，荆桂林、荆小波在141平方米2套处签字。以上在“户型选择说明”上签字的行为，属于再审申请人对安置房屋进行家庭内部分配，北园街道办、水屯居委会对此加盖公章系对安置房屋分配结果的确认。",
+            "source_doc_id": "DOC11",
+            "source_anchor_id": "DOC11_A3",
+            "confidence": 0.9
           }
         ],
         "enough": true,
@@ -50,17 +89,26 @@
   "items": [
     {
       "answer_key": "行政主体-房屋拆迁管理（拆迁）",
-      "value": "判决文书11",
+      "value": "《判决文书11》",
       "normalized_value": "判决文书11",
       "evidence_text": "荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。",
       "source_doc_id": "DOC11",
       "source_anchor_id": "DOC11_A2",
-      "confidence": 1.0
+      "confidence": 0.8
+    },
+    {
+      "answer_key": "行政主体-房屋拆迁管理（拆迁）",
+      "value": "《判决文书11》",
+      "normalized_value": "判决文书11",
+      "evidence_text": "根据原审及本院查明，2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人，儿子荆桂林一家三口、儿子荆建强一家三口、儿子荆小波一家三口），选择安置房为60平方米1套、81平方米1套、94平方米1套、141平方米2套。同日，北园街道办、水屯居委会制作“户型选择说明”，其中在“房产姓名”栏，儿媳孟丽洁在60平方米和81平方米房屋处签字，荆小波在94平方米1套处签字，荆桂林、荆小波在141平方米2套处签字。以上在“户型选择说明”上签字的行为，属于再审申请人对安置房屋进行家庭内部分配，北园街道办、水屯居委会对此加盖公章系对安置房屋分配结果的确认。",
+      "source_doc_id": "DOC11",
+      "source_anchor_id": "DOC11_A3",
+      "confidence": 0.9
     }
   ],
   "trace": {
-    "round_count": 1,
-    "tagged_trace": "<think>The document title and summaries suggest that this case involves a dispute over拆迁安置 (relocation resettlement), which falls under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the first chunk to confirm if it contains more details about the case cause and whether it aligns with the identified category.</think>\n<search>{\"current_query\": \"案件背景和当事人信息以确认案件类别\", \"must_find\": [\"案件背景\", \"当事人信息\"], \"next_anchor_id\": \"DOC11_A2\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"荆某、王某因拆迁安置纠纷向济南市中级人民法院申请再审，不服该法院的行政裁定。\", \"text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n荆某、王某以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项规定为由，向本院申请再审。\"}</info>\n<think>The selected chunk confirms that the case involves a dispute over拆迁安置 (relocation resettlement) between荆某、王某 and the 北园街道办, which aligns with the category '行政主体-房屋拆迁管理（拆迁）'. The chunk provides clear evidence of the case's nature but does not provide information on other potential categories or additional documents. Therefore, we can classify this document under '行政主体-房屋拆迁管理（拆迁）' based on the current information.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"判决文书11\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+    "round_count": 2,
+    "tagged_trace": "<think>The document title and summaries suggest that this case involves a dispute over拆迁安置 (relocation resettlement), which falls under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the first chunk to confirm if it contains more details about the case cause and whether it aligns with the identified category.</think>\n<search>{\"current_query\": \"案件背景和当事人信息以确认案件类别\", \"must_find\": [\"案件背景\", \"当事人信息\"], \"next_anchor_id\": \"DOC11_A2\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"荆某、王某因拆迁安置纠纷向济南市中级人民法院申请再审，不服该法院的行政裁定。\", \"text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n荆某、王某以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项规定为由，向本院申请再审。\"}</info>\n<think>The selected chunk provides information about a case involving a dispute over拆迁安置 (relocation resettlement) between荆某、王某 and the北园街道办. This aligns with the category '行政主体-房屋拆迁管理（拆迁）'. The chunk does not provide enough information to categorize the case into other categories mentioned in the question. A follow-up query is needed to gather more details about the case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A2\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"进一步了解案件的具体行政行为类型\"}</retrieve>\n<think>The current evidence suggests that the case involves '行政主体-房屋拆迁管理（拆迁）'. However, we need to further investigate the specific administrative actions involved in the case to ensure there are no other relevant categories. I will inspect DOC11_A3, which contains the court's opinion, to look for any additional administrative actions or behaviors.</think>\n<search>{\"current_query\": \"进一步了解案件的具体行政行为类型\", \"must_find\": [\"具体行政行为类型\"], \"next_anchor_id\": \"DOC11_A3\", \"candidate_anchor_ids\": [\"DOC11_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为再审申请人提起诉讼已超过五年的法定起诉期限，裁定驳回起诉。\", \"text\": \"本院认为：本案争议焦点是再审申请人提起本案诉讼是否超过法定起诉期限。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第九条第一款规定“行政诉讼法第二十条规定的‘因不动产提起的行政诉讼’是指因行政行为导致不动产物权变动而提起的诉讼”。经查，本案争议房屋并未进行不动产登记，尚未发生不动产物权变动。因此，不适用二十年的法定起诉期限。根据原审及本院查明，2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人，儿子荆桂林一家三口、儿子荆建强一家三口、儿子荆小波一家三口），选择安置房为60平方米1套、81平方米1套、94平方米1套、141平方米2套。同日，北园街道办、水屯居委会制作“户型选择说明”，其中在“房产姓名”栏，儿媳孟丽洁在60平方米和81平方米房屋处签字，荆小波在94平方米1套处签字，荆桂林、荆小波在141平方米2套处签字。以上在“户型选择说明”上签字的行为，属于再审申请人对安置房屋进行家庭内部分配，北园街道办、水屯居委会对此加盖公章系对安置房屋分配结果的确认。根据《中华人民共和国行政诉讼法》第四十六条规定，其他案件自行政行为作出之日起超过五年提起诉讼的，人民法院不予受理。北园街道办、水屯居委会对安置房屋分配结果的确认行为发生于2017年12月29日，至再审申请人于2023年5月5日提起本案违法之诉已超过五年的法定起诉期限。原审法院认为再审申请人所主张的“登记”行为实际系协议签订行为，其起诉已超过五年的法定起诉期限，并裁定驳回起诉，并无不当。现再审申请人主张由于二人身体不便由三子荆小波代替其办理拆迁安置手续，荆小波未经其授权在94平方米房屋处签字，被申请人将本属于再审申请人的房屋错误登记在荆小波名下，侵害其合法权益，其有权提起诉讼。本院认为，再审申请人虽基于利害关系有权提起诉讼，但是根据《中华人民共和国行政诉讼法》第四十六条规定，提起诉讼应当受起诉期限的限制。再审申请人认可由荆小波代替办理拆迁安置手续，应对其委托荆小波的行为自行承担不利的法律后果。对于荆小波侵害其合法权益事宜，再审申请人可另行向荆小波主张权利。对其再审主张，本院不予支持。\"}</info>\n<think>The selected chunk provides detailed information about the administrative actions taken in the case, specifically focusing on the signing of an安置补偿协议 (settlement compensation agreement) and the subsequent confirmation of the allocation of安置房屋 (resettlement housing). This aligns with the category '行政主体-房屋拆迁管理（拆迁）'. There is no clear indication of other administrative actions such as行政处罚 (administrative penalties) or贪污受贿罪 (embezzlement and bribery crimes). The chunk is sufficient to support the current classification.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"根据原审及本院查明，2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人，儿子荆桂林一家三口、儿子荆建强一家三口、儿子荆小波一家三口），选择安置房为60平方米1套、81平方米1套、94平方米1套、141平方米2套。同日，北园街道办、水屯居委会制作“户型选择说明”，其中在“房产姓名”栏，儿媳孟丽洁在60平方米和81平方米房屋处签字，荆小波在94平方米1套处签字，荆桂林、荆小波在141平方米2套处签字。以上在“户型选择说明”上签字的行为，属于再审申请人对安置房屋进行家庭内部分配，北园街道办、水屯居委会对此加盖公章系对安置房屋分配结果的确认。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A3\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
   },
-  "tagged_trace": "<think>The document title and summaries suggest that this case involves a dispute over拆迁安置 (relocation resettlement), which falls under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the first chunk to confirm if it contains more details about the case cause and whether it aligns with the identified category.</think>\n<search>{\"current_query\": \"案件背景和当事人信息以确认案件类别\", \"must_find\": [\"案件背景\", \"当事人信息\"], \"next_anchor_id\": \"DOC11_A2\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"荆某、王某因拆迁安置纠纷向济南市中级人民法院申请再审，不服该法院的行政裁定。\", \"text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n荆某、王某以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项规定为由，向本院申请再审。\"}</info>\n<think>The selected chunk confirms that the case involves a dispute over拆迁安置 (relocation resettlement) between荆某、王某 and the 北园街道办, which aligns with the category '行政主体-房屋拆迁管理（拆迁）'. The chunk provides clear evidence of the case's nature but does not provide information on other potential categories or additional documents. Therefore, we can classify this document under '行政主体-房屋拆迁管理（拆迁）' based on the current information.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"判决文书11\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  "tagged_trace": "<think>The document title and summaries suggest that this case involves a dispute over拆迁安置 (relocation resettlement), which falls under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the first chunk to confirm if it contains more details about the case cause and whether it aligns with the identified category.</think>\n<search>{\"current_query\": \"案件背景和当事人信息以确认案件类别\", \"must_find\": [\"案件背景\", \"当事人信息\"], \"next_anchor_id\": \"DOC11_A2\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"荆某、王某因拆迁安置纠纷向济南市中级人民法院申请再审，不服该法院的行政裁定。\", \"text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n荆某、王某以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项规定为由，向本院申请再审。\"}</info>\n<think>The selected chunk provides information about a case involving a dispute over拆迁安置 (relocation resettlement) between荆某、王某 and the北园街道办. This aligns with the category '行政主体-房屋拆迁管理（拆迁）'. The chunk does not provide enough information to categorize the case into other categories mentioned in the question. A follow-up query is needed to gather more details about the case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）拆迁安置一案，不服济南市中级人民法院（2023）鲁01行终1262号行政裁定，向本院申请再审。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A2\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"进一步了解案件的具体行政行为类型\"}</retrieve>\n<think>The current evidence suggests that the case involves '行政主体-房屋拆迁管理（拆迁）'. However, we need to further investigate the specific administrative actions involved in the case to ensure there are no other relevant categories. I will inspect DOC11_A3, which contains the court's opinion, to look for any additional administrative actions or behaviors.</think>\n<search>{\"current_query\": \"进一步了解案件的具体行政行为类型\", \"must_find\": [\"具体行政行为类型\"], \"next_anchor_id\": \"DOC11_A3\", \"candidate_anchor_ids\": [\"DOC11_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为再审申请人提起诉讼已超过五年的法定起诉期限，裁定驳回起诉。\", \"text\": \"本院认为：本案争议焦点是再审申请人提起本案诉讼是否超过法定起诉期限。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第九条第一款规定“行政诉讼法第二十条规定的‘因不动产提起的行政诉讼’是指因行政行为导致不动产物权变动而提起的诉讼”。经查，本案争议房屋并未进行不动产登记，尚未发生不动产物权变动。因此，不适用二十年的法定起诉期限。根据原审及本院查明，2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人，儿子荆桂林一家三口、儿子荆建强一家三口、儿子荆小波一家三口），选择安置房为60平方米1套、81平方米1套、94平方米1套、141平方米2套。同日，北园街道办、水屯居委会制作“户型选择说明”，其中在“房产姓名”栏，儿媳孟丽洁在60平方米和81平方米房屋处签字，荆小波在94平方米1套处签字，荆桂林、荆小波在141平方米2套处签字。以上在“户型选择说明”上签字的行为，属于再审申请人对安置房屋进行家庭内部分配，北园街道办、水屯居委会对此加盖公章系对安置房屋分配结果的确认。根据《中华人民共和国行政诉讼法》第四十六条规定，其他案件自行政行为作出之日起超过五年提起诉讼的，人民法院不予受理。北园街道办、水屯居委会对安置房屋分配结果的确认行为发生于2017年12月29日，至再审申请人于2023年5月5日提起本案违法之诉已超过五年的法定起诉期限。原审法院认为再审申请人所主张的“登记”行为实际系协议签订行为，其起诉已超过五年的法定起诉期限，并裁定驳回起诉，并无不当。现再审申请人主张由于二人身体不便由三子荆小波代替其办理拆迁安置手续，荆小波未经其授权在94平方米房屋处签字，被申请人将本属于再审申请人的房屋错误登记在荆小波名下，侵害其合法权益，其有权提起诉讼。本院认为，再审申请人虽基于利害关系有权提起诉讼，但是根据《中华人民共和国行政诉讼法》第四十六条规定，提起诉讼应当受起诉期限的限制。再审申请人认可由荆小波代替办理拆迁安置手续，应对其委托荆小波的行为自行承担不利的法律后果。对于荆小波侵害其合法权益事宜，再审申请人可另行向荆小波主张权利。对其再审主张，本院不予支持。\"}</info>\n<think>The selected chunk provides detailed information about the administrative actions taken in the case, specifically focusing on the signing of an安置补偿协议 (settlement compensation agreement) and the subsequent confirmation of the allocation of安置房屋 (resettlement housing). This aligns with the category '行政主体-房屋拆迁管理（拆迁）'. There is no clear indication of other administrative actions such as行政处罚 (administrative penalties) or贪污受贿罪 (embezzlement and bribery crimes). The chunk is sufficient to support the current classification.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"根据原审及本院查明，2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人，儿子荆桂林一家三口、儿子荆建强一家三口、儿子荆小波一家三口），选择安置房为60平方米1套、81平方米1套、94平方米1套、141平方米2套。同日，北园街道办、水屯居委会制作“户型选择说明”，其中在“房产姓名”栏，儿媳孟丽洁在60平方米和81平方米房屋处签字，荆小波在94平方米1套处签字，荆桂林、荆小波在141平方米2套处签字。以上在“户型选择说明”上签字的行为，属于再审申请人对安置房屋进行家庭内部分配，北园街道办、水屯居委会对此加盖公章系对安置房屋分配结果的确认。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A3\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
 }

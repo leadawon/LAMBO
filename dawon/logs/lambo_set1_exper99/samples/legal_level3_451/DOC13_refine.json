@@ -2,9 +2,11 @@
   "doc_id": "DOC13",
   "doc_title": "《判决文书13》",
   "selected_anchor_ids": [
-    "DOC13_A2"
+    "DOC13_A2",
+    "DOC13_A3",
+    "DOC13_A4"
   ],
-  "final_current_query": "分类判决文书到相应的案由类别",
+  "final_current_query": "是否有其他案由类别涉及《判决文书13》？",
   "rounds": [
     {
       "round_index": 1,
@@ -31,21 +33,85 @@
         "summary": "北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。",
         "text": "再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。"
       },
-      "extract_think": "该段落明确提到北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。这进一步确认了该判决文书属于'行政行为-行政登记'类别。",
+      "extract_think": "该段落确认了案件涉及不动产抵押登记，属于“行政行为-行政登记”类别。没有足够的信息来确定是否还有其他类别需要归类。",
       "retrieve": {
         "items": [
           {
             "answer_key": "行政行为-行政登记",
             "value": "《判决文书13》",
             "normalized_value": "判决文书13",
-            "evidence_text": "再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。",
+            "evidence_text": "再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。",
             "source_doc_id": "DOC13",
             "source_anchor_id": "DOC13_A2",
             "confidence": 1.0
           }
         ],
-        "enough": true,
-        "followup_query": ""
+        "enough": false,
+        "followup_query": "是否有其他案由类别涉及《判决文书13》？"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "是否有其他案由类别涉及《判决文书13》？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC13_A3",
+        "candidate_anchor_ids": [
+          "DOC13_A1",
+          "DOC13_A2",
+          "DOC13_A3",
+          "DOC13_A4"
+        ]
+      },
+      "anchor_id": "DOC13_A3",
+      "plan_think": "已有证据表明《判决文书13》涉及“行政行为-行政登记”。为了确保没有遗漏其他可能的案由类别，我将检查文档中的更多部分，特别是那些可能提到其他类型案由的部分。",
+      "info": {
+        "anchor_id": "DOC13_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "再审申请理由",
+        "summary": "某某担保公司认为原审存在超越法定职权、滥用裁量权、混淆基本法律概念、适用法律错误等问题，并请求撤销原审判决或提审。",
+        "text": "某某担保公司申请再审称，原审存在超越法定职权、滥用裁量权、混淆基本法律概念、适用法律错误等情形。请求撤销原审判决；指令原审法院对本案予以再审，或者由本院提审。"
+      },
+      "extract_think": "该段落主要描述了某某担保公司的再审申请理由，包括原审存在的问题和请求撤销原审判决或提审的内容。这些信息并未提供新的案由类别，因此不足以确定是否有其他案由类别涉及《判决文书13》。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否有其他案由类别涉及《判决文书13》？"
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "是否有其他案由类别涉及《判决文书13》？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC13_A4",
+        "candidate_anchor_ids": [
+          "DOC13_A1",
+          "DOC13_A2",
+          "DOC13_A3",
+          "DOC13_A4"
+        ]
+      },
+      "anchor_id": "DOC13_A4",
+      "plan_think": "考虑到已有的证据表明《判决文书13》涉及“行政行为-行政登记”，但尚未发现其他案由类别。接下来应该检查文档中剩余的部分，以确认是否存在其他案由类别。特别是，如果文档中有提及法院意见的部分，可能会提供更多关于案件性质的信息。",
+      "info": {
+        "anchor_id": "DOC13_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院意见",
+        "summary": "法院认为，由于抵押反担保合同已被撤销，房屋抵押登记的事实依据已不存在，因此原审判决撤销涉案房屋抵押登记是正确的。",
+        "text": "本院认为，2008年7月1日起施行的《房屋登记办法》第四十三条规定，申请抵押权登记，应当提交登记申请书、申请人的身份证明、房屋所有权证书或者房地产权证书、抵押合同、主债权合同、其他必要材料。本案中，沈某、某某担保公司向北京市规划和自然资源委员会海淀分局（以下简称海淀规自委）提交房屋抵押权设立登记申请表、身份证明材料、第00XXX05号房屋所有权证以及合同编号为CGIG2012字第XXX号不动产抵押反担保合同等材料，申请房屋抵押登记。但根据生效的民事判决，合同编号为CGIG2012字第XXX号不动产抵押反担保合同因某某担保公司与他人对沈某存在恶意欺诈行为已被依法撤销，在此情形下，海淀规自委所作房屋抵押登记的事实依据及核心要件已不存在，原审法院据此撤销涉案房屋抵押登记具有相应的事实根据和法律依据，原审法院结合相关情况就沈某起诉期限的相关认定亦无不当，原审判决并无不当。某某担保公司申请再审缺乏事实根据和法律依据，本院不予支持。"
+      },
+      "extract_think": "该段落详细说明了法院对于不动产抵押登记的处理意见，进一步确认了案件涉及“行政行为-行政登记”。然而，没有提到其他案由类别。因此，目前没有足够的信息来确定是否有其他案由类别涉及《判决文书13》。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否有其他案由类别涉及《判决文书13》？"
       }
     }
   ],
@@ -54,15 +120,15 @@
       "answer_key": "行政行为-行政登记",
       "value": "《判决文书13》",
       "normalized_value": "判决文书13",
-      "evidence_text": "再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。",
+      "evidence_text": "再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。",
       "source_doc_id": "DOC13",
       "source_anchor_id": "DOC13_A2",
       "confidence": 1.0
     }
   ],
   "trace": {
-    "round_count": 1,
-    "tagged_trace": "<think>The document seems to involve a case related to administrative registration, specifically concerning real estate mortgage registration. The case background and court's opinion suggest that it falls under the category of '行政行为-行政登记'. I will inspect the next anchor to confirm this categorization.</think>\n<search>{\"current_query\": \"分类判决文书到相应的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A2\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。\", \"text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>该段落明确提到北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。这进一步确认了该判决文书属于'行政行为-行政登记'类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政登记\", \"value\": \"《判决文书13》\", \"normalized_value\": \"判决文书13\", \"evidence_text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\", \"source_doc_id\": \"DOC13\", \"source_anchor_id\": \"DOC13_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+    "round_count": 3,
+    "tagged_trace": "<think>The document seems to involve a case related to administrative registration, specifically concerning real estate mortgage registration. The case background and court's opinion suggest that it falls under the category of '行政行为-行政登记'. I will inspect the next anchor to confirm this categorization.</think>\n<search>{\"current_query\": \"分类判决文书到相应的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A2\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。\", \"text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>该段落确认了案件涉及不动产抵押登记，属于“行政行为-行政登记”类别。没有足够的信息来确定是否还有其他类别需要归类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政登记\", \"value\": \"《判决文书13》\", \"normalized_value\": \"判决文书13\", \"evidence_text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC13\", \"source_anchor_id\": \"DOC13_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"是否有其他案由类别涉及《判决文书13》？\"}</retrieve>\n<think>已有证据表明《判决文书13》涉及“行政行为-行政登记”。为了确保没有遗漏其他可能的案由类别，我将检查文档中的更多部分，特别是那些可能提到其他类型案由的部分。</think>\n<search>{\"current_query\": \"是否有其他案由类别涉及《判决文书13》？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A3\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"再审申请理由\", \"summary\": \"某某担保公司认为原审存在超越法定职权、滥用裁量权、混淆基本法律概念、适用法律错误等问题，并请求撤销原审判决或提审。\", \"text\": \"某某担保公司申请再审称，原审存在超越法定职权、滥用裁量权、混淆基本法律概念、适用法律错误等情形。请求撤销原审判决；指令原审法院对本案予以再审，或者由本院提审。\"}</info>\n<think>该段落主要描述了某某担保公司的再审申请理由，包括原审存在的问题和请求撤销原审判决或提审的内容。这些信息并未提供新的案由类别，因此不足以确定是否有其他案由类别涉及《判决文书13》。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由类别涉及《判决文书13》？\"}</retrieve>\n<think>考虑到已有的证据表明《判决文书13》涉及“行政行为-行政登记”，但尚未发现其他案由类别。接下来应该检查文档中剩余的部分，以确认是否存在其他案由类别。特别是，如果文档中有提及法院意见的部分，可能会提供更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"是否有其他案由类别涉及《判决文书13》？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A4\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为，由于抵押反担保合同已被撤销，房屋抵押登记的事实依据已不存在，因此原审判决撤销涉案房屋抵押登记是正确的。\", \"text\": \"本院认为，2008年7月1日起施行的《房屋登记办法》第四十三条规定，申请抵押权登记，应当提交登记申请书、申请人的身份证明、房屋所有权证书或者房地产权证书、抵押合同、主债权合同、其他必要材料。本案中，沈某、某某担保公司向北京市规划和自然资源委员会海淀分局（以下简称海淀规自委）提交房屋抵押权设立登记申请表、身份证明材料、第00XXX05号房屋所有权证以及合同编号为CGIG2012字第XXX号不动产抵押反担保合同等材料，申请房屋抵押登记。但根据生效的民事判决，合同编号为CGIG2012字第XXX号不动产抵押反担保合同因某某担保公司与他人对沈某存在恶意欺诈行为已被依法撤销，在此情形下，海淀规自委所作房屋抵押登记的事实依据及核心要件已不存在，原审法院据此撤销涉案房屋抵押登记具有相应的事实根据和法律依据，原审法院结合相关情况就沈某起诉期限的相关认定亦无不当，原审判决并无不当。某某担保公司申请再审缺乏事实根据和法律依据，本院不予支持。\"}</info>\n<think>该段落详细说明了法院对于不动产抵押登记的处理意见，进一步确认了案件涉及“行政行为-行政登记”。然而，没有提到其他案由类别。因此，目前没有足够的信息来确定是否有其他案由类别涉及《判决文书13》。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由类别涉及《判决文书13》？\"}</retrieve>"
   },
-  "tagged_trace": "<think>The document seems to involve a case related to administrative registration, specifically concerning real estate mortgage registration. The case background and court's opinion suggest that it falls under the category of '行政行为-行政登记'. I will inspect the next anchor to confirm this categorization.</think>\n<search>{\"current_query\": \"分类判决文书到相应的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A2\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。\", \"text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>该段落明确提到北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。这进一步确认了该判决文书属于'行政行为-行政登记'类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政登记\", \"value\": \"《判决文书13》\", \"normalized_value\": \"判决文书13\", \"evidence_text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\", \"source_doc_id\": \"DOC13\", \"source_anchor_id\": \"DOC13_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  "tagged_trace": "<think>The document seems to involve a case related to administrative registration, specifically concerning real estate mortgage registration. The case background and court's opinion suggest that it falls under the category of '行政行为-行政登记'. I will inspect the next anchor to confirm this categorization.</think>\n<search>{\"current_query\": \"分类判决文书到相应的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A2\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"北京某某担保有限公司因不动产抵押登记一案，不服北京市第一中级人民法院的行政判决，向法院申请再审。\", \"text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>该段落确认了案件涉及不动产抵押登记，属于“行政行为-行政登记”类别。没有足够的信息来确定是否还有其他类别需要归类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政登记\", \"value\": \"《判决文书13》\", \"normalized_value\": \"判决文书13\", \"evidence_text\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC13\", \"source_anchor_id\": \"DOC13_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"是否有其他案由类别涉及《判决文书13》？\"}</retrieve>\n<think>已有证据表明《判决文书13》涉及“行政行为-行政登记”。为了确保没有遗漏其他可能的案由类别，我将检查文档中的更多部分，特别是那些可能提到其他类型案由的部分。</think>\n<search>{\"current_query\": \"是否有其他案由类别涉及《判决文书13》？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A3\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"再审申请理由\", \"summary\": \"某某担保公司认为原审存在超越法定职权、滥用裁量权、混淆基本法律概念、适用法律错误等问题，并请求撤销原审判决或提审。\", \"text\": \"某某担保公司申请再审称，原审存在超越法定职权、滥用裁量权、混淆基本法律概念、适用法律错误等情形。请求撤销原审判决；指令原审法院对本案予以再审，或者由本院提审。\"}</info>\n<think>该段落主要描述了某某担保公司的再审申请理由，包括原审存在的问题和请求撤销原审判决或提审的内容。这些信息并未提供新的案由类别，因此不足以确定是否有其他案由类别涉及《判决文书13》。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由类别涉及《判决文书13》？\"}</retrieve>\n<think>考虑到已有的证据表明《判决文书13》涉及“行政行为-行政登记”，但尚未发现其他案由类别。接下来应该检查文档中剩余的部分，以确认是否存在其他案由类别。特别是，如果文档中有提及法院意见的部分，可能会提供更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"是否有其他案由类别涉及《判决文书13》？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC13_A4\", \"candidate_anchor_ids\": [\"DOC13_A1\", \"DOC13_A2\", \"DOC13_A3\", \"DOC13_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC13_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为，由于抵押反担保合同已被撤销，房屋抵押登记的事实依据已不存在，因此原审判决撤销涉案房屋抵押登记是正确的。\", \"text\": \"本院认为，2008年7月1日起施行的《房屋登记办法》第四十三条规定，申请抵押权登记，应当提交登记申请书、申请人的身份证明、房屋所有权证书或者房地产权证书、抵押合同、主债权合同、其他必要材料。本案中，沈某、某某担保公司向北京市规划和自然资源委员会海淀分局（以下简称海淀规自委）提交房屋抵押权设立登记申请表、身份证明材料、第00XXX05号房屋所有权证以及合同编号为CGIG2012字第XXX号不动产抵押反担保合同等材料，申请房屋抵押登记。但根据生效的民事判决，合同编号为CGIG2012字第XXX号不动产抵押反担保合同因某某担保公司与他人对沈某存在恶意欺诈行为已被依法撤销，在此情形下，海淀规自委所作房屋抵押登记的事实依据及核心要件已不存在，原审法院据此撤销涉案房屋抵押登记具有相应的事实根据和法律依据，原审法院结合相关情况就沈某起诉期限的相关认定亦无不当，原审判决并无不当。某某担保公司申请再审缺乏事实根据和法律依据，本院不予支持。\"}</info>\n<think>该段落详细说明了法院对于不动产抵押登记的处理意见，进一步确认了案件涉及“行政行为-行政登记”。然而，没有提到其他案由类别。因此，目前没有足够的信息来确定是否有其他案由类别涉及《判决文书13》。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由类别涉及《判决文书13》？\"}</retrieve>"
 }

@@ -5,7 +5,7 @@
     "DOC1_A1",
     "DOC1_A2"
   ],
-  "final_current_query": "请提供有关案件性质或案件类别的信息。",
+  "final_current_query": "请提供包含案件类型描述的段落。",
   "rounds": [
     {
       "round_index": 1,
@@ -32,27 +32,17 @@
         "summary": "列出了复议申请人（被保全人）云南省某产业发展集团有限责任公司及其法定代表人、委托诉讼代理人，保全申请人深圳某基金管理有限公司及其法定代表人、委托诉讼代理人，以及被保全人云南某管理有限公司及其法定代表人的相关信息。",
         "text": "复议申请人（被保全人)：云南省某产业发展集团有限责任公司。\n\n法定代表人：纳某菲，该公司董事长兼总经理。\n\n委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。\n\n委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。\n\n保全申请人：深圳某基金管理有限公司。\n\n法定代表人：管某，该公司执行董事，总经理。\n\n委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。\n\n委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。\n\n被保全人：云南某管理有限公司。\n\n法定代表人：赵某，该公司执行董事。"
       },
-      "extract_think": "该锚点块提供了当事人的信息，包括复议申请人、保全申请人和被保全人的名称及法定代表人等详细信息。然而，它并没有直接说明案件的具体类型。为了确定案件类型，需要进一步查找关于案件性质的信息。",
+      "extract_think": "该锚点块提供了当事人的信息，但没有直接说明案件类型。需要进一步查找文档内容来确定案件类型。",
       "retrieve": {
-        "items": [
-          {
-            "answer_key": "案件类型",
-            "value": "未知",
-            "normalized_value": "未知",
-            "evidence_text": "复议申请人（被保全人)：云南省某产业发展集团有限责任公司。法定代表人：纳某菲，该公司董事长兼总经理。委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。保全申请人：深圳某基金管理有限公司。法定代表人：管某，该公司执行董事，总经理。委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。被保全人：云南某管理有限公司。法定代表人：赵某，该公司执行董事。",
-            "source_doc_id": "DOC1",
-            "source_anchor_id": "DOC1_A1",
-            "confidence": 0.0
-          }
-        ],
+        "items": [],
         "enough": false,
-        "followup_query": "请提供有关案件性质或案件类别的信息。"
+        "followup_query": "请提供包含案件类型描述的段落。"
       }
     },
     {
       "round_index": 2,
       "search": {
-        "current_query": "请提供有关案件性质或案件类别的信息。",
+        "current_query": "请提供包含案件类型描述的段落。",
         "must_find": [
           "category labels and document-to-category assignments",
           "case cause, disposition, or verdict evidence"
@@ -61,11 +51,12 @@
         "candidate_anchor_ids": [
           "DOC1_A2",
           "DOC1_A3",
-          "DOC1_A4"
+          "DOC1_A4",
+          "DOC1_A5"
         ]
       },
       "anchor_id": "DOC1_A2",
-      "plan_think": "从已知证据来看，我们还没有明确的案件类型信息。接下来应该查看案件背景部分，即DOC1_A2，以获取更多关于案件性质的信息。",
+      "plan_think": "在之前的检索中，我们已经了解到这个案件涉及到了公司的资金冻结争议，并且有执行异议的审查过程。这些信息表明这是一个执行案件。为了确认这一点，我将检查DOC1_A2，因为它提到了执行异议的具体细节。",
       "info": {
         "anchor_id": "DOC1_A2",
         "anchor_type": "paragraph_region",
@@ -73,14 +64,14 @@
         "summary": "云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议，现已审查终结。",
         "text": "云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云\n\n执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。"
       },
-      "extract_think": "该锚点块提供了案件背景信息，明确指出云南省某产业发展集团有限责任公司因不服执行裁定而申请执行复议，这表明这是一个执行案件。因此，可以将《判决文书1》归类为执行案件。",
+      "extract_think": "该锚点块明确提到“云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议”，这表明这是一个执行案件。因此，可以将《判决文书1》归类为执行案件。",
       "retrieve": {
         "items": [
           {
-            "answer_key": "案件类型",
-            "value": "执行案件",
-            "normalized_value": "执行案件",
-            "evidence_text": "云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。",
+            "answer_key": "执行案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云 执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。",
             "source_doc_id": "DOC1",
             "source_anchor_id": "DOC1_A2",
             "confidence": 1.0
@@ -93,19 +84,10 @@
   ],
   "items": [
     {
-      "answer_key": "案件类型",
-      "value": "未知",
-      "normalized_value": "未知",
-      "evidence_text": "复议申请人（被保全人)：云南省某产业发展集团有限责任公司。法定代表人：纳某菲，该公司董事长兼总经理。委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。保全申请人：深圳某基金管理有限公司。法定代表人：管某，该公司执行董事，总经理。委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。被保全人：云南某管理有限公司。法定代表人：赵某，该公司执行董事。",
-      "source_doc_id": "DOC1",
-      "source_anchor_id": "DOC1_A1",
-      "confidence": 0.0
-    },
-    {
-      "answer_key": "案件类型",
-      "value": "执行案件",
-      "normalized_value": "执行案件",
-      "evidence_text": "云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。",
+      "answer_key": "执行案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云 执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。",
       "source_doc_id": "DOC1",
       "source_anchor_id": "DOC1_A2",
       "confidence": 1.0
@@ -113,7 +95,7 @@
   ],
   "trace": {
     "round_count": 2,
-    "tagged_trace": "<think>The document title provided is \"《判决文书1》\". The chunk summaries indicate that this case involves a dispute over freezing of funds between companies, with a review of an execution objection. This suggests it is likely an '执行案件' (execution case). I will select the first chunk to confirm the type of case and start categorizing the document.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"列出了复议申请人（被保全人）云南省某产业发展集团有限责任公司及其法定代表人、委托诉讼代理人，保全申请人深圳某基金管理有限公司及其法定代表人、委托诉讼代理人，以及被保全人云南某管理有限公司及其法定代表人的相关信息。\", \"text\": \"复议申请人（被保全人)：云南省某产业发展集团有限责任公司。\\n\\n法定代表人：纳某菲，该公司董事长兼总经理。\\n\\n委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。\\n\\n委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。\\n\\n保全申请人：深圳某基金管理有限公司。\\n\\n法定代表人：管某，该公司执行董事，总经理。\\n\\n委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。\\n\\n委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。\\n\\n被保全人：云南某管理有限公司。\\n\\n法定代表人：赵某，该公司执行董事。\"}</info>\n<think>该锚点块提供了当事人的信息，包括复议申请人、保全申请人和被保全人的名称及法定代表人等详细信息。然而，它并没有直接说明案件的具体类型。为了确定案件类型，需要进一步查找关于案件性质的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"案件类型\", \"value\": \"未知\", \"normalized_value\": \"未知\", \"evidence_text\": \"复议申请人（被保全人)：云南省某产业发展集团有限责任公司。法定代表人：纳某菲，该公司董事长兼总经理。委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。保全申请人：深圳某基金管理有限公司。法定代表人：管某，该公司执行董事，总经理。委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。被保全人：云南某管理有限公司。法定代表人：赵某，该公司执行董事。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 0.0}], \"enough\": false, \"followup_query\": \"请提供有关案件性质或案件类别的信息。\"}</retrieve>\n<think>从已知证据来看，我们还没有明确的案件类型信息。接下来应该查看案件背景部分，即DOC1_A2，以获取更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"请提供有关案件性质或案件类别的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议，现已审查终结。\", \"text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云\\n\\n执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\"}</info>\n<think>该锚点块提供了案件背景信息，明确指出云南省某产业发展集团有限责任公司因不服执行裁定而申请执行复议，这表明这是一个执行案件。因此，可以将《判决文书1》归类为执行案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"案件类型\", \"value\": \"执行案件\", \"normalized_value\": \"执行案件\", \"evidence_text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+    "tagged_trace": "<think>The document title provided is \"《判决文书1》\". The chunk summaries indicate that this case involves a dispute over freezing of funds between companies, with a review of an execution objection. This suggests it is likely an '执行案件' (execution case). I will select the first chunk to confirm the type of case and start categorizing the document.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"列出了复议申请人（被保全人）云南省某产业发展集团有限责任公司及其法定代表人、委托诉讼代理人，保全申请人深圳某基金管理有限公司及其法定代表人、委托诉讼代理人，以及被保全人云南某管理有限公司及其法定代表人的相关信息。\", \"text\": \"复议申请人（被保全人)：云南省某产业发展集团有限责任公司。\\n\\n法定代表人：纳某菲，该公司董事长兼总经理。\\n\\n委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。\\n\\n委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。\\n\\n保全申请人：深圳某基金管理有限公司。\\n\\n法定代表人：管某，该公司执行董事，总经理。\\n\\n委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。\\n\\n委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。\\n\\n被保全人：云南某管理有限公司。\\n\\n法定代表人：赵某，该公司执行董事。\"}</info>\n<think>该锚点块提供了当事人的信息，但没有直接说明案件类型。需要进一步查找文档内容来确定案件类型。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供包含案件类型描述的段落。\"}</retrieve>\n<think>在之前的检索中，我们已经了解到这个案件涉及到了公司的资金冻结争议，并且有执行异议的审查过程。这些信息表明这是一个执行案件。为了确认这一点，我将检查DOC1_A2，因为它提到了执行异议的具体细节。</think>\n<search>{\"current_query\": \"请提供包含案件类型描述的段落。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议，现已审查终结。\", \"text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云\\n\\n执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\"}</info>\n<think>该锚点块明确提到“云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议”，这表明这是一个执行案件。因此，可以将《判决文书1》归类为执行案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云 执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
   },
-  "tagged_trace": "<think>The document title provided is \"《判决文书1》\". The chunk summaries indicate that this case involves a dispute over freezing of funds between companies, with a review of an execution objection. This suggests it is likely an '执行案件' (execution case). I will select the first chunk to confirm the type of case and start categorizing the document.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"列出了复议申请人（被保全人）云南省某产业发展集团有限责任公司及其法定代表人、委托诉讼代理人，保全申请人深圳某基金管理有限公司及其法定代表人、委托诉讼代理人，以及被保全人云南某管理有限公司及其法定代表人的相关信息。\", \"text\": \"复议申请人（被保全人)：云南省某产业发展集团有限责任公司。\\n\\n法定代表人：纳某菲，该公司董事长兼总经理。\\n\\n委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。\\n\\n委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。\\n\\n保全申请人：深圳某基金管理有限公司。\\n\\n法定代表人：管某，该公司执行董事，总经理。\\n\\n委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。\\n\\n委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。\\n\\n被保全人：云南某管理有限公司。\\n\\n法定代表人：赵某，该公司执行董事。\"}</info>\n<think>该锚点块提供了当事人的信息，包括复议申请人、保全申请人和被保全人的名称及法定代表人等详细信息。然而，它并没有直接说明案件的具体类型。为了确定案件类型，需要进一步查找关于案件性质的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"案件类型\", \"value\": \"未知\", \"normalized_value\": \"未知\", \"evidence_text\": \"复议申请人（被保全人)：云南省某产业发展集团有限责任公司。法定代表人：纳某菲，该公司董事长兼总经理。委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。保全申请人：深圳某基金管理有限公司。法定代表人：管某，该公司执行董事，总经理。委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。被保全人：云南某管理有限公司。法定代表人：赵某，该公司执行董事。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 0.0}], \"enough\": false, \"followup_query\": \"请提供有关案件性质或案件类别的信息。\"}</retrieve>\n<think>从已知证据来看，我们还没有明确的案件类型信息。接下来应该查看案件背景部分，即DOC1_A2，以获取更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"请提供有关案件性质或案件类别的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议，现已审查终结。\", \"text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云\\n\\n执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\"}</info>\n<think>该锚点块提供了案件背景信息，明确指出云南省某产业发展集团有限责任公司因不服执行裁定而申请执行复议，这表明这是一个执行案件。因此，可以将《判决文书1》归类为执行案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"案件类型\", \"value\": \"执行案件\", \"normalized_value\": \"执行案件\", \"evidence_text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  "tagged_trace": "<think>The document title provided is \"《判决文书1》\". The chunk summaries indicate that this case involves a dispute over freezing of funds between companies, with a review of an execution objection. This suggests it is likely an '执行案件' (execution case). I will select the first chunk to confirm the type of case and start categorizing the document.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"列出了复议申请人（被保全人）云南省某产业发展集团有限责任公司及其法定代表人、委托诉讼代理人，保全申请人深圳某基金管理有限公司及其法定代表人、委托诉讼代理人，以及被保全人云南某管理有限公司及其法定代表人的相关信息。\", \"text\": \"复议申请人（被保全人)：云南省某产业发展集团有限责任公司。\\n\\n法定代表人：纳某菲，该公司董事长兼总经理。\\n\\n委托诉讼代理人：邹文鹏，云南勤业律师事务所律师。\\n\\n委托诉讼代理人：徐瑞鸿，云南勤业律师事务所律师。\\n\\n保全申请人：深圳某基金管理有限公司。\\n\\n法定代表人：管某，该公司执行董事，总经理。\\n\\n委托诉讼代理人：谭晶，上海段和段（昆明）律师事务所律师。\\n\\n委托诉讼代理人：侯雄伟，北京市中伦文德（昆明）律师事务所律师。\\n\\n被保全人：云南某管理有限公司。\\n\\n法定代表人：赵某，该公司执行董事。\"}</info>\n<think>该锚点块提供了当事人的信息，但没有直接说明案件类型。需要进一步查找文档内容来确定案件类型。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供包含案件类型描述的段落。\"}</retrieve>\n<think>在之前的检索中，我们已经了解到这个案件涉及到了公司的资金冻结争议，并且有执行异议的审查过程。这些信息表明这是一个执行案件。为了确认这一点，我将检查DOC1_A2，因为它提到了执行异议的具体细节。</think>\n<search>{\"current_query\": \"请提供包含案件类型描述的段落。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议，现已审查终结。\", \"text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云\\n\\n执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\"}</info>\n<think>该锚点块明确提到“云南省某产业发展集团有限责任公司不服云南省高级人民法院（2023）云执异1号执行裁定，向法院申请执行复议”，这表明这是一个执行案件。因此，可以将《判决文书1》归类为执行案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云 执异1号执行裁定，向本院申请执行复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
 }
