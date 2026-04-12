@@ -1,0 +1,120 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "selected_anchor_ids": [
+    "DOC5_A1",
+    "DOC5_A2"
+  ],
+  "final_current_query": "请提供关于案件性质的信息，例如是否涉及刑事、民事或管辖争议。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A1",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ]
+      },
+      "anchor_id": "DOC5_A1",
+      "plan_think": "The document appears to be a civil case related to a patent dispute between companies. I will inspect the first chunk to confirm the type of case and the parties involved.",
+      "info": {
+        "anchor_id": "DOC5_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "上诉人（原审被告）某某公司1，法定代表人王某；被上诉人（原审原告）某某公司2，法定代表人吕某；原审被告某某公司3，法定代表人陈某。",
+        "text": "上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\n\n法定代表人：王某，执行董事、经理。\n\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\n\n法定代表人：吕某，副总经理。\n\n原审被告：某某公司3，住所地上海市长宁区。\n\n法定代表人：陈某，执行董事。"
+      },
+      "extract_think": "This chunk provides information about the parties involved in the case but does not specify the type of case (criminal, civil, or jurisdictional). To classify the document, we need more context about the nature of the case.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "document_title",
+            "value": "《判决文书5》",
+            "normalized_value": "判决文书5",
+            "evidence_text": "上诉人（原审被告）：某某公司1，住所地浙江省余姚市。法定代表人：王某，执行董事、经理。被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。法定代表人：吕某，副总经理。原审被告：某某公司3，住所地上海市长宁区。法定代表人：陈某，执行董事。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A1",
+            "confidence": 0.0
+          }
+        ],
+        "enough": false,
+        "followup_query": "请提供关于案件性质的信息，例如是否涉及刑事、民事或管辖争议。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请提供关于案件性质的信息，例如是否涉及刑事、民事或管辖争议。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A2",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ]
+      },
+      "anchor_id": "DOC5_A2",
+      "plan_think": "The summary of DOC5_A2 indicates that the case involves a patent dispute between companies, which suggests it is a civil case. I will inspect DOC5_A2 to confirm the details of the case and its classification.",
+      "info": {
+        "anchor_id": "DOC5_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。",
+        "text": "上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\n\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\n\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。"
+      },
+      "extract_think": "This chunk clearly indicates that the case involves a dispute over an appearance design patent right, which is a civil case. The document should be classified as a '民事案件'. No further information is needed from this document to determine the case type.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "案件类型",
+            "value": "民事案件",
+            "normalized_value": "民事案件",
+            "evidence_text": "上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "document_title",
+      "value": "《判决文书5》",
+      "normalized_value": "判决文书5",
+      "evidence_text": "上诉人（原审被告）：某某公司1，住所地浙江省余姚市。法定代表人：王某，执行董事、经理。被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。法定代表人：吕某，副总经理。原审被告：某某公司3，住所地上海市长宁区。法定代表人：陈某，执行董事。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A1",
+      "confidence": 0.0
+    },
+    {
+      "answer_key": "案件类型",
+      "value": "民事案件",
+      "normalized_value": "民事案件",
+      "evidence_text": "上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document appears to be a civil case related to a patent dispute between companies. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A1\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人（原审被告）某某公司1，法定代表人王某；被上诉人（原审原告）某某公司2，法定代表人吕某；原审被告某某公司3，法定代表人陈某。\", \"text\": \"上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\\n\\n法定代表人：王某，执行董事、经理。\\n\\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\\n\\n法定代表人：吕某，副总经理。\\n\\n原审被告：某某公司3，住所地上海市长宁区。\\n\\n法定代表人：陈某，执行董事。\"}</info>\n<think>This chunk provides information about the parties involved in the case but does not specify the type of case (criminal, civil, or jurisdictional). To classify the document, we need more context about the nature of the case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_title\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"上诉人（原审被告）：某某公司1，住所地浙江省余姚市。法定代表人：王某，执行董事、经理。被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。法定代表人：吕某，副总经理。原审被告：某某公司3，住所地上海市长宁区。法定代表人：陈某，执行董事。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A1\", \"confidence\": 0.0}], \"enough\": false, \"followup_query\": \"请提供关于案件性质的信息，例如是否涉及刑事、民事或管辖争议。\"}</retrieve>\n<think>The summary of DOC5_A2 indicates that the case involves a patent dispute between companies, which suggests it is a civil case. I will inspect DOC5_A2 to confirm the details of the case and its classification.</think>\n<search>{\"current_query\": \"请提供关于案件性质的信息，例如是否涉及刑事、民事或管辖争议。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\", \"text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\\n\\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\"}</info>\n<think>This chunk clearly indicates that the case involves a dispute over an appearance design patent right, which is a civil case. The document should be classified as a '民事案件'. No further information is needed from this document to determine the case type.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"案件类型\", \"value\": \"民事案件\", \"normalized_value\": \"民事案件\", \"evidence_text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document appears to be a civil case related to a patent dispute between companies. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A1\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人（原审被告）某某公司1，法定代表人王某；被上诉人（原审原告）某某公司2，法定代表人吕某；原审被告某某公司3，法定代表人陈某。\", \"text\": \"上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\\n\\n法定代表人：王某，执行董事、经理。\\n\\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\\n\\n法定代表人：吕某，副总经理。\\n\\n原审被告：某某公司3，住所地上海市长宁区。\\n\\n法定代表人：陈某，执行董事。\"}</info>\n<think>This chunk provides information about the parties involved in the case but does not specify the type of case (criminal, civil, or jurisdictional). To classify the document, we need more context about the nature of the case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_title\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"上诉人（原审被告）：某某公司1，住所地浙江省余姚市。法定代表人：王某，执行董事、经理。被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。法定代表人：吕某，副总经理。原审被告：某某公司3，住所地上海市长宁区。法定代表人：陈某，执行董事。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A1\", \"confidence\": 0.0}], \"enough\": false, \"followup_query\": \"请提供关于案件性质的信息，例如是否涉及刑事、民事或管辖争议。\"}</retrieve>\n<think>The summary of DOC5_A2 indicates that the case involves a patent dispute between companies, which suggests it is a civil case. I will inspect DOC5_A2 to confirm the details of the case and its classification.</think>\n<search>{\"current_query\": \"请提供关于案件性质的信息，例如是否涉及刑事、民事或管辖争议。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\", \"text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\\n\\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\"}</info>\n<think>This chunk clearly indicates that the case involves a dispute over an appearance design patent right, which is a civil case. The document should be classified as a '民事案件'. No further information is needed from this document to determine the case type.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"案件类型\", \"value\": \"民事案件\", \"normalized_value\": \"民事案件\", \"evidence_text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

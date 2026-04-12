@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "selected_anchor_ids": [
+    "DOC7_A4"
+  ],
+  "final_current_query": "分类判决文书到指定的案由类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到指定的案由类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC7_A4",
+        "candidate_anchor_ids": [
+          "DOC7_A1",
+          "DOC7_A2",
+          "DOC7_A3",
+          "DOC7_A4"
+        ]
+      },
+      "anchor_id": "DOC7_A4",
+      "plan_think": "The current document does not seem to fit into any of the specified categories based on the initial summaries provided. However, DOC7_A4 mentions that the case involves a disciplinary action by the Beijing Bar Association, which could potentially fall under '行政行为-行政裁决'. I will inspect this chunk next to confirm if it fits the category.",
+      "info": {
+        "anchor_id": "DOC7_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院意见",
+        "summary": "法院认为，市律协对李某某作出的处分决定及复查决定是行使行业自律管理权的行为，属于内部管理行为，不属于行政诉讼的受案范围。因此，一审法院裁定驳回其起诉、二审法院裁定驳回其上诉并无不当。",
+        "text": "本院认为，公民、法人或者其他组织提起行政诉讼不属于人民法院的受案范围，已经立案的，应当裁定驳回起诉。《中华人民共和国律师法》第四十三条规定，律师协会是社会团体法人，是律师的自律性组织。全国设立中华全国律师协会，省、自治区、直辖市设立地方律师协会，设区的市根据需要可以设立地方律师协会。第四十六条第一款第六项、第二款规定，律师协会应当履行对律师、律师事务所实施奖励和惩戒的职责；律师协会制定的行业规范和惩戒规则，不得与有关法律、行政法规、规章相抵触。本案中，市律协根据国家发展和改革委员会、司法部制定的《律师服务收费管理办法》及中华全国律师协会制定的《律师协会会员违规行为处分规则（试行）》的相关规定，对李某某作出的29号处分决定及10号复查决定是行使行业自律管理权的自律性行为，为市律协的内部管理行为，不属于《中华人民共和国行政诉讼法》第二条第二款规定的基于法律、法规、规章授权而作出的外部行政行为。故李某某提起本案诉讼，不属于人民法院行政诉讼的受案范围。一审法院裁定驳回其起诉、二审法院裁定驳回其上诉并无不当。李某某申请再审的请求和理由不能成立。"
+      },
+      "extract_think": "The selected chunk indicates that the case involves a disciplinary action taken by the Beijing Bar Association against Li Moumou, which is considered an internal management behavior and not an external administrative act. This suggests that the case does not fall under '行政行为-行政裁决' as it is not an administrative decision made by an administrative body. The document should be classified as not fitting into any of the specified categories.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "分类结果",
+            "value": "不适用任何指定案由类别",
+            "normalized_value": "不适用任何指定案由类别",
+            "evidence_text": "市律协对李某某作出的处分决定及复查决定是行使行业自律管理权的行为，属于内部管理行为，不属于行政诉讼的受案范围。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A4",
+            "confidence": 0.8
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "分类结果",
+      "value": "不适用任何指定案由类别",
+      "normalized_value": "不适用任何指定案由类别",
+      "evidence_text": "市律协对李某某作出的处分决定及复查决定是行使行业自律管理权的行为，属于内部管理行为，不属于行政诉讼的受案范围。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A4",
+      "confidence": 0.8
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The current document does not seem to fit into any of the specified categories based on the initial summaries provided. However, DOC7_A4 mentions that the case involves a disciplinary action by the Beijing Bar Association, which could potentially fall under '行政行为-行政裁决'. I will inspect this chunk next to confirm if it fits the category.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A4\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为，市律协对李某某作出的处分决定及复查决定是行使行业自律管理权的行为，属于内部管理行为，不属于行政诉讼的受案范围。因此，一审法院裁定驳回其起诉、二审法院裁定驳回其上诉并无不当。\", \"text\": \"本院认为，公民、法人或者其他组织提起行政诉讼不属于人民法院的受案范围，已经立案的，应当裁定驳回起诉。《中华人民共和国律师法》第四十三条规定，律师协会是社会团体法人，是律师的自律性组织。全国设立中华全国律师协会，省、自治区、直辖市设立地方律师协会，设区的市根据需要可以设立地方律师协会。第四十六条第一款第六项、第二款规定，律师协会应当履行对律师、律师事务所实施奖励和惩戒的职责；律师协会制定的行业规范和惩戒规则，不得与有关法律、行政法规、规章相抵触。本案中，市律协根据国家发展和改革委员会、司法部制定的《律师服务收费管理办法》及中华全国律师协会制定的《律师协会会员违规行为处分规则（试行）》的相关规定，对李某某作出的29号处分决定及10号复查决定是行使行业自律管理权的自律性行为，为市律协的内部管理行为，不属于《中华人民共和国行政诉讼法》第二条第二款规定的基于法律、法规、规章授权而作出的外部行政行为。故李某某提起本案诉讼，不属于人民法院行政诉讼的受案范围。一审法院裁定驳回其起诉、二审法院裁定驳回其上诉并无不当。李某某申请再审的请求和理由不能成立。\"}</info>\n<think>The selected chunk indicates that the case involves a disciplinary action taken by the Beijing Bar Association against Li Moumou, which is considered an internal management behavior and not an external administrative act. This suggests that the case does not fall under '行政行为-行政裁决' as it is not an administrative decision made by an administrative body. The document should be classified as not fitting into any of the specified categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"分类结果\", \"value\": \"不适用任何指定案由类别\", \"normalized_value\": \"不适用任何指定案由类别\", \"evidence_text\": \"市律协对李某某作出的处分决定及复查决定是行使行业自律管理权的行为，属于内部管理行为，不属于行政诉讼的受案范围。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A4\", \"confidence\": 0.8}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document does not seem to fit into any of the specified categories based on the initial summaries provided. However, DOC7_A4 mentions that the case involves a disciplinary action by the Beijing Bar Association, which could potentially fall under '行政行为-行政裁决'. I will inspect this chunk next to confirm if it fits the category.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A4\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为，市律协对李某某作出的处分决定及复查决定是行使行业自律管理权的行为，属于内部管理行为，不属于行政诉讼的受案范围。因此，一审法院裁定驳回其起诉、二审法院裁定驳回其上诉并无不当。\", \"text\": \"本院认为，公民、法人或者其他组织提起行政诉讼不属于人民法院的受案范围，已经立案的，应当裁定驳回起诉。《中华人民共和国律师法》第四十三条规定，律师协会是社会团体法人，是律师的自律性组织。全国设立中华全国律师协会，省、自治区、直辖市设立地方律师协会，设区的市根据需要可以设立地方律师协会。第四十六条第一款第六项、第二款规定，律师协会应当履行对律师、律师事务所实施奖励和惩戒的职责；律师协会制定的行业规范和惩戒规则，不得与有关法律、行政法规、规章相抵触。本案中，市律协根据国家发展和改革委员会、司法部制定的《律师服务收费管理办法》及中华全国律师协会制定的《律师协会会员违规行为处分规则（试行）》的相关规定，对李某某作出的29号处分决定及10号复查决定是行使行业自律管理权的自律性行为，为市律协的内部管理行为，不属于《中华人民共和国行政诉讼法》第二条第二款规定的基于法律、法规、规章授权而作出的外部行政行为。故李某某提起本案诉讼，不属于人民法院行政诉讼的受案范围。一审法院裁定驳回其起诉、二审法院裁定驳回其上诉并无不当。李某某申请再审的请求和理由不能成立。\"}</info>\n<think>The selected chunk indicates that the case involves a disciplinary action taken by the Beijing Bar Association against Li Moumou, which is considered an internal management behavior and not an external administrative act. This suggests that the case does not fall under '行政行为-行政裁决' as it is not an administrative decision made by an administrative body. The document should be classified as not fitting into any of the specified categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"分类结果\", \"value\": \"不适用任何指定案由类别\", \"normalized_value\": \"不适用任何指定案由类别\", \"evidence_text\": \"市律协对李某某作出的处分决定及复查决定是行使行业自律管理权的行为，属于内部管理行为，不属于行政诉讼的受案范围。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A4\", \"confidence\": 0.8}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

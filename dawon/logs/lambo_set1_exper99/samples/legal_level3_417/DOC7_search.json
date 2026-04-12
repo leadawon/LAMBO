@@ -1,0 +1,83 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "task_mode": "clustering",
+  "think": "从摘要来看，这份文档涉及到了国家赔偿的请求和决定，因此它应该属于\"赔偿案件\"类别。接下来我将检查DOC7_A2，以确认案件的具体性质。",
+  "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC7_A2",
+  "candidate_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4",
+    "DOC7_A5",
+    "DOC7_A6",
+    "DOC7_A7",
+    "DOC7_A8"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC7_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "申诉人宋某香是宋某的妹妹，被申诉人是吉林省长春净月监狱，复议机关是吉林省监狱管理局。"
+    },
+    {
+      "anchor_id": "DOC7_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "宋某香因宋某在服刑期间被殴打、监狱怠于履行监管职责致死申请国家赔偿，净月监狱和吉林省监狱管理局均决定不予赔偿。"
+    },
+    {
+      "anchor_id": "DOC7_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "宋某香请求净月监狱赔偿死亡赔偿金、丧葬费、精神损害抚慰金、申冤费用以及误工费共计2391200元。"
+    },
+    {
+      "anchor_id": "DOC7_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "净月监狱辩称宋某死亡原因是自身疾病加上宋德猛踢其裆部，监狱已尽到注意义务并积极救治，不存在殴打、虐待行为。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书7》. First coordinate candidate is DOC7_A2.",
+  "raw_plan_text": "<think>从摘要来看，这份文档涉及到了国家赔偿的请求和决定，因此它应该属于\"赔偿案件\"类别。接下来我将检查DOC7_A2，以确认案件的具体性质。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC7_A2\",\"candidate_anchor_ids\":[\"DOC7_A1\",\"DOC7_A2\",\"DOC7_A3\",\"DOC7_A4\",\"DOC7_A5\",\"DOC7_A6\",\"DOC7_A7\",\"DOC7_A8\"]}</search>",
+  "tagged_trace": "<think>从摘要来看，这份文档涉及到了国家赔偿的请求和决定，因此它应该属于\"赔偿案件\"类别。接下来我将检查DOC7_A2，以确认案件的具体性质。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"next_anchor_id\": \"DOC7_A2\"}</search>"
+}

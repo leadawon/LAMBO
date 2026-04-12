@@ -1,0 +1,83 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "task_mode": "clustering",
+  "think": "The current document seems to be related to a case involving a dispute over the recognition of a work-related injury, which does not directly align with any of the five specified categories. The document needs to be categorized based on its content. Since the document title is the only information available, I will inspect the first chunk summary (DOC1_A5) to understand the nature of the case and determine if it fits into any of the given categories.",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政强制' '不动产登记纠纷' '行政行为-行政给付' '产品责任纠纷' '执行案由-行政'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政给付': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC1_A5",
+  "candidate_anchor_ids": [
+    "DOC1_A5",
+    "DOC1_A6",
+    "DOC1_A2",
+    "DOC1_A1"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A5",
+    "DOC1_A6",
+    "DOC1_A2",
+    "DOC1_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A5",
+    "DOC1_A6",
+    "DOC1_A2",
+    "DOC1_A1",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A5",
+      "score": 32.708,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.71"
+      ],
+      "summary": "法院认为，申请人与第三人之间不存在劳动关系，且不属于违法分包或转包关系，因此不符合由具备用工主体资质的单位承担工伤主体责任的相关规定，被申请人作出不予认定工伤决定事实清楚，适用法律正确。"
+    },
+    {
+      "anchor_id": "DOC1_A6",
+      "score": 32.554,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.55"
+      ],
+      "summary": "驳回左某的再审申请。"
+    },
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 31.401,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "再审申请人左某因工伤保险资格认定一案，不服新疆维吾尔自治区阿克苏地区中级人民法院作出的（2023）新29行终47号行政判决，向本院申请再审。左某认为其在工作时间和工作地点受伤，应依法认定为工伤。"
+    },
+    {
+      "anchor_id": "DOC1_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "再审申请人左某，委托诉讼代理人唐晓春；被申请人阿瓦提县人力资源和社会保障局，法定代表人李扬，委托诉讼代理人陈某和阿某；原审第三人阿克苏市某某装饰装修工程有限公司，法定代表人刘某。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书1》. First coordinate candidate is DOC1_A5.",
+  "raw_plan_text": "<think>The current document seems to be related to a case involving a dispute over the recognition of a work-related injury, which does not directly align with any of the five specified categories. The document needs to be categorized based on its content. Since the document title is the only information available, I will inspect the first chunk summary (DOC1_A5) to understand the nature of the case and determine if it fits into any of the given categories.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政强制' '不动产登记纠纷' '行政行为-行政给付' '产品责任纠纷' '执行案由-行政'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政给付': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC1_A5\",\"candidate_anchor_ids\":[\"DOC1_A5\",\"DOC1_A6\",\"DOC1_A2\",\"DOC1_A1\",\"DOC1_A3\",\"DOC1_A4\"]}</search>",
+  "tagged_trace": "<think>The current document seems to be related to a case involving a dispute over the recognition of a work-related injury, which does not directly align with any of the five specified categories. The document needs to be categorized based on its content. Since the document title is the only information available, I will inspect the first chunk summary (DOC1_A5) to understand the nature of the case and determine if it fits into any of the given categories.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政强制' '不动产登记纠纷' '行政行为-行政给付' '产品责任纠纷' '执行案由-行政'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政给付': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC1_A5\", \"DOC1_A6\", \"DOC1_A2\", \"DOC1_A1\"], \"next_anchor_id\": \"DOC1_A5\"}</search>"
+}

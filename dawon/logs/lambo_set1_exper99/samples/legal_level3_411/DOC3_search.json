@@ -1,0 +1,80 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The document seems to be related to a civil case due to the mention of a contract dispute and jurisdiction issues. I will inspect the first chunk to confirm the type of case and the parties involved.",
+  "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A1",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A5"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "上诉人（原审被告）霍尔果斯某1影业有限公司，法定代表人姚某某；被上诉人（原审原告）重庆某2文化传媒有限公司，法定代表人何某；原审被告浙江某影视有限公司，法定代表人袁某。"
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "上诉人霍尔果斯某1影业有限公司与被上诉人重庆某2文化传媒有限公司、原审被告浙江某影视有限公司因广播电视播放合同纠纷一案，不服重庆市第一中级人民法院(2023)渝01民初880号民事裁定，提起上诉。"
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "某1公司请求撤销重庆一中法院作出的(2023)渝01民初880号民事裁定书，将本案移送至有管辖权的法院审理，理由是某2公司的实际经营地及主要办事机构所在地在北京市朝阳区。"
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "法院认为，根据《播映权转让合同》约定，原告某2公司有权向其住所地重庆一中法院提起诉讼，且某2公司的住所地仍在重庆市渝北区，因此重庆一中法院对本案具有管辖权。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A1.",
+  "raw_plan_text": "<think>The document seems to be related to a civil case due to the mention of a contract dispute and jurisdiction issues. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A1\",\"candidate_anchor_ids\":[\"DOC3_A1\",\"DOC3_A2\",\"DOC3_A3\",\"DOC3_A4\",\"DOC3_A5\"]}</search>",
+  "tagged_trace": "<think>The document seems to be related to a civil case due to the mention of a contract dispute and jurisdiction issues. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A1\"}</search>"
+}

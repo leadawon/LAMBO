@@ -28,6 +28,8 @@ Selected anchor chunk:
 
 Use only the selected anchor chunk.
 Extract document-local evidence items that help solve the global task.
+If the selected chunk has no direct evidence for the global task, return an empty items list; do not emit generic summaries or guesses as "candidate" evidence.
+For paper citation tasks, answer_key must be relative to the target paper in Question: use "Reference" only for papers the target paper cites, and "Citation" only for papers that cite the target paper. Ignore citations to papers outside the provided documents.
 If this chunk is sufficient for this document, set "enough" to true.
 If it is not sufficient, keep "enough" false and suggest a short follow-up query.
 Return only <think> and <retrieve> tags.

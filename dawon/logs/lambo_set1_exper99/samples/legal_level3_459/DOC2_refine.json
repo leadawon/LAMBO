@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "selected_anchor_ids": [
+    "DOC2_A2"
+  ],
+  "final_current_query": "分类判决文书到给定的案由类别中",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到给定的案由类别中",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A2",
+        "candidate_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5"
+        ]
+      },
+      "anchor_id": "DOC2_A2",
+      "plan_think": "The current document seems to involve a dispute over liability between a company and an individual, suggesting it might fall under '侵权责任纠纷'. I will inspect the next anchor to confirm this and look for any other relevant categories.",
+      "info": {
+        "anchor_id": "DOC2_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "再审申请人某某万科分店因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向本院申请再审。",
+        "text": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。"
+      },
+      "extract_think": "该段落提到的是提供劳务者受害责任纠纷，这符合“侵权责任纠纷”的分类。没有其他案由类别的信息。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "侵权责任纠纷",
+            "value": "《判决文书2》",
+            "normalized_value": "判决文书2",
+            "evidence_text": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "侵权责任纠纷",
+      "value": "《判决文书2》",
+      "normalized_value": "判决文书2",
+      "evidence_text": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The current document seems to involve a dispute over liability between a company and an individual, suggesting it might fall under '侵权责任纠纷'. I will inspect the next anchor to confirm this and look for any other relevant categories.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人某某万科分店因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段落提到的是提供劳务者受害责任纠纷，这符合“侵权责任纠纷”的分类。没有其他案由类别的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"侵权责任纠纷\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document seems to involve a dispute over liability between a company and an individual, suggesting it might fall under '侵权责任纠纷'. I will inspect the next anchor to confirm this and look for any other relevant categories.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人某某万科分店因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段落提到的是提供劳务者受害责任纠纷，这符合“侵权责任纠纷”的分类。没有其他案由类别的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"侵权责任纠纷\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

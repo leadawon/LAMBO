@@ -1,0 +1,65 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "selected_anchor_ids": [
+    "DOC7_A1"
+  ],
+  "final_current_query": "是否存在其他案由相关的证据？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'知识产权与竞争' '行政主体-民政行政管理（民政）' '行政行为-行政受理' '行政行为-其他行政行为' '渎职罪' '产品责任纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '行政主体-民政行政管理（民政）': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC7_A1",
+        "candidate_anchor_ids": [
+          "DOC7_A2"
+        ]
+      },
+      "anchor_id": "DOC7_A1",
+      "plan_think": "The current anchor does not provide enough information to categorize the document under any of the specified case types. The content seems to relate to a criminal appeal rather than intellectual property, administrative actions, product liability, or abuse of power. I will inspect the next available chunk to find more relevant details.",
+      "info": {
+        "anchor_id": "DOC7_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "申诉内容与处理结果",
+        "summary": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。",
+        "text": "李双喜：\n\n你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。\n\n本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。\n\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\n\n特此通知。"
+      },
+      "extract_think": "该段落描述了李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉的情况。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。根据这些信息，可以将该判决文书归类为“渎职罪”。然而，需要进一步检查文档中是否有其他相关信息来确认是否还有其他分类。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "渎职罪",
+            "value": "《判决文书7》",
+            "normalized_value": "判决文书7",
+            "evidence_text": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A1",
+            "confidence": 0.8
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否存在其他案由相关的证据？"
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "渎职罪",
+      "value": "《判决文书7》",
+      "normalized_value": "判决文书7",
+      "evidence_text": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A1",
+      "confidence": 0.8
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The current anchor does not provide enough information to categorize the document under any of the specified case types. The content seems to relate to a criminal appeal rather than intellectual property, administrative actions, product liability, or abuse of power. I will inspect the next available chunk to find more relevant details.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'知识产权与竞争' '行政主体-民政行政管理（民政）' '行政行为-行政受理' '行政行为-其他行政行为' '渎职罪' '产品责任纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '行政主体-民政行政管理（民政）': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A1\", \"candidate_anchor_ids\": [\"DOC7_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉内容与处理结果\", \"summary\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。\", \"text\": \"李双喜：\\n\\n你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。\\n\\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\"}</info>\n<think>该段落描述了李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉的情况。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。根据这些信息，可以将该判决文书归类为“渎职罪”。然而，需要进一步检查文档中是否有其他相关信息来确认是否还有其他分类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"渎职罪\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"是否存在其他案由相关的证据？\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current anchor does not provide enough information to categorize the document under any of the specified case types. The content seems to relate to a criminal appeal rather than intellectual property, administrative actions, product liability, or abuse of power. I will inspect the next available chunk to find more relevant details.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'知识产权与竞争' '行政主体-民政行政管理（民政）' '行政行为-行政受理' '行政行为-其他行政行为' '渎职罪' '产品责任纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '行政主体-民政行政管理（民政）': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A1\", \"candidate_anchor_ids\": [\"DOC7_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉内容与处理结果\", \"summary\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。\", \"text\": \"李双喜：\\n\\n你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。\\n\\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\"}</info>\n<think>该段落描述了李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉的情况。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。根据这些信息，可以将该判决文书归类为“渎职罪”。然而，需要进一步检查文档中是否有其他相关信息来确认是否还有其他分类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"渎职罪\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于人民法院直接受理的自诉案件范围，裁定不予受理，并驳回申诉。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"是否存在其他案由相关的证据？\"}</retrieve>"
+}

@@ -1,0 +1,79 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "task_mode": "clustering",
+  "think": "The document appears to be a civil case related to a patent dispute between companies. I will inspect the first chunk to confirm the type of case and the parties involved.",
+  "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC5_A1",
+  "candidate_anchor_ids": [
+    "DOC5_A1",
+    "DOC5_A2",
+    "DOC5_A3",
+    "DOC5_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC5_A1",
+    "DOC5_A2",
+    "DOC5_A3",
+    "DOC5_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC5_A1",
+    "DOC5_A2",
+    "DOC5_A3",
+    "DOC5_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC5_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "上诉人（原审被告）某某公司1，法定代表人王某；被上诉人（原审原告）某某公司2，法定代表人吕某；原审被告某某公司3，法定代表人陈某。"
+    },
+    {
+      "anchor_id": "DOC5_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。"
+    },
+    {
+      "anchor_id": "DOC5_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "根据《中华人民共和国民事诉讼法》相关规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。鉴于某某公司3住所地位于上海市，本案由上海知识产权法院管辖并无不当。"
+    },
+    {
+      "anchor_id": "DOC5_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "驳回上诉，维持原裁定。本裁定为终审裁定。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书5》. First coordinate candidate is DOC5_A1.",
+  "raw_plan_text": "<think>The document appears to be a civil case related to a patent dispute between companies. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC5_A1\",\"candidate_anchor_ids\":[\"DOC5_A1\",\"DOC5_A2\",\"DOC5_A3\",\"DOC5_A4\"]}</search>",
+  "tagged_trace": "<think>The document appears to be a civil case related to a patent dispute between companies. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"next_anchor_id\": \"DOC5_A1\"}</search>"
+}

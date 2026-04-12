@@ -1,0 +1,78 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "task_mode": "clustering",
+  "think": "考虑到当前文档中提到\"先予执行\"和相关的异议情况，我应该检查包含法院裁判理由的部分，因为它可能明确指出该判决文书属于哪种案由。",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政登记' '与公司，证券，保险，票据等有关的民事纠纷' '执行案由-先予执行' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政裁决' '刑事赔偿' '执行案由-其他案由'这7种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政登记': ['《判决文书a》', '《判决文书b》'], '与公司，证券，保险，票据等有关的民事纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '执行案由-其他案由': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC10_A4",
+  "candidate_anchor_ids": [
+    "DOC10_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC10_A4",
+    "DOC10_A2",
+    "DOC10_A3",
+    "DOC10_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC10_A4",
+    "DOC10_A2",
+    "DOC10_A3",
+    "DOC10_A1",
+    "DOC10_A5"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC10_A4",
+      "score": 40.891,
+      "reasons": [
+        "query_overlap=2",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "法院认为，先予执行给付责任是由民事裁定书确定的，而非执行裁定书，且申请人已提起复议并被驳回，应依法履行先予执行裁定确定的给付责任。"
+    },
+    {
+      "anchor_id": "DOC10_A2",
+      "score": 31.401,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "新疆生产建设兵团第四师融媒体中心对终结本次执行程序的裁定不服，提出异议，认为王某1的先予执行申请不符合法律规定，且新疆生产建设兵团第四师广播电视台已被撤销并入融媒体中心，无财产可供执行。"
+    },
+    {
+      "anchor_id": "DOC10_A3",
+      "score": 31.114,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "法院查明，王某1与新疆生产建设兵团第四师广播电视台、胡秀的健康权纠纷案已执行完毕，王某1再次提起民事诉讼并申请先予执行30万元，但因无财产可供执行，法院终结了本次执行程序。"
+    },
+    {
+      "anchor_id": "DOC10_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "异议人为新疆生产建设兵团第四师融媒体中心，申请执行人为王某1及其法定代理人王某2，被执行人为胡秀。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书10》. First coordinate candidate is DOC10_A4.",
+  "raw_plan_text": "<think>考虑到当前文档中提到\"先予执行\"和相关的异议情况，我应该检查包含法院裁判理由的部分，因为它可能明确指出该判决文书属于哪种案由。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政登记' '与公司，证券，保险，票据等有关的民事纠纷' '执行案由-先予执行' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政裁决' '刑事赔偿' '执行案由-其他案由'这7种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政登记': ['《判决文书a》', '《判决文书b》'], '与公司，证券，保险，票据等有关的民事纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '执行案由-其他案由': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC10_A4\",\"candidate_anchor_ids\":[\"DOC10_A4\"]}</search>",
+  "tagged_trace": "<think>考虑到当前文档中提到\"先予执行\"和相关的异议情况，我应该检查包含法院裁判理由的部分，因为它可能明确指出该判决文书属于哪种案由。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政登记' '与公司，证券，保险，票据等有关的民事纠纷' '执行案由-先予执行' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政裁决' '刑事赔偿' '执行案由-其他案由'这7种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政登记': ['《判决文书a》', '《判决文书b》'], '与公司，证券，保险，票据等有关的民事纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '执行案由-其他案由': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC10_A4\"], \"next_anchor_id\": \"DOC10_A4\"}</search>"
+}

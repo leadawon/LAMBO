@@ -1,0 +1,67 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "task_mode": "clustering",
+  "think": "The document title and chunk summaries suggest that the case involves a product responsibility dispute between plaintiff Zhang Mouliang and defendants Shanghai XX Communication Technology Co., Ltd. and Beijing XX Trading Co., Ltd. The case details indicate that it falls under the category of 'product responsibility dispute'. Therefore, I will select the anchor coordinate that contains the most relevant information about the case details and the court's decision.",
+  "current_query": "阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC8_A2",
+  "candidate_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2",
+    "DOC8_A3"
+  ],
+  "ranked_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2",
+    "DOC8_A3"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2",
+    "DOC8_A3"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC8_A1",
+      "score": 55.807,
+      "reasons": [
+        "query_overlap=2",
+        "quoted_hit=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "原告张某亮与被告上海某某通信科技有限公司和北京某某贸易有限公司之间的产品责任纠纷案件。"
+    },
+    {
+      "anchor_id": "DOC8_A2",
+      "score": 55.401,
+      "reasons": [
+        "query_overlap=2",
+        "quoted_hit=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "张某亮在京东商城购买了两部华为手机，但发现手机并非正品，认为被告构成欺诈，要求返还购机款并赔偿三倍购机费用。法院认为应按产品责任纠纷确定管辖，最终裁定青岛市黄岛区人民法院有管辖权。"
+    },
+    {
+      "anchor_id": "DOC8_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "撤销山东省青岛市黄岛区人民法院（2022）鲁0211民初15908号民事裁定，本案由山东省青岛市黄岛区人民法院审理。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书8》. First coordinate candidate is DOC8_A2.",
+  "raw_plan_text": "<think>The document title and chunk summaries suggest that the case involves a product responsibility dispute between plaintiff Zhang Mouliang and defendants Shanghai XX Communication Technology Co., Ltd. and Beijing XX Trading Co., Ltd. The case details indicate that it falls under the category of 'product responsibility dispute'. Therefore, I will select the anchor coordinate that contains the most relevant information about the case details and the court's decision.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC8_A2\",\"candidate_anchor_ids\":[\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\"]}</search>",
+  "tagged_trace": "<think>The document title and chunk summaries suggest that the case involves a product responsibility dispute between plaintiff Zhang Mouliang and defendants Shanghai XX Communication Technology Co., Ltd. and Beijing XX Trading Co., Ltd. The case details indicate that it falls under the category of 'product responsibility dispute'. Therefore, I will select the anchor coordinate that contains the most relevant information about the case details and the court's decision.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\"], \"next_anchor_id\": \"DOC8_A2\"}</search>"
+}

@@ -1,0 +1,66 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "final_current_query": "分类判决文书到指定的案由类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到指定的案由类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2"
+        ]
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The first chunk summary (DOC1_A1) mentions a case involving a dispute over a拆迁安置协议 (demolition and resettlement agreement), which seems to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect this coordinate next.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件信息",
+        "summary": "抗诉机关为河北省人民检察院。申诉人为王某庆，因诉永清县韩村镇人民政府及第三人永清县韩村镇西庄窠村民委员会拆迁安置协议一案，不服河北省廊坊市中级人民法院的裁定，向河北省廊坊市人民检察院申请监督，后河北省人民检察院提出抗诉。",
+        "text": "抗诉机关：河北省人民检察院。\n\n申诉人（一审起诉人、二审上诉人）：王某庆，男，1972年10月21日出生，汉族，住河北省永清县。\n\n申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案，不服河北省廊坊市中级人民法院（2022）冀10行终328号行政裁定，向河北省廊坊市人民检察院申请监督。河北省廊坊市人民检察院经审查后提请河北省人民检察院抗诉。河北省人民检察院认为本案符合《中华人民共和国行政诉讼法》第九十一条第（四）项规定的情形，以冀检行监〔2023〕182号行政抗诉书向本院提出抗诉。"
+      },
+      "extract_think": "该段落提到一个关于拆迁安置协议的案件，涉及永清县韩村镇人民政府和永清县韩村镇西庄窠村民委员会。因此，这个案件应该归类于'行政主体-房屋拆迁管理（拆迁）'类别。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政主体-房屋拆迁管理（拆迁）",
+            "value": "['《判决文书1》']",
+            "normalized_value": "['判决文书1']",
+            "evidence_text": "申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案，不服河北省廊坊市中级人民法院（2022）冀10行终328号行政裁定，向河北省廊坊市人民检察院申请监督。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A1",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政主体-房屋拆迁管理（拆迁）",
+      "value": "['《判决文书1》']",
+      "normalized_value": "['判决文书1']",
+      "evidence_text": "申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案，不服河北省廊坊市中级人民法院（2022）冀10行终328号行政裁定，向河北省廊坊市人民检察院申请监督。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The first chunk summary (DOC1_A1) mentions a case involving a dispute over a拆迁安置协议 (demolition and resettlement agreement), which seems to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect this coordinate next.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件信息\", \"summary\": \"抗诉机关为河北省人民检察院。申诉人为王某庆，因诉永清县韩村镇人民政府及第三人永清县韩村镇西庄窠村民委员会拆迁安置协议一案，不服河北省廊坊市中级人民法院的裁定，向河北省廊坊市人民检察院申请监督，后河北省人民检察院提出抗诉。\", \"text\": \"抗诉机关：河北省人民检察院。\\n\\n申诉人（一审起诉人、二审上诉人）：王某庆，男，1972年10月21日出生，汉族，住河北省永清县。\\n\\n申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案，不服河北省廊坊市中级人民法院（2022）冀10行终328号行政裁定，向河北省廊坊市人民检察院申请监督。河北省廊坊市人民检察院经审查后提请河北省人民检察院抗诉。河北省人民检察院认为本案符合《中华人民共和国行政诉讼法》第九十一条第（四）项规定的情形，以冀检行监〔2023〕182号行政抗诉书向本院提出抗诉。\"}</info>\n<think>该段落提到一个关于拆迁安置协议的案件，涉及永清县韩村镇人民政府和永清县韩村镇西庄窠村民委员会。因此，这个案件应该归类于'行政主体-房屋拆迁管理（拆迁）'类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"['《判决文书1》']\", \"normalized_value\": \"['判决文书1']\", \"evidence_text\": \"申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案，不服河北省廊坊市中级人民法院（2022）冀10行终328号行政裁定，向河北省廊坊市人民检察院申请监督。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The first chunk summary (DOC1_A1) mentions a case involving a dispute over a拆迁安置协议 (demolition and resettlement agreement), which seems to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect this coordinate next.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件信息\", \"summary\": \"抗诉机关为河北省人民检察院。申诉人为王某庆，因诉永清县韩村镇人民政府及第三人永清县韩村镇西庄窠村民委员会拆迁安置协议一案，不服河北省廊坊市中级人民法院的裁定，向河北省廊坊市人民检察院申请监督，后河北省人民检察院提出抗诉。\", \"text\": \"抗诉机关：河北省人民检察院。\\n\\n申诉人（一审起诉人、二审上诉人）：王某庆，男，1972年10月21日出生，汉族，住河北省永清县。\\n\\n申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案，不服河北省廊坊市中级人民法院（2022）冀10行终328号行政裁定，向河北省廊坊市人民检察院申请监督。河北省廊坊市人民检察院经审查后提请河北省人民检察院抗诉。河北省人民检察院认为本案符合《中华人民共和国行政诉讼法》第九十一条第（四）项规定的情形，以冀检行监〔2023〕182号行政抗诉书向本院提出抗诉。\"}</info>\n<think>该段落提到一个关于拆迁安置协议的案件，涉及永清县韩村镇人民政府和永清县韩村镇西庄窠村民委员会。因此，这个案件应该归类于'行政主体-房屋拆迁管理（拆迁）'类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政主体-房屋拆迁管理（拆迁）\", \"value\": \"['《判决文书1》']\", \"normalized_value\": \"['判决文书1']\", \"evidence_text\": \"申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案，不服河北省廊坊市中级人民法院（2022）冀10行终328号行政裁定，向河北省廊坊市人民检察院申请监督。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

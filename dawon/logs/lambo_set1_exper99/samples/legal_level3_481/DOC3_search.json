@@ -1,0 +1,51 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The current document title is '《判决文书3》'. The summaries indicate that the case involves a traffic accident crime (交通肇事罪), which does not match any of the five categories specified in the question. I will inspect the first anchor coordinate to confirm if there's any information related to the specified categories.",
+  "current_query": "阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A1",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "申诉人刘远宝对交通肇事罪的判决不服，提出申诉。法院审查后认为，原判认定的证据充分，申诉人的驾驶行为违反了交通法规，导致两人死亡，构成交通肇事罪。"
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "法院认为原判认定事实和适用法律正确，申诉人的申诉不符合再审条件，决定驳回申诉。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A1.",
+  "raw_plan_text": "<think>The current document title is '《判决文书3》'. The summaries indicate that the case involves a traffic accident crime (交通肇事罪), which does not match any of the five categories specified in the question. I will inspect the first anchor coordinate to confirm if there's any information related to the specified categories.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A1\",\"candidate_anchor_ids\":[\"DOC3_A1\",\"DOC3_A2\"]}</search>",
+  "tagged_trace": "<think>The current document title is '《判决文书3》'. The summaries indicate that the case involves a traffic accident crime (交通肇事罪), which does not match any of the five categories specified in the question. I will inspect the first anchor coordinate to confirm if there's any information related to the specified categories.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\"], \"next_anchor_id\": \"DOC3_A1\"}</search>"
+}

@@ -1,0 +1,82 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "task_mode": "clustering",
+  "think": "考虑到当前文档《判决文书4》中提到的是陈某文与赵某等人之间的民间借贷纠纷，因此这个案件应该归类到\"民间借贷纠纷\"类别下。接下来需要检查包含案件背景的坐标，即DOC4_A2。",
+  "current_query": "阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC4_A2",
+  "candidate_anchor_ids": [
+    "DOC4_A1",
+    "DOC4_A2",
+    "DOC4_A3",
+    "DOC4_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC4_A2",
+    "DOC4_A1",
+    "DOC4_A3",
+    "DOC4_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC4_A2",
+    "DOC4_A1",
+    "DOC4_A3",
+    "DOC4_A4",
+    "DOC4_A5",
+    "DOC4_A6"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC4_A2",
+      "score": 55.401,
+      "reasons": [
+        "query_overlap=2",
+        "quoted_hit=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文要求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。"
+    },
+    {
+      "anchor_id": "DOC4_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "原告陈某文，被告包括赵某、刘某冉、陈某毅、李某生。"
+    },
+    {
+      "anchor_id": "DOC4_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "李某生提出管辖权异议，认为其经常居住地为北京市平谷区，北京市丰台区人民法院裁定将案件移送至北京市平谷区人民法院。"
+    },
+    {
+      "anchor_id": "DOC4_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "北京市平谷区人民法院认为自己无管辖权，层报北京市高级人民法院，北京市高级人民法院与新疆维吾尔自治区高级人民法院协商未果，报请最高人民法院指定管辖。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书4》. First coordinate candidate is DOC4_A2.",
+  "raw_plan_text": "<think>考虑到当前文档《判决文书4》中提到的是陈某文与赵某等人之间的民间借贷纠纷，因此这个案件应该归类到\"民间借贷纠纷\"类别下。接下来需要检查包含案件背景的坐标，即DOC4_A2。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC4_A2\",\"candidate_anchor_ids\":[\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\"]}</search>",
+  "tagged_trace": "<think>考虑到当前文档《判决文书4》中提到的是陈某文与赵某等人之间的民间借贷纠纷，因此这个案件应该归类到\"民间借贷纠纷\"类别下。接下来需要检查包含案件背景的坐标，即DOC4_A2。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"], \"next_anchor_id\": \"DOC4_A2\"}</search>"
+}

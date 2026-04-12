@@ -1,0 +1,83 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "task_mode": "clustering",
+  "think": "从已有的摘要来看，该判决文书涉及国家赔偿决定，因此可能属于\"赔偿案件\"类别。为了确认这一点，我需要查看更多关于案件类型的详细信息。DOC1_A2提到了案件背景，包括国家赔偿决定，这可能是确定案件类型的关键信息。",
+  "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC1_A2",
+  "candidate_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4",
+    "DOC1_A5",
+    "DOC1_A6",
+    "DOC1_A7",
+    "DOC1_A8"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "申诉人吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。被申诉人山东省德州市中级人民法院，住所地：山东省德州市德兴中大道912号。"
+    },
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。"
+    },
+    {
+      "anchor_id": "DOC1_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "吕某请求德州中院赔偿其人民币60万元及利息，理由是德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给吕某造成60万元经济损失。"
+    },
+    {
+      "anchor_id": "DOC1_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，经过多次审判和执行，最终德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元，因被执行人无财产可供处置，终结本次执行程序。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书1》. First coordinate candidate is DOC1_A2.",
+  "raw_plan_text": "<think>从已有的摘要来看，该判决文书涉及国家赔偿决定，因此可能属于\"赔偿案件\"类别。为了确认这一点，我需要查看更多关于案件类型的详细信息。DOC1_A2提到了案件背景，包括国家赔偿决定，这可能是确定案件类型的关键信息。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC1_A2\",\"candidate_anchor_ids\":[\"DOC1_A1\",\"DOC1_A2\",\"DOC1_A3\",\"DOC1_A4\",\"DOC1_A5\",\"DOC1_A6\",\"DOC1_A7\",\"DOC1_A8\"]}</search>",
+  "tagged_trace": "<think>从已有的摘要来看，该判决文书涉及国家赔偿决定，因此可能属于\"赔偿案件\"类别。为了确认这一点，我需要查看更多关于案件类型的详细信息。DOC1_A2提到了案件背景，包括国家赔偿决定，这可能是确定案件类型的关键信息。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"next_anchor_id\": \"DOC1_A2\"}</search>"
+}

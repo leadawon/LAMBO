@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "selected_anchor_ids": [
+    "DOC2_A1"
+  ],
+  "final_current_query": "分类判决文书到正确的案由类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到正确的案由类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A1",
+        "candidate_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4"
+        ]
+      },
+      "anchor_id": "DOC2_A1",
+      "plan_think": "The document seems to be related to a patent infringement dispute, which falls under the category of '知识产权与竞争'. I will inspect the first chunk to confirm this and gather more details.",
+      "info": {
+        "anchor_id": "DOC2_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息及案件背景",
+        "summary": "上诉人台州市金博金某新材料有限公司（金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院的民事判决，向本院提起上诉。",
+        "text": "上诉人（一审原告）：台州市金博金某新材料有限公司。住所地：浙江省台州市东环大道888号4幢一楼。\n\n法定代表人：江永斌江某斌，该公司董事长。\n\n委托诉讼代理人：孙一，北京金诚同达律师事务所律师。\n\n委托诉讼代理人：庞正忠，北京金诚同达律师事务所律师。\n\n被上诉人（一审被告）：江苏博迁博某新材料股份有限公司。住所地：江苏省宿迁市高新技术开发区江山大道23号。\n\n法定代表人：王利平王某平，该公司董事长。\n\n委托诉讼代理人：谭缙，国浩律师（南京）事务所律师。\n\n委托诉讼代理人：王立民，北京维澳专利代理有限公司专利代理师。\n\n上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院于2022年1月21日作出的（2020）苏01民初3294号民事判决，向本院提起上诉。本院于2022年6月22日立案受理，并于2023年4月11日进行了询问。上诉人金博金某公司的法定代表人江永斌江某斌及委托诉讼代理人孙一、庞正忠，被上诉人博迁博某公司的委托诉讼代理人谭缙、王立民到庭参加诉讼。本案现已审理终结。"
+      },
+      "extract_think": "该段落提供了关于一起侵害发明专利权纠纷案件的信息，涉及上诉人台州市金博金某新材料有限公司和被上诉人江苏博迁博某新材料股份有限公司之间的争议。因此，可以将此判决文书归类为“知识产权与竞争”类别。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "知识产权与竞争",
+            "value": "《判决文书2》",
+            "normalized_value": "判决文书2",
+            "evidence_text": "上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院于2022年1月21日作出的（2020）苏01民初3294号民事判决，向本院提起上诉。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A1",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "知识产权与竞争",
+      "value": "《判决文书2》",
+      "normalized_value": "判决文书2",
+      "evidence_text": "上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院于2022年1月21日作出的（2020）苏01民初3294号民事判决，向本院提起上诉。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A1",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to be related to a patent infringement dispute, which falls under the category of '知识产权与竞争'. I will inspect the first chunk to confirm this and gather more details.</think>\n<search>{\"current_query\": \"分类判决文书到正确的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"上诉人台州市金博金某新材料有限公司（金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院的民事判决，向本院提起上诉。\", \"text\": \"上诉人（一审原告）：台州市金博金某新材料有限公司。住所地：浙江省台州市东环大道888号4幢一楼。\\n\\n法定代表人：江永斌江某斌，该公司董事长。\\n\\n委托诉讼代理人：孙一，北京金诚同达律师事务所律师。\\n\\n委托诉讼代理人：庞正忠，北京金诚同达律师事务所律师。\\n\\n被上诉人（一审被告）：江苏博迁博某新材料股份有限公司。住所地：江苏省宿迁市高新技术开发区江山大道23号。\\n\\n法定代表人：王利平王某平，该公司董事长。\\n\\n委托诉讼代理人：谭缙，国浩律师（南京）事务所律师。\\n\\n委托诉讼代理人：王立民，北京维澳专利代理有限公司专利代理师。\\n\\n上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院于2022年1月21日作出的（2020）苏01民初3294号民事判决，向本院提起上诉。本院于2022年6月22日立案受理，并于2023年4月11日进行了询问。上诉人金博金某公司的法定代表人江永斌江某斌及委托诉讼代理人孙一、庞正忠，被上诉人博迁博某公司的委托诉讼代理人谭缙、王立民到庭参加诉讼。本案现已审理终结。\"}</info>\n<think>该段落提供了关于一起侵害发明专利权纠纷案件的信息，涉及上诉人台州市金博金某新材料有限公司和被上诉人江苏博迁博某新材料股份有限公司之间的争议。因此，可以将此判决文书归类为“知识产权与竞争”类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"知识产权与竞争\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院于2022年1月21日作出的（2020）苏01民初3294号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to a patent infringement dispute, which falls under the category of '知识产权与竞争'. I will inspect the first chunk to confirm this and gather more details.</think>\n<search>{\"current_query\": \"分类判决文书到正确的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"上诉人台州市金博金某新材料有限公司（金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院的民事判决，向本院提起上诉。\", \"text\": \"上诉人（一审原告）：台州市金博金某新材料有限公司。住所地：浙江省台州市东环大道888号4幢一楼。\\n\\n法定代表人：江永斌江某斌，该公司董事长。\\n\\n委托诉讼代理人：孙一，北京金诚同达律师事务所律师。\\n\\n委托诉讼代理人：庞正忠，北京金诚同达律师事务所律师。\\n\\n被上诉人（一审被告）：江苏博迁博某新材料股份有限公司。住所地：江苏省宿迁市高新技术开发区江山大道23号。\\n\\n法定代表人：王利平王某平，该公司董事长。\\n\\n委托诉讼代理人：谭缙，国浩律师（南京）事务所律师。\\n\\n委托诉讼代理人：王立民，北京维澳专利代理有限公司专利代理师。\\n\\n上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院于2022年1月21日作出的（2020）苏01民初3294号民事判决，向本院提起上诉。本院于2022年6月22日立案受理，并于2023年4月11日进行了询问。上诉人金博金某公司的法定代表人江永斌江某斌及委托诉讼代理人孙一、庞正忠，被上诉人博迁博某公司的委托诉讼代理人谭缙、王立民到庭参加诉讼。本案现已审理终结。\"}</info>\n<think>该段落提供了关于一起侵害发明专利权纠纷案件的信息，涉及上诉人台州市金博金某新材料有限公司和被上诉人江苏博迁博某新材料股份有限公司之间的争议。因此，可以将此判决文书归类为“知识产权与竞争”类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"知识产权与竞争\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案，不服江苏省南京市中级人民法院于2022年1月21日作出的（2020）苏01民初3294号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

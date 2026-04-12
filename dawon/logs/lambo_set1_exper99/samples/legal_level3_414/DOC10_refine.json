@@ -1,0 +1,119 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "selected_anchor_ids": [
+    "DOC10_A1",
+    "DOC10_A2"
+  ],
+  "final_current_query": "请提供有关案件性质或类别描述的相关段落。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A1",
+        "candidate_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC10_A1",
+      "plan_think": "The document seems to involve a dispute over jurisdiction and legal relationships related to information network dissemination rights and unfair competition. The case appears to be a civil case due to the nature of the dispute. I will inspect the first chunk to confirm the type of case and the parties involved.",
+      "info": {
+        "anchor_id": "DOC10_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "上诉人北京某1科技有限公司，被上诉人北京某2科技有限公司和重庆某科技有限公司的法定代表人及住所地信息。",
+        "text": "上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。\n\n法定代表人：银某，经理。\n\n被上诉人（原审原告）：北京某2科技有限公司，住所地北京市海淀区。\n\n法定代表人：耿某某，副总裁。\n\n被上诉人（原审原告）：重庆某科技有限公司，住所地重庆市渝北区。\n\n法定代表人：杨某某1，执行董事。"
+      },
+      "extract_think": "该段落提供了当事人的基本信息，包括上诉人和被上诉人的名称、住所地以及法定代表人等信息。然而，这段文字并没有明确指出案件的具体类型。为了确定案件类型，需要进一步查找文档中关于案件性质的描述。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "document_title",
+            "value": "《判决文书10》",
+            "normalized_value": "判决文书10",
+            "evidence_text": "上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。 法定代表人：银某，经理。 被上诉人（原审原告）：北京某2科技有限公司，住所地北京市海淀区。 法定代表人：耿某某，副总裁。 被上诉人（原审原告）：重庆某科技有限公司，住所地重庆市渝北区。 法定代表人：杨某某1，执行董事。",
+            "source_doc_id": "DOC10",
+            "source_anchor_id": "DOC10_A1",
+            "confidence": 0.5
+          }
+        ],
+        "enough": false,
+        "followup_query": "请提供有关案件性质或类别描述的相关段落。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请提供有关案件性质或类别描述的相关段落。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A2",
+        "candidate_anchor_ids": [
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC10_A2",
+      "plan_think": "The previous inspection did not provide enough information to categorize the case. The next logical step is to inspect DOC10_A2, which contains a summary of the case and may include details that indicate whether it is a civil, execution, jurisdiction, or criminal case.",
+      "info": {
+        "anchor_id": "DOC10_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件概述",
+        "summary": "北京某1公司因侵害作品信息网络传播权纠纷不服重庆一中法院裁定，提出上诉，要求将案件移送至北京互联网法院审理。",
+        "text": "上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品信息网络传播权纠纷一案，不服重庆市第一中级人民法院（以下简称重庆一中法院）（2023）渝01民初792号民事裁定，向本院提起上诉。\n\n北京某1公司上诉称，请求：撤销重庆一中法院（2023）渝01民初792号裁定书，将本案移送北京互联网法院审理。事实及理由：1．原审法院适用法律错误。本案为侵害作品信息网络传播权纠纷，应适用《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（以下简称《信息网络传播权规定》）第十五条。2．不应以重庆某公司住所地作为管辖连接依据。一是重庆某公司的住所地不是侵权行为地，北京某1公司住所地位于北京市，涉及被诉相关运营行为也在北京市，本案不存在侵权行为地和被告住所地难以确定或在境外的情形，不应以重庆某公司住所地作为侵害信息网络传播权纠纷的管辖连接点；二是重庆某公司是原告人为制造管辖连接点而虚列的关联公司，与北京某2公司视频业务经营无关，对涉案作品不享有任何竞争和经营利益，且本案不存在独立的不正当竞争行为，不应以重庆某公司住所地作为不正当竞争案由的管辖连接依据。3．原审法院认定案涉侵权视频IP地址位于重庆，错误裁定该院对本案具有管辖权。4．北京某2公司多次利用CDN技术特点人为获取IP地址虚设管辖连接点，北京某1公司已就同类案件管辖权争议上诉到最高人民法院。"
+      },
+      "extract_think": "该段落详细描述了案件的性质，即侵害作品信息网络传播权纠纷，并且提到了上诉人对管辖权的异议。因此，可以确认这是一个民事案件。此外，由于存在对管辖权的争议，也可以认为它涉及到管辖案件。基于这些信息，我们可以将《判决文书10》归类为民事案件和管辖案件。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "document_category",
+            "value": "['民事案件', '管辖案件']",
+            "normalized_value": "['民事案件', '管辖案件']",
+            "evidence_text": "上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品信息网络传播权纠纷一案，不服重庆市第一中级人民法院（以下简称重庆一中法院）（2023）渝01民初792号民事裁定，向本院提起上诉。 北京某1公司上诉称，请求：撤销重庆一中法院（2023）渝01民初792号裁定书，将本案移送北京互联网法院审理。事实及理由：1．原审法院适用法律错误。本案为侵害作品信息网络传播权纠纷，应适用《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（以下简称《信息网络传播权规定》）第十五条。2．不应以重庆某公司住所地作为管辖连接依据。三是重庆某公司是原告人为制造管辖连接点而虚列的关联公司，与北京某2公司视频业务经营无关，对涉案作品不享有任何竞争和经营利益，且本案不存在独立的不正当竞争行为，不应以重庆某公司住所地作为不正当竞争案由的管辖连接依据。3．原审法院认定案涉侵权视频IP地址位于重庆，错误裁定该院对本案具有管辖权。4．北京某2公司多次利用CDN技术特点人为获取IP地址虚设管辖连接点，北京某1公司已就同类案件管辖权争议上诉到最高人民法院。",
+            "source_doc_id": "DOC10",
+            "source_anchor_id": "DOC10_A2",
+            "confidence": 0.8
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "document_title",
+      "value": "《判决文书10》",
+      "normalized_value": "判决文书10",
+      "evidence_text": "上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。 法定代表人：银某，经理。 被上诉人（原审原告）：北京某2科技有限公司，住所地北京市海淀区。 法定代表人：耿某某，副总裁。 被上诉人（原审原告）：重庆某科技有限公司，住所地重庆市渝北区。 法定代表人：杨某某1，执行董事。",
+      "source_doc_id": "DOC10",
+      "source_anchor_id": "DOC10_A1",
+      "confidence": 0.5
+    },
+    {
+      "answer_key": "document_category",
+      "value": "['民事案件', '管辖案件']",
+      "normalized_value": "['民事案件', '管辖案件']",
+      "evidence_text": "上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品信息网络传播权纠纷一案，不服重庆市第一中级人民法院（以下简称重庆一中法院）（2023）渝01民初792号民事裁定，向本院提起上诉。 北京某1公司上诉称，请求：撤销重庆一中法院（2023）渝01民初792号裁定书，将本案移送北京互联网法院审理。事实及理由：1．原审法院适用法律错误。本案为侵害作品信息网络传播权纠纷，应适用《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（以下简称《信息网络传播权规定》）第十五条。2．不应以重庆某公司住所地作为管辖连接依据。三是重庆某公司是原告人为制造管辖连接点而虚列的关联公司，与北京某2公司视频业务经营无关，对涉案作品不享有任何竞争和经营利益，且本案不存在独立的不正当竞争行为，不应以重庆某公司住所地作为不正当竞争案由的管辖连接依据。3．原审法院认定案涉侵权视频IP地址位于重庆，错误裁定该院对本案具有管辖权。4．北京某2公司多次利用CDN技术特点人为获取IP地址虚设管辖连接点，北京某1公司已就同类案件管辖权争议上诉到最高人民法院。",
+      "source_doc_id": "DOC10",
+      "source_anchor_id": "DOC10_A2",
+      "confidence": 0.8
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to involve a dispute over jurisdiction and legal relationships related to information network dissemination rights and unfair competition. The case appears to be a civil case due to the nature of the dispute. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人北京某1科技有限公司，被上诉人北京某2科技有限公司和重庆某科技有限公司的法定代表人及住所地信息。\", \"text\": \"上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。\\n\\n法定代表人：银某，经理。\\n\\n被上诉人（原审原告）：北京某2科技有限公司，住所地北京市海淀区。\\n\\n法定代表人：耿某某，副总裁。\\n\\n被上诉人（原审原告）：重庆某科技有限公司，住所地重庆市渝北区。\\n\\n法定代表人：杨某某1，执行董事。\"}</info>\n<think>该段落提供了当事人的基本信息，包括上诉人和被上诉人的名称、住所地以及法定代表人等信息。然而，这段文字并没有明确指出案件的具体类型。为了确定案件类型，需要进一步查找文档中关于案件性质的描述。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_title\", \"value\": \"《判决文书10》\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。 法定代表人：银某，经理。 被上诉人（原审原告）：北京某2科技有限公司，住所地北京市海淀区。 法定代表人：耿某某，副总裁。 被上诉人（原审原告）：重庆某科技有限公司，住所地重庆市渝北区。 法定代表人：杨某某1，执行董事。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A1\", \"confidence\": 0.5}], \"enough\": false, \"followup_query\": \"请提供有关案件性质或类别描述的相关段落。\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the case. The next logical step is to inspect DOC10_A2, which contains a summary of the case and may include details that indicate whether it is a civil, execution, jurisdiction, or criminal case.</think>\n<search>{\"current_query\": \"请提供有关案件性质或类别描述的相关段落。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件概述\", \"summary\": \"北京某1公司因侵害作品信息网络传播权纠纷不服重庆一中法院裁定，提出上诉，要求将案件移送至北京互联网法院审理。\", \"text\": \"上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品信息网络传播权纠纷一案，不服重庆市第一中级人民法院（以下简称重庆一中法院）（2023）渝01民初792号民事裁定，向本院提起上诉。\\n\\n北京某1公司上诉称，请求：撤销重庆一中法院（2023）渝01民初792号裁定书，将本案移送北京互联网法院审理。事实及理由：1．原审法院适用法律错误。本案为侵害作品信息网络传播权纠纷，应适用《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（以下简称《信息网络传播权规定》）第十五条。2．不应以重庆某公司住所地作为管辖连接依据。一是重庆某公司的住所地不是侵权行为地，北京某1公司住所地位于北京市，涉及被诉相关运营行为也在北京市，本案不存在侵权行为地和被告住所地难以确定或在境外的情形，不应以重庆某公司住所地作为侵害信息网络传播权纠纷的管辖连接点；二是重庆某公司是原告人为制造管辖连接点而虚列的关联公司，与北京某2公司视频业务经营无关，对涉案作品不享有任何竞争和经营利益，且本案不存在独立的不正当竞争行为，不应以重庆某公司住所地作为不正当竞争案由的管辖连接依据。3．原审法院认定案涉侵权视频IP地址位于重庆，错误裁定该院对本案具有管辖权。4．北京某2公司多次利用CDN技术特点人为获取IP地址虚设管辖连接点，北京某1公司已就同类案件管辖权争议上诉到最高人民法院。\"}</info>\n<think>该段落详细描述了案件的性质，即侵害作品信息网络传播权纠纷，并且提到了上诉人对管辖权的异议。因此，可以确认这是一个民事案件。此外，由于存在对管辖权的争议，也可以认为它涉及到管辖案件。基于这些信息，我们可以将《判决文书10》归类为民事案件和管辖案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_category\", \"value\": \"['民事案件', '管辖案件']\", \"normalized_value\": \"['民事案件', '管辖案件']\", \"evidence_text\": \"上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品信息网络传播权纠纷一案，不服重庆市第一中级人民法院（以下简称重庆一中法院）（2023）渝01民初792号民事裁定，向本院提起上诉。 北京某1公司上诉称，请求：撤销重庆一中法院（2023）渝01民初792号裁定书，将本案移送北京互联网法院审理。事实及理由：1．原审法院适用法律错误。本案为侵害作品信息网络传播权纠纷，应适用《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（以下简称《信息网络传播权规定》）第十五条。2．不应以重庆某公司住所地作为管辖连接依据。三是重庆某公司是原告人为制造管辖连接点而虚列的关联公司，与北京某2公司视频业务经营无关，对涉案作品不享有任何竞争和经营利益，且本案不存在独立的不正当竞争行为，不应以重庆某公司住所地作为不正当竞争案由的管辖连接依据。3．原审法院认定案涉侵权视频IP地址位于重庆，错误裁定该院对本案具有管辖权。4．北京某2公司多次利用CDN技术特点人为获取IP地址虚设管辖连接点，北京某1公司已就同类案件管辖权争议上诉到最高人民法院。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A2\", \"confidence\": 0.8}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a dispute over jurisdiction and legal relationships related to information network dissemination rights and unfair competition. The case appears to be a civil case due to the nature of the dispute. I will inspect the first chunk to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人北京某1科技有限公司，被上诉人北京某2科技有限公司和重庆某科技有限公司的法定代表人及住所地信息。\", \"text\": \"上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。\\n\\n法定代表人：银某，经理。\\n\\n被上诉人（原审原告）：北京某2科技有限公司，住所地北京市海淀区。\\n\\n法定代表人：耿某某，副总裁。\\n\\n被上诉人（原审原告）：重庆某科技有限公司，住所地重庆市渝北区。\\n\\n法定代表人：杨某某1，执行董事。\"}</info>\n<think>该段落提供了当事人的基本信息，包括上诉人和被上诉人的名称、住所地以及法定代表人等信息。然而，这段文字并没有明确指出案件的具体类型。为了确定案件类型，需要进一步查找文档中关于案件性质的描述。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_title\", \"value\": \"《判决文书10》\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。 法定代表人：银某，经理。 被上诉人（原审原告）：北京某2科技有限公司，住所地北京市海淀区。 法定代表人：耿某某，副总裁。 被上诉人（原审原告）：重庆某科技有限公司，住所地重庆市渝北区。 法定代表人：杨某某1，执行董事。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A1\", \"confidence\": 0.5}], \"enough\": false, \"followup_query\": \"请提供有关案件性质或类别描述的相关段落。\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the case. The next logical step is to inspect DOC10_A2, which contains a summary of the case and may include details that indicate whether it is a civil, execution, jurisdiction, or criminal case.</think>\n<search>{\"current_query\": \"请提供有关案件性质或类别描述的相关段落。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件概述\", \"summary\": \"北京某1公司因侵害作品信息网络传播权纠纷不服重庆一中法院裁定，提出上诉，要求将案件移送至北京互联网法院审理。\", \"text\": \"上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品信息网络传播权纠纷一案，不服重庆市第一中级人民法院（以下简称重庆一中法院）（2023）渝01民初792号民事裁定，向本院提起上诉。\\n\\n北京某1公司上诉称，请求：撤销重庆一中法院（2023）渝01民初792号裁定书，将本案移送北京互联网法院审理。事实及理由：1．原审法院适用法律错误。本案为侵害作品信息网络传播权纠纷，应适用《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（以下简称《信息网络传播权规定》）第十五条。2．不应以重庆某公司住所地作为管辖连接依据。一是重庆某公司的住所地不是侵权行为地，北京某1公司住所地位于北京市，涉及被诉相关运营行为也在北京市，本案不存在侵权行为地和被告住所地难以确定或在境外的情形，不应以重庆某公司住所地作为侵害信息网络传播权纠纷的管辖连接点；二是重庆某公司是原告人为制造管辖连接点而虚列的关联公司，与北京某2公司视频业务经营无关，对涉案作品不享有任何竞争和经营利益，且本案不存在独立的不正当竞争行为，不应以重庆某公司住所地作为不正当竞争案由的管辖连接依据。3．原审法院认定案涉侵权视频IP地址位于重庆，错误裁定该院对本案具有管辖权。4．北京某2公司多次利用CDN技术特点人为获取IP地址虚设管辖连接点，北京某1公司已就同类案件管辖权争议上诉到最高人民法院。\"}</info>\n<think>该段落详细描述了案件的性质，即侵害作品信息网络传播权纠纷，并且提到了上诉人对管辖权的异议。因此，可以确认这是一个民事案件。此外，由于存在对管辖权的争议，也可以认为它涉及到管辖案件。基于这些信息，我们可以将《判决文书10》归类为民事案件和管辖案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"document_category\", \"value\": \"['民事案件', '管辖案件']\", \"normalized_value\": \"['民事案件', '管辖案件']\", \"evidence_text\": \"上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品信息网络传播权纠纷一案，不服重庆市第一中级人民法院（以下简称重庆一中法院）（2023）渝01民初792号民事裁定，向本院提起上诉。 北京某1公司上诉称，请求：撤销重庆一中法院（2023）渝01民初792号裁定书，将本案移送北京互联网法院审理。事实及理由：1．原审法院适用法律错误。本案为侵害作品信息网络传播权纠纷，应适用《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（以下简称《信息网络传播权规定》）第十五条。2．不应以重庆某公司住所地作为管辖连接依据。三是重庆某公司是原告人为制造管辖连接点而虚列的关联公司，与北京某2公司视频业务经营无关，对涉案作品不享有任何竞争和经营利益，且本案不存在独立的不正当竞争行为，不应以重庆某公司住所地作为不正当竞争案由的管辖连接依据。3．原审法院认定案涉侵权视频IP地址位于重庆，错误裁定该院对本案具有管辖权。4．北京某2公司多次利用CDN技术特点人为获取IP地址虚设管辖连接点，北京某1公司已就同类案件管辖权争议上诉到最高人民法院。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A2\", \"confidence\": 0.8}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

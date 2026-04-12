@@ -1,0 +1,80 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The current document title is '《判决文书3》'. The first chunk summary (DOC3_A1) provides information about the parties involved in the case, but does not specify the type of case. The second chunk summary (DOC3_A2) mentions that it is a case involving a lawsuit due to objections from a third party regarding execution. This suggests that the case might fall under '民间借贷纠纷' or another category, but more specific details are needed to determine the exact category. Therefore, I will inspect DOC3_A2 next to gather more context on the nature of the dispute.",
+  "current_query": "阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']}",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A2",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A5"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "再审申请人陈某某，委托诉讼代理人王红洁，被申请人付某，原审第三人吴某某和巴州某房地产开发有限责任公司的基本信息。"
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "再审申请人陈某某因与被申请人付某、原审第三人吴某某、巴州某房地产开发有限责任公司案外人执行异议之诉一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院的民事判决，向本院申请再审。"
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "陈某某申请再审的理由包括：二审法院认定事实不清、适用法律错误，已支付购房款，拍卖行为无效，原审法院存在偏袒。付某和原审第三人吴某某、巴州某公司分别表达了反对和同意的意见。"
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "法院认为陈某某的再审申请理由不成立，包括网签登记不等于预告登记，未支付全部购房款，拍卖行为不属于民事诉讼调整范围，以及不存在偏袒情况。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A2.",
+  "raw_plan_text": "<think>The current document title is '《判决文书3》'. The first chunk summary (DOC3_A1) provides information about the parties involved in the case, but does not specify the type of case. The second chunk summary (DOC3_A2) mentions that it is a case involving a lawsuit due to objections from a third party regarding execution. This suggests that the case might fall under '民间借贷纠纷' or another category, but more specific details are needed to determine the exact category. Therefore, I will inspect DOC3_A2 next to gather more context on the nature of the dispute.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']}\", \"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\":\"DOC3_A2\", \"candidate_anchor_ids\":[\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\"]}</search>",
+  "tagged_trace": "<think>The current document title is '《判决文书3》'. The first chunk summary (DOC3_A1) provides information about the parties involved in the case, but does not specify the type of case. The second chunk summary (DOC3_A2) mentions that it is a case involving a lawsuit due to objections from a third party regarding execution. This suggests that the case might fall under '民间借贷纠纷' or another category, but more specific details are needed to determine the exact category. Therefore, I will inspect DOC3_A2 next to gather more context on the nature of the dispute.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']}\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A2\"}</search>"
+}

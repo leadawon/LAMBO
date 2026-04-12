@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "selected_anchor_ids": [
+    "DOC5_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A2",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ]
+      },
+      "anchor_id": "DOC5_A2",
+      "plan_think": "The document seems to involve a case related to a compensation claim due to alleged erroneous execution by the court. The key information that can help categorize this document is likely found in DOC5_A2, where the nature of the case (compensation case) is explicitly mentioned.",
+      "info": {
+        "anchor_id": "DOC5_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "王某某、田某某因申请辽宁省葫芦岛市中级人民法院错误执行赔偿一案，不服辽宁省高级人民法院赔偿委员会的国家赔偿决定，向本院赔偿委员会申诉。",
+        "text": "被申诉人（赔偿义务机关）：辽宁省葫芦岛市中级人民法院。\n\n申诉人王某某、田某某因申请辽宁省葫芦岛市中级人民法院（以下简称葫芦岛中院）错误执行赔偿一案，不服辽宁省高级人民法院（以下简称辽宁高院）赔偿委员会(2019)辽委赔14号国家赔偿决定，向本院赔偿委员会申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\n\n王某某、田某某以葫芦岛中院错误执行为由申请国家赔偿，请求：赔偿其查封、变卖的财产执行不得的损失，本息合计1778249.05元。葫芦岛中院于2018年12月26日作出（2018）辽14法赔2号国家赔偿决定，以该院并不存在赔偿请求人所称的“未尽到对查封、变卖不动产的保护责任导致赔偿请求人的合法财产灭失”情形为由，驳回了王某某、田某某的错误执行赔偿请求。二人不服该决定，向辽宁高院赔偿委员会提出申请。辽宁高院赔偿委员会于2019年11月13日作出（2019）辽委赔14号国家赔偿决定，决定：维持葫芦岛中院作出的（2018）辽14法赔2号国家赔偿决定。"
+      },
+      "extract_think": "This chunk clearly indicates that the case involves a compensation claim due to alleged erroneous execution by the court, which falls under the '赔偿案件' category. The document title and its category can be extracted from this information.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "赔偿案件",
+            "value": "《判决文书5》",
+            "normalized_value": "判决文书5",
+            "evidence_text": "王某某、田某某因申请辽宁省葫芦岛市中级人民法院错误执行赔偿一案，不服辽宁省高级人民法院赔偿委员会的国家赔偿决定，向本院赔偿委员会申诉。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "赔偿案件",
+      "value": "《判决文书5》",
+      "normalized_value": "判决文书5",
+      "evidence_text": "王某某、田某某因申请辽宁省葫芦岛市中级人民法院错误执行赔偿一案，不服辽宁省高级人民法院赔偿委员会的国家赔偿决定，向本院赔偿委员会申诉。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to involve a case related to a compensation claim due to alleged erroneous execution by the court. The key information that can help categorize this document is likely found in DOC5_A2, where the nature of the case (compensation case) is explicitly mentioned.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"王某某、田某某因申请辽宁省葫芦岛市中级人民法院错误执行赔偿一案，不服辽宁省高级人民法院赔偿委员会的国家赔偿决定，向本院赔偿委员会申诉。\", \"text\": \"被申诉人（赔偿义务机关）：辽宁省葫芦岛市中级人民法院。\\n\\n申诉人王某某、田某某因申请辽宁省葫芦岛市中级人民法院（以下简称葫芦岛中院）错误执行赔偿一案，不服辽宁省高级人民法院（以下简称辽宁高院）赔偿委员会(2019)辽委赔14号国家赔偿决定，向本院赔偿委员会申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n王某某、田某某以葫芦岛中院错误执行为由申请国家赔偿，请求：赔偿其查封、变卖的财产执行不得的损失，本息合计1778249.05元。葫芦岛中院于2018年12月26日作出（2018）辽14法赔2号国家赔偿决定，以该院并不存在赔偿请求人所称的“未尽到对查封、变卖不动产的保护责任导致赔偿请求人的合法财产灭失”情形为由，驳回了王某某、田某某的错误执行赔偿请求。二人不服该决定，向辽宁高院赔偿委员会提出申请。辽宁高院赔偿委员会于2019年11月13日作出（2019）辽委赔14号国家赔偿决定，决定：维持葫芦岛中院作出的（2018）辽14法赔2号国家赔偿决定。\"}</info>\n<think>This chunk clearly indicates that the case involves a compensation claim due to alleged erroneous execution by the court, which falls under the '赔偿案件' category. The document title and its category can be extracted from this information.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"王某某、田某某因申请辽宁省葫芦岛市中级人民法院错误执行赔偿一案，不服辽宁省高级人民法院赔偿委员会的国家赔偿决定，向本院赔偿委员会申诉。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a case related to a compensation claim due to alleged erroneous execution by the court. The key information that can help categorize this document is likely found in DOC5_A2, where the nature of the case (compensation case) is explicitly mentioned.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"王某某、田某某因申请辽宁省葫芦岛市中级人民法院错误执行赔偿一案，不服辽宁省高级人民法院赔偿委员会的国家赔偿决定，向本院赔偿委员会申诉。\", \"text\": \"被申诉人（赔偿义务机关）：辽宁省葫芦岛市中级人民法院。\\n\\n申诉人王某某、田某某因申请辽宁省葫芦岛市中级人民法院（以下简称葫芦岛中院）错误执行赔偿一案，不服辽宁省高级人民法院（以下简称辽宁高院）赔偿委员会(2019)辽委赔14号国家赔偿决定，向本院赔偿委员会申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n王某某、田某某以葫芦岛中院错误执行为由申请国家赔偿，请求：赔偿其查封、变卖的财产执行不得的损失，本息合计1778249.05元。葫芦岛中院于2018年12月26日作出（2018）辽14法赔2号国家赔偿决定，以该院并不存在赔偿请求人所称的“未尽到对查封、变卖不动产的保护责任导致赔偿请求人的合法财产灭失”情形为由，驳回了王某某、田某某的错误执行赔偿请求。二人不服该决定，向辽宁高院赔偿委员会提出申请。辽宁高院赔偿委员会于2019年11月13日作出（2019）辽委赔14号国家赔偿决定，决定：维持葫芦岛中院作出的（2018）辽14法赔2号国家赔偿决定。\"}</info>\n<think>This chunk clearly indicates that the case involves a compensation claim due to alleged erroneous execution by the court, which falls under the '赔偿案件' category. The document title and its category can be extracted from this information.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"王某某、田某某因申请辽宁省葫芦岛市中级人民法院错误执行赔偿一案，不服辽宁省高级人民法院赔偿委员会的国家赔偿决定，向本院赔偿委员会申诉。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

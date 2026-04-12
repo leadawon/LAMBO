@@ -1,0 +1,89 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "task_mode": "clustering",
+  "think": "The document appears to be related to a house征收 case, which falls under administrative cases. I will inspect the first chunk to confirm the type of case and gather more information.",
+  "current_query": "阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC2_A1",
+  "candidate_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A5",
+    "DOC2_A6",
+    "DOC2_A7",
+    "DOC2_A8"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A5",
+    "DOC2_A6",
+    "DOC2_A7",
+    "DOC2_A8",
+    "DOC2_A9",
+    "DOC2_A10",
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A5",
+      "score": 32.708,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.71"
+      ],
+      "summary": "姑苏区政府实施案涉征收项目是为了满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益。"
+    },
+    {
+      "anchor_id": "DOC2_A6",
+      "score": 32.554,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.55"
+      ],
+      "summary": "征收补偿方案已公开征求公众意见并公布，被征收人可选择货币补偿或产权调换。"
+    },
+    {
+      "anchor_id": "DOC2_A7",
+      "score": 32.421,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.42"
+      ],
+      "summary": "社会稳定风险评估为低风险，补偿资金已足额到位，房源也已准备。"
+    },
+    {
+      "anchor_id": "DOC2_A8",
+      "score": 32.303,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.30"
+      ],
+      "summary": "征收前对房屋进行了调查登记，并公布了未经登记建筑的认定意见。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书2》. First coordinate candidate is DOC2_A1.",
+  "raw_plan_text": "<think>The document appears to be related to a house征收 case, which falls under administrative cases. I will inspect the first chunk to confirm the type of case and gather more information.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC2_A1\",\"candidate_anchor_ids\":[\"DOC2_A1\",\"DOC2_A2\",\"DOC2_A3\",\"DOC2_A4\",\"DOC2_A5\",\"DOC2_A6\",\"DOC2_A7\",\"DOC2_A8\",\"DOC2_A9\",\"DOC2_A10\"]}</search>",
+  "tagged_trace": "<think>The document appears to be related to a house征收 case, which falls under administrative cases. I will inspect the first chunk to confirm the type of case and gather more information.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"next_anchor_id\": \"DOC2_A1\"}</search>"
+}

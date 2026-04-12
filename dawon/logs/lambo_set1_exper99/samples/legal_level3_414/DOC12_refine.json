@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC12",
+  "doc_title": "《判决文书12》",
+  "selected_anchor_ids": [
+    "DOC12_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC12_A1",
+        "candidate_anchor_ids": [
+          "DOC12_A1",
+          "DOC12_A2",
+          "DOC12_A3",
+          "DOC12_A4"
+        ]
+      },
+      "anchor_id": "DOC12_A1",
+      "plan_think": "The document seems to involve a product liability dispute, which suggests it could be categorized as a '民事案件' (civil case). However, there's also mention of jurisdiction disputes, which might suggest it could also be categorized as a '管辖案件' (jurisdiction case). I will first inspect the section that discusses the nature of the case to determine its primary category.",
+      "info": {
+        "anchor_id": "DOC12_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息及案件背景",
+        "summary": "原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司之间的产品责任纠纷案件，山东省青岛市黄岛区人民法院于2022年8月5日立案。",
+        "text": "原告：张某亮，男，1984年5月14日出生，汉族，住山东省青岛市黄岛区。\n\n被告：上海某某通信科技有限公司。住所地：上海市静安区。\n\n法定代表人：曹某玉。\n\n被告：北京某某贸易有限公司。住所地：北京市北京经济技术开发区。\n\n法定代表人：许某。\n\n原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。"
+      },
+      "extract_think": "该段落提供了关于原告和被告的信息，并且明确指出这是一个产品责任纠纷案件，因此可以归类为'民事案件'。没有提到管辖权争议或其他类型的案件。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书12》",
+            "normalized_value": "判决文书12",
+            "evidence_text": "原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。",
+            "source_doc_id": "DOC12",
+            "source_anchor_id": "DOC12_A1",
+            "confidence": 0.9
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书12》",
+      "normalized_value": "判决文书12",
+      "evidence_text": "原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。",
+      "source_doc_id": "DOC12",
+      "source_anchor_id": "DOC12_A1",
+      "confidence": 0.9
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to involve a product liability dispute, which suggests it could be categorized as a '民事案件' (civil case). However, there's also mention of jurisdiction disputes, which might suggest it could also be categorized as a '管辖案件' (jurisdiction case). I will first inspect the section that discusses the nature of the case to determine its primary category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC12_A1\", \"candidate_anchor_ids\": [\"DOC12_A1\", \"DOC12_A2\", \"DOC12_A3\", \"DOC12_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC12_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司之间的产品责任纠纷案件，山东省青岛市黄岛区人民法院于2022年8月5日立案。\", \"text\": \"原告：张某亮，男，1984年5月14日出生，汉族，住山东省青岛市黄岛区。\\n\\n被告：上海某某通信科技有限公司。住所地：上海市静安区。\\n\\n法定代表人：曹某玉。\\n\\n被告：北京某某贸易有限公司。住所地：北京市北京经济技术开发区。\\n\\n法定代表人：许某。\\n\\n原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。\"}</info>\n<think>该段落提供了关于原告和被告的信息，并且明确指出这是一个产品责任纠纷案件，因此可以归类为'民事案件'。没有提到管辖权争议或其他类型的案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书12》\", \"normalized_value\": \"判决文书12\", \"evidence_text\": \"原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。\", \"source_doc_id\": \"DOC12\", \"source_anchor_id\": \"DOC12_A1\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a product liability dispute, which suggests it could be categorized as a '民事案件' (civil case). However, there's also mention of jurisdiction disputes, which might suggest it could also be categorized as a '管辖案件' (jurisdiction case). I will first inspect the section that discusses the nature of the case to determine its primary category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC12_A1\", \"candidate_anchor_ids\": [\"DOC12_A1\", \"DOC12_A2\", \"DOC12_A3\", \"DOC12_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC12_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司之间的产品责任纠纷案件，山东省青岛市黄岛区人民法院于2022年8月5日立案。\", \"text\": \"原告：张某亮，男，1984年5月14日出生，汉族，住山东省青岛市黄岛区。\\n\\n被告：上海某某通信科技有限公司。住所地：上海市静安区。\\n\\n法定代表人：曹某玉。\\n\\n被告：北京某某贸易有限公司。住所地：北京市北京经济技术开发区。\\n\\n法定代表人：许某。\\n\\n原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。\"}</info>\n<think>该段落提供了关于原告和被告的信息，并且明确指出这是一个产品责任纠纷案件，因此可以归类为'民事案件'。没有提到管辖权争议或其他类型的案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书12》\", \"normalized_value\": \"判决文书12\", \"evidence_text\": \"原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。\", \"source_doc_id\": \"DOC12\", \"source_anchor_id\": \"DOC12_A1\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

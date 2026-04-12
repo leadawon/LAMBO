@@ -1,0 +1,81 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The document seems to involve a dispute over the execution of a financial loan contract and a request to stop the execution by a third party. The case appears to be related to a '执行案件' (execution case). I will inspect DOC3_A6, the court's ruling, to confirm the type of case.",
+  "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A6",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A5",
+    "DOC3_A6"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "介绍了案外人陈久玲及其委托诉讼代理人，申请执行人华融创新投资有限责任公司及其委托诉讼代理人，以及被执行人的详细信息。"
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "描述了华融创新投资有限责任公司与多个被执行人之间的金融借款合同纠纷案件，以及案外人陈久玲提出的中止执行请求。"
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "案外人陈久玲声称已合法购买并支付了案涉房屋的全部款项，并将其委托给龙天公司管理，要求中止执行。申请执行人华融创新则认为案涉房产为商铺，且合同未网签备案，不同意中止执行。"
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "被执行人认为案外人购买的房屋未网签备案，且房号与公示不符，应驳回案外人的请求。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A6.",
+  "raw_plan_text": "<think>The document seems to involve a dispute over the execution of a financial loan contract and a request to stop the execution by a third party. The case appears to be related to a '执行案件' (execution case). I will inspect DOC3_A6, the court's ruling, to confirm the type of case.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A6\",\"candidate_anchor_ids\":[\"DOC3_A1\",\"DOC3_A2\",\"DOC3_A3\",\"DOC3_A4\",\"DOC3_A5\",\"DOC3_A6\"]}</search>",
+  "tagged_trace": "<think>The document seems to involve a dispute over the execution of a financial loan contract and a request to stop the execution by a third party. The case appears to be related to a '执行案件' (execution case). I will inspect DOC3_A6, the court's ruling, to confirm the type of case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A6\"}</search>"
+}

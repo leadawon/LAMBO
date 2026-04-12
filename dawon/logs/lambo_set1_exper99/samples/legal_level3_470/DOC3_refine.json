@@ -1,0 +1,97 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A1"
+  ],
+  "final_current_query": "请提供有关《判决文书3》中涉及的具体案由或争议点的信息。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政行为-行政强制' '不动产登记纠纷' '行政行为-行政给付' '产品责任纠纷' '执行案由-行政'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政给付': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2"
+        ]
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The current document title is '《判决文书3》'. The first chunk summary indicates that the case involves a dispute over the denial of work injury insurance benefits by the Dandong Social Insurance Service Center, which suggests it might fall under '行政行为-行政给付' (administrative act - administrative payment). I will inspect the next anchor coordinate to confirm this categorization.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院裁定",
+        "summary": "法院认为姜某某的再审申请符合法律规定，决定提审本案，并在提审期间中止原判决的执行。",
+        "text": "本院经复查认为，再审申请人姜某某申请再审符合《中华人民共和国行政诉讼法》第九十一条第（四）项的规定。依照《中华人民共和国行政诉讼法》第九十二条第二款、《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十八条第二款的规定，裁定如下：\n\n一、本案由本院提审；\n\n二、提审期间，中止原判决的执行。"
+      },
+      "extract_think": "该段落主要描述了法院对于姜某某再审申请的处理决定，但并未明确指出案件的具体案由。因此，需要进一步查找文档中的其他信息来确定其具体类别。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "请提供有关《判决文书3》中涉及的具体案由或争议点的信息。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请提供有关《判决文书3》中涉及的具体案由或争议点的信息。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2"
+        ]
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "考虑到前一个锚点没有提供足够的信息来确定案件的具体案由，我将返回到第一个锚点，即“当事人信息及案件背景”，以获取更多关于案件性质的信息，从而确定其属于哪个类别。",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息及案件背景",
+        "summary": "再审申请人姜某某因丹东市社会保险事业服务中心不予支付工伤保险待遇提起诉讼，辽宁省丹东市中级人民法院已作出行政判决，现姜某某申请再审。",
+        "text": "再审申请人（一审原告、二审上诉人）：姜某某，女，1971年6月3日出生，汉族，住址辽宁省丹东市振兴区。\n\n委托诉讼代理人：关君，辽宁君全律师事务所律师。\n\n被申请人（一审被告、二审被上诉人）：丹东市社会保险事业服务中心，住所地辽宁省丹东市振兴区。\n\n法定代表人：曲某某，该中心主任。\n\n姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决已经发生法律效力。现再审申请人姜某某向本院申请再审。"
+      },
+      "extract_think": "该段落提供了案件的基本背景信息，表明姜某某因丹东市社会保险事业服务中心不予支付工伤保险待遇而提起诉讼，这符合'行政行为-行政给付'的案由。因此，可以将《判决文书3》归类为'行政行为-行政给付'。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政给付",
+            "value": "《判决文书3》",
+            "normalized_value": "判决文书3",
+            "evidence_text": "姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决已经发生法律效力。现再审申请人姜某某向本院申请再审。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A1",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政给付",
+      "value": "《判决文书3》",
+      "normalized_value": "判决文书3",
+      "evidence_text": "姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决已经发生法律效力。现再审申请人姜某某向本院申请再审。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A1",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document title is '《判决文书3》'. The first chunk summary indicates that the case involves a dispute over the denial of work injury insurance benefits by the Dandong Social Insurance Service Center, which suggests it might fall under '行政行为-行政给付' (administrative act - administrative payment). I will inspect the next anchor coordinate to confirm this categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政强制' '不动产登记纠纷' '行政行为-行政给付' '产品责任纠纷' '执行案由-行政'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政给付': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院裁定\", \"summary\": \"法院认为姜某某的再审申请符合法律规定，决定提审本案，并在提审期间中止原判决的执行。\", \"text\": \"本院经复查认为，再审申请人姜某某申请再审符合《中华人民共和国行政诉讼法》第九十一条第（四）项的规定。依照《中华人民共和国行政诉讼法》第九十二条第二款、《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十八条第二款的规定，裁定如下：\\n\\n一、本案由本院提审；\\n\\n二、提审期间，中止原判决的执行。\"}</info>\n<think>该段落主要描述了法院对于姜某某再审申请的处理决定，但并未明确指出案件的具体案由。因此，需要进一步查找文档中的其他信息来确定其具体类别。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供有关《判决文书3》中涉及的具体案由或争议点的信息。\"}</retrieve>\n<think>考虑到前一个锚点没有提供足够的信息来确定案件的具体案由，我将返回到第一个锚点，即“当事人信息及案件背景”，以获取更多关于案件性质的信息，从而确定其属于哪个类别。</think>\n<search>{\"current_query\": \"请提供有关《判决文书3》中涉及的具体案由或争议点的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"再审申请人姜某某因丹东市社会保险事业服务中心不予支付工伤保险待遇提起诉讼，辽宁省丹东市中级人民法院已作出行政判决，现姜某某申请再审。\", \"text\": \"再审申请人（一审原告、二审上诉人）：姜某某，女，1971年6月3日出生，汉族，住址辽宁省丹东市振兴区。\\n\\n委托诉讼代理人：关君，辽宁君全律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：丹东市社会保险事业服务中心，住所地辽宁省丹东市振兴区。\\n\\n法定代表人：曲某某，该中心主任。\\n\\n姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决已经发生法律效力。现再审申请人姜某某向本院申请再审。\"}</info>\n<think>该段落提供了案件的基本背景信息，表明姜某某因丹东市社会保险事业服务中心不予支付工伤保险待遇而提起诉讼，这符合'行政行为-行政给付'的案由。因此，可以将《判决文书3》归类为'行政行为-行政给付'。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政给付\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决已经发生法律效力。现再审申请人姜某某向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document title is '《判决文书3》'. The first chunk summary indicates that the case involves a dispute over the denial of work injury insurance benefits by the Dandong Social Insurance Service Center, which suggests it might fall under '行政行为-行政给付' (administrative act - administrative payment). I will inspect the next anchor coordinate to confirm this categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政强制' '不动产登记纠纷' '行政行为-行政给付' '产品责任纠纷' '执行案由-行政'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政给付': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院裁定\", \"summary\": \"法院认为姜某某的再审申请符合法律规定，决定提审本案，并在提审期间中止原判决的执行。\", \"text\": \"本院经复查认为，再审申请人姜某某申请再审符合《中华人民共和国行政诉讼法》第九十一条第（四）项的规定。依照《中华人民共和国行政诉讼法》第九十二条第二款、《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十八条第二款的规定，裁定如下：\\n\\n一、本案由本院提审；\\n\\n二、提审期间，中止原判决的执行。\"}</info>\n<think>该段落主要描述了法院对于姜某某再审申请的处理决定，但并未明确指出案件的具体案由。因此，需要进一步查找文档中的其他信息来确定其具体类别。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供有关《判决文书3》中涉及的具体案由或争议点的信息。\"}</retrieve>\n<think>考虑到前一个锚点没有提供足够的信息来确定案件的具体案由，我将返回到第一个锚点，即“当事人信息及案件背景”，以获取更多关于案件性质的信息，从而确定其属于哪个类别。</think>\n<search>{\"current_query\": \"请提供有关《判决文书3》中涉及的具体案由或争议点的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"再审申请人姜某某因丹东市社会保险事业服务中心不予支付工伤保险待遇提起诉讼，辽宁省丹东市中级人民法院已作出行政判决，现姜某某申请再审。\", \"text\": \"再审申请人（一审原告、二审上诉人）：姜某某，女，1971年6月3日出生，汉族，住址辽宁省丹东市振兴区。\\n\\n委托诉讼代理人：关君，辽宁君全律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：丹东市社会保险事业服务中心，住所地辽宁省丹东市振兴区。\\n\\n法定代表人：曲某某，该中心主任。\\n\\n姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决已经发生法律效力。现再审申请人姜某某向本院申请再审。\"}</info>\n<think>该段落提供了案件的基本背景信息，表明姜某某因丹东市社会保险事业服务中心不予支付工伤保险待遇而提起诉讼，这符合'行政行为-行政给付'的案由。因此，可以将《判决文书3》归类为'行政行为-行政给付'。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政给付\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决已经发生法律效力。现再审申请人姜某某向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

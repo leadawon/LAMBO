@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "selected_anchor_ids": [
+    "DOC8_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC8_A2",
+        "candidate_anchor_ids": [
+          "DOC8_A1",
+          "DOC8_A2",
+          "DOC8_A3",
+          "DOC8_A4"
+        ]
+      },
+      "anchor_id": "DOC8_A2",
+      "plan_think": "为了确定该判决文书属于哪种案件类型，我需要找到描述案件性质的关键信息。从摘要来看，案件涉及破产债权确认纠纷，这通常属于民事案件范畴。因此，我将选择包含案件背景信息的坐标，以进一步确认案件类型。",
+      "info": {
+        "anchor_id": "DOC8_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "韦某某因与温州某某电气有限公司破产债权确认纠纷一案，不服一审判决，提起上诉。",
+        "text": "上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，向本院提起上诉。本院于2024年3月27日立案后，依法组成合议庭公开开庭审理了本案。本案现已审理终结。"
+      },
+      "extract_think": "该段落明确提到“破产债权确认纠纷”和“民事判决”，表明这是一个民事案件。因此，可以将《判决文书8》归类为民事案件。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书8》",
+            "normalized_value": "判决文书8",
+            "evidence_text": "上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，向本院提起上诉。",
+            "source_doc_id": "DOC8",
+            "source_anchor_id": "DOC8_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书8》",
+      "normalized_value": "判决文书8",
+      "evidence_text": "上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，向本院提起上诉。",
+      "source_doc_id": "DOC8",
+      "source_anchor_id": "DOC8_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>为了确定该判决文书属于哪种案件类型，我需要找到描述案件性质的关键信息。从摘要来看，案件涉及破产债权确认纠纷，这通常属于民事案件范畴。因此，我将选择包含案件背景信息的坐标，以进一步确认案件类型。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"韦某某因与温州某某电气有限公司破产债权确认纠纷一案，不服一审判决，提起上诉。\", \"text\": \"上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，向本院提起上诉。本院于2024年3月27日立案后，依法组成合议庭公开开庭审理了本案。本案现已审理终结。\"}</info>\n<think>该段落明确提到“破产债权确认纠纷”和“民事判决”，表明这是一个民事案件。因此，可以将《判决文书8》归类为民事案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>为了确定该判决文书属于哪种案件类型，我需要找到描述案件性质的关键信息。从摘要来看，案件涉及破产债权确认纠纷，这通常属于民事案件范畴。因此，我将选择包含案件背景信息的坐标，以进一步确认案件类型。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"韦某某因与温州某某电气有限公司破产债权确认纠纷一案，不服一审判决，提起上诉。\", \"text\": \"上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，向本院提起上诉。本院于2024年3月27日立案后，依法组成合议庭公开开庭审理了本案。本案现已审理终结。\"}</info>\n<think>该段落明确提到“破产债权确认纠纷”和“民事判决”，表明这是一个民事案件。因此，可以将《判决文书8》归类为民事案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

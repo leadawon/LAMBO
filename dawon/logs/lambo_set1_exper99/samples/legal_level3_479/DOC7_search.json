@@ -1,0 +1,84 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "task_mode": "clustering",
+  "think": "The current document does not seem to contain information that directly matches any of the five case categories specified in the question. However, the summaries suggest that the document may be related to criminal activities and their legal proceedings, which could potentially fall under '妨碍社会管理秩序罪'. I will inspect DOC7_A3, as it contains details about the case facts, which might provide more specific information on the nature of the crime and help determine the correct category.",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政强制' '妨碍社会管理秩序罪' '执行案由-行政' '行政行为-行政补偿' '海事海商纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '妨碍社会管理秩序罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC7_A3",
+  "candidate_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC7_A5",
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC7_A5",
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4",
+    "DOC7_A6",
+    "DOC7_A7",
+    "DOC7_A8"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC7_A5",
+      "score": 32.708,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.71"
+      ],
+      "summary": "列出了各被告人的具体判决结果，包括刑期、罚金、违法所得的处理等。"
+    },
+    {
+      "anchor_id": "DOC7_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "列出了原公诉机关、上诉人、指定辩护人、原审被告人的基本信息，包括姓名、年龄、文化程度、户籍所在地、职业、羁押状态等。"
+    },
+    {
+      "anchor_id": "DOC7_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "描述了案件的审理过程，包括上诉人刘某某申请撤回上诉，咸阳市人民检察院指派检察员出庭，以及案件现已审理终结。"
+    },
+    {
+      "anchor_id": "DOC7_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "详细描述了被告人柳某某、聂某等人自2022年以来，通过租赁场地、注册宽带业务并架设VOIP设备，为境外电信诈骗团伙提供通讯传输服务，导致多名受害人被骗的情况。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书7》. First coordinate candidate is DOC7_A3.",
+  "raw_plan_text": "<think>The current document does not seem to contain information that directly matches any of the five case categories specified in the question. However, the summaries suggest that the document may be related to criminal activities and their legal proceedings, which could potentially fall under '妨碍社会管理秩序罪'. I will inspect DOC7_A3, as it contains details about the case facts, which might provide more specific information on the nature of the crime and help determine the correct category.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政强制' '妨碍社会管理秩序罪' '执行案由-行政' '行政行为-行政补偿' '海事海商纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '妨碍社会管理秩序罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC7_A3\",\"candidate_anchor_ids\":[\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\", \"DOC7_A5\", \"DOC7_A6\", \"DOC7_A7\", \"DOC7_A8\"]}</search>",
+  "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the five case categories specified in the question. However, the summaries suggest that the document may be related to criminal activities and their legal proceedings, which could potentially fall under '妨碍社会管理秩序罪'. I will inspect DOC7_A3, as it contains details about the case facts, which might provide more specific information on the nature of the crime and help determine the correct category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政强制' '妨碍社会管理秩序罪' '执行案由-行政' '行政行为-行政补偿' '海事海商纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '妨碍社会管理秩序罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"next_anchor_id\": \"DOC7_A3\"}</search>"
+}

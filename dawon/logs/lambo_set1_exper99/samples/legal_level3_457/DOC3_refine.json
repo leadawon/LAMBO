@@ -1,0 +1,128 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A7",
+    "DOC3_A1"
+  ],
+  "final_current_query": "是否有其他案由在《判决文书3》中被提及？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到正确的案由类别中",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A2"
+        ]
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The document seems to involve a dispute over a house expropriation compensation agreement, which suggests it might fall under the category of '行政行为-行政征收'. I will inspect the chunk that provides more details on the case background to confirm this.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及新疆某房地产开发有限公司之间的单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。",
+        "text": "被申请人（一审第三人、二审被上诉人）：新疆某房地产开发有限公司，住所地新疆维吾尔自治区乌鲁木齐市米东区中。\n\n法定代表人：唐某某，该公司经理。\n\n再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室）（以下简称米东区征收办）、新疆某房地产开发有限公司（以下简称某房产公司）单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2022）新01行终132号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。"
+      },
+      "extract_think": "该段落提到的是关于房屋征收补偿协议的争议，符合“行政行为-行政征收”的案由分类。因此，《判决文书3》应归类于“行政行为-行政征收”。没有足够的信息来确定是否还有其他案由适用于此文档。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政征收",
+            "value": "['《判决文书3》']",
+            "normalized_value": "['JUDGMENT_DOCUMENT_3']",
+            "evidence_text": "再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及新疆某房地产开发有限公司之间的单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否有其他案由适用于《判决文书3》？"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "是否有其他案由适用于《判决文书3》？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A7",
+        "candidate_anchor_ids": [
+          "DOC3_A7"
+        ]
+      },
+      "anchor_id": "DOC3_A7",
+      "plan_think": "已知《判决文书3》涉及房屋征收补偿协议的争议，属于“行政行为-行政征收”案由。但为了确保没有遗漏其他可能适用的案由，我需要检查更多细节，特别是关于案件的具体情况和最终裁决。接下来，我将查看包含裁定结果的部分。",
+      "info": {
+        "anchor_id": "DOC3_A7",
+        "anchor_type": "paragraph_region",
+        "section_path": "裁定结果",
+        "summary": "原审判决认定事实清楚，法律适用准确，驳回逄某甲的再审申请。",
+        "text": "综上，原审判决认定事实清楚，法律适用准确，逄某甲的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用<中华人民共和国行政诉讼法>的解释》第一百一十六条第二款之规定，裁定如下：\n\n驳回逄某甲的再审申请。"
+      },
+      "extract_think": "该段落提供了裁定结果的信息，确认了原审判决的事实认定和法律适用均无误，并且驳回了逄某甲的再审申请。然而，这段内容并没有提供额外的案由信息，因此不足以确定是否存在其他适用的案由。需要进一步查找是否有其他案由的相关证据。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否有其他具体案件细节或案由提及于《判决文书3》中？"
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "是否有其他具体案件细节或案由提及于《判决文书3》中？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A3",
+          "DOC3_A4",
+          "DOC3_A5"
+        ]
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "考虑到当前已有的证据表明《判决文书3》属于“行政行为-行政征收”，并且之前的检索没有发现其他案由的明确证据，下一步应该检查文档中是否有任何提及或暗示其他案由的内容。我将选择一个包含案件详细信息的坐标进行检查。",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "再审申请人逄某甲及其委托诉讼代理人信息，被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及其委托诉讼代理人的信息。",
+        "text": "再审申请人（一审原告、二审上诉人）：逄某甲，男，1969年4月13日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\n\n委托诉讼代理人：逄某乙（系逄某甲妹妹），女，1974年1月6日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\n\n委托诉讼代理人：王某（系逄某甲妹妹），女，1970年7月29日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\n\n被申请人（一审被告、二审被上诉人）：乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室），住所地新疆维吾尔自治区乌鲁木齐市米东区稻香中路481号。\n\n法定代表人：尚仕银，该办主任。\n\n出庭负责人：毕玉林，该办书记。\n\n委托诉讼代理人：康明远，新疆法爱律师事务所律师。"
+      },
+      "extract_think": "该段落提供了当事人的基本信息，包括再审申请人逄某甲及其委托诉讼代理人，以及被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及其委托诉讼代理人。这些信息有助于确认案件的当事人，但并未提供新的案由信息。因此，仍需继续寻找是否有其他案由的证据。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否有其他案由在《判决文书3》中被提及？"
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政征收",
+      "value": "['《判决文书3》']",
+      "normalized_value": "['JUDGMENT_DOCUMENT_3']",
+      "evidence_text": "再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及新疆某房地产开发有限公司之间的单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The document seems to involve a dispute over a house expropriation compensation agreement, which suggests it might fall under the category of '行政行为-行政征收'. I will inspect the chunk that provides more details on the case background to confirm this.</think>\n<search>{\"current_query\": \"分类判决文书到正确的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及新疆某房地产开发有限公司之间的单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。\", \"text\": \"被申请人（一审第三人、二审被上诉人）：新疆某房地产开发有限公司，住所地新疆维吾尔自治区乌鲁木齐市米东区中。\\n\\n法定代表人：唐某某，该公司经理。\\n\\n再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室）（以下简称米东区征收办）、新疆某房地产开发有限公司（以下简称某房产公司）单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2022）新01行终132号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>该段落提到的是关于房屋征收补偿协议的争议，符合“行政行为-行政征收”的案由分类。因此，《判决文书3》应归类于“行政行为-行政征收”。没有足够的信息来确定是否还有其他案由适用于此文档。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政征收\", \"value\": \"['《判决文书3》']\", \"normalized_value\": \"['JUDGMENT_DOCUMENT_3']\", \"evidence_text\": \"再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及新疆某房地产开发有限公司之间的单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"是否有其他案由适用于《判决文书3》？\"}</retrieve>\n<think>已知《判决文书3》涉及房屋征收补偿协议的争议，属于“行政行为-行政征收”案由。但为了确保没有遗漏其他可能适用的案由，我需要检查更多细节，特别是关于案件的具体情况和最终裁决。接下来，我将查看包含裁定结果的部分。</think>\n<search>{\"current_query\": \"是否有其他案由适用于《判决文书3》？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A7\", \"candidate_anchor_ids\": [\"DOC3_A7\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"裁定结果\", \"summary\": \"原审判决认定事实清楚，法律适用准确，驳回逄某甲的再审申请。\", \"text\": \"综上，原审判决认定事实清楚，法律适用准确，逄某甲的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用<中华人民共和国行政诉讼法>的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回逄某甲的再审申请。\"}</info>\n<think>该段落提供了裁定结果的信息，确认了原审判决的事实认定和法律适用均无误，并且驳回了逄某甲的再审申请。然而，这段内容并没有提供额外的案由信息，因此不足以确定是否存在其他适用的案由。需要进一步查找是否有其他案由的相关证据。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他具体案件细节或案由提及于《判决文书3》中？\"}</retrieve>\n<think>考虑到当前已有的证据表明《判决文书3》属于“行政行为-行政征收”，并且之前的检索没有发现其他案由的明确证据，下一步应该检查文档中是否有任何提及或暗示其他案由的内容。我将选择一个包含案件详细信息的坐标进行检查。</think>\n<search>{\"current_query\": \"是否有其他具体案件细节或案由提及于《判决文书3》中？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人逄某甲及其委托诉讼代理人信息，被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及其委托诉讼代理人的信息。\", \"text\": \"再审申请人（一审原告、二审上诉人）：逄某甲，男，1969年4月13日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\\n\\n委托诉讼代理人：逄某乙（系逄某甲妹妹），女，1974年1月6日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\\n\\n委托诉讼代理人：王某（系逄某甲妹妹），女，1970年7月29日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\\n\\n被申请人（一审被告、二审被上诉人）：乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室），住所地新疆维吾尔自治区乌鲁木齐市米东区稻香中路481号。\\n\\n法定代表人：尚仕银，该办主任。\\n\\n出庭负责人：毕玉林，该办书记。\\n\\n委托诉讼代理人：康明远，新疆法爱律师事务所律师。\"}</info>\n<think>该段落提供了当事人的基本信息，包括再审申请人逄某甲及其委托诉讼代理人，以及被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及其委托诉讼代理人。这些信息有助于确认案件的当事人，但并未提供新的案由信息。因此，仍需继续寻找是否有其他案由的证据。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由在《判决文书3》中被提及？\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a dispute over a house expropriation compensation agreement, which suggests it might fall under the category of '行政行为-行政征收'. I will inspect the chunk that provides more details on the case background to confirm this.</think>\n<search>{\"current_query\": \"分类判决文书到正确的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及新疆某房地产开发有限公司之间的单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。\", \"text\": \"被申请人（一审第三人、二审被上诉人）：新疆某房地产开发有限公司，住所地新疆维吾尔自治区乌鲁木齐市米东区中。\\n\\n法定代表人：唐某某，该公司经理。\\n\\n再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室）（以下简称米东区征收办）、新疆某房地产开发有限公司（以下简称某房产公司）单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2022）新01行终132号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>该段落提到的是关于房屋征收补偿协议的争议，符合“行政行为-行政征收”的案由分类。因此，《判决文书3》应归类于“行政行为-行政征收”。没有足够的信息来确定是否还有其他案由适用于此文档。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政征收\", \"value\": \"['《判决文书3》']\", \"normalized_value\": \"['JUDGMENT_DOCUMENT_3']\", \"evidence_text\": \"再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及新疆某房地产开发有限公司之间的单方解除房屋征收补偿协议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"是否有其他案由适用于《判决文书3》？\"}</retrieve>\n<think>已知《判决文书3》涉及房屋征收补偿协议的争议，属于“行政行为-行政征收”案由。但为了确保没有遗漏其他可能适用的案由，我需要检查更多细节，特别是关于案件的具体情况和最终裁决。接下来，我将查看包含裁定结果的部分。</think>\n<search>{\"current_query\": \"是否有其他案由适用于《判决文书3》？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A7\", \"candidate_anchor_ids\": [\"DOC3_A7\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"裁定结果\", \"summary\": \"原审判决认定事实清楚，法律适用准确，驳回逄某甲的再审申请。\", \"text\": \"综上，原审判决认定事实清楚，法律适用准确，逄某甲的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用<中华人民共和国行政诉讼法>的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回逄某甲的再审申请。\"}</info>\n<think>该段落提供了裁定结果的信息，确认了原审判决的事实认定和法律适用均无误，并且驳回了逄某甲的再审申请。然而，这段内容并没有提供额外的案由信息，因此不足以确定是否存在其他适用的案由。需要进一步查找是否有其他案由的相关证据。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他具体案件细节或案由提及于《判决文书3》中？\"}</retrieve>\n<think>考虑到当前已有的证据表明《判决文书3》属于“行政行为-行政征收”，并且之前的检索没有发现其他案由的明确证据，下一步应该检查文档中是否有任何提及或暗示其他案由的内容。我将选择一个包含案件详细信息的坐标进行检查。</think>\n<search>{\"current_query\": \"是否有其他具体案件细节或案由提及于《判决文书3》中？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人逄某甲及其委托诉讼代理人信息，被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及其委托诉讼代理人的信息。\", \"text\": \"再审申请人（一审原告、二审上诉人）：逄某甲，男，1969年4月13日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\\n\\n委托诉讼代理人：逄某乙（系逄某甲妹妹），女，1974年1月6日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\\n\\n委托诉讼代理人：王某（系逄某甲妹妹），女，1970年7月29日出生，住新疆维吾尔自治区乌鲁木齐市米东区。\\n\\n被申请人（一审被告、二审被上诉人）：乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室），住所地新疆维吾尔自治区乌鲁木齐市米东区稻香中路481号。\\n\\n法定代表人：尚仕银，该办主任。\\n\\n出庭负责人：毕玉林，该办书记。\\n\\n委托诉讼代理人：康明远，新疆法爱律师事务所律师。\"}</info>\n<think>该段落提供了当事人的基本信息，包括再审申请人逄某甲及其委托诉讼代理人，以及被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室及其委托诉讼代理人。这些信息有助于确认案件的当事人，但并未提供新的案由信息。因此，仍需继续寻找是否有其他案由的证据。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由在《判决文书3》中被提及？\"}</retrieve>"
+}

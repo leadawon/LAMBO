@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional
@@ -45,6 +46,41 @@ class _OpenAICompatChatBackend:
             return f"{base_url}/chat/completions"
         return f"{base_url}/v1/chat/completions"
 
+    @staticmethod
+    def _context_retry_max_tokens(body: str, requested_tokens: int) -> Optional[int]:
+        match = re.search(
+            r"maximum context length is (\d+) tokens.*?"
+            r"requested (\d+) output tokens.*?"
+            r"prompt contains at least (\d+) input tokens",
+            body,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        if not match:
+            return None
+
+        model_limit = int(match.group(1))
+        requested_from_error = int(match.group(2))
+        prompt_tokens = int(match.group(3))
+        requested = min(requested_tokens, requested_from_error)
+        margin = int(os.environ.get("LAMBO_DAWON_CONTEXT_RETRY_MARGIN", "64"))
+        available = model_limit - prompt_tokens - max(0, margin)
+        if available < 1:
+            available = model_limit - prompt_tokens
+        if 0 < available < requested:
+            return available
+        return None
+
+    def _post_chat_completion(self, payload: dict[str, Any]) -> requests.Response:
+        return self.session.post(
+            self.chat_url,
+            headers={
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=self.timeout,
+        )
+
     def generate(
         self,
         *,
@@ -62,15 +98,12 @@ class _OpenAICompatChatBackend:
             ],
             "max_tokens": max_output_tokens,
         }
-        response = self.session.post(
-            self.chat_url,
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json",
-            },
-            json=payload,
-            timeout=self.timeout,
-        )
+        response = self._post_chat_completion(payload)
+        if response.status_code == 400:
+            retry_max_tokens = self._context_retry_max_tokens(response.text, max_output_tokens)
+            if retry_max_tokens is not None:
+                payload["max_tokens"] = retry_max_tokens
+                response = self._post_chat_completion(payload)
         try:
             response.raise_for_status()
         except requests.HTTPError as exc:

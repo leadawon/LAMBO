@@ -1,0 +1,86 @@
+{
+  "doc_id": "DOC12",
+  "doc_title": "《判决文书12》",
+  "task_mode": "clustering",
+  "think": "The current document does not seem to contain explicit information about the case categories mentioned in the question. However, based on the content of the document, it seems to be related to a dispute over property execution, which might fall under '民间借贷纠纷' (disputes over private lending) or another category. I will inspect the first chunk summary to get a better understanding of the case's nature.",
+  "current_query": "阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC12_A1",
+  "candidate_anchor_ids": [
+    "DOC12_A1",
+    "DOC12_A2",
+    "DOC12_A3",
+    "DOC12_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC12_A10",
+    "DOC12_A1",
+    "DOC12_A2",
+    "DOC12_A3"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC12_A10",
+    "DOC12_A1",
+    "DOC12_A2",
+    "DOC12_A3",
+    "DOC12_A4",
+    "DOC12_A5",
+    "DOC12_A6",
+    "DOC12_A7",
+    "DOC12_A8",
+    "DOC12_A9"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC12_A10",
+      "score": 32.102,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.10"
+      ],
+      "summary": "二审法院判决撤销一审判决，准许执行位于安徽省蚌埠市××单元××层××号房屋，由安徽某公司负担诉讼费用。"
+    },
+    {
+      "anchor_id": "DOC12_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "上诉人陕西某公司，法定代表人姚某东，委托诉讼代理人张浩。被上诉人沙某慧，被上诉人安徽某公司，法定代表人吴某木。"
+    },
+    {
+      "anchor_id": "DOC12_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "上诉人陕西某公司因与被上诉人沙某慧、安徽某公司执行异议之诉一案，不服安徽省蚌埠市中级人民法院（2023）皖03民初20号民事判决，向本院提起上诉。"
+    },
+    {
+      "anchor_id": "DOC12_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "陕西某公司上诉请求撤销一审判决，改判支持其一审诉讼请求或将本案发回重审，并指出一审程序违法和适用法律错误等问题。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书12》. First coordinate candidate is DOC12_A1.",
+  "raw_plan_text": "<think>The current document does not seem to contain explicit information about the case categories mentioned in the question. However, based on the content of the document, it seems to be related to a dispute over property execution, which might fall under '民间借贷纠纷' (disputes over private lending) or another category. I will inspect the first chunk summary to get a better understanding of the case's nature.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC12_A1\",\"candidate_anchor_ids\":[\"DOC12_A1\",\"DOC12_A2\",\"DOC12_A3\",\"DOC12_A4\",\"DOC12_A5\",\"DOC12_A6\",\"DOC12_A7\",\"DOC12_A8\",\"DOC12_A9\",\"DOC12_A10\"]}</search>",
+  "tagged_trace": "<think>The current document does not seem to contain explicit information about the case categories mentioned in the question. However, based on the content of the document, it seems to be related to a dispute over property execution, which might fall under '民间借贷纠纷' (disputes over private lending) or another category. I will inspect the first chunk summary to get a better understanding of the case's nature.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC12_A1\", \"DOC12_A2\", \"DOC12_A3\", \"DOC12_A4\"], \"next_anchor_id\": \"DOC12_A1\"}</search>"
+}

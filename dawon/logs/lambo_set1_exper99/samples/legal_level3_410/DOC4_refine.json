@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "selected_anchor_ids": [
+    "DOC4_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A2",
+        "candidate_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4"
+        ]
+      },
+      "anchor_id": "DOC4_A2",
+      "plan_think": "The document seems to be related to an administrative case as it involves a dispute between an individual (Wang Mouqi) and an administrative body (Shijiazhuang Municipal Justice Bureau) over an administrative penalty. The summaries suggest that the case has gone through multiple levels of review, including a final rejection of a retrial application. Therefore, I will select the chunk that provides more details on the case background to confirm if it's indeed an administrative case.",
+      "info": {
+        "anchor_id": "DOC4_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。",
+        "text": "再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。"
+      },
+      "extract_think": "该段落明确提到这是一个关于行政处罚的案件，并且涉及到了再审申请，因此可以确认这是一个行政案件。没有提及刑事案件或执行案件的相关信息。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政案件",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政案件",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to be related to an administrative case as it involves a dispute between an individual (Wang Mouqi) and an administrative body (Shijiazhuang Municipal Justice Bureau) over an administrative penalty. The summaries suggest that the case has gone through multiple levels of review, including a final rejection of a retrial application. Therefore, I will select the chunk that provides more details on the case background to confirm if it's indeed an administrative case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。\", \"text\": \"再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。\"}</info>\n<think>该段落明确提到这是一个关于行政处罚的案件，并且涉及到了再审申请，因此可以确认这是一个行政案件。没有提及刑事案件或执行案件的相关信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to an administrative case as it involves a dispute between an individual (Wang Mouqi) and an administrative body (Shijiazhuang Municipal Justice Bureau) over an administrative penalty. The summaries suggest that the case has gone through multiple levels of review, including a final rejection of a retrial application. Therefore, I will select the chunk that provides more details on the case background to confirm if it's indeed an administrative case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。\", \"text\": \"再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。\"}</info>\n<think>该段落明确提到这是一个关于行政处罚的案件，并且涉及到了再审申请，因此可以确认这是一个行政案件。没有提及刑事案件或执行案件的相关信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

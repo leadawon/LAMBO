@@ -43,6 +43,11 @@ def parse_docs_bundle(raw_docs: str) -> List[Dict[str, str]]:
         normalized_content = content.replace(DOC_END, "").strip()
         if not normalized_title:
             continue
+        short_name_match = re.search(r"证券简称[:：]\s*([^\s|　]+)", normalized_content)
+        if short_name_match:
+            short_name = normalize_ws(short_name_match.group(1))
+            if short_name and short_name not in normalized_title:
+                normalized_title = f"{normalized_title} {short_name}"
         docs.append(
             {
                 "doc_id": f"DOC{index}",

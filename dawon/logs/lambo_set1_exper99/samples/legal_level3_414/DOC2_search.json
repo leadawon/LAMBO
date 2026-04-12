@@ -1,0 +1,83 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "task_mode": "clustering",
+  "think": "The document contains information related to criminal charges such as '职务侵占罪' (Occupational Embezzlement) and '合同诈骗罪' (Contract Fraud), indicating that it is a '刑事案件' (Criminal Case). I will select the first chunk to confirm the case type.",
+  "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC2_A1",
+  "candidate_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A5",
+    "DOC2_A6",
+    "DOC2_A1",
+    "DOC2_A2"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A5",
+    "DOC2_A6",
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A5",
+      "score": 32.708,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.71"
+      ],
+      "summary": "被告人徐某犯职务侵占罪，判处有期徒刑八年，并处罚金人民币二十万元；犯合同诈骗罪，判处有期徒刑十二年，并处罚金人民币十万元；决定执行有期徒刑十七年，并处罚金人民币三十万元。"
+    },
+    {
+      "anchor_id": "DOC2_A6",
+      "score": 32.554,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.55"
+      ],
+      "summary": "维持一审判决第二项，即责令被告人徐某退赔各被害人相应经济损失共计18270750元；撤销一审判决第一项，改判徐某犯职务侵占罪，判处有期徒刑八年，并处罚金人民币二十万元；犯合同诈骗罪，判处有期徒刑十一年，并处罚金人民币十万元；决定执行有期徒刑十五年，并处罚金人民币三十万元。"
+    },
+    {
+      "anchor_id": "DOC2_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "河北省雄县人民法院审理了雄县人民检察院指控原审被告人徐某犯职务侵占罪、合同诈骗罪一案，原审被告人徐某不服，提出上诉。"
+    },
+    {
+      "anchor_id": "DOC2_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "被告人徐某自2015年起任雄县某甲商贸有限公司销售人员，从事聚氯乙烯销售工作。2021年9月至11月期间，徐某利用职务便利，挪用公司货款用于炒期货、现货，导致公司损失10829750元。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书2》. First coordinate candidate is DOC2_A1.",
+  "raw_plan_text": "<think>The document contains information related to criminal charges such as '职务侵占罪' (Occupational Embezzlement) and '合同诈骗罪' (Contract Fraud), indicating that it is a '刑事案件' (Criminal Case). I will select the first chunk to confirm the case type.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC2_A1\",\"candidate_anchor_ids\":[\"DOC2_A1\",\"DOC2_A2\",\"DOC2_A3\",\"DOC2_A4\",\"DOC2_A5\",\"DOC2_A6\"]}</search>",
+  "tagged_trace": "<think>The document contains information related to criminal charges such as '职务侵占罪' (Occupational Embezzlement) and '合同诈骗罪' (Contract Fraud), indicating that it is a '刑事案件' (Criminal Case). I will select the first chunk to confirm the case type.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"next_anchor_id\": \"DOC2_A1\"}</search>"
+}

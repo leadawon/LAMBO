@@ -1,0 +1,67 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "selected_anchor_ids": [
+    "DOC8_A2"
+  ],
+  "final_current_query": "分类判决文书到给定的案由类别中",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到给定的案由类别中",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC8_A2",
+        "candidate_anchor_ids": [
+          "DOC8_A2",
+          "DOC8_A3",
+          "DOC8_A5"
+        ]
+      },
+      "anchor_id": "DOC8_A2",
+      "plan_think": "The current document seems to revolve around a government information disclosure case involving the Guangdong Provincial Public Security Department and an individual named Li Moumou. The case does not seem to fit into any of the provided categories directly based on the summaries. However, since the case involves administrative actions related to government information disclosure, it might be relevant to the category '行政行为-行政监督'. I will inspect the summary that provides more details on the nature of the dispute and the court's decision to determine if this classification is appropriate.",
+      "info": {
+        "anchor_id": "DOC8_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。黎某某于2022年10月11日申请公开《广东省公安厅关于农村派出所参与道路交通安全工作规范》文件，广东省公安厅在2022年12月6日作出了答复，提供了《工作规范（试行）》文件。",
+        "text": "上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。本院受理后依法组成合议庭进行了审理，本案现已审理终结。\n\n原审法院经审理查明：原告黎某某于2022年10月11日通过广东省政府信息依申请公开系统提交政府信息公开申请，申请公开名称为“《广东省公安厅关于农村派出所参与道路交通安全工作规范》”文件。2022年10月14日，被告向原告作出粤公政务公开〔2022〕XXX号《政府信息公开申请收件回执》，告知已于2022年10月11日收到原告提交的政府信息公开申请。2022年11月8日，被告作出粤公政务公开〔2022〕XXX号《政府信息公开申请延期答复告知书》，告知原告将延期作出答复。2022年12月6日，被告向原告作出粤公政务公开〔2022〕XXX号《政府信息公开申请答复书》（以下简称被诉《答复书》），载明：“……您申请公开的‘《农村派出所参与道路交通安全管理工作规范（试行）》（以下简称《工作规范（试行）》）’信息，本机关同意公开（见附件）。……”。同日，被告向原告邮寄该政府信息答复书及附件《工作规范（试行）》，原告不服，遂起诉至原审法院，请求：1.撤销被告作出被诉《答复书》；2.责令被告在判决生效五日内重新公开原告所需政府信息；3.诉讼费用由被告承担。庭审中，原告增加诉讼请求，请求对被诉答复附件《工作规范（试行）》文件进行合法性审查。"
+      },
+      "extract_think": "该文档涉及黎某某与广东省公安厅之间的政府信息公开案件，主要争议点在于黎某某要求公开特定文件而省公安厅作出了相应的答复。此案件属于行政行为范畴，特别是与政府信息公开相关的行政监督行为。因此，可以将该判决文书归类为'行政行为-行政监督'。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政监督",
+            "value": "《判决文书8》",
+            "normalized_value": "判决文书8",
+            "evidence_text": "上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。",
+            "source_doc_id": "DOC8",
+            "source_anchor_id": "DOC8_A2",
+            "confidence": 0.9
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政监督",
+      "value": "《判决文书8》",
+      "normalized_value": "判决文书8",
+      "evidence_text": "上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。",
+      "source_doc_id": "DOC8",
+      "source_anchor_id": "DOC8_A2",
+      "confidence": 0.9
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The current document seems to revolve around a government information disclosure case involving the Guangdong Provincial Public Security Department and an individual named Li Moumou. The case does not seem to fit into any of the provided categories directly based on the summaries. However, since the case involves administrative actions related to government information disclosure, it might be relevant to the category '行政行为-行政监督'. I will inspect the summary that provides more details on the nature of the dispute and the court's decision to determine if this classification is appropriate.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A2\", \"DOC8_A3\", \"DOC8_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。黎某某于2022年10月11日申请公开《广东省公安厅关于农村派出所参与道路交通安全工作规范》文件，广东省公安厅在2022年12月6日作出了答复，提供了《工作规范（试行）》文件。\", \"text\": \"上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。本院受理后依法组成合议庭进行了审理，本案现已审理终结。\\n\\n原审法院经审理查明：原告黎某某于2022年10月11日通过广东省政府信息依申请公开系统提交政府信息公开申请，申请公开名称为“《广东省公安厅关于农村派出所参与道路交通安全工作规范》”文件。2022年10月14日，被告向原告作出粤公政务公开〔2022〕XXX号《政府信息公开申请收件回执》，告知已于2022年10月11日收到原告提交的政府信息公开申请。2022年11月8日，被告作出粤公政务公开〔2022〕XXX号《政府信息公开申请延期答复告知书》，告知原告将延期作出答复。2022年12月6日，被告向原告作出粤公政务公开〔2022〕XXX号《政府信息公开申请答复书》（以下简称被诉《答复书》），载明：“……您申请公开的‘《农村派出所参与道路交通安全管理工作规范（试行）》（以下简称《工作规范（试行）》）’信息，本机关同意公开（见附件）。……”。同日，被告向原告邮寄该政府信息答复书及附件《工作规范（试行）》，原告不服，遂起诉至原审法院，请求：1.撤销被告作出被诉《答复书》；2.责令被告在判决生效五日内重新公开原告所需政府信息；3.诉讼费用由被告承担。庭审中，原告增加诉讼请求，请求对被诉答复附件《工作规范（试行）》文件进行合法性审查。\"}</info>\n<think>该文档涉及黎某某与广东省公安厅之间的政府信息公开案件，主要争议点在于黎某某要求公开特定文件而省公安厅作出了相应的答复。此案件属于行政行为范畴，特别是与政府信息公开相关的行政监督行为。因此，可以将该判决文书归类为'行政行为-行政监督'。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政监督\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document seems to revolve around a government information disclosure case involving the Guangdong Provincial Public Security Department and an individual named Li Moumou. The case does not seem to fit into any of the provided categories directly based on the summaries. However, since the case involves administrative actions related to government information disclosure, it might be relevant to the category '行政行为-行政监督'. I will inspect the summary that provides more details on the nature of the dispute and the court's decision to determine if this classification is appropriate.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A2\", \"DOC8_A3\", \"DOC8_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。黎某某于2022年10月11日申请公开《广东省公安厅关于农村派出所参与道路交通安全工作规范》文件，广东省公安厅在2022年12月6日作出了答复，提供了《工作规范（试行）》文件。\", \"text\": \"上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。本院受理后依法组成合议庭进行了审理，本案现已审理终结。\\n\\n原审法院经审理查明：原告黎某某于2022年10月11日通过广东省政府信息依申请公开系统提交政府信息公开申请，申请公开名称为“《广东省公安厅关于农村派出所参与道路交通安全工作规范》”文件。2022年10月14日，被告向原告作出粤公政务公开〔2022〕XXX号《政府信息公开申请收件回执》，告知已于2022年10月11日收到原告提交的政府信息公开申请。2022年11月8日，被告作出粤公政务公开〔2022〕XXX号《政府信息公开申请延期答复告知书》，告知原告将延期作出答复。2022年12月6日，被告向原告作出粤公政务公开〔2022〕XXX号《政府信息公开申请答复书》（以下简称被诉《答复书》），载明：“……您申请公开的‘《农村派出所参与道路交通安全管理工作规范（试行）》（以下简称《工作规范（试行）》）’信息，本机关同意公开（见附件）。……”。同日，被告向原告邮寄该政府信息答复书及附件《工作规范（试行）》，原告不服，遂起诉至原审法院，请求：1.撤销被告作出被诉《答复书》；2.责令被告在判决生效五日内重新公开原告所需政府信息；3.诉讼费用由被告承担。庭审中，原告增加诉讼请求，请求对被诉答复附件《工作规范（试行）》文件进行合法性审查。\"}</info>\n<think>该文档涉及黎某某与广东省公安厅之间的政府信息公开案件，主要争议点在于黎某某要求公开特定文件而省公安厅作出了相应的答复。此案件属于行政行为范畴，特别是与政府信息公开相关的行政监督行为。因此，可以将该判决文书归类为'行政行为-行政监督'。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政监督\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

@@ -1,0 +1,100 @@
+{
+  "doc_id": "DOC14",
+  "doc_title": "《判决文书14》",
+  "selected_anchor_ids": [
+    "DOC14_A1",
+    "DOC14_A2"
+  ],
+  "final_current_query": "查找案件的具体类型或类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC14_A1",
+        "candidate_anchor_ids": [
+          "DOC14_A1",
+          "DOC14_A2",
+          "DOC14_A3",
+          "DOC14_A4"
+        ]
+      },
+      "anchor_id": "DOC14_A1",
+      "plan_think": "The current document title is '《判决文书14》'. The case seems to be related to a motor vehicle traffic accident dispute, which does not directly match any of the six categories provided in the question. However, since the case involves a dispute over responsibility, it might fall under '侵权责任纠纷' (tort liability dispute). I will inspect the first chunk summary to confirm if there's any mention of the case type that could help classify this document.",
+      "info": {
+        "anchor_id": "DOC14_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "再审申请人魏春玲，被申请人王海龙和中国平安财产保险股份有限公司昌吉中心支公司的基本信息。",
+        "text": "再审申请人（一审被告、二审上诉人）：魏春玲，女，1971年2月28日出生，汉族，住新疆维吾尔自治区昌吉回族自治州昌吉市建国西路一品尚都4号楼1单元704室。\n\n被申请人（一审原告、二审被上诉人）：王海龙，男，1980年1月18日出生，汉族，住新疆维吾尔自治区昌吉回族自治州昌吉市中山路街道和谐丁香园11号楼2单元804室。\n\n被申请人（一审被告、二审被上诉人）：中国平安财产保险股份有限公司昌吉中心支公司，住所地新疆维吾尔自治区昌吉回族自治州昌吉市中山路77号曦隆枫叶广场B座13F、14F。\n\n负责人：王超，该公司总经理。"
+      },
+      "extract_think": "该段落提供了当事人的基本信息，但没有直接提到案件的具体类型或类别。因此，需要进一步查看其他部分以确定案件属于哪个类别。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "查找案件的具体类型或类别"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "查找案件的具体类型或类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC14_A2",
+        "candidate_anchor_ids": [
+          "DOC14_A2",
+          "DOC14_A3",
+          "DOC14_A4"
+        ]
+      },
+      "anchor_id": "DOC14_A2",
+      "plan_think": "在之前的检索中，我们了解到案件涉及机动车交通事故责任纠纷，这可能归类为'侵权责任纠纷'。为了确认这一点，我将检查包含案件背景的摘要，以获取更多关于案件类型的详细信息。",
+      "info": {
+        "anchor_id": "DOC14_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "魏春玲因机动车交通事故责任纠纷不服新疆维吾尔自治区昌吉回族自治州中级人民法院的民事判决，向本院申请再审。",
+        "text": "再审申请人魏春玲因与被申请人王海龙、中国平安财产保险股份有限公司昌吉中心支公司（以下简称平安财险昌吉支公司）机动车交通事故责任纠纷一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23民终2299号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。"
+      },
+      "extract_think": "该段落明确指出案件是关于机动车交通事故责任纠纷，这符合'侵权责任纠纷'类别。因此，可以将《判决文书14》归类到'侵权责任纠纷'类别中。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "侵权责任纠纷",
+            "value": "《判决文书14》",
+            "normalized_value": "判决文书14",
+            "evidence_text": "再审申请人魏春玲因与被申请人王海龙、中国平安财产保险股份有限公司昌吉中心支公司（以下简称平安财险昌吉支公司）机动车交通事故责任纠纷一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23民终2299号民事判决，向本院申请再审。",
+            "source_doc_id": "DOC14",
+            "source_anchor_id": "DOC14_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "侵权责任纠纷",
+      "value": "《判决文书14》",
+      "normalized_value": "判决文书14",
+      "evidence_text": "再审申请人魏春玲因与被申请人王海龙、中国平安财产保险股份有限公司昌吉中心支公司（以下简称平安财险昌吉支公司）机动车交通事故责任纠纷一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23民终2299号民事判决，向本院申请再审。",
+      "source_doc_id": "DOC14",
+      "source_anchor_id": "DOC14_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document title is '《判决文书14》'. The case seems to be related to a motor vehicle traffic accident dispute, which does not directly match any of the six categories provided in the question. However, since the case involves a dispute over responsibility, it might fall under '侵权责任纠纷' (tort liability dispute). I will inspect the first chunk summary to confirm if there's any mention of the case type that could help classify this document.</think>\n<search>{\"current_query\": \"分类判决文书\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC14_A1\", \"candidate_anchor_ids\": [\"DOC14_A1\", \"DOC14_A2\", \"DOC14_A3\", \"DOC14_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC14_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人魏春玲，被申请人王海龙和中国平安财产保险股份有限公司昌吉中心支公司的基本信息。\", \"text\": \"再审申请人（一审被告、二审上诉人）：魏春玲，女，1971年2月28日出生，汉族，住新疆维吾尔自治区昌吉回族自治州昌吉市建国西路一品尚都4号楼1单元704室。\\n\\n被申请人（一审原告、二审被上诉人）：王海龙，男，1980年1月18日出生，汉族，住新疆维吾尔自治区昌吉回族自治州昌吉市中山路街道和谐丁香园11号楼2单元804室。\\n\\n被申请人（一审被告、二审被上诉人）：中国平安财产保险股份有限公司昌吉中心支公司，住所地新疆维吾尔自治区昌吉回族自治州昌吉市中山路77号曦隆枫叶广场B座13F、14F。\\n\\n负责人：王超，该公司总经理。\"}</info>\n<think>该段落提供了当事人的基本信息，但没有直接提到案件的具体类型或类别。因此，需要进一步查看其他部分以确定案件属于哪个类别。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找案件的具体类型或类别\"}</retrieve>\n<think>在之前的检索中，我们了解到案件涉及机动车交通事故责任纠纷，这可能归类为'侵权责任纠纷'。为了确认这一点，我将检查包含案件背景的摘要，以获取更多关于案件类型的详细信息。</think>\n<search>{\"current_query\": \"查找案件的具体类型或类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC14_A2\", \"candidate_anchor_ids\": [\"DOC14_A2\", \"DOC14_A3\", \"DOC14_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC14_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"魏春玲因机动车交通事故责任纠纷不服新疆维吾尔自治区昌吉回族自治州中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人魏春玲因与被申请人王海龙、中国平安财产保险股份有限公司昌吉中心支公司（以下简称平安财险昌吉支公司）机动车交通事故责任纠纷一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23民终2299号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段落明确指出案件是关于机动车交通事故责任纠纷，这符合'侵权责任纠纷'类别。因此，可以将《判决文书14》归类到'侵权责任纠纷'类别中。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"侵权责任纠纷\", \"value\": \"《判决文书14》\", \"normalized_value\": \"判决文书14\", \"evidence_text\": \"再审申请人魏春玲因与被申请人王海龙、中国平安财产保险股份有限公司昌吉中心支公司（以下简称平安财险昌吉支公司）机动车交通事故责任纠纷一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23民终2299号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC14\", \"source_anchor_id\": \"DOC14_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document title is '《判决文书14》'. The case seems to be related to a motor vehicle traffic accident dispute, which does not directly match any of the six categories provided in the question. However, since the case involves a dispute over responsibility, it might fall under '侵权责任纠纷' (tort liability dispute). I will inspect the first chunk summary to confirm if there's any mention of the case type that could help classify this document.</think>\n<search>{\"current_query\": \"分类判决文书\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC14_A1\", \"candidate_anchor_ids\": [\"DOC14_A1\", \"DOC14_A2\", \"DOC14_A3\", \"DOC14_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC14_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人魏春玲，被申请人王海龙和中国平安财产保险股份有限公司昌吉中心支公司的基本信息。\", \"text\": \"再审申请人（一审被告、二审上诉人）：魏春玲，女，1971年2月28日出生，汉族，住新疆维吾尔自治区昌吉回族自治州昌吉市建国西路一品尚都4号楼1单元704室。\\n\\n被申请人（一审原告、二审被上诉人）：王海龙，男，1980年1月18日出生，汉族，住新疆维吾尔自治区昌吉回族自治州昌吉市中山路街道和谐丁香园11号楼2单元804室。\\n\\n被申请人（一审被告、二审被上诉人）：中国平安财产保险股份有限公司昌吉中心支公司，住所地新疆维吾尔自治区昌吉回族自治州昌吉市中山路77号曦隆枫叶广场B座13F、14F。\\n\\n负责人：王超，该公司总经理。\"}</info>\n<think>该段落提供了当事人的基本信息，但没有直接提到案件的具体类型或类别。因此，需要进一步查看其他部分以确定案件属于哪个类别。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找案件的具体类型或类别\"}</retrieve>\n<think>在之前的检索中，我们了解到案件涉及机动车交通事故责任纠纷，这可能归类为'侵权责任纠纷'。为了确认这一点，我将检查包含案件背景的摘要，以获取更多关于案件类型的详细信息。</think>\n<search>{\"current_query\": \"查找案件的具体类型或类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC14_A2\", \"candidate_anchor_ids\": [\"DOC14_A2\", \"DOC14_A3\", \"DOC14_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC14_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"魏春玲因机动车交通事故责任纠纷不服新疆维吾尔自治区昌吉回族自治州中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人魏春玲因与被申请人王海龙、中国平安财产保险股份有限公司昌吉中心支公司（以下简称平安财险昌吉支公司）机动车交通事故责任纠纷一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23民终2299号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段落明确指出案件是关于机动车交通事故责任纠纷，这符合'侵权责任纠纷'类别。因此，可以将《判决文书14》归类到'侵权责任纠纷'类别中。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"侵权责任纠纷\", \"value\": \"《判决文书14》\", \"normalized_value\": \"判决文书14\", \"evidence_text\": \"再审申请人魏春玲因与被申请人王海龙、中国平安财产保险股份有限公司昌吉中心支公司（以下简称平安财险昌吉支公司）机动车交通事故责任纠纷一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23民终2299号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC14\", \"source_anchor_id\": \"DOC14_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

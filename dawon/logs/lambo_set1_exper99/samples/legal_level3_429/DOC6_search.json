@@ -1,0 +1,65 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "task_mode": "clustering",
+  "think": "考虑到必须找到案件类别和文档到类别的分配，以及案件原因、处置或裁决的证据，我应该首先检查包含案件详情的段落，即DOC6_A2。",
+  "current_query": "阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC6_A2",
+  "candidate_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3"
+  ],
+  "ranked_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC6_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "再审申请人阿某某及其委托诉讼代理人，被申请人巴楚县农业农村局和巴楚县农村合作经济发展中心及其法定代表人、出庭负责人和委托诉讼代理人，以及原审第三人的信息。"
+    },
+    {
+      "anchor_id": "DOC6_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "再审申请人阿某某因土地承包经营权纠纷，对巴楚县农业农村局和巴楚县农村合作经济发展中心提起诉讼，并在审查过程中申请撤回再审申请。"
+    },
+    {
+      "anchor_id": "DOC6_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "法院依据《中华人民共和国行政诉讼法》第六十二条的规定，准许阿某某撤回再审申请。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书6》. First coordinate candidate is DOC6_A2.",
+  "raw_plan_text": "<think>考虑到必须找到案件类别和文档到类别的分配，以及案件原因、处置或裁决的证据，我应该首先检查包含案件详情的段落，即DOC6_A2。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC6_A2\",\"candidate_anchor_ids\":[\"DOC6_A1\",\"DOC6_A2\",\"DOC6_A3\"]}</search>",
+  "tagged_trace": "<think>考虑到必须找到案件类别和文档到类别的分配，以及案件原因、处置或裁决的证据，我应该首先检查包含案件详情的段落，即DOC6_A2。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\"], \"next_anchor_id\": \"DOC6_A2\"}</search>"
+}

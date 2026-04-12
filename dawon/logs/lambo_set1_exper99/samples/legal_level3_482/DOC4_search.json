@@ -1,0 +1,83 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "task_mode": "clustering",
+  "think": "The document title and summaries suggest that this case involves a dispute over real estate registration, which matches the '不动产登记纠纷' category. I will inspect the first anchor coordinate to confirm the details of the case and its classification.",
+  "current_query": "阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC4_A1",
+  "candidate_anchor_ids": [
+    "DOC4_A1",
+    "DOC4_A2",
+    "DOC4_A3",
+    "DOC4_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC4_A2",
+    "DOC4_A1",
+    "DOC4_A3",
+    "DOC4_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC4_A2",
+    "DOC4_A1",
+    "DOC4_A3",
+    "DOC4_A4",
+    "DOC4_A5",
+    "DOC4_A6",
+    "DOC4_A7"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC4_A2",
+      "score": 55.401,
+      "reasons": [
+        "query_overlap=2",
+        "quoted_hit=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "原告李生英与被告青海首宏置业投资有限公司因不动产登记纠纷一案，法院立案并公开审理。原告请求被告协助办理房屋权属证书。"
+    },
+    {
+      "anchor_id": "DOC4_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "原告李生英与被告青海首宏置业投资有限公司的基本信息。"
+    },
+    {
+      "anchor_id": "DOC4_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "被告辩称原告未交清房款且超过诉讼时效。"
+    },
+    {
+      "anchor_id": "DOC4_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "原告提交了声明、商品房买卖合同、收据等证据，被告提交了汇总表。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书4》. First coordinate candidate is DOC4_A1.",
+  "raw_plan_text": "<think>The document title and summaries suggest that this case involves a dispute over real estate registration, which matches the '不动产登记纠纷' category. I will inspect the first anchor coordinate to confirm the details of the case and its classification.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC4_A1\",\"candidate_anchor_ids\":[\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\", \"DOC4_A7\"]}</search>",
+  "tagged_trace": "<think>The document title and summaries suggest that this case involves a dispute over real estate registration, which matches the '不动产登记纠纷' category. I will inspect the first anchor coordinate to confirm the details of the case and its classification.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政受理': ['《判决文书a》', '《判决文书b》'], '知识产权与竞争': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"], \"next_anchor_id\": \"DOC4_A1\"}</search>"
+}

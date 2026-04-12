@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2"
+  ],
+  "final_current_query": "请查找包含案件具体案由或争议焦点的相关段落。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ]
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The document seems to involve a dispute over the change of an applicant in an execution case, which is related to a service contract dispute. This suggests that the document might fall under the category of '执行案由-民事'. I will inspect the first chunk to confirm if it indeed relates to a civil execution case.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。",
+        "text": "复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\n\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\n\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\n\n法定代表人：杨某，该公司总经理。\n\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。"
+      },
+      "extract_think": "该段落提供了案件中当事人的基本信息，但没有直接说明案件的具体类型或案由。因此，需要进一步查找文档中的其他部分来确定具体的案由。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "请查找包含案件具体案由或争议焦点的相关段落。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请查找包含案件具体案由或争议焦点的相关段落。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A2",
+        "candidate_anchor_ids": [
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5"
+        ]
+      },
+      "anchor_id": "DOC1_A2",
+      "plan_think": "上一轮检索表明，案件涉及服务合同纠纷以及申请执行人的变更请求，这符合“执行案由-民事”的描述。接下来应该检查DOC1_A2段落，以确认案件是否确实属于这一类别。",
+      "info": {
+        "anchor_id": "DOC1_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景及申请",
+        "summary": "宋某华因不服沈阳中院的执行裁定，申请复议。案件涉及服务合同纠纷，宋某华申请变更其为申请执行人。",
+        "text": "复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\n\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。"
+      },
+      "extract_think": "该段落明确提到案件涉及服务合同纠纷，并且宋某华申请变更其为申请执行人，这符合“执行案由-民事”的描述。因此，可以将《判决文书1》归类到“执行案由-民事”类别中。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案由-民事",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "执行案由-民事",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to involve a dispute over the change of an applicant in an execution case, which is related to a service contract dispute. This suggests that the document might fall under the category of '执行案由-民事'. I will inspect the first chunk to confirm if it indeed relates to a civil execution case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。\", \"text\": \"复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\\n\\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\\n\\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\\n\\n法定代表人：杨某，该公司总经理。\\n\\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\"}</info>\n<think>该段落提供了案件中当事人的基本信息，但没有直接说明案件的具体类型或案由。因此，需要进一步查找文档中的其他部分来确定具体的案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请查找包含案件具体案由或争议焦点的相关段落。\"}</retrieve>\n<think>上一轮检索表明，案件涉及服务合同纠纷以及申请执行人的变更请求，这符合“执行案由-民事”的描述。接下来应该检查DOC1_A2段落，以确认案件是否确实属于这一类别。</think>\n<search>{\"current_query\": \"请查找包含案件具体案由或争议焦点的相关段落。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景及申请\", \"summary\": \"宋某华因不服沈阳中院的执行裁定，申请复议。案件涉及服务合同纠纷，宋某华申请变更其为申请执行人。\", \"text\": \"复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\\n\\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\"}</info>\n<think>该段落明确提到案件涉及服务合同纠纷，并且宋某华申请变更其为申请执行人，这符合“执行案由-民事”的描述。因此，可以将《判决文书1》归类到“执行案由-民事”类别中。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-民事\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a dispute over the change of an applicant in an execution case, which is related to a service contract dispute. This suggests that the document might fall under the category of '执行案由-民事'. I will inspect the first chunk to confirm if it indeed relates to a civil execution case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。\", \"text\": \"复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\\n\\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\\n\\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\\n\\n法定代表人：杨某，该公司总经理。\\n\\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\"}</info>\n<think>该段落提供了案件中当事人的基本信息，但没有直接说明案件的具体类型或案由。因此，需要进一步查找文档中的其他部分来确定具体的案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请查找包含案件具体案由或争议焦点的相关段落。\"}</retrieve>\n<think>上一轮检索表明，案件涉及服务合同纠纷以及申请执行人的变更请求，这符合“执行案由-民事”的描述。接下来应该检查DOC1_A2段落，以确认案件是否确实属于这一类别。</think>\n<search>{\"current_query\": \"请查找包含案件具体案由或争议焦点的相关段落。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景及申请\", \"summary\": \"宋某华因不服沈阳中院的执行裁定，申请复议。案件涉及服务合同纠纷，宋某华申请变更其为申请执行人。\", \"text\": \"复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\\n\\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\"}</info>\n<think>该段落明确提到案件涉及服务合同纠纷，并且宋某华申请变更其为申请执行人，这符合“执行案由-民事”的描述。因此，可以将《判决文书1》归类到“执行案由-民事”类别中。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-民事\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

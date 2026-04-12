@@ -341,18 +341,20 @@ class RefineExtractor:
                 break
 
         if not aggregated_items:
-            fallback_anchor = anchor_by_id[selected_anchor_ids[0]] if selected_anchor_ids else next(iter(anchor_by_id.values()), {})
-            aggregated_items = [
-                {
-                    "answer_key": "candidate",
-                    "value": compact_text(fallback_anchor.get("text", ""), limit=160),
-                    "normalized_value": compact_text(fallback_anchor.get("text", ""), limit=160),
-                    "evidence_text": compact_text(fallback_anchor.get("text", ""), limit=200),
-                    "source_doc_id": doc_payload["doc_id"],
-                    "source_anchor_id": fallback_anchor.get("anchor_id", ""),
-                    "confidence": 0.15,
-                }
-            ]
+            topology = answer_topology_for_record(record)
+            if topology == "str":
+                fallback_anchor = anchor_by_id[selected_anchor_ids[0]] if selected_anchor_ids else next(iter(anchor_by_id.values()), {})
+                aggregated_items = [
+                    {
+                        "answer_key": "candidate",
+                        "value": compact_text(fallback_anchor.get("text", ""), limit=160),
+                        "normalized_value": compact_text(fallback_anchor.get("text", ""), limit=160),
+                        "evidence_text": compact_text(fallback_anchor.get("text", ""), limit=200),
+                        "source_doc_id": doc_payload["doc_id"],
+                        "source_anchor_id": fallback_anchor.get("anchor_id", ""),
+                        "confidence": 0.15,
+                    }
+                ]
 
         payload_out = {
             "doc_id": doc_payload["doc_id"],

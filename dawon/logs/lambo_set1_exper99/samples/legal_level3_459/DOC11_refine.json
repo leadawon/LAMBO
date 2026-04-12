@@ -1,0 +1,117 @@
+{
+  "doc_id": "DOC11",
+  "doc_title": "《判决文书11》",
+  "selected_anchor_ids": [
+    "DOC11_A1",
+    "DOC11_A2"
+  ],
+  "final_current_query": "确认案件是否属于'行政行为-行政复议'类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "案件分类查询",
+        "must_find": [
+          "案件类型"
+        ],
+        "next_anchor_id": "DOC11_A1",
+        "candidate_anchor_ids": [
+          "DOC11_A1",
+          "DOC11_A2",
+          "DOC11_A3",
+          "DOC11_A4"
+        ]
+      },
+      "anchor_id": "DOC11_A1",
+      "plan_think": "The document seems to involve a case where an entity (永新县麦点广告有限公司) is disputing an execution ruling made by the court, specifically regarding a penalty decision. This suggests that the case involves '行政行为-行政复议'. I will inspect the first chunk to confirm if it aligns with this category.",
+      "info": {
+        "anchor_id": "DOC11_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "复议申请人（被执行人）为永新县麦点广告有限公司，法定代表人为黄建华，委托诉讼代理人为陈庆胜。申请执行人为永新县市场监督管理局，负责人为刘晶明。",
+        "text": "复议申请人（被执行人）：永新县麦点广告有限公司，住所地江西省吉安市永新县老石油公司院内。统一社会信用代码91360830MA35KTA179。\n\n法定代表人：黄建华，系该公司执行董事。\n\n委托诉讼代理人：陈庆胜，江西奉和律师事务所律师。一般代理。"
+      },
+      "extract_think": "该段落提供了关于复议申请人（被执行人）的信息，即永新县麦点广告有限公司，并未直接提及具体的案件分类。然而，由于提到“复议申请人”，可以推测该案可能涉及“行政行为-行政复议”。需要进一步检查文档以确认。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政复议",
+            "value": "《判决文书11》",
+            "normalized_value": "判决文书11",
+            "evidence_text": "复议申请人（被执行人）：永新县麦点广告有限公司",
+            "source_doc_id": "DOC11",
+            "source_anchor_id": "DOC11_A1",
+            "confidence": 0.7
+          }
+        ],
+        "enough": false,
+        "followup_query": "确认案件是否属于'行政行为-行政复议'类别"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "确认案件是否属于'行政行为-行政复议'类别",
+        "must_find": [
+          "案件类型"
+        ],
+        "next_anchor_id": "DOC11_A2",
+        "candidate_anchor_ids": [
+          "DOC11_A2",
+          "DOC11_A3",
+          "DOC11_A4"
+        ]
+      },
+      "anchor_id": "DOC11_A2",
+      "plan_think": "已有证据表明该案件可能涉及“行政行为-行政复议”，但为了更准确地确认这一点，我将检查包含案件背景的段落，以获取更多关于案件性质的信息。",
+      "info": {
+        "anchor_id": "DOC11_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "永新县麦点广告有限公司因不服永新县人民法院（2023）赣0830执异2号执行裁定，向法院提出复议申请。",
+        "text": "申请执行人：永新县市场监督管理局，住所地江西省吉安市永新县禾川镇湘赣大道68号。统一社会信用代码113610303565614667。\n\n负责人：刘晶明，系该局局长。\n\n复议申请人永新县麦点广告有限公司不服永新县人民法院（2023）赣0830执异2号执行裁定，向本院提出复议申请。本院受理后，依法组成合议庭进行审查。现已审查终结。"
+      },
+      "extract_think": "该段落明确指出永新县麦点广告有限公司不服永新县人民法院的执行裁定并向法院提出了复议申请，这进一步证实了该案件属于“行政行为-行政复议”类别。因此，可以确认该判决文书属于此分类。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政复议",
+            "value": "《判决文书11》",
+            "normalized_value": "判决文书11",
+            "evidence_text": "复议申请人永新县麦点广告有限公司不服永新县人民法院（2023）赣0830执异2号执行裁定，向本院提出复议申请。",
+            "source_doc_id": "DOC11",
+            "source_anchor_id": "DOC11_A2",
+            "confidence": 0.9
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政复议",
+      "value": "《判决文书11》",
+      "normalized_value": "判决文书11",
+      "evidence_text": "复议申请人（被执行人）：永新县麦点广告有限公司",
+      "source_doc_id": "DOC11",
+      "source_anchor_id": "DOC11_A1",
+      "confidence": 0.7
+    },
+    {
+      "answer_key": "行政行为-行政复议",
+      "value": "《判决文书11》",
+      "normalized_value": "判决文书11",
+      "evidence_text": "复议申请人永新县麦点广告有限公司不服永新县人民法院（2023）赣0830执异2号执行裁定，向本院提出复议申请。",
+      "source_doc_id": "DOC11",
+      "source_anchor_id": "DOC11_A2",
+      "confidence": 0.9
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to involve a case where an entity (永新县麦点广告有限公司) is disputing an execution ruling made by the court, specifically regarding a penalty decision. This suggests that the case involves '行政行为-行政复议'. I will inspect the first chunk to confirm if it aligns with this category.</think>\n<search>{\"current_query\": \"案件分类查询\", \"must_find\": [\"案件类型\"], \"next_anchor_id\": \"DOC11_A1\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\", \"DOC11_A3\", \"DOC11_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人（被执行人）为永新县麦点广告有限公司，法定代表人为黄建华，委托诉讼代理人为陈庆胜。申请执行人为永新县市场监督管理局，负责人为刘晶明。\", \"text\": \"复议申请人（被执行人）：永新县麦点广告有限公司，住所地江西省吉安市永新县老石油公司院内。统一社会信用代码91360830MA35KTA179。\\n\\n法定代表人：黄建华，系该公司执行董事。\\n\\n委托诉讼代理人：陈庆胜，江西奉和律师事务所律师。一般代理。\"}</info>\n<think>该段落提供了关于复议申请人（被执行人）的信息，即永新县麦点广告有限公司，并未直接提及具体的案件分类。然而，由于提到“复议申请人”，可以推测该案可能涉及“行政行为-行政复议”。需要进一步检查文档以确认。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"复议申请人（被执行人）：永新县麦点广告有限公司\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A1\", \"confidence\": 0.7}], \"enough\": false, \"followup_query\": \"确认案件是否属于'行政行为-行政复议'类别\"}</retrieve>\n<think>已有证据表明该案件可能涉及“行政行为-行政复议”，但为了更准确地确认这一点，我将检查包含案件背景的段落，以获取更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"确认案件是否属于'行政行为-行政复议'类别\", \"must_find\": [\"案件类型\"], \"next_anchor_id\": \"DOC11_A2\", \"candidate_anchor_ids\": [\"DOC11_A2\", \"DOC11_A3\", \"DOC11_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"永新县麦点广告有限公司因不服永新县人民法院（2023）赣0830执异2号执行裁定，向法院提出复议申请。\", \"text\": \"申请执行人：永新县市场监督管理局，住所地江西省吉安市永新县禾川镇湘赣大道68号。统一社会信用代码113610303565614667。\\n\\n负责人：刘晶明，系该局局长。\\n\\n复议申请人永新县麦点广告有限公司不服永新县人民法院（2023）赣0830执异2号执行裁定，向本院提出复议申请。本院受理后，依法组成合议庭进行审查。现已审查终结。\"}</info>\n<think>该段落明确指出永新县麦点广告有限公司不服永新县人民法院的执行裁定并向法院提出了复议申请，这进一步证实了该案件属于“行政行为-行政复议”类别。因此，可以确认该判决文书属于此分类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"复议申请人永新县麦点广告有限公司不服永新县人民法院（2023）赣0830执异2号执行裁定，向本院提出复议申请。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A2\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a case where an entity (永新县麦点广告有限公司) is disputing an execution ruling made by the court, specifically regarding a penalty decision. This suggests that the case involves '行政行为-行政复议'. I will inspect the first chunk to confirm if it aligns with this category.</think>\n<search>{\"current_query\": \"案件分类查询\", \"must_find\": [\"案件类型\"], \"next_anchor_id\": \"DOC11_A1\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\", \"DOC11_A3\", \"DOC11_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人（被执行人）为永新县麦点广告有限公司，法定代表人为黄建华，委托诉讼代理人为陈庆胜。申请执行人为永新县市场监督管理局，负责人为刘晶明。\", \"text\": \"复议申请人（被执行人）：永新县麦点广告有限公司，住所地江西省吉安市永新县老石油公司院内。统一社会信用代码91360830MA35KTA179。\\n\\n法定代表人：黄建华，系该公司执行董事。\\n\\n委托诉讼代理人：陈庆胜，江西奉和律师事务所律师。一般代理。\"}</info>\n<think>该段落提供了关于复议申请人（被执行人）的信息，即永新县麦点广告有限公司，并未直接提及具体的案件分类。然而，由于提到“复议申请人”，可以推测该案可能涉及“行政行为-行政复议”。需要进一步检查文档以确认。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"复议申请人（被执行人）：永新县麦点广告有限公司\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A1\", \"confidence\": 0.7}], \"enough\": false, \"followup_query\": \"确认案件是否属于'行政行为-行政复议'类别\"}</retrieve>\n<think>已有证据表明该案件可能涉及“行政行为-行政复议”，但为了更准确地确认这一点，我将检查包含案件背景的段落，以获取更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"确认案件是否属于'行政行为-行政复议'类别\", \"must_find\": [\"案件类型\"], \"next_anchor_id\": \"DOC11_A2\", \"candidate_anchor_ids\": [\"DOC11_A2\", \"DOC11_A3\", \"DOC11_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"永新县麦点广告有限公司因不服永新县人民法院（2023）赣0830执异2号执行裁定，向法院提出复议申请。\", \"text\": \"申请执行人：永新县市场监督管理局，住所地江西省吉安市永新县禾川镇湘赣大道68号。统一社会信用代码113610303565614667。\\n\\n负责人：刘晶明，系该局局长。\\n\\n复议申请人永新县麦点广告有限公司不服永新县人民法院（2023）赣0830执异2号执行裁定，向本院提出复议申请。本院受理后，依法组成合议庭进行审查。现已审查终结。\"}</info>\n<think>该段落明确指出永新县麦点广告有限公司不服永新县人民法院的执行裁定并向法院提出了复议申请，这进一步证实了该案件属于“行政行为-行政复议”类别。因此，可以确认该判决文书属于此分类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"复议申请人永新县麦点广告有限公司不服永新县人民法院（2023）赣0830执异2号执行裁定，向本院提出复议申请。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A2\", \"confidence\": 0.9}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

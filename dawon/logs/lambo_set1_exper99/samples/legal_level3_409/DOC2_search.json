@@ -1,0 +1,83 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "task_mode": "clustering",
+  "think": "The document seems to be related to a case where a company (宁某公司) is being penalized for misusing maintenance funds. The document mentions penalties, fines, and enforcement actions, indicating that it might fall under the '执行案件' category. I will inspect the first chunk (DOC2_A1) to confirm if it's an execution case and to gather more context.",
+  "current_query": "阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC2_A1",
+  "candidate_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A5",
+    "DOC2_A6",
+    "DOC2_A1",
+    "DOC2_A2"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A5",
+    "DOC2_A6",
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A5",
+      "score": 32.708,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.71"
+      ],
+      "summary": "法院查明，西吉城管执法局作出西城（执）罚字［2022］（003）号《行政处罚决定书》，决定处罚挪用的专项维修资金1899008.82元1倍的罚款即1899008.82元。宁某公司未在法定期限内申请复议或提起诉讼，也未缴纳罚款。西吉县法院作出（2023）宁0422行审17号行政裁定书，裁定准予强制执行。"
+    },
+    {
+      "anchor_id": "DOC2_A6",
+      "score": 32.554,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.55"
+      ],
+      "summary": "法院认为，西吉县法院（2023）宁0422执821号《执行通知书》和（2023）宁0422执异5号执行裁定书符合法律规定，驳回宁某公司复议申请，维持原裁定。"
+    },
+    {
+      "anchor_id": "DOC2_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "复议申请人（被执行人）宁某公司，法定代表人高某某。申请执行人西吉县城市管理综合执法局，负责人张某某，委托诉讼代理人王某某。"
+    },
+    {
+      "anchor_id": "DOC2_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "宁某公司不服西吉县法院作出的（2023）宁0422执异5号执行裁定书，向本院申请复议。西吉县法院查明，西吉城管执法局作出西城（执）罚字［2022］（003）号行政处罚决定书，决定对宁某公司处罚挪用的专项维修资金1899008.82元1倍的罚款1899008.82元。罚款的履行期限及方式：当事人应当自接到本处罚决定书之日起15日内，携带本处罚决定书到中国..."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书2》. First coordinate candidate is DOC2_A1.",
+  "raw_plan_text": "<think>The document seems to be related to a case where a company (宁某公司) is being penalized for misusing maintenance funds. The document mentions penalties, fines, and enforcement actions, indicating that it might fall under the '执行案件' category. I will inspect the first chunk (DOC2_A1) to confirm if it's an execution case and to gather more context.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC2_A1\",\"candidate_anchor_ids\":[\"DOC2_A1\",\"DOC2_A2\",\"DOC2_A3\",\"DOC2_A4\",\"DOC2_A5\",\"DOC2_A6\"]}</search>",
+  "tagged_trace": "<think>The document seems to be related to a case where a company (宁某公司) is being penalized for misusing maintenance funds. The document mentions penalties, fines, and enforcement actions, indicating that it might fall under the '执行案件' category. I will inspect the first chunk (DOC2_A1) to confirm if it's an execution case and to gather more context.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"next_anchor_id\": \"DOC2_A1\"}</search>"
+}

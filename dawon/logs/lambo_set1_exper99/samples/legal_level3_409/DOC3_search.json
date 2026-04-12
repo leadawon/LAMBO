@@ -1,0 +1,82 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The document seems to be related to an execution case as it discusses the lifting of consumption restrictions on a person due to their status as a legal representative of a company and the payment of fines. I will inspect the first chunk to confirm if this is indeed an execution case.",
+  "current_query": "阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A1",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A5",
+    "DOC3_A6",
+    "DOC3_A7"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "列出了复议申请人游某俤及其他被执行人的基本信息，包括姓名、性别、出生日期、住址以及相关公司的法定代表人等。"
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "复议申请人游某俤因不服福州中院的执行决定，申请撤销限制消费措施，理由是其个人罚金已缴纳完毕，且不再是武汉某某实业有限公司的法定代表人。"
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "福州中院查明了被执行人未履行生效法律文书所确定的财产刑义务的情况，以及武汉某某实业有限公司法定代表人的变更情况。"
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "福州中院认为游某俤未能提供证据证明其并非单位的实际控制人或影响债务履行的直接责任人员，因此驳回了其解除限制消费令的申请。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A1.",
+  "raw_plan_text": "<think>The document seems to be related to an execution case as it discusses the lifting of consumption restrictions on a person due to their status as a legal representative of a company and the payment of fines. I will inspect the first chunk to confirm if this is indeed an execution case.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A1\",\"candidate_anchor_ids\":[\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A7\"]}</search>",
+  "tagged_trace": "<think>The document seems to be related to an execution case as it discusses the lifting of consumption restrictions on a person due to their status as a legal representative of a company and the payment of fines. I will inspect the first chunk to confirm if this is indeed an execution case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A1\"}</search>"
+}

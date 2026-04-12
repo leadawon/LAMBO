@@ -1,0 +1,79 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "task_mode": "clustering",
+  "think": "The document seems to be related to a case involving execution and bankruptcy review, which falls under the category of '执行案由-民事'. I will inspect the first anchor coordinate to confirm this.",
+  "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC6_A1",
+  "candidate_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3",
+    "DOC6_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3",
+    "DOC6_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3",
+    "DOC6_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC6_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "申诉人（申请执行人）是某有限公司，法定代表人是翟某，委托诉讼代理人是谈小顺。被执行人是某某有限公司，诉讼代表人是陈某。"
+    },
+    {
+      "anchor_id": "DOC6_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "某有限公司因某某有限公司未履行生效法律文书确定的义务，向浙江省舟山市中级人民法院申请强制执行。舟山中院在执行过程中，因被执行人未履行义务，裁定冻结其仓储收入，并决定将其移送破产审查。某有限公司对终结本次执行程序的裁定提出异议，但被驳回。"
+    },
+    {
+      "anchor_id": "DOC6_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "某有限公司不服舟山中院的异议裁定，向浙江高院申请复议，认为预重整期间不应中止执行，且其具备单独受偿条件。浙江高院审查后认为，舟山中院在案件移送破产审查后，对本案终结本次执行程序符合法律规定，驳回了某有限公司的复议请求。"
+    },
+    {
+      "anchor_id": "DOC6_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "某有限公司不服浙江高院的复议裁定，向最高人民法院申诉，请求从已扣划的仓储收入中给付其部分款项。最高人民法院认为，扣划款项应纳入破产程序中统一分配，驳回了某有限公司的申诉请求。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书6》. First coordinate candidate is DOC6_A1.",
+  "raw_plan_text": "<think>The document seems to be related to a case involving execution and bankruptcy review, which falls under the category of '执行案由-民事'. I will inspect the first anchor coordinate to confirm this.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC6_A1\",\"candidate_anchor_ids\":[\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\"]}</search>",
+  "tagged_trace": "<think>The document seems to be related to a case involving execution and bankruptcy review, which falls under the category of '执行案由-民事'. I will inspect the first anchor coordinate to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\"], \"next_anchor_id\": \"DOC6_A1\"}</search>"
+}

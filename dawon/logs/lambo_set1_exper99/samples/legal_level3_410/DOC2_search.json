@@ -1,0 +1,81 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "task_mode": "clustering",
+  "think": "考虑到必须找到的信息包括案件类别及其对应的文档分配，以及案件的原因、处理或裁决证据，我应该选择一个包含案件类型信息的坐标。DOC2_A2提到了案件背景，可能包含了案件类型的线索。",
+  "current_query": "阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC2_A2",
+  "candidate_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4",
+    "DOC2_A5",
+    "DOC2_A6"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "再审申请人赵某甲，男，1992年5月9日出生，住新疆维吾尔自治区乌鲁木齐市头屯河区。再审被申请人乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市团结路966号。法定代表人金宝，该分局局长。委托诉讼代理人刘某，男，乌鲁木齐市公安局天山区分局法制大队民警。委托诉讼代理人汤某，男，乌鲁木齐市公安局天山区分局碱泉街派出所民警。"
+    },
+    {
+      "anchor_id": "DOC2_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "再审申请人赵某因其诉被申请人乌鲁木齐市公安局天山区分局（以下简称天山区分局）行政拘留及罚款一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院作出的（2023）新01行终216号行政裁定，向本院申请再审。本院受理后依法组成合议庭对本案进行了审查，现已审查终结。"
+    },
+    {
+      "anchor_id": "DOC2_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "赵某甲申请再审称，一、案外人赵某乙、赵某丙联合进行婚恋诈骗，骗取其钱财。申请人未对案外人进行骚扰，只是去向其讨要被骗取的钱财。天山区分局徇私枉法未依法追究上述人员责任。二、因疫情期间耽误起诉时间，且申请人并不知晓提起行政诉讼有起诉期限的规定，原审法院认为申请人提起本案诉讼超过起诉期限的认定错误。据此，请求依法再审本案。"
+    },
+    {
+      "anchor_id": "DOC2_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "天山区分局辩称，案件相关事实有赵某甲本人供述、赵某甲笔录、抓获经过、现场照片等证据予以证实，根据《中华人民共和国治安管理处罚法》第二十六条第四项规定，对其作出行政拘留十五日并罚款1,000元的处罚决定，事实清楚、程序合法、适用法律正确。案涉处罚决定作出和送达时间均为2020年1月，赵某甲于2023年5月5日提起行政诉讼已超过法定起诉期限，请求依法驳回其..."
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书2》. First coordinate candidate is DOC2_A2.",
+  "raw_plan_text": "<think>考虑到必须找到的信息包括案件类别及其对应的文档分配，以及案件的原因、处理或裁决证据，我应该选择一个包含案件类型信息的坐标。DOC2_A2提到了案件背景，可能包含了案件类型的线索。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC2_A2\",\"candidate_anchor_ids\":[\"DOC2_A1\",\"DOC2_A2\",\"DOC2_A3\",\"DOC2_A4\",\"DOC2_A5\",\"DOC2_A6\"]}</search>",
+  "tagged_trace": "<think>考虑到必须找到的信息包括案件类别及其对应的文档分配，以及案件的原因、处理或裁决证据，我应该选择一个包含案件类型信息的坐标。DOC2_A2提到了案件背景，可能包含了案件类型的线索。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"next_anchor_id\": \"DOC2_A2\"}</search>"
+}

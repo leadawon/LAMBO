@@ -1,0 +1,100 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "selected_anchor_ids": [
+    "DOC10_A1",
+    "DOC10_A2"
+  ],
+  "final_current_query": "请提供有关案件性质或案由的信息。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A1",
+        "candidate_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC10_A1",
+      "plan_think": "The document title and summaries suggest that this case involves a company dissolution dispute, which falls under civil cases. I will confirm this by inspecting the first chunk, DOC10_A1, which contains party information.",
+      "info": {
+        "anchor_id": "DOC10_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "再审申请人周某和黄某某，共同委托诉讼代理人黄楠和周佳睿，被申请人新疆某某汽车销售有限公司及其法定代表人赵某某，原审第三人赵某某的基本信息。",
+        "text": "再审申请人（一审原告、二审上诉人）：周某，女，1979年2月4日出生，住新疆维吾尔自治区乌鲁木齐市沙依巴克区。\n\n再审申请人（一审原告、二审上诉人）：黄某某，男，1988年11月12日出生，住新疆维吾尔自治区乌鲁木齐市新市区。\n\n二再审申请人共同委托诉讼代理人：黄楠，泰和泰（乌鲁木齐）律师事务所律师。\n\n二再审申请人共同委托诉讼代理人：周佳睿，泰和泰（乌鲁木齐）律师事务所律师。\n\n被申请人（一审被告、二审被上诉人）：新疆某某汽车销售有限公司，住所地新疆维吾尔自治区乌鲁木齐市新市区。\n\n法定代表人：赵某某，该公司执行董事兼总经理。\n\n原审第三人：赵某某，女，1981年3月21日出生，住新疆维吾尔自治区乌鲁木齐市新市区。"
+      },
+      "extract_think": "该段落提供了当事人的基本信息，但没有直接说明案件类型。需要进一步查看其他部分来确定案件的具体类型。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "请提供有关案件性质或案由的信息。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请提供有关案件性质或案由的信息。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A2",
+        "candidate_anchor_ids": [
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC10_A2",
+      "plan_think": "接下来应该检查包含案件背景的段落，即DOC10_A2，以确认案件的具体类型。",
+      "info": {
+        "anchor_id": "DOC10_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司及原审第三人赵某某的公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向法院申请再审。",
+        "text": "再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司（以下简称某某公司）及原审第三人赵某某公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终2635号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。"
+      },
+      "extract_think": "该段落明确指出这是一个关于公司解散纠纷的案件，并且提到了“民事判决”，因此可以确定这是一个民事案件。现在有足够的信息来分类这个文档。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书10》",
+            "normalized_value": "判决文书10",
+            "evidence_text": "再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司及原审第三人赵某某的公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向法院申请再审。",
+            "source_doc_id": "DOC10",
+            "source_anchor_id": "DOC10_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书10》",
+      "normalized_value": "判决文书10",
+      "evidence_text": "再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司及原审第三人赵某某的公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向法院申请再审。",
+      "source_doc_id": "DOC10",
+      "source_anchor_id": "DOC10_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document title and summaries suggest that this case involves a company dissolution dispute, which falls under civil cases. I will confirm this by inspecting the first chunk, DOC10_A1, which contains party information.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人周某和黄某某，共同委托诉讼代理人黄楠和周佳睿，被申请人新疆某某汽车销售有限公司及其法定代表人赵某某，原审第三人赵某某的基本信息。\", \"text\": \"再审申请人（一审原告、二审上诉人）：周某，女，1979年2月4日出生，住新疆维吾尔自治区乌鲁木齐市沙依巴克区。\\n\\n再审申请人（一审原告、二审上诉人）：黄某某，男，1988年11月12日出生，住新疆维吾尔自治区乌鲁木齐市新市区。\\n\\n二再审申请人共同委托诉讼代理人：黄楠，泰和泰（乌鲁木齐）律师事务所律师。\\n\\n二再审申请人共同委托诉讼代理人：周佳睿，泰和泰（乌鲁木齐）律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：新疆某某汽车销售有限公司，住所地新疆维吾尔自治区乌鲁木齐市新市区。\\n\\n法定代表人：赵某某，该公司执行董事兼总经理。\\n\\n原审第三人：赵某某，女，1981年3月21日出生，住新疆维吾尔自治区乌鲁木齐市新市区。\"}</info>\n<think>该段落提供了当事人的基本信息，但没有直接说明案件类型。需要进一步查看其他部分来确定案件的具体类型。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供有关案件性质或案由的信息。\"}</retrieve>\n<think>接下来应该检查包含案件背景的段落，即DOC10_A2，以确认案件的具体类型。</think>\n<search>{\"current_query\": \"请提供有关案件性质或案由的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司及原审第三人赵某某的公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向法院申请再审。\", \"text\": \"再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司（以下简称某某公司）及原审第三人赵某某公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终2635号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段落明确指出这是一个关于公司解散纠纷的案件，并且提到了“民事判决”，因此可以确定这是一个民事案件。现在有足够的信息来分类这个文档。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书10》\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司及原审第三人赵某某的公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向法院申请再审。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title and summaries suggest that this case involves a company dissolution dispute, which falls under civil cases. I will confirm this by inspecting the first chunk, DOC10_A1, which contains party information.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"再审申请人周某和黄某某，共同委托诉讼代理人黄楠和周佳睿，被申请人新疆某某汽车销售有限公司及其法定代表人赵某某，原审第三人赵某某的基本信息。\", \"text\": \"再审申请人（一审原告、二审上诉人）：周某，女，1979年2月4日出生，住新疆维吾尔自治区乌鲁木齐市沙依巴克区。\\n\\n再审申请人（一审原告、二审上诉人）：黄某某，男，1988年11月12日出生，住新疆维吾尔自治区乌鲁木齐市新市区。\\n\\n二再审申请人共同委托诉讼代理人：黄楠，泰和泰（乌鲁木齐）律师事务所律师。\\n\\n二再审申请人共同委托诉讼代理人：周佳睿，泰和泰（乌鲁木齐）律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：新疆某某汽车销售有限公司，住所地新疆维吾尔自治区乌鲁木齐市新市区。\\n\\n法定代表人：赵某某，该公司执行董事兼总经理。\\n\\n原审第三人：赵某某，女，1981年3月21日出生，住新疆维吾尔自治区乌鲁木齐市新市区。\"}</info>\n<think>该段落提供了当事人的基本信息，但没有直接说明案件类型。需要进一步查看其他部分来确定案件的具体类型。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供有关案件性质或案由的信息。\"}</retrieve>\n<think>接下来应该检查包含案件背景的段落，即DOC10_A2，以确认案件的具体类型。</think>\n<search>{\"current_query\": \"请提供有关案件性质或案由的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司及原审第三人赵某某的公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向法院申请再审。\", \"text\": \"再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司（以下简称某某公司）及原审第三人赵某某公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终2635号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段落明确指出这是一个关于公司解散纠纷的案件，并且提到了“民事判决”，因此可以确定这是一个民事案件。现在有足够的信息来分类这个文档。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书10》\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司及原审第三人赵某某的公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向法院申请再审。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

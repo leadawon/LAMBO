@@ -1,0 +1,82 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "task_mode": "clustering",
+  "think": "The document appears to be a civil case involving property damage compensation disputes between individuals and a company. I will inspect the first chunk (DOC5_A1) to confirm the type of case and the parties involved.",
+  "current_query": "阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC5_A1",
+  "candidate_anchor_ids": [
+    "DOC5_A1",
+    "DOC5_A2",
+    "DOC5_A3",
+    "DOC5_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC5_A1",
+    "DOC5_A2",
+    "DOC5_A3",
+    "DOC5_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC5_A1",
+    "DOC5_A2",
+    "DOC5_A3",
+    "DOC5_A4",
+    "DOC5_A5",
+    "DOC5_A6",
+    "DOC5_A7"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC5_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "上诉人（原审原告）王某某及其委托诉讼代理人范晓，上诉人（原审被告）庞某某，被上诉人（原审被告）甲公司及其法定代表人陆某。"
+    },
+    {
+      "anchor_id": "DOC5_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "上诉人王某某、庞某某因与被上诉人甲公司财产损害赔偿纠纷一案，不服杭州市上城区人民法院民事判决，向本院提起上诉。王某某一审的诉讼请求为返还所有物品或赔偿损失。原审判决认定甲公司与庞某某之间的租赁关系解除，庞某某需腾退房屋并交付甲公司，甲公司取得房屋内设备的所有权。王某某提交了销货清单及收据，证明物品为其所有。"
+    },
+    {
+      "anchor_id": "DOC5_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "宣判后，王某某、庞某某均不服，向本院提起上诉。"
+    },
+    {
+      "anchor_id": "DOC5_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "王某某上诉请求撤销原审判决，改判支持其一审诉讼请求。庞某某上诉请求撤销原审判决，改判驳回王某某一审的诉讼请求。双方对对方的上诉意见进行了答辩。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书5》. First coordinate candidate is DOC5_A1.",
+  "raw_plan_text": "<think>The document appears to be a civil case involving property damage compensation disputes between individuals and a company. I will inspect the first chunk (DOC5_A1) to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC5_A1\",\"candidate_anchor_ids\":[\"DOC5_A1\",\"DOC5_A2\",\"DOC5_A3\",\"DOC5_A4\",\"DOC5_A5\",\"DOC5_A6\",\"DOC5_A7\"]}</search>",
+  "tagged_trace": "<think>The document appears to be a civil case involving property damage compensation disputes between individuals and a company. I will inspect the first chunk (DOC5_A1) to confirm the type of case and the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"next_anchor_id\": \"DOC5_A1\"}</search>"
+}

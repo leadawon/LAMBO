@@ -1,0 +1,12 @@
+{
+  "id": "fe98fb70-df2b-472e-bc56-d87a34130c33",
+  "selected_index": 1059,
+  "sample_id": "financial_level2_1059",
+  "record_type": "financial",
+  "level": 2,
+  "error_kind": "error",
+  "error_type": "RuntimeError",
+  "error_message": "OpenAI-compatible backend call failed: status=400 body={\"error\":{\"message\":\"This model's maximum context length is 32768 tokens. However, you requested 3000 output tokens and your prompt contains at least 29769 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=29769)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/LAMBO/dawon/anchor/backend.py\", line 75, in generate\n    response.raise_for_status()\n  File \"/workspace/venvs/ragteamvenv/lib/python3.10/site-packages/requests/models.py\", line 1028, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http://127.0.0.1:1225/v1/chat/completions\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/LAMBO/dawon/anchor/run_lambo_set1.py\", line 304, in main\n    anchor_payload = anchor_agent.run(record=record, sample_dir=sample_dir, force=args.force)\n  File \"/workspace/LAMBO/dawon/anchor/anchor_agent.py\", line 292, in run\n    anchors = self._anchor_doc_with_llm(record=record, doc=doc, units=units)\n  File \"/workspace/LAMBO/dawon/anchor/anchor_agent.py\", line 219, in _anchor_doc_with_llm\n    raw_text = self.llm.generate_text(\n  File \"/workspace/LAMBO/dawon/anchor/backend.py\", line 215, in generate_text\n    return self.backend.generate(\n  File \"/workspace/LAMBO/dawon/anchor/backend.py\", line 78, in generate\n    raise RuntimeError(\nRuntimeError: OpenAI-compatible backend call failed: status=400 body={\"error\":{\"message\":\"This model's maximum context length is 32768 tokens. However, you requested 3000 output tokens and your prompt contains at least 29769 input tokens, for a total of at least 32769 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=29769)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}\n",
+  "lambo_trace_dir": "/workspace/LAMBO/dawon/logs/lambo_set1_exper99/samples/financial_level2_1059"
+}

@@ -1,0 +1,37 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "task_mode": "clustering",
+  "think": "The summary indicates that the document is related to a criminal case due to the mention of \"刑事判决\" (criminal judgment). Therefore, I will select the current anchor to confirm the category of the document.",
+  "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC1_A1",
+  "candidate_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "王建华因不服抚顺市望花区人民法院的刑事判决，提出申诉，认为原判认定事实不清，证据不足，程序违法，适用法律错误。法院审查后认为，原判认定受贿事实有充分证据支持，程序合法，适用法律正确，驳回了申诉。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书1》. First coordinate candidate is DOC1_A1.",
+  "raw_plan_text": "<think>The summary indicates that the document is related to a criminal case due to the mention of \"刑事判决\" (criminal judgment). Therefore, I will select the current anchor to confirm the category of the document.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC1_A1\",\"candidate_anchor_ids\":[\"DOC1_A1\"]}</search>",
+  "tagged_trace": "<think>The summary indicates that the document is related to a criminal case due to the mention of \"刑事判决\" (criminal judgment). Therefore, I will select the current anchor to confirm the category of the document.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC1_A1\"], \"next_anchor_id\": \"DOC1_A1\"}</search>"
+}

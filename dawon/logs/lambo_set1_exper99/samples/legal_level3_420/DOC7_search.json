@@ -1,0 +1,80 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "task_mode": "clustering",
+  "think": "The document appears to involve a dispute over inheritance, which suggests it might fall under the category of '民事案件' (civil cases). I will inspect the first chunk to confirm if this is indeed a civil case and to gather more context.",
+  "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC7_A1",
+  "candidate_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4",
+    "DOC7_A5"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC7_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "原告包括孙某和李某1，共同委托诉讼代理人李某5和张某。被告包括陈某、李某和李某3，其中陈某和李某共同委托诉讼代理人黄某。"
+    },
+    {
+      "anchor_id": "DOC7_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "原告孙某和李某1与被告陈某、李某2、李某3之间的继承纠纷案已经经过一审和二审，最终判决被继承人李某4名下的房屋由各继承人按比例享有份额。二审判决生效后，被告未配合原告办理过户手续。"
+    },
+    {
+      "anchor_id": "DOC7_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "证据包括某某号民事判决书、某某号民事判决书及当事人庭审陈述。"
+    },
+    {
+      "anchor_id": "DOC7_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "法院判决被告应协助原告办理房屋过户手续，但驳回了原告要求被告支付案件受理费的请求。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书7》. First coordinate candidate is DOC7_A1.",
+  "raw_plan_text": "<think>The document appears to involve a dispute over inheritance, which suggests it might fall under the category of '民事案件' (civil cases). I will inspect the first chunk to confirm if this is indeed a civil case and to gather more context.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC7_A1\",\"candidate_anchor_ids\":[\"DOC7_A1\",\"DOC7_A2\",\"DOC7_A3\",\"DOC7_A4\",\"DOC7_A5\"]}</search>",
+  "tagged_trace": "<think>The document appears to involve a dispute over inheritance, which suggests it might fall under the category of '民事案件' (civil cases). I will inspect the first chunk to confirm if this is indeed a civil case and to gather more context.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"next_anchor_id\": \"DOC7_A1\"}</search>"
+}

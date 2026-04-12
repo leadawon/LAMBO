@@ -1,0 +1,80 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "task_mode": "clustering",
+  "think": "The document seems to involve a dispute over the execution of a court decision, with a village committee applying for a review against an execution ruling. This suggests that the case falls under the '执行案件' (execution cases) category. I will inspect the first chunk to confirm the type of case and gather more context.",
+  "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC1_A1",
+  "candidate_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4",
+    "DOC1_A5"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。"
+    },
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "大山村委会对大连海事法院的执行裁定不服，申请复议，请求解除对专项和他人所有资金的冻结，并要求执行回转。刘广东则认为大山村委会的异议没有事实和法律依据。"
+    },
+    {
+      "anchor_id": "DOC1_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "大连海事法院查明，冻结并扣划了大山村委会银行账户内的存款149058.82元，大山村委会未能提供证据证明这些资金为专项资金或他人所有，因此驳回了大山村委会的异议请求。"
+    },
+    {
+      "anchor_id": "DOC1_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "大山村委会申请复议，请求撤销大连海事法院的异议裁定，但未能提供证据证明案涉银行账户为专用存款账户，因此复议被驳回。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书1》. First coordinate candidate is DOC1_A1.",
+  "raw_plan_text": "<think>The document seems to involve a dispute over the execution of a court decision, with a village committee applying for a review against an execution ruling. This suggests that the case falls under the '执行案件' (execution cases) category. I will inspect the first chunk to confirm the type of case and gather more context.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC1_A1\",\"candidate_anchor_ids\":[\"DOC1_A1\",\"DOC1_A2\",\"DOC1_A3\",\"DOC1_A4\",\"DOC1_A5\"]}</search>",
+  "tagged_trace": "<think>The document seems to involve a dispute over the execution of a court decision, with a village committee applying for a review against an execution ruling. This suggests that the case falls under the '执行案件' (execution cases) category. I will inspect the first chunk to confirm the type of case and gather more context.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"next_anchor_id\": \"DOC1_A1\"}</search>"
+}

@@ -1,0 +1,83 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "task_mode": "clustering",
+  "think": "The document seems to be a civil case involving a dispute over the use of a shared space between a homeowner's association and a dental clinic. I will inspect the first chunk to confirm the type of case.",
+  "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC6_A1",
+  "candidate_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3",
+    "DOC6_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3",
+    "DOC6_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC6_A1",
+    "DOC6_A2",
+    "DOC6_A3",
+    "DOC6_A4",
+    "DOC6_A5",
+    "DOC6_A6",
+    "DOC6_A7",
+    "DOC6_A8"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC6_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "上诉人为海珠区某某花园业主委员会，被上诉人为广州某某口腔门诊部有限公司，原审第三人包括黄某某和袁某某。"
+    },
+    {
+      "anchor_id": "DOC6_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "某某花园业委会请求撤销一审判决，要求某某口腔门诊部停止侵占并腾空移交梯间，支付场地占用费，并承担诉讼费。"
+    },
+    {
+      "anchor_id": "DOC6_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "某某口腔门诊部答辩称梯间由二层商铺业主黄某某分摊所有，某某花园业委会无权提起诉讼，且其使用梯间合法。"
+    },
+    {
+      "anchor_id": "DOC6_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "某某花园业委会请求某某口腔门诊部停止侵占梯间并支付场地占用费。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书6》. First coordinate candidate is DOC6_A1.",
+  "raw_plan_text": "<think>The document seems to be a civil case involving a dispute over the use of a shared space between a homeowner's association and a dental clinic. I will inspect the first chunk to confirm the type of case.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC6_A1\",\"candidate_anchor_ids\":[\"DOC6_A1\",\"DOC6_A2\",\"DOC6_A3\",\"DOC6_A4\",\"DOC6_A5\",\"DOC6_A6\",\"DOC6_A7\",\"DOC6_A8\"]}</search>",
+  "tagged_trace": "<think>The document seems to be a civil case involving a dispute over the use of a shared space between a homeowner's association and a dental clinic. I will inspect the first chunk to confirm the type of case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\"], \"next_anchor_id\": \"DOC6_A1\"}</search>"
+}

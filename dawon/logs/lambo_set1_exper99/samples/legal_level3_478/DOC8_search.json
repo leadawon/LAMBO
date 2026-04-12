@@ -1,0 +1,80 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "task_mode": "clustering",
+  "think": "The document appears to involve a case related to the execution of a civil case, specifically dealing with the change of the applicant due to a transfer of creditor's rights. The case does not seem to fall under '继承纠纷', '民间借贷纠纷', '行政行为-行政处罚', or '行政行为-其他行政行为'. It seems most likely to fall under '执行案由-民事'. I will inspect the next anchor to confirm this.",
+  "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC8_A2",
+  "candidate_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2",
+    "DOC8_A3",
+    "DOC8_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2",
+    "DOC8_A3",
+    "DOC8_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2",
+    "DOC8_A3",
+    "DOC8_A4",
+    "DOC8_A5"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC8_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "复议申请人柴某某，申请执行人方某某及其委托诉讼代理人杨某某，申请人陈某某及其委托诉讼代理人侯某某的基本信息。"
+    },
+    {
+      "anchor_id": "DOC8_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "乌鲁木齐中院在执行申请执行人方某某与被执行人柴某某合同纠纷一案中，陈某某申请变更其为申请执行人，乌鲁木齐中院裁定变更陈某某为申请执行人，柴某某不服并申请复议。"
+    },
+    {
+      "anchor_id": "DOC8_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "乌鲁木齐中院和本院认为，方某某将生效法律文书确定的债权依法转让给陈某某，并书面认可，陈某某申请变更其为申请执行人符合法律规定。"
+    },
+    {
+      "anchor_id": "DOC8_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "柴某某提出复议理由包括债权转让侵犯其合法权益以及《执行债权转让通知书》签字问题，但法院认为这些理由不成立。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书8》. First coordinate candidate is DOC8_A2.",
+  "raw_plan_text": "<think>The document appears to involve a case related to the execution of a civil case, specifically dealing with the change of the applicant due to a transfer of creditor's rights. The case does not seem to fall under '继承纠纷', '民间借贷纠纷', '行政行为-行政处罚', or '行政行为-其他行政行为'. It seems most likely to fall under '执行案由-民事'. I will inspect the next anchor to confirm this.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC8_A2\",\"candidate_anchor_ids\":[\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\", \"DOC8_A5\"]}</search>",
+  "tagged_trace": "<think>The document appears to involve a case related to the execution of a civil case, specifically dealing with the change of the applicant due to a transfer of creditor's rights. The case does not seem to fall under '继承纠纷', '民间借贷纠纷', '行政行为-行政处罚', or '行政行为-其他行政行为'. It seems most likely to fall under '执行案由-民事'. I will inspect the next anchor to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\"], \"next_anchor_id\": \"DOC8_A2\"}</search>"
+}

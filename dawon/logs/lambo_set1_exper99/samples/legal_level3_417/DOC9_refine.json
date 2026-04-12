@@ -1,0 +1,67 @@
+{
+  "doc_id": "DOC9",
+  "doc_title": "《判决文书9》",
+  "selected_anchor_ids": [
+    "DOC9_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC9_A1",
+        "candidate_anchor_ids": [
+          "DOC9_A1",
+          "DOC9_A2",
+          "DOC9_A3"
+        ]
+      },
+      "anchor_id": "DOC9_A1",
+      "plan_think": "The document title and summaries suggest that this is a criminal case involving the prosecution of Ke Ning for intentional injury. I will inspect the first anchor (DOC9_A1) to confirm the type of case and gather more information on the case details.",
+      "info": {
+        "anchor_id": "DOC9_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "Case Information and Background",
+        "summary": "The case involves the prosecution of defendant Ke Ning for intentional injury by the People's Procuratorate of Quanzhou City. The case was initially tried by the Quanzhou Intermediate People's Court, and both the plaintiff and defendant appealed. The court decided to review the criminal part without an open hearing.",
+        "text": "原公诉机关泉州市人民检察院。\n\n上诉人（原审被告人）柯某宁，男，1990年7月21日出生，初中文化，务工，住福建省泉州市晋江市。因涉嫌犯故意伤害罪于2023年4月27日被刑事拘留，同年5月11日被逮捕。现羁押于晋江市看守所。\n\n辩护人柯某木、刘某含。\n\n泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。宣判后，在法定期限内，附带民事诉讼原告人李某锡、郑某珠和被告人柯某宁均不服，分别向本院提出上诉。本院依法组成合议庭，在审理本案过程中，上诉人李某锡、郑某珠申请撤回上诉，本院经审查认为符合法律规定，另行裁定予以准许。对本案刑事部分，经阅卷、讯问上诉人、审阅上诉状和辩护词，认为本案事实清楚，不属于依法应当开庭审理的案件，决定不开庭审理。现已审理终结。"
+      },
+      "extract_think": "The anchor chunk clearly indicates that the case involves the prosecution of Ke Ning for intentional injury, which falls under the category of '刑事案件'. It also mentions an attached civil lawsuit, but the primary focus is on the criminal aspect. Therefore, we can classify this document as a '刑事案件'. No further information is needed from other chunks to determine the category for this document.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "刑事案件",
+            "value": "《判决文书9》",
+            "normalized_value": "判决文书9",
+            "evidence_text": "泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。",
+            "source_doc_id": "DOC9",
+            "source_anchor_id": "DOC9_A1",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "刑事案件",
+      "value": "《判决文书9》",
+      "normalized_value": "判决文书9",
+      "evidence_text": "泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。",
+      "source_doc_id": "DOC9",
+      "source_anchor_id": "DOC9_A1",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document title and summaries suggest that this is a criminal case involving the prosecution of Ke Ning for intentional injury. I will inspect the first anchor (DOC9_A1) to confirm the type of case and gather more information on the case details.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A1\", \"candidate_anchor_ids\": [\"DOC9_A1\", \"DOC9_A2\", \"DOC9_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Case Information and Background\", \"summary\": \"The case involves the prosecution of defendant Ke Ning for intentional injury by the People's Procuratorate of Quanzhou City. The case was initially tried by the Quanzhou Intermediate People's Court, and both the plaintiff and defendant appealed. The court decided to review the criminal part without an open hearing.\", \"text\": \"原公诉机关泉州市人民检察院。\\n\\n上诉人（原审被告人）柯某宁，男，1990年7月21日出生，初中文化，务工，住福建省泉州市晋江市。因涉嫌犯故意伤害罪于2023年4月27日被刑事拘留，同年5月11日被逮捕。现羁押于晋江市看守所。\\n\\n辩护人柯某木、刘某含。\\n\\n泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。宣判后，在法定期限内，附带民事诉讼原告人李某锡、郑某珠和被告人柯某宁均不服，分别向本院提出上诉。本院依法组成合议庭，在审理本案过程中，上诉人李某锡、郑某珠申请撤回上诉，本院经审查认为符合法律规定，另行裁定予以准许。对本案刑事部分，经阅卷、讯问上诉人、审阅上诉状和辩护词，认为本案事实清楚，不属于依法应当开庭审理的案件，决定不开庭审理。现已审理终结。\"}</info>\n<think>The anchor chunk clearly indicates that the case involves the prosecution of Ke Ning for intentional injury, which falls under the category of '刑事案件'. It also mentions an attached civil lawsuit, but the primary focus is on the criminal aspect. Therefore, we can classify this document as a '刑事案件'. No further information is needed from other chunks to determine the category for this document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书9》\", \"normalized_value\": \"判决文书9\", \"evidence_text\": \"泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。\", \"source_doc_id\": \"DOC9\", \"source_anchor_id\": \"DOC9_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title and summaries suggest that this is a criminal case involving the prosecution of Ke Ning for intentional injury. I will inspect the first anchor (DOC9_A1) to confirm the type of case and gather more information on the case details.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A1\", \"candidate_anchor_ids\": [\"DOC9_A1\", \"DOC9_A2\", \"DOC9_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Case Information and Background\", \"summary\": \"The case involves the prosecution of defendant Ke Ning for intentional injury by the People's Procuratorate of Quanzhou City. The case was initially tried by the Quanzhou Intermediate People's Court, and both the plaintiff and defendant appealed. The court decided to review the criminal part without an open hearing.\", \"text\": \"原公诉机关泉州市人民检察院。\\n\\n上诉人（原审被告人）柯某宁，男，1990年7月21日出生，初中文化，务工，住福建省泉州市晋江市。因涉嫌犯故意伤害罪于2023年4月27日被刑事拘留，同年5月11日被逮捕。现羁押于晋江市看守所。\\n\\n辩护人柯某木、刘某含。\\n\\n泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。宣判后，在法定期限内，附带民事诉讼原告人李某锡、郑某珠和被告人柯某宁均不服，分别向本院提出上诉。本院依法组成合议庭，在审理本案过程中，上诉人李某锡、郑某珠申请撤回上诉，本院经审查认为符合法律规定，另行裁定予以准许。对本案刑事部分，经阅卷、讯问上诉人、审阅上诉状和辩护词，认为本案事实清楚，不属于依法应当开庭审理的案件，决定不开庭审理。现已审理终结。\"}</info>\n<think>The anchor chunk clearly indicates that the case involves the prosecution of Ke Ning for intentional injury, which falls under the category of '刑事案件'. It also mentions an attached civil lawsuit, but the primary focus is on the criminal aspect. Therefore, we can classify this document as a '刑事案件'. No further information is needed from other chunks to determine the category for this document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书9》\", \"normalized_value\": \"判决文书9\", \"evidence_text\": \"泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。\", \"source_doc_id\": \"DOC9\", \"source_anchor_id\": \"DOC9_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

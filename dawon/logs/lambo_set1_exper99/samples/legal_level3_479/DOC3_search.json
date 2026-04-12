@@ -1,0 +1,65 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The current document title is '《判决文书3》'. The summaries suggest that this case involves a dispute over jurisdiction in a maritime freight forwarding contract between two companies, A and B. This seems to fall under the category of '海事海商纠纷'. I will inspect the next anchor coordinate to confirm this categorization.",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政强制' '妨碍社会管理秩序罪' '执行案由-行政' '行政行为-行政补偿' '海事海商纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '妨碍社会管理秩序罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A2",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "上诉人A公司的法定代表人为韩某，委托诉讼代理人包括余某某和印某；被上诉人B公司的法定代表人为严某，委托诉讼代理人包括龚某。"
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "A公司因与B公司海上货运代理合同纠纷管辖权异议一案，不服上海海事法院的民事裁定，向本院提起上诉。A公司认为双方不存在合同关系，一审法院认定错误，并要求将案件移送南京海事法院审理。本院认为B公司提出的诉讼请求符合海上货运代理合同纠纷，上海海事法院具有管辖权。"
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "A公司的上诉理由不能成立，本院驳回上诉，维持原裁定，该裁定为终审裁定。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A2.",
+  "raw_plan_text": "<think>The current document title is '《判决文书3》'. The summaries suggest that this case involves a dispute over jurisdiction in a maritime freight forwarding contract between two companies, A and B. This seems to fall under the category of '海事海商纠纷'. I will inspect the next anchor coordinate to confirm this categorization.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政强制' '妨碍社会管理秩序罪' '执行案由-行政' '行政行为-行政补偿' '海事海商纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '妨碍社会管理秩序罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A2\",\"candidate_anchor_ids\":[\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\"]}</search>",
+  "tagged_trace": "<think>The current document title is '《判决文书3》'. The summaries suggest that this case involves a dispute over jurisdiction in a maritime freight forwarding contract between two companies, A and B. This seems to fall under the category of '海事海商纠纷'. I will inspect the next anchor coordinate to confirm this categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政强制' '妨碍社会管理秩序罪' '执行案由-行政' '行政行为-行政补偿' '海事海商纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '妨碍社会管理秩序罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\"], \"next_anchor_id\": \"DOC3_A2\"}</search>"
+}

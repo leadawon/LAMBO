@@ -1,0 +1,66 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "selected_anchor_ids": [
+    "DOC8_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC8_A2",
+        "candidate_anchor_ids": [
+          "DOC8_A1",
+          "DOC8_A2"
+        ]
+      },
+      "anchor_id": "DOC8_A2",
+      "plan_think": "The document title provided is '《判决文书8》'. The first chunk summary (DOC8_A1) indicates that the parties involved are a tourism development company and the emergency management bureau of Changji City, suggesting this might be an administrative case. The second chunk summary (DOC8_A2) confirms it as a case involving fines and a subsequent settlement, which further supports categorizing it as an administrative case. Therefore, I will inspect DOC8_A2 to confirm the details of the case type.",
+      "info": {
+        "anchor_id": "DOC8_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件详情",
+        "summary": "新疆某旅游开发有限公司因与昌吉市应急管理局罚款一案申请再审，后双方达成和解，新疆某旅游开发有限公司撤回再审申请，法院准许撤回。",
+        "text": "再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，审查过程中，新疆某旅游开发有限公司以已与昌吉市应急管理局达成和解为由，向本院提交了撤回再审申请书。\n\n本院经审查认为，新疆某旅游开发有限公司撤回再审申请系其真实意思表示，且不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下：\n\n准许新疆某旅游开发有限公司撤回再审申请。"
+      },
+      "extract_think": "The selected chunk clearly indicates that the case involves a dispute between a tourism development company and the emergency management bureau over a fine, which is characteristic of an administrative case. The chunk also mentions the court's decision to allow the withdrawal of the appeal after a settlement was reached, further confirming the administrative nature of the case. This information is sufficient to classify the document under '行政案件'.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政案件",
+            "value": "《判决文书8》",
+            "normalized_value": "判决文书8",
+            "evidence_text": "再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，审查过程中，新疆某旅游开发有限公司以已与昌吉市应急管理局达成和解为由，向本院提交了撤回再审申请书。",
+            "source_doc_id": "DOC8",
+            "source_anchor_id": "DOC8_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政案件",
+      "value": "《判决文书8》",
+      "normalized_value": "判决文书8",
+      "evidence_text": "再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，审查过程中，新疆某旅游开发有限公司以已与昌吉市应急管理局达成和解为由，向本院提交了撤回再审申请书。",
+      "source_doc_id": "DOC8",
+      "source_anchor_id": "DOC8_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document title provided is '《判决文书8》'. The first chunk summary (DOC8_A1) indicates that the parties involved are a tourism development company and the emergency management bureau of Changji City, suggesting this might be an administrative case. The second chunk summary (DOC8_A2) confirms it as a case involving fines and a subsequent settlement, which further supports categorizing it as an administrative case. Therefore, I will inspect DOC8_A2 to confirm the details of the case type.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情\", \"summary\": \"新疆某旅游开发有限公司因与昌吉市应急管理局罚款一案申请再审，后双方达成和解，新疆某旅游开发有限公司撤回再审申请，法院准许撤回。\", \"text\": \"再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，审查过程中，新疆某旅游开发有限公司以已与昌吉市应急管理局达成和解为由，向本院提交了撤回再审申请书。\\n\\n本院经审查认为，新疆某旅游开发有限公司撤回再审申请系其真实意思表示，且不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下：\\n\\n准许新疆某旅游开发有限公司撤回再审申请。\"}</info>\n<think>The selected chunk clearly indicates that the case involves a dispute between a tourism development company and the emergency management bureau over a fine, which is characteristic of an administrative case. The chunk also mentions the court's decision to allow the withdrawal of the appeal after a settlement was reached, further confirming the administrative nature of the case. This information is sufficient to classify the document under '行政案件'.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，审查过程中，新疆某旅游开发有限公司以已与昌吉市应急管理局达成和解为由，向本院提交了撤回再审申请书。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title provided is '《判决文书8》'. The first chunk summary (DOC8_A1) indicates that the parties involved are a tourism development company and the emergency management bureau of Changji City, suggesting this might be an administrative case. The second chunk summary (DOC8_A2) confirms it as a case involving fines and a subsequent settlement, which further supports categorizing it as an administrative case. Therefore, I will inspect DOC8_A2 to confirm the details of the case type.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情\", \"summary\": \"新疆某旅游开发有限公司因与昌吉市应急管理局罚款一案申请再审，后双方达成和解，新疆某旅游开发有限公司撤回再审申请，法院准许撤回。\", \"text\": \"再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，审查过程中，新疆某旅游开发有限公司以已与昌吉市应急管理局达成和解为由，向本院提交了撤回再审申请书。\\n\\n本院经审查认为，新疆某旅游开发有限公司撤回再审申请系其真实意思表示，且不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下：\\n\\n准许新疆某旅游开发有限公司撤回再审申请。\"}</info>\n<think>The selected chunk clearly indicates that the case involves a dispute between a tourism development company and the emergency management bureau over a fine, which is characteristic of an administrative case. The chunk also mentions the court's decision to allow the withdrawal of the appeal after a settlement was reached, further confirming the administrative nature of the case. This information is sufficient to classify the document under '行政案件'.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，审查过程中，新疆某旅游开发有限公司以已与昌吉市应急管理局达成和解为由，向本院提交了撤回再审申请书。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}
