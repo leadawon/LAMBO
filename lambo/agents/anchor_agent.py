@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
-from ..backend import QwenLocalClient
+from ..backend import QwenLocalClient, GeminiClient
 from ..common import (
     compact_text,
     current_query_from_record,
@@ -24,7 +24,7 @@ from ..common import (
 class AnchorAgent:
     def __init__(
         self,
-        llm: QwenLocalClient,
+        llm: Union[QwenLocalClient, GeminiClient],
         prompt_dir: Optional[Path] = None,
         max_units_per_doc: int = 220,
     ) -> None:

@@ -13,9 +13,9 @@ Anchors are presented in original document order — the LLM decides which to op
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
-from ..backend import QwenLocalClient
+from ..backend import QwenLocalClient, GeminiClient
 from ..common import (
     compact_text,
     extract_json_payload,
@@ -29,7 +29,7 @@ from ..common import (
 class DocRefineAgent:
     def __init__(
         self,
-        llm: QwenLocalClient,
+        llm: Union[QwenLocalClient, GeminiClient],
         prompt_dir: Optional[Path] = None,
         max_rounds: int = 6,
     ) -> None:

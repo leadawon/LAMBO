@@ -44,10 +44,17 @@ DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "logs" / "lambo_v2_set1_10"
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run LAMBO v2 AutoRefine pipeline on set1 samples.")
     parser.add_argument("--input_path", type=str, default=str(DEFAULT_INPUT_PATH))
-    parser.add_argument("--output_dir", type=str, default=str(DEFAULT_OUTPUT_DIR))
+    parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--max_items", type=int, default=None)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--max_refine_rounds", type=int, default=6)
+    parser.add_argument(
+        "--backend",
+        type=str,
+        default="local",
+        choices=["local", "gemini"],
+        help="LLM backend: 'local' for Qwen2.5-32B local, 'gemini' for Google Gemini API",
+    )
     return parser.parse_args()
 
 
@@ -65,7 +72,15 @@ def ensure_layout(output_dir: Path) -> Dict[str, Path]:
 def main() -> None:
     args = parse_args()
     input_path = Path(args.input_path)
-    output_dir = Path(args.output_dir)
+
+    # Default output_dir depends on backend
+    if args.output_dir is not None:
+        output_dir = Path(args.output_dir)
+    elif args.backend == "gemini":
+        output_dir = PROJECT_ROOT / "logs" / "lambo_v2_set1_10_gemini"
+    else:
+        output_dir = DEFAULT_OUTPUT_DIR
+
     layout = ensure_layout(output_dir)
 
     records = load_records(input_path)
@@ -74,7 +89,8 @@ def main() -> None:
         manifest = manifest[: args.max_items]
     save_manifest(manifest, layout["root"] / "manifest.json")
 
-    llm = get_default_client()
+    print(f"Backend: {args.backend}", flush=True)
+    llm = get_default_client(backend=args.backend)
 
     anchor_agent = AnchorAgent(llm=llm)
     doc_refine_agent = DocRefineAgent(

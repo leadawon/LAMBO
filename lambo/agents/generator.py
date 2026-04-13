@@ -9,9 +9,9 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
-from ..backend import QwenLocalClient
+from ..backend import QwenLocalClient, GeminiClient
 from ..common import (
     extract_json_payload,
     read_json,
@@ -22,7 +22,7 @@ from ..common import (
 class Generator:
     def __init__(
         self,
-        llm: QwenLocalClient,
+        llm: Union[QwenLocalClient, GeminiClient],
         prompt_dir: Optional[Path] = None,
     ) -> None:
         self.llm = llm

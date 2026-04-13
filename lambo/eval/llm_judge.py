@@ -5,9 +5,9 @@ from __future__ import annotations
 import json
 import re
 from statistics import mean
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 
-from ..backend import QwenLocalClient
+from ..backend import QwenLocalClient, GeminiClient
 
 
 JUDGE_PROMPT = """[Question]
@@ -61,7 +61,7 @@ def _stringify(value: Any) -> str:
 
 def run_llm_judge(
     *,
-    llm: QwenLocalClient,
+    llm: Union[QwenLocalClient, GeminiClient],
     prediction_rows: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
     verdicts: List[Dict[str, Any]] = []
