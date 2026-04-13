@@ -46,40 +46,131 @@ AutoRefine-style agentic RAG pipeline for the [Loong benchmark](https://github.c
 ## Directory Structure
 
 ```
-lambo/
-├── lambo/                  # Main Python package
-│   ├── agents/             # LLM-calling agent modules
-│   ├── scoring/            # Heuristic scoring (non-LLM)
-│   ├── eval/               # Evaluation modules
-│   ├── prompts/            # Prompt templates by role
-│   │   ├── anchor/
-│   │   ├── doc_refine/
-│   │   ├── compose/
-│   │   └── generate/
-│   ├── backend.py          # QwenLocalClient
-│   ├── common.py           # Shared utilities
-│   └── manifest.py         # Sample selection and manifest
-├── scripts/                # Entry points
-│   └── run_set1.py         # Main experiment runner
-├── reference/              # External reference code
-│   ├── Agentic-R/
-│   └── Loong/
-├── logs/                   # Experiment outputs
+lambo/                              # Repository root
+├── lambo/                          # Core Python package (v2 — latest)
+│   ├── agents/                     # LLM-calling agent modules
+│   │   ├── anchor_agent.py         #   Stage 1: document segmentation & anchor tiling
+│   │   ├── doc_refine_agent.py     #   Stage 2: per-doc iterative evidence extraction
+│   │   ├── global_composer.py      #   Stage 3: cross-doc entity resolution & synthesis
+│   │   └── generator.py            #   Stage 4: final answer generation
+│   ├── scoring/
+│   │   └── heuristic.py            # Domain-aware anchor ranking (no LLM)
+│   ├── eval/
+│   │   ├── structured_eval.py      # Exact match + pair-F1 metrics
+│   │   └── llm_judge.py            # Loong-style 1-100 LLM scoring
+│   ├── prompts/                    # Prompt templates per stage
+│   │   ├── anchor/                 #   system.txt, user.txt
+│   │   ├── doc_refine/             #   system.txt, user.txt
+│   │   ├── compose/                #   system.txt, user.txt
+│   │   └── generate/               #   system.txt, user.txt
+│   ├── backend.py                  # QwenLocalClient (Transformers backend)
+│   ├── common.py                   # Shared utilities
+│   └── manifest.py                 # Sample selection & manifest builder
+│
+├── scripts/
+│   └── run_set1.py                 # Main experiment entry point (v2)
+│
+├── dawon/                          # v1 runner — original dawon experiment code
+│   ├── anchor/                     #   v1 agent modules & prompts
+│   ├── data/                       #   v1 dataset manifests
+│   ├── logs/                       #   v1 experiment logs
+│   └── run_set1_10.py              #   v1 entry point
+│
+├── dawonv2/                        # v2 iteration — intermediate experiment code
+│   ├── anchor/                     #   v2 agent modules & prompts
+│   └── data/                       #   v2 dataset manifests
+│
+├── dawonv3/                        # v3 iteration — further refinements
+│   ├── anchor/                     #   v3 agent modules & prompts
+│   ├── data/                       #   v3 dataset manifests
+│   └── logs/                       #   v3 experiment logs
+│
+├── logs/                           # Experiment output logs (see below)
+├── reference/                      # External reference code (excluded from git)
+│   ├── Agentic-R/                  #   Agentic-R baseline reference
+│   └── Loong/                      #   Loong benchmark data & evaluation code
+│
+├── script/                         # Legacy script directory
+│   └── anchor/                     #   Original anchor-based pipeline scripts
+│
+├── .gitignore
 └── README.md
 ```
+
+## Experiment Logs
+
+All experiment outputs are stored under `logs/`. Each experiment directory follows this structure:
+
+```
+logs/<experiment_name>/
+├── manifest.json                   # Selected sample indices and metadata
+├── lambo_predictions.jsonl         # Final predictions (one JSON per line)
+├── samples/                        # Per-sample intermediate outputs
+│   └── <sample_id>/
+│       ├── anchors.json            # Stage 1: anchor extraction result
+│       ├── DOC*_refine.json        # Stage 2: per-doc evidence sheets
+│       ├── composed.json           # Stage 3: cross-doc composition
+│       └── generator.json          # Stage 4: final answer
+└── reports/
+    ├── structured_eval.json        # EM / pair-F1 metrics
+    ├── llm_judge.json              # LLM judge 1-100 scores per sample
+    └── errors.json                 # Error tracking
+```
+
+### Experiment History
+
+| Experiment | Description | Samples | EM | Pair-F1 | LLM Judge Avg |
+|------------|-------------|---------|-----|---------|---------------|
+| `lambo_set1_10_smoke_doccall` | Smoke test (doc-call backend) | 1 | 1.00 | — | — |
+| `lambo_agentic_smoke` | Smoke test (agentic pipeline) | 1 | 0.00 | — | — |
+| `lambo_set1_10_doccall` | Full run with doc-call backend | 10 | 0.10 | 0.313 | — |
+| `lambo_agentic_set1_10` | Full run with agentic pipeline | 10 | 0.10 | 0.365 | 27.0 |
+| **`lambo_v2_set1_10`** | **Latest v2 pipeline (current)** | **10** | **0.20** | **0.475** | **53.5** |
+
+### Latest Results: `lambo_v2_set1_10` (2026-04-13)
+
+Per-sample breakdown:
+
+| Sample | Type | Level | LLM Score | EM | Notes |
+|--------|------|-------|-----------|-----|-------|
+| `financial_level1_914` | financial | 1 | 100 | O | Perfect answer |
+| `legal_level1_725` | legal | 1 | 95 | X | Minor formatting difference |
+| `financial_level2_1065` | financial | 2 | 20 | X | Wrong company identified |
+| `legal_level2_801` | legal | 2 | 0 | X | No evidence found in any document |
+| `financial_level3_1280` | financial | 3 | 60 | X | Partial classification error |
+| `legal_level3_469` | legal | 3 | 80 | X | 2 documents swapped between categories |
+| `paper_level3_63` | paper | 3 | 75 | X | Reference missed, citation correct |
+| `financial_level4_1504` | financial | 4 | 85 | X | Minor numerical difference |
+| `legal_level4_596` | legal | 4 | 20 | O | EM correct but judge scored low |
+| `paper_level4_32` | paper | 4 | 0 | X | No evidence extracted |
+
+Performance by level:
+
+| Level | Avg LLM Score | Description |
+|-------|---------------|-------------|
+| Level 1 | 97.5 | Single-doc, single-fact retrieval |
+| Level 2 | 10.0 | Multi-doc comparison |
+| Level 3 | 71.7 | Multi-doc classification / relation |
+| Level 4 | 35.0 | Complex cross-doc reasoning |
+
+### Version Evolution
+
+- **dawon (v1)**: Initial implementation using a vLLM OpenAI-compatible server backend. Basic anchor + search pipeline with separate judge evaluation.
+- **dawonv2**: Intermediate iteration with refined anchor agent and prompts.
+- **dawonv3**: Further refinements to evidence extraction and prompt engineering.
+- **lambo (v2 — current)**: Complete rewrite with 4-stage agentic pipeline (AnchorAgent → DocRefineAgent → GlobalComposer → Generator). Uses Transformers backend directly. Added heuristic pre-ranking, typed evidence, and cross-document entity resolution.
 
 ## Quick Start
 
 ```bash
+# Smoke test (1 sample)
 docker exec junyoungRAG bash -lc '
   cd /workspace/lambo &&
   source /workspace/StructRAG/venv/bin/activate &&
   python scripts/run_set1.py --max_items 1 --force
 '
-```
 
-Full 10-sample run:
-```bash
+# Full 10-sample run
 docker exec junyoungRAG bash -lc '
   cd /workspace/lambo &&
   source /workspace/StructRAG/venv/bin/activate &&
@@ -87,10 +178,28 @@ docker exec junyoungRAG bash -lc '
 '
 ```
 
+### CLI Arguments
+
+| Argument | Default | Description |
+|----------|---------|-------------|
+| `--input_path` | `reference/Loong/data/loong_process.jsonl` | Input dataset path |
+| `--output_dir` | `logs/lambo_v2_set1_10` | Output directory |
+| `--max_items` | `None` (all 10) | Limit number of samples to process |
+| `--force` | `False` | Bypass cache and recompute all stages |
+| `--max_refine_rounds` | `6` | Max iterative refinement rounds per document |
+
+## Environment
+
+- **Model**: Qwen2.5-32B-Instruct (local, float16)
+- **GPU**: 4x NVIDIA RTX 3090 (24GB each)
+- **Container**: `junyoungRAG` Docker container
+- **Python env**: `/workspace/StructRAG/venv`
+- **Dataset**: Loong benchmark (1,600 records, 10 selected for set-1)
+
 ## Key Design Decisions
 
-- **AutoRefine prompt accumulation**: Each round's trace (<think>/<search>/<info>/<refine>) is appended to the next round's prompt. Old <info> blocks are compressed after 2 rounds to save tokens.
+- **AutoRefine prompt accumulation**: Each round's trace (`<think>`/`<search>`/`<info>`/`<refine>`) is appended to the next round's prompt. Old `<info>` blocks are compressed after 2 rounds to save tokens.
 - **Heuristic pre-ranking**: Anchors are scored by domain priors (section type, query overlap, quoted terms) before LLM selection — the LLM only sees the top-ranked shortlist.
 - **Typed evidence**: Each evidence item has an `item_type` (direct_answer, comparison_value, classification_feature, relation_edge, negative_evidence) and `owner_entity` for downstream entity resolution.
 - **No cheating**: `type`, `level`, `task_mode` are used only in heuristic scoring internals, never passed to LLM prompts.
-- **Negative evidence**: Documents with no relevant evidence are explicitly tracked (scan_result="no_evidence"), not silently dropped.
+- **Negative evidence**: Documents with no relevant evidence are explicitly tracked (`scan_result="no_evidence"`), not silently dropped.
