@@ -1,0 +1,50 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 预付款项为62,606,303.29元 - DOC2: 预付款项金额为102,491,269.15元 - DOC3: 预付款项为228,126,438.00元 根据提供的预付款项数值，我们可以将这些公司分为以下几类： - 高预付款（200,000,000.00以上）：DOC3 - 中预付款（100,000,000.00以上且200,000,000.00以下）：DOC2 - 低预付款（0以上且100,000,000.00以下）：DOC1 - 负预付款（0及0以下）：无 Stage 2 structure selection and mapping: 我们需要将每个文档按照预付款项的分类进行映射。结构应该是一个映射，其中键是文档ID，值是对应的预付款项类别。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "DOC1",
+        "DOC2",
+        "DOC3"
+      ],
+      "attributes": [
+        "预付款项类别"
+      ],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC1",
+          "value": "低预付款"
+        },
+        "sources": [
+          "DOC1:DOC1_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC2",
+          "value": "中预付款"
+        },
+        "sources": [
+          "DOC2:DOC2_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC3",
+          "value": "高预付款"
+        },
+        "sources": [
+          "DOC3:DOC3_A8"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 预付款项为62,606,303.29元\n  - DOC2: 预付款项金额为102,491,269.15元\n  - DOC3: 预付款项为228,126,438.00元\n  \n  根据提供的预付款项数值，我们可以将这些公司分为以下几类：\n  - 高预付款（200,000,000.00以上）：DOC3\n  - 中预付款（100,000,000.00以上且200,000,000.00以下）：DOC2\n  - 低预付款（0以上且100,000,000.00以下）：DOC1\n  - 负预付款（0及0以下）：无\n\n  Stage 2 structure selection and mapping:\n  我们需要将每个文档按照预付款项的分类进行映射。结构应该是一个映射，其中键是文档ID，值是对应的预付款项类别。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"DOC1\", \"DOC2\", \"DOC3\"],\n    \"attributes\": [\"预付款项类别\"],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC1\",\n        \"value\": \"低预付款\"\n      },\n      \"sources\": [\"DOC1:DOC1_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC2\",\n        \"value\": \"中预付款\"\n      },\n      \"sources\": [\"DOC2:DOC2_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC3\",\n        \"value\": \"高预付款\"\n      },\n      \"sources\": [\"DOC3:DOC3_A8\"]\n    }\n  ]\n}\n</relations>"
+}

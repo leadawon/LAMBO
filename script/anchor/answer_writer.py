@@ -1,3 +1,11 @@
+"""Final Answer Writer — composes the answer from a structured relations view.
+
+Receives the single `relations` object produced by the Relation Refiner and the
+user query, and asks the LLM to output `{"final_answer": ...}`.  No level /
+type / topology hints are exposed; the formatting rules live entirely in the
+system prompt.
+"""
+
 from __future__ import annotations
 
 import json
@@ -6,9 +14,8 @@ from typing import Any, Dict, List, Optional
 
 from .backend import QwenLocalClient
 from .common import (
-    answer_topology_for_record,
-    compact_text,
-    normalize_mapping_values,
+    extract_json_payload,
+    extract_tag_content,
     normalize_ws,
     read_json,
     write_json,
@@ -16,110 +23,60 @@ from .common import (
 
 
 class AnswerWriter:
-    def __init__(self, llm: QwenLocalClient) -> None:
+    def __init__(
+        self,
+        llm: QwenLocalClient,
+        prompt_dir: Optional[Path] = None,
+    ) -> None:
         self.llm = llm
+        self.prompt_dir = prompt_dir or Path(__file__).resolve().parent / "prompts"
+        self.system_prompt = (self.prompt_dir / "answer_system.txt").read_text(encoding="utf-8").strip()
+        self.user_template = (self.prompt_dir / "answer_user.txt").read_text(encoding="utf-8").strip()
 
     @staticmethod
-    def _stringify_items(doc_results: List[Dict[str, Any]]) -> str:
-        rows: List[Dict[str, Any]] = []
-        for result in doc_results:
-            rows.append(
-                {
-                    "doc_id": result["doc_id"],
-                    "doc_title": result["doc_title"],
-                    "items": result.get("items", []),
-                }
-            )
-        return json.dumps(rows, ensure_ascii=False, indent=2)
-
-    @staticmethod
-    def _fallback_answer(record: Dict[str, Any], doc_results: List[Dict[str, Any]]) -> Any:
-        topology = answer_topology_for_record(record)
-        record_type = str(record.get("type", "")).strip().lower()
-        level = int(record.get("level", 0) or 0)
-        flattened: List[Dict[str, Any]] = []
-        for result in doc_results:
-            flattened.extend(result.get("items", []))
-
-        if topology == "str":
-            values = []
-            ranked_items = sorted(flattened, key=lambda entry: float(entry.get("confidence", 0.0)), reverse=True)
-            for item in sorted(flattened, key=lambda entry: float(entry.get("confidence", 0.0)), reverse=True):
-                normalized = normalize_ws(item.get("normalized_value", "")) or normalize_ws(item.get("value", ""))
-                if normalized and normalized not in values:
-                    values.append(normalized)
-            if not values:
-                return ""
-            if (record_type, level) in {("financial", 1), ("legal", 1)}:
-                return values[0]
-            if (record_type, level) in {("financial", 2), ("legal", 2)}:
-                return "，".join(values)
-            if level == 4 and ranked_items:
-                return values[0]
-            if len(values) == 1:
-                return values[0]
-            return "，".join(values)
-
-        if topology == "dict":
-            grouped: Dict[str, List[str]] = {}
-            for item in flattened:
-                key = normalize_ws(item.get("answer_key", ""))
+    def _fallback_from_relations(relations: Dict[str, Any]) -> Any:
+        structure = str(relations.get("structure", "scalar")).lower()
+        records = relations.get("records", []) or []
+        if structure == "scalar":
+            for rec in records:
+                val = (rec or {}).get("payload", {}).get("value", "")
+                if val:
+                    return val
+            return ""
+        if structure == "list":
+            out: List[str] = []
+            for rec in records:
+                val = (rec or {}).get("payload", {}).get("value", "")
+                if val and val not in out:
+                    out.append(val)
+            return out
+        if structure == "mapping":
+            out_map: Dict[str, List[str]] = {}
+            for rec in records:
+                payload = (rec or {}).get("payload", {}) or {}
+                key = normalize_ws(str(payload.get("key", "")))
+                value = payload.get("value", "")
                 if not key:
                     continue
-                value = item.get("normalized_value", item.get("value", ""))
-                normalized_values = normalize_mapping_values(value)
-                if not normalized_values and isinstance(value, list):
-                    normalized_values = normalize_mapping_values(value)
-                grouped.setdefault(key, [])
-                for entry in normalized_values:
-                    if entry not in grouped[key]:
-                        grouped[key].append(entry)
-            return grouped
-
-        values = []
-        for item in sorted(flattened, key=lambda entry: float(entry.get("confidence", 0.0)), reverse=True):
-            value = item.get("normalized_value", item.get("value", ""))
-            if isinstance(value, dict):
-                for entry in value.values():
-                    if isinstance(entry, str) and entry not in values:
-                        values.append(entry)
-            elif isinstance(value, list):
-                for entry in value:
-                    if str(entry) not in values:
-                        values.append(str(entry))
-            else:
-                normalized = normalize_ws(value)
-                if normalized and normalized not in values:
-                    values.append(normalized)
-        return values
-
-    @staticmethod
-    def _coerce_output(topology: str, payload: Any) -> Any:
-        if isinstance(payload, dict) and "final_answer" in payload:
-            payload = payload["final_answer"]
-        if topology == "str":
-            if isinstance(payload, list):
-                return "，".join(normalize_ws(item) for item in payload if normalize_ws(item))
-            if isinstance(payload, dict):
-                return normalize_ws(json.dumps(payload, ensure_ascii=False))
-            return normalize_ws(payload)
-        if topology == "dict":
-            if isinstance(payload, dict):
-                return payload
-            return {}
-        if topology == "list":
-            if isinstance(payload, list):
-                return payload
-            if isinstance(payload, str):
-                return [normalize_ws(payload)] if normalize_ws(payload) else []
-            return []
-        return payload
+                values = value if isinstance(value, list) else [value]
+                out_map.setdefault(key, [])
+                for v in values:
+                    vs = normalize_ws(str(v))
+                    if vs and vs not in out_map[key]:
+                        out_map[key].append(vs)
+            return out_map
+        if structure == "table":
+            return [rec.get("payload", {}) for rec in records if isinstance(rec, dict)]
+        if structure == "graph":
+            return [rec.get("payload", {}) for rec in records if isinstance(rec, dict)]
+        return ""
 
     def run(
         self,
         *,
-        record: Dict[str, Any],
-        doc_results: List[Dict[str, Any]],
+        query: str,
+        instruction: str,
+        relations: Dict[str, Any],
         sample_dir: Path,
         force: bool = False,
     ) -> Dict[str, Any]:
@@ -127,38 +84,30 @@ class AnswerWriter:
         if cache_path.exists() and not force:
             return read_json(cache_path)
 
-        topology = answer_topology_for_record(record)
-        extracted_items_json = self._stringify_items(doc_results)
-        system_prompt = (
-            "You are the final LAMBO answer writer. Only use extracted evidence items. "
-            "Do not hallucinate and do not use outside knowledge. "
-            "Return strict JSON only in the form {\"final_answer\": ...}."
+        relations_json = json.dumps(relations, ensure_ascii=False, indent=2)
+        user_prompt = self.user_template.format(
+            query=query or "(empty)",
+            instruction=instruction or "(none)",
+            relations_json=relations_json,
         )
-        user_prompt = (
-            f"Record type: {record.get('type')}\n"
-            f"Level: {record.get('level')}\n"
-            f"Answer topology: {topology}\n"
-            f"Question: {str(record.get('question', '')).strip() or '(empty)'}\n"
-            f"Instruction:\n{str(record.get('instruction', '')).strip()}\n\n"
-            f"Extracted doc evidence items:\n{extracted_items_json}\n\n"
-            "Compose the final answer only from the extracted evidence items.\n"
-            "For string answers, preserve the benchmark style as much as possible.\n"
-            "For dict/list answers, output valid JSON values."
-        )
-        payload, raw_text = self.llm.generate_json(
-            system_prompt=system_prompt,
+        raw_text = self.llm.generate_text(
+            system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=1200,
-            metadata={"module": "answer_writer", "record_id": record.get("id")},
+            max_output_tokens=1400,
+            metadata={"module": "answer_writer"},
         )
-        final_answer = self._coerce_output(topology, payload)
-        if final_answer == "" or final_answer == {} or final_answer == []:
-            final_answer = self._fallback_answer(record, doc_results)
+        think_text = normalize_ws(extract_tag_content(raw_text, "think") or "")
+        answer_text = extract_tag_content(raw_text, "answer") or ""
+        payload = extract_json_payload(answer_text)
+        final_answer: Any = ""
+        if isinstance(payload, dict) and "final_answer" in payload:
+            final_answer = payload["final_answer"]
+        elif payload is not None:
+            final_answer = payload
         result = {
-            "topology": topology,
+            "think": think_text,
             "final_answer": final_answer,
             "raw_text": raw_text,
-            "evidence_item_count": sum(len(result.get("items", [])) for result in doc_results),
         }
         write_json(cache_path, result)
         return result

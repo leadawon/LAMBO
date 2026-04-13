@@ -1,0 +1,61 @@
+{
+  "think": "Stage 1 feature sheet: - 判决文书1: 撤销原判决的部分内容，变更部分内容，驳回部分诉讼请求。 - 判决文书2: 驳回上诉，维持原判。 - 判决文书3: 驳回上诉，维持原判。 - 判决文书4: 撤销原判决，驳回诉讼请求。 Stage 2 structure selection and mapping: - 结构类型为\"mapping\"，因为需要将每个判决文书映射到一个具体的判决结果。 - 判决结果序号从提供的选项中选择，根据判决文书的内容匹配相应的判决结果。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书1",
+        "判决文书2",
+        "判决文书3",
+        "判决文书4"
+      ],
+      "attributes": [
+        "判决结果序号"
+      ],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "《判决文书1》",
+          "value": "判决结果5"
+        },
+        "sources": [
+          "DOC1:DOC1_A10"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "《判决文书2》",
+          "value": "判决结果2"
+        },
+        "sources": [
+          "DOC2:DOC2_A7"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "《判决文书3》",
+          "value": "判决结果3"
+        },
+        "sources": [
+          "DOC3:DOC3_A7"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "《判决文书4》",
+          "value": "判决结果1"
+        },
+        "sources": [
+          "DOC4:DOC4_A6"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - 判决文书1: 撤销原判决的部分内容，变更部分内容，驳回部分诉讼请求。\n  - 判决文书2: 驳回上诉，维持原判。\n  - 判决文书3: 驳回上诉，维持原判。\n  - 判决文书4: 撤销原判决，驳回诉讼请求。\n\n  Stage 2 structure selection and mapping:\n  - 结构类型为\"mapping\"，因为需要将每个判决文书映射到一个具体的判决结果。\n  - 判决结果序号从提供的选项中选择，根据判决文书的内容匹配相应的判决结果。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书1\", \"判决文书2\", \"判决文书3\", \"判决文书4\"],\n    \"attributes\": [\"判决结果序号\"],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\"key\": \"《判决文书1》\", \"value\": \"判决结果5\"},\n      \"sources\": [\"DOC1:DOC1_A10\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\"key\": \"《判决文书2》\", \"value\": \"判决结果2\"},\n      \"sources\": [\"DOC2:DOC2_A7\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\"key\": \"《判决文书3》\", \"value\": \"判决结果3\"},\n      \"sources\": [\"DOC3:DOC3_A7\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\"key\": \"《判决文书4》\", \"value\": \"判决结果1\"},\n      \"sources\": [\"DOC4:DOC4_A6\"]\n    }\n  ]\n}\n</relations>"
+}

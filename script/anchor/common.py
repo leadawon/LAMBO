@@ -118,6 +118,10 @@ def current_query_from_record(question: str, instruction: str) -> str:
     return sentences[0] if sentences else instruction
 
 
+def instruction_from_record(instruction: str) -> str:
+    return normalize_ws(instruction) or "(none)"
+
+
 def task_mode_for_level(level: int) -> str:
     mapping = {
         1: "spotlight",
