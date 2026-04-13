@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "task_mode": "clustering",
+  "think": "The summary indicates that the case involves a '渎职罪' (dereliction of duty) as it mentions '冯美声因玩忽职守一案'. This suggests that the document falls under the category of '渎职罪'. I will select this anchor to confirm the categorization.",
+  "current_query": "阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']}",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC2_A1",
+  "candidate_anchor_ids": [
+    "DOC2_A1"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A1",
+      "score": 29.3,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 29.3
+      },
+      "summary": "冯美声因玩忽职守一案，不服辽宁省宽甸满族自治县人民法院的刑事判决，提出申诉。申诉理由包括新的证据证明原判决认定的事实错误、原判适用法律错误等。经审查，原判认定的事实和法律适用正确，申诉理由不成立，申诉被驳回。"
+    }
+  ],
+  "utility_hits": {
+    "DOC2_A1": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC2_A1": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC2_A1": 6.0
+  },
+  "anchor_role_hits": {
+    "DOC2_A1": [
+      "case_identity",
+      "decision_evidence"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC2_A1": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 29.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书2》. First coordinate candidate is DOC2_A1.",
+  "raw_plan_text": "<think>The summary indicates that the case involves a '渎职罪' (dereliction of duty) as it mentions '冯美声因玩忽职守一案'. This suggests that the document falls under the category of '渎职罪'. I will select this anchor to confirm the categorization.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']}\", \"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\":\"DOC2_A1\", \"candidate_anchor_ids\":[\"DOC2_A1\"]}</search>",
+  "tagged_trace": "<think>The summary indicates that the case involves a '渎职罪' (dereliction of duty) as it mentions '冯美声因玩忽职守一案'. This suggests that the document falls under the category of '渎职罪'. I will select this anchor to confirm the categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']}\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC2_A1\"], \"next_anchor_id\": \"DOC2_A1\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC2_A1\": 6.0}, \"anchor_role_hits\": {\"DOC2_A1\": [\"case_identity\", \"decision_evidence\"]}}</search>"
+}

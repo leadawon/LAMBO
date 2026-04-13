@@ -1,0 +1,265 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "task_mode": "clustering",
+  "think": "The document title indicates that this is a judgment document related to a case. The chunk summaries suggest that the case involves拆迁安置 (demolition and resettlement). Therefore, it's likely that this document falls under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the coordinates that contain more details about the case background and court opinion to confirm this.",
+  "current_query": "阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC10_A2",
+  "candidate_anchor_ids": [
+    "DOC10_A1",
+    "DOC10_A2",
+    "DOC10_A3",
+    "DOC10_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC10_A3",
+    "DOC10_A2",
+    "DOC10_A4",
+    "DOC10_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC10_A3",
+    "DOC10_A2",
+    "DOC10_A4",
+    "DOC10_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC10_A3",
+      "score": 41.914,
+      "reasons": [
+        "query_overlap=3",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11",
+        "legal_label_hit=['行政行为', '判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 16.0,
+      "utility_hits": [
+        "legal_label_hit=['行政行为', '判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 12.0,
+        "answer_utility": 16.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 5.914,
+        "redundancy_penalty": 0.0,
+        "total": 41.914
+      },
+      "summary": "法院认为再审申请人提起诉讼已超过五年的法定起诉期限，且再审申请人认可由荆小波代替办理拆迁安置手续，应自行承担不利后果。"
+    },
+    {
+      "anchor_id": "DOC10_A2",
+      "score": 30.201,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 8.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 30.201
+      },
+      "summary": "荆某、王某因拆迁安置一案不服济南市中级人民法院的行政裁定，向本院申请再审，理由符合《中华人民共和国行政诉讼法》第九十一条第三、四项规定。"
+    },
+    {
+      "anchor_id": "DOC10_A4",
+      "score": 28.691,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 5.691,
+        "redundancy_penalty": 0.0,
+        "total": 28.691
+      },
+      "summary": "驳回荆某、王某的再审申请。"
+    },
+    {
+      "anchor_id": "DOC10_A1",
+      "score": 20.3,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 5.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 5.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 20.3
+      },
+      "summary": "再审申请人荆某和王某，被申请人济南市天桥区人民政府北园街道办事处及其法定代表人和委托代理人，原审第三人荆小波和济南市天桥区北园街道办事处水屯社区居民委员会的基本信息。"
+    }
+  ],
+  "utility_hits": {
+    "DOC10_A3": [
+      "legal_label_hit=['行政行为', '判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC10_A2": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC10_A4": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC10_A1": [
+      "legal_label_hit=['判决文书']"
+    ]
+  },
+  "utility_score": {
+    "DOC10_A3": 16.0,
+    "DOC10_A2": 11.0,
+    "DOC10_A4": 11.0,
+    "DOC10_A1": 5.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC10_A3": 6.0,
+    "DOC10_A2": 3.0,
+    "DOC10_A4": 6.0,
+    "DOC10_A1": 3.0
+  },
+  "anchor_role_hits": {
+    "DOC10_A3": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC10_A2": [
+      "case_identity"
+    ],
+    "DOC10_A4": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC10_A1": [
+      "case_identity"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC10_A3": {
+      "local_relevance": 12.0,
+      "answer_utility": 16.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 5.914,
+      "redundancy_penalty": 0.0,
+      "total": 41.914
+    },
+    "DOC10_A2": {
+      "local_relevance": 8.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 30.201
+    },
+    "DOC10_A4": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 5.691,
+      "redundancy_penalty": 0.0,
+      "total": 28.691
+    },
+    "DOC10_A1": {
+      "local_relevance": 4.0,
+      "answer_utility": 5.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 20.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书10》. First coordinate candidate is DOC10_A2.",
+  "raw_plan_text": "<think>The document title indicates that this is a judgment document related to a case. The chunk summaries suggest that the case involves拆迁安置 (demolition and resettlement). Therefore, it's likely that this document falls under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the coordinates that contain more details about the case background and court opinion to confirm this.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC10_A2\",\"candidate_anchor_ids\":[\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>",
+  "tagged_trace": "<think>The document title indicates that this is a judgment document related to a case. The chunk summaries suggest that the case involves拆迁安置 (demolition and resettlement). Therefore, it's likely that this document falls under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect the coordinates that contain more details about the case background and court opinion to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'适用特殊程序案件案由' '侵权责任纠纷' '民间借贷纠纷' '行政行为-行政监督' '渎职罪' '行政主体-房屋拆迁管理（拆迁）'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"], \"next_anchor_id\": \"DOC10_A2\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC10_A3\": 6.0, \"DOC10_A2\": 3.0, \"DOC10_A4\": 6.0, \"DOC10_A1\": 3.0}, \"anchor_role_hits\": {\"DOC10_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A2\": [\"case_identity\"], \"DOC10_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A1\": [\"case_identity\"]}}</search>"
+}

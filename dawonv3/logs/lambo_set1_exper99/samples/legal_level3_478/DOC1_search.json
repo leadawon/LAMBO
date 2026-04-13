@@ -1,0 +1,269 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "task_mode": "clustering",
+  "think": "The current document seems to be related to a dispute over the validity of a debt transfer agreement, which does not directly match any of the five case categories provided. However, it appears to be a civil execution case since it involves a change in the applicant's status due to a debt transfer. I will inspect the section that provides more details on the case background and the application to determine if it can be categorized as '执行案由-民事'.",
+  "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC1_A2",
+  "candidate_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A3",
+    "DOC1_A5",
+    "DOC1_A2",
+    "DOC1_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A3",
+    "DOC1_A5",
+    "DOC1_A2",
+    "DOC1_A4",
+    "DOC1_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A3",
+      "score": 37.914,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11",
+        "legal_label_hit=['民事', '判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 16.0,
+      "utility_hits": [
+        "legal_label_hit=['民事', '判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 8.0,
+        "answer_utility": 16.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 5.914,
+        "redundancy_penalty": 0.0,
+        "total": 37.914
+      },
+      "summary": "沈阳中院查明沈阳某文化传播有限公司与纪某雯的服务合同纠纷案，以及宋某华与沈阳某文化传播有限公司签订的债权转让确认书内容。沈阳中院认为债权转让确认书不符合法律规定，驳回了宋某华的变更申请。"
+    },
+    {
+      "anchor_id": "DOC1_A5",
+      "score": 37.508,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.71",
+        "legal_label_hit=['民事', '判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 16.0,
+      "utility_hits": [
+        "legal_label_hit=['民事', '判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 8.0,
+        "answer_utility": 16.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 5.508,
+        "redundancy_penalty": 0.0,
+        "total": 37.508
+      },
+      "summary": "高级法院确认沈阳中院查明的事实，认为债权转让确认书缺少必要的法律规定的债权转让要件，驳回宋某华的复议申请，维持沈阳中院的变更裁定。"
+    },
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 26.201,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 26.201
+      },
+      "summary": "宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。"
+    },
+    {
+      "anchor_id": "DOC1_A4",
+      "score": 25.691,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 5.691,
+        "redundancy_penalty": 0.0,
+        "total": 25.691
+      },
+      "summary": "宋某华不服沈阳中院的变更裁定，申请复议，认为债权转让合法有效。"
+    }
+  ],
+  "utility_hits": {
+    "DOC1_A3": [
+      "legal_label_hit=['民事', '判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC1_A5": [
+      "legal_label_hit=['民事', '判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC1_A2": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC1_A4": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC1_A3": 16.0,
+    "DOC1_A5": 16.0,
+    "DOC1_A2": 11.0,
+    "DOC1_A4": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC1_A3": 6.0,
+    "DOC1_A5": 6.0,
+    "DOC1_A2": 3.0,
+    "DOC1_A4": 3.0
+  },
+  "anchor_role_hits": {
+    "DOC1_A3": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC1_A5": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC1_A2": [
+      "case_identity"
+    ],
+    "DOC1_A4": [
+      "decision_evidence"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC1_A3": {
+      "local_relevance": 8.0,
+      "answer_utility": 16.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 5.914,
+      "redundancy_penalty": 0.0,
+      "total": 37.914
+    },
+    "DOC1_A5": {
+      "local_relevance": 8.0,
+      "answer_utility": 16.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 5.508,
+      "redundancy_penalty": 0.0,
+      "total": 37.508
+    },
+    "DOC1_A2": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 26.201
+    },
+    "DOC1_A4": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 5.691,
+      "redundancy_penalty": 0.0,
+      "total": 25.691
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书1》. First coordinate candidate is DOC1_A2.",
+  "raw_plan_text": "<think>The current document seems to be related to a dispute over the validity of a debt transfer agreement, which does not directly match any of the five case categories provided. However, it appears to be a civil execution case since it involves a change in the applicant's status due to a debt transfer. I will inspect the section that provides more details on the case background and the application to determine if it can be categorized as '执行案由-民事'.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC1_A2\",\"candidate_anchor_ids\":[\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"]}</search>",
+  "tagged_trace": "<think>The current document seems to be related to a dispute over the validity of a debt transfer agreement, which does not directly match any of the five case categories provided. However, it appears to be a civil execution case since it involves a change in the applicant's status due to a debt transfer. I will inspect the section that provides more details on the case background and the application to determine if it can be categorized as '执行案由-民事'.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"next_anchor_id\": \"DOC1_A2\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC1_A3\": 6.0, \"DOC1_A5\": 6.0, \"DOC1_A2\": 3.0, \"DOC1_A4\": 3.0}, \"anchor_role_hits\": {\"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A2\": [\"case_identity\"], \"DOC1_A4\": [\"decision_evidence\"]}}</search>"
+}

@@ -1,0 +1,1344 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A1",
+    "DOC1_A3"
+  ],
+  "final_current_query": "是否存在其他类型的案件如赔偿案件或民事案件？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A2",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "utility_hits": {
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A3": 11.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A2": 11.0,
+          "DOC1_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC1_A3": {
+            "local_relevance": 20.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 44.914
+          },
+          "DOC1_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 9.191,
+            "redundancy_penalty": 0.0,
+            "total": 32.191
+          },
+          "DOC1_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 26.201
+          },
+          "DOC1_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 0.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 17.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A2",
+      "plan_think": "The document seems to be related to an execution case based on the information provided in DOC1_A4. The document discusses objections to the execution of a property and the court's decision on those objections. Therefore, it would be appropriate to categorize this document as an '执行案件'. I will select DOC1_A2 next to confirm the type of case and gather more context.",
+      "info": {
+        "anchor_id": "DOC1_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC1_A2: 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n[DOC1_A2 | 案件背景]\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\n\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\n\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\n\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\n\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\n\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\n\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\n\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\n\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\n\n又查明，案外人曲珍与益西登巴系夫妻关系。\n\n[DOC1_A3 | 争议焦点]\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\n\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\n\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\n\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\n\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\n\n三、案涉房产为银行抵押物是否能排除执行的问题。\n\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\n\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\n\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\n\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\n\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\n\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\n\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\n\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "primary_anchor_id": "DOC1_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。",
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2020",
+          "01",
+          "88",
+          "11",
+          "23",
+          "2021",
+          "4"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 16,
+          "relation_type_counts": {
+            "supports": 2,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 2,
+            "nearby_window": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A1",
+            "DOC1_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides clear evidence that the document is related to an '执行案件' due to the discussion of the execution of a property and the court's decisions regarding the objections raised. However, it does not provide explicit information about other potential cases (赔偿案件 or 民事案件) within the same document. Therefore, we can classify this specific document but need further inspection to determine if there are other types of cases mentioned.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否存在其他类型的案件如赔偿案件或民事案件？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "是否存在其他类型的案件如赔偿案件或民事案件？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A2"
+        ],
+        "utility_hits": {
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A3": 11.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC1_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A2",
+            "nearby_window_selected=DOC1_A2"
+          ],
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A2",
+            "nearby_window_selected=DOC1_A2"
+          ],
+          "DOC1_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A2",
+            "nearby_window_selected=DOC1_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A3": 20.98,
+          "DOC1_A4": 20.98,
+          "DOC1_A1": 11.36
+        },
+        "anchor_role_hits": {
+          "DOC1_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A4": [
+            "case_identity",
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A3": {
+            "local_relevance": 12.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 20.98,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 48.894
+          },
+          "DOC1_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 20.98,
+            "weak_priors": 9.191,
+            "redundancy_penalty": 3.0,
+            "total": 40.171
+          },
+          "DOC1_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 11.36,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 21.66
+          }
+        }
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The current evidence strongly suggests that the document is related to an '执行案件'. However, to ensure completeness and to check if there are any mentions of '赔偿案件' or '民事案件', it would be prudent to review the remaining sections of the document. Specifically, DOC1_A1 might contain additional context or details that could indicate the presence of other case types.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "Expanded same-section read window around DOC1_A1: 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n[DOC1_A2 | 案件背景]\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\n\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\n\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\n\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\n\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\n\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\n\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\n\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\n\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\n\n又查明，案外人曲珍与益西登巴系夫妻关系。\n\n[DOC1_A3 | 争议焦点]\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\n\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\n\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\n\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\n\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\n\n三、案涉房产为银行抵押物是否能排除执行的问题。\n\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\n\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\n\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\n\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\n\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\n\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\n\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\n\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "primary_anchor_id": "DOC1_A1",
+        "anchor_role_candidates": [
+          "value_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "1962",
+          "8",
+          "136",
+          "1966",
+          "1986",
+          "11",
+          "1983"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 12,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 3,
+            "likely_same_entity": 3,
+            "prev_next": 1,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information about the parties involved in the case, including the applicants for reconsideration, the applicant for enforcement, and the defendant. However, it does not provide any direct evidence about the type of cases beyond what was already identified in the previous chunk. It confirms the involvement of the parties but does not mention '赔偿案件' or '民事案件'. Therefore, we should continue searching for more evidence to ensure completeness.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否存在其他类型的案件如赔偿案件或民事案件？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...",
+            "当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "是否存在其他类型的案件如赔偿案件或民事案件？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A3",
+        "candidate_anchor_ids": [
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...",
+            "当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A2",
+          "DOC1_A1"
+        ],
+        "utility_hits": {
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A3": 11.0,
+          "DOC1_A4": 11.0
+        },
+        "relation_hits": {
+          "DOC1_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "same_case_selected=DOC1_A1",
+            "disambiguates_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A1",
+            "likely_same_entity_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A1",
+            "nearby_window_selected=DOC1_A2",
+            "nearby_window_selected=DOC1_A1"
+          ],
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "same_case_selected=DOC1_A1",
+            "disambiguates_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A1",
+            "likely_same_entity_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A1",
+            "nearby_window_selected=DOC1_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A3": 29.1,
+          "DOC1_A4": 27.85
+        },
+        "anchor_role_hits": {
+          "DOC1_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A4": [
+            "case_identity",
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A3": {
+            "local_relevance": 12.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 29.1,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 57.014
+          },
+          "DOC1_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 27.85,
+            "weak_priors": 9.191,
+            "redundancy_penalty": 3.0,
+            "total": 47.041
+          }
+        }
+      },
+      "anchor_id": "DOC1_A3",
+      "plan_think": "The document has been reviewed for the '执行案件' type, and no explicit mentions of '赔偿案件' or '民事案件' have been found yet. To ensure completeness, it would be wise to inspect the remaining sections of the document, particularly DOC1_A3, which contains the dispute focus and may provide additional context or details that could indicate the presence of other case types.",
+      "info": {
+        "anchor_id": "DOC1_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "争议焦点",
+        "summary": "Expanded same-section read window around DOC1_A3: 争议焦点包括案外人布珠、嘎地是否享有实际权利，案外人曲珍是否享有夫妻共同共有财产权利，案涉房产为银行抵押物是否能排除执行，以及是否存在虚假诉讼及犯罪行为。拉萨中院认为案外人布珠、嘎地、曲珍的异议理由不成立，驳回了他们的异议请求。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\n\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\n\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\n\n[DOC1_A2 | 案件背景]\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\n\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\n\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\n\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\n\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\n\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\n\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\n\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\n\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\n\n又查明，案外人曲珍与益西登巴系夫妻关系。\n\n[DOC1_A3 | 争议焦点]\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\n\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\n\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\n\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\n\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\n\n三、案涉房产为银行抵押物是否能排除执行的问题。\n\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\n\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\n\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\n\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\n\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\n\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\n\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\n\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "primary_anchor_id": "DOC1_A3",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "执行案件",
+          "对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。",
+          "被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。",
+          "人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。",
+          "执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。",
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "540102006002",
+          "00031",
+          "00010001",
+          "2020",
+          "01",
+          "216",
+          "2016"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 16,
+          "relation_type_counts": {
+            "supports": 2,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 2,
+            "nearby_window": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A1",
+            "DOC1_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides detailed information about the disputes and decisions made in the case, confirming that it is an '执行案件'. However, it does not provide any explicit mentions of '赔偿案件' or '民事案件'. Therefore, we should continue to search for more evidence to ensure completeness.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否存在其他类型的案件如赔偿案件或民事案件？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2",
+            "DOC1_A1",
+            "DOC1_A3"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...",
+            "当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。",
+            "争议焦点 争议焦点包括案外人布珠、嘎地是否享有实际权利，案外人曲珍是否享有夫妻共同共有财产权利，案涉房产为银行抵押物是否能排除执行，以及是否存在虚假诉讼及犯罪行为。拉萨中院认为案外人布珠、嘎地、曲珍的异议理由不成立，驳回了他们的异议请求。 拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 根据《中华人民共和国民事诉讼法》第二百四十四条规..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A4"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "执行案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The document seems to be related to an execution case based on the information provided in DOC1_A4. The document discusses objections to the execution of a property and the court's decision on those objections. Therefore, it would be appropriate to categorize this document as an '执行案件'. I will select DOC1_A2 next to confirm the type of case and gather more context.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A2\": 11.0, \"DOC1_A1\": 5.0}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 20.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 44.914}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 9.191, \"redundancy_penalty\": 0.0, \"total\": 32.191}, \"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 0.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 17.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC1_A2: 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n[DOC1_A2 | 案件背景]\\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\\n\\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\\n\\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\\n\\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\\n\\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\\n\\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\\n\\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\\n\\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\\n\\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\\n\\n又查明，案外人曲珍与益西登巴系夫妻关系。\\n\\n[DOC1_A3 | 争议焦点]\\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\\n\\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\\n\\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\\n\\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\\n\\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\\n\\n三、案涉房产为银行抵押物是否能排除执行的问题。\\n\\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\\n\\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\\n\\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\\n\\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\\n\\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\\n\\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\\n\\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\\n\\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"primary_anchor_id\": \"DOC1_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2020\", \"01\", \"88\", \"11\", \"23\", \"2021\", \"4\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 16, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\", \"DOC1_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>The selected chunk provides clear evidence that the document is related to an '执行案件' due to the discussion of the execution of a property and the court's decisions regarding the objections raised. However, it does not provide explicit information about other potential cases (赔偿案件 or 民事案件) within the same document. Therefore, we can classify this specific document but need further inspection to determine if there are other types of cases mentioned.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>\n<think>The current evidence strongly suggests that the document is related to an '执行案件'. However, to ensure completeness and to check if there are any mentions of '赔偿案件' or '民事案件', it would be prudent to review the remaining sections of the document. Specifically, DOC1_A1 might contain additional context or details that could indicate the presence of other case types.</think>\n<search>{\"current_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}, \"avoid_anchor_ids\": [\"DOC1_A2\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"]}, \"relation_score\": {\"DOC1_A3\": 20.98, \"DOC1_A4\": 20.98, \"DOC1_A1\": 11.36}, \"anchor_role_hits\": {\"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 20.98, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 48.894}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 20.98, \"weak_priors\": 9.191, \"redundancy_penalty\": 3.0, \"total\": 40.171}, \"DOC1_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 11.36, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 21.66}}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC1_A1: 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n[DOC1_A2 | 案件背景]\\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\\n\\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\\n\\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\\n\\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\\n\\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\\n\\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\\n\\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\\n\\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\\n\\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\\n\\n又查明，案外人曲珍与益西登巴系夫妻关系。\\n\\n[DOC1_A3 | 争议焦点]\\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\\n\\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\\n\\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\\n\\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\\n\\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\\n\\n三、案涉房产为银行抵押物是否能排除执行的问题。\\n\\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\\n\\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\\n\\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\\n\\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\\n\\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\\n\\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\\n\\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\\n\\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"1962\", \"8\", \"136\", \"1966\", \"1986\", \"11\", \"1983\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 12, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"likely_same_entity\": 3, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>The selected chunk provides information about the parties involved in the case, including the applicants for reconsideration, the applicant for enforcement, and the defendant. However, it does not provide any direct evidence about the type of cases beyond what was already identified in the previous chunk. It confirms the involvement of the parties but does not mention '赔偿案件' or '民事案件'. Therefore, we should continue searching for more evidence to ensure completeness.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\", \"当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>\n<think>The document has been reviewed for the '执行案件' type, and no explicit mentions of '赔偿案件' or '民事案件' have been found yet. To ensure completeness, it would be wise to inspect the remaining sections of the document, particularly DOC1_A3, which contains the dispute focus and may provide additional context or details that could indicate the presence of other case types.</think>\n<search>{\"current_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A3\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\", \"当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}, \"avoid_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0}, \"relation_hits\": {\"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A1\", \"nearby_window_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A1\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A1\", \"nearby_window_selected=DOC1_A2\"]}, \"relation_score\": {\"DOC1_A3\": 29.1, \"DOC1_A4\": 27.85}, \"anchor_role_hits\": {\"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 29.1, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 57.014}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 27.85, \"weak_priors\": 9.191, \"redundancy_penalty\": 3.0, \"total\": 47.041}}}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"争议焦点\", \"summary\": \"Expanded same-section read window around DOC1_A3: 争议焦点包括案外人布珠、嘎地是否享有实际权利，案外人曲珍是否享有夫妻共同共有财产权利，案涉房产为银行抵押物是否能排除执行，以及是否存在虚假诉讼及犯罪行为。拉萨中院认为案外人布珠、嘎地、曲珍的异议理由不成立，驳回了他们的异议请求。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n[DOC1_A2 | 案件背景]\\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\\n\\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\\n\\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\\n\\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\\n\\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\\n\\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\\n\\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\\n\\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\\n\\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\\n\\n又查明，案外人曲珍与益西登巴系夫妻关系。\\n\\n[DOC1_A3 | 争议焦点]\\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\\n\\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\\n\\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\\n\\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\\n\\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\\n\\n三、案涉房产为银行抵押物是否能排除执行的问题。\\n\\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\\n\\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\\n\\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\\n\\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\\n\\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\\n\\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\\n\\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\\n\\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"primary_anchor_id\": \"DOC1_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"执行案件\", \"对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。\", \"被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。\", \"人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。\", \"执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"540102006002\", \"00031\", \"00010001\", \"2020\", \"01\", \"216\", \"2016\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 16, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>The selected chunk provides detailed information about the disputes and decisions made in the case, confirming that it is an '执行案件'. However, it does not provide any explicit mentions of '赔偿案件' or '民事案件'. Therefore, we should continue to search for more evidence to ensure completeness.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\", \"DOC1_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\", \"当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\", \"争议焦点 争议焦点包括案外人布珠、嘎地是否享有实际权利，案外人曲珍是否享有夫妻共同共有财产权利，案涉房产为银行抵押物是否能排除执行，以及是否存在虚假诉讼及犯罪行为。拉萨中院认为案外人布珠、嘎地、曲珍的异议理由不成立，驳回了他们的异议请求。 拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 根据《中华人民共和国民事诉讼法》第二百四十四条规...\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to an execution case based on the information provided in DOC1_A4. The document discusses objections to the execution of a property and the court's decision on those objections. Therefore, it would be appropriate to categorize this document as an '执行案件'. I will select DOC1_A2 next to confirm the type of case and gather more context.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A2\": 11.0, \"DOC1_A1\": 5.0}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 20.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 44.914}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 9.191, \"redundancy_penalty\": 0.0, \"total\": 32.191}, \"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 0.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 17.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC1_A2: 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n[DOC1_A2 | 案件背景]\\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\\n\\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\\n\\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\\n\\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\\n\\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\\n\\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\\n\\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\\n\\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\\n\\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\\n\\n又查明，案外人曲珍与益西登巴系夫妻关系。\\n\\n[DOC1_A3 | 争议焦点]\\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\\n\\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\\n\\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\\n\\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\\n\\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\\n\\n三、案涉房产为银行抵押物是否能排除执行的问题。\\n\\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\\n\\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\\n\\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\\n\\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\\n\\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\\n\\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\\n\\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\\n\\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"primary_anchor_id\": \"DOC1_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2020\", \"01\", \"88\", \"11\", \"23\", \"2021\", \"4\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 16, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\", \"DOC1_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>The selected chunk provides clear evidence that the document is related to an '执行案件' due to the discussion of the execution of a property and the court's decisions regarding the objections raised. However, it does not provide explicit information about other potential cases (赔偿案件 or 民事案件) within the same document. Therefore, we can classify this specific document but need further inspection to determine if there are other types of cases mentioned.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>\n<think>The current evidence strongly suggests that the document is related to an '执行案件'. However, to ensure completeness and to check if there are any mentions of '赔偿案件' or '民事案件', it would be prudent to review the remaining sections of the document. Specifically, DOC1_A1 might contain additional context or details that could indicate the presence of other case types.</think>\n<search>{\"current_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}, \"avoid_anchor_ids\": [\"DOC1_A2\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"]}, \"relation_score\": {\"DOC1_A3\": 20.98, \"DOC1_A4\": 20.98, \"DOC1_A1\": 11.36}, \"anchor_role_hits\": {\"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 20.98, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 48.894}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 20.98, \"weak_priors\": 9.191, \"redundancy_penalty\": 3.0, \"total\": 40.171}, \"DOC1_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 11.36, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 21.66}}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC1_A1: 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n[DOC1_A2 | 案件背景]\\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\\n\\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\\n\\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\\n\\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\\n\\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\\n\\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\\n\\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\\n\\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\\n\\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\\n\\n又查明，案外人曲珍与益西登巴系夫妻关系。\\n\\n[DOC1_A3 | 争议焦点]\\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\\n\\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\\n\\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\\n\\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\\n\\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\\n\\n三、案涉房产为银行抵押物是否能排除执行的问题。\\n\\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\\n\\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\\n\\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\\n\\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\\n\\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\\n\\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\\n\\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\\n\\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"1962\", \"8\", \"136\", \"1966\", \"1986\", \"11\", \"1983\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 12, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"likely_same_entity\": 3, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>The selected chunk provides information about the parties involved in the case, including the applicants for reconsideration, the applicant for enforcement, and the defendant. However, it does not provide any direct evidence about the type of cases beyond what was already identified in the previous chunk. It confirms the involvement of the parties but does not mention '赔偿案件' or '民事案件'. Therefore, we should continue searching for more evidence to ensure completeness.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\", \"当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>\n<think>The document has been reviewed for the '执行案件' type, and no explicit mentions of '赔偿案件' or '民事案件' have been found yet. To ensure completeness, it would be wise to inspect the remaining sections of the document, particularly DOC1_A3, which contains the dispute focus and may provide additional context or details that could indicate the presence of other case types.</think>\n<search>{\"current_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A3\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\", \"当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}, \"avoid_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0}, \"relation_hits\": {\"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A1\", \"nearby_window_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A1\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A1\", \"nearby_window_selected=DOC1_A2\"]}, \"relation_score\": {\"DOC1_A3\": 29.1, \"DOC1_A4\": 27.85}, \"anchor_role_hits\": {\"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 29.1, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 57.014}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 27.85, \"weak_priors\": 9.191, \"redundancy_penalty\": 3.0, \"total\": 47.041}}}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"争议焦点\", \"summary\": \"Expanded same-section read window around DOC1_A3: 争议焦点包括案外人布珠、嘎地是否享有实际权利，案外人曲珍是否享有夫妻共同共有财产权利，案涉房产为银行抵押物是否能排除执行，以及是否存在虚假诉讼及犯罪行为。拉萨中院认为案外人布珠、嘎地、曲珍的异议理由不成立，驳回了他们的异议请求。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。\\n\\n委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。\\n\\n委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\\n\\n[DOC1_A2 | 案件背景]\\n申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。\\n\\n委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。\\n\\n委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。\\n\\n被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。\\n\\n复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。\\n\\n拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。\\n\\n拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事调解书，因被执行人益西登巴未履行生效法律文书确定的义务，申请执行人钱萍向拉萨中院申请执行。拉萨中院于2020年11月23日立案执行，执行案号为（2020）藏01执216号，本院于2020年10月28日向被执行人益西登巴直接送达执行通知书、报告财产令。拉萨中院于2021年1月8日作出（2020）藏01执216号执行裁定书，裁定拍卖被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号）。2021年3月24日，湖北玖誉房地产评估有限公司出具玖誉估字（2021）SC鉴字第002号《房地产司法估价报告》中对益西登巴位于拉萨市中和国际城狮泉路以西（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）的住宅房地产市场价值评估作价2,350.10万元，该估价报告书已直接送达给双方当事人。\\n\\n另查明，在审理（2020）藏01民初88号案件即申请执行人钱萍与被申请人益西登巴借款合同纠纷一案中，拉萨市中级人民法院于2020年8月21日作出（2020）藏01民初88号民事裁定书，裁定：“一、以20,000,000元为限，查封被申请人益西登巴位于西藏拉萨市××路以西的价值房产（产权证号：监证0003774），期限为两年；二、以43,000,000元为限，冻结被申请人益西登巴的银行存款，期限为一年。”\\n\\n再查明，案涉房产有他项权利信息（他权0005267），他项权人为中信银行股份有限公司拉萨分行，已在拉萨市不动产登记中心作抵押登记。\\n\\n又查明，案外人曲珍与益西登巴系夫妻关系。\\n\\n[DOC1_A3 | 争议焦点]\\n拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。\\n\\n一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。\\n\\n根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。\\n\\n二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。\\n\\n根据《中华人民共和国民事诉讼法》第二百四十四条规定：“被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。”被执行人益西登巴作为（2020）藏01执216号执行案件的被执行人，依法负有履行生效法律文书确定义务的责任，遂本院拍卖被执行人益西登巴名下房产的执行行为符合法律规定，对此本院予以认可。案外人曲珍主张对案涉房产共同共有的理由与拉萨市不动产登记中心确认房屋所有权的登记信息内容不一致，故案外人曲珍并非案涉房产的权利人，其主张不具有排除强制执行的效力，对此本院不予认可。\\n\\n三、案涉房产为银行抵押物是否能排除执行的问题。\\n\\n根据《最高人民法院关于人民法院执行工作若干问题的规定（试行）》第三十一条规定：“人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。”《最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复》法释〔2016〕6号第一条规定：“执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。”本院作为案涉房产首次查封法院，有权对案涉房产进行拍卖，四案外人主张案涉房产涉及抵押权不能执行的异议理由，于法无据，本院不予认可。\\n\\n四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。\\n\\n综上所述，四案外人的异议理由不成立，其请求应予以驳回。依照《中华人民共和国民事诉讼法》第二百二十七条、《最高人民法院关于适用＜中华人民共和国民事诉讼法＞执行程序若干问题的解释》第十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项的规定，裁定驳回布珠、多扎、嘎地、曲珍的异议请求。\\n\\n[DOC1_A4 | 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 > 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 > 四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题，对此，本院认为该项理由不属于本案执行异议审查范围，故本院不予答复。]\\n申请复议人称，请求依法审查拉萨中院2021年4月28日作出的（2021）藏01执异5号裁定并撤销该执行裁定书。其事实与理由：一、拉萨中院未向四申请人及其代理律师送达申请执行人钱萍答辩文书，未听取四申请人及其代理律师举证、质证、听证意见情况下直接作出裁定，程序严重违法，涉案执行房屋产权证不一致，未核实情况，涉案执行房屋所有权人为益西登巴的认定无任何事实与法律依据。二、以涉案执行房屋所有权人为益西登巴为由认定四申请人不具有排除强制执行效力是对事实和法律的曲解，该涉案房屋实际属于尼嘎家人所有，当时为贷款而过户到益西登巴名下，对相关证人未进行核实作出认定无法律依据。同时，过户到益西登巴名下的行为未经尼嘎妻子布珠、嘎地出具书面或口头意见，该行为不属于赠与，即使属于赠与，该房屋属于益西登巴、曲珍的夫妻共同财产。三、拉萨中院在无任何查封涉案房屋依据的情况下查封涉案房屋，以首封法院负责处置查封财产而驳回该房产为抵押物排除执行的异议是错误的，不予认可。\\n\\n本院查明事实与拉萨中院查明事实一致。在听证中，双方当事人没有提交新证据。\\n\\n本院认为，本案的争议焦点为：一、拉萨中院的异议审查程序是否严重违法。二、复议申请人对涉案房产享有实体权利阻却执行是否成立。\\n\\n一、拉萨中院的异议审查程序是否严重违法的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第十二条“人民法院对执行异议和复议案件实行书面审查。案情复杂、争议较大的，应当进行听证”的规定，书面审查的要义在于法官阅卷，审查诉讼材料，双方当事人不当面质证、不进行口头辩论，审查活动主要是法官的活动，其实质是快速果断，高效及时，尽快实现法律文书确定的权利义务，举证、质证、听证不是异议案件的必经程序，是法官结合案情的自由裁量范围，当事人认为有新证据向法院提交的，应当主动积极提交，否则就可能承担不利的法律后果。另外，拉萨中院裁定书中拍卖房产产权证信息没有错误，与拉萨市不动产登记中心出具的房产产权信息一致。综上，复议申请人及其委托诉讼代理人认为异议审查程序严重违法的理由不能成立，拉萨中院的异议审查程序符合法律规定。二、复议申请人对涉案房产享有实体权利阻却执行是否成立的问题。根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第八条“案外人基于实体权利既对执行标的提出排除执行异议又作为利害关系人提出执行行为异议的，人民法院应当依照民事诉讼法第二百二十七条规定进行审查”；《中华人民共和国民事诉讼法》第二百二十七条 规定“执行过程中，案外人对执行标的提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定中止对该标的的执行；理由不成立的，裁定驳回。案外人、当事人对裁定不服，认为原判决、裁定错误的，依照审判监督程序办理；与原判决、裁定无关的，可以自裁定送达之日起十五日内向人民法院提起诉讼” ，拉萨中院已经依法对异议是否成立进行裁定，且在裁定书中明确告知救济权利和途径，复议申请人应当通过告知途径行使救济权利。因此本院对此复议请求不予审查，其理由不予支持。依照《最高人民法院关于适用<中华人民共和国民事诉讼法>执行程序若干问题的解释》第八条、第九条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题规定》第二十三条第（一）项裁定如下：\\n\\n驳回布珠、嘎地、多扎、曲珍的复议申请，维持西藏自治区拉萨市中级人民法院（2021）藏01执异5号裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"primary_anchor_id\": \"DOC1_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"执行案件\", \"对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。\", \"被执行人未按执行通知履行法律文书确定的义务，人民法院有权查封、扣押、冻结、拍卖、变卖被执行人应当履行义务部分的财产。\", \"人民法院对被执行人所有的其他人享有抵押权、质押权或留置权的财产，可以采取查封、扣押措施。\", \"执行过程中，应当由首先查封、扣押、冻结法院负责处分查封财产。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"540102006002\", \"00031\", \"00010001\", \"2020\", \"01\", \"216\", \"2016\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 16, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>The selected chunk provides detailed information about the disputes and decisions made in the case, confirming that it is an '执行案件'. However, it does not provide any explicit mentions of '赔偿案件' or '民事案件'. Therefore, we should continue to search for more evidence to ensure completeness.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否存在其他类型的案件如赔偿案件或民事案件？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\", \"DOC1_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 申请执行人钱萍与被执行人益西登巴之间的借款合同纠纷案，拉萨中院作出（2020）藏01民初88号民事调解书。因被执行人未履行义务，钱萍申请执行。拉萨中院于2020年11月23日立案执行，并于2021年4月20日对被执行人名下房产进行拍卖。案外人布珠、嘎地、多扎、曲珍提出书面异议。 申请执行人：钱萍，女，1978年10月30日出生，汉族，现住上海市青浦区。 委托诉讼代理人：央金，北京市大成（拉萨）律师事务所律师。 委托诉讼代理人：白玛德吉，北京市大成（拉萨）律师事务所律师。 被执行人：益西登巴，男，1967年1月18日出生，藏族，现住西藏自治区拉萨市。 复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2021年6月30日举行听证，当事人布珠、嘎地、多扎、曲珍及其委托代理人桑吉拉姆、达珠，钱萍委托代理人央金、白玛德吉参加听证，并提交书面意见，现已审查终结。 拉萨中院在执行申请执行人钱萍与被执行人益西登巴借款合同纠纷一案中，于2021年4月20日对被执行人益西登巴名下位于西藏拉萨市××路以西的房产（拉房权证字第XXXX号、拉城国用（土登）第786-02-02号）进行拍卖，案外人布珠、嘎地、多扎、曲珍（以下简称四案外人）提出书面异议。 拉萨中院查明：申请执行人钱萍与被执行人益西登巴借款合同纠纷一案，拉萨中院作出（2020）藏01民初88号民事...\", \"当事人信息 复议申请人包括布珠、嘎地、多扎、曲珍，他们均委托西藏拉姆律师事务所律师桑吉拉姆和达珠作为诉讼代理人。申请执行人钱萍委托北京市大成（拉萨）律师事务所律师央金和白玛德吉作为诉讼代理人。被执行人是益西登巴。 复议申请人：布珠，女，1962年1月8日出生，现住拉萨市，身份证号码×××，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：嘎地，女，1966年1月1 日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：多扎，男，1986年1月11日出生， 现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。 复议申请人：曲珍，女，1983年1月12日出生，现住拉萨市，联系方式136XXXXXXXX。 委托诉讼代理人：桑吉拉姆，西藏拉姆律师事务所律师。 委托诉讼代理人：达珠，西藏拉姆律师事务所律师。\", \"争议焦点 争议焦点包括案外人布珠、嘎地是否享有实际权利，案外人曲珍是否享有夫妻共同共有财产权利，案涉房产为银行抵押物是否能排除执行，以及是否存在虚假诉讼及犯罪行为。拉萨中院认为案外人布珠、嘎地、曲珍的异议理由不成立，驳回了他们的异议请求。 拉萨中院认为：本案的争议焦点为：一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。三、案涉房产为银行抵押物是否能排除执行的问题。四、四案外人提出的案件存在虚假诉讼及犯罪行为是否阻却执行的问题。 一、案外人布珠、嘎地以对案涉房产享有实际权利的理由是否具有排除强制执行效力的问题。 根据《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十五条：“对案外人的异议，人民法院应当按照下列标准判断其是否系权利人：（一）已登记的不动产，按照不动产登记簿判断。”本案中，本院拍卖的位于西藏拉萨市××路以西不动产（不动产单元号540102006002GB00031F00010001）登记信息中显示所有权人为益西登巴，无共同共有人信息，上述案外人无相关证据证明其系案涉房屋的权利人。本院认为，上述案外人并非案涉房产的权利人其异议理由不能成立，本院不予认可。 二、案外人曲珍以案涉房产系夫妻共同共有财产请求停止执行的主张是否成立的问题。 根据《中华人民共和国民事诉讼法》第二百四十四条规...\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}}</retrieve>"
+}

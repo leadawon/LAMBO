@@ -1,0 +1,947 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding",
+  "selected_anchor_ids": [
+    "DOC2_A2",
+    "DOC2_A7"
+  ],
+  "final_current_query": "Identify papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding' that are also provided in the document set.",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A2",
+        "candidate_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5"
+        ],
+        "utility_hits": {
+          "DOC2_A7": [
+            "reference_section",
+            "likely_reverse_citation_penalty",
+            "other_doc_cites_target",
+            "citation_direction_reference_list",
+            "citation_format_cue"
+          ],
+          "DOC2_A6": [
+            "reference_section"
+          ],
+          "DOC2_A5": [
+            "citation_format_cue"
+          ],
+          "DOC2_A3": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A7": 25.0,
+          "DOC2_A6": 7.0,
+          "DOC2_A5": 3.0,
+          "DOC2_A3": 3.0
+        },
+        "score_breakdown": {
+          "DOC2_A7": {
+            "local_relevance": 30.0,
+            "answer_utility": 25.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 13.221,
+            "redundancy_penalty": 0.0,
+            "total": 75.221
+          },
+          "DOC2_A6": {
+            "local_relevance": 26.0,
+            "answer_utility": 7.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 9.154,
+            "redundancy_penalty": 0.0,
+            "total": 49.154
+          },
+          "DOC2_A5": {
+            "local_relevance": 20.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 9.308,
+            "redundancy_penalty": 0.0,
+            "total": 39.308
+          },
+          "DOC2_A3": {
+            "local_relevance": 18.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 9.714,
+            "redundancy_penalty": 0.0,
+            "total": 37.714
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC2_A2",
+      "plan_think": "Since the current query is about \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction,\" I should first look for any explicit mentions of this tool or similar concepts within the document. The introduction (DOC2_A2) often provides context and mentions related tools or methods, making it a good starting point.",
+      "info": {
+        "anchor_id": "DOC2_A2",
+        "anchor_type": "table_region",
+        "section_path": "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction",
+        "summary": "Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors.",
+        "text": "## 1 Introduction\n\nAugmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to use unknown tools that are not in the training set.\n\nOut-of-the-box LLMs such as Mistral and Llama, even when instruction-tuned to be very capable on many other tasks (Jiang et al., 2023), can fail in using tools, as demonstrated by its low (and even zero) performance in Figure 1. One major reason for their bad performance is syntax errors. For example, Mistral-Instruct-7B has a syntax error rate of over $90 \\%$ when using some unknown tools in ToolEval (Qin et al. 2023), which results in its $0 \\%$ accuracy. Even very capable models such as GPT-4 make syntax errors on new tools. Previous approaches use extensive fine-tuning or prompting (Qin et al. 2023, Hao et al. 2023) to teach LLMs tool syntax, which reduces syntax errors but not all of them. In Figure 1, although the fine-tuned ToolLLM makes significantly fewer syntax errors than the general Mistral-Instruct, it still has an over $20 \\%$ error rate. We show examples of common modes of failure in Figure 2 .\n\nWe argue that fine-tuning or prompting is neither optimal nor enough to enforce syntax constraints, because general instruction-tuned models already have a \"rough idea\" of what tool to use in different scenarios. Fine-tuning or prompting approaches expect the model to learn and follow syntax constraints from tool use examples in training data or in-context demonstration. However, these constraints can be explicitly modeled with symbolic rules. Directly applying these rules in model generation can be more accurate than either fine-tuning or prompting, as they do not need extra compute or prompting while guaranteeing the model is syntax error-free.\n\nTo this end, we propose ToolDEC, a decoding algorithm guided by a finite-state machine (FSM) to ensure LLMs invoke tools properly. We automatically convert tool syntax schemas to an equivalent finite-state machine. During decoding, ToOLDEC transitions from state to state as decoding progresses. At each decoding step, TOOLDEC samples from the valid subset of tokens allowed by the tool syntax. This way, TOOLDEC is able to always generate syntactically correct tool calls. Since syntax constraints are enforced by the FSM, there's no need for them to appear in prompts. We further use an LLM to simplify the tool description prompt by removing the syntax constraints from it. ToolDEC is model-agnostic and can be combined with any base LLM. More examples comparing TOOLDEC and other tool LLMs can be found in Appendix A.1.\n\n![](https://cdn.mathpix.com/cropped/2024_06_04_4b31f047d07fc348d505g-02.jpg?height=479&width=1350&top_left_y=1655&top_left_x=385)\n\nFigure 2: Common syntactical modes of failure of tool-use LLMs include reasoning format error, tool name error, and tool argument error. Even fine-tuned models have a significant level of syntax error.\n\nWe evaluate ToolDec by applying it to 5 base models and evaluating it on 4 benchmarks. On base models that are specifically fine-tuned for tool use purposes, such as ToolLLM Qin et al. (2023) and ToolkenGPT Hao et al. (2023), ToolDEC significantly improves their accuracy by at most 21 points and greatly reduce the number of tokens in the output. On base models that initially have zero accuracy on ToolBench Qin et al. (2023) such as Mistral Jiang et al. (2023) and Vicuna Chiang et al. (2023), TOOLDEC improves their accuracy from 0 to at most $60 \\%$.\n\nOur contributions can be summarized as follows:\n\n- We propose ToolDEC, a constrained decoding algorithm for LLMs to use tools without syntax errors. TOOLDEC can off-load syntax constraints to an FSM, and eliminate all syntax errors.\n- We verify ToolDEC's superior performance by combining it with 5 base models and evaluating on 4 benchmarks. Our experiments show TOOLDEC improves all base models significantly.\n- We further compare TOOLDEC on generalist models with specialized tool-using models. We find that ToOLDEC, as an alternative, can achieve comparable performance while retaining the model's performance on other reasoning benchmarks.",
+        "anchor_role_candidates": [
+          "table_value",
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Don",
+          "Fine-Tune",
+          "Decode:",
+          "Syntax",
+          "Error-Free",
+          "Tool",
+          "Use",
+          "via",
+          "Constrained",
+          "Decoding"
+        ],
+        "anchor_targets": [
+          "t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don",
+          "Don",
+          "Fine-Tune",
+          "Decode:"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "2022,",
+          "2023,",
+          "2022",
+          "-7",
+          "90",
+          "0"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "table_region",
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_target_paper": 6,
+            "disambiguates": 6
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk contains several citations to other papers, but none of them directly mention \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction.\" Therefore, there are no direct references or citations to the target paper in this chunk. However, the chunk does provide useful information about other related papers that could be potential references or citations if they appear elsewhere in the provided documents.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Identify papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding' that are also provided in the document set.",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC2_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Identify papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding' that are also provided in the document set.",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A7",
+        "candidate_anchor_ids": [
+          "DOC2_A7"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC2_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC2_A2"
+        ],
+        "utility_hits": {
+          "DOC2_A7": [
+            "reference_section",
+            "likely_reverse_citation_penalty",
+            "other_doc_cites_target",
+            "citation_direction_reference_list",
+            "citation_format_cue"
+          ],
+          "DOC2_A6": [
+            "reference_section"
+          ],
+          "DOC2_A5": [
+            "citation_format_cue"
+          ],
+          "DOC2_A3": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A7": 25.0,
+          "DOC2_A6": 7.0,
+          "DOC2_A5": 3.0,
+          "DOC2_A3": 3.0
+        },
+        "relation_hits": {
+          "DOC2_A7": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A2",
+            "same_target_paper_selected=DOC2_A2",
+            "disambiguates_selected=DOC2_A2"
+          ],
+          "DOC2_A6": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A2",
+            "same_target_paper_selected=DOC2_A2",
+            "disambiguates_selected=DOC2_A2"
+          ],
+          "DOC2_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A2",
+            "same_target_paper_selected=DOC2_A2",
+            "disambiguates_selected=DOC2_A2"
+          ],
+          "DOC2_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A2",
+            "same_target_paper_selected=DOC2_A2",
+            "disambiguates_selected=DOC2_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC2_A7": 17.18,
+          "DOC2_A6": 17.18,
+          "DOC2_A5": 17.18,
+          "DOC2_A3": 17.18
+        },
+        "anchor_role_hits": {
+          "DOC2_A7": [
+            "citation_direction"
+          ],
+          "DOC2_A6": [
+            "citation_direction"
+          ],
+          "DOC2_A5": [
+            "citation_direction"
+          ],
+          "DOC2_A3": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC2_A7": {
+            "local_relevance": 78.0,
+            "answer_utility": 25.0,
+            "coverage": 7.0,
+            "relation": 17.18,
+            "weak_priors": 13.221,
+            "redundancy_penalty": 0.0,
+            "total": 140.401
+          },
+          "DOC2_A6": {
+            "local_relevance": 74.0,
+            "answer_utility": 7.0,
+            "coverage": 7.0,
+            "relation": 17.18,
+            "weak_priors": 9.154,
+            "redundancy_penalty": 0.0,
+            "total": 114.334
+          },
+          "DOC2_A5": {
+            "local_relevance": 76.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 9.308,
+            "redundancy_penalty": 0.0,
+            "total": 109.488
+          },
+          "DOC2_A3": {
+            "local_relevance": 70.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 9.714,
+            "redundancy_penalty": 0.0,
+            "total": 103.894
+          }
+        }
+      },
+      "anchor_id": "DOC2_A7",
+      "plan_think": "To identify the papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding,' I should inspect the section that lists the references cited in the paper. The DOC2_A7 section is labeled as \"References\" and is likely to contain the necessary citation information.",
+      "info": {
+        "anchor_id": "DOC2_A7",
+        "anchor_type": "paragraph_region",
+        "section_path": "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > References",
+        "summary": "Lists references cited in the paper, providing academic sources for related work and methodologies.",
+        "text": "Anderson, P., Fernando, B., Johnson, M., and Gould, S. Guided open vocabulary image captioning with constrained beam search. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, pp. 936-945, Copenhagen, Denmark, September 2017. Association for Computational Linguistics. doi: 10.18653/v1/D17-1098. URL https://aclanthology. org/D17-1098.\n\nAustin, J., Odena, A., Nye, M., Bosma, M., Michalewski, H., Dohan, D., Jiang, E., Cai, C., Terry, M., Le, Q., et al. Program synthesis with large language models. arXiv preprint arXiv:2108.07732, 2021.\n\nBorgeaud, S., Mensch, A., Hoffmann, J., Cai, T., Rutherford, E., Millican, K., Van Den Driessche, G. B., Lespiau, J.-B., Damoc, B., Clark, A., et al. Improving language models by retrieving from trillions of tokens. In International conference on machine learning, pp. 2206-2240. PMLR, 2022.\n\nBrown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., et al. Language models are few-shot learners. Advances in neural information processing systems, 33:1877-1901, 2020.\n\nChen, M., Tworek, J., Jun, H., Yuan, Q., Pinto, H. P. d. O., Kaplan, J., Edwards, H., Burda, Y., Joseph, N., Brockman, G., et al. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374, 2021.\n\nChen, W., Ma, X., Wang, X., and Cohen, W. W. Program of thoughts prompting: Disentangling computation from reasoning for numerical reasoning tasks. arXiv e-prints, pp. arXiv-2211, 2022.\n\nChiang, W.-L., Li, Z., Lin, Z., Sheng, Y., Wu, Z., Zhang, H., Zheng, L., Zhuang, S., Zhuang, Y., Gonzalez, J. E., Stoica, I., and Xing, E. P. Vicuna: An open-source chatbot impressing gpt-4 with $90 \\% *$ chatgpt quality, March 2023. URL https://lmsys.org/blog/2023-03-30-vicuna/\n\nCobbe, K., Kosaraju, V., Bavarian, M., Chen, M., Jun, H., Kaiser, L., Plappert, M., Tworek, J., Hilton, J., Nakano, R., Hesse, C., and Schulman, J. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.\n\nEisner, J. Parameter estimation for probabilistic finite-state transducers. In Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics, pp. 1-8, 2002.\n\nFredkin, E. Trie memory. Communications of the ACM, 3(9):490-499, 1960.\n\nGao, L., Madaan, A., Zhou, S., Alon, U., Liu, P., Yang, Y., Callan, J., and Neubig, G. Pal: Programaided language models. In International Conference on Machine Learning, pp. 10764-10799. PMLR, 2023.\n\nGeng, S., Josifoski, M., Peyrard, M., and West, R. Grammar-constrained decoding for structured nlp tasks without finetuning. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, pp. 10932-10952, 2023.\n\nGupta, T. and Kembhavi, A. Visual programming: Compositional visual reasoning without training. ArXiv, abs/2211.11559, 2022.\n\nGuu, K., Lee, K., Tung, Z., Pasupat, P., and Chang, M. Retrieval augmented language model pre-training. In International conference on machine learning, pp. 3929-3938. PMLR, 2020.\n\nHao, S., Liu, T., Wang, Z., and Hu, Z. Toolkengpt: Augmenting frozen language models with massive tools via tool embeddings. arXiv preprint arXiv:2305.11554, 2023.\n\nHokamp, C. and Liu, Q. Lexically constrained decoding for sequence generation using grid beam search. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 1535-1546, Vancouver, Canada, July 2017. Association for Computational Linguistics. doi: 10.18653/v1/P17-1141. URL https://aclanthology.org/P17-1141\n\nJiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., de las Casas, D., Bressand, F., Lengyel, G., Lample, G., Saulnier, L., Lavaud, L. R., Lachaux, M.-A., Stock, P., Scao, T. L., Lavril, T., Wang, T., Lacroix, T., and Sayed, W. E. Mistral 7b, 2023.\n\nKalo, J.-C. and Fichtel, L. Kamel : Knowledge analysis with multitoken entities in language models. Automated Knowledge Base Construction, 2022.\n\nLu, X., West, P., Zellers, R., Le Bras, R., Bhagavatula, C., and Choi, Y. Neurologic decoding:(un) supervised neural text generation with predicate logic constraints. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 4288-4299, 2021.\n\nLu, X., Welleck, S., West, P., Jiang, L., Kasai, J., Khashabi, D., Le Bras, R., Qin, L., Yu, Y., Zellers, R., et al. Neurologic a* esque decoding: Constrained text generation with lookahead heuristics. In Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 780-799, 2022.\n\nMialon, G., Dessì, R., Lomeli, M., Nalmpantis, C., Pasunuru, R., Raileanu, R., Rozière, B., Schick, T., Dwivedi-Yu, J., Celikyilmaz, A., et al. Augmented language models: a survey. arXiv preprint arXiv:2302.07842, 2023.\n\nMiao, N., Zhou, H., Mou, L., Yan, R., and Li, L. Cgmh: Constrained sentence generation by metropolis-hastings sampling. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pp. 6834-6842, 2019.\n\nNakano, R., Hilton, J., Balaji, S., Wu, J., Ouyang, L., Kim, C., Hesse, C., Jain, S., Kosaraju, V., Saunders, W., et al. Webgpt: Browser-assisted question-answering with human feedback. arXiv preprint arXiv:2112.09332, 2021.\n\nOuyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., et al. Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems, 35:27730-27744, 2022.\n\nParisi, A., Zhao, Y., and Fiedel, N. Talm: Tool augmented language models. arXiv preprint arXiv:2205.12255, 2022.\n\nQin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y., Lin, Y., Cong, X., Tang, X., Qian, B., et al. Toolllm: Facilitating large language models to master $16000+$ real-world apis. arXiv preprint arXiv:2307.16789, 2023.\n\nRastogi, P., Cotterell, R., and Eisner, J. Weighting finite-state transductions with neural context. In Proceedings of the 2016 conference of the North American chapter of the Association for Computational Linguistics: human language technologies, pp. 623-633, 2016.\n\nSchick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., Cancedda, N., and Scialom, T. Toolformer: Language models can teach themselves to use tools. arXiv preprint arXiv:2302.04761, 2023.\n\nShen, Y., Song, K., Tan, X., Li, D., Lu, W., and Zhuang, Y. Hugginggpt: Solving ai tasks with chatgpt and its friends in hugging face, 2023.\n\nSong, Y., Xiong, W., Zhu, D., Wu, W., Qian, H., Song, M., Huang, H., Li, C., Wang, K., Yao, R., Tian, Y., and Li, S. Restgpt: Connecting large language models with real-world restful apis, 2023.\n\nStengel-Eskin, E., Rawlins, K., and Durme, B. V. Zero and few-shot semantic parsing with ambiguous inputs, 2024.\n\nSuzgun, M., Scales, N., Schärli, N., Gehrmann, S., Tay, Y., Chung, H. W., Chowdhery, A., Le, Q. V., Chi, E. H., Zhou, D., , and Wei, J. Challenging big-bench tasks and whether chain-of-thought can solve them. arXiv preprint arXiv:2210.09261, 2022.\n\nTouvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.-A., Lacroix, T., Rozière, B., Goyal, N., Hambro, E., Azhar, F., Rodriguez, A., Joulin, A., Grave, E., and Lample, G. Llama: Open and efficient foundation language models, 2023.\n\nYao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., and Cao, Y. React: Synergizing reasoning and acting in language models, 2023.\n\nYin, P. and Neubig, G. A syntactic neural model for general-purpose code generation. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 440-450, 2017.\n\nYuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024. URL http://arxiv.org/ $\\mathrm{abs} / 2401.06201$. arXiv:2401.06201 [cs].",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Don",
+          "Fine-Tune",
+          "Decode:",
+          "Syntax",
+          "Error-Free",
+          "Tool",
+          "Use",
+          "via",
+          "Constrained",
+          "Decoding"
+        ],
+        "anchor_targets": [
+          "cited",
+          "t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don",
+          "Don",
+          "Fine-Tune",
+          "Decode:"
+        ],
+        "anchor_value_hints": [
+          "2017",
+          "936",
+          "-945,",
+          "10.18653",
+          "1",
+          "17",
+          "-1098",
+          "2108.07732"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_target_paper": 6,
+            "disambiguates": 6
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk contains the reference section of the paper \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding.\" It lists several papers that are cited by this paper. Among these, we need to identify the ones that are also provided in the document set. Specifically, we need to check if \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction\" is cited in this list.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "Reference",
+            "value": "EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction",
+            "normalized_value": "EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction",
+            "evidence_text": "Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024. URL http://arxiv.org/abs/2401.06201. arXiv:2401.06201 [cs].",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A7",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [
+            "Reference"
+          ],
+          "known_value_signatures": [
+            "EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A7"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u...",
+            "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > References Lists references cited in the paper, providing academic sources for related work and methodologies. Anderson, P., Fernando, B., Johnson, M., and Gould, S. Guided open vocabulary image captioning with constrained beam search. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, pp. 936-945, Copenhagen, Denmark, September 2017. Association for Computational Linguistics. doi: 10.18653/v1/D17-1098. URL https://aclanthology. org/D17-1098. Austin, J., Odena, A., Nye, M., Bosma, M., Michalewski, H., Dohan, D., Jiang, E., Cai, C., Terry, M., Le, Q., et al. Prog..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "Reference",
+      "value": "EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction",
+      "normalized_value": "EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction",
+      "evidence_text": "Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024. URL http://arxiv.org/abs/2401.06201. arXiv:2401.06201 [cs].",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A7",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>Since the current query is about \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction,\" I should first look for any explicit mentions of this tool or similar concepts within the document. The introduction (DOC2_A2) often provides context and mentions related tools or methods, making it a good starting point.</think>\n<search>{\"current_query\": \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"], \"utility_hits\": {\"DOC2_A7\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC2_A6\": [\"reference_section\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A7\": 25.0, \"DOC2_A6\": 7.0, \"DOC2_A5\": 3.0, \"DOC2_A3\": 3.0}, \"score_breakdown\": {\"DOC2_A7\": {\"local_relevance\": 30.0, \"answer_utility\": 25.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 13.221, \"redundancy_penalty\": 0.0, \"total\": 75.221}, \"DOC2_A6\": {\"local_relevance\": 26.0, \"answer_utility\": 7.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 49.154}, \"DOC2_A5\": {\"local_relevance\": 20.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.308, \"redundancy_penalty\": 0.0, \"total\": 39.308}, \"DOC2_A3\": {\"local_relevance\": 18.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 37.714}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"table_region\", \"section_path\": \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction\", \"summary\": \"Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors.\", \"text\": \"## 1 Introduction\\n\\nAugmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to use unknown tools that are not in the training set.\\n\\nOut-of-the-box LLMs such as Mistral and Llama, even when instruction-tuned to be very capable on many other tasks (Jiang et al., 2023), can fail in using tools, as demonstrated by its low (and even zero) performance in Figure 1. One major reason for their bad performance is syntax errors. For example, Mistral-Instruct-7B has a syntax error rate of over $90 \\\\%$ when using some unknown tools in ToolEval (Qin et al. 2023), which results in its $0 \\\\%$ accuracy. Even very capable models such as GPT-4 make syntax errors on new tools. Previous approaches use extensive fine-tuning or prompting (Qin et al. 2023, Hao et al. 2023) to teach LLMs tool syntax, which reduces syntax errors but not all of them. In Figure 1, although the fine-tuned ToolLLM makes significantly fewer syntax errors than the general Mistral-Instruct, it still has an over $20 \\\\%$ error rate. We show examples of common modes of failure in Figure 2 .\\n\\nWe argue that fine-tuning or prompting is neither optimal nor enough to enforce syntax constraints, because general instruction-tuned models already have a \\\"rough idea\\\" of what tool to use in different scenarios. Fine-tuning or prompting approaches expect the model to learn and follow syntax constraints from tool use examples in training data or in-context demonstration. However, these constraints can be explicitly modeled with symbolic rules. Directly applying these rules in model generation can be more accurate than either fine-tuning or prompting, as they do not need extra compute or prompting while guaranteeing the model is syntax error-free.\\n\\nTo this end, we propose ToolDEC, a decoding algorithm guided by a finite-state machine (FSM) to ensure LLMs invoke tools properly. We automatically convert tool syntax schemas to an equivalent finite-state machine. During decoding, ToOLDEC transitions from state to state as decoding progresses. At each decoding step, TOOLDEC samples from the valid subset of tokens allowed by the tool syntax. This way, TOOLDEC is able to always generate syntactically correct tool calls. Since syntax constraints are enforced by the FSM, there's no need for them to appear in prompts. We further use an LLM to simplify the tool description prompt by removing the syntax constraints from it. ToolDEC is model-agnostic and can be combined with any base LLM. More examples comparing TOOLDEC and other tool LLMs can be found in Appendix A.1.\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_4b31f047d07fc348d505g-02.jpg?height=479&width=1350&top_left_y=1655&top_left_x=385)\\n\\nFigure 2: Common syntactical modes of failure of tool-use LLMs include reasoning format error, tool name error, and tool argument error. Even fine-tuned models have a significant level of syntax error.\\n\\nWe evaluate ToolDec by applying it to 5 base models and evaluating it on 4 benchmarks. On base models that are specifically fine-tuned for tool use purposes, such as ToolLLM Qin et al. (2023) and ToolkenGPT Hao et al. (2023), ToolDEC significantly improves their accuracy by at most 21 points and greatly reduce the number of tokens in the output. On base models that initially have zero accuracy on ToolBench Qin et al. (2023) such as Mistral Jiang et al. (2023) and Vicuna Chiang et al. (2023), TOOLDEC improves their accuracy from 0 to at most $60 \\\\%$.\\n\\nOur contributions can be summarized as follows:\\n\\n- We propose ToolDEC, a constrained decoding algorithm for LLMs to use tools without syntax errors. TOOLDEC can off-load syntax constraints to an FSM, and eliminate all syntax errors.\\n- We verify ToolDEC's superior performance by combining it with 5 base models and evaluating on 4 benchmarks. Our experiments show TOOLDEC improves all base models significantly.\\n- We further compare TOOLDEC on generalist models with specialized tool-using models. We find that ToOLDEC, as an alternative, can achieve comparable performance while retaining the model's performance on other reasoning benchmarks.\", \"anchor_role_candidates\": [\"table_value\", \"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Don\", \"Fine-Tune\", \"Decode:\", \"Syntax\", \"Error-Free\", \"Tool\", \"Use\", \"via\", \"Constrained\", \"Decoding\"], \"anchor_targets\": [\"t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don\", \"Don\", \"Fine-Tune\", \"Decode:\"], \"anchor_value_hints\": [\"1\", \"2023\", \"2022,\", \"2023,\", \"2022\", \"-7\", \"90\", \"0\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"table_region\", \"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains several citations to other papers, but none of them directly mention \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction.\" Therefore, there are no direct references or citations to the target paper in this chunk. However, the chunk does provide useful information about other related papers that could be potential references or citations if they appear elsewhere in the provided documents.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Identify papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding' that are also provided in the document set.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u...\"], \"selected_relation_anchor_ids\": [\"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}]}}</retrieve>\n<think>To identify the papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding,' I should inspect the section that lists the references cited in the paper. The DOC2_A7 section is labeled as \"References\" and is likely to contain the necessary citation information.</think>\n<search>{\"current_query\": \"Identify papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding' that are also provided in the document set.\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A7\", \"candidate_anchor_ids\": [\"DOC2_A7\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u...\"], \"selected_relation_anchor_ids\": [\"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A2\"], \"utility_hits\": {\"DOC2_A7\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC2_A6\": [\"reference_section\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A7\": 25.0, \"DOC2_A6\": 7.0, \"DOC2_A5\": 3.0, \"DOC2_A3\": 3.0}, \"relation_hits\": {\"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"], \"DOC2_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"]}, \"relation_score\": {\"DOC2_A7\": 17.18, \"DOC2_A6\": 17.18, \"DOC2_A5\": 17.18, \"DOC2_A3\": 17.18}, \"anchor_role_hits\": {\"DOC2_A7\": [\"citation_direction\"], \"DOC2_A6\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A3\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A7\": {\"local_relevance\": 78.0, \"answer_utility\": 25.0, \"coverage\": 7.0, \"relation\": 17.18, \"weak_priors\": 13.221, \"redundancy_penalty\": 0.0, \"total\": 140.401}, \"DOC2_A6\": {\"local_relevance\": 74.0, \"answer_utility\": 7.0, \"coverage\": 7.0, \"relation\": 17.18, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 114.334}, \"DOC2_A5\": {\"local_relevance\": 76.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 9.308, \"redundancy_penalty\": 0.0, \"total\": 109.488}, \"DOC2_A3\": {\"local_relevance\": 70.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 103.894}}}</search>\n<info>{\"anchor_id\": \"DOC2_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > References\", \"summary\": \"Lists references cited in the paper, providing academic sources for related work and methodologies.\", \"text\": \"Anderson, P., Fernando, B., Johnson, M., and Gould, S. Guided open vocabulary image captioning with constrained beam search. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, pp. 936-945, Copenhagen, Denmark, September 2017. Association for Computational Linguistics. doi: 10.18653/v1/D17-1098. URL https://aclanthology. org/D17-1098.\\n\\nAustin, J., Odena, A., Nye, M., Bosma, M., Michalewski, H., Dohan, D., Jiang, E., Cai, C., Terry, M., Le, Q., et al. Program synthesis with large language models. arXiv preprint arXiv:2108.07732, 2021.\\n\\nBorgeaud, S., Mensch, A., Hoffmann, J., Cai, T., Rutherford, E., Millican, K., Van Den Driessche, G. B., Lespiau, J.-B., Damoc, B., Clark, A., et al. Improving language models by retrieving from trillions of tokens. In International conference on machine learning, pp. 2206-2240. PMLR, 2022.\\n\\nBrown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., et al. Language models are few-shot learners. Advances in neural information processing systems, 33:1877-1901, 2020.\\n\\nChen, M., Tworek, J., Jun, H., Yuan, Q., Pinto, H. P. d. O., Kaplan, J., Edwards, H., Burda, Y., Joseph, N., Brockman, G., et al. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374, 2021.\\n\\nChen, W., Ma, X., Wang, X., and Cohen, W. W. Program of thoughts prompting: Disentangling computation from reasoning for numerical reasoning tasks. arXiv e-prints, pp. arXiv-2211, 2022.\\n\\nChiang, W.-L., Li, Z., Lin, Z., Sheng, Y., Wu, Z., Zhang, H., Zheng, L., Zhuang, S., Zhuang, Y., Gonzalez, J. E., Stoica, I., and Xing, E. P. Vicuna: An open-source chatbot impressing gpt-4 with $90 \\\\% *$ chatgpt quality, March 2023. URL https://lmsys.org/blog/2023-03-30-vicuna/\\n\\nCobbe, K., Kosaraju, V., Bavarian, M., Chen, M., Jun, H., Kaiser, L., Plappert, M., Tworek, J., Hilton, J., Nakano, R., Hesse, C., and Schulman, J. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.\\n\\nEisner, J. Parameter estimation for probabilistic finite-state transducers. In Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics, pp. 1-8, 2002.\\n\\nFredkin, E. Trie memory. Communications of the ACM, 3(9):490-499, 1960.\\n\\nGao, L., Madaan, A., Zhou, S., Alon, U., Liu, P., Yang, Y., Callan, J., and Neubig, G. Pal: Programaided language models. In International Conference on Machine Learning, pp. 10764-10799. PMLR, 2023.\\n\\nGeng, S., Josifoski, M., Peyrard, M., and West, R. Grammar-constrained decoding for structured nlp tasks without finetuning. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, pp. 10932-10952, 2023.\\n\\nGupta, T. and Kembhavi, A. Visual programming: Compositional visual reasoning without training. ArXiv, abs/2211.11559, 2022.\\n\\nGuu, K., Lee, K., Tung, Z., Pasupat, P., and Chang, M. Retrieval augmented language model pre-training. In International conference on machine learning, pp. 3929-3938. PMLR, 2020.\\n\\nHao, S., Liu, T., Wang, Z., and Hu, Z. Toolkengpt: Augmenting frozen language models with massive tools via tool embeddings. arXiv preprint arXiv:2305.11554, 2023.\\n\\nHokamp, C. and Liu, Q. Lexically constrained decoding for sequence generation using grid beam search. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 1535-1546, Vancouver, Canada, July 2017. Association for Computational Linguistics. doi: 10.18653/v1/P17-1141. URL https://aclanthology.org/P17-1141\\n\\nJiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., de las Casas, D., Bressand, F., Lengyel, G., Lample, G., Saulnier, L., Lavaud, L. R., Lachaux, M.-A., Stock, P., Scao, T. L., Lavril, T., Wang, T., Lacroix, T., and Sayed, W. E. Mistral 7b, 2023.\\n\\nKalo, J.-C. and Fichtel, L. Kamel : Knowledge analysis with multitoken entities in language models. Automated Knowledge Base Construction, 2022.\\n\\nLu, X., West, P., Zellers, R., Le Bras, R., Bhagavatula, C., and Choi, Y. Neurologic decoding:(un) supervised neural text generation with predicate logic constraints. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 4288-4299, 2021.\\n\\nLu, X., Welleck, S., West, P., Jiang, L., Kasai, J., Khashabi, D., Le Bras, R., Qin, L., Yu, Y., Zellers, R., et al. Neurologic a* esque decoding: Constrained text generation with lookahead heuristics. In Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 780-799, 2022.\\n\\nMialon, G., Dessì, R., Lomeli, M., Nalmpantis, C., Pasunuru, R., Raileanu, R., Rozière, B., Schick, T., Dwivedi-Yu, J., Celikyilmaz, A., et al. Augmented language models: a survey. arXiv preprint arXiv:2302.07842, 2023.\\n\\nMiao, N., Zhou, H., Mou, L., Yan, R., and Li, L. Cgmh: Constrained sentence generation by metropolis-hastings sampling. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pp. 6834-6842, 2019.\\n\\nNakano, R., Hilton, J., Balaji, S., Wu, J., Ouyang, L., Kim, C., Hesse, C., Jain, S., Kosaraju, V., Saunders, W., et al. Webgpt: Browser-assisted question-answering with human feedback. arXiv preprint arXiv:2112.09332, 2021.\\n\\nOuyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., et al. Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems, 35:27730-27744, 2022.\\n\\nParisi, A., Zhao, Y., and Fiedel, N. Talm: Tool augmented language models. arXiv preprint arXiv:2205.12255, 2022.\\n\\nQin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y., Lin, Y., Cong, X., Tang, X., Qian, B., et al. Toolllm: Facilitating large language models to master $16000+$ real-world apis. arXiv preprint arXiv:2307.16789, 2023.\\n\\nRastogi, P., Cotterell, R., and Eisner, J. Weighting finite-state transductions with neural context. In Proceedings of the 2016 conference of the North American chapter of the Association for Computational Linguistics: human language technologies, pp. 623-633, 2016.\\n\\nSchick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., Cancedda, N., and Scialom, T. Toolformer: Language models can teach themselves to use tools. arXiv preprint arXiv:2302.04761, 2023.\\n\\nShen, Y., Song, K., Tan, X., Li, D., Lu, W., and Zhuang, Y. Hugginggpt: Solving ai tasks with chatgpt and its friends in hugging face, 2023.\\n\\nSong, Y., Xiong, W., Zhu, D., Wu, W., Qian, H., Song, M., Huang, H., Li, C., Wang, K., Yao, R., Tian, Y., and Li, S. Restgpt: Connecting large language models with real-world restful apis, 2023.\\n\\nStengel-Eskin, E., Rawlins, K., and Durme, B. V. Zero and few-shot semantic parsing with ambiguous inputs, 2024.\\n\\nSuzgun, M., Scales, N., Schärli, N., Gehrmann, S., Tay, Y., Chung, H. W., Chowdhery, A., Le, Q. V., Chi, E. H., Zhou, D., , and Wei, J. Challenging big-bench tasks and whether chain-of-thought can solve them. arXiv preprint arXiv:2210.09261, 2022.\\n\\nTouvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.-A., Lacroix, T., Rozière, B., Goyal, N., Hambro, E., Azhar, F., Rodriguez, A., Joulin, A., Grave, E., and Lample, G. Llama: Open and efficient foundation language models, 2023.\\n\\nYao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., and Cao, Y. React: Synergizing reasoning and acting in language models, 2023.\\n\\nYin, P. and Neubig, G. A syntactic neural model for general-purpose code generation. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 440-450, 2017.\\n\\nYuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024. URL http://arxiv.org/ $\\\\mathrm{abs} / 2401.06201$. arXiv:2401.06201 [cs].\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Don\", \"Fine-Tune\", \"Decode:\", \"Syntax\", \"Error-Free\", \"Tool\", \"Use\", \"via\", \"Constrained\", \"Decoding\"], \"anchor_targets\": [\"cited\", \"t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don\", \"Don\", \"Fine-Tune\", \"Decode:\"], \"anchor_value_hints\": [\"2017\", \"936\", \"-945,\", \"10.18653\", \"1\", \"17\", \"-1098\", \"2108.07732\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains the reference section of the paper \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding.\" It lists several papers that are cited by this paper. Among these, we need to identify the ones that are also provided in the document set. Specifically, we need to check if \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction\" is cited in this list.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction\", \"normalized_value\": \"EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction\", \"evidence_text\": \"Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024. URL http://arxiv.org/abs/2401.06201. arXiv:2401.06201 [cs].\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A7\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A2\", \"DOC2_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u...\", \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > References Lists references cited in the paper, providing academic sources for related work and methodologies. Anderson, P., Fernando, B., Johnson, M., and Gould, S. Guided open vocabulary image captioning with constrained beam search. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, pp. 936-945, Copenhagen, Denmark, September 2017. Association for Computational Linguistics. doi: 10.18653/v1/D17-1098. URL https://aclanthology. org/D17-1098. Austin, J., Odena, A., Nye, M., Bosma, M., Michalewski, H., Dohan, D., Jiang, E., Cai, C., Terry, M., Le, Q., et al. Prog...\"], \"selected_relation_anchor_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>Since the current query is about \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction,\" I should first look for any explicit mentions of this tool or similar concepts within the document. The introduction (DOC2_A2) often provides context and mentions related tools or methods, making it a good starting point.</think>\n<search>{\"current_query\": \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"], \"utility_hits\": {\"DOC2_A7\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC2_A6\": [\"reference_section\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A7\": 25.0, \"DOC2_A6\": 7.0, \"DOC2_A5\": 3.0, \"DOC2_A3\": 3.0}, \"score_breakdown\": {\"DOC2_A7\": {\"local_relevance\": 30.0, \"answer_utility\": 25.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 13.221, \"redundancy_penalty\": 0.0, \"total\": 75.221}, \"DOC2_A6\": {\"local_relevance\": 26.0, \"answer_utility\": 7.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 49.154}, \"DOC2_A5\": {\"local_relevance\": 20.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.308, \"redundancy_penalty\": 0.0, \"total\": 39.308}, \"DOC2_A3\": {\"local_relevance\": 18.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 37.714}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"table_region\", \"section_path\": \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction\", \"summary\": \"Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors.\", \"text\": \"## 1 Introduction\\n\\nAugmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to use unknown tools that are not in the training set.\\n\\nOut-of-the-box LLMs such as Mistral and Llama, even when instruction-tuned to be very capable on many other tasks (Jiang et al., 2023), can fail in using tools, as demonstrated by its low (and even zero) performance in Figure 1. One major reason for their bad performance is syntax errors. For example, Mistral-Instruct-7B has a syntax error rate of over $90 \\\\%$ when using some unknown tools in ToolEval (Qin et al. 2023), which results in its $0 \\\\%$ accuracy. Even very capable models such as GPT-4 make syntax errors on new tools. Previous approaches use extensive fine-tuning or prompting (Qin et al. 2023, Hao et al. 2023) to teach LLMs tool syntax, which reduces syntax errors but not all of them. In Figure 1, although the fine-tuned ToolLLM makes significantly fewer syntax errors than the general Mistral-Instruct, it still has an over $20 \\\\%$ error rate. We show examples of common modes of failure in Figure 2 .\\n\\nWe argue that fine-tuning or prompting is neither optimal nor enough to enforce syntax constraints, because general instruction-tuned models already have a \\\"rough idea\\\" of what tool to use in different scenarios. Fine-tuning or prompting approaches expect the model to learn and follow syntax constraints from tool use examples in training data or in-context demonstration. However, these constraints can be explicitly modeled with symbolic rules. Directly applying these rules in model generation can be more accurate than either fine-tuning or prompting, as they do not need extra compute or prompting while guaranteeing the model is syntax error-free.\\n\\nTo this end, we propose ToolDEC, a decoding algorithm guided by a finite-state machine (FSM) to ensure LLMs invoke tools properly. We automatically convert tool syntax schemas to an equivalent finite-state machine. During decoding, ToOLDEC transitions from state to state as decoding progresses. At each decoding step, TOOLDEC samples from the valid subset of tokens allowed by the tool syntax. This way, TOOLDEC is able to always generate syntactically correct tool calls. Since syntax constraints are enforced by the FSM, there's no need for them to appear in prompts. We further use an LLM to simplify the tool description prompt by removing the syntax constraints from it. ToolDEC is model-agnostic and can be combined with any base LLM. More examples comparing TOOLDEC and other tool LLMs can be found in Appendix A.1.\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_4b31f047d07fc348d505g-02.jpg?height=479&width=1350&top_left_y=1655&top_left_x=385)\\n\\nFigure 2: Common syntactical modes of failure of tool-use LLMs include reasoning format error, tool name error, and tool argument error. Even fine-tuned models have a significant level of syntax error.\\n\\nWe evaluate ToolDec by applying it to 5 base models and evaluating it on 4 benchmarks. On base models that are specifically fine-tuned for tool use purposes, such as ToolLLM Qin et al. (2023) and ToolkenGPT Hao et al. (2023), ToolDEC significantly improves their accuracy by at most 21 points and greatly reduce the number of tokens in the output. On base models that initially have zero accuracy on ToolBench Qin et al. (2023) such as Mistral Jiang et al. (2023) and Vicuna Chiang et al. (2023), TOOLDEC improves their accuracy from 0 to at most $60 \\\\%$.\\n\\nOur contributions can be summarized as follows:\\n\\n- We propose ToolDEC, a constrained decoding algorithm for LLMs to use tools without syntax errors. TOOLDEC can off-load syntax constraints to an FSM, and eliminate all syntax errors.\\n- We verify ToolDEC's superior performance by combining it with 5 base models and evaluating on 4 benchmarks. Our experiments show TOOLDEC improves all base models significantly.\\n- We further compare TOOLDEC on generalist models with specialized tool-using models. We find that ToOLDEC, as an alternative, can achieve comparable performance while retaining the model's performance on other reasoning benchmarks.\", \"anchor_role_candidates\": [\"table_value\", \"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Don\", \"Fine-Tune\", \"Decode:\", \"Syntax\", \"Error-Free\", \"Tool\", \"Use\", \"via\", \"Constrained\", \"Decoding\"], \"anchor_targets\": [\"t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don\", \"Don\", \"Fine-Tune\", \"Decode:\"], \"anchor_value_hints\": [\"1\", \"2023\", \"2022,\", \"2023,\", \"2022\", \"-7\", \"90\", \"0\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"table_region\", \"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains several citations to other papers, but none of them directly mention \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction.\" Therefore, there are no direct references or citations to the target paper in this chunk. However, the chunk does provide useful information about other related papers that could be potential references or citations if they appear elsewhere in the provided documents.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Identify papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding' that are also provided in the document set.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u...\"], \"selected_relation_anchor_ids\": [\"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}]}}</retrieve>\n<think>To identify the papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding,' I should inspect the section that lists the references cited in the paper. The DOC2_A7 section is labeled as \"References\" and is likely to contain the necessary citation information.</think>\n<search>{\"current_query\": \"Identify papers cited in 'Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding' that are also provided in the document set.\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A7\", \"candidate_anchor_ids\": [\"DOC2_A7\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u...\"], \"selected_relation_anchor_ids\": [\"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A2\"], \"utility_hits\": {\"DOC2_A7\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC2_A6\": [\"reference_section\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A7\": 25.0, \"DOC2_A6\": 7.0, \"DOC2_A5\": 3.0, \"DOC2_A3\": 3.0}, \"relation_hits\": {\"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"], \"DOC2_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A2\", \"same_target_paper_selected=DOC2_A2\", \"disambiguates_selected=DOC2_A2\"]}, \"relation_score\": {\"DOC2_A7\": 17.18, \"DOC2_A6\": 17.18, \"DOC2_A5\": 17.18, \"DOC2_A3\": 17.18}, \"anchor_role_hits\": {\"DOC2_A7\": [\"citation_direction\"], \"DOC2_A6\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A3\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A7\": {\"local_relevance\": 78.0, \"answer_utility\": 25.0, \"coverage\": 7.0, \"relation\": 17.18, \"weak_priors\": 13.221, \"redundancy_penalty\": 0.0, \"total\": 140.401}, \"DOC2_A6\": {\"local_relevance\": 74.0, \"answer_utility\": 7.0, \"coverage\": 7.0, \"relation\": 17.18, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 114.334}, \"DOC2_A5\": {\"local_relevance\": 76.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 9.308, \"redundancy_penalty\": 0.0, \"total\": 109.488}, \"DOC2_A3\": {\"local_relevance\": 70.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 103.894}}}</search>\n<info>{\"anchor_id\": \"DOC2_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > References\", \"summary\": \"Lists references cited in the paper, providing academic sources for related work and methodologies.\", \"text\": \"Anderson, P., Fernando, B., Johnson, M., and Gould, S. Guided open vocabulary image captioning with constrained beam search. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, pp. 936-945, Copenhagen, Denmark, September 2017. Association for Computational Linguistics. doi: 10.18653/v1/D17-1098. URL https://aclanthology. org/D17-1098.\\n\\nAustin, J., Odena, A., Nye, M., Bosma, M., Michalewski, H., Dohan, D., Jiang, E., Cai, C., Terry, M., Le, Q., et al. Program synthesis with large language models. arXiv preprint arXiv:2108.07732, 2021.\\n\\nBorgeaud, S., Mensch, A., Hoffmann, J., Cai, T., Rutherford, E., Millican, K., Van Den Driessche, G. B., Lespiau, J.-B., Damoc, B., Clark, A., et al. Improving language models by retrieving from trillions of tokens. In International conference on machine learning, pp. 2206-2240. PMLR, 2022.\\n\\nBrown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., et al. Language models are few-shot learners. Advances in neural information processing systems, 33:1877-1901, 2020.\\n\\nChen, M., Tworek, J., Jun, H., Yuan, Q., Pinto, H. P. d. O., Kaplan, J., Edwards, H., Burda, Y., Joseph, N., Brockman, G., et al. Evaluating large language models trained on code. arXiv preprint arXiv:2107.03374, 2021.\\n\\nChen, W., Ma, X., Wang, X., and Cohen, W. W. Program of thoughts prompting: Disentangling computation from reasoning for numerical reasoning tasks. arXiv e-prints, pp. arXiv-2211, 2022.\\n\\nChiang, W.-L., Li, Z., Lin, Z., Sheng, Y., Wu, Z., Zhang, H., Zheng, L., Zhuang, S., Zhuang, Y., Gonzalez, J. E., Stoica, I., and Xing, E. P. Vicuna: An open-source chatbot impressing gpt-4 with $90 \\\\% *$ chatgpt quality, March 2023. URL https://lmsys.org/blog/2023-03-30-vicuna/\\n\\nCobbe, K., Kosaraju, V., Bavarian, M., Chen, M., Jun, H., Kaiser, L., Plappert, M., Tworek, J., Hilton, J., Nakano, R., Hesse, C., and Schulman, J. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.\\n\\nEisner, J. Parameter estimation for probabilistic finite-state transducers. In Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics, pp. 1-8, 2002.\\n\\nFredkin, E. Trie memory. Communications of the ACM, 3(9):490-499, 1960.\\n\\nGao, L., Madaan, A., Zhou, S., Alon, U., Liu, P., Yang, Y., Callan, J., and Neubig, G. Pal: Programaided language models. In International Conference on Machine Learning, pp. 10764-10799. PMLR, 2023.\\n\\nGeng, S., Josifoski, M., Peyrard, M., and West, R. Grammar-constrained decoding for structured nlp tasks without finetuning. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing, pp. 10932-10952, 2023.\\n\\nGupta, T. and Kembhavi, A. Visual programming: Compositional visual reasoning without training. ArXiv, abs/2211.11559, 2022.\\n\\nGuu, K., Lee, K., Tung, Z., Pasupat, P., and Chang, M. Retrieval augmented language model pre-training. In International conference on machine learning, pp. 3929-3938. PMLR, 2020.\\n\\nHao, S., Liu, T., Wang, Z., and Hu, Z. Toolkengpt: Augmenting frozen language models with massive tools via tool embeddings. arXiv preprint arXiv:2305.11554, 2023.\\n\\nHokamp, C. and Liu, Q. Lexically constrained decoding for sequence generation using grid beam search. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 1535-1546, Vancouver, Canada, July 2017. Association for Computational Linguistics. doi: 10.18653/v1/P17-1141. URL https://aclanthology.org/P17-1141\\n\\nJiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., de las Casas, D., Bressand, F., Lengyel, G., Lample, G., Saulnier, L., Lavaud, L. R., Lachaux, M.-A., Stock, P., Scao, T. L., Lavril, T., Wang, T., Lacroix, T., and Sayed, W. E. Mistral 7b, 2023.\\n\\nKalo, J.-C. and Fichtel, L. Kamel : Knowledge analysis with multitoken entities in language models. Automated Knowledge Base Construction, 2022.\\n\\nLu, X., West, P., Zellers, R., Le Bras, R., Bhagavatula, C., and Choi, Y. Neurologic decoding:(un) supervised neural text generation with predicate logic constraints. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 4288-4299, 2021.\\n\\nLu, X., Welleck, S., West, P., Jiang, L., Kasai, J., Khashabi, D., Le Bras, R., Qin, L., Yu, Y., Zellers, R., et al. Neurologic a* esque decoding: Constrained text generation with lookahead heuristics. In Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 780-799, 2022.\\n\\nMialon, G., Dessì, R., Lomeli, M., Nalmpantis, C., Pasunuru, R., Raileanu, R., Rozière, B., Schick, T., Dwivedi-Yu, J., Celikyilmaz, A., et al. Augmented language models: a survey. arXiv preprint arXiv:2302.07842, 2023.\\n\\nMiao, N., Zhou, H., Mou, L., Yan, R., and Li, L. Cgmh: Constrained sentence generation by metropolis-hastings sampling. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 33, pp. 6834-6842, 2019.\\n\\nNakano, R., Hilton, J., Balaji, S., Wu, J., Ouyang, L., Kim, C., Hesse, C., Jain, S., Kosaraju, V., Saunders, W., et al. Webgpt: Browser-assisted question-answering with human feedback. arXiv preprint arXiv:2112.09332, 2021.\\n\\nOuyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., et al. Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems, 35:27730-27744, 2022.\\n\\nParisi, A., Zhao, Y., and Fiedel, N. Talm: Tool augmented language models. arXiv preprint arXiv:2205.12255, 2022.\\n\\nQin, Y., Liang, S., Ye, Y., Zhu, K., Yan, L., Lu, Y., Lin, Y., Cong, X., Tang, X., Qian, B., et al. Toolllm: Facilitating large language models to master $16000+$ real-world apis. arXiv preprint arXiv:2307.16789, 2023.\\n\\nRastogi, P., Cotterell, R., and Eisner, J. Weighting finite-state transductions with neural context. In Proceedings of the 2016 conference of the North American chapter of the Association for Computational Linguistics: human language technologies, pp. 623-633, 2016.\\n\\nSchick, T., Dwivedi-Yu, J., Dessì, R., Raileanu, R., Lomeli, M., Zettlemoyer, L., Cancedda, N., and Scialom, T. Toolformer: Language models can teach themselves to use tools. arXiv preprint arXiv:2302.04761, 2023.\\n\\nShen, Y., Song, K., Tan, X., Li, D., Lu, W., and Zhuang, Y. Hugginggpt: Solving ai tasks with chatgpt and its friends in hugging face, 2023.\\n\\nSong, Y., Xiong, W., Zhu, D., Wu, W., Qian, H., Song, M., Huang, H., Li, C., Wang, K., Yao, R., Tian, Y., and Li, S. Restgpt: Connecting large language models with real-world restful apis, 2023.\\n\\nStengel-Eskin, E., Rawlins, K., and Durme, B. V. Zero and few-shot semantic parsing with ambiguous inputs, 2024.\\n\\nSuzgun, M., Scales, N., Schärli, N., Gehrmann, S., Tay, Y., Chung, H. W., Chowdhery, A., Le, Q. V., Chi, E. H., Zhou, D., , and Wei, J. Challenging big-bench tasks and whether chain-of-thought can solve them. arXiv preprint arXiv:2210.09261, 2022.\\n\\nTouvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.-A., Lacroix, T., Rozière, B., Goyal, N., Hambro, E., Azhar, F., Rodriguez, A., Joulin, A., Grave, E., and Lample, G. Llama: Open and efficient foundation language models, 2023.\\n\\nYao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., and Cao, Y. React: Synergizing reasoning and acting in language models, 2023.\\n\\nYin, P. and Neubig, G. A syntactic neural model for general-purpose code generation. In Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 440-450, 2017.\\n\\nYuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024. URL http://arxiv.org/ $\\\\mathrm{abs} / 2401.06201$. arXiv:2401.06201 [cs].\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Don\", \"Fine-Tune\", \"Decode:\", \"Syntax\", \"Error-Free\", \"Tool\", \"Use\", \"via\", \"Constrained\", \"Decoding\"], \"anchor_targets\": [\"cited\", \"t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don\", \"Don\", \"Fine-Tune\", \"Decode:\"], \"anchor_value_hints\": [\"2017\", \"936\", \"-945,\", \"10.18653\", \"1\", \"17\", \"-1098\", \"2108.07732\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains the reference section of the paper \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding.\" It lists several papers that are cited by this paper. Among these, we need to identify the ones that are also provided in the document set. Specifically, we need to check if \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction\" is cited in this list.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction\", \"normalized_value\": \"EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction\", \"evidence_text\": \"Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024. URL http://arxiv.org/abs/2401.06201. arXiv:2401.06201 [cs].\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A7\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A2\", \"DOC2_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > 1 Introduction Discusses the challenges of LLMs using external tools due to syntax errors and introduces TOOLDEC, a decoding algorithm that uses finite-state machines to enforce syntax constraints, improving performance on various benchmarks and reducing syntax errors. ## 1 Introduction Augmenting large language models (LLMs) with external tools (Mialon et al. 2023) enables them to solve complex problems. Current LLMs can utilize retrievers (Shen et al. ||2023; Gupta \\\\& Kembhavi, 2022, Schick et al., 2023), RESTful APIs (Qin et al., 2023, Song et al. 2023), program interpreters (Chen et al. 2022; Gao et al. 2023), and various other tools. As existing tools are being modified and new tools are being created every day, it is important for LLMs to be able to u...\", \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding > References Lists references cited in the paper, providing academic sources for related work and methodologies. Anderson, P., Fernando, B., Johnson, M., and Gould, S. Guided open vocabulary image captioning with constrained beam search. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, pp. 936-945, Copenhagen, Denmark, September 2017. Association for Computational Linguistics. doi: 10.18653/v1/D17-1098. URL https://aclanthology. org/D17-1098. Austin, J., Odena, A., Nye, M., Bosma, M., Michalewski, H., Dohan, D., Jiang, E., Cai, C., Terry, M., Le, Q., et al. Prog...\"], \"selected_relation_anchor_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['t Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding Don', 'Don']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

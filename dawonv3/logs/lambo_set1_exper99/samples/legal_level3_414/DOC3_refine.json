@@ -1,0 +1,448 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "utility_hits": {
+          "DOC3_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A3": 11.0,
+          "DOC3_A4": 11.0,
+          "DOC3_A5": 11.0,
+          "DOC3_A2": 11.0
+        },
+        "score_breakdown": {
+          "DOC3_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC3_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          },
+          "DOC3_A5": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 28.508
+          },
+          "DOC3_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 26.201
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "The document appears to be a civil case related to a labor dispute. I will inspect the first anchor (DOC3_A1) to confirm the type of case and gather more information about the parties involved.",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "Expanded same-section read window around DOC3_A1: 再审申请人王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。被申请人新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号，法定代表人梁某，委托诉讼代理人为北京浩天（乌鲁木齐）律师事务所律师张伊军和布如丽·托莲。",
+        "text": "[DOC3_A1 | 当事人信息]\n再审申请人（一审原告、二审上诉人）：王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。\n\n被申请人（一审被告、二审被上诉人）：新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号。\n\n法定代表人：梁某，该公司董事长。\n\n委托诉讼代理人：张伊军，北京浩天（乌鲁木齐）律师事务所律师。\n\n委托诉讼代理人：布如丽·托莲，北京浩天（乌鲁木齐）律师事务所律师。\n\n[DOC3_A2 | 案件背景]\n再审申请人王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\n\n[DOC3_A3 | 再审申请理由]\n王某申请再审称，请求依据《中华人民共和国民事诉讼法》第二百一十一条之规定再审本案。事实与理由：《全日制用工劳动合同书》可以证明我入职时间为2006年6月1日，我在2022年4月被辞退前与某某公司存在劳动关系，原审法院认定我与某某公司在2021年10月28日至2022年4月20日期间为劳务关系错误，2022年4月20日某某公司单方面违法终止劳动合同应当向我支付经济赔偿金；我未主动放弃10天年休假，某某公司应当向我支付未休年休假及6天补休假的工资；某某公司应当按照应付金额50％-100％的标准向我支付2022年4月份应得工资；某某公司应为我补缴医疗保险费用。\n\n[DOC3_A4 | 法院审查意见]\n本院经审查认为，本案系再审审查案件，应当围绕再审申请人王某的再审申请事由是否成立进行审查。经审查，王某的再审申请理由不成立，分析如下：\n\n一、关于某某公司是否应向王某支付违法终止劳动合同的经济赔偿金问题，《中华人民共和国劳动合同法实施条例》第二十一条规定：“劳动者达到法定退休年龄的，劳动合同终止。”王某于1971年10月28日出生，至2021年10月28日年满50周岁，且连续工龄满10年，王某已达到法定退休年龄，王某与某某公司之间的劳动合同因王某达到法定退休年龄而终止，自2021年10月28日至2022年4月，双方之间的关系为劳务关系。用人单位违法终止劳动合同且劳动者不要求继续履行合同或劳动合同不能继续履行的，用人单位需向劳动者支付经济赔偿金，某某公司不存在违法终止劳动合同的情形，故王某要求某某公司支付经济赔偿金无法律依据，本院对其该再审申请理由不予采纳。\n\n二、关于某某公司是否应向王某支付2022年未休10天年休假及6天补休假的工资的问题，依据《企业职工带薪年休假实施办法》第二条规定：“中华人民共和国境内的企业、民办非企业单位、有雇工的个体工商户等单位和与其建立劳动关系的职工，适用本办法。”王某与某某公司自2021年10月28日起已不存在劳动关系，王某已不符合享受年休假的前提条件，某某公司可以不再为其安排带薪年休假，且某某公司员工武某已明确告知王某其年休假已经审批，其可以休假，并告知自2021年12月开始休假审批手续全部经过OA系统，不用纸质版，王某表示其自动放弃休假，某某公司在此情形下仅支付王某正常工作时间的工资收入符合上述办法的规定，故王某要求某某公司支付2022年未休10天年休假的工资无事实和法律依据，对王某该再审申请理由，本院亦不予采纳。王某在仲裁和一审期间未主张某某公司支付其6天补休假的工资，该主张不属于再审审理的范围，本院不予审查。\n\n三、关于某某公司是否应向王某支付2022年4月份工资的问题。根据原审查明的事实，结合某某公司提交的考勤表、签到表、员工工资明细表可以证明王某当月劳动报酬当月发放，中国农业银行交易明细清单可以确认王某2022年4月工资已经在4月15日发放，王某亦认可其在2022年4月15日收到某某公司发放的3,063.55元劳动报酬，其认为某某公司发放的以上劳动报酬为其2022年3月份应得工资，但其未提供证据予以证明，故本院对其该再审申请理由不予采纳。\n\n另，王某要求某某公司补缴医疗保险费用不属于人民法院应予受理的劳动争议项下社会保险纠纷的范围，本院对其该再审申请理由不予采纳。综上，王某的再审申请不符合《中华人民共和国民事诉讼法》第二百一十一条之规定的情形。\n\n[DOC3_A5 | 一、关于某某公司是否应向王某支付违法终止劳动合同的经济赔偿金问题，《中华人民共和国劳动合同法实施条例》第二十一条规定：“劳动者达到法定退休年龄的，劳动合同终止。”王某于1971年10月28日出生，至2021年10月28日年满50周岁，且连续工龄满10年，王某已达到法定退休年龄，王某与某某公司之间的劳动合同因王某达到法定退休年龄而终止，自2021年10月28日至2022年4月，双方之间的关系为劳务关系。用人单位违法终止劳动合同且劳动者不要求继续履行合同或劳动合同不能继续履行的，用人单位需向劳动者支付经济赔偿金，某某公司不存在违法终止劳动合同的情形，故王某要求某某公司支付经济赔偿金无法律依据，本院对其该再审申请理由不予采纳。 > 二、关于某某公司是否应向王某支付2022年未休10天年休假及6天补休假的工资的问题，依据《企业职工带薪年休假实施办法》第二条规定：“中华人民共和国境内的企业、民办非企业单位、有雇工的个体工商户等单位和与其建立劳动关系的职工，适用本办法。”王某与某某公司自2021年10月28日起已不存在劳动关系，王某已不符合享受年休假的前提条件，某某公司可以不再为其安排带薪年休假，且某某公司员工武某已明确告知王某其年休假已经审批，其可以休假，并告知自2021年12月开始休假审批手续全部经过OA系统，不用纸质版，王某表示其自动放弃休假，某某公司在此情形下仅支付王某正常工作时间的工资收入符合上述办法的规定，故王某要求某某公司支付2022年未休10天年休假的工资无事实和法律依据，对王某该再审申请理由，本院亦不予采纳。王某在仲裁和一审期间未主张某某公司支付其6天补休假的工资，该主张不属于再审审理的范围，本院不予审查。 > 三、关于某某公司是否应向王某支付2022年4月份工资的问题。根据原审查明的事实，结合某某公司提交的考勤表、签到表、员工工资明细表可以证明王某当月劳动报酬当月发放，中国农业银行交易明细清单可以确认王某2022年4月工资已经在4月15日发放，王某亦认可其在2022年4月15日收到某某公司发放的3,063.55元劳动报酬，其认为某某公司发放的以上劳动报酬为其2022年3月份应得工资，但其未提供证据予以证明，故本院对其该再审申请理由不予采纳。]\n依照《中华人民共和国民事诉讼法》第二百一十五条第一款、《最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释》第三百九十三条第二款规定，裁定如下：\n\n驳回王某的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4",
+          "DOC3_A5"
+        ],
+        "primary_anchor_id": "DOC3_A1",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书3"
+        ],
+        "anchor_targets": [
+          "判决文书3"
+        ],
+        "anchor_value_hints": [
+          "3",
+          "1971",
+          "10",
+          "28",
+          "27"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 4,
+            "disambiguates": 4,
+            "likely_same_entity": 4,
+            "prev_next": 1,
+            "nearby_window": 1
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A5",
+            "DOC3_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent section [DOC3_A2] mentions a labor dispute, which suggests this is a '民事案件'. The chunk is sufficient to classify this document.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书3》",
+            "normalized_value": "判决文书3",
+            "evidence_text": "再审申请人王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向本院申请再审。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A5",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书3"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC3_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息 再审申请人王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。被申请人新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号，法定代表人梁某，委托诉讼代理人为北京浩天（乌鲁木齐）律师事务所律师张伊军和布如丽·托莲。 再审申请人（一审原告、二审上诉人）：王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。 被申请人（一审被告、二审被上诉人）：新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号。 法定代表人：梁某，该公司董事长。 委托诉讼代理人：张伊军，北京浩天（乌鲁木齐）律师事务所律师。 委托诉讼代理人：布如丽·托莲，北京浩天（乌鲁木齐）律师事务所律师。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书3》",
+      "normalized_value": "判决文书3",
+      "evidence_text": "再审申请人王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向本院申请再审。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document appears to be a civil case related to a labor dispute. I will inspect the first anchor (DOC3_A1) to confirm the type of case and gather more information about the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0, \"DOC3_A5\": 11.0, \"DOC3_A2\": 11.0}, \"score_breakdown\": {\"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC3_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC3_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}, \"DOC3_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC3_A1: 再审申请人王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。被申请人新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号，法定代表人梁某，委托诉讼代理人为北京浩天（乌鲁木齐）律师事务所律师张伊军和布如丽·托莲。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。\\n\\n被申请人（一审被告、二审被上诉人）：新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号。\\n\\n法定代表人：梁某，该公司董事长。\\n\\n委托诉讼代理人：张伊军，北京浩天（乌鲁木齐）律师事务所律师。\\n\\n委托诉讼代理人：布如丽·托莲，北京浩天（乌鲁木齐）律师事务所律师。\\n\\n[DOC3_A2 | 案件背景]\\n再审申请人王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\\n\\n[DOC3_A3 | 再审申请理由]\\n王某申请再审称，请求依据《中华人民共和国民事诉讼法》第二百一十一条之规定再审本案。事实与理由：《全日制用工劳动合同书》可以证明我入职时间为2006年6月1日，我在2022年4月被辞退前与某某公司存在劳动关系，原审法院认定我与某某公司在2021年10月28日至2022年4月20日期间为劳务关系错误，2022年4月20日某某公司单方面违法终止劳动合同应当向我支付经济赔偿金；我未主动放弃10天年休假，某某公司应当向我支付未休年休假及6天补休假的工资；某某公司应当按照应付金额50％-100％的标准向我支付2022年4月份应得工资；某某公司应为我补缴医疗保险费用。\\n\\n[DOC3_A4 | 法院审查意见]\\n本院经审查认为，本案系再审审查案件，应当围绕再审申请人王某的再审申请事由是否成立进行审查。经审查，王某的再审申请理由不成立，分析如下：\\n\\n一、关于某某公司是否应向王某支付违法终止劳动合同的经济赔偿金问题，《中华人民共和国劳动合同法实施条例》第二十一条规定：“劳动者达到法定退休年龄的，劳动合同终止。”王某于1971年10月28日出生，至2021年10月28日年满50周岁，且连续工龄满10年，王某已达到法定退休年龄，王某与某某公司之间的劳动合同因王某达到法定退休年龄而终止，自2021年10月28日至2022年4月，双方之间的关系为劳务关系。用人单位违法终止劳动合同且劳动者不要求继续履行合同或劳动合同不能继续履行的，用人单位需向劳动者支付经济赔偿金，某某公司不存在违法终止劳动合同的情形，故王某要求某某公司支付经济赔偿金无法律依据，本院对其该再审申请理由不予采纳。\\n\\n二、关于某某公司是否应向王某支付2022年未休10天年休假及6天补休假的工资的问题，依据《企业职工带薪年休假实施办法》第二条规定：“中华人民共和国境内的企业、民办非企业单位、有雇工的个体工商户等单位和与其建立劳动关系的职工，适用本办法。”王某与某某公司自2021年10月28日起已不存在劳动关系，王某已不符合享受年休假的前提条件，某某公司可以不再为其安排带薪年休假，且某某公司员工武某已明确告知王某其年休假已经审批，其可以休假，并告知自2021年12月开始休假审批手续全部经过OA系统，不用纸质版，王某表示其自动放弃休假，某某公司在此情形下仅支付王某正常工作时间的工资收入符合上述办法的规定，故王某要求某某公司支付2022年未休10天年休假的工资无事实和法律依据，对王某该再审申请理由，本院亦不予采纳。王某在仲裁和一审期间未主张某某公司支付其6天补休假的工资，该主张不属于再审审理的范围，本院不予审查。\\n\\n三、关于某某公司是否应向王某支付2022年4月份工资的问题。根据原审查明的事实，结合某某公司提交的考勤表、签到表、员工工资明细表可以证明王某当月劳动报酬当月发放，中国农业银行交易明细清单可以确认王某2022年4月工资已经在4月15日发放，王某亦认可其在2022年4月15日收到某某公司发放的3,063.55元劳动报酬，其认为某某公司发放的以上劳动报酬为其2022年3月份应得工资，但其未提供证据予以证明，故本院对其该再审申请理由不予采纳。\\n\\n另，王某要求某某公司补缴医疗保险费用不属于人民法院应予受理的劳动争议项下社会保险纠纷的范围，本院对其该再审申请理由不予采纳。综上，王某的再审申请不符合《中华人民共和国民事诉讼法》第二百一十一条之规定的情形。\\n\\n[DOC3_A5 | 一、关于某某公司是否应向王某支付违法终止劳动合同的经济赔偿金问题，《中华人民共和国劳动合同法实施条例》第二十一条规定：“劳动者达到法定退休年龄的，劳动合同终止。”王某于1971年10月28日出生，至2021年10月28日年满50周岁，且连续工龄满10年，王某已达到法定退休年龄，王某与某某公司之间的劳动合同因王某达到法定退休年龄而终止，自2021年10月28日至2022年4月，双方之间的关系为劳务关系。用人单位违法终止劳动合同且劳动者不要求继续履行合同或劳动合同不能继续履行的，用人单位需向劳动者支付经济赔偿金，某某公司不存在违法终止劳动合同的情形，故王某要求某某公司支付经济赔偿金无法律依据，本院对其该再审申请理由不予采纳。 > 二、关于某某公司是否应向王某支付2022年未休10天年休假及6天补休假的工资的问题，依据《企业职工带薪年休假实施办法》第二条规定：“中华人民共和国境内的企业、民办非企业单位、有雇工的个体工商户等单位和与其建立劳动关系的职工，适用本办法。”王某与某某公司自2021年10月28日起已不存在劳动关系，王某已不符合享受年休假的前提条件，某某公司可以不再为其安排带薪年休假，且某某公司员工武某已明确告知王某其年休假已经审批，其可以休假，并告知自2021年12月开始休假审批手续全部经过OA系统，不用纸质版，王某表示其自动放弃休假，某某公司在此情形下仅支付王某正常工作时间的工资收入符合上述办法的规定，故王某要求某某公司支付2022年未休10天年休假的工资无事实和法律依据，对王某该再审申请理由，本院亦不予采纳。王某在仲裁和一审期间未主张某某公司支付其6天补休假的工资，该主张不属于再审审理的范围，本院不予审查。 > 三、关于某某公司是否应向王某支付2022年4月份工资的问题。根据原审查明的事实，结合某某公司提交的考勤表、签到表、员工工资明细表可以证明王某当月劳动报酬当月发放，中国农业银行交易明细清单可以确认王某2022年4月工资已经在4月15日发放，王某亦认可其在2022年4月15日收到某某公司发放的3,063.55元劳动报酬，其认为某某公司发放的以上劳动报酬为其2022年3月份应得工资，但其未提供证据予以证明，故本院对其该再审申请理由不予采纳。]\\n依照《中华人民共和国民事诉讼法》第二百一十五条第一款、《最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释》第三百九十三条第二款规定，裁定如下：\\n\\n驳回王某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"1971\", \"10\", \"28\", \"27\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}</info>\n<think>The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent section [DOC3_A2] mentions a labor dispute, which suggests this is a '民事案件'. The chunk is sufficient to classify this document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"再审申请人王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。被申请人新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号，法定代表人梁某，委托诉讼代理人为北京浩天（乌鲁木齐）律师事务所律师张伊军和布如丽·托莲。 再审申请人（一审原告、二审上诉人）：王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。 被申请人（一审被告、二审被上诉人）：新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号。 法定代表人：梁某，该公司董事长。 委托诉讼代理人：张伊军，北京浩天（乌鲁木齐）律师事务所律师。 委托诉讼代理人：布如丽·托莲，北京浩天（乌鲁木齐）律师事务所律师。\"], \"selected_relation_anchor_ids\": [\"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document appears to be a civil case related to a labor dispute. I will inspect the first anchor (DOC3_A1) to confirm the type of case and gather more information about the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0, \"DOC3_A5\": 11.0, \"DOC3_A2\": 11.0}, \"score_breakdown\": {\"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC3_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC3_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}, \"DOC3_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC3_A1: 再审申请人王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。被申请人新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号，法定代表人梁某，委托诉讼代理人为北京浩天（乌鲁木齐）律师事务所律师张伊军和布如丽·托莲。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。\\n\\n被申请人（一审被告、二审被上诉人）：新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号。\\n\\n法定代表人：梁某，该公司董事长。\\n\\n委托诉讼代理人：张伊军，北京浩天（乌鲁木齐）律师事务所律师。\\n\\n委托诉讼代理人：布如丽·托莲，北京浩天（乌鲁木齐）律师事务所律师。\\n\\n[DOC3_A2 | 案件背景]\\n再审申请人王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\\n\\n[DOC3_A3 | 再审申请理由]\\n王某申请再审称，请求依据《中华人民共和国民事诉讼法》第二百一十一条之规定再审本案。事实与理由：《全日制用工劳动合同书》可以证明我入职时间为2006年6月1日，我在2022年4月被辞退前与某某公司存在劳动关系，原审法院认定我与某某公司在2021年10月28日至2022年4月20日期间为劳务关系错误，2022年4月20日某某公司单方面违法终止劳动合同应当向我支付经济赔偿金；我未主动放弃10天年休假，某某公司应当向我支付未休年休假及6天补休假的工资；某某公司应当按照应付金额50％-100％的标准向我支付2022年4月份应得工资；某某公司应为我补缴医疗保险费用。\\n\\n[DOC3_A4 | 法院审查意见]\\n本院经审查认为，本案系再审审查案件，应当围绕再审申请人王某的再审申请事由是否成立进行审查。经审查，王某的再审申请理由不成立，分析如下：\\n\\n一、关于某某公司是否应向王某支付违法终止劳动合同的经济赔偿金问题，《中华人民共和国劳动合同法实施条例》第二十一条规定：“劳动者达到法定退休年龄的，劳动合同终止。”王某于1971年10月28日出生，至2021年10月28日年满50周岁，且连续工龄满10年，王某已达到法定退休年龄，王某与某某公司之间的劳动合同因王某达到法定退休年龄而终止，自2021年10月28日至2022年4月，双方之间的关系为劳务关系。用人单位违法终止劳动合同且劳动者不要求继续履行合同或劳动合同不能继续履行的，用人单位需向劳动者支付经济赔偿金，某某公司不存在违法终止劳动合同的情形，故王某要求某某公司支付经济赔偿金无法律依据，本院对其该再审申请理由不予采纳。\\n\\n二、关于某某公司是否应向王某支付2022年未休10天年休假及6天补休假的工资的问题，依据《企业职工带薪年休假实施办法》第二条规定：“中华人民共和国境内的企业、民办非企业单位、有雇工的个体工商户等单位和与其建立劳动关系的职工，适用本办法。”王某与某某公司自2021年10月28日起已不存在劳动关系，王某已不符合享受年休假的前提条件，某某公司可以不再为其安排带薪年休假，且某某公司员工武某已明确告知王某其年休假已经审批，其可以休假，并告知自2021年12月开始休假审批手续全部经过OA系统，不用纸质版，王某表示其自动放弃休假，某某公司在此情形下仅支付王某正常工作时间的工资收入符合上述办法的规定，故王某要求某某公司支付2022年未休10天年休假的工资无事实和法律依据，对王某该再审申请理由，本院亦不予采纳。王某在仲裁和一审期间未主张某某公司支付其6天补休假的工资，该主张不属于再审审理的范围，本院不予审查。\\n\\n三、关于某某公司是否应向王某支付2022年4月份工资的问题。根据原审查明的事实，结合某某公司提交的考勤表、签到表、员工工资明细表可以证明王某当月劳动报酬当月发放，中国农业银行交易明细清单可以确认王某2022年4月工资已经在4月15日发放，王某亦认可其在2022年4月15日收到某某公司发放的3,063.55元劳动报酬，其认为某某公司发放的以上劳动报酬为其2022年3月份应得工资，但其未提供证据予以证明，故本院对其该再审申请理由不予采纳。\\n\\n另，王某要求某某公司补缴医疗保险费用不属于人民法院应予受理的劳动争议项下社会保险纠纷的范围，本院对其该再审申请理由不予采纳。综上，王某的再审申请不符合《中华人民共和国民事诉讼法》第二百一十一条之规定的情形。\\n\\n[DOC3_A5 | 一、关于某某公司是否应向王某支付违法终止劳动合同的经济赔偿金问题，《中华人民共和国劳动合同法实施条例》第二十一条规定：“劳动者达到法定退休年龄的，劳动合同终止。”王某于1971年10月28日出生，至2021年10月28日年满50周岁，且连续工龄满10年，王某已达到法定退休年龄，王某与某某公司之间的劳动合同因王某达到法定退休年龄而终止，自2021年10月28日至2022年4月，双方之间的关系为劳务关系。用人单位违法终止劳动合同且劳动者不要求继续履行合同或劳动合同不能继续履行的，用人单位需向劳动者支付经济赔偿金，某某公司不存在违法终止劳动合同的情形，故王某要求某某公司支付经济赔偿金无法律依据，本院对其该再审申请理由不予采纳。 > 二、关于某某公司是否应向王某支付2022年未休10天年休假及6天补休假的工资的问题，依据《企业职工带薪年休假实施办法》第二条规定：“中华人民共和国境内的企业、民办非企业单位、有雇工的个体工商户等单位和与其建立劳动关系的职工，适用本办法。”王某与某某公司自2021年10月28日起已不存在劳动关系，王某已不符合享受年休假的前提条件，某某公司可以不再为其安排带薪年休假，且某某公司员工武某已明确告知王某其年休假已经审批，其可以休假，并告知自2021年12月开始休假审批手续全部经过OA系统，不用纸质版，王某表示其自动放弃休假，某某公司在此情形下仅支付王某正常工作时间的工资收入符合上述办法的规定，故王某要求某某公司支付2022年未休10天年休假的工资无事实和法律依据，对王某该再审申请理由，本院亦不予采纳。王某在仲裁和一审期间未主张某某公司支付其6天补休假的工资，该主张不属于再审审理的范围，本院不予审查。 > 三、关于某某公司是否应向王某支付2022年4月份工资的问题。根据原审查明的事实，结合某某公司提交的考勤表、签到表、员工工资明细表可以证明王某当月劳动报酬当月发放，中国农业银行交易明细清单可以确认王某2022年4月工资已经在4月15日发放，王某亦认可其在2022年4月15日收到某某公司发放的3,063.55元劳动报酬，其认为某某公司发放的以上劳动报酬为其2022年3月份应得工资，但其未提供证据予以证明，故本院对其该再审申请理由不予采纳。]\\n依照《中华人民共和国民事诉讼法》第二百一十五条第一款、《最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释》第三百九十三条第二款规定，裁定如下：\\n\\n驳回王某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"1971\", \"10\", \"28\", \"27\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}</info>\n<think>The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent section [DOC3_A2] mentions a labor dispute, which suggests this is a '民事案件'. The chunk is sufficient to classify this document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"再审申请人王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。被申请人新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号，法定代表人梁某，委托诉讼代理人为北京浩天（乌鲁木齐）律师事务所律师张伊军和布如丽·托莲。 再审申请人（一审原告、二审上诉人）：王某，女，1971年10月28日出生，住新疆维吾尔自治区克拉玛依市独山子区。 被申请人（一审被告、二审被上诉人）：新疆某某能源有限责任公司，住所地新疆维吾尔自治区克拉玛依市独山子区韶山路27号。 法定代表人：梁某，该公司董事长。 委托诉讼代理人：张伊军，北京浩天（乌鲁木齐）律师事务所律师。 委托诉讼代理人：布如丽·托莲，北京浩天（乌鲁木齐）律师事务所律师。\"], \"selected_relation_anchor_ids\": [\"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

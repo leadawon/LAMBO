@@ -1,0 +1,447 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "utility_hits": {
+          "DOC3_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A2": 11.0,
+          "DOC3_A3": 11.0,
+          "DOC3_A4": 11.0,
+          "DOC3_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC3_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC3_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC3_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 25.691
+          },
+          "DOC3_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 20.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "The document title and summaries suggest that this case involves an administrative dispute over a penalty decision made by the Dongguan Ecological Environment Bureau. The applicant, Wu Moumou, is dissatisfied with the administrative judgment of the Intermediate People's Court of Dongguan City. Therefore, it seems likely that this is an '行政案件' (administrative case). I will confirm this by inspecting the first chunk summary, DOC3_A1, which contains the basic information of the parties involved.",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "Expanded same-section read window around DOC3_A1: 再审申请人吴某某及其委托代理人王本权，被申请人东莞市生态环境局及其法定代表人胡毅峰的基本信息。",
+        "text": "[DOC3_A1 | 当事人信息]\n再审申请人（一审原告、二审上诉人）：吴某某，男，汉族，1965年5月6日出生，身份证住址贵州省。\n\n委托代理人：王本权，贵州省遵义市新蒲新区新舟镇法律服务所法律服务工作者。\n\n被申请人（一审被告、二审被上诉人）：东莞市生态环境局。住所地：广东省东莞市南城街道宏伟二路南城段9号其中第1至14层。\n\n法定代表人：胡毅峰，局长。\n\n[DOC3_A2 | 案件背景与再审申请]\n再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n吴某某申请再审称，东莞市生态环境局作出的东环罚字〔2022〕2518号《行政处罚决定书》（以下简称被诉《行政处罚决定》）适用法律错误，对吴某某处以287000元罚款明显有违行为手段的适当性程度。根据2023年修订的《生态环境行政处罚办法》有关“首违不罚”“一事不再罚”的规定，对吴某某可不予行政处罚。综上，请求撤销一、二审判决，撤销被诉《行政处罚决定》，对本案予以再审。\n\n[DOC3_A3 | 法院审查意见]\n本院经审查认为，本案系罚款纠纷，争议焦点是东莞市生态环境局作出的被诉《行政处罚决定》是否合法。本案中，根据《现场（勘验）笔录》《调查询问笔录》、现场照片及视频等证据，吴明均经营的无证照加工厂未经生态环境部门许可，擅自设有染色、脱水等工序和2公斤染缸2台、3公斤染缸2台、5公斤染缸1台、洗衣机1台等设备，上述建设项目属于《建设项目环境影响评价分类管理名录》第十四类“纺织业17”第28项“棉纺织及印染精加工171*；毛纺织及染整精加工172*；麻纺织及染整精加工173*；丝绢纺织及印染精加工174*；化纤织造及印染精加工175*；针织或钩针编织物及其制品制造176*；家用纺织制成品制造177*；产业用纺织制成品制造178*”中的“有洗毛、脱胶、缫丝工艺的；染整工艺有前处理、染色、印花（喷墨印花和数码印花的除外）工序的；有使用有机溶剂的涂层工艺的”项目类别，应当编制环境影响报告书，配套的环境保护设施未建成且未完成自主验收便已投入生产和使用，违反了《建设项目环境保护管理条例》第十九条第一款的规定。东莞市生态环境局经过调查取证等程序，告知吴某某拟作出行政处罚的事实、理由、依据以及陈述、申辩、申请听证的权利，依据《建设项目环境保护管理条例》第二十三条第一款规定，结合《广东省生态环境行政处罚自由裁量权规定》附件1《广东省生态环境违法行为行政处罚罚款金额裁量表》第一章第八条以及《东莞市环境违法行为道歉承诺从轻处罚工作指引》相关规定，作出被诉《行政处罚决定》，对吴某某处以287000元罚款，事实清楚，证据确凿，适用法律正确，量罚适当，程序合法。吴某某认为一、二审判决错误的各项申请再审意见，理由均不能成立，本院不予支持。据此，吴某某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\n\n[DOC3_A4 | 裁定结果]\n驳回吴某某的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "primary_anchor_id": "DOC3_A1",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书3"
+        ],
+        "anchor_targets": [
+          "判决文书3"
+        ],
+        "anchor_value_hints": [
+          "3",
+          "1965",
+          "5",
+          "6",
+          "9",
+          "1",
+          "14"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 14,
+          "relation_type_counts": {
+            "supports": 2,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 1,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent sections (DOC3_A2, DOC3_A3) provide context that this is an administrative case involving a fine imposed by the Dongguan Ecological Environment Bureau. This suggests that the document should be categorized as an '行政案件'.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政案件",
+            "value": "《判决文书3》",
+            "normalized_value": "判决文书3",
+            "evidence_text": "再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A1",
+            "confidence": 0.8,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A2",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政案件"
+          ],
+          "known_value_signatures": [
+            "判决文书3"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC3_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息 再审申请人吴某某及其委托代理人王本权，被申请人东莞市生态环境局及其法定代表人胡毅峰的基本信息。 再审申请人（一审原告、二审上诉人）：吴某某，男，汉族，1965年5月6日出生，身份证住址贵州省。 委托代理人：王本权，贵州省遵义市新蒲新区新舟镇法律服务所法律服务工作者。 被申请人（一审被告、二审被上诉人）：东莞市生态环境局。住所地：广东省东莞市南城街道宏伟二路南城段9号其中第1至14层。 法定代表人：胡毅峰，局长。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A4"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政案件",
+      "value": "《判决文书3》",
+      "normalized_value": "判决文书3",
+      "evidence_text": "再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A1",
+      "confidence": 0.8,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document title and summaries suggest that this case involves an administrative dispute over a penalty decision made by the Dongguan Ecological Environment Bureau. The applicant, Wu Moumou, is dissatisfied with the administrative judgment of the Intermediate People's Court of Dongguan City. Therefore, it seems likely that this is an '行政案件' (administrative case). I will confirm this by inspecting the first chunk summary, DOC3_A1, which contains the basic information of the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC3_A2\": 11.0, \"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0, \"DOC3_A1\": 5.0}, \"score_breakdown\": {\"DOC3_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC3_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 25.691}, \"DOC3_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC3_A1: 再审申请人吴某某及其委托代理人王本权，被申请人东莞市生态环境局及其法定代表人胡毅峰的基本信息。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：吴某某，男，汉族，1965年5月6日出生，身份证住址贵州省。\\n\\n委托代理人：王本权，贵州省遵义市新蒲新区新舟镇法律服务所法律服务工作者。\\n\\n被申请人（一审被告、二审被上诉人）：东莞市生态环境局。住所地：广东省东莞市南城街道宏伟二路南城段9号其中第1至14层。\\n\\n法定代表人：胡毅峰，局长。\\n\\n[DOC3_A2 | 案件背景与再审申请]\\n再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n吴某某申请再审称，东莞市生态环境局作出的东环罚字〔2022〕2518号《行政处罚决定书》（以下简称被诉《行政处罚决定》）适用法律错误，对吴某某处以287000元罚款明显有违行为手段的适当性程度。根据2023年修订的《生态环境行政处罚办法》有关“首违不罚”“一事不再罚”的规定，对吴某某可不予行政处罚。综上，请求撤销一、二审判决，撤销被诉《行政处罚决定》，对本案予以再审。\\n\\n[DOC3_A3 | 法院审查意见]\\n本院经审查认为，本案系罚款纠纷，争议焦点是东莞市生态环境局作出的被诉《行政处罚决定》是否合法。本案中，根据《现场（勘验）笔录》《调查询问笔录》、现场照片及视频等证据，吴明均经营的无证照加工厂未经生态环境部门许可，擅自设有染色、脱水等工序和2公斤染缸2台、3公斤染缸2台、5公斤染缸1台、洗衣机1台等设备，上述建设项目属于《建设项目环境影响评价分类管理名录》第十四类“纺织业17”第28项“棉纺织及印染精加工171*；毛纺织及染整精加工172*；麻纺织及染整精加工173*；丝绢纺织及印染精加工174*；化纤织造及印染精加工175*；针织或钩针编织物及其制品制造176*；家用纺织制成品制造177*；产业用纺织制成品制造178*”中的“有洗毛、脱胶、缫丝工艺的；染整工艺有前处理、染色、印花（喷墨印花和数码印花的除外）工序的；有使用有机溶剂的涂层工艺的”项目类别，应当编制环境影响报告书，配套的环境保护设施未建成且未完成自主验收便已投入生产和使用，违反了《建设项目环境保护管理条例》第十九条第一款的规定。东莞市生态环境局经过调查取证等程序，告知吴某某拟作出行政处罚的事实、理由、依据以及陈述、申辩、申请听证的权利，依据《建设项目环境保护管理条例》第二十三条第一款规定，结合《广东省生态环境行政处罚自由裁量权规定》附件1《广东省生态环境违法行为行政处罚罚款金额裁量表》第一章第八条以及《东莞市环境违法行为道歉承诺从轻处罚工作指引》相关规定，作出被诉《行政处罚决定》，对吴某某处以287000元罚款，事实清楚，证据确凿，适用法律正确，量罚适当，程序合法。吴某某认为一、二审判决错误的各项申请再审意见，理由均不能成立，本院不予支持。据此，吴某某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n[DOC3_A4 | 裁定结果]\\n驳回吴某某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"1965\", \"5\", \"6\", \"9\", \"1\", \"14\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 14, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent sections (DOC3_A2, DOC3_A3) provide context that this is an administrative case involving a fine imposed by the Dongguan Ecological Environment Bureau. This suggests that the document should be categorized as an '行政案件'.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A1\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人吴某某及其委托代理人王本权，被申请人东莞市生态环境局及其法定代表人胡毅峰的基本信息。 再审申请人（一审原告、二审上诉人）：吴某某，男，汉族，1965年5月6日出生，身份证住址贵州省。 委托代理人：王本权，贵州省遵义市新蒲新区新舟镇法律服务所法律服务工作者。 被申请人（一审被告、二审被上诉人）：东莞市生态环境局。住所地：广东省东莞市南城街道宏伟二路南城段9号其中第1至14层。 法定代表人：胡毅峰，局长。\"], \"selected_relation_anchor_ids\": [\"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title and summaries suggest that this case involves an administrative dispute over a penalty decision made by the Dongguan Ecological Environment Bureau. The applicant, Wu Moumou, is dissatisfied with the administrative judgment of the Intermediate People's Court of Dongguan City. Therefore, it seems likely that this is an '行政案件' (administrative case). I will confirm this by inspecting the first chunk summary, DOC3_A1, which contains the basic information of the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC3_A2\": 11.0, \"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0, \"DOC3_A1\": 5.0}, \"score_breakdown\": {\"DOC3_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC3_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 25.691}, \"DOC3_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC3_A1: 再审申请人吴某某及其委托代理人王本权，被申请人东莞市生态环境局及其法定代表人胡毅峰的基本信息。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：吴某某，男，汉族，1965年5月6日出生，身份证住址贵州省。\\n\\n委托代理人：王本权，贵州省遵义市新蒲新区新舟镇法律服务所法律服务工作者。\\n\\n被申请人（一审被告、二审被上诉人）：东莞市生态环境局。住所地：广东省东莞市南城街道宏伟二路南城段9号其中第1至14层。\\n\\n法定代表人：胡毅峰，局长。\\n\\n[DOC3_A2 | 案件背景与再审申请]\\n再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n吴某某申请再审称，东莞市生态环境局作出的东环罚字〔2022〕2518号《行政处罚决定书》（以下简称被诉《行政处罚决定》）适用法律错误，对吴某某处以287000元罚款明显有违行为手段的适当性程度。根据2023年修订的《生态环境行政处罚办法》有关“首违不罚”“一事不再罚”的规定，对吴某某可不予行政处罚。综上，请求撤销一、二审判决，撤销被诉《行政处罚决定》，对本案予以再审。\\n\\n[DOC3_A3 | 法院审查意见]\\n本院经审查认为，本案系罚款纠纷，争议焦点是东莞市生态环境局作出的被诉《行政处罚决定》是否合法。本案中，根据《现场（勘验）笔录》《调查询问笔录》、现场照片及视频等证据，吴明均经营的无证照加工厂未经生态环境部门许可，擅自设有染色、脱水等工序和2公斤染缸2台、3公斤染缸2台、5公斤染缸1台、洗衣机1台等设备，上述建设项目属于《建设项目环境影响评价分类管理名录》第十四类“纺织业17”第28项“棉纺织及印染精加工171*；毛纺织及染整精加工172*；麻纺织及染整精加工173*；丝绢纺织及印染精加工174*；化纤织造及印染精加工175*；针织或钩针编织物及其制品制造176*；家用纺织制成品制造177*；产业用纺织制成品制造178*”中的“有洗毛、脱胶、缫丝工艺的；染整工艺有前处理、染色、印花（喷墨印花和数码印花的除外）工序的；有使用有机溶剂的涂层工艺的”项目类别，应当编制环境影响报告书，配套的环境保护设施未建成且未完成自主验收便已投入生产和使用，违反了《建设项目环境保护管理条例》第十九条第一款的规定。东莞市生态环境局经过调查取证等程序，告知吴某某拟作出行政处罚的事实、理由、依据以及陈述、申辩、申请听证的权利，依据《建设项目环境保护管理条例》第二十三条第一款规定，结合《广东省生态环境行政处罚自由裁量权规定》附件1《广东省生态环境违法行为行政处罚罚款金额裁量表》第一章第八条以及《东莞市环境违法行为道歉承诺从轻处罚工作指引》相关规定，作出被诉《行政处罚决定》，对吴某某处以287000元罚款，事实清楚，证据确凿，适用法律正确，量罚适当，程序合法。吴某某认为一、二审判决错误的各项申请再审意见，理由均不能成立，本院不予支持。据此，吴某某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n[DOC3_A4 | 裁定结果]\\n驳回吴某某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"1965\", \"5\", \"6\", \"9\", \"1\", \"14\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 14, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent sections (DOC3_A2, DOC3_A3) provide context that this is an administrative case involving a fine imposed by the Dongguan Ecological Environment Bureau. This suggests that the document should be categorized as an '行政案件'.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A1\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人吴某某及其委托代理人王本权，被申请人东莞市生态环境局及其法定代表人胡毅峰的基本信息。 再审申请人（一审原告、二审上诉人）：吴某某，男，汉族，1965年5月6日出生，身份证住址贵州省。 委托代理人：王本权，贵州省遵义市新蒲新区新舟镇法律服务所法律服务工作者。 被申请人（一审被告、二审被上诉人）：东莞市生态环境局。住所地：广东省东莞市南城街道宏伟二路南城段9号其中第1至14层。 法定代表人：胡毅峰，局长。\"], \"selected_relation_anchor_ids\": [\"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+}

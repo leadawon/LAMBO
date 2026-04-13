@@ -1,0 +1,1345 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING",
+  "selected_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A8"
+  ],
+  "final_current_query": "Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4",
+          "DOC3_A5"
+        ],
+        "utility_hits": {
+          "DOC3_A8": [
+            "reference_section",
+            "likely_reverse_citation_penalty",
+            "other_doc_cites_target",
+            "citation_direction_reference_list",
+            "citation_format_cue"
+          ],
+          "DOC3_A2": [
+            "citation_format_cue"
+          ],
+          "DOC3_A3": [
+            "citation_format_cue"
+          ],
+          "DOC3_A5": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A8": 25.0,
+          "DOC3_A2": 3.0,
+          "DOC3_A3": 3.0,
+          "DOC3_A5": 3.0
+        },
+        "score_breakdown": {
+          "DOC3_A8": {
+            "local_relevance": 49.0,
+            "answer_utility": 25.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.303,
+            "redundancy_penalty": 0.0,
+            "total": 91.303
+          },
+          "DOC3_A2": {
+            "local_relevance": 33.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.901,
+            "redundancy_penalty": 0.0,
+            "total": 50.901
+          },
+          "DOC3_A3": {
+            "local_relevance": 33.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 50.614
+          },
+          "DOC3_A5": {
+            "local_relevance": 33.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 5.108,
+            "redundancy_penalty": 0.0,
+            "total": 48.108
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The introduction section (DOC3_A2) might provide insights into whether the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" is referenced or cited. This section often includes background information and mentions relevant prior work.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION",
+        "summary": "Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning.",
+        "text": "## 1 INTRODUCTION\n\nLarge Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et al., 2021), in-context learning with numerous examples (Li et al., 2023), and long document retrieval (Zhou et al., 2022), etc. This naturally poses a significant challenge of context window extension: Extending the context window of a pre-trained LLM to accommodate longer sequences.\n\nNaively fine-tuning LLMs on inputs of target length for window extension has received limited success due to the large disruption introduced by new position indices (Chen et al., 2023a; Han et al., 2023). Addressing this, Position Interpolation (Chen et al., 2023a; kaiokendev, 2023; Peng et al., 2023) propose to down-scale the position indices to match the original window size, yielding improved results for context extension. However, these methods still rely on Full-length fine-tuning, i.e., finetuning with context of target length, which is memory and time-intensive due to the computational complexity that increases quadratically with input length. For example, Chen et al. (2023a) use 32 A100 GPUs to extend LLaMA models from $2 \\mathrm{k}$ to $8 \\mathrm{k}$ context, and 128 A100 GPUs for even larger context. These overhead has made it impossible to extend context window to extreme lengths.[^0]\n\n![](https://cdn.mathpix.com/cropped/2024_06_04_282b701db7febcf7af8ag-02.jpg?height=461&width=1390&top_left_y=276&top_left_x=365)\n\nFigure 1: Position indices of Full-length fine-tuning v.s. PoSE fine-tuning for extending the context window size from 2,048 to 8,192 . At each iteration, the former directly takes 8,192 tokens for fine-tuning, while PoSE manipulates the position indices of 2,048 tokens to simulate longer inputs. For example, we partition the original context window of 2,048 tokens into two chunks, and adjust the position indices of the second chunk by adding a distinct skipping bias term. These bias terms, as well as the length of each chunk, are altered for each training example, so that the model can adapt to all relative positions of the target context window through fine-tuning.\n\nIn this paper, we introduce Positional Skip-wisE (PoSE) fine-tuning to decouple the fine-tuning length from the target context window length, unleashing the possibility of efficiently extending context window to an extreme size. The key idea of PoSE is to simulate long inputs by manipulating position indices within a fixed context window. As depicted in Figure 1, we partition the original context window into several chunks, and adjust the position indices of each chunk by adding a distinct skipping bias term. These bias terms, as well as the length of each chunk, are altered for each training example, so that the model can adapt to all positions (including both absolute and relative) within the target context window through fine-tuning. Meanwhile, by maintaining continuous position indices within each chunk, PoSE bears a close resemblance to pre-training. As a result, the model's pre-trained capacity for language modeling and comprehension is retained to the greatest degree.\n\nThe advantages of our PoSE are threefold: 1) Memory and Time Efficiency: By only requiring the original context size for fine-tuning, PoSE circumvents the quadratic increase in computational complexity with respect to target length during the fine-tuning stage, thereby significantly reducing memory and time overhead. 2) Potential for Extremely-Long Context: We manage to extend the context window of LLaMA (Touvron et al., 2023a) by up to 64 times $(2 \\mathrm{k} \\rightarrow 128 \\mathrm{k}, \\mathrm{k}=1,024)$ while preserving decent ability of language modeling and understanding. 3) Compatible with all RoPE-based LLMs and PI strategies: The effectiveness of PoSE has been empirically validated across several representative RoPE-based LLMs, including LLaMA, LLaMA2 (Touvron et al., 2023b), GPT-J (Wang \\& Komatsuzaki, 2021), and Baichuan (Baichuan, 2023). Additionally, PoSE has been demonstrated to be compatible with a variety of position interpolation methods, including Linear (Chen et al., 2023a), NTK (Peng \\& Quesnelle, 2023), and YaRN (Peng et al., 2023) interpolation.\n\nNotably, by decoupling the fine-tuning and target length, PoSE can theoretically extend context window to an infinite length. The only constraint is the memory usage during the inference phase. Hopefully, with the continuous advancements in efficient inference techniques, including Flash Attention (Dao et al., 2022; Dao, 2023), xFormers (Lefaudeux et al., 2022), vLLM (Kwon et al., 2023), etc, we believe PoSE can promisingly push the context window size to a even larger scale.",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "PoSE:",
+          "EFFICIENT",
+          "CONTEXT",
+          "WINDOW",
+          "EXTENSION",
+          "OF",
+          "LLMS",
+          "VIA",
+          "POSITIONAL",
+          "SKIP-WISE"
+        ],
+        "anchor_targets": [
+          "PoSE:",
+          "EFFICIENT",
+          "CONTEXT",
+          "WINDOW"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2020",
+          "2021",
+          "2023",
+          "2022",
+          "32",
+          "100",
+          "2"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 7,
+            "same_target_paper": 7,
+            "disambiguates": 4
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides an introduction to the paper \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\". It mentions several other papers that are referenced within this introduction, but there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find sections discussing related work or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A3",
+        "candidate_anchor_ids": [
+          "DOC3_A3",
+          "DOC3_A8",
+          "DOC3_A2",
+          "DOC3_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC3_A2"
+        ],
+        "utility_hits": {
+          "DOC3_A8": [
+            "reference_section",
+            "likely_reverse_citation_penalty",
+            "other_doc_cites_target",
+            "citation_direction_reference_list",
+            "citation_format_cue"
+          ],
+          "DOC3_A3": [
+            "citation_format_cue"
+          ],
+          "DOC3_A5": [
+            "citation_format_cue"
+          ],
+          "DOC3_A4": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A8": 25.0,
+          "DOC3_A3": 3.0,
+          "DOC3_A5": 3.0,
+          "DOC3_A4": 3.0
+        },
+        "relation_hits": {
+          "DOC3_A8": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A2"
+          ],
+          "DOC3_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A2"
+          ],
+          "DOC3_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A2"
+          ],
+          "DOC3_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC3_A8": 13.56,
+          "DOC3_A3": 13.56,
+          "DOC3_A5": 13.56,
+          "DOC3_A4": 13.56
+        },
+        "anchor_role_hits": {
+          "DOC3_A8": [
+            "citation_direction"
+          ],
+          "DOC3_A3": [
+            "citation_direction"
+          ],
+          "DOC3_A5": [
+            "citation_direction"
+          ],
+          "DOC3_A4": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC3_A8": {
+            "local_relevance": 49.0,
+            "answer_utility": 25.0,
+            "coverage": 7.0,
+            "relation": 13.56,
+            "weak_priors": 10.303,
+            "redundancy_penalty": 0.0,
+            "total": 104.863
+          },
+          "DOC3_A3": {
+            "local_relevance": 33.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 13.56,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 61.174
+          },
+          "DOC3_A5": {
+            "local_relevance": 33.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 13.56,
+            "weak_priors": 5.108,
+            "redundancy_penalty": 0.0,
+            "total": 58.668
+          },
+          "DOC3_A4": {
+            "local_relevance": 25.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 13.56,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 52.951
+          }
+        }
+      },
+      "anchor_id": "DOC3_A3",
+      "plan_think": "The \"RELATED WORK\" section (DOC3_A3) is likely to contain references to other papers that are relevant to the topic of context window extension in LLMs. This section may also indicate whether the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" is referenced or cited. Inspecting this section could provide the necessary citation or reference evidence.",
+      "info": {
+        "anchor_id": "DOC3_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK",
+        "summary": "Expanded same-section read window around DOC3_A3: Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning....",
+        "text": "[DOC3_A3 | PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK]\n## 2 RELATED WORK\n\nTraining Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc.\n\nSimilar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time to mitigate out-of-distribution lengths. They proposed randomized positional encoding\n\n(RandPos), which randomly selected an ordered subset of position indices from longer sequences. Our proposed method, PoSE, diverges from their approach in several key aspects: First, RandPos is a positional embedding scheme designed to pre-train encoder-only models from scratch for length extrapolation. In contrast, PoSE is a fine-tuning method aiming at efficiently extend the context window of pre-trained LLMs, which are majorly decoder-only models. Second, in RandPos, the position indices between adjacent tokens are not continuous. However, in PoSE, the position indices within each chunk are intentionally made continuous to resemble the pre-training phase, therefore reducing the risk of disrupting the language modeling abilities learned during pre-training.\n\nFine-tuning LLMs for Longer Context. Differing from length extrapolation, which primarily involves training a model from scratch to support lengths exceeding those it was initially trained for, context window extension focuses on extending the context window of a pre-trained LLM. Directly fine-tuning an existing LLM with a longer context window has been shown to progress slowly (Chen et al., 2023a). To expedite and stabilize training, Chen et al. (2023a) first down-scaled position indices to match original context size through Linear Position Interpolation. Subsequently, a range of Positional Interpolation (PI) strategies have been introduced, including NTK (Peng \\& Quesnelle, 2023) and YaRN (Peng et al., 2023). More recently, LongLora (Chen et al., 2023b) propose shift short attention to approximate full attention. However, all these methods require Full-length fine-tuning, suffering computational cost that grows with target context size. By contrast, our method managed to decouple train / target length, requiring only the original context size for fine-tuning.\n\nMemory Transformers. An alternative strategy for extremely long input sequences involves memory mechanisms. Typically, there are two lines of research for utilizing memory: the recurrencebased approach (Dai et al., 2019; Bulatov et al., 2022) and the retrieval-based approach (Wu et al., 2022; Wang et al., 2023; Tworkowski et al., 2023). The former segments long inputs and reuses the hidden states of preceding segments as memory, suffering from information loss and limited capacity for random access. The latter encodes prior sequences as (key, value) pairs and utilizes a memory retriever and reader to extract previously encoded information, primarily limited by the lack of interaction between discrete memory segments. More recently, Mohtashami \\& Jaggi (2023) introduced landmark attention to facilitates random access to any chunk of the input. In contrast, our method achieves full access to the entire input without any modifications to the attention mechanism.\n\n[DOC3_A7 | PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 6 CONCLUSION]\nIn this paper, we introduce Positional Skip-wisE (PoSE) training to efficiently extend the context window of Large Language Models. PoSE simulates long inputs by manipulating position indices, thereby requiring only the original context window for fine-tuning, successfully decoupling train length and target length. Experiments have shown that, compared with fine-tuning on the full length, PoSE greatly reduces memory and time overhead. Taking advantage of this, we have managed to extend LLaMA model to $128 \\mathrm{k}$ on $8 \\mathrm{~V} 100$ GPUs, observing only minimal performance degradation on standard benchmarks. We have also empirically verified that PoSE is compatible with all RoPE-based LLMs and position interpolation strategies.\n\n## 7 ACKNOWLEDGEMENT",
+        "source_window_anchor_ids": [
+          "DOC3_A3",
+          "DOC3_A7"
+        ],
+        "primary_anchor_id": "DOC3_A3",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "PoSE:",
+          "EFFICIENT",
+          "CONTEXT",
+          "WINDOW",
+          "EXTENSION",
+          "OF",
+          "LLMS",
+          "VIA",
+          "POSITIONAL",
+          "SKIP-WISE"
+        ],
+        "anchor_targets": [
+          "PoSE:",
+          "EFFICIENT",
+          "CONTEXT",
+          "WINDOW"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "2021",
+          "2023",
+          "2022"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 7,
+            "same_target_paper": 7,
+            "disambiguates": 4
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A2"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides a review of related work on context window extension and length extrapolation, mentioning several papers. However, there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A2",
+            "DOC3_A3"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...",
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A8",
+        "candidate_anchor_ids": [
+          "DOC3_A8",
+          "DOC3_A4",
+          "DOC3_A5",
+          "DOC3_A1"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A2",
+            "DOC3_A3"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...",
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC3_A2",
+          "DOC3_A3"
+        ],
+        "utility_hits": {
+          "DOC3_A8": [
+            "reference_section",
+            "likely_reverse_citation_penalty",
+            "other_doc_cites_target",
+            "citation_direction_reference_list",
+            "citation_format_cue"
+          ],
+          "DOC3_A4": [
+            "citation_format_cue"
+          ],
+          "DOC3_A5": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A8": 25.0,
+          "DOC3_A4": 3.0,
+          "DOC3_A5": 3.0,
+          "DOC3_A1": 0.0
+        },
+        "relation_hits": {
+          "DOC3_A8": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A3",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A3",
+            "same_target_paper_selected=DOC3_A2"
+          ],
+          "DOC3_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A3",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A3",
+            "same_target_paper_selected=DOC3_A2"
+          ],
+          "DOC3_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A3",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A3",
+            "same_target_paper_selected=DOC3_A2"
+          ],
+          "DOC3_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A3",
+            "supports_selected=DOC3_A2",
+            "same_target_paper_selected=DOC3_A3",
+            "same_target_paper_selected=DOC3_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC3_A8": 19.12,
+          "DOC3_A4": 19.12,
+          "DOC3_A5": 19.12,
+          "DOC3_A1": 14.12
+        },
+        "anchor_role_hits": {
+          "DOC3_A8": [
+            "citation_direction"
+          ],
+          "DOC3_A4": [
+            "citation_direction"
+          ],
+          "DOC3_A5": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC3_A8": {
+            "local_relevance": 82.0,
+            "answer_utility": 25.0,
+            "coverage": 7.0,
+            "relation": 19.12,
+            "weak_priors": 10.303,
+            "redundancy_penalty": 0.0,
+            "total": 143.423
+          },
+          "DOC3_A4": {
+            "local_relevance": 58.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 19.12,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 91.511
+          },
+          "DOC3_A5": {
+            "local_relevance": 58.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 19.12,
+            "weak_priors": 5.108,
+            "redundancy_penalty": 0.0,
+            "total": 89.228
+          },
+          "DOC3_A1": {
+            "local_relevance": 58.0,
+            "answer_utility": 0.0,
+            "coverage": 4.0,
+            "relation": 14.12,
+            "weak_priors": 5.0,
+            "redundancy_penalty": 0.0,
+            "total": 81.12
+          }
+        }
+      },
+      "anchor_id": "DOC3_A8",
+      "plan_think": "The acknowledgments section (DOC3_A8) typically contains a list of references cited in the paper, making it a good candidate for finding citation or reference evidence. Since we have not found any explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" in the introduction or related work sections, inspecting the acknowledgments section could provide the necessary citation or reference evidence.",
+      "info": {
+        "anchor_id": "DOC3_A8",
+        "anchor_type": "attribution_region",
+        "section_path": "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 7 ACKNOWLEDGEMENT",
+        "summary": "Acknowledges contributors and lists references cited in the paper, providing a comprehensive bibliography of related works and methodologies.",
+        "text": "We thank all the anonymous reviewers for their helpful comments on this paper. We thank Xueguang Ma, Yang Ouyang, Pengyun Yue, Hanyu Li, Fangwei Zhu for the thoughtful discussion. This work was partially supported by the Okawa Research Grant.\n\n## REFERENCES\n\nBaichuan. Baichuan 2: Open large-scale language models. arXiv preprint arXiv:2309.10305, 2023. URL https://arxiv.org/abs/2309.10305.\n\nYonatan Bisk, Rowan Zellers, Ronan Le Bras, Jianfeng Gao, and Yejin Choi. Piqa: Reasoning about physical commonsense in natural language. In Thirty-Fourth AAAI Conference on Artificial Intelligence, 2020.\n\nTom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language models are few-shot learners. Advances in neural information processing systems, 33:1877-1901, 2020.\n\nAydar Bulatov, Yury Kuratov, and Mikhail Burtsev. Recurrent memory transformer. Advances in Neural Information Processing Systems, 35:11079-11091, 2022.\n\nShouyuan Chen, Sherman Wong, Liangjian Chen, and Yuandong Tian. Extending context window of large language models via positional interpolation. ArXiv, abs/2306.15595, 2023a.\n\nYukang Chen, Shengju Qian, Haotian Tang, Xin Lai, Zhijian Liu, Song Han, and Jiaya Jia. Longlora: Efficient fine-tuning of long-context large language models. arXiv preprint arXiv:2309.12307, 2023b.\n\nChristopher Clark, Kenton Lee, Ming-Wei Chang, Tom Kwiatkowski, Michael Collins, and Kristina Toutanova. Boolq: Exploring the surprising difficulty of natural yes/no questions. In $N A A C L$, 2019.\n\nPeter Clark, Isaac Cowhey, Oren Etzioni, Tushar Khot, Ashish Sabharwal, Carissa Schoenick, and Oyvind Tafjord. Think you have solved question answering? try arc, the ai 2 reasoning challenge. arXiv preprint arXiv:1803.05457, 2018.\n\nZihang Dai, Zhilin Yang, Yiming Yang, Jaime G Carbonell, Quoc Le, and Ruslan Salakhutdinov Transformer-xl: Attentive language models beyond a fixed-length context. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pp. 2978-2988, 2019.\n\nTri Dao. FlashAttention-2: Faster attention with better parallelism and work partitioning. 2023.\n\nTri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. FlashAttention: Fast and memory-efficient exact attention with IO-awareness. In Advances in Neural Information Processing Systems, 2022.\n\nHugging Face. Open llm leaderboard. https://huggingface.co/spaces/HuggingFaceH4/open_ llm_leaderboard, 2023.\n\nLeo Gao, Stella Biderman, Sid Black, Laurence Golding, Travis Hoppe, Charles Foster, Jason Phang, Horace He, Anish Thite, Noa Nabeshima, Shawn Presser, and Connor Leahy. The Pile: An 800gb dataset of diverse text for language modeling. arXiv preprint arXiv:2101.00027, 2020.\n\nChi Han, Qifan Wang, Wenhan Xiong, Yu Chen, Heng Ji, and Sinong Wang. Lm-infinite: Simple on-the-fly length generalization for large language models. arXiv preprint arXiv:2308.16137, 2023\n\nAdi Haviv, Ori Ram, Ofir Press, Peter Izsak, and Omer Levy. Transformer language models without positional encodings still learn positional information. In Findings of the Association for Computational Linguistics: EMNLP 2022, pp. 1382-1390, Abu Dhabi, United Arab Emirates, December 2022. Association for Computational Linguistics. doi: 10.18653/v1/2022.findings-emnlp. 99 .\n\nLuyang Huang, Shuyang Cao, Nikolaus Parulian, Heng Ji, and Lu Wang. Efficient attentions for long document summarization. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 1419-1436, Online, June 2021. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main. 112 .\n\nkaiokendev. Things i'm learning while training superhot. https://kaiokendev.github.io/til\\# extending-context-to-8k, 2023.\n\nSakaguchi Keisuke, Le Bras Ronan, Bhagavatula Chandra, and Choi Yejin. Winogrande: An adversarial winograd schema challenge at scale. 2019.\n\nWoosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E. Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention, 2023.\n\nBenjamin Lefaudeux, Francisco Massa, Diana Liskovich, Wenhan Xiong, Vittorio Caggiano, Sean Naren, Min Xu, Jieru Hu, Marta Tintore, Susan Zhang, Patrick Labatut, and Daniel Haziza. xformers: A modular and hackable transformer modelling library. https://github.com/ facebookresearch/xformers, 2022.\n\nMukai Li, Shansan Gong, Jiangtao Feng, Yiheng Xu, Jun Zhang, Zhiyong Wu, and Lingpeng Kong. In-context learning with many demonstration examples. arXiv preprint arXiv:2302.04931, 2023.\n\nStephanie Lin, Jacob Hilton, and Owain Evans. Truthfulqa: Measuring how models mimic human falsehoods. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 3214-3252, 2022.\n\nAmirkeivan Mohtashami and Martin Jaggi. Landmark attention: Random-access infinite context length for transformers, 2023.\n\nBowen Peng and Jeffrey Quesnelle. Ntk-aware scaled rope allows llama models to have extended $(8 \\mathrm{k}+$ ) context size without any fine-tuning and minimal perplexity degradation. https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_ rope_allows_llama_models_to_have, 2023.\n\nBowen Peng, Jeffrey Quesnelle, Honglu Fan, and Enrico Shippole. Yarn: Efficient context window extension of large language models, 2023.\n\nOfir Press, Noah A Smith, and Mike Lewis. Train short, test long: Attention with linear biases enables input length extrapolation. arXiv preprint arXiv:2108.12409, 2021.\n\nShawn Presser. https://twitter.com/theshawwn/status/1320282149329784833, 2020.\n\nJeffrey Quesnelle. Dynamically scaled rope further increases performance of long context llama with zero fine-tuning. https://www.reddit.com/r/LocalLLaMA/comments/14mrgpr/ dynamically_scaled_rope_further_increases/, 2023.\n\nJack W Rae, Anna Potapenko, Siddhant M Jayakumar, Chloe Hillier, and Timothy P Lillicrap. Compressive transformers for long-range sequence modelling. arXiv preprint, 2019.\n\nSamyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He. Zero: Memory optimizations toward training trillion parameter models. In SC20: International Conference for High Performance Computing, Networking, Storage and Analysis, pp. 1-16. IEEE, 2020.\n\nAnian Ruoss, Grégoire Delétang, Tim Genewein, Jordi Grau-Moya, Róbert Csordás, Mehdi Bennani, Shane Legg, and Joel Veness. Randomized positional encodings boost length generalization of transformers. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pp. 1889-1903, Toronto, Canada, July 2023. Association for Computational Linguistics. doi: 10.18653/v1/2023.acl-short. 161.\n\nJianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha, Bo Wen, and Yunfeng Liu. Roformer: Enhanced transformer with rotary position embedding. arXiv preprint arXiv:2104.09864, 2021.\n\nYutao Sun, Li Dong, Barun Patra, Shuming Ma, Shaohan Huang, Alon Benhaim, Vishrav Chaudhary, Xia Song, and Furu Wei. A length-extrapolatable transformer. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 14590-14604, Toronto, Canada, July 2023. Association for Computational Linguistics. doi: $10.18653 / v 1 / 2023$.acl-long. 816 .\n\nHugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. Llama: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971, 2023a.\n\nHugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288, 2023b.\n\nSzymon Tworkowski, Konrad Staniszewski, Mikołaj Pacek, Yuhuai Wu, Henryk Michalewski, and Piotr Miłoś. Focused transformer: Contrastive training for context scaling. arXiv preprint arXiv:2307.03170, 2023.\n\nBen Wang and Aran Komatsuzaki. GPT-J-6B: A 6 Billion Parameter Autoregressive Language Model. https://github.com/kingoflolz/mesh-transformer-jax, May 2021.\n\nWeizhi Wang, Li Dong, Hao Cheng, Xiaodong Liu, Xifeng Yan, Jianfeng Gao, and Furu Wei. Augmenting language models with long-term memory. arXiv preprint arXiv:2306.07174, 2023.\n\nYuhuai Wu, Markus N Rabe, DeLesley Hutchins, and Christian Szegedy. Memorizing transformers. arXiv preprint arXiv:2203.08913, 2022.\n\nRowan Zellers, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi. Hellaswag: Can a machine really finish your sentence? In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pp. 4791-4800, 2019.\n\nAzerbayev Zhangir, Ayers Edward, and Bartosz Piotrowski. Proof-pile. https://github.com/ zhangir-azerbayev/proof-pile, 2022.\n\nYucheng Zhou, Tao Shen, Xiubo Geng, Chongyang Tao, Guodong Long, Can Xu, and Daxin Jiang. Fine-grained distillation for long document retrieval. arXiv preprint arXiv:2212.10423, 2022.\n\nTable 4: Comparison of different methods for choosing $v_{i}$. We report perplexity with evaluation context window ranging from $2 \\mathrm{k}$ to $16 \\mathrm{k}$. We show that these variations have relatively little impact on the outcomes of fine-tuning.\n\n| Method | GovReport |  |  |  |  | Proof-pile |  |  |  |\n| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n|  | $\\mathbf{2 k}$ | $\\mathbf{4 k}$ | $\\mathbf{8 k}$ | $\\mathbf{1 6 k}$ |  | $\\mathbf{2 k}$ | $\\mathbf{4 k}$ | $\\mathbf{8 k}$ | $\\mathbf{1 6 k}$ |\n| $v_{i} \\sim \\mathcal{U}(\\ldots)$ | 4.84 | 4.68 | 4.60 | 4.60 |  | 2.95 | 2.74 | 2.61 | 2.60 |\n| $v_{i}=0$ | 4.85 | 4.72 | 4.64 | 4.68 |  | 2.96 | 2.75 | 2.63 | 2.61 |\n| $v_{i}=u_{i}$ | 4.84 | 4.68 | 4.60 | 4.60 |  | 2.95 | 2.73 | 2.60 | 2.56 |",
+        "anchor_role_candidates": [
+          "table_value",
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "PoSE:",
+          "EFFICIENT",
+          "CONTEXT",
+          "WINDOW",
+          "EXTENSION",
+          "OF",
+          "LLMS",
+          "VIA",
+          "POSITIONAL",
+          "SKIP-WISE"
+        ],
+        "anchor_targets": [
+          "cited",
+          "PoSE:",
+          "EFFICIENT",
+          "CONTEXT",
+          "WINDOW"
+        ],
+        "anchor_value_hints": [
+          "7",
+          "2",
+          "2309.10305",
+          "2023",
+          "2020",
+          "33",
+          "1877",
+          "-1901,"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "table_region",
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 7,
+            "same_target_paper": 7,
+            "disambiguates": 4
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides a comprehensive list of references cited in the paper \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\". However, there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A2",
+            "DOC3_A3",
+            "DOC3_A8"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...",
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t...",
+            "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 7 ACKNOWLEDGEMENT Acknowledges contributors and lists references cited in the paper, providing a comprehensive bibliography of related works and methodologies. We thank all the anonymous reviewers for their helpful comments on this paper. We thank Xueguang Ma, Yang Ouyang, Pengyun Yue, Hanyu Li, Fangwei Zhu for the thoughtful discussion. This work was partially supported by the Okawa Research Grant. ## REFERENCES Baichuan. Baichuan 2: Open large-scale language models. arXiv preprint arXiv:2309.10305, 2023. URL https://arxiv.org/abs/2309.10305. Yonatan Bisk, Rowan Zellers, Ronan Le Bras, Jianfeng Gao, and Yejin Choi. Piqa: Reasoning about physical co..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['PoSE:', 'EFFICIENT']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The introduction section (DOC3_A2) might provide insights into whether the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" is referenced or cited. This section often includes background information and mentions relevant prior work.</think>\n<search>{\"current_query\": \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\"], \"utility_hits\": {\"DOC3_A8\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A2\": [\"citation_format_cue\"], \"DOC3_A3\": [\"citation_format_cue\"], \"DOC3_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 25.0, \"DOC3_A2\": 3.0, \"DOC3_A3\": 3.0, \"DOC3_A5\": 3.0}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 49.0, \"answer_utility\": 25.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.303, \"redundancy_penalty\": 0.0, \"total\": 91.303}, \"DOC3_A2\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 50.901}, \"DOC3_A3\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 50.614}, \"DOC3_A5\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 5.108, \"redundancy_penalty\": 0.0, \"total\": 48.108}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION\", \"summary\": \"Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning.\", \"text\": \"## 1 INTRODUCTION\\n\\nLarge Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et al., 2021), in-context learning with numerous examples (Li et al., 2023), and long document retrieval (Zhou et al., 2022), etc. This naturally poses a significant challenge of context window extension: Extending the context window of a pre-trained LLM to accommodate longer sequences.\\n\\nNaively fine-tuning LLMs on inputs of target length for window extension has received limited success due to the large disruption introduced by new position indices (Chen et al., 2023a; Han et al., 2023). Addressing this, Position Interpolation (Chen et al., 2023a; kaiokendev, 2023; Peng et al., 2023) propose to down-scale the position indices to match the original window size, yielding improved results for context extension. However, these methods still rely on Full-length fine-tuning, i.e., finetuning with context of target length, which is memory and time-intensive due to the computational complexity that increases quadratically with input length. For example, Chen et al. (2023a) use 32 A100 GPUs to extend LLaMA models from $2 \\\\mathrm{k}$ to $8 \\\\mathrm{k}$ context, and 128 A100 GPUs for even larger context. These overhead has made it impossible to extend context window to extreme lengths.[^0]\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_282b701db7febcf7af8ag-02.jpg?height=461&width=1390&top_left_y=276&top_left_x=365)\\n\\nFigure 1: Position indices of Full-length fine-tuning v.s. PoSE fine-tuning for extending the context window size from 2,048 to 8,192 . At each iteration, the former directly takes 8,192 tokens for fine-tuning, while PoSE manipulates the position indices of 2,048 tokens to simulate longer inputs. For example, we partition the original context window of 2,048 tokens into two chunks, and adjust the position indices of the second chunk by adding a distinct skipping bias term. These bias terms, as well as the length of each chunk, are altered for each training example, so that the model can adapt to all relative positions of the target context window through fine-tuning.\\n\\nIn this paper, we introduce Positional Skip-wisE (PoSE) fine-tuning to decouple the fine-tuning length from the target context window length, unleashing the possibility of efficiently extending context window to an extreme size. The key idea of PoSE is to simulate long inputs by manipulating position indices within a fixed context window. As depicted in Figure 1, we partition the original context window into several chunks, and adjust the position indices of each chunk by adding a distinct skipping bias term. These bias terms, as well as the length of each chunk, are altered for each training example, so that the model can adapt to all positions (including both absolute and relative) within the target context window through fine-tuning. Meanwhile, by maintaining continuous position indices within each chunk, PoSE bears a close resemblance to pre-training. As a result, the model's pre-trained capacity for language modeling and comprehension is retained to the greatest degree.\\n\\nThe advantages of our PoSE are threefold: 1) Memory and Time Efficiency: By only requiring the original context size for fine-tuning, PoSE circumvents the quadratic increase in computational complexity with respect to target length during the fine-tuning stage, thereby significantly reducing memory and time overhead. 2) Potential for Extremely-Long Context: We manage to extend the context window of LLaMA (Touvron et al., 2023a) by up to 64 times $(2 \\\\mathrm{k} \\\\rightarrow 128 \\\\mathrm{k}, \\\\mathrm{k}=1,024)$ while preserving decent ability of language modeling and understanding. 3) Compatible with all RoPE-based LLMs and PI strategies: The effectiveness of PoSE has been empirically validated across several representative RoPE-based LLMs, including LLaMA, LLaMA2 (Touvron et al., 2023b), GPT-J (Wang \\\\& Komatsuzaki, 2021), and Baichuan (Baichuan, 2023). Additionally, PoSE has been demonstrated to be compatible with a variety of position interpolation methods, including Linear (Chen et al., 2023a), NTK (Peng \\\\& Quesnelle, 2023), and YaRN (Peng et al., 2023) interpolation.\\n\\nNotably, by decoupling the fine-tuning and target length, PoSE can theoretically extend context window to an infinite length. The only constraint is the memory usage during the inference phase. Hopefully, with the continuous advancements in efficient inference techniques, including Flash Attention (Dao et al., 2022; Dao, 2023), xFormers (Lefaudeux et al., 2022), vLLM (Kwon et al., 2023), etc, we believe PoSE can promisingly push the context window size to a even larger scale.\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\", \"EXTENSION\", \"OF\", \"LLMS\", \"VIA\", \"POSITIONAL\", \"SKIP-WISE\"], \"anchor_targets\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\"], \"anchor_value_hints\": [\"1\", \"2020\", \"2021\", \"2023\", \"2022\", \"32\", \"100\", \"2\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 7, \"same_target_paper\": 7, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides an introduction to the paper \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\". It mentions several other papers that are referenced within this introduction, but there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find sections discussing related work or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}}</retrieve>\n<think>The \"RELATED WORK\" section (DOC3_A3) is likely to contain references to other papers that are relevant to the topic of context window extension in LLMs. This section may also indicate whether the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" is referenced or cited. Inspecting this section could provide the necessary citation or reference evidence.</think>\n<search>{\"current_query\": \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A3\", \"candidate_anchor_ids\": [\"DOC3_A3\", \"DOC3_A8\", \"DOC3_A2\", \"DOC3_A4\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A2\"], \"utility_hits\": {\"DOC3_A8\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A3\": [\"citation_format_cue\"], \"DOC3_A5\": [\"citation_format_cue\"], \"DOC3_A4\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 25.0, \"DOC3_A3\": 3.0, \"DOC3_A5\": 3.0, \"DOC3_A4\": 3.0}, \"relation_hits\": {\"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"]}, \"relation_score\": {\"DOC3_A8\": 13.56, \"DOC3_A3\": 13.56, \"DOC3_A5\": 13.56, \"DOC3_A4\": 13.56}, \"anchor_role_hits\": {\"DOC3_A8\": [\"citation_direction\"], \"DOC3_A3\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"], \"DOC3_A4\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 49.0, \"answer_utility\": 25.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 10.303, \"redundancy_penalty\": 0.0, \"total\": 104.863}, \"DOC3_A3\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 61.174}, \"DOC3_A5\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 5.108, \"redundancy_penalty\": 0.0, \"total\": 58.668}, \"DOC3_A4\": {\"local_relevance\": 25.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 52.951}}}</search>\n<info>{\"anchor_id\": \"DOC3_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK\", \"summary\": \"Expanded same-section read window around DOC3_A3: Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning....\", \"text\": \"[DOC3_A3 | PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK]\\n## 2 RELATED WORK\\n\\nTraining Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc.\\n\\nSimilar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time to mitigate out-of-distribution lengths. They proposed randomized positional encoding\\n\\n(RandPos), which randomly selected an ordered subset of position indices from longer sequences. Our proposed method, PoSE, diverges from their approach in several key aspects: First, RandPos is a positional embedding scheme designed to pre-train encoder-only models from scratch for length extrapolation. In contrast, PoSE is a fine-tuning method aiming at efficiently extend the context window of pre-trained LLMs, which are majorly decoder-only models. Second, in RandPos, the position indices between adjacent tokens are not continuous. However, in PoSE, the position indices within each chunk are intentionally made continuous to resemble the pre-training phase, therefore reducing the risk of disrupting the language modeling abilities learned during pre-training.\\n\\nFine-tuning LLMs for Longer Context. Differing from length extrapolation, which primarily involves training a model from scratch to support lengths exceeding those it was initially trained for, context window extension focuses on extending the context window of a pre-trained LLM. Directly fine-tuning an existing LLM with a longer context window has been shown to progress slowly (Chen et al., 2023a). To expedite and stabilize training, Chen et al. (2023a) first down-scaled position indices to match original context size through Linear Position Interpolation. Subsequently, a range of Positional Interpolation (PI) strategies have been introduced, including NTK (Peng \\\\& Quesnelle, 2023) and YaRN (Peng et al., 2023). More recently, LongLora (Chen et al., 2023b) propose shift short attention to approximate full attention. However, all these methods require Full-length fine-tuning, suffering computational cost that grows with target context size. By contrast, our method managed to decouple train / target length, requiring only the original context size for fine-tuning.\\n\\nMemory Transformers. An alternative strategy for extremely long input sequences involves memory mechanisms. Typically, there are two lines of research for utilizing memory: the recurrencebased approach (Dai et al., 2019; Bulatov et al., 2022) and the retrieval-based approach (Wu et al., 2022; Wang et al., 2023; Tworkowski et al., 2023). The former segments long inputs and reuses the hidden states of preceding segments as memory, suffering from information loss and limited capacity for random access. The latter encodes prior sequences as (key, value) pairs and utilizes a memory retriever and reader to extract previously encoded information, primarily limited by the lack of interaction between discrete memory segments. More recently, Mohtashami \\\\& Jaggi (2023) introduced landmark attention to facilitates random access to any chunk of the input. In contrast, our method achieves full access to the entire input without any modifications to the attention mechanism.\\n\\n[DOC3_A7 | PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 6 CONCLUSION]\\nIn this paper, we introduce Positional Skip-wisE (PoSE) training to efficiently extend the context window of Large Language Models. PoSE simulates long inputs by manipulating position indices, thereby requiring only the original context window for fine-tuning, successfully decoupling train length and target length. Experiments have shown that, compared with fine-tuning on the full length, PoSE greatly reduces memory and time overhead. Taking advantage of this, we have managed to extend LLaMA model to $128 \\\\mathrm{k}$ on $8 \\\\mathrm{~V} 100$ GPUs, observing only minimal performance degradation on standard benchmarks. We have also empirically verified that PoSE is compatible with all RoPE-based LLMs and position interpolation strategies.\\n\\n## 7 ACKNOWLEDGEMENT\", \"source_window_anchor_ids\": [\"DOC3_A3\", \"DOC3_A7\"], \"primary_anchor_id\": \"DOC3_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\", \"EXTENSION\", \"OF\", \"LLMS\", \"VIA\", \"POSITIONAL\", \"SKIP-WISE\"], \"anchor_targets\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\"], \"anchor_value_hints\": [\"2\", \"2021\", \"2023\", \"2022\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 7, \"same_target_paper\": 7, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides a review of related work on context window extension and length extrapolation, mentioning several papers. However, there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}}</retrieve>\n<think>The acknowledgments section (DOC3_A8) typically contains a list of references cited in the paper, making it a good candidate for finding citation or reference evidence. Since we have not found any explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" in the introduction or related work sections, inspecting the acknowledgments section could provide the necessary citation or reference evidence.</think>\n<search>{\"current_query\": \"Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A8\", \"candidate_anchor_ids\": [\"DOC3_A8\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A1\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"utility_hits\": {\"DOC3_A8\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A4\": [\"citation_format_cue\"], \"DOC3_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 25.0, \"DOC3_A4\": 3.0, \"DOC3_A5\": 3.0, \"DOC3_A1\": 0.0}, \"relation_hits\": {\"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"]}, \"relation_score\": {\"DOC3_A8\": 19.12, \"DOC3_A4\": 19.12, \"DOC3_A5\": 19.12, \"DOC3_A1\": 14.12}, \"anchor_role_hits\": {\"DOC3_A8\": [\"citation_direction\"], \"DOC3_A4\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 82.0, \"answer_utility\": 25.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 10.303, \"redundancy_penalty\": 0.0, \"total\": 143.423}, \"DOC3_A4\": {\"local_relevance\": 58.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 91.511}, \"DOC3_A5\": {\"local_relevance\": 58.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 5.108, \"redundancy_penalty\": 0.0, \"total\": 89.228}, \"DOC3_A1\": {\"local_relevance\": 58.0, \"answer_utility\": 0.0, \"coverage\": 4.0, \"relation\": 14.12, \"weak_priors\": 5.0, \"redundancy_penalty\": 0.0, \"total\": 81.12}}}</search>\n<info>{\"anchor_id\": \"DOC3_A8\", \"anchor_type\": \"attribution_region\", \"section_path\": \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 7 ACKNOWLEDGEMENT\", \"summary\": \"Acknowledges contributors and lists references cited in the paper, providing a comprehensive bibliography of related works and methodologies.\", \"text\": \"We thank all the anonymous reviewers for their helpful comments on this paper. We thank Xueguang Ma, Yang Ouyang, Pengyun Yue, Hanyu Li, Fangwei Zhu for the thoughtful discussion. This work was partially supported by the Okawa Research Grant.\\n\\n## REFERENCES\\n\\nBaichuan. Baichuan 2: Open large-scale language models. arXiv preprint arXiv:2309.10305, 2023. URL https://arxiv.org/abs/2309.10305.\\n\\nYonatan Bisk, Rowan Zellers, Ronan Le Bras, Jianfeng Gao, and Yejin Choi. Piqa: Reasoning about physical commonsense in natural language. In Thirty-Fourth AAAI Conference on Artificial Intelligence, 2020.\\n\\nTom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language models are few-shot learners. Advances in neural information processing systems, 33:1877-1901, 2020.\\n\\nAydar Bulatov, Yury Kuratov, and Mikhail Burtsev. Recurrent memory transformer. Advances in Neural Information Processing Systems, 35:11079-11091, 2022.\\n\\nShouyuan Chen, Sherman Wong, Liangjian Chen, and Yuandong Tian. Extending context window of large language models via positional interpolation. ArXiv, abs/2306.15595, 2023a.\\n\\nYukang Chen, Shengju Qian, Haotian Tang, Xin Lai, Zhijian Liu, Song Han, and Jiaya Jia. Longlora: Efficient fine-tuning of long-context large language models. arXiv preprint arXiv:2309.12307, 2023b.\\n\\nChristopher Clark, Kenton Lee, Ming-Wei Chang, Tom Kwiatkowski, Michael Collins, and Kristina Toutanova. Boolq: Exploring the surprising difficulty of natural yes/no questions. In $N A A C L$, 2019.\\n\\nPeter Clark, Isaac Cowhey, Oren Etzioni, Tushar Khot, Ashish Sabharwal, Carissa Schoenick, and Oyvind Tafjord. Think you have solved question answering? try arc, the ai 2 reasoning challenge. arXiv preprint arXiv:1803.05457, 2018.\\n\\nZihang Dai, Zhilin Yang, Yiming Yang, Jaime G Carbonell, Quoc Le, and Ruslan Salakhutdinov Transformer-xl: Attentive language models beyond a fixed-length context. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pp. 2978-2988, 2019.\\n\\nTri Dao. FlashAttention-2: Faster attention with better parallelism and work partitioning. 2023.\\n\\nTri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. FlashAttention: Fast and memory-efficient exact attention with IO-awareness. In Advances in Neural Information Processing Systems, 2022.\\n\\nHugging Face. Open llm leaderboard. https://huggingface.co/spaces/HuggingFaceH4/open_ llm_leaderboard, 2023.\\n\\nLeo Gao, Stella Biderman, Sid Black, Laurence Golding, Travis Hoppe, Charles Foster, Jason Phang, Horace He, Anish Thite, Noa Nabeshima, Shawn Presser, and Connor Leahy. The Pile: An 800gb dataset of diverse text for language modeling. arXiv preprint arXiv:2101.00027, 2020.\\n\\nChi Han, Qifan Wang, Wenhan Xiong, Yu Chen, Heng Ji, and Sinong Wang. Lm-infinite: Simple on-the-fly length generalization for large language models. arXiv preprint arXiv:2308.16137, 2023\\n\\nAdi Haviv, Ori Ram, Ofir Press, Peter Izsak, and Omer Levy. Transformer language models without positional encodings still learn positional information. In Findings of the Association for Computational Linguistics: EMNLP 2022, pp. 1382-1390, Abu Dhabi, United Arab Emirates, December 2022. Association for Computational Linguistics. doi: 10.18653/v1/2022.findings-emnlp. 99 .\\n\\nLuyang Huang, Shuyang Cao, Nikolaus Parulian, Heng Ji, and Lu Wang. Efficient attentions for long document summarization. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 1419-1436, Online, June 2021. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main. 112 .\\n\\nkaiokendev. Things i'm learning while training superhot. https://kaiokendev.github.io/til\\\\# extending-context-to-8k, 2023.\\n\\nSakaguchi Keisuke, Le Bras Ronan, Bhagavatula Chandra, and Choi Yejin. Winogrande: An adversarial winograd schema challenge at scale. 2019.\\n\\nWoosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E. Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention, 2023.\\n\\nBenjamin Lefaudeux, Francisco Massa, Diana Liskovich, Wenhan Xiong, Vittorio Caggiano, Sean Naren, Min Xu, Jieru Hu, Marta Tintore, Susan Zhang, Patrick Labatut, and Daniel Haziza. xformers: A modular and hackable transformer modelling library. https://github.com/ facebookresearch/xformers, 2022.\\n\\nMukai Li, Shansan Gong, Jiangtao Feng, Yiheng Xu, Jun Zhang, Zhiyong Wu, and Lingpeng Kong. In-context learning with many demonstration examples. arXiv preprint arXiv:2302.04931, 2023.\\n\\nStephanie Lin, Jacob Hilton, and Owain Evans. Truthfulqa: Measuring how models mimic human falsehoods. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 3214-3252, 2022.\\n\\nAmirkeivan Mohtashami and Martin Jaggi. Landmark attention: Random-access infinite context length for transformers, 2023.\\n\\nBowen Peng and Jeffrey Quesnelle. Ntk-aware scaled rope allows llama models to have extended $(8 \\\\mathrm{k}+$ ) context size without any fine-tuning and minimal perplexity degradation. https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_ rope_allows_llama_models_to_have, 2023.\\n\\nBowen Peng, Jeffrey Quesnelle, Honglu Fan, and Enrico Shippole. Yarn: Efficient context window extension of large language models, 2023.\\n\\nOfir Press, Noah A Smith, and Mike Lewis. Train short, test long: Attention with linear biases enables input length extrapolation. arXiv preprint arXiv:2108.12409, 2021.\\n\\nShawn Presser. https://twitter.com/theshawwn/status/1320282149329784833, 2020.\\n\\nJeffrey Quesnelle. Dynamically scaled rope further increases performance of long context llama with zero fine-tuning. https://www.reddit.com/r/LocalLLaMA/comments/14mrgpr/ dynamically_scaled_rope_further_increases/, 2023.\\n\\nJack W Rae, Anna Potapenko, Siddhant M Jayakumar, Chloe Hillier, and Timothy P Lillicrap. Compressive transformers for long-range sequence modelling. arXiv preprint, 2019.\\n\\nSamyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He. Zero: Memory optimizations toward training trillion parameter models. In SC20: International Conference for High Performance Computing, Networking, Storage and Analysis, pp. 1-16. IEEE, 2020.\\n\\nAnian Ruoss, Grégoire Delétang, Tim Genewein, Jordi Grau-Moya, Róbert Csordás, Mehdi Bennani, Shane Legg, and Joel Veness. Randomized positional encodings boost length generalization of transformers. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pp. 1889-1903, Toronto, Canada, July 2023. Association for Computational Linguistics. doi: 10.18653/v1/2023.acl-short. 161.\\n\\nJianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha, Bo Wen, and Yunfeng Liu. Roformer: Enhanced transformer with rotary position embedding. arXiv preprint arXiv:2104.09864, 2021.\\n\\nYutao Sun, Li Dong, Barun Patra, Shuming Ma, Shaohan Huang, Alon Benhaim, Vishrav Chaudhary, Xia Song, and Furu Wei. A length-extrapolatable transformer. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 14590-14604, Toronto, Canada, July 2023. Association for Computational Linguistics. doi: $10.18653 / v 1 / 2023$.acl-long. 816 .\\n\\nHugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. Llama: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971, 2023a.\\n\\nHugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288, 2023b.\\n\\nSzymon Tworkowski, Konrad Staniszewski, Mikołaj Pacek, Yuhuai Wu, Henryk Michalewski, and Piotr Miłoś. Focused transformer: Contrastive training for context scaling. arXiv preprint arXiv:2307.03170, 2023.\\n\\nBen Wang and Aran Komatsuzaki. GPT-J-6B: A 6 Billion Parameter Autoregressive Language Model. https://github.com/kingoflolz/mesh-transformer-jax, May 2021.\\n\\nWeizhi Wang, Li Dong, Hao Cheng, Xiaodong Liu, Xifeng Yan, Jianfeng Gao, and Furu Wei. Augmenting language models with long-term memory. arXiv preprint arXiv:2306.07174, 2023.\\n\\nYuhuai Wu, Markus N Rabe, DeLesley Hutchins, and Christian Szegedy. Memorizing transformers. arXiv preprint arXiv:2203.08913, 2022.\\n\\nRowan Zellers, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi. Hellaswag: Can a machine really finish your sentence? In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pp. 4791-4800, 2019.\\n\\nAzerbayev Zhangir, Ayers Edward, and Bartosz Piotrowski. Proof-pile. https://github.com/ zhangir-azerbayev/proof-pile, 2022.\\n\\nYucheng Zhou, Tao Shen, Xiubo Geng, Chongyang Tao, Guodong Long, Can Xu, and Daxin Jiang. Fine-grained distillation for long document retrieval. arXiv preprint arXiv:2212.10423, 2022.\\n\\nTable 4: Comparison of different methods for choosing $v_{i}$. We report perplexity with evaluation context window ranging from $2 \\\\mathrm{k}$ to $16 \\\\mathrm{k}$. We show that these variations have relatively little impact on the outcomes of fine-tuning.\\n\\n| Method | GovReport |  |  |  |  | Proof-pile |  |  |  |\\n| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\\n|  | $\\\\mathbf{2 k}$ | $\\\\mathbf{4 k}$ | $\\\\mathbf{8 k}$ | $\\\\mathbf{1 6 k}$ |  | $\\\\mathbf{2 k}$ | $\\\\mathbf{4 k}$ | $\\\\mathbf{8 k}$ | $\\\\mathbf{1 6 k}$ |\\n| $v_{i} \\\\sim \\\\mathcal{U}(\\\\ldots)$ | 4.84 | 4.68 | 4.60 | 4.60 |  | 2.95 | 2.74 | 2.61 | 2.60 |\\n| $v_{i}=0$ | 4.85 | 4.72 | 4.64 | 4.68 |  | 2.96 | 2.75 | 2.63 | 2.61 |\\n| $v_{i}=u_{i}$ | 4.84 | 4.68 | 4.60 | 4.60 |  | 2.95 | 2.73 | 2.60 | 2.56 |\", \"anchor_role_candidates\": [\"table_value\", \"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\", \"EXTENSION\", \"OF\", \"LLMS\", \"VIA\", \"POSITIONAL\", \"SKIP-WISE\"], \"anchor_targets\": [\"cited\", \"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\"], \"anchor_value_hints\": [\"7\", \"2\", \"2309.10305\", \"2023\", \"2020\", \"33\", \"1877\", \"-1901,\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"table_region\", \"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 7, \"same_target_paper\": 7, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides a comprehensive list of references cited in the paper \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\". However, there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\", \"DOC3_A8\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 7 ACKNOWLEDGEMENT Acknowledges contributors and lists references cited in the paper, providing a comprehensive bibliography of related works and methodologies. We thank all the anonymous reviewers for their helpful comments on this paper. We thank Xueguang Ma, Yang Ouyang, Pengyun Yue, Hanyu Li, Fangwei Zhu for the thoughtful discussion. This work was partially supported by the Okawa Research Grant. ## REFERENCES Baichuan. Baichuan 2: Open large-scale language models. arXiv preprint arXiv:2309.10305, 2023. URL https://arxiv.org/abs/2309.10305. Yonatan Bisk, Rowan Zellers, Ronan Le Bras, Jianfeng Gao, and Yejin Choi. Piqa: Reasoning about physical co...\"], \"selected_relation_anchor_ids\": [\"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The introduction section (DOC3_A2) might provide insights into whether the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" is referenced or cited. This section often includes background information and mentions relevant prior work.</think>\n<search>{\"current_query\": \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\"], \"utility_hits\": {\"DOC3_A8\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A2\": [\"citation_format_cue\"], \"DOC3_A3\": [\"citation_format_cue\"], \"DOC3_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 25.0, \"DOC3_A2\": 3.0, \"DOC3_A3\": 3.0, \"DOC3_A5\": 3.0}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 49.0, \"answer_utility\": 25.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.303, \"redundancy_penalty\": 0.0, \"total\": 91.303}, \"DOC3_A2\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 50.901}, \"DOC3_A3\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 50.614}, \"DOC3_A5\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 5.108, \"redundancy_penalty\": 0.0, \"total\": 48.108}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION\", \"summary\": \"Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning.\", \"text\": \"## 1 INTRODUCTION\\n\\nLarge Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et al., 2021), in-context learning with numerous examples (Li et al., 2023), and long document retrieval (Zhou et al., 2022), etc. This naturally poses a significant challenge of context window extension: Extending the context window of a pre-trained LLM to accommodate longer sequences.\\n\\nNaively fine-tuning LLMs on inputs of target length for window extension has received limited success due to the large disruption introduced by new position indices (Chen et al., 2023a; Han et al., 2023). Addressing this, Position Interpolation (Chen et al., 2023a; kaiokendev, 2023; Peng et al., 2023) propose to down-scale the position indices to match the original window size, yielding improved results for context extension. However, these methods still rely on Full-length fine-tuning, i.e., finetuning with context of target length, which is memory and time-intensive due to the computational complexity that increases quadratically with input length. For example, Chen et al. (2023a) use 32 A100 GPUs to extend LLaMA models from $2 \\\\mathrm{k}$ to $8 \\\\mathrm{k}$ context, and 128 A100 GPUs for even larger context. These overhead has made it impossible to extend context window to extreme lengths.[^0]\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_282b701db7febcf7af8ag-02.jpg?height=461&width=1390&top_left_y=276&top_left_x=365)\\n\\nFigure 1: Position indices of Full-length fine-tuning v.s. PoSE fine-tuning for extending the context window size from 2,048 to 8,192 . At each iteration, the former directly takes 8,192 tokens for fine-tuning, while PoSE manipulates the position indices of 2,048 tokens to simulate longer inputs. For example, we partition the original context window of 2,048 tokens into two chunks, and adjust the position indices of the second chunk by adding a distinct skipping bias term. These bias terms, as well as the length of each chunk, are altered for each training example, so that the model can adapt to all relative positions of the target context window through fine-tuning.\\n\\nIn this paper, we introduce Positional Skip-wisE (PoSE) fine-tuning to decouple the fine-tuning length from the target context window length, unleashing the possibility of efficiently extending context window to an extreme size. The key idea of PoSE is to simulate long inputs by manipulating position indices within a fixed context window. As depicted in Figure 1, we partition the original context window into several chunks, and adjust the position indices of each chunk by adding a distinct skipping bias term. These bias terms, as well as the length of each chunk, are altered for each training example, so that the model can adapt to all positions (including both absolute and relative) within the target context window through fine-tuning. Meanwhile, by maintaining continuous position indices within each chunk, PoSE bears a close resemblance to pre-training. As a result, the model's pre-trained capacity for language modeling and comprehension is retained to the greatest degree.\\n\\nThe advantages of our PoSE are threefold: 1) Memory and Time Efficiency: By only requiring the original context size for fine-tuning, PoSE circumvents the quadratic increase in computational complexity with respect to target length during the fine-tuning stage, thereby significantly reducing memory and time overhead. 2) Potential for Extremely-Long Context: We manage to extend the context window of LLaMA (Touvron et al., 2023a) by up to 64 times $(2 \\\\mathrm{k} \\\\rightarrow 128 \\\\mathrm{k}, \\\\mathrm{k}=1,024)$ while preserving decent ability of language modeling and understanding. 3) Compatible with all RoPE-based LLMs and PI strategies: The effectiveness of PoSE has been empirically validated across several representative RoPE-based LLMs, including LLaMA, LLaMA2 (Touvron et al., 2023b), GPT-J (Wang \\\\& Komatsuzaki, 2021), and Baichuan (Baichuan, 2023). Additionally, PoSE has been demonstrated to be compatible with a variety of position interpolation methods, including Linear (Chen et al., 2023a), NTK (Peng \\\\& Quesnelle, 2023), and YaRN (Peng et al., 2023) interpolation.\\n\\nNotably, by decoupling the fine-tuning and target length, PoSE can theoretically extend context window to an infinite length. The only constraint is the memory usage during the inference phase. Hopefully, with the continuous advancements in efficient inference techniques, including Flash Attention (Dao et al., 2022; Dao, 2023), xFormers (Lefaudeux et al., 2022), vLLM (Kwon et al., 2023), etc, we believe PoSE can promisingly push the context window size to a even larger scale.\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\", \"EXTENSION\", \"OF\", \"LLMS\", \"VIA\", \"POSITIONAL\", \"SKIP-WISE\"], \"anchor_targets\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\"], \"anchor_value_hints\": [\"1\", \"2020\", \"2021\", \"2023\", \"2022\", \"32\", \"100\", \"2\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 7, \"same_target_paper\": 7, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides an introduction to the paper \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\". It mentions several other papers that are referenced within this introduction, but there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find sections discussing related work or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}}</retrieve>\n<think>The \"RELATED WORK\" section (DOC3_A3) is likely to contain references to other papers that are relevant to the topic of context window extension in LLMs. This section may also indicate whether the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" is referenced or cited. Inspecting this section could provide the necessary citation or reference evidence.</think>\n<search>{\"current_query\": \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A3\", \"candidate_anchor_ids\": [\"DOC3_A3\", \"DOC3_A8\", \"DOC3_A2\", \"DOC3_A4\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A2\"], \"utility_hits\": {\"DOC3_A8\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A3\": [\"citation_format_cue\"], \"DOC3_A5\": [\"citation_format_cue\"], \"DOC3_A4\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 25.0, \"DOC3_A3\": 3.0, \"DOC3_A5\": 3.0, \"DOC3_A4\": 3.0}, \"relation_hits\": {\"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A2\"]}, \"relation_score\": {\"DOC3_A8\": 13.56, \"DOC3_A3\": 13.56, \"DOC3_A5\": 13.56, \"DOC3_A4\": 13.56}, \"anchor_role_hits\": {\"DOC3_A8\": [\"citation_direction\"], \"DOC3_A3\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"], \"DOC3_A4\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 49.0, \"answer_utility\": 25.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 10.303, \"redundancy_penalty\": 0.0, \"total\": 104.863}, \"DOC3_A3\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 61.174}, \"DOC3_A5\": {\"local_relevance\": 33.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 5.108, \"redundancy_penalty\": 0.0, \"total\": 58.668}, \"DOC3_A4\": {\"local_relevance\": 25.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 52.951}}}</search>\n<info>{\"anchor_id\": \"DOC3_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK\", \"summary\": \"Expanded same-section read window around DOC3_A3: Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning....\", \"text\": \"[DOC3_A3 | PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK]\\n## 2 RELATED WORK\\n\\nTraining Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc.\\n\\nSimilar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time to mitigate out-of-distribution lengths. They proposed randomized positional encoding\\n\\n(RandPos), which randomly selected an ordered subset of position indices from longer sequences. Our proposed method, PoSE, diverges from their approach in several key aspects: First, RandPos is a positional embedding scheme designed to pre-train encoder-only models from scratch for length extrapolation. In contrast, PoSE is a fine-tuning method aiming at efficiently extend the context window of pre-trained LLMs, which are majorly decoder-only models. Second, in RandPos, the position indices between adjacent tokens are not continuous. However, in PoSE, the position indices within each chunk are intentionally made continuous to resemble the pre-training phase, therefore reducing the risk of disrupting the language modeling abilities learned during pre-training.\\n\\nFine-tuning LLMs for Longer Context. Differing from length extrapolation, which primarily involves training a model from scratch to support lengths exceeding those it was initially trained for, context window extension focuses on extending the context window of a pre-trained LLM. Directly fine-tuning an existing LLM with a longer context window has been shown to progress slowly (Chen et al., 2023a). To expedite and stabilize training, Chen et al. (2023a) first down-scaled position indices to match original context size through Linear Position Interpolation. Subsequently, a range of Positional Interpolation (PI) strategies have been introduced, including NTK (Peng \\\\& Quesnelle, 2023) and YaRN (Peng et al., 2023). More recently, LongLora (Chen et al., 2023b) propose shift short attention to approximate full attention. However, all these methods require Full-length fine-tuning, suffering computational cost that grows with target context size. By contrast, our method managed to decouple train / target length, requiring only the original context size for fine-tuning.\\n\\nMemory Transformers. An alternative strategy for extremely long input sequences involves memory mechanisms. Typically, there are two lines of research for utilizing memory: the recurrencebased approach (Dai et al., 2019; Bulatov et al., 2022) and the retrieval-based approach (Wu et al., 2022; Wang et al., 2023; Tworkowski et al., 2023). The former segments long inputs and reuses the hidden states of preceding segments as memory, suffering from information loss and limited capacity for random access. The latter encodes prior sequences as (key, value) pairs and utilizes a memory retriever and reader to extract previously encoded information, primarily limited by the lack of interaction between discrete memory segments. More recently, Mohtashami \\\\& Jaggi (2023) introduced landmark attention to facilitates random access to any chunk of the input. In contrast, our method achieves full access to the entire input without any modifications to the attention mechanism.\\n\\n[DOC3_A7 | PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 6 CONCLUSION]\\nIn this paper, we introduce Positional Skip-wisE (PoSE) training to efficiently extend the context window of Large Language Models. PoSE simulates long inputs by manipulating position indices, thereby requiring only the original context window for fine-tuning, successfully decoupling train length and target length. Experiments have shown that, compared with fine-tuning on the full length, PoSE greatly reduces memory and time overhead. Taking advantage of this, we have managed to extend LLaMA model to $128 \\\\mathrm{k}$ on $8 \\\\mathrm{~V} 100$ GPUs, observing only minimal performance degradation on standard benchmarks. We have also empirically verified that PoSE is compatible with all RoPE-based LLMs and position interpolation strategies.\\n\\n## 7 ACKNOWLEDGEMENT\", \"source_window_anchor_ids\": [\"DOC3_A3\", \"DOC3_A7\"], \"primary_anchor_id\": \"DOC3_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\", \"EXTENSION\", \"OF\", \"LLMS\", \"VIA\", \"POSITIONAL\", \"SKIP-WISE\"], \"anchor_targets\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\"], \"anchor_value_hints\": [\"2\", \"2021\", \"2023\", \"2022\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 7, \"same_target_paper\": 7, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides a review of related work on context window extension and length extrapolation, mentioning several papers. However, there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}}</retrieve>\n<think>The acknowledgments section (DOC3_A8) typically contains a list of references cited in the paper, making it a good candidate for finding citation or reference evidence. Since we have not found any explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\" in the introduction or related work sections, inspecting the acknowledgments section could provide the necessary citation or reference evidence.</think>\n<search>{\"current_query\": \"Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A8\", \"candidate_anchor_ids\": [\"DOC3_A8\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A1\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"utility_hits\": {\"DOC3_A8\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A4\": [\"citation_format_cue\"], \"DOC3_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 25.0, \"DOC3_A4\": 3.0, \"DOC3_A5\": 3.0, \"DOC3_A1\": 0.0}, \"relation_hits\": {\"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"], \"DOC3_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A3\", \"supports_selected=DOC3_A2\", \"same_target_paper_selected=DOC3_A3\", \"same_target_paper_selected=DOC3_A2\"]}, \"relation_score\": {\"DOC3_A8\": 19.12, \"DOC3_A4\": 19.12, \"DOC3_A5\": 19.12, \"DOC3_A1\": 14.12}, \"anchor_role_hits\": {\"DOC3_A8\": [\"citation_direction\"], \"DOC3_A4\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 82.0, \"answer_utility\": 25.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 10.303, \"redundancy_penalty\": 0.0, \"total\": 143.423}, \"DOC3_A4\": {\"local_relevance\": 58.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 91.511}, \"DOC3_A5\": {\"local_relevance\": 58.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 5.108, \"redundancy_penalty\": 0.0, \"total\": 89.228}, \"DOC3_A1\": {\"local_relevance\": 58.0, \"answer_utility\": 0.0, \"coverage\": 4.0, \"relation\": 14.12, \"weak_priors\": 5.0, \"redundancy_penalty\": 0.0, \"total\": 81.12}}}</search>\n<info>{\"anchor_id\": \"DOC3_A8\", \"anchor_type\": \"attribution_region\", \"section_path\": \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 7 ACKNOWLEDGEMENT\", \"summary\": \"Acknowledges contributors and lists references cited in the paper, providing a comprehensive bibliography of related works and methodologies.\", \"text\": \"We thank all the anonymous reviewers for their helpful comments on this paper. We thank Xueguang Ma, Yang Ouyang, Pengyun Yue, Hanyu Li, Fangwei Zhu for the thoughtful discussion. This work was partially supported by the Okawa Research Grant.\\n\\n## REFERENCES\\n\\nBaichuan. Baichuan 2: Open large-scale language models. arXiv preprint arXiv:2309.10305, 2023. URL https://arxiv.org/abs/2309.10305.\\n\\nYonatan Bisk, Rowan Zellers, Ronan Le Bras, Jianfeng Gao, and Yejin Choi. Piqa: Reasoning about physical commonsense in natural language. In Thirty-Fourth AAAI Conference on Artificial Intelligence, 2020.\\n\\nTom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language models are few-shot learners. Advances in neural information processing systems, 33:1877-1901, 2020.\\n\\nAydar Bulatov, Yury Kuratov, and Mikhail Burtsev. Recurrent memory transformer. Advances in Neural Information Processing Systems, 35:11079-11091, 2022.\\n\\nShouyuan Chen, Sherman Wong, Liangjian Chen, and Yuandong Tian. Extending context window of large language models via positional interpolation. ArXiv, abs/2306.15595, 2023a.\\n\\nYukang Chen, Shengju Qian, Haotian Tang, Xin Lai, Zhijian Liu, Song Han, and Jiaya Jia. Longlora: Efficient fine-tuning of long-context large language models. arXiv preprint arXiv:2309.12307, 2023b.\\n\\nChristopher Clark, Kenton Lee, Ming-Wei Chang, Tom Kwiatkowski, Michael Collins, and Kristina Toutanova. Boolq: Exploring the surprising difficulty of natural yes/no questions. In $N A A C L$, 2019.\\n\\nPeter Clark, Isaac Cowhey, Oren Etzioni, Tushar Khot, Ashish Sabharwal, Carissa Schoenick, and Oyvind Tafjord. Think you have solved question answering? try arc, the ai 2 reasoning challenge. arXiv preprint arXiv:1803.05457, 2018.\\n\\nZihang Dai, Zhilin Yang, Yiming Yang, Jaime G Carbonell, Quoc Le, and Ruslan Salakhutdinov Transformer-xl: Attentive language models beyond a fixed-length context. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pp. 2978-2988, 2019.\\n\\nTri Dao. FlashAttention-2: Faster attention with better parallelism and work partitioning. 2023.\\n\\nTri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, and Christopher Ré. FlashAttention: Fast and memory-efficient exact attention with IO-awareness. In Advances in Neural Information Processing Systems, 2022.\\n\\nHugging Face. Open llm leaderboard. https://huggingface.co/spaces/HuggingFaceH4/open_ llm_leaderboard, 2023.\\n\\nLeo Gao, Stella Biderman, Sid Black, Laurence Golding, Travis Hoppe, Charles Foster, Jason Phang, Horace He, Anish Thite, Noa Nabeshima, Shawn Presser, and Connor Leahy. The Pile: An 800gb dataset of diverse text for language modeling. arXiv preprint arXiv:2101.00027, 2020.\\n\\nChi Han, Qifan Wang, Wenhan Xiong, Yu Chen, Heng Ji, and Sinong Wang. Lm-infinite: Simple on-the-fly length generalization for large language models. arXiv preprint arXiv:2308.16137, 2023\\n\\nAdi Haviv, Ori Ram, Ofir Press, Peter Izsak, and Omer Levy. Transformer language models without positional encodings still learn positional information. In Findings of the Association for Computational Linguistics: EMNLP 2022, pp. 1382-1390, Abu Dhabi, United Arab Emirates, December 2022. Association for Computational Linguistics. doi: 10.18653/v1/2022.findings-emnlp. 99 .\\n\\nLuyang Huang, Shuyang Cao, Nikolaus Parulian, Heng Ji, and Lu Wang. Efficient attentions for long document summarization. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 1419-1436, Online, June 2021. Association for Computational Linguistics. doi: 10.18653/v1/2021.naacl-main. 112 .\\n\\nkaiokendev. Things i'm learning while training superhot. https://kaiokendev.github.io/til\\\\# extending-context-to-8k, 2023.\\n\\nSakaguchi Keisuke, Le Bras Ronan, Bhagavatula Chandra, and Choi Yejin. Winogrande: An adversarial winograd schema challenge at scale. 2019.\\n\\nWoosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E. Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention, 2023.\\n\\nBenjamin Lefaudeux, Francisco Massa, Diana Liskovich, Wenhan Xiong, Vittorio Caggiano, Sean Naren, Min Xu, Jieru Hu, Marta Tintore, Susan Zhang, Patrick Labatut, and Daniel Haziza. xformers: A modular and hackable transformer modelling library. https://github.com/ facebookresearch/xformers, 2022.\\n\\nMukai Li, Shansan Gong, Jiangtao Feng, Yiheng Xu, Jun Zhang, Zhiyong Wu, and Lingpeng Kong. In-context learning with many demonstration examples. arXiv preprint arXiv:2302.04931, 2023.\\n\\nStephanie Lin, Jacob Hilton, and Owain Evans. Truthfulqa: Measuring how models mimic human falsehoods. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 3214-3252, 2022.\\n\\nAmirkeivan Mohtashami and Martin Jaggi. Landmark attention: Random-access infinite context length for transformers, 2023.\\n\\nBowen Peng and Jeffrey Quesnelle. Ntk-aware scaled rope allows llama models to have extended $(8 \\\\mathrm{k}+$ ) context size without any fine-tuning and minimal perplexity degradation. https://www.reddit.com/r/LocalLLaMA/comments/14lz7j5/ntkaware_scaled_ rope_allows_llama_models_to_have, 2023.\\n\\nBowen Peng, Jeffrey Quesnelle, Honglu Fan, and Enrico Shippole. Yarn: Efficient context window extension of large language models, 2023.\\n\\nOfir Press, Noah A Smith, and Mike Lewis. Train short, test long: Attention with linear biases enables input length extrapolation. arXiv preprint arXiv:2108.12409, 2021.\\n\\nShawn Presser. https://twitter.com/theshawwn/status/1320282149329784833, 2020.\\n\\nJeffrey Quesnelle. Dynamically scaled rope further increases performance of long context llama with zero fine-tuning. https://www.reddit.com/r/LocalLLaMA/comments/14mrgpr/ dynamically_scaled_rope_further_increases/, 2023.\\n\\nJack W Rae, Anna Potapenko, Siddhant M Jayakumar, Chloe Hillier, and Timothy P Lillicrap. Compressive transformers for long-range sequence modelling. arXiv preprint, 2019.\\n\\nSamyam Rajbhandari, Jeff Rasley, Olatunji Ruwase, and Yuxiong He. Zero: Memory optimizations toward training trillion parameter models. In SC20: International Conference for High Performance Computing, Networking, Storage and Analysis, pp. 1-16. IEEE, 2020.\\n\\nAnian Ruoss, Grégoire Delétang, Tim Genewein, Jordi Grau-Moya, Róbert Csordás, Mehdi Bennani, Shane Legg, and Joel Veness. Randomized positional encodings boost length generalization of transformers. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pp. 1889-1903, Toronto, Canada, July 2023. Association for Computational Linguistics. doi: 10.18653/v1/2023.acl-short. 161.\\n\\nJianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha, Bo Wen, and Yunfeng Liu. Roformer: Enhanced transformer with rotary position embedding. arXiv preprint arXiv:2104.09864, 2021.\\n\\nYutao Sun, Li Dong, Barun Patra, Shuming Ma, Shaohan Huang, Alon Benhaim, Vishrav Chaudhary, Xia Song, and Furu Wei. A length-extrapolatable transformer. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 14590-14604, Toronto, Canada, July 2023. Association for Computational Linguistics. doi: $10.18653 / v 1 / 2023$.acl-long. 816 .\\n\\nHugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. Llama: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971, 2023a.\\n\\nHugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288, 2023b.\\n\\nSzymon Tworkowski, Konrad Staniszewski, Mikołaj Pacek, Yuhuai Wu, Henryk Michalewski, and Piotr Miłoś. Focused transformer: Contrastive training for context scaling. arXiv preprint arXiv:2307.03170, 2023.\\n\\nBen Wang and Aran Komatsuzaki. GPT-J-6B: A 6 Billion Parameter Autoregressive Language Model. https://github.com/kingoflolz/mesh-transformer-jax, May 2021.\\n\\nWeizhi Wang, Li Dong, Hao Cheng, Xiaodong Liu, Xifeng Yan, Jianfeng Gao, and Furu Wei. Augmenting language models with long-term memory. arXiv preprint arXiv:2306.07174, 2023.\\n\\nYuhuai Wu, Markus N Rabe, DeLesley Hutchins, and Christian Szegedy. Memorizing transformers. arXiv preprint arXiv:2203.08913, 2022.\\n\\nRowan Zellers, Ari Holtzman, Yonatan Bisk, Ali Farhadi, and Yejin Choi. Hellaswag: Can a machine really finish your sentence? In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pp. 4791-4800, 2019.\\n\\nAzerbayev Zhangir, Ayers Edward, and Bartosz Piotrowski. Proof-pile. https://github.com/ zhangir-azerbayev/proof-pile, 2022.\\n\\nYucheng Zhou, Tao Shen, Xiubo Geng, Chongyang Tao, Guodong Long, Can Xu, and Daxin Jiang. Fine-grained distillation for long document retrieval. arXiv preprint arXiv:2212.10423, 2022.\\n\\nTable 4: Comparison of different methods for choosing $v_{i}$. We report perplexity with evaluation context window ranging from $2 \\\\mathrm{k}$ to $16 \\\\mathrm{k}$. We show that these variations have relatively little impact on the outcomes of fine-tuning.\\n\\n| Method | GovReport |  |  |  |  | Proof-pile |  |  |  |\\n| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\\n|  | $\\\\mathbf{2 k}$ | $\\\\mathbf{4 k}$ | $\\\\mathbf{8 k}$ | $\\\\mathbf{1 6 k}$ |  | $\\\\mathbf{2 k}$ | $\\\\mathbf{4 k}$ | $\\\\mathbf{8 k}$ | $\\\\mathbf{1 6 k}$ |\\n| $v_{i} \\\\sim \\\\mathcal{U}(\\\\ldots)$ | 4.84 | 4.68 | 4.60 | 4.60 |  | 2.95 | 2.74 | 2.61 | 2.60 |\\n| $v_{i}=0$ | 4.85 | 4.72 | 4.64 | 4.68 |  | 2.96 | 2.75 | 2.63 | 2.61 |\\n| $v_{i}=u_{i}$ | 4.84 | 4.68 | 4.60 | 4.60 |  | 2.95 | 2.73 | 2.60 | 2.56 |\", \"anchor_role_candidates\": [\"table_value\", \"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\", \"EXTENSION\", \"OF\", \"LLMS\", \"VIA\", \"POSITIONAL\", \"SKIP-WISE\"], \"anchor_targets\": [\"cited\", \"PoSE:\", \"EFFICIENT\", \"CONTEXT\", \"WINDOW\"], \"anchor_value_hints\": [\"7\", \"2\", \"2309.10305\", \"2023\", \"2020\", \"33\", \"1877\", \"-1901,\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"table_region\", \"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 7, \"same_target_paper\": 7, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides a comprehensive list of references cited in the paper \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\". However, there is no explicit mention of the paper \"Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\". Therefore, we cannot determine if this paper is cited or referenced by the current document based on this chunk alone. We need to inspect further sections of the document to find such evidence.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find sections discussing citations or references in PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\", \"DOC3_A8\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 1 INTRODUCTION Discusses the limitations of LLMs due to pre-defined context window sizes and the challenges of extending them. Introduces PoSE as a solution that simulates long inputs within a fixed context window, enabling efficient context window extension without the need for full-length fine-tuning. ## 1 INTRODUCTION Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 2 RELATED WORK Reviews related work on length extrapolation and context window extension, highlighting the differences between PoSE and other methods like RandPos and Full-length fine-tuning. PoSE is noted for its efficiency and compatibility with various RoPE-based LLMs and position interpolation strategies. ## 2 RELATED WORK Training Length-Extrapolatable Models. Length extrapolation requires the model to handle continually increasing input tokens, even beyond the context window size used for training (Press et al., 2021). To this end, a series of positional embedding schemes have been proposed, including ALibi (Press et al., 2021), xPos (Sun et al., 2023), NoPos (Haviv et al., 2022), etc. Similar to our work, Ruoss et al. (2023) also attempted to simulate longer sequences during training time t...\", \"PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING > 7 ACKNOWLEDGEMENT Acknowledges contributors and lists references cited in the paper, providing a comprehensive bibliography of related works and methodologies. We thank all the anonymous reviewers for their helpful comments on this paper. We thank Xueguang Ma, Yang Ouyang, Pengyun Yue, Hanyu Li, Fangwei Zhu for the thoughtful discussion. This work was partially supported by the Okawa Research Grant. ## REFERENCES Baichuan. Baichuan 2: Open large-scale language models. arXiv preprint arXiv:2309.10305, 2023. URL https://arxiv.org/abs/2309.10305. Yonatan Bisk, Rowan Zellers, Ronan Le Bras, Jianfeng Gao, and Yejin Choi. Piqa: Reasoning about physical co...\"], \"selected_relation_anchor_ids\": [\"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['PoSE:', 'EFFICIENT']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

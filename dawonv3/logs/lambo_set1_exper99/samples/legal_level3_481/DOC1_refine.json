@@ -1,0 +1,945 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A6",
+    "DOC1_A7"
+  ],
+  "final_current_query": "是否存在其他类型的案由？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A6",
+        "candidate_anchor_ids": [
+          "DOC1_A3",
+          "DOC1_A6",
+          "DOC1_A7",
+          "DOC1_A4"
+        ],
+        "utility_hits": {
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A6": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A7": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A3": 11.0,
+          "DOC1_A6": 11.0,
+          "DOC1_A7": 11.0,
+          "DOC1_A4": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A3": {
+            "local_relevance": 8.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 32.914
+          },
+          "DOC1_A6": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 8.854,
+            "redundancy_penalty": 0.0,
+            "total": 31.854
+          },
+          "DOC1_A7": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 8.721,
+            "redundancy_penalty": 0.0,
+            "total": 31.721
+          },
+          "DOC1_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A6",
+      "plan_think": "The current document does not seem to contain any explicit information that matches the case categories provided in the question. However, based on the content of the document, it seems to be related to a civil dispute involving contract obligations and execution of legal judgments. Therefore, I will inspect the section that provides more details on the court's decision and reasoning to determine if it can be categorized under '民事案由-合同，无因管理，不当得利纠纷'. The section DOC1_A6 seems to provide detailed reasoning from the court and might give us a better understanding of the case type.",
+      "info": {
+        "anchor_id": "DOC1_A6",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院裁判理由",
+        "summary": "Expanded same-section read window around DOC1_A6: 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\n\n法定代表人：康某某，系该公司执行董事兼总经理。\n\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\n\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\n\n[DOC1_A2 | 申请执行人信息]\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\n\n法定代表人：童某某，该公司董事长。\n\n[DOC1_A3 | 案件背景]\n新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\n\n另查明，自2021年3月30日起，贵州省从江县人民法院、云南省富民县人民法院、安徽省太和县人民法院、济南高新技术产业开发区人民法院向某甲公司送达执行裁定及协助执行通知。截止2023年7月7日某甲公司未向上述法院支付款项。\n\n伊犁州分院认为，本案的争议焦点是本案是否应支付迟延履行期间的利息。《中华人民共和国民事诉讼法》第二百六十条规定，被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。本案中，某甲公司自执行依据生效后，至申请执行前未履行判决确定的义务，应当支付迟延履行期间的利息。某甲公司虽向伊犁州分院提交了4家法院向其送达的协助执行通知书，但并未向上述法院支付款项，且该证据不足以证明被执行人某甲公司在本案申请执行前有主动要求履行执行依据确定的给付义务的实际履行行为，故某甲公司提出不予支付迟延履行期间的利息的理由不成立，伊犁州分院不予支持。遂裁定：驳回某甲公司的异议请求。\n\n[DOC1_A4 | 某甲公司复议请求]\n某甲公司向本院申请复议，请求：1．撤销伊犁州分院（2023）新40执异64号执行裁定；2．伊犁州分院向申请人返还迟延履行利息。事实与理由：我公司于2021年3月30日起，已陆续接到全国9家法院发出的11份冻结申请执行人债权的协助执行通知书，要求冻结账户累计29162834.24元，截止2021年11月24日（2021）新民终244号民事判决之日，已收到各家法院协执要求冻结申请执行人债权6874975.07元。按照法院协助执行通知书的要求，我公司不得向申请执行人支付款项。（2021）新民终244号民事判决生效后，我公司于2021年12月向申请执行人寄送《关于4家法院冻结及执行款项支付事宜》函件，要求申请执行人明确案款支付事项，均未收到任何答复。我公司并无不履行生效判决书的主观故意，而是基于法院的生效裁定书及协助执行通知书的约束而无法履行，不应承担迟延履行债务利息，请求法院返还多扣划的迟延履行债务利息144412.98元。\n\n[DOC1_A5 | 法院查明事实]\n本院对伊犁州分院查明的事实予以确认。\n\n本院查明，某甲公司于2021年3月30日收到（2020）黔2633执243号之三执行裁定书，裁定：扣留被执行人某乙公司在某甲公司的工程款、扣留数额为650910.74元。（2020）黔2633执243号之四执行裁定书，裁定：协助扣留某乙公司在你单位工程款650910.74元，扣留期限为三年……你单位自收到本通知后十五日内履行你单位对被执行人某乙公司的到期债务650910.74元。某甲公司于2021年4月10日收到（2020）云0124执537号执行裁定书，裁定：冻结某乙公司在某甲公司享有的到期债权440000元，冻结期限三年。某甲公司于2021年4月13日收到（2021）皖1222执3289号协助执行通知书，内容：冻结某乙公司对某甲公司享有的债权984321.16元，冻结期限两年。某甲公司于2021年12月15日收到（2021）鲁0191执2879号之三执行裁定书，裁定：冻结某乙公司对某甲公司的到期债权333万元，冻结期限三年。某甲公司于2022年7月11日收到（2022）冀0929执恢283号之十七号裁定书，裁定：你单位给某乙公司及其分公司拨付各类款项时（先期付款以650万元为限），必须拨付献县人民法院账户……\n\n本院另查明，某甲公司于2021年12月25日通过微信向某乙公司发送《关于4家法院冻结及执行款项支付事宜函》，并根据某乙公司的要求将该函通过EMS向其总公司法务部送达。\n\n[DOC1_A6 | 法院裁判理由]\n本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。\n\n本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。\n\n一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。\n\n二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。\n\n三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\n\n[DOC1_A7 | 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。]\n故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下：\n\n一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书；\n\n二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项；\n\n三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5",
+          "DOC1_A6",
+          "DOC1_A7"
+        ],
+        "primary_anchor_id": "DOC1_A6",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。",
+          "采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。",
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "2021",
+          "12",
+          "25",
+          "4",
+          "3",
+          "1635275.9元"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 6,
+            "disambiguates": 6,
+            "likely_same_entity": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A7",
+            "DOC1_A5"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A7",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "该判决文书涉及的是建设工程施工合同纠纷，属于民事案由中的合同纠纷。根据当前文档内容，可以将其归类为“民事案由-合同，无因管理，不当得利纠纷”。然而，为了确保分类准确，还需要进一步检查是否有其他类型的案由出现。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A6",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A7",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A7",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否存在其他类型的案由？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案由-合同，无因管理，不当得利纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "是否存在其他类型的案由？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A7",
+        "candidate_anchor_ids": [
+          "DOC1_A7"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "民事案由-合同，无因管理，不当得利纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A6"
+        ],
+        "utility_hits": {
+          "DOC1_A7": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A5": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A7": 11.0,
+          "DOC1_A3": 11.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A5": 5.0
+        },
+        "relation_hits": {
+          "DOC1_A7": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6",
+            "likely_same_entity_selected=DOC1_A6"
+          ],
+          "DOC1_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6",
+            "likely_same_entity_selected=DOC1_A6"
+          ],
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6",
+            "likely_same_entity_selected=DOC1_A6"
+          ],
+          "DOC1_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6",
+            "likely_same_entity_selected=DOC1_A6"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A7": 19.73,
+          "DOC1_A3": 19.73,
+          "DOC1_A4": 19.73,
+          "DOC1_A5": 16.73
+        },
+        "anchor_role_hits": {
+          "DOC1_A7": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A5": [
+            "case_identity"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A7": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 19.73,
+            "weak_priors": 8.721,
+            "redundancy_penalty": 3.0,
+            "total": 38.451
+          },
+          "DOC1_A3": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 19.73,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 35.644
+          },
+          "DOC1_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 19.73,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 35.421
+          },
+          "DOC1_A5": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 16.73,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 3.0,
+            "total": 26.238
+          }
+        }
+      },
+      "anchor_id": "DOC1_A7",
+      "plan_think": "尽管我们已经找到了一个可能的分类，即“民事案由-合同，无因管理，不当得利纠纷”，但我们需要确保没有遗漏其他可能的案由类型。接下来，我将检查DOC1_A7，因为它包含了详细的法律分析，可能会提供更多关于案件性质的信息。",
+      "info": {
+        "anchor_id": "DOC1_A7",
+        "anchor_type": "paragraph_region",
+        "section_path": "一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。",
+        "summary": "Expanded same-section read window around DOC1_A7: 法院裁定撤销伊犁州分院（2023）新40执异64号执行裁定书，维持（2023）新40执284号执行通知书的部分内容，变更查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款为1217369.31元（含执行费14428元）。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\n\n法定代表人：康某某，系该公司执行董事兼总经理。\n\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\n\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\n\n[DOC1_A2 | 申请执行人信息]\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\n\n法定代表人：童某某，该公司董事长。\n\n[DOC1_A3 | 案件背景]\n新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\n\n另查明，自2021年3月30日起，贵州省从江县人民法院、云南省富民县人民法院、安徽省太和县人民法院、济南高新技术产业开发区人民法院向某甲公司送达执行裁定及协助执行通知。截止2023年7月7日某甲公司未向上述法院支付款项。\n\n伊犁州分院认为，本案的争议焦点是本案是否应支付迟延履行期间的利息。《中华人民共和国民事诉讼法》第二百六十条规定，被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。本案中，某甲公司自执行依据生效后，至申请执行前未履行判决确定的义务，应当支付迟延履行期间的利息。某甲公司虽向伊犁州分院提交了4家法院向其送达的协助执行通知书，但并未向上述法院支付款项，且该证据不足以证明被执行人某甲公司在本案申请执行前有主动要求履行执行依据确定的给付义务的实际履行行为，故某甲公司提出不予支付迟延履行期间的利息的理由不成立，伊犁州分院不予支持。遂裁定：驳回某甲公司的异议请求。\n\n[DOC1_A4 | 某甲公司复议请求]\n某甲公司向本院申请复议，请求：1．撤销伊犁州分院（2023）新40执异64号执行裁定；2．伊犁州分院向申请人返还迟延履行利息。事实与理由：我公司于2021年3月30日起，已陆续接到全国9家法院发出的11份冻结申请执行人债权的协助执行通知书，要求冻结账户累计29162834.24元，截止2021年11月24日（2021）新民终244号民事判决之日，已收到各家法院协执要求冻结申请执行人债权6874975.07元。按照法院协助执行通知书的要求，我公司不得向申请执行人支付款项。（2021）新民终244号民事判决生效后，我公司于2021年12月向申请执行人寄送《关于4家法院冻结及执行款项支付事宜》函件，要求申请执行人明确案款支付事项，均未收到任何答复。我公司并无不履行生效判决书的主观故意，而是基于法院的生效裁定书及协助执行通知书的约束而无法履行，不应承担迟延履行债务利息，请求法院返还多扣划的迟延履行债务利息144412.98元。\n\n[DOC1_A5 | 法院查明事实]\n本院对伊犁州分院查明的事实予以确认。\n\n本院查明，某甲公司于2021年3月30日收到（2020）黔2633执243号之三执行裁定书，裁定：扣留被执行人某乙公司在某甲公司的工程款、扣留数额为650910.74元。（2020）黔2633执243号之四执行裁定书，裁定：协助扣留某乙公司在你单位工程款650910.74元，扣留期限为三年……你单位自收到本通知后十五日内履行你单位对被执行人某乙公司的到期债务650910.74元。某甲公司于2021年4月10日收到（2020）云0124执537号执行裁定书，裁定：冻结某乙公司在某甲公司享有的到期债权440000元，冻结期限三年。某甲公司于2021年4月13日收到（2021）皖1222执3289号协助执行通知书，内容：冻结某乙公司对某甲公司享有的债权984321.16元，冻结期限两年。某甲公司于2021年12月15日收到（2021）鲁0191执2879号之三执行裁定书，裁定：冻结某乙公司对某甲公司的到期债权333万元，冻结期限三年。某甲公司于2022年7月11日收到（2022）冀0929执恢283号之十七号裁定书，裁定：你单位给某乙公司及其分公司拨付各类款项时（先期付款以650万元为限），必须拨付献县人民法院账户……\n\n本院另查明，某甲公司于2021年12月25日通过微信向某乙公司发送《关于4家法院冻结及执行款项支付事宜函》，并根据某乙公司的要求将该函通过EMS向其总公司法务部送达。\n\n[DOC1_A6 | 法院裁判理由]\n本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。\n\n本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。\n\n一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。\n\n二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。\n\n三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\n\n[DOC1_A7 | 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。]\n故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下：\n\n一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书；\n\n二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项；\n\n三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5",
+          "DOC1_A6",
+          "DOC1_A7"
+        ],
+        "primary_anchor_id": "DOC1_A7",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence",
+          "background_context"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。",
+          "采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。",
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "2021",
+          "12",
+          "25",
+          "4",
+          "3",
+          "1635275.9元"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 6,
+            "disambiguates": 6,
+            "likely_same_entity": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A6",
+            "DOC1_A5"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "该段落详细解释了某甲公司是否应当承担迟延履行利息的问题，以及法院协助执行通知是否具有停止某甲公司履行生效判决的效力。这些信息进一步证实了该案件属于建设工程施工合同纠纷，属于“民事案由-合同，无因管理，不当得利纠纷”类别。没有发现其他类型的案由。",
+      "retrieve": {
+        "items": [],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案由-合同，无因管理，不当得利纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A7"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院...",
+            "一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。 法院裁定撤销伊犁州分院（2023）新40执异64号执行裁定书，维持（2023）新40执284号执行通知书的部分内容，变更查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款为1217369.31元（含执行费14428元）。 故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下： 一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书； 二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项； 三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。 本裁定为终审裁定。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A6",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A7",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document does not seem to contain any explicit information that matches the case categories provided in the question. However, based on the content of the document, it seems to be related to a civil dispute involving contract obligations and execution of legal judgments. Therefore, I will inspect the section that provides more details on the court's decision and reasoning to determine if it can be categorized under '民事案由-合同，无因管理，不当得利纠纷'. The section DOC1_A6 seems to provide detailed reasoning from the court and might give us a better understanding of the case type.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A6\", \"candidate_anchor_ids\": [\"DOC1_A3\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A6\": 11.0, \"DOC1_A7\": 11.0, \"DOC1_A4\": 11.0}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 32.914}, \"DOC1_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.854, \"redundancy_penalty\": 0.0, \"total\": 31.854}, \"DOC1_A7\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.721, \"redundancy_penalty\": 0.0, \"total\": 31.721}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A6\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院裁判理由\", \"summary\": \"Expanded same-section read window around DOC1_A6: 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\\n\\n法定代表人：康某某，系该公司执行董事兼总经理。\\n\\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\\n\\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\\n\\n[DOC1_A2 | 申请执行人信息]\\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\\n\\n法定代表人：童某某，该公司董事长。\\n\\n[DOC1_A3 | 案件背景]\\n新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\\n\\n另查明，自2021年3月30日起，贵州省从江县人民法院、云南省富民县人民法院、安徽省太和县人民法院、济南高新技术产业开发区人民法院向某甲公司送达执行裁定及协助执行通知。截止2023年7月7日某甲公司未向上述法院支付款项。\\n\\n伊犁州分院认为，本案的争议焦点是本案是否应支付迟延履行期间的利息。《中华人民共和国民事诉讼法》第二百六十条规定，被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。本案中，某甲公司自执行依据生效后，至申请执行前未履行判决确定的义务，应当支付迟延履行期间的利息。某甲公司虽向伊犁州分院提交了4家法院向其送达的协助执行通知书，但并未向上述法院支付款项，且该证据不足以证明被执行人某甲公司在本案申请执行前有主动要求履行执行依据确定的给付义务的实际履行行为，故某甲公司提出不予支付迟延履行期间的利息的理由不成立，伊犁州分院不予支持。遂裁定：驳回某甲公司的异议请求。\\n\\n[DOC1_A4 | 某甲公司复议请求]\\n某甲公司向本院申请复议，请求：1．撤销伊犁州分院（2023）新40执异64号执行裁定；2．伊犁州分院向申请人返还迟延履行利息。事实与理由：我公司于2021年3月30日起，已陆续接到全国9家法院发出的11份冻结申请执行人债权的协助执行通知书，要求冻结账户累计29162834.24元，截止2021年11月24日（2021）新民终244号民事判决之日，已收到各家法院协执要求冻结申请执行人债权6874975.07元。按照法院协助执行通知书的要求，我公司不得向申请执行人支付款项。（2021）新民终244号民事判决生效后，我公司于2021年12月向申请执行人寄送《关于4家法院冻结及执行款项支付事宜》函件，要求申请执行人明确案款支付事项，均未收到任何答复。我公司并无不履行生效判决书的主观故意，而是基于法院的生效裁定书及协助执行通知书的约束而无法履行，不应承担迟延履行债务利息，请求法院返还多扣划的迟延履行债务利息144412.98元。\\n\\n[DOC1_A5 | 法院查明事实]\\n本院对伊犁州分院查明的事实予以确认。\\n\\n本院查明，某甲公司于2021年3月30日收到（2020）黔2633执243号之三执行裁定书，裁定：扣留被执行人某乙公司在某甲公司的工程款、扣留数额为650910.74元。（2020）黔2633执243号之四执行裁定书，裁定：协助扣留某乙公司在你单位工程款650910.74元，扣留期限为三年……你单位自收到本通知后十五日内履行你单位对被执行人某乙公司的到期债务650910.74元。某甲公司于2021年4月10日收到（2020）云0124执537号执行裁定书，裁定：冻结某乙公司在某甲公司享有的到期债权440000元，冻结期限三年。某甲公司于2021年4月13日收到（2021）皖1222执3289号协助执行通知书，内容：冻结某乙公司对某甲公司享有的债权984321.16元，冻结期限两年。某甲公司于2021年12月15日收到（2021）鲁0191执2879号之三执行裁定书，裁定：冻结某乙公司对某甲公司的到期债权333万元，冻结期限三年。某甲公司于2022年7月11日收到（2022）冀0929执恢283号之十七号裁定书，裁定：你单位给某乙公司及其分公司拨付各类款项时（先期付款以650万元为限），必须拨付献县人民法院账户……\\n\\n本院另查明，某甲公司于2021年12月25日通过微信向某乙公司发送《关于4家法院冻结及执行款项支付事宜函》，并根据某乙公司的要求将该函通过EMS向其总公司法务部送达。\\n\\n[DOC1_A6 | 法院裁判理由]\\n本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。\\n\\n本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。\\n\\n一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。\\n\\n二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。\\n\\n三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\\n\\n[DOC1_A7 | 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。]\\n故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下：\\n\\n一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书；\\n\\n二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项；\\n\\n三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。\", \"采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"2021\", \"12\", \"25\", \"4\", \"3\", \"1635275.9元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 6, \"disambiguates\": 6, \"likely_same_entity\": 2}, \"top_related_anchor_ids\": [\"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A7\", \"DOC1_A5\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>该判决文书涉及的是建设工程施工合同纠纷，属于民事案由中的合同纠纷。根据当前文档内容，可以将其归类为“民事案由-合同，无因管理，不当得利纠纷”。然而，为了确保分类准确，还需要进一步检查是否有其他类型的案由出现。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A6\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否存在其他类型的案由？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案由-合同，无因管理，不当得利纠纷\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院...\"], \"selected_relation_anchor_ids\": [\"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>尽管我们已经找到了一个可能的分类，即“民事案由-合同，无因管理，不当得利纠纷”，但我们需要确保没有遗漏其他可能的案由类型。接下来，我将检查DOC1_A7，因为它包含了详细的法律分析，可能会提供更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"是否存在其他类型的案由？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A7\", \"candidate_anchor_ids\": [\"DOC1_A7\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案由-合同，无因管理，不当得利纠纷\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院...\"], \"selected_relation_anchor_ids\": [\"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC1_A6\"], \"utility_hits\": {\"DOC1_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A7\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A5\": 5.0}, \"relation_hits\": {\"DOC1_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"], \"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"]}, \"relation_score\": {\"DOC1_A7\": 19.73, \"DOC1_A3\": 19.73, \"DOC1_A4\": 19.73, \"DOC1_A5\": 16.73}, \"anchor_role_hits\": {\"DOC1_A7\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A5\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC1_A7\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 8.721, \"redundancy_penalty\": 3.0, \"total\": 38.451}, \"DOC1_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 35.644}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 35.421}, \"DOC1_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 16.73, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 26.238}}}</search>\n<info>{\"anchor_id\": \"DOC1_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\", \"summary\": \"Expanded same-section read window around DOC1_A7: 法院裁定撤销伊犁州分院（2023）新40执异64号执行裁定书，维持（2023）新40执284号执行通知书的部分内容，变更查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款为1217369.31元（含执行费14428元）。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\\n\\n法定代表人：康某某，系该公司执行董事兼总经理。\\n\\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\\n\\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\\n\\n[DOC1_A2 | 申请执行人信息]\\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\\n\\n法定代表人：童某某，该公司董事长。\\n\\n[DOC1_A3 | 案件背景]\\n新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\\n\\n另查明，自2021年3月30日起，贵州省从江县人民法院、云南省富民县人民法院、安徽省太和县人民法院、济南高新技术产业开发区人民法院向某甲公司送达执行裁定及协助执行通知。截止2023年7月7日某甲公司未向上述法院支付款项。\\n\\n伊犁州分院认为，本案的争议焦点是本案是否应支付迟延履行期间的利息。《中华人民共和国民事诉讼法》第二百六十条规定，被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。本案中，某甲公司自执行依据生效后，至申请执行前未履行判决确定的义务，应当支付迟延履行期间的利息。某甲公司虽向伊犁州分院提交了4家法院向其送达的协助执行通知书，但并未向上述法院支付款项，且该证据不足以证明被执行人某甲公司在本案申请执行前有主动要求履行执行依据确定的给付义务的实际履行行为，故某甲公司提出不予支付迟延履行期间的利息的理由不成立，伊犁州分院不予支持。遂裁定：驳回某甲公司的异议请求。\\n\\n[DOC1_A4 | 某甲公司复议请求]\\n某甲公司向本院申请复议，请求：1．撤销伊犁州分院（2023）新40执异64号执行裁定；2．伊犁州分院向申请人返还迟延履行利息。事实与理由：我公司于2021年3月30日起，已陆续接到全国9家法院发出的11份冻结申请执行人债权的协助执行通知书，要求冻结账户累计29162834.24元，截止2021年11月24日（2021）新民终244号民事判决之日，已收到各家法院协执要求冻结申请执行人债权6874975.07元。按照法院协助执行通知书的要求，我公司不得向申请执行人支付款项。（2021）新民终244号民事判决生效后，我公司于2021年12月向申请执行人寄送《关于4家法院冻结及执行款项支付事宜》函件，要求申请执行人明确案款支付事项，均未收到任何答复。我公司并无不履行生效判决书的主观故意，而是基于法院的生效裁定书及协助执行通知书的约束而无法履行，不应承担迟延履行债务利息，请求法院返还多扣划的迟延履行债务利息144412.98元。\\n\\n[DOC1_A5 | 法院查明事实]\\n本院对伊犁州分院查明的事实予以确认。\\n\\n本院查明，某甲公司于2021年3月30日收到（2020）黔2633执243号之三执行裁定书，裁定：扣留被执行人某乙公司在某甲公司的工程款、扣留数额为650910.74元。（2020）黔2633执243号之四执行裁定书，裁定：协助扣留某乙公司在你单位工程款650910.74元，扣留期限为三年……你单位自收到本通知后十五日内履行你单位对被执行人某乙公司的到期债务650910.74元。某甲公司于2021年4月10日收到（2020）云0124执537号执行裁定书，裁定：冻结某乙公司在某甲公司享有的到期债权440000元，冻结期限三年。某甲公司于2021年4月13日收到（2021）皖1222执3289号协助执行通知书，内容：冻结某乙公司对某甲公司享有的债权984321.16元，冻结期限两年。某甲公司于2021年12月15日收到（2021）鲁0191执2879号之三执行裁定书，裁定：冻结某乙公司对某甲公司的到期债权333万元，冻结期限三年。某甲公司于2022年7月11日收到（2022）冀0929执恢283号之十七号裁定书，裁定：你单位给某乙公司及其分公司拨付各类款项时（先期付款以650万元为限），必须拨付献县人民法院账户……\\n\\n本院另查明，某甲公司于2021年12月25日通过微信向某乙公司发送《关于4家法院冻结及执行款项支付事宜函》，并根据某乙公司的要求将该函通过EMS向其总公司法务部送达。\\n\\n[DOC1_A6 | 法院裁判理由]\\n本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。\\n\\n本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。\\n\\n一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。\\n\\n二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。\\n\\n三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\\n\\n[DOC1_A7 | 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。]\\n故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下：\\n\\n一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书；\\n\\n二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项；\\n\\n三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A7\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。\", \"采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"2021\", \"12\", \"25\", \"4\", \"3\", \"1635275.9元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 6, \"disambiguates\": 6, \"likely_same_entity\": 2}, \"top_related_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A6\", \"DOC1_A5\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>该段落详细解释了某甲公司是否应当承担迟延履行利息的问题，以及法院协助执行通知是否具有停止某甲公司履行生效判决的效力。这些信息进一步证实了该案件属于建设工程施工合同纠纷，属于“民事案由-合同，无因管理，不当得利纠纷”类别。没有发现其他类型的案由。</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案由-合同，无因管理，不当得利纠纷\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院...\", \"一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。 法院裁定撤销伊犁州分院（2023）新40执异64号执行裁定书，维持（2023）新40执284号执行通知书的部分内容，变更查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款为1217369.31元（含执行费14428元）。 故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下： 一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书； 二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项； 三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。 本裁定为终审裁定。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document does not seem to contain any explicit information that matches the case categories provided in the question. However, based on the content of the document, it seems to be related to a civil dispute involving contract obligations and execution of legal judgments. Therefore, I will inspect the section that provides more details on the court's decision and reasoning to determine if it can be categorized under '民事案由-合同，无因管理，不当得利纠纷'. The section DOC1_A6 seems to provide detailed reasoning from the court and might give us a better understanding of the case type.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A6\", \"candidate_anchor_ids\": [\"DOC1_A3\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A3\": 11.0, \"DOC1_A6\": 11.0, \"DOC1_A7\": 11.0, \"DOC1_A4\": 11.0}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 32.914}, \"DOC1_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.854, \"redundancy_penalty\": 0.0, \"total\": 31.854}, \"DOC1_A7\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.721, \"redundancy_penalty\": 0.0, \"total\": 31.721}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A6\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院裁判理由\", \"summary\": \"Expanded same-section read window around DOC1_A6: 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\\n\\n法定代表人：康某某，系该公司执行董事兼总经理。\\n\\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\\n\\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\\n\\n[DOC1_A2 | 申请执行人信息]\\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\\n\\n法定代表人：童某某，该公司董事长。\\n\\n[DOC1_A3 | 案件背景]\\n新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\\n\\n另查明，自2021年3月30日起，贵州省从江县人民法院、云南省富民县人民法院、安徽省太和县人民法院、济南高新技术产业开发区人民法院向某甲公司送达执行裁定及协助执行通知。截止2023年7月7日某甲公司未向上述法院支付款项。\\n\\n伊犁州分院认为，本案的争议焦点是本案是否应支付迟延履行期间的利息。《中华人民共和国民事诉讼法》第二百六十条规定，被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。本案中，某甲公司自执行依据生效后，至申请执行前未履行判决确定的义务，应当支付迟延履行期间的利息。某甲公司虽向伊犁州分院提交了4家法院向其送达的协助执行通知书，但并未向上述法院支付款项，且该证据不足以证明被执行人某甲公司在本案申请执行前有主动要求履行执行依据确定的给付义务的实际履行行为，故某甲公司提出不予支付迟延履行期间的利息的理由不成立，伊犁州分院不予支持。遂裁定：驳回某甲公司的异议请求。\\n\\n[DOC1_A4 | 某甲公司复议请求]\\n某甲公司向本院申请复议，请求：1．撤销伊犁州分院（2023）新40执异64号执行裁定；2．伊犁州分院向申请人返还迟延履行利息。事实与理由：我公司于2021年3月30日起，已陆续接到全国9家法院发出的11份冻结申请执行人债权的协助执行通知书，要求冻结账户累计29162834.24元，截止2021年11月24日（2021）新民终244号民事判决之日，已收到各家法院协执要求冻结申请执行人债权6874975.07元。按照法院协助执行通知书的要求，我公司不得向申请执行人支付款项。（2021）新民终244号民事判决生效后，我公司于2021年12月向申请执行人寄送《关于4家法院冻结及执行款项支付事宜》函件，要求申请执行人明确案款支付事项，均未收到任何答复。我公司并无不履行生效判决书的主观故意，而是基于法院的生效裁定书及协助执行通知书的约束而无法履行，不应承担迟延履行债务利息，请求法院返还多扣划的迟延履行债务利息144412.98元。\\n\\n[DOC1_A5 | 法院查明事实]\\n本院对伊犁州分院查明的事实予以确认。\\n\\n本院查明，某甲公司于2021年3月30日收到（2020）黔2633执243号之三执行裁定书，裁定：扣留被执行人某乙公司在某甲公司的工程款、扣留数额为650910.74元。（2020）黔2633执243号之四执行裁定书，裁定：协助扣留某乙公司在你单位工程款650910.74元，扣留期限为三年……你单位自收到本通知后十五日内履行你单位对被执行人某乙公司的到期债务650910.74元。某甲公司于2021年4月10日收到（2020）云0124执537号执行裁定书，裁定：冻结某乙公司在某甲公司享有的到期债权440000元，冻结期限三年。某甲公司于2021年4月13日收到（2021）皖1222执3289号协助执行通知书，内容：冻结某乙公司对某甲公司享有的债权984321.16元，冻结期限两年。某甲公司于2021年12月15日收到（2021）鲁0191执2879号之三执行裁定书，裁定：冻结某乙公司对某甲公司的到期债权333万元，冻结期限三年。某甲公司于2022年7月11日收到（2022）冀0929执恢283号之十七号裁定书，裁定：你单位给某乙公司及其分公司拨付各类款项时（先期付款以650万元为限），必须拨付献县人民法院账户……\\n\\n本院另查明，某甲公司于2021年12月25日通过微信向某乙公司发送《关于4家法院冻结及执行款项支付事宜函》，并根据某乙公司的要求将该函通过EMS向其总公司法务部送达。\\n\\n[DOC1_A6 | 法院裁判理由]\\n本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。\\n\\n本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。\\n\\n一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。\\n\\n二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。\\n\\n三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\\n\\n[DOC1_A7 | 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。]\\n故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下：\\n\\n一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书；\\n\\n二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项；\\n\\n三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。\", \"采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"2021\", \"12\", \"25\", \"4\", \"3\", \"1635275.9元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 6, \"disambiguates\": 6, \"likely_same_entity\": 2}, \"top_related_anchor_ids\": [\"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A7\", \"DOC1_A5\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>该判决文书涉及的是建设工程施工合同纠纷，属于民事案由中的合同纠纷。根据当前文档内容，可以将其归类为“民事案由-合同，无因管理，不当得利纠纷”。然而，为了确保分类准确，还需要进一步检查是否有其他类型的案由出现。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A6\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否存在其他类型的案由？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案由-合同，无因管理，不当得利纠纷\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院...\"], \"selected_relation_anchor_ids\": [\"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>尽管我们已经找到了一个可能的分类，即“民事案由-合同，无因管理，不当得利纠纷”，但我们需要确保没有遗漏其他可能的案由类型。接下来，我将检查DOC1_A7，因为它包含了详细的法律分析，可能会提供更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"是否存在其他类型的案由？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A7\", \"candidate_anchor_ids\": [\"DOC1_A7\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案由-合同，无因管理，不当得利纠纷\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院...\"], \"selected_relation_anchor_ids\": [\"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC1_A6\"], \"utility_hits\": {\"DOC1_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A7\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A5\": 5.0}, \"relation_hits\": {\"DOC1_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"], \"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\", \"likely_same_entity_selected=DOC1_A6\"]}, \"relation_score\": {\"DOC1_A7\": 19.73, \"DOC1_A3\": 19.73, \"DOC1_A4\": 19.73, \"DOC1_A5\": 16.73}, \"anchor_role_hits\": {\"DOC1_A7\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A5\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC1_A7\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 8.721, \"redundancy_penalty\": 3.0, \"total\": 38.451}, \"DOC1_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 35.644}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 35.421}, \"DOC1_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 16.73, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 26.238}}}</search>\n<info>{\"anchor_id\": \"DOC1_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\", \"summary\": \"Expanded same-section read window around DOC1_A7: 法院裁定撤销伊犁州分院（2023）新40执异64号执行裁定书，维持（2023）新40执284号执行通知书的部分内容，变更查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款为1217369.31元（含执行费14428元）。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\\n\\n法定代表人：康某某，系该公司执行董事兼总经理。\\n\\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\\n\\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\\n\\n[DOC1_A2 | 申请执行人信息]\\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\\n\\n法定代表人：童某某，该公司董事长。\\n\\n[DOC1_A3 | 案件背景]\\n新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\\n\\n另查明，自2021年3月30日起，贵州省从江县人民法院、云南省富民县人民法院、安徽省太和县人民法院、济南高新技术产业开发区人民法院向某甲公司送达执行裁定及协助执行通知。截止2023年7月7日某甲公司未向上述法院支付款项。\\n\\n伊犁州分院认为，本案的争议焦点是本案是否应支付迟延履行期间的利息。《中华人民共和国民事诉讼法》第二百六十条规定，被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。本案中，某甲公司自执行依据生效后，至申请执行前未履行判决确定的义务，应当支付迟延履行期间的利息。某甲公司虽向伊犁州分院提交了4家法院向其送达的协助执行通知书，但并未向上述法院支付款项，且该证据不足以证明被执行人某甲公司在本案申请执行前有主动要求履行执行依据确定的给付义务的实际履行行为，故某甲公司提出不予支付迟延履行期间的利息的理由不成立，伊犁州分院不予支持。遂裁定：驳回某甲公司的异议请求。\\n\\n[DOC1_A4 | 某甲公司复议请求]\\n某甲公司向本院申请复议，请求：1．撤销伊犁州分院（2023）新40执异64号执行裁定；2．伊犁州分院向申请人返还迟延履行利息。事实与理由：我公司于2021年3月30日起，已陆续接到全国9家法院发出的11份冻结申请执行人债权的协助执行通知书，要求冻结账户累计29162834.24元，截止2021年11月24日（2021）新民终244号民事判决之日，已收到各家法院协执要求冻结申请执行人债权6874975.07元。按照法院协助执行通知书的要求，我公司不得向申请执行人支付款项。（2021）新民终244号民事判决生效后，我公司于2021年12月向申请执行人寄送《关于4家法院冻结及执行款项支付事宜》函件，要求申请执行人明确案款支付事项，均未收到任何答复。我公司并无不履行生效判决书的主观故意，而是基于法院的生效裁定书及协助执行通知书的约束而无法履行，不应承担迟延履行债务利息，请求法院返还多扣划的迟延履行债务利息144412.98元。\\n\\n[DOC1_A5 | 法院查明事实]\\n本院对伊犁州分院查明的事实予以确认。\\n\\n本院查明，某甲公司于2021年3月30日收到（2020）黔2633执243号之三执行裁定书，裁定：扣留被执行人某乙公司在某甲公司的工程款、扣留数额为650910.74元。（2020）黔2633执243号之四执行裁定书，裁定：协助扣留某乙公司在你单位工程款650910.74元，扣留期限为三年……你单位自收到本通知后十五日内履行你单位对被执行人某乙公司的到期债务650910.74元。某甲公司于2021年4月10日收到（2020）云0124执537号执行裁定书，裁定：冻结某乙公司在某甲公司享有的到期债权440000元，冻结期限三年。某甲公司于2021年4月13日收到（2021）皖1222执3289号协助执行通知书，内容：冻结某乙公司对某甲公司享有的债权984321.16元，冻结期限两年。某甲公司于2021年12月15日收到（2021）鲁0191执2879号之三执行裁定书，裁定：冻结某乙公司对某甲公司的到期债权333万元，冻结期限三年。某甲公司于2022年7月11日收到（2022）冀0929执恢283号之十七号裁定书，裁定：你单位给某乙公司及其分公司拨付各类款项时（先期付款以650万元为限），必须拨付献县人民法院账户……\\n\\n本院另查明，某甲公司于2021年12月25日通过微信向某乙公司发送《关于4家法院冻结及执行款项支付事宜函》，并根据某乙公司的要求将该函通过EMS向其总公司法务部送达。\\n\\n[DOC1_A6 | 法院裁判理由]\\n本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。\\n\\n本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。\\n\\n一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。\\n\\n二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。\\n\\n三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。\\n\\n[DOC1_A7 | 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。]\\n故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下：\\n\\n一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书；\\n\\n二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项；\\n\\n三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A7\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。\", \"采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"2021\", \"12\", \"25\", \"4\", \"3\", \"1635275.9元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 6, \"disambiguates\": 6, \"likely_same_entity\": 2}, \"top_related_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A6\", \"DOC1_A5\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>该段落详细解释了某甲公司是否应当承担迟延履行利息的问题，以及法院协助执行通知是否具有停止某甲公司履行生效判决的效力。这些信息进一步证实了该案件属于建设工程施工合同纠纷，属于“民事案由-合同，无因管理，不当得利纠纷”类别。没有发现其他类型的案由。</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案由-合同，无因管理，不当得利纠纷\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁判理由 法院认为某甲公司具有积极主动履行债务的行为，法院协助执行通知具有停止某甲公司履行生效判决的效力，某甲公司在法律义务相冲突的情况下不应承担迟延履行期间的债务利息。 本院认为，本案审查的重点问题是某甲公司履行协助法院义务期间，是否应当支付迟延履行期间的利息。 本案中判断某甲公司是否应当承担迟延履行利息需要考虑一、某甲公司是否具有积极主动履行生效判决的行为；二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力；三、某甲公司在法律义务相冲突的情形下，权利应如何保障。 一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院...\", \"一、某甲公司是否具有积极主动履行债务的行为。《中华人民共和国民事诉讼法（2023年修正）》第二百六十四条：“被执行人未按判决、裁定和其他法律文书指定的期间履行给付金钱义务的，应当加倍支付迟延履行期间的债务利息。被执行人未按判决、裁定和其他法律文书指定的期间履行其他义务的，应当支付迟延履行金。”按照上述法律的规定，迟延履行债务利息虽系法定利息，但其兼具补偿性和惩罚性，设定的根本目的是督促被执行人积极履行生效法律文书所确定的义务。迟延履行期间债务利息并非申请执行人无条件的权利，在被执行人无合理理由不履行或怠于履行的情形下，该利息才应被支持。本案执行依据生效后，某甲公司已于2021年12月25日通过微信向某乙公司发出《关于4家法院冻结及执行款项支付事宜的函》，向某乙公司告知有四家法院已向其发出协助执行通知书冻结案涉债权，并要求与某乙公司协商还款事宜。某乙公司收到某甲公司函件后，未与某甲公司协商确定还款事宜。某甲公司在执行依据生效后，积极与申请执行人某乙公司协商确定还款事宜，并未有怠于履行的行为，如果无条件适用迟延履行期间利息进行惩罚，对积极诚信履行债务一方施以制裁，与迟延履行利息立法目的不符。 > 二、法院协助执行通知是否具有停止某甲公司履行生效判决的效力。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第一条第二款规定：“采取查封、扣押、冻结措施需要有关单位或者个人协助的，人民法院应当制作协助执行通知书，连同裁定书副本一并送达协助执行人。查封、扣押、冻结裁定书和协助执行通知书送达时发生法律效力。”按照上述法律规定，法院的协助执行通知书及冻结裁定送达协助义务人处，该协助执行通知书及冻结裁定即发生法律效力。本案中，某甲公司在执行依据生效前已经收到3家法院的协助执行通知书及冻结裁定，该裁定及协助执行通知书对某甲公司发生法律效力，某甲公司亦应按照法律文书的内容履行停止向某乙公司付款的义务。某甲公司在执行依据生效前，已经收到3家法院的协助执行通知书，要求冻结某乙公司对某甲公司的债权，冻结债权数额达到1635275.9元超过本案执行依据确定的1217369.31元工程款。故，某甲公司在从本案执行依据未生效前到申请执行人某乙公司申请执行前，均应配合相关法院履行不得向某乙公司偿还债务的义务。某甲公司未按执行依据履行支付义务是协助法院履行不得支付义务造成的。 > 三、某甲公司在法律义务相冲突的情形下，其权利如何保障。某甲公司需要履行执行依据确定的义务，亦应履行协助执行通知书及冻结裁定书载明的停止付款的义务，某甲公司在同一时期负有两个相互冲突的法律义务，该公司不可能履行两项互相冲突的法律义务，不论其如何履行均会受到法律的制裁，不符合权利义务对等的法律原则。因此，法律义务冲突是造成某甲公司困境的原因，其不应承担由此产生的惩罚性义务。综上，某甲公司向债权人函告其债权被其他人民法院冻结的事项，并与其协商如何支付的问题，同时配合法院履行协助执行义务是尊法、守法的表率，不应受到法律处罚。故，某甲公司不应承担迟延履行期间债务利息，伊犁州分院要求其履行迟延履行期间债务利息错误。 法院裁定撤销伊犁州分院（2023）新40执异64号执行裁定书，维持（2023）新40执284号执行通知书的部分内容，变更查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款为1217369.31元（含执行费14428元）。 故，伊犁州分院认定事实不清，适用法律错误。依据《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第二项之规定，裁定如下： 一、撤销新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执异64号执行裁定书； 二、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行通知书第一项、第三项，撤销（2023）新40执284号执行通知书第二项； 三、维持新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（2023）新40执284号执行裁定书第二项；变更第一项为（2023）新40执284号执行裁定书查询、冻结、划拨、扣留、提取被执行人特克斯某甲房地产开发有限公司在有关单位的存款1217369.31元（含执行费14428元）。 本裁定为终审裁定。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

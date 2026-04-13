@@ -1,0 +1,415 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "selected_anchor_ids": [
+    "DOC6_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC6_A2",
+        "candidate_anchor_ids": [
+          "DOC6_A1",
+          "DOC6_A2",
+          "DOC6_A3"
+        ],
+        "utility_hits": {
+          "DOC6_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC6_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC6_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC6_A2": 11.0,
+          "DOC6_A3": 11.0,
+          "DOC6_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC6_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC6_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC6_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 20.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC6_A2",
+      "plan_think": "考虑到必须找到案件类别和文档到类别的分配，以及案件原因、处置或裁决的证据，我应该首先检查包含案件详情的段落，因为它可能直接提到案件的性质。",
+      "info": {
+        "anchor_id": "DOC6_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件详情",
+        "summary": "Expanded same-section read window around DOC6_A2: 再审申请人阿某某因土地承包经营权纠纷，对巴楚县农业农村局和巴楚县农村合作经济发展中心提起诉讼，并在审查过程中申请撤回再审申请。",
+        "text": "[DOC6_A1 | 当事人信息]\n再审申请人（一审原告、二审上诉人）：阿某某，女，1988年5月2日出生，维吾尔族，住新疆维吾尔自治区喀什地区。\n\n委托诉讼代理人：伊斯拉伊力艾麦提，新疆纳迪尔律师事务所律师。\n\n被申请人（一审被告、二审被上诉人）：巴楚县农业农村局，住所地新疆维吾尔自治区喀什地区巴楚县财政大厦4楼。\n\n法定代表人：耿德一，该局局长。\n\n出庭负责人：吴志福，该局副局长。\n\n委托诉讼代理人：陈俊作，新疆元正盛业律师事务所律师。\n\n委托诉讼代理人：赵伟方，新疆元正盛业律师事务所律师。\n\n被申请人（一审被告、二审被上诉人）：巴楚县农村合作经济发展中心，住所地新疆维吾尔自治区喀什地区巴楚县迎宾路财政大厦。\n\n法定代表人：梁保卫，该中心主任。\n\n出庭负责人：阿布都赛米买买提，该中心副主任。\n\n委托诉讼代理人：陈俊作，新疆元正盛业律师事务所律师。\n\n委托诉讼代理人：赵伟方，新疆元正盛业律师事务所律师。\n\n[DOC6_A2 | 案件详情]\n原审第三人：新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会，住所地新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村。\n\n法定代表人：艾麦提热伊木，该村民委员会主任。\n\n再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。\n\n[DOC6_A3 | 法院裁定]\n本院认为，阿某某申请撤回再审请求，系其真实意思表示，符合法律规定，应予准许。依照《中华人民共和国行政诉讼法》第六十二条的规定，裁定如下：\n\n准许阿某某撤回再审申请。",
+        "source_window_anchor_ids": [
+          "DOC6_A1",
+          "DOC6_A2",
+          "DOC6_A3"
+        ],
+        "primary_anchor_id": "DOC6_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书6"
+        ],
+        "anchor_targets": [
+          "判决文书6"
+        ],
+        "anchor_value_hints": [
+          "6",
+          "2023",
+          "31",
+          "38"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 12,
+          "relation_type_counts": {
+            "supports": 2,
+            "same_case": 2,
+            "disambiguates": 2,
+            "likely_same_entity": 2,
+            "prev_next": 2,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC6_A3",
+            "DOC6_A1",
+            "DOC6_A3",
+            "DOC6_A1",
+            "DOC6_A3",
+            "DOC6_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC6_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC6_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC6_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书6']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC6_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书6']"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC6_A3",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC6_A1",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          }
+        ]
+      },
+      "extract_think": "此段落提供了关于案件类型的明确线索，即这是一个行政案件，因为涉及行政裁定。因此，可以将《判决文书6》归类为行政案件。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政案件",
+            "value": "《判决文书6》",
+            "normalized_value": "判决文书6",
+            "evidence_text": "再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。",
+            "source_doc_id": "DOC6",
+            "source_anchor_id": "DOC6_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC6_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC6_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC6_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书6']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC6_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书6']"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC6_A3",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC6_A1",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政案件"
+          ],
+          "known_value_signatures": [
+            "判决文书6"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC6_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件详情 再审申请人阿某某因土地承包经营权纠纷，对巴楚县农业农村局和巴楚县农村合作经济发展中心提起诉讼，并在审查过程中申请撤回再审申请。 原审第三人：新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会，住所地新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村。 法定代表人：艾麦提热伊木，该村民委员会主任。 再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC6_A3",
+            "DOC6_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A3",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC6_A2",
+              "target_anchor_id": "DOC6_A1",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政案件",
+      "value": "《判决文书6》",
+      "normalized_value": "判决文书6",
+      "evidence_text": "再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。",
+      "source_doc_id": "DOC6",
+      "source_anchor_id": "DOC6_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC6_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC6_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC6_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书6']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC6_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书6']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC6_A3",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC6_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>考虑到必须找到案件类别和文档到类别的分配，以及案件原因、处置或裁决的证据，我应该首先检查包含案件详情的段落，因为它可能直接提到案件的性质。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A2\", \"candidate_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\"], \"utility_hits\": {\"DOC6_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC6_A2\": 11.0, \"DOC6_A3\": 11.0, \"DOC6_A1\": 5.0}, \"score_breakdown\": {\"DOC6_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC6_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC6_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC6_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情\", \"summary\": \"Expanded same-section read window around DOC6_A2: 再审申请人阿某某因土地承包经营权纠纷，对巴楚县农业农村局和巴楚县农村合作经济发展中心提起诉讼，并在审查过程中申请撤回再审申请。\", \"text\": \"[DOC6_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：阿某某，女，1988年5月2日出生，维吾尔族，住新疆维吾尔自治区喀什地区。\\n\\n委托诉讼代理人：伊斯拉伊力艾麦提，新疆纳迪尔律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：巴楚县农业农村局，住所地新疆维吾尔自治区喀什地区巴楚县财政大厦4楼。\\n\\n法定代表人：耿德一，该局局长。\\n\\n出庭负责人：吴志福，该局副局长。\\n\\n委托诉讼代理人：陈俊作，新疆元正盛业律师事务所律师。\\n\\n委托诉讼代理人：赵伟方，新疆元正盛业律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：巴楚县农村合作经济发展中心，住所地新疆维吾尔自治区喀什地区巴楚县迎宾路财政大厦。\\n\\n法定代表人：梁保卫，该中心主任。\\n\\n出庭负责人：阿布都赛米买买提，该中心副主任。\\n\\n委托诉讼代理人：陈俊作，新疆元正盛业律师事务所律师。\\n\\n委托诉讼代理人：赵伟方，新疆元正盛业律师事务所律师。\\n\\n[DOC6_A2 | 案件详情]\\n原审第三人：新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会，住所地新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村。\\n\\n法定代表人：艾麦提热伊木，该村民委员会主任。\\n\\n再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。\\n\\n[DOC6_A3 | 法院裁定]\\n本院认为，阿某某申请撤回再审请求，系其真实意思表示，符合法律规定，应予准许。依照《中华人民共和国行政诉讼法》第六十二条的规定，裁定如下：\\n\\n准许阿某某撤回再审申请。\", \"source_window_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\"], \"primary_anchor_id\": \"DOC6_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书6\"], \"anchor_targets\": [\"判决文书6\"], \"anchor_value_hints\": [\"6\", \"2023\", \"31\", \"38\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 12, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 2, \"disambiguates\": 2, \"likely_same_entity\": 2, \"prev_next\": 2, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC6_A3\", \"DOC6_A1\", \"DOC6_A3\", \"DOC6_A1\", \"DOC6_A3\", \"DOC6_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>此段落提供了关于案件类型的明确线索，即这是一个行政案件，因为涉及行政裁定。因此，可以将《判决文书6》归类为行政案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书6》\", \"normalized_value\": \"判决文书6\", \"evidence_text\": \"再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。\", \"source_doc_id\": \"DOC6\", \"source_anchor_id\": \"DOC6_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书6\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC6_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件详情 再审申请人阿某某因土地承包经营权纠纷，对巴楚县农业农村局和巴楚县农村合作经济发展中心提起诉讼，并在审查过程中申请撤回再审申请。 原审第三人：新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会，住所地新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村。 法定代表人：艾麦提热伊木，该村民委员会主任。 再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。\"], \"selected_relation_anchor_ids\": [\"DOC6_A3\", \"DOC6_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>考虑到必须找到案件类别和文档到类别的分配，以及案件原因、处置或裁决的证据，我应该首先检查包含案件详情的段落，因为它可能直接提到案件的性质。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A2\", \"candidate_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\"], \"utility_hits\": {\"DOC6_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC6_A2\": 11.0, \"DOC6_A3\": 11.0, \"DOC6_A1\": 5.0}, \"score_breakdown\": {\"DOC6_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC6_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC6_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC6_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情\", \"summary\": \"Expanded same-section read window around DOC6_A2: 再审申请人阿某某因土地承包经营权纠纷，对巴楚县农业农村局和巴楚县农村合作经济发展中心提起诉讼，并在审查过程中申请撤回再审申请。\", \"text\": \"[DOC6_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：阿某某，女，1988年5月2日出生，维吾尔族，住新疆维吾尔自治区喀什地区。\\n\\n委托诉讼代理人：伊斯拉伊力艾麦提，新疆纳迪尔律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：巴楚县农业农村局，住所地新疆维吾尔自治区喀什地区巴楚县财政大厦4楼。\\n\\n法定代表人：耿德一，该局局长。\\n\\n出庭负责人：吴志福，该局副局长。\\n\\n委托诉讼代理人：陈俊作，新疆元正盛业律师事务所律师。\\n\\n委托诉讼代理人：赵伟方，新疆元正盛业律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：巴楚县农村合作经济发展中心，住所地新疆维吾尔自治区喀什地区巴楚县迎宾路财政大厦。\\n\\n法定代表人：梁保卫，该中心主任。\\n\\n出庭负责人：阿布都赛米买买提，该中心副主任。\\n\\n委托诉讼代理人：陈俊作，新疆元正盛业律师事务所律师。\\n\\n委托诉讼代理人：赵伟方，新疆元正盛业律师事务所律师。\\n\\n[DOC6_A2 | 案件详情]\\n原审第三人：新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会，住所地新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村。\\n\\n法定代表人：艾麦提热伊木，该村民委员会主任。\\n\\n再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。\\n\\n[DOC6_A3 | 法院裁定]\\n本院认为，阿某某申请撤回再审请求，系其真实意思表示，符合法律规定，应予准许。依照《中华人民共和国行政诉讼法》第六十二条的规定，裁定如下：\\n\\n准许阿某某撤回再审申请。\", \"source_window_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\"], \"primary_anchor_id\": \"DOC6_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书6\"], \"anchor_targets\": [\"判决文书6\"], \"anchor_value_hints\": [\"6\", \"2023\", \"31\", \"38\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 12, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 2, \"disambiguates\": 2, \"likely_same_entity\": 2, \"prev_next\": 2, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC6_A3\", \"DOC6_A1\", \"DOC6_A3\", \"DOC6_A1\", \"DOC6_A3\", \"DOC6_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}</info>\n<think>此段落提供了关于案件类型的明确线索，即这是一个行政案件，因为涉及行政裁定。因此，可以将《判决文书6》归类为行政案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书6》\", \"normalized_value\": \"判决文书6\", \"evidence_text\": \"再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。\", \"source_doc_id\": \"DOC6\", \"source_anchor_id\": \"DOC6_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC6_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书6\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC6_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件详情 再审申请人阿某某因土地承包经营权纠纷，对巴楚县农业农村局和巴楚县农村合作经济发展中心提起诉讼，并在审查过程中申请撤回再审申请。 原审第三人：新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会，住所地新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村。 法定代表人：艾麦提热伊木，该村民委员会主任。 再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包经营权一案，不服新疆维吾尔自治区喀什地区中级人民法院作出的（2023）新31行终38号行政裁定，向本院申请再审。在本院审查过程中，阿某某向本院申请撤回再审申请。\"], \"selected_relation_anchor_ids\": [\"DOC6_A3\", \"DOC6_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC6_A2\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+}

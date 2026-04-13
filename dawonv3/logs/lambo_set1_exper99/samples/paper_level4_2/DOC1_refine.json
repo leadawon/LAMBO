@@ -1,0 +1,1321 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+  "selected_anchor_ids": [
+    "DOC1_A7",
+    "DOC1_A3",
+    "DOC1_A1"
+  ],
+  "final_current_query": "Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A7",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "utility_hits": {
+          "DOC1_A4": [
+            "citation_format_cue"
+          ],
+          "DOC1_A2": [
+            "citation_format_cue"
+          ],
+          "DOC1_A3": [
+            "citation_format_cue"
+          ],
+          "DOC1_A5": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A4": 3.0,
+          "DOC1_A2": 3.0,
+          "DOC1_A3": 3.0,
+          "DOC1_A5": 3.0
+        },
+        "score_breakdown": {
+          "DOC1_A4": {
+            "local_relevance": 32.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 49.391
+          },
+          "DOC1_A2": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.901,
+            "redundancy_penalty": 0.0,
+            "total": 45.901
+          },
+          "DOC1_A3": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 45.614
+          },
+          "DOC1_A5": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 5.808,
+            "redundancy_penalty": 0.0,
+            "total": 43.808
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A7",
+      "plan_think": "The current query is focused on identifying citation chains among the provided papers. To start building a citation chain, I need to look for references or citations within the document. The most logical place to find such information would be in the \"REFERENCES\" section of the document.",
+      "info": {
+        "anchor_id": "DOC1_A7",
+        "anchor_type": "attribution_region",
+        "section_path": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES",
+        "summary": "Expanded same-section read window around DOC1_A7: The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the tr...",
+        "text": "[DOC1_A4 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > III. RELATED WORK]\nFinally, the idea of iterative refinement target labels is similar to iterative pseudo labeling for semi-supervised ASR [12], [54], which leverages an improving student model to generate better pseudo-labels for the next iteration of training. The HuBERT approach can be seen as extending this method to the self-supervised setup with a masked prediction loss.\n\n## IV. EXPERIMENTAL DETAILS\n\n## A. Data\n\nFor unsupervised pre-training, we use the full 960 hours of LibriSpeech audio [24] or 60,000 hours of Libri-light [25] audio, both of which are derived from the LibriVox project that contains English recordings of copyright-free audiobooks by volunteers from the Internet. For supervised fine-tuning, five different partitions are considered: Libri-light 10-minute, 1-hour, 10hour splits and LibriSpeech 100-hour (train-clean-100) and 960-hour (train-clean-100, train-clean-360, train-other-500 combined) splits. The three Libri-light splits are subsets of the the LibriSpeech training split, and each of them contain half of the audio from train-clean-* and the other from train-other-500.\n\n## B. Unsupervised Unit Discovery\n\nTo demonstrate the effectiveness of the proposed method on utilizing low-quality cluster assignments, we consider the k-means algorithm [55] for acoustic unit discovery by default. It is one of the most naive unit discovery models that can be treated as modeling an isotropic Gaussian with the same scalar variance for each acoustic unit. To generate labels for the first iteration HuBERT training over the 960 hour LibriSpeech training set, we run k-means clustering with 100 clusters on 39-dimensional MFCC features, which are 13 coefficients with the first and the second-order derivatives.\n\nTo generate better targets for the subsequent iterations, we run $\\mathrm{k}$-means clustering with 500 clusters on the latent features extracted from the HuBERT model pre-trained in the previous iteration (not fine-tuned) at some intermediate transformer layer. Since the feature dimension at the transformer output is much higher than the MFCC features (768-D for HuBERT BASE), we cannot afford to load the entire 960 hour training split to the memory. So instead, we randomly sample $10 \\%$ of the data for fitting the k-means model.\n\nThe MiniBatchKMeans algorithm implemented in the scikit-learn [56] package is used for clustering, which fits a mini-batch of samples at a time 2 We set the mini-batch size to be 10,000 frames. k-means++ [57] with 20 random starts is used for better initialization.\n\n## C. Pre-Training\n\nWe train the BASE model for two iterations on the 960 hours of LibriSpeech audio on 32 GPUs, with a batch size of at most 87.5 seconds of audio per GPU. The first iteration is trained for $250 \\mathrm{k}$ steps, while the second iteration is trained for $400 \\mathrm{k}$ steps using labels generated by clustering the 6-th transformer layer output of the first iteration model. Training for $100 \\mathrm{k}$ steps takes about 9.5 hours.\n\nNext we train HuBERT Large and X-Large for one iteration on 60,000 hours of Libri-light audio on 128 and 256 GPUs, respectively, for $400 \\mathrm{k}$ steps. The batch sizes are reduced to 56.25 and 22.5 seconds of audio per GPU due to memory constraints. Instead of restarting the iterative process from clustering MFCC features, we extract features from the 9 th transformer layer of the second iteration BASE HuBERT for clustering and use those labels for training these two models. Hence, these two models can also be seen as the third iteration models.\n\nFor all HuBERT configurations, mask span is set to $l=$ 10 , and $p=8 \\%$ of the waveform encoder output frames are randomly selected as mask start if not otherwise mentioned. Adam [58] optimizer is used with $\\beta=(0.9,0.98)$, and the learning rate ramps up linearly from 0 to the peak learning rate for the first $8 \\%$ of the training steps, and then decays linearly back to zero. The peak learning rates are $5 \\mathrm{e}-4 / 1.5 \\mathrm{e}-$ 3/3e-3 for BASE/LARGE/X-LARGE models.\n\n## D. Supervised Fine-Tuning and Decoding\n\n[DOC1_A7 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES]\n## REFERENCES",
+        "source_window_anchor_ids": [
+          "DOC1_A4",
+          "DOC1_A7"
+        ],
+        "primary_anchor_id": "DOC1_A7",
+        "anchor_role_candidates": [
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "HuBERT:",
+          "Self-Supervised",
+          "Speech",
+          "Representation",
+          "Learning",
+          "by",
+          "Masked",
+          "Prediction",
+          "of",
+          "Hidden"
+        ],
+        "anchor_targets": [
+          "HuBERT:",
+          "Self-Supervised",
+          "Speech",
+          "Representation",
+          "Learning",
+          "by",
+          "Masked",
+          "Prediction",
+          "of"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_target_paper": 6,
+            "disambiguates": 6
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk includes the reference section of the paper, which lists citations made by the paper. However, to build a citation chain, we need to identify papers that cite the current paper, not just the ones it cites. This chunk does not provide information about papers citing the current paper, so it is not sufficient to complete the task. A follow-up query is needed to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A7"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A3",
+        "candidate_anchor_ids": [
+          "DOC1_A7"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A7"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A7"
+        ],
+        "utility_hits": {
+          "DOC1_A3": [
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC1_A4": [
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC1_A5": [
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC1_A2": [
+            "target_mentioned",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A3": 8.0,
+          "DOC1_A4": 8.0,
+          "DOC1_A5": 8.0,
+          "DOC1_A2": 8.0
+        },
+        "relation_hits": {
+          "DOC1_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A7"
+          ],
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A7"
+          ],
+          "DOC1_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A7"
+          ],
+          "DOC1_A2": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A7"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A3": 17.18,
+          "DOC1_A4": 17.18,
+          "DOC1_A5": 17.18,
+          "DOC1_A2": 17.18
+        },
+        "anchor_role_hits": {
+          "DOC1_A3": [
+            "citation_direction"
+          ],
+          "DOC1_A4": [
+            "citation_direction"
+          ],
+          "DOC1_A5": [
+            "citation_direction"
+          ],
+          "DOC1_A2": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A3": {
+            "local_relevance": 56.0,
+            "answer_utility": 8.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 92.794
+          },
+          "DOC1_A4": {
+            "local_relevance": 56.0,
+            "answer_utility": 8.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 92.571
+          },
+          "DOC1_A5": {
+            "local_relevance": 56.0,
+            "answer_utility": 8.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 5.808,
+            "redundancy_penalty": 0.0,
+            "total": 90.988
+          },
+          "DOC1_A2": {
+            "local_relevance": 52.0,
+            "answer_utility": 8.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 7.901,
+            "redundancy_penalty": 0.0,
+            "total": 89.081
+          }
+        }
+      },
+      "anchor_id": "DOC1_A3",
+      "plan_think": "To continue the search for a citation chain, I need to inspect the references section again but this time looking for any incoming citations to the current paper. Since the previous inspection did not yield the necessary information, I will re-inspect the references section to ensure no detail was overlooked and to potentially find new insights that could lead to the identification of citing papers.",
+      "info": {
+        "anchor_id": "DOC1_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD",
+        "summary": "The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments.",
+        "text": "## II. METHOD\n\n## A. Learning the Hidden Units for HuBERT\n\nAn acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic units [26] (see also Table V. More advanced systems can achieve better acoustic unit discovery performance using better graphical models [27], [28] or parameterizes the distributions with more powerful neural network models [29][33].\n\n![](https://cdn.mathpix.com/cropped/2024_06_04_c56ead00cd73b3100b53g-02.jpg?height=694&width=832&top_left_y=537&top_left_x=1102)\n\nFig. 1: The HuBERT approach predicts hidden cluster assignments of the masked frames ( $y_{2}, y_{3}, y_{4}$ in the figure) generated by one or more iterations of k-means clustering.\n\nInspired by this, we propose to use acoustic unit discovery models to provide frame-level targets. Let $X$ denote a speech utterance $X=\\left[x_{1}, \\cdots, x_{T}\\right]$ of $T$ frames. Discovered hidden units are denoted with $h(X)=Z=\\left[z_{1}, \\cdots, z_{T}\\right]$, where $z_{t} \\in[C]$ is a $C$-class categorical variable and $h$ is a clustering model, e.g. k-means.\n\n## B. Representation Learning via Masked Prediction\n\nLet $M \\subset[T]$ denote the set of indices to be masked for a length- $T$ sequence $X$, and $\\tilde{X}=r(X, M)$ denote a corrupted version of $X$ where $x_{t}$ is replaced with a mask embedding $\\tilde{x}$ if $t \\in M$. A masked prediction model $f$ takes as input $\\tilde{X}$ and predicts a distribution over the target indeces at each timestep $p_{f}(\\cdot \\mid \\tilde{X}, t)$. There are two decisions to be made for masked prediction: how to mask and where to apply the prediction loss.\n\nRegarding the first decision, we adopt the same strategies used in SpanBERT [34] and wav2vec 2.0 [6] for mask generation, where $p \\%$ of the timesteps are randomly selected as start indices, and spans of $l$ steps are masked. To address the second decision, we denote the cross-entropy loss computed over masked and unmasked timesteps as $L_{m}$ and $L_{u}$, respectively. $L_{m}$ is defined as:\n\n$$\n\\begin{equation*}\nL_{m}(f ; X, M, Z)=\\sum_{t \\in M} \\log p_{f}\\left(z_{t} \\mid \\tilde{X}, t\\right) \\tag{1}\n\\end{equation*}\n$$\n\nand $L_{u}$ is of the same form except that it sums over $t \\notin$ $M$. The final loss is computed as a weighted sum of the two\nterms: $L=\\alpha L_{m}+(1-\\alpha) L_{u}$. In the extreme case when $\\alpha=$ 0 , the loss is computed over the unmasked timesteps, which is similar to acoustic modeling in hybrid speech recognition systems [35]-[38]. In our setup, this limits the learning process to mimicking the clustering model.\n\nIn the other extreme with $\\alpha=1$, the loss is only computed over the masked timesteps where the model has to predict the targets corresponding to the unseen frames from context, analogous to language modeling. It forces the model to learn both the acoustic representation of unmasked segments and the long-range temporal structure of the speech data. We hypothesize that the setup with $\\alpha=1$ is more resilient to the quality of cluster targets, which is demonstrated in our experiments (see Table V.\n\n## C. Learning with Cluster Ensembles\n\nA simple idea to improve target quality is to utilize multiple clustering models. While an individual clustering model may perform terribly, cluster ensembles can provide complementary information to facilitate representation learning. For example, an ensemble of k-means models with different codebook sizes can create targets of different granularity, from manner classes (vowel/consonant) to sub-phone states (senones). To extend the proposed framework, let $Z^{(k)}$ be the target sequences generated by the $k$-th clustering model. We can now re-write $L_{m}$ as:\n\n$$\n\\begin{equation*}\nL_{m}\\left(f ; X,\\left\\{Z^{(k)}\\right\\}_{k}, M\\right)=\\sum_{t \\in M} \\sum_{k} \\log p_{f}^{(k)}\\left(z_{t}^{(k)} \\mid \\tilde{X}, t\\right) \\tag{2}\n\\end{equation*}\n$$\n\nand similarly for the unmasked loss $L_{u}$. This is analogous to multi-task learning, but with tasks created by unsupervised clustering.\n\nAdditionally, ensembling is intriguing because it can be used alongside product quantization (PQ) [39], where a feature space is partitioned into multiple subspaces, and each subspace is quantized separately. PQ allows effective Euclidean distance-based quantization such as k-means for highdimensional features and heterogeneous features whose scale differs significantly between subspaces. In this case, the theoretical size of the target space is the product of all codebooks' sizes.\n\n## D. Iterative Refinement of Cluster Assignments\n\nIn addition to using cluster ensembles, another direction for improved representation is refining the cluster assignments throughout the learning process. Since we expect a pre-trained model to provide better representations than the raw acoustic feature such as MFCCs, we can create a new generation of clusters by training a discrete latent model over the learned latent representations. The learning process then proceeds with the newly discovered units.\n\n## E. Implementation",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "HuBERT:",
+          "Self-Supervised",
+          "Speech",
+          "Representation",
+          "Learning",
+          "by",
+          "Masked",
+          "Prediction",
+          "of",
+          "Hidden"
+        ],
+        "anchor_targets": [
+          "HuBERT:",
+          "Self-Supervised",
+          "Speech",
+          "Representation",
+          "Learning",
+          "by",
+          "Masked",
+          "Prediction",
+          "of"
+        ],
+        "anchor_value_hints": [
+          "26",
+          "27",
+          "28",
+          "29",
+          "33",
+          "2024",
+          "06",
+          "04"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_target_paper": 6,
+            "disambiguates": 6
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk is from the \"METHOD\" section of the paper and primarily describes the technical details of the HuBERT approach. It does not provide information about papers that cite the current paper. Therefore, it is not sufficient to identify the citation chain needed for the task. A follow-up query is necessary to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A3"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES",
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A3"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES",
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A7",
+          "DOC1_A3"
+        ],
+        "utility_hits": {
+          "DOC1_A4": [
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC1_A5": [
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC1_A2": [
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC1_A1": [
+            "target_mentioned"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A4": 8.0,
+          "DOC1_A5": 8.0,
+          "DOC1_A2": 8.0,
+          "DOC1_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "supports_selected=DOC1_A3",
+            "same_target_paper_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A3",
+            "disambiguates_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A3"
+          ],
+          "DOC1_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "supports_selected=DOC1_A3",
+            "same_target_paper_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A3",
+            "disambiguates_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A3"
+          ],
+          "DOC1_A2": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "supports_selected=DOC1_A3",
+            "same_target_paper_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A3",
+            "disambiguates_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A3"
+          ],
+          "DOC1_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A7",
+            "supports_selected=DOC1_A3",
+            "same_target_paper_selected=DOC1_A7",
+            "same_target_paper_selected=DOC1_A3",
+            "disambiguates_selected=DOC1_A7",
+            "disambiguates_selected=DOC1_A3"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A4": 26.36,
+          "DOC1_A5": 26.36,
+          "DOC1_A2": 26.36,
+          "DOC1_A1": 21.36
+        },
+        "anchor_role_hits": {
+          "DOC1_A4": [
+            "citation_direction"
+          ],
+          "DOC1_A5": [
+            "citation_direction"
+          ],
+          "DOC1_A2": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A4": {
+            "local_relevance": 56.0,
+            "answer_utility": 8.0,
+            "coverage": 4.0,
+            "relation": 26.36,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 101.751
+          },
+          "DOC1_A5": {
+            "local_relevance": 56.0,
+            "answer_utility": 8.0,
+            "coverage": 4.0,
+            "relation": 26.36,
+            "weak_priors": 5.808,
+            "redundancy_penalty": 0.0,
+            "total": 100.168
+          },
+          "DOC1_A2": {
+            "local_relevance": 52.0,
+            "answer_utility": 8.0,
+            "coverage": 4.0,
+            "relation": 26.36,
+            "weak_priors": 7.901,
+            "redundancy_penalty": 0.0,
+            "total": 98.261
+          },
+          "DOC1_A1": {
+            "local_relevance": 52.0,
+            "answer_utility": 5.0,
+            "coverage": 4.0,
+            "relation": 21.36,
+            "weak_priors": 5.0,
+            "redundancy_penalty": 0.0,
+            "total": 87.36
+          }
+        }
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The previous inspections have not yielded the necessary information to identify papers that cite the current paper. Since the references section did not provide the required citation chain information, I will now inspect the abstract section. The abstract often contains key information and may include citations or references to related work that could help identify citing papers.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract",
+        "summary": "Expanded same-section read window around DOC1_A1: HuBERT addresses challenges in self-supervised speech representation learning by using an offline clustering step to provide aligned target labels for a BERT-like prediction los...",
+        "text": "[DOC1_A1 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract]\n#### Abstract\n\nSelf-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clustering step to provide aligned target labels for a BERT-like prediction loss. A key ingredient of our approach is applying the prediction loss over the masked regions only, which forces the model to learn a combined acoustic and language model over the continuous inputs. HuBERT relies primarily on the consistency of the unsupervised clustering step rather than the intrinsic quality of the assigned cluster labels. Starting with a simple k-means teacher of 100 clusters, and using two iterations of clustering, the HuBERT model either matches or improves upon the state-ofthe-art wav 2 vec 2.0 performance on the Librispeech ( $960 \\mathrm{~h}$ ) and Libri-light $(60,000 \\mathrm{~h})$ benchmarks with $10 \\mathrm{~min}, 1 \\mathrm{~h}, 10 \\mathrm{~h}, 100 \\mathrm{~h}$, and $\\mathbf{9 6 0 h}$ fine-tuning subsets. Using a 1B parameter model, HuBERT shows up to $19 \\%$ and $13 \\%$ relative WER reduction on the more challenging dev-other and test-other evaluation subsets. $]^{1}$\n\nIndex Terms-Self-supervised learning, BERT.\n\n[DOC1_A7 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES]\n## REFERENCES",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A7"
+        ],
+        "primary_anchor_id": "DOC1_A1",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "HuBERT:",
+          "Self-Supervised",
+          "Speech",
+          "Representation",
+          "Learning",
+          "by",
+          "Masked",
+          "Prediction",
+          "of",
+          "Hidden"
+        ],
+        "anchor_targets": [
+          "HuBERT:",
+          "Self-Supervised",
+          "Speech",
+          "Representation",
+          "Learning",
+          "by",
+          "Masked",
+          "Prediction",
+          "of"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "2.0",
+          "1",
+          "3",
+          "100",
+          "960",
+          "60,000",
+          "10"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_target_paper": 6,
+            "disambiguates": 6
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The abstract section provides a summary of the HuBERT paper's contributions and methodology but does not contain information about papers that cite the current paper. Therefore, it is not sufficient to identify the citation chain needed for the task. A follow-up query is necessary to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A7",
+            "DOC1_A3",
+            "DOC1_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES",
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit...",
+            "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract HuBERT addresses challenges in self-supervised speech representation learning by using an offline clustering step to provide aligned target labels for a BERT-like prediction loss. It focuses on masked regions to learn a combined acoustic and language model. HuBERT matches or improves upon wav2vec 2.0 performance on Librispeech and Libri-light benchmarks with various fine-tuning subsets. #### Abstract Self-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clusteri..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['HuBERT:', 'Self-Supervised']"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A7",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The current query is focused on identifying citation chains among the provided papers. To start building a citation chain, I need to look for references or citations within the document. The most logical place to find such information would be in the \"REFERENCES\" section of the document.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A7\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A4\": [\"citation_format_cue\"], \"DOC1_A2\": [\"citation_format_cue\"], \"DOC1_A3\": [\"citation_format_cue\"], \"DOC1_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A4\": 3.0, \"DOC1_A2\": 3.0, \"DOC1_A3\": 3.0, \"DOC1_A5\": 3.0}, \"score_breakdown\": {\"DOC1_A4\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 49.391}, \"DOC1_A2\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 45.901}, \"DOC1_A3\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 45.614}, \"DOC1_A5\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 43.808}}, \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A7\", \"anchor_type\": \"attribution_region\", \"section_path\": \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A7: The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the tr...\", \"text\": \"[DOC1_A4 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > III. RELATED WORK]\\nFinally, the idea of iterative refinement target labels is similar to iterative pseudo labeling for semi-supervised ASR [12], [54], which leverages an improving student model to generate better pseudo-labels for the next iteration of training. The HuBERT approach can be seen as extending this method to the self-supervised setup with a masked prediction loss.\\n\\n## IV. EXPERIMENTAL DETAILS\\n\\n## A. Data\\n\\nFor unsupervised pre-training, we use the full 960 hours of LibriSpeech audio [24] or 60,000 hours of Libri-light [25] audio, both of which are derived from the LibriVox project that contains English recordings of copyright-free audiobooks by volunteers from the Internet. For supervised fine-tuning, five different partitions are considered: Libri-light 10-minute, 1-hour, 10hour splits and LibriSpeech 100-hour (train-clean-100) and 960-hour (train-clean-100, train-clean-360, train-other-500 combined) splits. The three Libri-light splits are subsets of the the LibriSpeech training split, and each of them contain half of the audio from train-clean-* and the other from train-other-500.\\n\\n## B. Unsupervised Unit Discovery\\n\\nTo demonstrate the effectiveness of the proposed method on utilizing low-quality cluster assignments, we consider the k-means algorithm [55] for acoustic unit discovery by default. It is one of the most naive unit discovery models that can be treated as modeling an isotropic Gaussian with the same scalar variance for each acoustic unit. To generate labels for the first iteration HuBERT training over the 960 hour LibriSpeech training set, we run k-means clustering with 100 clusters on 39-dimensional MFCC features, which are 13 coefficients with the first and the second-order derivatives.\\n\\nTo generate better targets for the subsequent iterations, we run $\\\\mathrm{k}$-means clustering with 500 clusters on the latent features extracted from the HuBERT model pre-trained in the previous iteration (not fine-tuned) at some intermediate transformer layer. Since the feature dimension at the transformer output is much higher than the MFCC features (768-D for HuBERT BASE), we cannot afford to load the entire 960 hour training split to the memory. So instead, we randomly sample $10 \\\\%$ of the data for fitting the k-means model.\\n\\nThe MiniBatchKMeans algorithm implemented in the scikit-learn [56] package is used for clustering, which fits a mini-batch of samples at a time 2 We set the mini-batch size to be 10,000 frames. k-means++ [57] with 20 random starts is used for better initialization.\\n\\n## C. Pre-Training\\n\\nWe train the BASE model for two iterations on the 960 hours of LibriSpeech audio on 32 GPUs, with a batch size of at most 87.5 seconds of audio per GPU. The first iteration is trained for $250 \\\\mathrm{k}$ steps, while the second iteration is trained for $400 \\\\mathrm{k}$ steps using labels generated by clustering the 6-th transformer layer output of the first iteration model. Training for $100 \\\\mathrm{k}$ steps takes about 9.5 hours.\\n\\nNext we train HuBERT Large and X-Large for one iteration on 60,000 hours of Libri-light audio on 128 and 256 GPUs, respectively, for $400 \\\\mathrm{k}$ steps. The batch sizes are reduced to 56.25 and 22.5 seconds of audio per GPU due to memory constraints. Instead of restarting the iterative process from clustering MFCC features, we extract features from the 9 th transformer layer of the second iteration BASE HuBERT for clustering and use those labels for training these two models. Hence, these two models can also be seen as the third iteration models.\\n\\nFor all HuBERT configurations, mask span is set to $l=$ 10 , and $p=8 \\\\%$ of the waveform encoder output frames are randomly selected as mask start if not otherwise mentioned. Adam [58] optimizer is used with $\\\\beta=(0.9,0.98)$, and the learning rate ramps up linearly from 0 to the peak learning rate for the first $8 \\\\%$ of the training steps, and then decays linearly back to zero. The peak learning rates are $5 \\\\mathrm{e}-4 / 1.5 \\\\mathrm{e}-$ 3/3e-3 for BASE/LARGE/X-LARGE models.\\n\\n## D. Supervised Fine-Tuning and Decoding\\n\\n[DOC1_A7 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES]\\n## REFERENCES\", \"source_window_anchor_ids\": [\"DOC1_A4\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A7\", \"anchor_role_candidates\": [\"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\", \"Hidden\"], \"anchor_targets\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk includes the reference section of the paper, which lists citations made by the paper. However, to build a citation chain, we need to identify papers that cite the current paper, not just the ones it cites. This chunk does not provide information about papers citing the current paper, so it is not sufficient to complete the task. A follow-up query is needed to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}]}}</retrieve>\n<think>To continue the search for a citation chain, I need to inspect the references section again but this time looking for any incoming citations to the current paper. Since the previous inspection did not yield the necessary information, I will re-inspect the references section to ensure no detail was overlooked and to potentially find new insights that could lead to the identification of citing papers.</think>\n<search>{\"current_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A7\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A7\"], \"utility_hits\": {\"DOC1_A3\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A4\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A5\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A2\": [\"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A3\": 8.0, \"DOC1_A4\": 8.0, \"DOC1_A5\": 8.0, \"DOC1_A2\": 8.0}, \"relation_hits\": {\"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"], \"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"]}, \"relation_score\": {\"DOC1_A3\": 17.18, \"DOC1_A4\": 17.18, \"DOC1_A5\": 17.18, \"DOC1_A2\": 17.18}, \"anchor_role_hits\": {\"DOC1_A3\": [\"citation_direction\"], \"DOC1_A4\": [\"citation_direction\"], \"DOC1_A5\": [\"citation_direction\"], \"DOC1_A2\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 92.794}, \"DOC1_A4\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 92.571}, \"DOC1_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 90.988}, \"DOC1_A2\": {\"local_relevance\": 52.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 89.081}}}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD\", \"summary\": \"The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments.\", \"text\": \"## II. METHOD\\n\\n## A. Learning the Hidden Units for HuBERT\\n\\nAn acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic units [26] (see also Table V. More advanced systems can achieve better acoustic unit discovery performance using better graphical models [27], [28] or parameterizes the distributions with more powerful neural network models [29][33].\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_c56ead00cd73b3100b53g-02.jpg?height=694&width=832&top_left_y=537&top_left_x=1102)\\n\\nFig. 1: The HuBERT approach predicts hidden cluster assignments of the masked frames ( $y_{2}, y_{3}, y_{4}$ in the figure) generated by one or more iterations of k-means clustering.\\n\\nInspired by this, we propose to use acoustic unit discovery models to provide frame-level targets. Let $X$ denote a speech utterance $X=\\\\left[x_{1}, \\\\cdots, x_{T}\\\\right]$ of $T$ frames. Discovered hidden units are denoted with $h(X)=Z=\\\\left[z_{1}, \\\\cdots, z_{T}\\\\right]$, where $z_{t} \\\\in[C]$ is a $C$-class categorical variable and $h$ is a clustering model, e.g. k-means.\\n\\n## B. Representation Learning via Masked Prediction\\n\\nLet $M \\\\subset[T]$ denote the set of indices to be masked for a length- $T$ sequence $X$, and $\\\\tilde{X}=r(X, M)$ denote a corrupted version of $X$ where $x_{t}$ is replaced with a mask embedding $\\\\tilde{x}$ if $t \\\\in M$. A masked prediction model $f$ takes as input $\\\\tilde{X}$ and predicts a distribution over the target indeces at each timestep $p_{f}(\\\\cdot \\\\mid \\\\tilde{X}, t)$. There are two decisions to be made for masked prediction: how to mask and where to apply the prediction loss.\\n\\nRegarding the first decision, we adopt the same strategies used in SpanBERT [34] and wav2vec 2.0 [6] for mask generation, where $p \\\\%$ of the timesteps are randomly selected as start indices, and spans of $l$ steps are masked. To address the second decision, we denote the cross-entropy loss computed over masked and unmasked timesteps as $L_{m}$ and $L_{u}$, respectively. $L_{m}$ is defined as:\\n\\n$$\\n\\\\begin{equation*}\\nL_{m}(f ; X, M, Z)=\\\\sum_{t \\\\in M} \\\\log p_{f}\\\\left(z_{t} \\\\mid \\\\tilde{X}, t\\\\right) \\\\tag{1}\\n\\\\end{equation*}\\n$$\\n\\nand $L_{u}$ is of the same form except that it sums over $t \\\\notin$ $M$. The final loss is computed as a weighted sum of the two\\nterms: $L=\\\\alpha L_{m}+(1-\\\\alpha) L_{u}$. In the extreme case when $\\\\alpha=$ 0 , the loss is computed over the unmasked timesteps, which is similar to acoustic modeling in hybrid speech recognition systems [35]-[38]. In our setup, this limits the learning process to mimicking the clustering model.\\n\\nIn the other extreme with $\\\\alpha=1$, the loss is only computed over the masked timesteps where the model has to predict the targets corresponding to the unseen frames from context, analogous to language modeling. It forces the model to learn both the acoustic representation of unmasked segments and the long-range temporal structure of the speech data. We hypothesize that the setup with $\\\\alpha=1$ is more resilient to the quality of cluster targets, which is demonstrated in our experiments (see Table V.\\n\\n## C. Learning with Cluster Ensembles\\n\\nA simple idea to improve target quality is to utilize multiple clustering models. While an individual clustering model may perform terribly, cluster ensembles can provide complementary information to facilitate representation learning. For example, an ensemble of k-means models with different codebook sizes can create targets of different granularity, from manner classes (vowel/consonant) to sub-phone states (senones). To extend the proposed framework, let $Z^{(k)}$ be the target sequences generated by the $k$-th clustering model. We can now re-write $L_{m}$ as:\\n\\n$$\\n\\\\begin{equation*}\\nL_{m}\\\\left(f ; X,\\\\left\\\\{Z^{(k)}\\\\right\\\\}_{k}, M\\\\right)=\\\\sum_{t \\\\in M} \\\\sum_{k} \\\\log p_{f}^{(k)}\\\\left(z_{t}^{(k)} \\\\mid \\\\tilde{X}, t\\\\right) \\\\tag{2}\\n\\\\end{equation*}\\n$$\\n\\nand similarly for the unmasked loss $L_{u}$. This is analogous to multi-task learning, but with tasks created by unsupervised clustering.\\n\\nAdditionally, ensembling is intriguing because it can be used alongside product quantization (PQ) [39], where a feature space is partitioned into multiple subspaces, and each subspace is quantized separately. PQ allows effective Euclidean distance-based quantization such as k-means for highdimensional features and heterogeneous features whose scale differs significantly between subspaces. In this case, the theoretical size of the target space is the product of all codebooks' sizes.\\n\\n## D. Iterative Refinement of Cluster Assignments\\n\\nIn addition to using cluster ensembles, another direction for improved representation is refining the cluster assignments throughout the learning process. Since we expect a pre-trained model to provide better representations than the raw acoustic feature such as MFCCs, we can create a new generation of clusters by training a discrete latent model over the learned latent representations. The learning process then proceeds with the newly discovered units.\\n\\n## E. Implementation\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\", \"Hidden\"], \"anchor_targets\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\"], \"anchor_value_hints\": [\"26\", \"27\", \"28\", \"29\", \"33\", \"2024\", \"06\", \"04\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk is from the \"METHOD\" section of the paper and primarily describes the technical details of the HuBERT approach. It does not provide information about papers that cite the current paper. Therefore, it is not sufficient to identify the citation chain needed for the task. A follow-up query is necessary to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit...\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The previous inspections have not yielded the necessary information to identify papers that cite the current paper. Since the references section did not provide the required citation chain information, I will now inspect the abstract section. The abstract often contains key information and may include citations or references to related work that could help identify citing papers.</think>\n<search>{\"current_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit...\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\"], \"utility_hits\": {\"DOC1_A4\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A5\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A2\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A1\": [\"target_mentioned\"]}, \"utility_score\": {\"DOC1_A4\": 8.0, \"DOC1_A5\": 8.0, \"DOC1_A2\": 8.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"], \"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"]}, \"relation_score\": {\"DOC1_A4\": 26.36, \"DOC1_A5\": 26.36, \"DOC1_A2\": 26.36, \"DOC1_A1\": 21.36}, \"anchor_role_hits\": {\"DOC1_A4\": [\"citation_direction\"], \"DOC1_A5\": [\"citation_direction\"], \"DOC1_A2\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A4\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 26.36, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 101.751}, \"DOC1_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 26.36, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 100.168}, \"DOC1_A2\": {\"local_relevance\": 52.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 26.36, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 98.261}, \"DOC1_A1\": {\"local_relevance\": 52.0, \"answer_utility\": 5.0, \"coverage\": 4.0, \"relation\": 21.36, \"weak_priors\": 5.0, \"redundancy_penalty\": 0.0, \"total\": 87.36}}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract\", \"summary\": \"Expanded same-section read window around DOC1_A1: HuBERT addresses challenges in self-supervised speech representation learning by using an offline clustering step to provide aligned target labels for a BERT-like prediction los...\", \"text\": \"[DOC1_A1 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract]\\n#### Abstract\\n\\nSelf-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clustering step to provide aligned target labels for a BERT-like prediction loss. A key ingredient of our approach is applying the prediction loss over the masked regions only, which forces the model to learn a combined acoustic and language model over the continuous inputs. HuBERT relies primarily on the consistency of the unsupervised clustering step rather than the intrinsic quality of the assigned cluster labels. Starting with a simple k-means teacher of 100 clusters, and using two iterations of clustering, the HuBERT model either matches or improves upon the state-ofthe-art wav 2 vec 2.0 performance on the Librispeech ( $960 \\\\mathrm{~h}$ ) and Libri-light $(60,000 \\\\mathrm{~h})$ benchmarks with $10 \\\\mathrm{~min}, 1 \\\\mathrm{~h}, 10 \\\\mathrm{~h}, 100 \\\\mathrm{~h}$, and $\\\\mathbf{9 6 0 h}$ fine-tuning subsets. Using a 1B parameter model, HuBERT shows up to $19 \\\\%$ and $13 \\\\%$ relative WER reduction on the more challenging dev-other and test-other evaluation subsets. $]^{1}$\\n\\nIndex Terms-Self-supervised learning, BERT.\\n\\n[DOC1_A7 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES]\\n## REFERENCES\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"entity_binding\"], \"anchor_entities\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\", \"Hidden\"], \"anchor_targets\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\"], \"anchor_value_hints\": [\"2\", \"2.0\", \"1\", \"3\", \"100\", \"960\", \"60,000\", \"10\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The abstract section provides a summary of the HuBERT paper's contributions and methodology but does not contain information about papers that cite the current paper. Therefore, it is not sufficient to identify the citation chain needed for the task. A follow-up query is necessary to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\", \"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit...\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract HuBERT addresses challenges in self-supervised speech representation learning by using an offline clustering step to provide aligned target labels for a BERT-like prediction loss. It focuses on masked regions to learn a combined acoustic and language model. HuBERT matches or improves upon wav2vec 2.0 performance on Librispeech and Libri-light benchmarks with various fine-tuning subsets. #### Abstract Self-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clusteri...\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The current query is focused on identifying citation chains among the provided papers. To start building a citation chain, I need to look for references or citations within the document. The most logical place to find such information would be in the \"REFERENCES\" section of the document.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A7\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A4\": [\"citation_format_cue\"], \"DOC1_A2\": [\"citation_format_cue\"], \"DOC1_A3\": [\"citation_format_cue\"], \"DOC1_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A4\": 3.0, \"DOC1_A2\": 3.0, \"DOC1_A3\": 3.0, \"DOC1_A5\": 3.0}, \"score_breakdown\": {\"DOC1_A4\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 49.391}, \"DOC1_A2\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 45.901}, \"DOC1_A3\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 45.614}, \"DOC1_A5\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 43.808}}, \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A7\", \"anchor_type\": \"attribution_region\", \"section_path\": \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A7: The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the tr...\", \"text\": \"[DOC1_A4 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > III. RELATED WORK]\\nFinally, the idea of iterative refinement target labels is similar to iterative pseudo labeling for semi-supervised ASR [12], [54], which leverages an improving student model to generate better pseudo-labels for the next iteration of training. The HuBERT approach can be seen as extending this method to the self-supervised setup with a masked prediction loss.\\n\\n## IV. EXPERIMENTAL DETAILS\\n\\n## A. Data\\n\\nFor unsupervised pre-training, we use the full 960 hours of LibriSpeech audio [24] or 60,000 hours of Libri-light [25] audio, both of which are derived from the LibriVox project that contains English recordings of copyright-free audiobooks by volunteers from the Internet. For supervised fine-tuning, five different partitions are considered: Libri-light 10-minute, 1-hour, 10hour splits and LibriSpeech 100-hour (train-clean-100) and 960-hour (train-clean-100, train-clean-360, train-other-500 combined) splits. The three Libri-light splits are subsets of the the LibriSpeech training split, and each of them contain half of the audio from train-clean-* and the other from train-other-500.\\n\\n## B. Unsupervised Unit Discovery\\n\\nTo demonstrate the effectiveness of the proposed method on utilizing low-quality cluster assignments, we consider the k-means algorithm [55] for acoustic unit discovery by default. It is one of the most naive unit discovery models that can be treated as modeling an isotropic Gaussian with the same scalar variance for each acoustic unit. To generate labels for the first iteration HuBERT training over the 960 hour LibriSpeech training set, we run k-means clustering with 100 clusters on 39-dimensional MFCC features, which are 13 coefficients with the first and the second-order derivatives.\\n\\nTo generate better targets for the subsequent iterations, we run $\\\\mathrm{k}$-means clustering with 500 clusters on the latent features extracted from the HuBERT model pre-trained in the previous iteration (not fine-tuned) at some intermediate transformer layer. Since the feature dimension at the transformer output is much higher than the MFCC features (768-D for HuBERT BASE), we cannot afford to load the entire 960 hour training split to the memory. So instead, we randomly sample $10 \\\\%$ of the data for fitting the k-means model.\\n\\nThe MiniBatchKMeans algorithm implemented in the scikit-learn [56] package is used for clustering, which fits a mini-batch of samples at a time 2 We set the mini-batch size to be 10,000 frames. k-means++ [57] with 20 random starts is used for better initialization.\\n\\n## C. Pre-Training\\n\\nWe train the BASE model for two iterations on the 960 hours of LibriSpeech audio on 32 GPUs, with a batch size of at most 87.5 seconds of audio per GPU. The first iteration is trained for $250 \\\\mathrm{k}$ steps, while the second iteration is trained for $400 \\\\mathrm{k}$ steps using labels generated by clustering the 6-th transformer layer output of the first iteration model. Training for $100 \\\\mathrm{k}$ steps takes about 9.5 hours.\\n\\nNext we train HuBERT Large and X-Large for one iteration on 60,000 hours of Libri-light audio on 128 and 256 GPUs, respectively, for $400 \\\\mathrm{k}$ steps. The batch sizes are reduced to 56.25 and 22.5 seconds of audio per GPU due to memory constraints. Instead of restarting the iterative process from clustering MFCC features, we extract features from the 9 th transformer layer of the second iteration BASE HuBERT for clustering and use those labels for training these two models. Hence, these two models can also be seen as the third iteration models.\\n\\nFor all HuBERT configurations, mask span is set to $l=$ 10 , and $p=8 \\\\%$ of the waveform encoder output frames are randomly selected as mask start if not otherwise mentioned. Adam [58] optimizer is used with $\\\\beta=(0.9,0.98)$, and the learning rate ramps up linearly from 0 to the peak learning rate for the first $8 \\\\%$ of the training steps, and then decays linearly back to zero. The peak learning rates are $5 \\\\mathrm{e}-4 / 1.5 \\\\mathrm{e}-$ 3/3e-3 for BASE/LARGE/X-LARGE models.\\n\\n## D. Supervised Fine-Tuning and Decoding\\n\\n[DOC1_A7 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES]\\n## REFERENCES\", \"source_window_anchor_ids\": [\"DOC1_A4\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A7\", \"anchor_role_candidates\": [\"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\", \"Hidden\"], \"anchor_targets\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk includes the reference section of the paper, which lists citations made by the paper. However, to build a citation chain, we need to identify papers that cite the current paper, not just the ones it cites. This chunk does not provide information about papers citing the current paper, so it is not sufficient to complete the task. A follow-up query is needed to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}]}}</retrieve>\n<think>To continue the search for a citation chain, I need to inspect the references section again but this time looking for any incoming citations to the current paper. Since the previous inspection did not yield the necessary information, I will re-inspect the references section to ensure no detail was overlooked and to potentially find new insights that could lead to the identification of citing papers.</think>\n<search>{\"current_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A7\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A7\"], \"utility_hits\": {\"DOC1_A3\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A4\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A5\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A2\": [\"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A3\": 8.0, \"DOC1_A4\": 8.0, \"DOC1_A5\": 8.0, \"DOC1_A2\": 8.0}, \"relation_hits\": {\"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"], \"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A7\"]}, \"relation_score\": {\"DOC1_A3\": 17.18, \"DOC1_A4\": 17.18, \"DOC1_A5\": 17.18, \"DOC1_A2\": 17.18}, \"anchor_role_hits\": {\"DOC1_A3\": [\"citation_direction\"], \"DOC1_A4\": [\"citation_direction\"], \"DOC1_A5\": [\"citation_direction\"], \"DOC1_A2\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 92.794}, \"DOC1_A4\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 92.571}, \"DOC1_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 90.988}, \"DOC1_A2\": {\"local_relevance\": 52.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 89.081}}}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD\", \"summary\": \"The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments.\", \"text\": \"## II. METHOD\\n\\n## A. Learning the Hidden Units for HuBERT\\n\\nAn acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic units [26] (see also Table V. More advanced systems can achieve better acoustic unit discovery performance using better graphical models [27], [28] or parameterizes the distributions with more powerful neural network models [29][33].\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_c56ead00cd73b3100b53g-02.jpg?height=694&width=832&top_left_y=537&top_left_x=1102)\\n\\nFig. 1: The HuBERT approach predicts hidden cluster assignments of the masked frames ( $y_{2}, y_{3}, y_{4}$ in the figure) generated by one or more iterations of k-means clustering.\\n\\nInspired by this, we propose to use acoustic unit discovery models to provide frame-level targets. Let $X$ denote a speech utterance $X=\\\\left[x_{1}, \\\\cdots, x_{T}\\\\right]$ of $T$ frames. Discovered hidden units are denoted with $h(X)=Z=\\\\left[z_{1}, \\\\cdots, z_{T}\\\\right]$, where $z_{t} \\\\in[C]$ is a $C$-class categorical variable and $h$ is a clustering model, e.g. k-means.\\n\\n## B. Representation Learning via Masked Prediction\\n\\nLet $M \\\\subset[T]$ denote the set of indices to be masked for a length- $T$ sequence $X$, and $\\\\tilde{X}=r(X, M)$ denote a corrupted version of $X$ where $x_{t}$ is replaced with a mask embedding $\\\\tilde{x}$ if $t \\\\in M$. A masked prediction model $f$ takes as input $\\\\tilde{X}$ and predicts a distribution over the target indeces at each timestep $p_{f}(\\\\cdot \\\\mid \\\\tilde{X}, t)$. There are two decisions to be made for masked prediction: how to mask and where to apply the prediction loss.\\n\\nRegarding the first decision, we adopt the same strategies used in SpanBERT [34] and wav2vec 2.0 [6] for mask generation, where $p \\\\%$ of the timesteps are randomly selected as start indices, and spans of $l$ steps are masked. To address the second decision, we denote the cross-entropy loss computed over masked and unmasked timesteps as $L_{m}$ and $L_{u}$, respectively. $L_{m}$ is defined as:\\n\\n$$\\n\\\\begin{equation*}\\nL_{m}(f ; X, M, Z)=\\\\sum_{t \\\\in M} \\\\log p_{f}\\\\left(z_{t} \\\\mid \\\\tilde{X}, t\\\\right) \\\\tag{1}\\n\\\\end{equation*}\\n$$\\n\\nand $L_{u}$ is of the same form except that it sums over $t \\\\notin$ $M$. The final loss is computed as a weighted sum of the two\\nterms: $L=\\\\alpha L_{m}+(1-\\\\alpha) L_{u}$. In the extreme case when $\\\\alpha=$ 0 , the loss is computed over the unmasked timesteps, which is similar to acoustic modeling in hybrid speech recognition systems [35]-[38]. In our setup, this limits the learning process to mimicking the clustering model.\\n\\nIn the other extreme with $\\\\alpha=1$, the loss is only computed over the masked timesteps where the model has to predict the targets corresponding to the unseen frames from context, analogous to language modeling. It forces the model to learn both the acoustic representation of unmasked segments and the long-range temporal structure of the speech data. We hypothesize that the setup with $\\\\alpha=1$ is more resilient to the quality of cluster targets, which is demonstrated in our experiments (see Table V.\\n\\n## C. Learning with Cluster Ensembles\\n\\nA simple idea to improve target quality is to utilize multiple clustering models. While an individual clustering model may perform terribly, cluster ensembles can provide complementary information to facilitate representation learning. For example, an ensemble of k-means models with different codebook sizes can create targets of different granularity, from manner classes (vowel/consonant) to sub-phone states (senones). To extend the proposed framework, let $Z^{(k)}$ be the target sequences generated by the $k$-th clustering model. We can now re-write $L_{m}$ as:\\n\\n$$\\n\\\\begin{equation*}\\nL_{m}\\\\left(f ; X,\\\\left\\\\{Z^{(k)}\\\\right\\\\}_{k}, M\\\\right)=\\\\sum_{t \\\\in M} \\\\sum_{k} \\\\log p_{f}^{(k)}\\\\left(z_{t}^{(k)} \\\\mid \\\\tilde{X}, t\\\\right) \\\\tag{2}\\n\\\\end{equation*}\\n$$\\n\\nand similarly for the unmasked loss $L_{u}$. This is analogous to multi-task learning, but with tasks created by unsupervised clustering.\\n\\nAdditionally, ensembling is intriguing because it can be used alongside product quantization (PQ) [39], where a feature space is partitioned into multiple subspaces, and each subspace is quantized separately. PQ allows effective Euclidean distance-based quantization such as k-means for highdimensional features and heterogeneous features whose scale differs significantly between subspaces. In this case, the theoretical size of the target space is the product of all codebooks' sizes.\\n\\n## D. Iterative Refinement of Cluster Assignments\\n\\nIn addition to using cluster ensembles, another direction for improved representation is refining the cluster assignments throughout the learning process. Since we expect a pre-trained model to provide better representations than the raw acoustic feature such as MFCCs, we can create a new generation of clusters by training a discrete latent model over the learned latent representations. The learning process then proceeds with the newly discovered units.\\n\\n## E. Implementation\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\", \"Hidden\"], \"anchor_targets\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\"], \"anchor_value_hints\": [\"26\", \"27\", \"28\", \"29\", \"33\", \"2024\", \"06\", \"04\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk is from the \"METHOD\" section of the paper and primarily describes the technical details of the HuBERT approach. It does not provide information about papers that cite the current paper. Therefore, it is not sufficient to identify the citation chain needed for the task. A follow-up query is necessary to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit...\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The previous inspections have not yielded the necessary information to identify papers that cite the current paper. Since the references section did not provide the required citation chain information, I will now inspect the abstract section. The abstract often contains key information and may include citations or references to related work that could help identify citing papers.</think>\n<search>{\"current_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit...\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\"], \"utility_hits\": {\"DOC1_A4\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A5\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A2\": [\"target_mentioned\", \"citation_format_cue\"], \"DOC1_A1\": [\"target_mentioned\"]}, \"utility_score\": {\"DOC1_A4\": 8.0, \"DOC1_A5\": 8.0, \"DOC1_A2\": 8.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"], \"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A7\", \"supports_selected=DOC1_A3\", \"same_target_paper_selected=DOC1_A7\", \"same_target_paper_selected=DOC1_A3\", \"disambiguates_selected=DOC1_A7\", \"disambiguates_selected=DOC1_A3\"]}, \"relation_score\": {\"DOC1_A4\": 26.36, \"DOC1_A5\": 26.36, \"DOC1_A2\": 26.36, \"DOC1_A1\": 21.36}, \"anchor_role_hits\": {\"DOC1_A4\": [\"citation_direction\"], \"DOC1_A5\": [\"citation_direction\"], \"DOC1_A2\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A4\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 26.36, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 101.751}, \"DOC1_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 26.36, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 100.168}, \"DOC1_A2\": {\"local_relevance\": 52.0, \"answer_utility\": 8.0, \"coverage\": 4.0, \"relation\": 26.36, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 98.261}, \"DOC1_A1\": {\"local_relevance\": 52.0, \"answer_utility\": 5.0, \"coverage\": 4.0, \"relation\": 21.36, \"weak_priors\": 5.0, \"redundancy_penalty\": 0.0, \"total\": 87.36}}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract\", \"summary\": \"Expanded same-section read window around DOC1_A1: HuBERT addresses challenges in self-supervised speech representation learning by using an offline clustering step to provide aligned target labels for a BERT-like prediction los...\", \"text\": \"[DOC1_A1 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract]\\n#### Abstract\\n\\nSelf-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clustering step to provide aligned target labels for a BERT-like prediction loss. A key ingredient of our approach is applying the prediction loss over the masked regions only, which forces the model to learn a combined acoustic and language model over the continuous inputs. HuBERT relies primarily on the consistency of the unsupervised clustering step rather than the intrinsic quality of the assigned cluster labels. Starting with a simple k-means teacher of 100 clusters, and using two iterations of clustering, the HuBERT model either matches or improves upon the state-ofthe-art wav 2 vec 2.0 performance on the Librispeech ( $960 \\\\mathrm{~h}$ ) and Libri-light $(60,000 \\\\mathrm{~h})$ benchmarks with $10 \\\\mathrm{~min}, 1 \\\\mathrm{~h}, 10 \\\\mathrm{~h}, 100 \\\\mathrm{~h}$, and $\\\\mathbf{9 6 0 h}$ fine-tuning subsets. Using a 1B parameter model, HuBERT shows up to $19 \\\\%$ and $13 \\\\%$ relative WER reduction on the more challenging dev-other and test-other evaluation subsets. $]^{1}$\\n\\nIndex Terms-Self-supervised learning, BERT.\\n\\n[DOC1_A7 | HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES]\\n## REFERENCES\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A7\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"entity_binding\"], \"anchor_entities\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\", \"Hidden\"], \"anchor_targets\": [\"HuBERT:\", \"Self-Supervised\", \"Speech\", \"Representation\", \"Learning\", \"by\", \"Masked\", \"Prediction\", \"of\"], \"anchor_value_hints\": [\"2\", \"2.0\", \"1\", \"3\", \"100\", \"960\", \"60,000\", \"10\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_target_paper\": 6, \"disambiguates\": 6}, \"top_related_anchor_ids\": [\"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The abstract section provides a summary of the HuBERT paper's contributions and methodology but does not contain information about papers that cite the current paper. Therefore, it is not sufficient to identify the citation chain needed for the task. A follow-up query is necessary to find papers that cite \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\".</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find papers that cite 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A7\", \"DOC1_A3\", \"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > REFERENCES The conclusion summarizes the contributions of HuBERT, highlighting its performance improvements and scalability. It mentions plans for future work, including simplifying the training procedure and exploring multiple downstream tasks. ## REFERENCES\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > II. METHOD The method section details the process of learning hidden units for HuBERT, including the use of k-means clustering and the application of masked prediction loss. It covers the implementation of cluster ensembles and iterative refinement of cluster assignments. ## II. METHOD ## A. Learning the Hidden Units for HuBERT An acoustic model trained on text and speech pairs provides pseudo-phonetic labels for each frame via forced alignment in semi-supervised learning. On the contrary, the self-supervised representation learning setup has access to speech-only data. Nevertheless, simple discrete latent variable models such as k-means and Gaussian mixture models (GMMs) infer hidden units that exhibit non-trivial correlation with the underlying acoustic unit...\", \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units > Abstract HuBERT addresses challenges in self-supervised speech representation learning by using an offline clustering step to provide aligned target labels for a BERT-like prediction loss. It focuses on masked regions to learn a combined acoustic and language model. HuBERT matches or improves upon wav2vec 2.0 performance on Librispeech and Libri-light benchmarks with various fine-tuning subsets. #### Abstract Self-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clusteri...\"], \"selected_relation_anchor_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['HuBERT:', 'Self-Supervised']\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A7\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

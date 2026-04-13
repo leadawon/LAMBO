@@ -1,0 +1,415 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A3"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A3",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3"
+        ],
+        "utility_hits": {
+          "DOC1_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A2": 11.0,
+          "DOC1_A3": 11.0,
+          "DOC1_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC1_A2": {
+            "local_relevance": 8.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 33.201
+          },
+          "DOC1_A3": {
+            "local_relevance": 8.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 32.914
+          },
+          "DOC1_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 0.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 17.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A3",
+      "plan_think": "The document seems to involve a case related to '执行案由-先予执行' based on the information provided in DOC1_A2 where it mentions王某1申请先予执行后续医疗费用30万元 (Wang applied for advance execution of subsequent medical expenses of 300,000 yuan). I will inspect the next anchor coordinate to confirm if there's more evidence supporting this categorization.",
+      "info": {
+        "anchor_id": "DOC1_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院裁定",
+        "summary": "Expanded same-section read window around DOC1_A3: 复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人（被执行人）：新疆生产建设兵团第四师融媒体中心,住所地新疆伊犁州可克达拉市北固山西路515号。\n\n法定代表人：林玢,该中心主任。\n\n委托诉讼代理人：沈传武，新疆任远律师事务所律师。\n\n申请执行人：王某1，女，2010年8月17日生，汉族，第四师一中一年级学生，住福建省晋江市。\n\n法定代理人：王某2（系王某1之父），男，1986年7月2日生，汉族，无固定职业，住福建省晋江市。\n\n被执行人：胡秀，女，1966年12月1日生，汉族，住伊宁市。\n\n[DOC1_A2 | 案件背景]\n复议申请人新疆生产建设兵团第四师融媒体中心不服新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n新疆生产建设兵团伊宁垦区人民法院查明，王某1与新疆生产建设兵团第四师广播电视台、胡秀健康权纠纷一案，新疆生产建设兵团伊宁垦区人民法院于2019年8月26日作出（2018）兵0402民初94号民事判决书，判决胡秀、新疆生产建设兵团第四师广播电视台共同连带赔偿王某1医疗费、护理费、伙食补助费、住宿费、康复辅助器具费、营养费、交通费等各项损失合计214782.91元。该判决经二审维持原判后，已执行完毕。2020年10月12日，王某1又向新疆生产建设兵团伊宁垦区人民法院提起民事诉讼，要求新疆生产建设兵团第四师广播电视台、胡秀给付后续医疗费、营养费、误工费、护理费、残疾赔偿金、康复辅助器具费、残疾辅助器具费、交通费、教育费、精神损害抚慰金共计11527059.48元。2020年10月26日，王某1向新疆生产建设兵团伊宁垦区人民法院申请先予执行，要求先行给付后续医疗费用30万元。2020年10月27日，新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402民初433号民事裁定书，裁定新疆生产建设兵团第四师广播电视台、胡秀先行共同连带给付申请人王某1医疗费用30万元。2020年11月2日，新疆生产建设兵团第四师广播电视台被撤销，并入新疆生产建设兵团第四师融媒体中心。2020年12月9日，新疆生产建设兵团第四师融媒体中心对先予执行裁定不服，向新疆生产建设兵团伊宁垦区人民法院提起复议。新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402民初433号之一民事裁定书，驳回了复议请求。2020年12月30日，因无财产可供执行，新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402执258号执行裁定书，终结本次执行程序。2021年1月6日，新疆生产建设兵团第四师融媒体中心向新疆生产建设兵团伊宁垦区人民法院提起执行异议，要求撤销（2020）兵0402执258号执行裁定书和先予执行裁定确定的给付责任。再查：王某1主张后续医疗费用的民事一审案件尚未审结\n\n新疆生产建设兵团伊宁垦区人民法院认为，本案中确定先予执行给付责任的是（2020）兵0402民初433号先予执行民事裁定书，不是（2020）兵0402执258号终结本次执行程序的执行裁定书。执行异议是针对具体执行行为或执行标的物的异议程序。在本次先予执行过程中，因无财产可供执行，终结了本次执行程序，申请人也未就任何具体的执行行为或执行标的物提起异议，故申请人的异议请求并无事实依据。申请人如对执行依据即确定其给付责任的先予执行裁定不服，应依法提起复议。申请人已向法院提起复议并被依法驳回，就应依法履行先予执行裁定确定的给付责任。再者申请人完全可以在新的民事审判案件中依事实和法律主张自己的权利，而不是滥用司法救济途径。综上，申请人的异议请求倒果为因，适用程序错误，无事实和法律依据，应予驳回。遂裁定：驳回异议人新疆生产建设兵团第四师融媒体中心的异议申请。\n\n[DOC1_A3 | 法院裁定]\n复议申请人新疆生产建设兵团第四师融媒体中心向本院申请复议称，请求：1、依法撤销新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定及（2020）兵0402民初433号民事裁定；2、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402民初433号之一民事裁定；3、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定；4、依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。事实与理由：新疆生产建设兵团伊宁垦区人民法院作出的先予执行伊宁垦区人民法院（2020）兵0402民初433号民事裁定及（2020）兵0402执258号民事裁定程序违法。从裁定制作时间来看，首先，伊宁垦区人民法院（2020）兵0402执258号执行裁定，然后又作出（2020）兵0402民初433号民事裁定书，程序颠倒。其次，（2020）兵0402民初433号民事裁定与（2020）兵0402民初433号之一民事裁定是相同审判人员组成合议庭作出的裁定，程序违法。再次，（2020）兵0402民初433号民事裁定，裁定当事人唯一救济途径为向本院申请复议，程序违法。再者，申请人对（2020）兵0402民初433号民事裁定在复议过程中，（2020）兵0402执258号民事执行裁定的执行依据是什么？程序违法。综上所述，由于一审法院在处理实体权利问题，运用裁定程序违法，导致申请人合法权益无法保障，请求复议法院撤销伊宁垦区人民法院（2021）兵0402执异1号执行裁定及其他裁定，支持申请人的复议申请事项。\n\n本院审查查明的事实与一审法院一致，对一审法院认定的相关证据的证明效力，本院予以确认。\n\n本院认为，本案的争议焦点：新疆生产建设兵团伊宁垦区人民法院作出的相关执行裁定程序是否违法，复议申请人新疆生产建设兵团第四师融媒体中心要求撤销裁定的复议请求是否成立。根据法律规定，执行行为异议，是指当事人、利害关系人认为人民法院的执行行为违反法律规定，向执行法院提出的书面异议。执行复议，是指当事人、利害关系人不服执行法院作出的执行异议审查裁定，向上一级人民法院申请复议的救济制度。本案中，一审法院作为执行案件的执行依据为（2020）兵0402民初433号先予执行的民事裁定书，而（2020）兵0402执258号执行裁定系终结本次执行程序的执行裁定，系一审法院作出的具体的执行行为。（2020）兵0402民初433号之一民事裁定系因复议申请人新疆生产建设兵团第四师融媒体中心对（2020）兵0402民初433号先予执行的民事裁定提出复议而作出的裁定，其均系审判程序中作出的相关裁定。复议申请人新疆生产建设兵团第四师融媒体中心认为（2020）兵0402民初433号先予执行的民事裁定、（2020）兵0402民初433号之一民事裁定有违法之处，但上述裁定并非执行异议、复议程序应当审查的内容，复议申请人不能通过执行异议、复议程序请求撤销上述裁定。故对复议申请人新疆生产建设兵团第四师融媒体中心复议请求的要求撤销（2020）兵0402民初433号民事裁定、（2020）兵0402民初433号之一民事裁定的请求，本院不予审查，对其复议请求应予以驳回。对于复议申请人新疆生产建设兵团第四师融媒体中心异议、复议提出的要求撤销（2020）兵0402执258号执行裁定的请求，首先此裁定系执行过程中因无财产可供执行，终结本次执行程序的执行裁定，并不违反法律规定，再者复议申请人作为执行案件的被执行人，此裁定并未侵犯复议申请人的权益，其现主张撤销，于法无据。同时，复议申请人新疆生产建设兵团第四师融媒体中心主张不予执行新疆生产建设兵团伊宁垦区人民法院先予执行行为的民事裁定，首先其主张引用法律文号错误，先予执行的裁定应为（2020）兵0402民初433号民事裁定，其次（2020）兵0402民初433号民事裁定为已生效的民事裁判文书，复议申请人主张不予执行，于法无据。综上，复议申请人新疆生产建设兵团第四师融媒体中心认为裁定程序违法的理由不能成立，其复议请求亦不能成立，本院依法应予以驳回。一审异议裁定认为复议申请人的异议请求倒果为因，适用程序错误，无事实和法律依据，并无不当，本院依法予以维持。依照《中华人民共和国民事诉讼法》第二百二十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第一项规定，裁定如下：\n\n驳回复议申请人新疆生产建设兵团第四师融媒体中心的复议申请，维持新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号异议裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3"
+        ],
+        "primary_anchor_id": "DOC1_A3",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "metric_binding",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1",
+          "权益"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2021",
+          "0402",
+          "2020",
+          "433",
+          "2",
+          "3",
+          "258"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "metric_term",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 10,
+          "relation_type_counts": {
+            "supports": 1,
+            "same_case": 2,
+            "disambiguates": 2,
+            "likely_same_entity": 2,
+            "prev_next": 1,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A2",
+            "DOC1_A2",
+            "DOC1_A1",
+            "DOC1_A2",
+            "DOC1_A1",
+            "DOC1_A2"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          },
+          {
+            "relation_type": "likely_same_entity",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 2.2,
+            "reason": "shared entity ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "The anchor chunk confirms that the case involves '执行案由-先予执行' due to the mention of a prior application for advance execution of medical expenses. The document does not provide evidence for the other categories listed in the question. This chunk appears to be sufficient to classify this document under '执行案由-先予执行'.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案由-先予执行",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A3",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC1_A1",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              },
+              {
+                "relation_type": "likely_same_entity",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 2.2,
+                "reason": "shared entity ['判决文书1']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案由-先予执行"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A3"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "法院裁定 复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。 复议申请人新疆生产建设兵团第四师融媒体中心向本院申请复议称，请求：1、依法撤销新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定及（2020）兵0402民初433号民事裁定；2、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402民初433号之一民事裁定；3、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定；4、依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。事实与理由：新疆生产建设兵团伊宁垦区人民法院作出的先予执行伊宁垦区人民法院（2020）兵0402民初433号民事裁定及（2020）兵0402执258号民事裁定程序违法。从裁定制作时间来看，首先，伊宁垦区人民法院（2020）兵0402执258号执行裁定，然后又作出（2020）兵0402民初433号民事裁定书，程序颠倒。其次，（2020）兵0402民初433号民事裁定与（2020）兵0402民初433号之一民事裁定是相同审判人员组成合议庭作出的裁定，程序违法。再次，（2020）兵0402民初433号民事裁定，..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A3",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "执行案由-先予执行",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "likely_same_entity",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 2.2,
+          "reason": "shared entity ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to involve a case related to '执行案由-先予执行' based on the information provided in DOC1_A2 where it mentions王某1申请先予执行后续医疗费用30万元 (Wang applied for advance execution of subsequent medical expenses of 300,000 yuan). I will inspect the next anchor coordinate to confirm if there's more evidence supporting this categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A1\": 5.0}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 8.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 33.201}, \"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 32.914}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 0.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 17.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院裁定\", \"summary\": \"Expanded same-section read window around DOC1_A3: 复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（被执行人）：新疆生产建设兵团第四师融媒体中心,住所地新疆伊犁州可克达拉市北固山西路515号。\\n\\n法定代表人：林玢,该中心主任。\\n\\n委托诉讼代理人：沈传武，新疆任远律师事务所律师。\\n\\n申请执行人：王某1，女，2010年8月17日生，汉族，第四师一中一年级学生，住福建省晋江市。\\n\\n法定代理人：王某2（系王某1之父），男，1986年7月2日生，汉族，无固定职业，住福建省晋江市。\\n\\n被执行人：胡秀，女，1966年12月1日生，汉族，住伊宁市。\\n\\n[DOC1_A2 | 案件背景]\\n复议申请人新疆生产建设兵团第四师融媒体中心不服新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n新疆生产建设兵团伊宁垦区人民法院查明，王某1与新疆生产建设兵团第四师广播电视台、胡秀健康权纠纷一案，新疆生产建设兵团伊宁垦区人民法院于2019年8月26日作出（2018）兵0402民初94号民事判决书，判决胡秀、新疆生产建设兵团第四师广播电视台共同连带赔偿王某1医疗费、护理费、伙食补助费、住宿费、康复辅助器具费、营养费、交通费等各项损失合计214782.91元。该判决经二审维持原判后，已执行完毕。2020年10月12日，王某1又向新疆生产建设兵团伊宁垦区人民法院提起民事诉讼，要求新疆生产建设兵团第四师广播电视台、胡秀给付后续医疗费、营养费、误工费、护理费、残疾赔偿金、康复辅助器具费、残疾辅助器具费、交通费、教育费、精神损害抚慰金共计11527059.48元。2020年10月26日，王某1向新疆生产建设兵团伊宁垦区人民法院申请先予执行，要求先行给付后续医疗费用30万元。2020年10月27日，新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402民初433号民事裁定书，裁定新疆生产建设兵团第四师广播电视台、胡秀先行共同连带给付申请人王某1医疗费用30万元。2020年11月2日，新疆生产建设兵团第四师广播电视台被撤销，并入新疆生产建设兵团第四师融媒体中心。2020年12月9日，新疆生产建设兵团第四师融媒体中心对先予执行裁定不服，向新疆生产建设兵团伊宁垦区人民法院提起复议。新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402民初433号之一民事裁定书，驳回了复议请求。2020年12月30日，因无财产可供执行，新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402执258号执行裁定书，终结本次执行程序。2021年1月6日，新疆生产建设兵团第四师融媒体中心向新疆生产建设兵团伊宁垦区人民法院提起执行异议，要求撤销（2020）兵0402执258号执行裁定书和先予执行裁定确定的给付责任。再查：王某1主张后续医疗费用的民事一审案件尚未审结\\n\\n新疆生产建设兵团伊宁垦区人民法院认为，本案中确定先予执行给付责任的是（2020）兵0402民初433号先予执行民事裁定书，不是（2020）兵0402执258号终结本次执行程序的执行裁定书。执行异议是针对具体执行行为或执行标的物的异议程序。在本次先予执行过程中，因无财产可供执行，终结了本次执行程序，申请人也未就任何具体的执行行为或执行标的物提起异议，故申请人的异议请求并无事实依据。申请人如对执行依据即确定其给付责任的先予执行裁定不服，应依法提起复议。申请人已向法院提起复议并被依法驳回，就应依法履行先予执行裁定确定的给付责任。再者申请人完全可以在新的民事审判案件中依事实和法律主张自己的权利，而不是滥用司法救济途径。综上，申请人的异议请求倒果为因，适用程序错误，无事实和法律依据，应予驳回。遂裁定：驳回异议人新疆生产建设兵团第四师融媒体中心的异议申请。\\n\\n[DOC1_A3 | 法院裁定]\\n复议申请人新疆生产建设兵团第四师融媒体中心向本院申请复议称，请求：1、依法撤销新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定及（2020）兵0402民初433号民事裁定；2、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402民初433号之一民事裁定；3、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定；4、依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。事实与理由：新疆生产建设兵团伊宁垦区人民法院作出的先予执行伊宁垦区人民法院（2020）兵0402民初433号民事裁定及（2020）兵0402执258号民事裁定程序违法。从裁定制作时间来看，首先，伊宁垦区人民法院（2020）兵0402执258号执行裁定，然后又作出（2020）兵0402民初433号民事裁定书，程序颠倒。其次，（2020）兵0402民初433号民事裁定与（2020）兵0402民初433号之一民事裁定是相同审判人员组成合议庭作出的裁定，程序违法。再次，（2020）兵0402民初433号民事裁定，裁定当事人唯一救济途径为向本院申请复议，程序违法。再者，申请人对（2020）兵0402民初433号民事裁定在复议过程中，（2020）兵0402执258号民事执行裁定的执行依据是什么？程序违法。综上所述，由于一审法院在处理实体权利问题，运用裁定程序违法，导致申请人合法权益无法保障，请求复议法院撤销伊宁垦区人民法院（2021）兵0402执异1号执行裁定及其他裁定，支持申请人的复议申请事项。\\n\\n本院审查查明的事实与一审法院一致，对一审法院认定的相关证据的证明效力，本院予以确认。\\n\\n本院认为，本案的争议焦点：新疆生产建设兵团伊宁垦区人民法院作出的相关执行裁定程序是否违法，复议申请人新疆生产建设兵团第四师融媒体中心要求撤销裁定的复议请求是否成立。根据法律规定，执行行为异议，是指当事人、利害关系人认为人民法院的执行行为违反法律规定，向执行法院提出的书面异议。执行复议，是指当事人、利害关系人不服执行法院作出的执行异议审查裁定，向上一级人民法院申请复议的救济制度。本案中，一审法院作为执行案件的执行依据为（2020）兵0402民初433号先予执行的民事裁定书，而（2020）兵0402执258号执行裁定系终结本次执行程序的执行裁定，系一审法院作出的具体的执行行为。（2020）兵0402民初433号之一民事裁定系因复议申请人新疆生产建设兵团第四师融媒体中心对（2020）兵0402民初433号先予执行的民事裁定提出复议而作出的裁定，其均系审判程序中作出的相关裁定。复议申请人新疆生产建设兵团第四师融媒体中心认为（2020）兵0402民初433号先予执行的民事裁定、（2020）兵0402民初433号之一民事裁定有违法之处，但上述裁定并非执行异议、复议程序应当审查的内容，复议申请人不能通过执行异议、复议程序请求撤销上述裁定。故对复议申请人新疆生产建设兵团第四师融媒体中心复议请求的要求撤销（2020）兵0402民初433号民事裁定、（2020）兵0402民初433号之一民事裁定的请求，本院不予审查，对其复议请求应予以驳回。对于复议申请人新疆生产建设兵团第四师融媒体中心异议、复议提出的要求撤销（2020）兵0402执258号执行裁定的请求，首先此裁定系执行过程中因无财产可供执行，终结本次执行程序的执行裁定，并不违反法律规定，再者复议申请人作为执行案件的被执行人，此裁定并未侵犯复议申请人的权益，其现主张撤销，于法无据。同时，复议申请人新疆生产建设兵团第四师融媒体中心主张不予执行新疆生产建设兵团伊宁垦区人民法院先予执行行为的民事裁定，首先其主张引用法律文号错误，先予执行的裁定应为（2020）兵0402民初433号民事裁定，其次（2020）兵0402民初433号民事裁定为已生效的民事裁判文书，复议申请人主张不予执行，于法无据。综上，复议申请人新疆生产建设兵团第四师融媒体中心认为裁定程序违法的理由不能成立，其复议请求亦不能成立，本院依法应予以驳回。一审异议裁定认为复议申请人的异议请求倒果为因，适用程序错误，无事实和法律依据，并无不当，本院依法予以维持。依照《中华人民共和国民事诉讼法》第二百二十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第一项规定，裁定如下：\\n\\n驳回复议申请人新疆生产建设兵团第四师融媒体中心的复议申请，维持新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号异议裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\"], \"primary_anchor_id\": \"DOC1_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\", \"权益\"], \"anchor_value_hints\": [\"1\", \"2021\", \"0402\", \"2020\", \"433\", \"2\", \"3\", \"258\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 10, \"relation_type_counts\": {\"supports\": 1, \"same_case\": 2, \"disambiguates\": 2, \"likely_same_entity\": 2, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A2\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}</info>\n<think>The anchor chunk confirms that the case involves '执行案由-先予执行' due to the mention of a prior application for advance execution of medical expenses. The document does not provide evidence for the other categories listed in the question. This chunk appears to be sufficient to classify this document under '执行案由-先予执行'.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-先予执行\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案由-先予执行\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁定 复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。 复议申请人新疆生产建设兵团第四师融媒体中心向本院申请复议称，请求：1、依法撤销新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定及（2020）兵0402民初433号民事裁定；2、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402民初433号之一民事裁定；3、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定；4、依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。事实与理由：新疆生产建设兵团伊宁垦区人民法院作出的先予执行伊宁垦区人民法院（2020）兵0402民初433号民事裁定及（2020）兵0402执258号民事裁定程序违法。从裁定制作时间来看，首先，伊宁垦区人民法院（2020）兵0402执258号执行裁定，然后又作出（2020）兵0402民初433号民事裁定书，程序颠倒。其次，（2020）兵0402民初433号民事裁定与（2020）兵0402民初433号之一民事裁定是相同审判人员组成合议庭作出的裁定，程序违法。再次，（2020）兵0402民初433号民事裁定，...\"], \"selected_relation_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a case related to '执行案由-先予执行' based on the information provided in DOC1_A2 where it mentions王某1申请先予执行后续医疗费用30万元 (Wang applied for advance execution of subsequent medical expenses of 300,000 yuan). I will inspect the next anchor coordinate to confirm if there's more evidence supporting this categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A1\": 5.0}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 8.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 33.201}, \"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 32.914}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 0.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 17.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院裁定\", \"summary\": \"Expanded same-section read window around DOC1_A3: 复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（被执行人）：新疆生产建设兵团第四师融媒体中心,住所地新疆伊犁州可克达拉市北固山西路515号。\\n\\n法定代表人：林玢,该中心主任。\\n\\n委托诉讼代理人：沈传武，新疆任远律师事务所律师。\\n\\n申请执行人：王某1，女，2010年8月17日生，汉族，第四师一中一年级学生，住福建省晋江市。\\n\\n法定代理人：王某2（系王某1之父），男，1986年7月2日生，汉族，无固定职业，住福建省晋江市。\\n\\n被执行人：胡秀，女，1966年12月1日生，汉族，住伊宁市。\\n\\n[DOC1_A2 | 案件背景]\\n复议申请人新疆生产建设兵团第四师融媒体中心不服新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n新疆生产建设兵团伊宁垦区人民法院查明，王某1与新疆生产建设兵团第四师广播电视台、胡秀健康权纠纷一案，新疆生产建设兵团伊宁垦区人民法院于2019年8月26日作出（2018）兵0402民初94号民事判决书，判决胡秀、新疆生产建设兵团第四师广播电视台共同连带赔偿王某1医疗费、护理费、伙食补助费、住宿费、康复辅助器具费、营养费、交通费等各项损失合计214782.91元。该判决经二审维持原判后，已执行完毕。2020年10月12日，王某1又向新疆生产建设兵团伊宁垦区人民法院提起民事诉讼，要求新疆生产建设兵团第四师广播电视台、胡秀给付后续医疗费、营养费、误工费、护理费、残疾赔偿金、康复辅助器具费、残疾辅助器具费、交通费、教育费、精神损害抚慰金共计11527059.48元。2020年10月26日，王某1向新疆生产建设兵团伊宁垦区人民法院申请先予执行，要求先行给付后续医疗费用30万元。2020年10月27日，新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402民初433号民事裁定书，裁定新疆生产建设兵团第四师广播电视台、胡秀先行共同连带给付申请人王某1医疗费用30万元。2020年11月2日，新疆生产建设兵团第四师广播电视台被撤销，并入新疆生产建设兵团第四师融媒体中心。2020年12月9日，新疆生产建设兵团第四师融媒体中心对先予执行裁定不服，向新疆生产建设兵团伊宁垦区人民法院提起复议。新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402民初433号之一民事裁定书，驳回了复议请求。2020年12月30日，因无财产可供执行，新疆生产建设兵团伊宁垦区人民法院作出（2020）兵0402执258号执行裁定书，终结本次执行程序。2021年1月6日，新疆生产建设兵团第四师融媒体中心向新疆生产建设兵团伊宁垦区人民法院提起执行异议，要求撤销（2020）兵0402执258号执行裁定书和先予执行裁定确定的给付责任。再查：王某1主张后续医疗费用的民事一审案件尚未审结\\n\\n新疆生产建设兵团伊宁垦区人民法院认为，本案中确定先予执行给付责任的是（2020）兵0402民初433号先予执行民事裁定书，不是（2020）兵0402执258号终结本次执行程序的执行裁定书。执行异议是针对具体执行行为或执行标的物的异议程序。在本次先予执行过程中，因无财产可供执行，终结了本次执行程序，申请人也未就任何具体的执行行为或执行标的物提起异议，故申请人的异议请求并无事实依据。申请人如对执行依据即确定其给付责任的先予执行裁定不服，应依法提起复议。申请人已向法院提起复议并被依法驳回，就应依法履行先予执行裁定确定的给付责任。再者申请人完全可以在新的民事审判案件中依事实和法律主张自己的权利，而不是滥用司法救济途径。综上，申请人的异议请求倒果为因，适用程序错误，无事实和法律依据，应予驳回。遂裁定：驳回异议人新疆生产建设兵团第四师融媒体中心的异议申请。\\n\\n[DOC1_A3 | 法院裁定]\\n复议申请人新疆生产建设兵团第四师融媒体中心向本院申请复议称，请求：1、依法撤销新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定及（2020）兵0402民初433号民事裁定；2、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402民初433号之一民事裁定；3、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定；4、依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。事实与理由：新疆生产建设兵团伊宁垦区人民法院作出的先予执行伊宁垦区人民法院（2020）兵0402民初433号民事裁定及（2020）兵0402执258号民事裁定程序违法。从裁定制作时间来看，首先，伊宁垦区人民法院（2020）兵0402执258号执行裁定，然后又作出（2020）兵0402民初433号民事裁定书，程序颠倒。其次，（2020）兵0402民初433号民事裁定与（2020）兵0402民初433号之一民事裁定是相同审判人员组成合议庭作出的裁定，程序违法。再次，（2020）兵0402民初433号民事裁定，裁定当事人唯一救济途径为向本院申请复议，程序违法。再者，申请人对（2020）兵0402民初433号民事裁定在复议过程中，（2020）兵0402执258号民事执行裁定的执行依据是什么？程序违法。综上所述，由于一审法院在处理实体权利问题，运用裁定程序违法，导致申请人合法权益无法保障，请求复议法院撤销伊宁垦区人民法院（2021）兵0402执异1号执行裁定及其他裁定，支持申请人的复议申请事项。\\n\\n本院审查查明的事实与一审法院一致，对一审法院认定的相关证据的证明效力，本院予以确认。\\n\\n本院认为，本案的争议焦点：新疆生产建设兵团伊宁垦区人民法院作出的相关执行裁定程序是否违法，复议申请人新疆生产建设兵团第四师融媒体中心要求撤销裁定的复议请求是否成立。根据法律规定，执行行为异议，是指当事人、利害关系人认为人民法院的执行行为违反法律规定，向执行法院提出的书面异议。执行复议，是指当事人、利害关系人不服执行法院作出的执行异议审查裁定，向上一级人民法院申请复议的救济制度。本案中，一审法院作为执行案件的执行依据为（2020）兵0402民初433号先予执行的民事裁定书，而（2020）兵0402执258号执行裁定系终结本次执行程序的执行裁定，系一审法院作出的具体的执行行为。（2020）兵0402民初433号之一民事裁定系因复议申请人新疆生产建设兵团第四师融媒体中心对（2020）兵0402民初433号先予执行的民事裁定提出复议而作出的裁定，其均系审判程序中作出的相关裁定。复议申请人新疆生产建设兵团第四师融媒体中心认为（2020）兵0402民初433号先予执行的民事裁定、（2020）兵0402民初433号之一民事裁定有违法之处，但上述裁定并非执行异议、复议程序应当审查的内容，复议申请人不能通过执行异议、复议程序请求撤销上述裁定。故对复议申请人新疆生产建设兵团第四师融媒体中心复议请求的要求撤销（2020）兵0402民初433号民事裁定、（2020）兵0402民初433号之一民事裁定的请求，本院不予审查，对其复议请求应予以驳回。对于复议申请人新疆生产建设兵团第四师融媒体中心异议、复议提出的要求撤销（2020）兵0402执258号执行裁定的请求，首先此裁定系执行过程中因无财产可供执行，终结本次执行程序的执行裁定，并不违反法律规定，再者复议申请人作为执行案件的被执行人，此裁定并未侵犯复议申请人的权益，其现主张撤销，于法无据。同时，复议申请人新疆生产建设兵团第四师融媒体中心主张不予执行新疆生产建设兵团伊宁垦区人民法院先予执行行为的民事裁定，首先其主张引用法律文号错误，先予执行的裁定应为（2020）兵0402民初433号民事裁定，其次（2020）兵0402民初433号民事裁定为已生效的民事裁判文书，复议申请人主张不予执行，于法无据。综上，复议申请人新疆生产建设兵团第四师融媒体中心认为裁定程序违法的理由不能成立，其复议请求亦不能成立，本院依法应予以驳回。一审异议裁定认为复议申请人的异议请求倒果为因，适用程序错误，无事实和法律依据，并无不当，本院依法予以维持。依照《中华人民共和国民事诉讼法》第二百二十五条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第一项规定，裁定如下：\\n\\n驳回复议申请人新疆生产建设兵团第四师融媒体中心的复议申请，维持新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号异议裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\"], \"primary_anchor_id\": \"DOC1_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\", \"权益\"], \"anchor_value_hints\": [\"1\", \"2021\", \"0402\", \"2020\", \"433\", \"2\", \"3\", \"258\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 10, \"relation_type_counts\": {\"supports\": 1, \"same_case\": 2, \"disambiguates\": 2, \"likely_same_entity\": 2, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A2\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}</info>\n<think>The anchor chunk confirms that the case involves '执行案由-先予执行' due to the mention of a prior application for advance execution of medical expenses. The document does not provide evidence for the other categories listed in the question. This chunk appears to be sufficient to classify this document under '执行案由-先予执行'.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-先予执行\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案由-先予执行\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院裁定 复议申请人新疆生产建设兵团第四师融媒体中心申请撤销多个裁定，包括先予执行裁定和终结本次执行程序裁定。法院认为复议申请人不能通过执行异议、复议程序请求撤销上述裁定，裁定驳回复议申请，维持原异议裁定。 复议申请人新疆生产建设兵团第四师融媒体中心向本院申请复议称，请求：1、依法撤销新疆生产建设兵团伊宁垦区人民法院（2021）兵0402执异1号执行裁定及（2020）兵0402民初433号民事裁定；2、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402民初433号之一民事裁定；3、依法撤销新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定；4、依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。事实与理由：新疆生产建设兵团伊宁垦区人民法院作出的先予执行伊宁垦区人民法院（2020）兵0402民初433号民事裁定及（2020）兵0402执258号民事裁定程序违法。从裁定制作时间来看，首先，伊宁垦区人民法院（2020）兵0402执258号执行裁定，然后又作出（2020）兵0402民初433号民事裁定书，程序颠倒。其次，（2020）兵0402民初433号民事裁定与（2020）兵0402民初433号之一民事裁定是相同审判人员组成合议庭作出的裁定，程序违法。再次，（2020）兵0402民初433号民事裁定，...\"], \"selected_relation_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A3\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+}

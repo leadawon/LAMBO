@@ -1,0 +1,155 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "task_mode": "clustering",
+  "think": "The current document,《判决文书8》, seems to involve a case between a tourism development company and the emergency management bureau of Changji City regarding a fine. This suggests that it might fall under the category of '行政行为-行政处罚'. I will inspect the chunk that contains details about the case and the ruling to confirm this.",
+  "current_query": "案件详情及裁定结果",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC8_A2",
+  "candidate_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2"
+  ],
+  "ranked_anchor_ids": [
+    "DOC8_A2",
+    "DOC8_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC8_A2",
+    "DOC8_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC8_A2",
+      "score": 34.201,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_label_hit=['案件详情及裁定结果', '判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 16.0,
+      "utility_hits": [
+        "legal_label_hit=['案件详情及裁定结果', '判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 16.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 34.201
+      },
+      "summary": "新疆某旅游开发有限公司因与昌吉市应急管理局的罚款案申请再审，后双方达成和解，新疆某旅游开发有限公司撤回再审申请，法院准许撤回。"
+    },
+    {
+      "anchor_id": "DOC8_A1",
+      "score": 22.3,
+      "reasons": [
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 0.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 22.3
+      },
+      "summary": "再审申请人新疆某旅游开发有限公司及其法定代表人李某某，被申请人昌吉市应急管理局及其法定代表人王锐，以及昌吉市应急管理局的委托诉讼代理人李某某和孙利广的信息。"
+    }
+  ],
+  "utility_hits": {
+    "DOC8_A2": [
+      "legal_label_hit=['案件详情及裁定结果', '判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC8_A1": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC8_A2": 16.0,
+    "DOC8_A1": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC8_A2": 6.0,
+    "DOC8_A1": 3.0
+  },
+  "anchor_role_hits": {
+    "DOC8_A2": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC8_A1": [
+      "case_identity"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC8_A2": {
+      "local_relevance": 4.0,
+      "answer_utility": 16.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 34.201
+    },
+    "DOC8_A1": {
+      "local_relevance": 0.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 22.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书8》. First coordinate candidate is DOC8_A2.",
+  "raw_plan_text": "<think>The current document,《判决文书8》, seems to involve a case between a tourism development company and the emergency management bureau of Changji City regarding a fine. This suggests that it might fall under the category of '行政行为-行政处罚'. I will inspect the chunk that contains details about the case and the ruling to confirm this.</think>\n<search>{\"current_query\":\"案件详情及裁定结果\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC8_A2\",\"candidate_anchor_ids\":[\"DOC8_A1\",\"DOC8_A2\"]}</search>",
+  "tagged_trace": "<think>The current document,《判决文书8》, seems to involve a case between a tourism development company and the emergency management bureau of Changji City regarding a fine. This suggests that it might fall under the category of '行政行为-行政处罚'. I will inspect the chunk that contains details about the case and the ruling to confirm this.</think>\n<search>{\"current_query\": \"案件详情及裁定结果\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\"], \"next_anchor_id\": \"DOC8_A2\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC8_A2\": 6.0, \"DOC8_A1\": 3.0}, \"anchor_role_hits\": {\"DOC8_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC8_A1\": [\"case_identity\"]}}</search>"
+}

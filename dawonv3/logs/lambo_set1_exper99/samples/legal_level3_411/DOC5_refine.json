@@ -1,0 +1,1109 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "selected_anchor_ids": [
+    "DOC5_A2",
+    "DOC5_A3"
+  ],
+  "final_current_query": "请提供更多关于案件主要争议点的信息，特别是关于是否主要涉及侵权行为还是管辖权的问题。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A2",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ],
+        "utility_hits": {
+          "DOC5_A3": [
+            "legal_label_hit=['民事案件', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC5_A3": 16.0,
+          "DOC5_A2": 11.0,
+          "DOC5_A4": 11.0,
+          "DOC5_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC5_A3": {
+            "local_relevance": 20.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 49.914
+          },
+          "DOC5_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC5_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          },
+          "DOC5_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 20.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC5_A2",
+      "plan_think": "The document seems to be related to a case involving patent rights infringement, with a dispute over jurisdiction. The most relevant information for categorizing this document would likely be found in the case background section (DOC5_A2), as it mentions the type of case and the nature of the dispute.",
+      "info": {
+        "anchor_id": "DOC5_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC5_A2: 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。",
+        "text": "[DOC5_A1 | 当事人信息]\n上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\n\n法定代表人：王某，执行董事、经理。\n\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\n\n法定代表人：吕某，副总经理。\n\n原审被告：某某公司3，住所地上海市长宁区。\n\n法定代表人：陈某，执行董事。\n\n[DOC5_A2 | 案件背景]\n上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\n\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\n\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\n\n[DOC5_A3 | 法院审查意见]\n本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\n\n[DOC5_A4 | 裁定结果]\n综上，上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\n\n驳回上诉，维持原裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ],
+        "primary_anchor_id": "DOC5_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书5"
+        ],
+        "anchor_targets": [
+          "判决文书5"
+        ],
+        "anchor_value_hints": [
+          "5",
+          "1",
+          "2",
+          "3",
+          "2023",
+          "73",
+          "870"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 17,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 2,
+            "nearby_window": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC5_A4",
+            "DOC5_A3",
+            "DOC5_A1",
+            "DOC5_A4",
+            "DOC5_A3",
+            "DOC5_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides context about the case, indicating that it involves a dispute over the jurisdiction of the court handling an infringement of design patent rights. This suggests that the case falls under '民事案件' (civil cases) due to its nature as a patent infringement dispute. However, there is also a mention of jurisdiction, which could imply that the case might also be categorized under '管辖案件' (jurisdiction cases). To accurately classify the document, we need more explicit information on whether the primary focus of the case is on the infringement itself or the jurisdictional dispute.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书5》",
+            "normalized_value": "判决文书5",
+            "evidence_text": "上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A2",
+            "confidence": 0.8,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          },
+          {
+            "answer_key": "管辖案件",
+            "value": "《判决文书5》",
+            "normalized_value": "判决文书5",
+            "evidence_text": "上诉人某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A2",
+            "confidence": 0.6,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "请提供更多关于案件主要争议点的信息，特别是关于是否主要涉及侵权行为还是管辖权的问题。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件",
+            "管辖案件"
+          ],
+          "known_value_signatures": [
+            "判决文书5"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC5_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC5_A4",
+            "DOC5_A3",
+            "DOC5_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请提供更多关于案件主要争议点的信息，特别是关于是否主要涉及侵权行为还是管辖权的问题。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A3",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "民事案件",
+            "管辖案件"
+          ],
+          "known_value_signatures": [
+            "判决文书5"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC5_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC5_A4",
+            "DOC5_A3",
+            "DOC5_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC5_A2"
+        ],
+        "utility_hits": {
+          "DOC5_A3": [
+            "legal_label_hit=['民事案件', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC5_A3": 16.0,
+          "DOC5_A4": 11.0,
+          "DOC5_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC5_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC5_A2",
+            "same_case_selected=DOC5_A2",
+            "disambiguates_selected=DOC5_A2",
+            "likely_same_entity_selected=DOC5_A2",
+            "nearby_window_selected=DOC5_A2"
+          ],
+          "DOC5_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC5_A2",
+            "same_case_selected=DOC5_A2",
+            "disambiguates_selected=DOC5_A2",
+            "likely_same_entity_selected=DOC5_A2",
+            "prerequisite_of_selected=DOC5_A2",
+            "nearby_window_selected=DOC5_A2"
+          ],
+          "DOC5_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC5_A2",
+            "same_case_selected=DOC5_A2",
+            "disambiguates_selected=DOC5_A2",
+            "likely_same_entity_selected=DOC5_A2",
+            "nearby_window_selected=DOC5_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC5_A3": 20.98,
+          "DOC5_A4": 24.2,
+          "DOC5_A1": 17.98
+        },
+        "anchor_role_hits": {
+          "DOC5_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC5_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC5_A1": [
+            "case_identity"
+          ]
+        },
+        "score_breakdown": {
+          "DOC5_A3": {
+            "local_relevance": 12.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 20.98,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 53.894
+          },
+          "DOC5_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 24.2,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 39.891
+          },
+          "DOC5_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 17.98,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 28.28
+          }
+        }
+      },
+      "anchor_id": "DOC5_A3",
+      "plan_think": "The current evidence indicates that the case involves both civil disputes (patent infringement) and jurisdictional issues. To better understand the primary focus of the case, we should inspect the court's review opinion (DOC5_A3), which may provide more details on the main points of contention and the court's rationale for its decision. This will help clarify whether the case should primarily be categorized as a '民事案件' or a '管辖案件'.",
+      "info": {
+        "anchor_id": "DOC5_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院审查意见",
+        "summary": "Expanded same-section read window around DOC5_A3: 法院认为根据相关法律规定，某某公司2有权选择任一被告住所地人民法院提起诉讼，且上海知识产权法院对本案具有管辖权。合法来源抗辩成立与否不影响本案管辖的确定。",
+        "text": "[DOC5_A1 | 当事人信息]\n上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\n\n法定代表人：王某，执行董事、经理。\n\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\n\n法定代表人：吕某，副总经理。\n\n原审被告：某某公司3，住所地上海市长宁区。\n\n法定代表人：陈某，执行董事。\n\n[DOC5_A2 | 案件背景]\n上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\n\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\n\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\n\n[DOC5_A3 | 法院审查意见]\n本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\n\n[DOC5_A4 | 裁定结果]\n综上，上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\n\n驳回上诉，维持原裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ],
+        "primary_anchor_id": "DOC5_A3",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书5"
+        ],
+        "anchor_targets": [
+          "民事案件",
+          "判决文书5"
+        ],
+        "anchor_value_hints": [
+          "5",
+          "2",
+          "3",
+          "1"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 17,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 2,
+            "nearby_window": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC5_A4",
+            "DOC5_A2",
+            "DOC5_A1",
+            "DOC5_A4",
+            "DOC5_A2",
+            "DOC5_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides detailed information from the court's review opinion, confirming that the case involves a patent infringement dispute (civil case) and clarifies the jurisdictional aspects. The court's opinion emphasizes that the case is primarily a civil case concerning patent infringement, and the jurisdictional issue is secondary. Therefore, the document can be confidently classified as a '民事案件'. No further evidence is needed for classification.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书5》",
+            "normalized_value": "判决文书5",
+            "evidence_text": "本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A3",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A2",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件",
+            "管辖案件"
+          ],
+          "known_value_signatures": [
+            "判决文书5"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC5_A2",
+            "DOC5_A3"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。",
+            "法院审查意见 法院认为根据相关法律规定，某某公司2有权选择任一被告住所地人民法院提起诉讼，且上海知识产权法院对本案具有管辖权。合法来源抗辩成立与否不影响本案管辖的确定。 本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC5_A4",
+            "DOC5_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC5_A3",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A3",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书5》",
+      "normalized_value": "判决文书5",
+      "evidence_text": "上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "confidence": 0.8,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "管辖案件",
+      "value": "《判决文书5》",
+      "normalized_value": "判决文书5",
+      "evidence_text": "上诉人某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "confidence": 0.6,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书5》",
+      "normalized_value": "判决文书5",
+      "evidence_text": "本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A3",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to be related to a case involving patent rights infringement, with a dispute over jurisdiction. The most relevant information for categorizing this document would likely be found in the case background section (DOC5_A2), as it mentions the type of case and the nature of the dispute.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"utility_hits\": {\"DOC5_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC5_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC5_A3\": 16.0, \"DOC5_A2\": 11.0, \"DOC5_A4\": 11.0, \"DOC5_A1\": 5.0}, \"score_breakdown\": {\"DOC5_A3\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 49.914}, \"DOC5_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC5_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC5_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC5_A2: 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\\n\\n法定代表人：王某，执行董事、经理。\\n\\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\\n\\n法定代表人：吕某，副总经理。\\n\\n原审被告：某某公司3，住所地上海市长宁区。\\n\\n法定代表人：陈某，执行董事。\\n\\n[DOC5_A2 | 案件背景]\\n上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\\n\\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\\n\\n[DOC5_A3 | 法院审查意见]\\n本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\\n\\n[DOC5_A4 | 裁定结果]\\n综上，上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"primary_anchor_id\": \"DOC5_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"判决文书5\"], \"anchor_value_hints\": [\"5\", \"1\", \"2\", \"3\", \"2023\", \"73\", \"870\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk provides context about the case, indicating that it involves a dispute over the jurisdiction of the court handling an infringement of design patent rights. This suggests that the case falls under '民事案件' (civil cases) due to its nature as a patent infringement dispute. However, there is also a mention of jurisdiction, which could imply that the case might also be categorized under '管辖案件' (jurisdiction cases). To accurately classify the document, we need more explicit information on whether the primary focus of the case is on the infringement itself or the jurisdictional dispute.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"answer_key\": \"管辖案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"上诉人某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.6, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供更多关于案件主要争议点的信息，特别是关于是否主要涉及侵权行为还是管辖权的问题。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\"], \"selected_relation_anchor_ids\": [\"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}]}}</retrieve>\n<think>The current evidence indicates that the case involves both civil disputes (patent infringement) and jurisdictional issues. To better understand the primary focus of the case, we should inspect the court's review opinion (DOC5_A3), which may provide more details on the main points of contention and the court's rationale for its decision. This will help clarify whether the case should primarily be categorized as a '民事案件' or a '管辖案件'.</think>\n<search>{\"current_query\": \"请提供更多关于案件主要争议点的信息，特别是关于是否主要涉及侵权行为还是管辖权的问题。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A3\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书5\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\"], \"selected_relation_anchor_ids\": [\"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}]}, \"avoid_anchor_ids\": [\"DOC5_A2\"], \"utility_hits\": {\"DOC5_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC5_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC5_A3\": 16.0, \"DOC5_A4\": 11.0, \"DOC5_A1\": 5.0}, \"relation_hits\": {\"DOC5_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\", \"nearby_window_selected=DOC5_A2\"], \"DOC5_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\", \"prerequisite_of_selected=DOC5_A2\", \"nearby_window_selected=DOC5_A2\"], \"DOC5_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\", \"nearby_window_selected=DOC5_A2\"]}, \"relation_score\": {\"DOC5_A3\": 20.98, \"DOC5_A4\": 24.2, \"DOC5_A1\": 17.98}, \"anchor_role_hits\": {\"DOC5_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC5_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 20.98, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 53.894}, \"DOC5_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 24.2, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 39.891}, \"DOC5_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 17.98, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 28.28}}}</search>\n<info>{\"anchor_id\": \"DOC5_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院审查意见\", \"summary\": \"Expanded same-section read window around DOC5_A3: 法院认为根据相关法律规定，某某公司2有权选择任一被告住所地人民法院提起诉讼，且上海知识产权法院对本案具有管辖权。合法来源抗辩成立与否不影响本案管辖的确定。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\\n\\n法定代表人：王某，执行董事、经理。\\n\\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\\n\\n法定代表人：吕某，副总经理。\\n\\n原审被告：某某公司3，住所地上海市长宁区。\\n\\n法定代表人：陈某，执行董事。\\n\\n[DOC5_A2 | 案件背景]\\n上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\\n\\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\\n\\n[DOC5_A3 | 法院审查意见]\\n本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\\n\\n[DOC5_A4 | 裁定结果]\\n综上，上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"primary_anchor_id\": \"DOC5_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"民事案件\", \"判决文书5\"], \"anchor_value_hints\": [\"5\", \"2\", \"3\", \"1\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC5_A4\", \"DOC5_A2\", \"DOC5_A1\", \"DOC5_A4\", \"DOC5_A2\", \"DOC5_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk provides detailed information from the court's review opinion, confirming that the case involves a patent infringement dispute (civil case) and clarifies the jurisdictional aspects. The court's opinion emphasizes that the case is primarily a civil case concerning patent infringement, and the jurisdictional issue is secondary. Therefore, the document can be confidently classified as a '民事案件'. No further evidence is needed for classification.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A3\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\", \"DOC5_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\", \"法院审查意见 法院认为根据相关法律规定，某某公司2有权选择任一被告住所地人民法院提起诉讼，且上海知识产权法院对本案具有管辖权。合法来源抗辩成立与否不影响本案管辖的确定。 本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗...\"], \"selected_relation_anchor_ids\": [\"DOC5_A4\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC5_A3\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A3\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to a case involving patent rights infringement, with a dispute over jurisdiction. The most relevant information for categorizing this document would likely be found in the case background section (DOC5_A2), as it mentions the type of case and the nature of the dispute.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"utility_hits\": {\"DOC5_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC5_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC5_A3\": 16.0, \"DOC5_A2\": 11.0, \"DOC5_A4\": 11.0, \"DOC5_A1\": 5.0}, \"score_breakdown\": {\"DOC5_A3\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 49.914}, \"DOC5_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC5_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC5_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC5_A2: 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\\n\\n法定代表人：王某，执行董事、经理。\\n\\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\\n\\n法定代表人：吕某，副总经理。\\n\\n原审被告：某某公司3，住所地上海市长宁区。\\n\\n法定代表人：陈某，执行董事。\\n\\n[DOC5_A2 | 案件背景]\\n上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\\n\\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\\n\\n[DOC5_A3 | 法院审查意见]\\n本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\\n\\n[DOC5_A4 | 裁定结果]\\n综上，上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"primary_anchor_id\": \"DOC5_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"判决文书5\"], \"anchor_value_hints\": [\"5\", \"1\", \"2\", \"3\", \"2023\", \"73\", \"870\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk provides context about the case, indicating that it involves a dispute over the jurisdiction of the court handling an infringement of design patent rights. This suggests that the case falls under '民事案件' (civil cases) due to its nature as a patent infringement dispute. However, there is also a mention of jurisdiction, which could imply that the case might also be categorized under '管辖案件' (jurisdiction cases). To accurately classify the document, we need more explicit information on whether the primary focus of the case is on the infringement itself or the jurisdictional dispute.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"answer_key\": \"管辖案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"上诉人某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.6, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供更多关于案件主要争议点的信息，特别是关于是否主要涉及侵权行为还是管辖权的问题。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\"], \"selected_relation_anchor_ids\": [\"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}]}}</retrieve>\n<think>The current evidence indicates that the case involves both civil disputes (patent infringement) and jurisdictional issues. To better understand the primary focus of the case, we should inspect the court's review opinion (DOC5_A3), which may provide more details on the main points of contention and the court's rationale for its decision. This will help clarify whether the case should primarily be categorized as a '民事案件' or a '管辖案件'.</think>\n<search>{\"current_query\": \"请提供更多关于案件主要争议点的信息，特别是关于是否主要涉及侵权行为还是管辖权的问题。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A3\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书5\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\"], \"selected_relation_anchor_ids\": [\"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}]}, \"avoid_anchor_ids\": [\"DOC5_A2\"], \"utility_hits\": {\"DOC5_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC5_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC5_A3\": 16.0, \"DOC5_A4\": 11.0, \"DOC5_A1\": 5.0}, \"relation_hits\": {\"DOC5_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\", \"nearby_window_selected=DOC5_A2\"], \"DOC5_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\", \"prerequisite_of_selected=DOC5_A2\", \"nearby_window_selected=DOC5_A2\"], \"DOC5_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\", \"nearby_window_selected=DOC5_A2\"]}, \"relation_score\": {\"DOC5_A3\": 20.98, \"DOC5_A4\": 24.2, \"DOC5_A1\": 17.98}, \"anchor_role_hits\": {\"DOC5_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC5_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 20.98, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 53.894}, \"DOC5_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 24.2, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 39.891}, \"DOC5_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 17.98, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 28.28}}}</search>\n<info>{\"anchor_id\": \"DOC5_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院审查意见\", \"summary\": \"Expanded same-section read window around DOC5_A3: 法院认为根据相关法律规定，某某公司2有权选择任一被告住所地人民法院提起诉讼，且上海知识产权法院对本案具有管辖权。合法来源抗辩成立与否不影响本案管辖的确定。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n上诉人（原审被告）：某某公司1，住所地浙江省余姚市。\\n\\n法定代表人：王某，执行董事、经理。\\n\\n被上诉人（原审原告）：某某公司2，住所地广东省广州市天河区（仅限办公用途）（自主申报）。\\n\\n法定代表人：吕某，副总经理。\\n\\n原审被告：某某公司3，住所地上海市长宁区。\\n\\n法定代表人：陈某，执行董事。\\n\\n[DOC5_A2 | 案件背景]\\n上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。\\n\\n被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\\n\\n[DOC5_A3 | 法院审查意见]\\n本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\\n\\n[DOC5_A4 | 裁定结果]\\n综上，上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"primary_anchor_id\": \"DOC5_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"民事案件\", \"判决文书5\"], \"anchor_value_hints\": [\"5\", \"2\", \"3\", \"1\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC5_A4\", \"DOC5_A2\", \"DOC5_A1\", \"DOC5_A4\", \"DOC5_A2\", \"DOC5_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk provides detailed information from the court's review opinion, confirming that the case involves a patent infringement dispute (civil case) and clarifies the jurisdictional aspects. The court's opinion emphasizes that the case is primarily a civil case concerning patent infringement, and the jurisdictional issue is secondary. Therefore, the document can be confidently classified as a '民事案件'. No further evidence is needed for classification.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗辩，本院认为，合法来源抗辩成立与否属于本案实体审理范畴，不影响本案管辖的确定，故本案由上海知识产权法院管辖，并无不当。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A3\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\", \"DOC5_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某公司1因与某某公司2、某某公司3侵害外观设计专利权纠纷一案，不服上海知识产权法院的民事裁定，向本院提起上诉。某某公司1请求撤销原审裁定，将案件移送宁波市中级人民法院审理。被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。 上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2（以下简称某某公司2）、原审被告某某公司3（以下简称某某公司3）侵害外观设计专利权纠纷一案，不服上海知识产权法院（2023）沪73民初870号之一民事裁定，向本院提起上诉。 某某公司1上诉称：原审法院认定事实不清。上诉人某某公司1是涉案侵权产品的提供方，原审被告某某公司3已对涉案产品做了合法来源抗辩，将本案移交至上诉人所在地的宁波市中级人民法院，能够更好地查明案件事实，方便案件审理。因此，某某公司1请求撤销原审裁定，将本案移送宁波市中级人民法院审理。 被上诉人某某公司2、原审被告某某公司3均未提交答辩意见。\", \"法院审查意见 法院认为根据相关法律规定，某某公司2有权选择任一被告住所地人民法院提起诉讼，且上海知识产权法院对本案具有管辖权。合法来源抗辩成立与否不影响本案管辖的确定。 本院经审查认为，根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉；原告向两个以上有管辖权的人民法院起诉的，由最先立案的人民法院管辖。本案中，某某公司2诉称某某公司3擅自销售、许诺销售被诉侵权产品，某某公司1擅自生产被诉侵权产品，侵害其外观设计专利权，请求判令上述两公司承担相应民事责任且提交了初步证据。某某公司3和某某公司1均为原审被告，根据前述规定，某某公司2有权选择任一被告住所地人民法院提起诉讼。根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条规定，知识产权法院管辖所在市辖区内第一审专利民事案件。鉴于某某公司3住所地位于上海市，且本案系侵害外观设计专利权纠纷，属于知识产权案件，故上海知识产权法院对本案具有管辖权，某某公司2据此选择向上海知识产权法院提起诉讼于法有据。至于某某公司1主张某某公司3已提出合法来源抗...\"], \"selected_relation_anchor_ids\": [\"DOC5_A4\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC5_A3\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A3\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+}

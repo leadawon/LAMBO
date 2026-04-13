@@ -1,0 +1,1547 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A6",
+    "DOC1_A2",
+    "DOC1_A4"
+  ],
+  "final_current_query": "是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A6",
+        "candidate_anchor_ids": [
+          "DOC1_A6",
+          "DOC1_A2",
+          "DOC1_A4",
+          "DOC1_A8"
+        ],
+        "utility_hits": {
+          "DOC1_A6": [
+            "legal_label_hit=['民事案件', '赔偿案件', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A8": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A6": 21.0,
+          "DOC1_A2": 11.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A8": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A6": {
+            "local_relevance": 52.0,
+            "answer_utility": 21.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 0.0,
+            "total": 86.354
+          },
+          "DOC1_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC1_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          },
+          "DOC1_A8": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.103,
+            "redundancy_penalty": 0.0,
+            "total": 28.103
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A6",
+      "plan_think": "考虑到文档内容主要涉及国家赔偿决定和申诉，因此该案件应归类为\"赔偿案件\"。接下来需要找到明确的信息来确认这一点，特别是关于案件类型的描述。DOC1_A6提到了\"国家赔偿决定\"，这是确定案件类型的关键信息。",
+      "info": {
+        "anchor_id": "DOC1_A6",
+        "anchor_type": "paragraph_region",
+        "section_path": "山东高院赔偿委员会意见",
+        "summary": "Expanded same-section read window around DOC1_A6: 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。",
+        "text": "[DOC1_A1 | 当事人信息]\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\n\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\n\n[DOC1_A2 | 案件背景]\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\n\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\n\n[DOC1_A3 | 吕某的赔偿请求]\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\n\n[DOC1_A4 | 案件执行过程]\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\n\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\n\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\n\n[DOC1_A5 | 天昊公司相关情况]\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\n\n[DOC1_A6 | 山东高院赔偿委员会意见]\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\n\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\n\n[DOC1_A7 | 吕某申诉]\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\n\n本院赔偿委员会经审查查明的事实与原审查明一致。\n\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\n\n[DOC1_A8 | 最终决定]\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\n\n驳回吕某的申诉。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5",
+          "DOC1_A6",
+          "DOC1_A7",
+          "DOC1_A8"
+        ],
+        "primary_anchor_id": "DOC1_A6",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "民事案件",
+          "赔偿案件",
+          "执行案件",
+          "公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的",
+          "本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。",
+          "公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。",
+          "本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。",
+          "一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2022",
+          "14",
+          "4",
+          "60",
+          "2005",
+          "2010",
+          "11"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_case": 7,
+            "disambiguates": 5
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "该段落详细讨论了山东高院赔偿委员会对于德州中院是否存在拖延执行行为的审查结果，最终决定维持德州中院的国家赔偿决定。这表明该案件属于\"赔偿案件\"类别。然而，为了更全面地分类，还需要进一步检查其他部分以确保没有遗漏其他案件类型的信息。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "赔偿案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A6",
+            "confidence": 0.95,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A8",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A7",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "赔偿案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A1",
+            "DOC1_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A2",
+        "candidate_anchor_ids": [
+          "DOC1_A2",
+          "DOC1_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "赔偿案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A2",
+            "DOC1_A1",
+            "DOC1_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A6"
+        ],
+        "utility_hits": {
+          "DOC1_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A8": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A2": 11.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A8": 11.0,
+          "DOC1_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC1_A2": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6"
+          ],
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6"
+          ],
+          "DOC1_A8": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6"
+          ],
+          "DOC1_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "same_case_selected=DOC1_A6",
+            "disambiguates_selected=DOC1_A6"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A2": 18.18,
+          "DOC1_A4": 18.18,
+          "DOC1_A8": 18.18,
+          "DOC1_A1": 18.18
+        },
+        "anchor_role_hits": {
+          "DOC1_A2": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A8": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A1": [
+            "case_identity",
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A2": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 18.18,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 3.0,
+            "total": 34.381
+          },
+          "DOC1_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 18.18,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 33.871
+          },
+          "DOC1_A8": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 18.18,
+            "weak_priors": 5.103,
+            "redundancy_penalty": 3.0,
+            "total": 33.283
+          },
+          "DOC1_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 18.18,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 28.48
+          }
+        }
+      },
+      "anchor_id": "DOC1_A2",
+      "plan_think": "尽管我们已经确认了《判决文书1》属于\"赔偿案件\"类别，但我们还需要检查其他部分以确保没有遗漏其他案件类型的信息。特别是，我们需要查看案件背景和执行过程的部分，以确认是否涉及\"执行案件\"的元素。",
+      "info": {
+        "anchor_id": "DOC1_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC1_A2: 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。",
+        "text": "[DOC1_A1 | 当事人信息]\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\n\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\n\n[DOC1_A2 | 案件背景]\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\n\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\n\n[DOC1_A3 | 吕某的赔偿请求]\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\n\n[DOC1_A4 | 案件执行过程]\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\n\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\n\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\n\n[DOC1_A5 | 天昊公司相关情况]\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\n\n[DOC1_A6 | 山东高院赔偿委员会意见]\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\n\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\n\n[DOC1_A7 | 吕某申诉]\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\n\n本院赔偿委员会经审查查明的事实与原审查明一致。\n\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\n\n[DOC1_A8 | 最终决定]\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\n\n驳回吕某的申诉。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5",
+          "DOC1_A6",
+          "DOC1_A7",
+          "DOC1_A8"
+        ],
+        "primary_anchor_id": "DOC1_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "3",
+          "2022",
+          "12",
+          "29",
+          "14",
+          "4"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_case": 7,
+            "disambiguates": 5
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "该段落提供了案件背景信息，包括吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会的国家赔偿决定，向本院赔偿委员会提出申诉。这进一步证实了该案件属于\"赔偿案件\"类别。此外，还提到德州中院作出的国家赔偿决定，驳回了吕某的国家赔偿请求。这些信息有助于确认案件类型，但没有提及其他案件类型的信息。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "赔偿案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A2",
+            "confidence": 0.95,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A8",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A7",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "赔偿案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...",
+            "案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A1",
+            "DOC1_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A4",
+        "candidate_anchor_ids": [
+          "DOC1_A4",
+          "DOC1_A8",
+          "DOC1_A1",
+          "DOC1_A7"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "赔偿案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...",
+            "案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A1",
+            "DOC1_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A6",
+          "DOC1_A2"
+        ],
+        "utility_hits": {
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A8": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']"
+          ],
+          "DOC1_A7": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A4": 11.0,
+          "DOC1_A8": 11.0,
+          "DOC1_A1": 5.0,
+          "DOC1_A7": 5.0
+        },
+        "relation_hits": {
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A6",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A6"
+          ],
+          "DOC1_A8": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A6",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A6"
+          ],
+          "DOC1_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A6",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A6"
+          ],
+          "DOC1_A7": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A6",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A6",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A6"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A4": 23.74,
+          "DOC1_A8": 23.74,
+          "DOC1_A1": 23.74,
+          "DOC1_A7": 23.74
+        },
+        "anchor_role_hits": {
+          "DOC1_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A8": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A1": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A7": [
+            "case_identity",
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 23.74,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 39.431
+          },
+          "DOC1_A8": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 23.74,
+            "weak_priors": 5.103,
+            "redundancy_penalty": 3.0,
+            "total": 38.843
+          },
+          "DOC1_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 23.74,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 34.04
+          },
+          "DOC1_A7": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 23.74,
+            "weak_priors": 5.221,
+            "redundancy_penalty": 3.0,
+            "total": 32.961
+          }
+        }
+      },
+      "anchor_id": "DOC1_A4",
+      "plan_think": "虽然我们已经确认了《判决文书1》属于\"赔偿案件\"类别，但是我们还需要检查案件执行过程的部分，以确认是否涉及\"执行案件\"的元素。特别是，我们需要查看案件执行的具体细节，以判断是否还有其他案件类型的信息。",
+      "info": {
+        "anchor_id": "DOC1_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件执行过程",
+        "summary": "Expanded same-section read window around DOC1_A4: 吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，经过多次判决和执行，最终德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元，因被执行人无财产可供处置，终结本次执行程序。",
+        "text": "[DOC1_A1 | 当事人信息]\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\n\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\n\n[DOC1_A2 | 案件背景]\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\n\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\n\n[DOC1_A3 | 吕某的赔偿请求]\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\n\n[DOC1_A4 | 案件执行过程]\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\n\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\n\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\n\n[DOC1_A5 | 天昊公司相关情况]\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\n\n[DOC1_A6 | 山东高院赔偿委员会意见]\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\n\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\n\n[DOC1_A7 | 吕某申诉]\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\n\n本院赔偿委员会经审查查明的事实与原审查明一致。\n\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\n\n[DOC1_A8 | 最终决定]\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\n\n驳回吕某的申诉。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5",
+          "DOC1_A6",
+          "DOC1_A7",
+          "DOC1_A8"
+        ],
+        "primary_anchor_id": "DOC1_A4",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）",
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "110",
+          "2011",
+          "11",
+          "24",
+          "2010",
+          "10",
+          "1320210元"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_case": 7,
+            "disambiguates": 5
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A6",
+            "DOC1_A5",
+            "DOC1_A2",
+            "DOC1_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "该段落详细描述了吕某与赵毅、夏华俊、赵海涛之间的民间借贷纠纷案件的执行过程，包括多次判决和执行的情况。这表明该案件涉及\"执行案件\"类别。然而，我们仍然需要确认是否还有其他案件类型的信息。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "赔偿案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A6",
+            "DOC1_A2",
+            "DOC1_A4"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...",
+            "案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。",
+            "案件执行过程 吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，经过多次判决和执行，最终德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元，因被执行人无财产可供处置，终结本次执行程序。 山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A7",
+            "DOC1_A5",
+            "DOC1_A1",
+            "DOC1_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A6",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "赔偿案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A6",
+      "confidence": 0.95,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A8",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "赔偿案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "confidence": 0.95,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A8",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>考虑到文档内容主要涉及国家赔偿决定和申诉，因此该案件应归类为\"赔偿案件\"。接下来需要找到明确的信息来确认这一点，特别是关于案件类型的描述。DOC1_A6提到了\"国家赔偿决定\"，这是确定案件类型的关键信息。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A6\", \"candidate_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A8\"], \"utility_hits\": {\"DOC1_A6\": [\"legal_label_hit=['民事案件', '赔偿案件', '判决文书']\", \"legal_decision_context\"], \"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A6\": 21.0, \"DOC1_A2\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A8\": 11.0}, \"score_breakdown\": {\"DOC1_A6\": {\"local_relevance\": 52.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 86.354}, \"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC1_A8\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.103, \"redundancy_penalty\": 0.0, \"total\": 28.103}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A6\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"山东高院赔偿委员会意见\", \"summary\": \"Expanded same-section read window around DOC1_A6: 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\\n\\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\\n\\n[DOC1_A2 | 案件背景]\\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\\n\\n[DOC1_A3 | 吕某的赔偿请求]\\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\\n\\n[DOC1_A4 | 案件执行过程]\\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\\n\\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\\n\\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\\n\\n[DOC1_A5 | 天昊公司相关情况]\\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\\n\\n[DOC1_A6 | 山东高院赔偿委员会意见]\\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\\n\\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\\n\\n[DOC1_A7 | 吕某申诉]\\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\\n\\n本院赔偿委员会经审查查明的事实与原审查明一致。\\n\\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\\n\\n[DOC1_A8 | 最终决定]\\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回吕某的申诉。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\"], \"primary_anchor_id\": \"DOC1_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"民事案件\", \"赔偿案件\", \"执行案件\", \"公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的\", \"本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。\", \"公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。\", \"本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。\", \"一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。\"], \"anchor_value_hints\": [\"1\", \"2022\", \"14\", \"4\", \"60\", \"2005\", \"2010\", \"11\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 7, \"disambiguates\": 5}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>该段落详细讨论了山东高院赔偿委员会对于德州中院是否存在拖延执行行为的审查结果，最终决定维持德州中院的国家赔偿决定。这表明该案件属于\"赔偿案件\"类别。然而，为了更全面地分类，还需要进一步检查其他部分以确保没有遗漏其他案件类型的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A6\", \"confidence\": 0.95, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}}</retrieve>\n<think>尽管我们已经确认了《判决文书1》属于\"赔偿案件\"类别，但我们还需要检查其他部分以确保没有遗漏其他案件类型的信息。特别是，我们需要查看案件背景和执行过程的部分，以确认是否涉及\"执行案件\"的元素。</think>\n<search>{\"current_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A6\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A8\": 11.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"]}, \"relation_score\": {\"DOC1_A2\": 18.18, \"DOC1_A4\": 18.18, \"DOC1_A8\": 18.18, \"DOC1_A1\": 18.18}, \"anchor_role_hits\": {\"DOC1_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A8\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A1\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 6.201, \"redundancy_penalty\": 3.0, \"total\": 34.381}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 33.871}, \"DOC1_A8\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.103, \"redundancy_penalty\": 3.0, \"total\": 33.283}, \"DOC1_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 28.48}}}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC1_A2: 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\\n\\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\\n\\n[DOC1_A2 | 案件背景]\\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\\n\\n[DOC1_A3 | 吕某的赔偿请求]\\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\\n\\n[DOC1_A4 | 案件执行过程]\\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\\n\\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\\n\\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\\n\\n[DOC1_A5 | 天昊公司相关情况]\\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\\n\\n[DOC1_A6 | 山东高院赔偿委员会意见]\\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\\n\\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\\n\\n[DOC1_A7 | 吕某申诉]\\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\\n\\n本院赔偿委员会经审查查明的事实与原审查明一致。\\n\\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\\n\\n[DOC1_A8 | 最终决定]\\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回吕某的申诉。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\"], \"primary_anchor_id\": \"DOC1_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"3\", \"2022\", \"12\", \"29\", \"14\", \"4\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 7, \"disambiguates\": 5}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>该段落提供了案件背景信息，包括吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会的国家赔偿决定，向本院赔偿委员会提出申诉。这进一步证实了该案件属于\"赔偿案件\"类别。此外，还提到德州中院作出的国家赔偿决定，驳回了吕某的国家赔偿请求。这些信息有助于确认案件类型，但没有提及其他案件类型的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.95, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\", \"案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>虽然我们已经确认了《判决文书1》属于\"赔偿案件\"类别，但是我们还需要检查案件执行过程的部分，以确认是否涉及\"执行案件\"的元素。特别是，我们需要查看案件执行的具体细节，以判断是否还有其他案件类型的信息。</think>\n<search>{\"current_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A4\", \"candidate_anchor_ids\": [\"DOC1_A4\", \"DOC1_A8\", \"DOC1_A1\", \"DOC1_A7\"], \"coverage_hints\": {\"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\", \"案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\"], \"utility_hits\": {\"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"], \"DOC1_A7\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A4\": 11.0, \"DOC1_A8\": 11.0, \"DOC1_A1\": 5.0, \"DOC1_A7\": 5.0}, \"relation_hits\": {\"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"]}, \"relation_score\": {\"DOC1_A4\": 23.74, \"DOC1_A8\": 23.74, \"DOC1_A1\": 23.74, \"DOC1_A7\": 23.74}, \"anchor_role_hits\": {\"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A8\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A1\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A7\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 39.431}, \"DOC1_A8\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 5.103, \"redundancy_penalty\": 3.0, \"total\": 38.843}, \"DOC1_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 34.04}, \"DOC1_A7\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 5.221, \"redundancy_penalty\": 3.0, \"total\": 32.961}}}</search>\n<info>{\"anchor_id\": \"DOC1_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件执行过程\", \"summary\": \"Expanded same-section read window around DOC1_A4: 吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，经过多次判决和执行，最终德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元，因被执行人无财产可供处置，终结本次执行程序。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\\n\\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\\n\\n[DOC1_A2 | 案件背景]\\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\\n\\n[DOC1_A3 | 吕某的赔偿请求]\\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\\n\\n[DOC1_A4 | 案件执行过程]\\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\\n\\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\\n\\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\\n\\n[DOC1_A5 | 天昊公司相关情况]\\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\\n\\n[DOC1_A6 | 山东高院赔偿委员会意见]\\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\\n\\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\\n\\n[DOC1_A7 | 吕某申诉]\\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\\n\\n本院赔偿委员会经审查查明的事实与原审查明一致。\\n\\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\\n\\n[DOC1_A8 | 最终决定]\\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回吕某的申诉。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\"], \"primary_anchor_id\": \"DOC1_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"110\", \"2011\", \"11\", \"24\", \"2010\", \"10\", \"1320210元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 7, \"disambiguates\": 5}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>该段落详细描述了吕某与赵毅、夏华俊、赵海涛之间的民间借贷纠纷案件的执行过程，包括多次判决和执行的情况。这表明该案件涉及\"执行案件\"类别。然而，我们仍然需要确认是否还有其他案件类型的信息。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\", \"DOC1_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\", \"案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\", \"案件执行过程 吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，经过多次判决和执行，最终德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元，因被执行人无财产可供处置，终结本次执行程序。 山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏...\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>考虑到文档内容主要涉及国家赔偿决定和申诉，因此该案件应归类为\"赔偿案件\"。接下来需要找到明确的信息来确认这一点，特别是关于案件类型的描述。DOC1_A6提到了\"国家赔偿决定\"，这是确定案件类型的关键信息。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A6\", \"candidate_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A8\"], \"utility_hits\": {\"DOC1_A6\": [\"legal_label_hit=['民事案件', '赔偿案件', '判决文书']\", \"legal_decision_context\"], \"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A6\": 21.0, \"DOC1_A2\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A8\": 11.0}, \"score_breakdown\": {\"DOC1_A6\": {\"local_relevance\": 52.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 86.354}, \"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC1_A8\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.103, \"redundancy_penalty\": 0.0, \"total\": 28.103}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A6\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"山东高院赔偿委员会意见\", \"summary\": \"Expanded same-section read window around DOC1_A6: 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\\n\\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\\n\\n[DOC1_A2 | 案件背景]\\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\\n\\n[DOC1_A3 | 吕某的赔偿请求]\\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\\n\\n[DOC1_A4 | 案件执行过程]\\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\\n\\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\\n\\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\\n\\n[DOC1_A5 | 天昊公司相关情况]\\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\\n\\n[DOC1_A6 | 山东高院赔偿委员会意见]\\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\\n\\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\\n\\n[DOC1_A7 | 吕某申诉]\\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\\n\\n本院赔偿委员会经审查查明的事实与原审查明一致。\\n\\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\\n\\n[DOC1_A8 | 最终决定]\\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回吕某的申诉。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\"], \"primary_anchor_id\": \"DOC1_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"民事案件\", \"赔偿案件\", \"执行案件\", \"公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的\", \"本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。\", \"公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。\", \"本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。\", \"一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。\"], \"anchor_value_hints\": [\"1\", \"2022\", \"14\", \"4\", \"60\", \"2005\", \"2010\", \"11\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 7, \"disambiguates\": 5}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>该段落详细讨论了山东高院赔偿委员会对于德州中院是否存在拖延执行行为的审查结果，最终决定维持德州中院的国家赔偿决定。这表明该案件属于\"赔偿案件\"类别。然而，为了更全面地分类，还需要进一步检查其他部分以确保没有遗漏其他案件类型的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A6\", \"confidence\": 0.95, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}}</retrieve>\n<think>尽管我们已经确认了《判决文书1》属于\"赔偿案件\"类别，但我们还需要检查其他部分以确保没有遗漏其他案件类型的信息。特别是，我们需要查看案件背景和执行过程的部分，以确认是否涉及\"执行案件\"的元素。</think>\n<search>{\"current_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A6\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A8\": 11.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"same_case_selected=DOC1_A6\", \"disambiguates_selected=DOC1_A6\"]}, \"relation_score\": {\"DOC1_A2\": 18.18, \"DOC1_A4\": 18.18, \"DOC1_A8\": 18.18, \"DOC1_A1\": 18.18}, \"anchor_role_hits\": {\"DOC1_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A8\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A1\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 6.201, \"redundancy_penalty\": 3.0, \"total\": 34.381}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 33.871}, \"DOC1_A8\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.103, \"redundancy_penalty\": 3.0, \"total\": 33.283}, \"DOC1_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 28.48}}}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC1_A2: 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\\n\\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\\n\\n[DOC1_A2 | 案件背景]\\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\\n\\n[DOC1_A3 | 吕某的赔偿请求]\\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\\n\\n[DOC1_A4 | 案件执行过程]\\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\\n\\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\\n\\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\\n\\n[DOC1_A5 | 天昊公司相关情况]\\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\\n\\n[DOC1_A6 | 山东高院赔偿委员会意见]\\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\\n\\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\\n\\n[DOC1_A7 | 吕某申诉]\\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\\n\\n本院赔偿委员会经审查查明的事实与原审查明一致。\\n\\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\\n\\n[DOC1_A8 | 最终决定]\\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回吕某的申诉。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\"], \"primary_anchor_id\": \"DOC1_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"3\", \"2022\", \"12\", \"29\", \"14\", \"4\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 7, \"disambiguates\": 5}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>该段落提供了案件背景信息，包括吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会的国家赔偿决定，向本院赔偿委员会提出申诉。这进一步证实了该案件属于\"赔偿案件\"类别。此外，还提到德州中院作出的国家赔偿决定，驳回了吕某的国家赔偿请求。这些信息有助于确认案件类型，但没有提及其他案件类型的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.95, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\", \"案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>虽然我们已经确认了《判决文书1》属于\"赔偿案件\"类别，但是我们还需要检查案件执行过程的部分，以确认是否涉及\"执行案件\"的元素。特别是，我们需要查看案件执行的具体细节，以判断是否还有其他案件类型的信息。</think>\n<search>{\"current_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A4\", \"candidate_anchor_ids\": [\"DOC1_A4\", \"DOC1_A8\", \"DOC1_A1\", \"DOC1_A7\"], \"coverage_hints\": {\"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\", \"案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\"], \"utility_hits\": {\"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"], \"DOC1_A7\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A4\": 11.0, \"DOC1_A8\": 11.0, \"DOC1_A1\": 5.0, \"DOC1_A7\": 5.0}, \"relation_hits\": {\"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"], \"DOC1_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A6\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A6\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A6\"]}, \"relation_score\": {\"DOC1_A4\": 23.74, \"DOC1_A8\": 23.74, \"DOC1_A1\": 23.74, \"DOC1_A7\": 23.74}, \"anchor_role_hits\": {\"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A8\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A1\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A7\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 39.431}, \"DOC1_A8\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 5.103, \"redundancy_penalty\": 3.0, \"total\": 38.843}, \"DOC1_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 34.04}, \"DOC1_A7\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 23.74, \"weak_priors\": 5.221, \"redundancy_penalty\": 3.0, \"total\": 32.961}}}</search>\n<info>{\"anchor_id\": \"DOC1_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件执行过程\", \"summary\": \"Expanded same-section read window around DOC1_A4: 吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，经过多次判决和执行，最终德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元，因被执行人无财产可供处置，终结本次执行程序。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n申诉人（赔偿请求人）：吕某，男，1960年10月1日出生，汉族，住山东省德州市德城区。\\n\\n被申诉人（赔偿义务机关）：山东省德州市中级人民法院。住所地：山东省德州市德兴中大道912号。\\n\\n[DOC1_A2 | 案件背景]\\n吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。\\n\\n吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\\n\\n[DOC1_A3 | 吕某的赔偿请求]\\n吕某不服德州中院上述决定，向山东高院赔偿委员会申请作出赔偿决定，其请求事项为：德州中院赔偿吕某人民币60万元及利息。事实及理由：被执行人赵毅系德州天昊管业有限公司（以下简称天昊公司）（自然人独资一人有限责任公司）法定代表人，因德州中院没有及时采取查封冻结等强制措施，导致赵毅将天昊公司名下财产60万元进行转移规避执行，给申请执行人吕某造成60万元经济损失，属于故意拖延执行。\\n\\n[DOC1_A4 | 案件执行过程]\\n山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏华俊、赵海涛送达执行通知书、责令被执行人申报财产状况通知书。在本案执行过程中，山东高院于2014年8月11日作出（2014）鲁民监第33号民事裁定书，决定再审，再审期间中止原判决的执行。\\n\\n后山东高院作出民事裁定，一、撤销山东高院（2012）鲁民一终字第76号和德州中院（2010）德中民初字第11号民事判决；二、本案发回德州中院重审。德州中院于2015年2月5日作出（2014）德中民初字第337号民事判决：一、被告赵毅、夏华俊、赵海涛于本判决生效之日起十日内共同偿还原告吕某借款本金1350260元及利息（其中15万元本金的利息从2007年2月28日起按照月息1.5分计算至款项付清之日止，其余1200260元本金的利息，对应原告证据2-6、8-11、13-17、19-32、35、36、39，从各款项实际出借之日起按照月息2分计算至款项付清之日止）;二、驳回原告吕某的其他诉讼请求。吕某、赵毅、夏华俊、赵海涛均不服，提起上诉。山东高院于2015年7月13日作出（2015）鲁民再终字第3号民事判决，驳回上诉，维持原判。\\n\\n2015年7月20日，吕某申请恢复执行，德州中院于2015年7月27日恢复执行。德州中院于2018年7月19日作出（2012）德中执字第78-23号执行裁定,德州中院（2014）德中民初字第337号民事判决由德州经济技术开发区人民法院执行。德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元。因被执行人现并无财产可供处置，经约谈吕某，其同意终结本次执行程序，德州经济技术开发区人民法院于2021年10月12日作出（2021）鲁1491执恢9号之七执行裁定，终结本次执行程序。\\n\\n[DOC1_A5 | 天昊公司相关情况]\\n另查明，天昊公司成立于2007年9月11日，注册资本50万元，赵毅为公司股东、法定代表人，2012年12月5日公司被吊销营业执照。天昊公司系赵毅注册的有限责任公司（自然人独资）。吕某申请法院调查天昊公司的到期债权情况，德州中院于2012年11月对天昊公司的到期债权进行了调查。2012年10月16日，阳泉煤业（集团）股份有限公司基于其与天昊公司的合同，将合同尾款60万元以承兑汇票的方式支付给天昊公司，承兑汇票背书转让通知单上收款单位签章处的签名系赵毅所签。2017年2月6日，吕某向德州中院提交书面申请，申请追加天昊公司为本案被执行人。德州中院并未追加天昊公司为本案被执行人。\\n\\n[DOC1_A6 | 山东高院赔偿委员会意见]\\n山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期债权并非赵毅的个人财产，天昊公司不是（2010）德中民初字第11号民事案件的当事人，也不是涉案执行案件的当事人，吕某申请对天昊公司采取执行措施没有法律依据。第二，关于是否可以追加天昊公司作为被执行人并对其采取强制执行措施问题。追加案外人为被执行人应严格依照法律、司法解释的规定进行，唯有符合法定适用情形的，执行法院才能裁定追加被执行人并对其采取强制执行措施。《公司法》第六十四条规定：“一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，应当对公司债务承担连带责任。”《最高人民法院关于民事执行中变更、追加当事人若干问题的规定（法释〔2016〕21号）》第二十条规定：“作为被执行人的一人有限责任公司，财产不足以清偿生效法律文书确定的债务，股东不能证明公司财产独立于自己的财产，申请执行人申请变更、追加该股东为被执行人，对公司债务承担连带责任的，人民法院应予支持。”从上述法律、司法解释看，只规定了一人有限责任公司的股东不能证明公司财产独立于股东自己的财产的，申请执行人可以申请变更、追加该股东为被执行人，对公司债务承担连带责任，并未规定一人有限责任公司可以被申请变更、追加为被执行人，并对股东的债务承担连带责任的情形，吕某申请追加天昊公司作为被执行人并对其采取强制执行措施没有法律依据。因此，在吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案执行过程中，德州中院未对天昊公司的60万元到期债权采取执行措施，并不属于《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条规定的拖延执行行为，德州中院不应承担国家赔偿责任。\\n\\n据此，山东高院赔偿委员会于2023年7月12日作出（2023）鲁委赔3号国家赔偿决定：维持德州中院（2022）鲁14法赔4号国家赔偿决定。\\n\\n[DOC1_A7 | 吕某申诉]\\n吕某对山东高院赔偿委员会上述决定仍不服，向本院赔偿委员会提出申诉。请求：对山东高院赔偿委员会该决定依法改判或将本案发回重审。其主要理由为：被执行人赵毅系天昊公司（自然人独资一人有限责任公司）的法定代表人，天昊公司的财产即是赵毅的财产，法院有权立即执行天昊公司的财产，但德州中院在赵毅有可供执行财产的情况下，没有执行或者控制天昊公司的财产，属于故意拖延执行。原决定认定事实明显错误。\\n\\n本院赔偿委员会经审查查明的事实与原审查明一致。\\n\\n本院赔偿委员会认为，吕某申诉的核心理由为，被执行人赵毅系天昊公司唯一股东和法定代表人，天昊公司的财产即赵毅的财产，法院可以直接执行天昊公司的财产。但吕某该主张与《公司法》第三条第一款规定的公司拥有独立财产的原则相悖，且其未提供赵毅与天昊公司财产混同的证据，后期吕某申请追加天昊公司为被执行人也未获得法院同意，因此，吕某申诉提出的德州中院未对天昊公司财产直接予以执行系故意拖延执行的理由，缺乏法律依据，不能成立。\\n\\n[DOC1_A8 | 最终决定]\\n综上，吕某申诉的事由不能成立。依照《中华人民共和国国家赔偿法》第三十条第一款、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回吕某的申诉。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\"], \"primary_anchor_id\": \"DOC1_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"110\", \"2011\", \"11\", \"24\", \"2010\", \"10\", \"1320210元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 7, \"disambiguates\": 5}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A6\", \"DOC1_A5\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>该段落详细描述了吕某与赵毅、夏华俊、赵海涛之间的民间借贷纠纷案件的执行过程，包括多次判决和执行的情况。这表明该案件涉及\"执行案件\"类别。然而，我们仍然需要确认是否还有其他案件类型的信息。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案件类型的信息？例如民事案件、行政案件、执行案件或刑事案件的相关描述？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A6\", \"DOC1_A2\", \"DOC1_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"山东高院赔偿委员会意见 山东高院赔偿委员会认为德州中院不存在拖延执行行为，吕某申请追加天昊公司为被执行人没有法律依据，维持德州中院（2022）鲁14法赔4号国家赔偿决定。 山东高院赔偿委员会认为，本案审查的焦点问题是德州中院是否存在拖延执行等错误执行行为。《最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释》第二条第二项规定：“公民、法人和其他组织认为有下列错误执行行为造成损害申请赔偿的，人民法院应当依法受理：（二）发现被执行人有可供执行的财产，但故意拖延执行、不执行，或者应当依法恢复执行而不恢复的”。本案中，吕某主张因德州中院拖延执行导致天昊公司的到期债权60万元被赵毅转移，从而导致执行不能，要求赔偿其损失60万元。首先，关于本案所涉执行案件是否可以直接执行天昊公司的财产问题。《中华人民共和国公司法（2005修订）》（以下简称《公司法》）第二条规定：“本法所称公司是指依照本法在中国境内设立的有限责任公司和股份有限公司。”第三条第一款规定“公司是企业法人，有独立的法人财产，享有法人财产权。公司以其全部财产对公司的债务承担责任。”第五十八条第二款规定“本法所称一人有限责任公司，是指只有一个自然人股东或者一个法人股东的有限责任公司。”天昊公司是赵毅设立的一人有限责任公司，其作为企业法人，有独立的法人财产，享有法人财产权，天昊公司的60万元到期...\", \"案件背景 吕某因申请德州中院违法拖延执行赔偿一案，不服山东高院赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定，驳回吕某的国家赔偿请求。 吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔偿决定，向本院赔偿委员会提出申诉。本院赔偿委员会依法对本案进行了审查，现已审查终结。 吕某以拖延执行造成其损失应予赔偿为由，向德州中院提出赔偿申请。德州中院于2022年12月29日作出（2022）鲁14法赔4号国家赔偿决定：驳回吕某的国家赔偿请求。\", \"案件执行过程 吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，经过多次判决和执行，最终德州中院及德州经济技术开发区人民法院执行并交付吕某财产共计110余万元，因被执行人无财产可供处置，终结本次执行程序。 山东高院赔偿委员会经审理查明，吕某与赵毅、夏华俊、赵海涛民间借贷纠纷一案，德州中院于2011年11月24日作出（2010）德中民初字第11号民事判决：一、被告赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还原告吕某借款1320210元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）；二、被告赵毅、夏华俊、赵海涛承担连带清偿责任；三、驳回原告吕某的其他诉讼请求。吕某不服，提起上诉。山东高院于2012年6月5日作出（2012）鲁民一终字第76号民事判决：一、维持德州中院（2010）德中民初字第11号民事判决第二项；二、撤销德州中院（2010）德中民初字第11号民事判决第三项；三、变更德州中院（2010）德中民初字第11号民事判决第一项为“被上诉人赵毅、夏华俊、赵海涛自判决生效之日起10日内偿还上诉人吕某借款4214278.33元及利息（自2010年2月25日至判决生效日止，按中国人民银行同期贷款利率计算）”。该判决生效后，经吕某申请，德州中院于2012年6月25日立案执行，执行案号为（2012）德中执字第78号，并于2012年6月26日向被执行人赵毅、夏...\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A7\", \"DOC1_A5\", \"DOC1_A1\", \"DOC1_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A6\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

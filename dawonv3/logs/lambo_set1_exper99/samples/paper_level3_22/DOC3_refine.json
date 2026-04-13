@@ -1,0 +1,1365 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET",
+  "selected_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A9",
+    "DOC3_A8"
+  ],
+  "final_current_query": "Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "utility_hits": {
+          "DOC3_A9": [
+            "reference_section",
+            "likely_reverse_citation_penalty",
+            "other_doc_cites_target",
+            "citation_direction_reference_list",
+            "citation_format_cue"
+          ],
+          "DOC3_A3": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC3_A8": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC3_A5": [
+            "reference_section",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A9": 25.0,
+          "DOC3_A3": 10.0,
+          "DOC3_A8": 10.0,
+          "DOC3_A5": 10.0
+        },
+        "score_breakdown": {
+          "DOC3_A9": {
+            "local_relevance": 42.0,
+            "answer_utility": 25.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 15.097,
+            "redundancy_penalty": 0.0,
+            "total": 89.097
+          },
+          "DOC3_A3": {
+            "local_relevance": 34.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 9.714,
+            "redundancy_penalty": 0.0,
+            "total": 60.714
+          },
+          "DOC3_A8": {
+            "local_relevance": 36.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.503,
+            "redundancy_penalty": 0.0,
+            "total": 60.503
+          },
+          "DOC3_A5": {
+            "local_relevance": 28.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.908,
+            "redundancy_penalty": 0.0,
+            "total": 52.908
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "The current query is about LLMs' inability to plan but their potential to help planning in LLM-modulo frameworks. The document title suggests a focus on self-correction in LLMs, which may not directly address the query. However, the abstract (DOC3_A1) could provide a concise summary of the paper's main findings, which might indicate whether the paper has any relevance to the query or if it cites or references other relevant works.",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract",
+        "summary": "Expanded same-section read window around DOC3_A1: This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that...",
+        "text": "[DOC3_A1 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract]\n#### Abstract\n\nLarge Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to selfcorrect their responses without external feedback, and at times, their performance even degrades after self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.\n\n[DOC3_A5 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 4 MULTI-AGENT DEBATE DOES NOT OUTPERFORM SELF-CONSISTENCY]\n## 4 MULTI-AGENT DEBATE DOES NOT OUTPERFORM SELF-CONSISTENCY\n\nAnother potential approach for LLMs to self-correct their reasoning involves allowing the models to critique and debate through multiple model calls (Du et al., 2023; Liang et al., 2023, Chen et al., 2023a). Du et al. (2023) implement a multi-agent debate method by leveraging multiple instances of a single ChatGPT model and demonstrate significant improvements on reasoning tasks. We adopt their method to test performance on GSM8K. For an unbiased implementation, we use the exact same prompt as Du et al. (2023) and replicate their experiment with the gpt-3.5-turbo-0301 model, incorporating 3 agents and 2 rounds of debate. The only distinction is that, to reduce result variance, we test on the complete test set of GSM8K, compared to their usage of 100 examples. For reference, we also report the results of self-consistency (Wang et al., 2022), which prompts models to generate multiple responses and performs majority voting to select the final answer.\n\nTable 7 presents the results. The results indicate that both multi-agent debate and self-consistency achieve significant improvements over standard prompting. However, when comparing multi-agent debate to self-consistency, we observe that the performance of multi-agent is only slightly better than that of self-consistency with the same number of agents ( 3 responses, the baseline also compared in Du et al. (2023)). Furthermore, for self-consistency with an equivalent number of responses, multi-agent debate significantly underperforms simple self-consistency using majority voting.\n\nIn fact, rather than labeling the multi-agent debate as a form of \"debate\" or \"critique\", it is more appropriate to perceive it as a means to achieve \"consistency\" across multiple model generations. Fundamentally, its concept mirrors that of self-consistency; the distinction lies in the voting mechanism, whether voting is model-driven or purely based on counts. The observed improvement is evidently not attributed to \"self-correction\", but rather to \"self-consistency\". If we aim to argue that LLMs can self-correct reasoning through multi-agent debate, it is preferable to exclude the effects of selection among multiple generations.\n\n## 5 PROMPT DESIGN ISSUES IN SELF-CORRECTION EVALUATION\n\n[DOC3_A8 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT]\nAlthough we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their safety (Bai et al., 2022; Ganguli et al., 2023, Madaan et al., 2023). A key distinction arises in the capability of LLMs to accurately assess their responses in relation to the given tasks. For example, LLMs can properly evaluate whether a response is inappropriate Ganguli et al. 2023), but they may struggle to identify errors in their reasoning.\n\nFurthermore, several prior works have already shown that LLM self-correction performance becomes significantly weaker without access to external feedback (Gou et al., 2023, Zhou et al., 2023a) and can be easily biased by misleading feedback (Wang et al., 2023a), which is consistent with our findings in this work. However, we still identified prevailing ambiguity in the wider community. Some existing literature may inadvertently contribute to this confusion, either by relegating crucial details about label usage to less prominent sections or by failing to clarify that their designed selfcorrection strategies actually incorporate external feedback. Regarding this, our paper serves as a call to action, urging researchers to approach this domain with a discerning and critical perspective. We also encourage future research to explore approaches that can genuinely enhance reasoning.\n\n## REPRODUCIBILITY STATEMENT",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A5",
+          "DOC3_A8"
+        ],
+        "primary_anchor_id": "DOC3_A1",
+        "anchor_role_candidates": [
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "LARGE",
+          "LANGUAGE",
+          "MoDELS",
+          "CANNOT",
+          "SELF-CorRECT",
+          "REASONING",
+          "YET"
+        ],
+        "anchor_targets": [
+          "LARGE",
+          "LANGUAGE",
+          "MoDELS",
+          "CANNOT"
+        ],
+        "provenance_hints": {
+          "strength": "medium",
+          "signals": [],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "same_target_paper": 9,
+            "disambiguates": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "same_target_paper",
+            "target_anchor_id": "DOC3_A9",
+            "weight": 2.8,
+            "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+          },
+          {
+            "relation_type": "same_target_paper",
+            "target_anchor_id": "DOC3_A8",
+            "weight": 2.8,
+            "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+          },
+          {
+            "relation_type": "same_target_paper",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 2.8,
+            "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+          },
+          {
+            "relation_type": "same_target_paper",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 2.8,
+            "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+          },
+          {
+            "relation_type": "same_target_paper",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 2.8,
+            "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+          },
+          {
+            "relation_type": "same_target_paper",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 2.8,
+            "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+          }
+        ]
+      },
+      "extract_think": "The abstract of the paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\" provides some context about the paper's focus on self-correction within LLMs. However, it does not explicitly mention any citations or references to other provided papers. Therefore, we need to inspect other parts of the document to find citation and reference information.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A10"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A10",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A9",
+        "candidate_anchor_ids": [
+          "DOC3_A9",
+          "DOC3_A8",
+          "DOC3_A3",
+          "DOC3_A5"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A1"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A10"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A10",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC3_A1"
+        ],
+        "utility_hits": {
+          "DOC3_A9": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC3_A8": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC3_A3": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC3_A5": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A9": 30.0,
+          "DOC3_A8": 30.0,
+          "DOC3_A3": 30.0,
+          "DOC3_A5": 30.0
+        },
+        "relation_hits": {
+          "DOC3_A9": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A1"
+          ],
+          "DOC3_A8": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A1"
+          ],
+          "DOC3_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A1"
+          ],
+          "DOC3_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A1"
+          ]
+        },
+        "relation_score": {
+          "DOC3_A9": 13.56,
+          "DOC3_A8": 13.56,
+          "DOC3_A3": 13.56,
+          "DOC3_A5": 13.56
+        },
+        "anchor_role_hits": {
+          "DOC3_A9": [
+            "citation_direction"
+          ],
+          "DOC3_A8": [
+            "citation_direction"
+          ],
+          "DOC3_A3": [
+            "citation_direction"
+          ],
+          "DOC3_A5": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC3_A9": {
+            "local_relevance": 70.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 13.56,
+            "weak_priors": 15.097,
+            "redundancy_penalty": 0.0,
+            "total": 135.657
+          },
+          "DOC3_A8": {
+            "local_relevance": 68.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 13.56,
+            "weak_priors": 7.503,
+            "redundancy_penalty": 0.0,
+            "total": 126.063
+          },
+          "DOC3_A3": {
+            "local_relevance": 58.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 13.56,
+            "weak_priors": 9.714,
+            "redundancy_penalty": 0.0,
+            "total": 118.274
+          },
+          "DOC3_A5": {
+            "local_relevance": 56.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 13.56,
+            "weak_priors": 7.908,
+            "redundancy_penalty": 0.0,
+            "total": 114.468
+          }
+        }
+      },
+      "anchor_id": "DOC3_A9",
+      "plan_think": "The abstract did not provide explicit citation or reference information. The next logical step would be to inspect the references section of the paper, as it is likely to contain direct citations to other works. The section titled \"REFERENCES\" (DOC3_A9) seems like the most promising place to look for this information.",
+      "info": {
+        "anchor_id": "DOC3_A9",
+        "anchor_type": "attribution_region",
+        "section_path": "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES",
+        "summary": "Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning.",
+        "text": "## REFERENCES\n\nHussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023.\n\nRohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023.\n\nYuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhoseini, Cameron McKinnon, et al. Constitutional ai: Harmlessness from ai feedback. arXiv preprint arXiv:2212.08073, 2022.\n\nYejin Bang, Samuel Cahyawijaya, Nayeon Lee, Wenliang Dai, Dan Su, Bryan Wilie, Holy Lovenia, Ziwei Ji, Tiezheng Yu, Willy Chung, et al. A multitask, multilingual, multimodal evaluation of chatgpt on reasoning, hallucination, and interactivity. In Proceedings of the 13th International Joint Conference on Natural Language Processing and the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 675-718, 2023.\n\nNicholas Carlini, Florian Tramer, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom B Brown, Dawn Song, Ulfar Erlingsson, et al. Extracting training data from large language models. In USENIX Security Symposium, volume 6, 2021.\n\nJustin Chih-Yao Chen, Swarnadeep Saha, and Mohit Bansal. Reconcile: Round-table conference improves reasoning via consensus among diverse llms. arXiv preprint arXiv:2309.13007, 2023a.\n\nXinyun Chen, Maxwell Lin, Nathanael Schärli, and Denny Zhou. Teaching large language models to self-debug. arXiv preprint arXiv:2304.05128, 2023b.\n\nAakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. Palm: Scaling language modeling with pathways. Journal of Machine Learning Research, 24(240):1-113, 2023. URL http: //jmlr.org/papers/v24/22-1144.html\n\nKarl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.\n\nYilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\n\nDeep Ganguli, Amanda Askell, Nicholas Schiefer, Thomas Liao, Kamilė Lukošiūtė, Anna Chen, Anna Goldie, Azalia Mirhoseini, Catherine Olsson, Danny Hernandez, et al. The capacity for moral self-correction in large language models. arXiv preprint arXiv:2302.07459, 2023.\n\nLuyu Gao, Zhuyun Dai, Panupong Pasupat, Anthony Chen, Arun Tejasvi Chaganty, Yicheng Fan, Vincent Zhao, Ni Lao, Hongrae Lee, Da-Cheng Juan, et al. Rarr: Researching and revising what language models say, using language models. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 16477-16508, 2023.\n\nZhibin Gou, Zhihong Shao, Yeyun Gong, Yelong Shen, Yujiu Yang, Nan Duan, and Weizhu Chen. Critic: Large language models can self-correct with tool-interactive critiquing. arXiv preprint arXiv:2305.11738, 2023\n\nJie Huang and Kevin Chen-Chuan Chang. Towards reasoning in large language models: A survey. In Findings of the Association for Computational Linguistics: ACL 2023. Association for Computational Linguistics, 2023.\n\nJie Huang, Hanyin Shao, and Kevin Chen-Chuan Chang. Are large pre-trained language models leaking your personal information? In Findings of the Association for Computational Linguistics: EMNLP 2022, pp. 2038-2047, Abu Dhabi, United Arab Emirates, 2022. Association for Computational Linguistics.\n\nGeunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. Advances in Neural Information Processing Systems, 2023.\n\nTakeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. Large language models are zero-shot reasoners. Advances in neural information processing systems, $35: 22199-22213,2022$.\n\nHaoran Li, Dadi Guo, Wei Fan, Mingshi Xu, Jie Huang, Fanpu Meng, and Yangqiu Song. Multistep jailbreaking privacy attacks on chatgpt. In Findings of the Association for Computational Linguistics: EMNLP 2023, pp. 4138-4153, 2023.\n\nTian Liang, Zhiwei He, Wenxiang Jiao, Xing Wang, Yan Wang, Rui Wang, Yujiu Yang, Zhaopeng Tu, and Shuming Shi. Encouraging divergent thinking in large language models through multiagent debate. arXiv preprint arXiv:2305.19118, 2023.\n\nHunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, and Karl Cobbe. Let's verify step by step. arXiv preprint arXiv:2305.20050, 2023.\n\nAman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. Advances in Neural Information Processing Systems, 2023.\n\nTheo X Olausson, Jeevana Priya Inala, Chenglong Wang, Jianfeng Gao, and Armando SolarLezama. Demystifying gpt self-repair for code generation. arXiv preprint arXiv:2306.09896, 2023.\n\nOpenAI. Gpt-4 technical report, 2023.\n\nLiangming Pan, Michael Saxon, Wenda Xu, Deepak Nathani, Xinyi Wang, and William Yang Wang. Automatically correcting large language models: Surveying the landscape of diverse selfcorrection strategies. arXiv preprint arXiv:2308.03188, 2023.\n\nDebjit Paul, Mete Ismayilzada, Maxime Peyrard, Beatriz Borges, Antoine Bosselut, Robert West, and Boi Faltings. Refiner: Reasoning feedback on intermediate representations. arXiv preprint arXiv:2304.01904, 2023.\n\nHanyin Shao, Jie Huang, Shen Zheng, and Kevin Chen-Chuan Chang. Quantifying association capabilities of large language models and its implications on privacy leakage. arXiv preprint arXiv:2305.12707, 2023.\n\nFreda Shi, Xinyun Chen, Kanishka Misra, Nathan Scales, David Dohan, Ed H Chi, Nathanael Schärli, and Denny Zhou. Large language models can be easily distracted by irrelevant context. In International Conference on Machine Learning, pp. 31210-31227. PMLR, 2023.\n\nNoah Shinn, Federico Cassano, Beck Labash, Ashwin Gopinath, Karthik Narasimhan, and Shunyu Yao. Reflexion: Language agents with verbal reinforcement learning. Advances in Neural Information Processing Systems, 2023.\n\nAlon Talmor, Jonathan Herzig, Nicholas Lourie, and Jonathan Berant. Commonsenseqa: A question answering challenge targeting commonsense knowledge. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), pp. 4149-4158, 2019.\n\nHugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288, 2023.\n\nBoshi Wang, Xiang Yue, and Huan Sun. Can chatgpt defend its belief in truth? evaluating llm reasoning via debate. In Findings of the Association for Computational Linguistics: EMNLP 2023, pp. 11865-11881, 2023a.\n\nTianlu Wang, Ping Yu, Xiaoqing Ellen Tan, Sean O'Brien, Ramakanth Pasunuru, Jane Dwivedi-Yu, Olga Golovneva, Luke Zettlemoyer, Maryam Fazel-Zarandi, and Asli Celikyilmaz. Shepherd: A critic for language model generation. arXiv preprint arXiv:2308.04592, 2023b.\n\nXuezhi Wang, Jason Wei, Dale Schuurmans, Quoc V Le, Ed H Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. Self-consistency improves chain of thought reasoning in language models. In The Eleventh International Conference on Learning Representations, 2022.\n\nAlexander Wei, Nika Haghtalab, and Jacob Steinhardt. Jailbroken: How does llm safety training fail? arXiv preprint arXiv:2307.02483, 2023.\n\nJason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, et al. Chain-of-thought prompting elicits reasoning in large language models. Advances in Neural Information Processing Systems, 35:24824-24837, 2022.\n\nSean Welleck, Ximing Lu, Peter West, Faeze Brahman, Tianxiao Shen, Daniel Khashabi, and Yejin Choi. Generating sequences by learning to self-correct. In The Eleventh International Conference on Learning Representations, 2023.\n\nZhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Bengio, William Cohen, Ruslan Salakhutdinov, and Christopher D Manning. Hotpotqa: A dataset for diverse, explainable multi-hop question answering. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, 2018.\n\nShen Zheng, Jie Huang, and Kevin Chen-Chuan Chang. Why does chatgpt fall short in providing truthful answers? ArXiv preprint, abs/2304.10513, 2023.\n\nAojun Zhou, Ke Wang, Zimu Lu, Weikang Shi, Sichun Luo, Zipeng Qin, Shaoqing Lu, Anya Jia, Linqi Song, Mingjie Zhan, et al. Solving challenging math word problems using gpt-4 code interpreter with code-based self-verification. arXiv preprint arXiv:2308.07921, 2023a.\n\nDenny Zhou, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, Claire Cui, Olivier Bousquet, Quoc V Le, et al. Least-to-most prompting enables complex reasoning in large language models. In The Eleventh International Conference on Learning Representations, $2023 \\mathrm{~b}$.\n\nAndy Zou, Zifan Wang, J Zico Kolter, and Matt Fredrikson. Universal and transferable adversarial attacks on aligned language models. arXiv preprint arXiv:2307.15043, 2023.",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "LARGE",
+          "LANGUAGE",
+          "MoDELS",
+          "CANNOT",
+          "SELF-CorRECT",
+          "REASONING",
+          "YET"
+        ],
+        "anchor_targets": [
+          "cited",
+          "LARGE",
+          "LANGUAGE",
+          "MoDELS",
+          "CANNOT"
+        ],
+        "anchor_value_hints": [
+          "15",
+          "2",
+          "2023",
+          "2305.10403",
+          "2212.08073",
+          "2022",
+          "13",
+          "3"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 9,
+            "same_target_paper": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The references section provides a list of papers cited by the current paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\". These citations can be used to populate the \"Reference\" field. However, we do not have information about which papers cite the current paper, so the \"Citation\" field remains empty. We should continue searching for any explicit mentions of the current paper in other provided documents to fill the \"Citation\" field.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A1",
+            "DOC3_A9"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...",
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A10"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A10",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC3_A8",
+        "candidate_anchor_ids": [
+          "DOC3_A8",
+          "DOC3_A3",
+          "DOC3_A5",
+          "DOC3_A6"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A1",
+            "DOC3_A9"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...",
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A10"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A10",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A9"
+        ],
+        "utility_hits": {
+          "DOC3_A8": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC3_A3": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC3_A5": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC3_A6": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A8": 30.0,
+          "DOC3_A3": 30.0,
+          "DOC3_A5": 30.0,
+          "DOC3_A6": 30.0
+        },
+        "relation_hits": {
+          "DOC3_A8": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A9",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A9",
+            "same_target_paper_selected=DOC3_A1"
+          ],
+          "DOC3_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A9",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A9",
+            "same_target_paper_selected=DOC3_A1"
+          ],
+          "DOC3_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A9",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A9",
+            "same_target_paper_selected=DOC3_A1"
+          ],
+          "DOC3_A6": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A9",
+            "supports_selected=DOC3_A1",
+            "same_target_paper_selected=DOC3_A9",
+            "same_target_paper_selected=DOC3_A1"
+          ]
+        },
+        "relation_score": {
+          "DOC3_A8": 19.12,
+          "DOC3_A3": 19.12,
+          "DOC3_A5": 19.12,
+          "DOC3_A6": 19.12
+        },
+        "anchor_role_hits": {
+          "DOC3_A8": [
+            "citation_direction"
+          ],
+          "DOC3_A3": [
+            "citation_direction"
+          ],
+          "DOC3_A5": [
+            "citation_direction"
+          ],
+          "DOC3_A6": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC3_A8": {
+            "local_relevance": 68.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 19.12,
+            "weak_priors": 7.503,
+            "redundancy_penalty": 0.0,
+            "total": 131.623
+          },
+          "DOC3_A3": {
+            "local_relevance": 58.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 19.12,
+            "weak_priors": 9.714,
+            "redundancy_penalty": 0.0,
+            "total": 123.834
+          },
+          "DOC3_A5": {
+            "local_relevance": 56.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 19.12,
+            "weak_priors": 7.908,
+            "redundancy_penalty": 0.0,
+            "total": 120.028
+          },
+          "DOC3_A6": {
+            "local_relevance": 52.0,
+            "answer_utility": 30.0,
+            "coverage": 7.0,
+            "relation": 19.12,
+            "weak_priors": 7.754,
+            "redundancy_penalty": 0.0,
+            "total": 115.874
+          }
+        }
+      },
+      "anchor_id": "DOC3_A8",
+      "plan_think": "The references section provided a list of papers cited by the current paper, which helps us populate the \"Reference\" field. However, we still need to find out if any of the provided papers cite the current paper to populate the \"Citation\" field. The \"BACKGROUND AND RELATED WORK\" section (DOC3_A3) is a good candidate because it often contains discussions of other works and may mention the current paper if it is relevant to the topic.",
+      "info": {
+        "anchor_id": "DOC3_A8",
+        "anchor_type": "attribution_region",
+        "section_path": "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT",
+        "summary": "Expanded same-section read window around DOC3_A8: This section acknowledges the limitations of the study and its broader impact, noting that self-correction can be effective in other domains but struggles with reasoning tasks w...",
+        "text": "[DOC3_A6 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 5 PROMPT DESIGN ISSUES IN SELF-CORRECTION EVALUATION]\nIn Section 3, we observe that although self-correction decreases reasoning performance with all types of feedback prompts we have evaluated, performance varies with different feedback prompts. In this section, we further emphasize the importance of proper prompt design in generating initial LLM responses to fairly measure the performance improvement achieved by self-correction. For example, if a task requires that the model response should meet criteria that can be easily specified\nin the initial instruction (e.g., the output should contain certain words, the generated code should be efficient, the sentiment should be positive, etc.), instead of including such requirements only in the feedback prompt, an appropriate comparison would be to directly and explicitly incorporate these requirements into the prompt for generating initial responses. Otherwise, when the instruction for generating initial predictions is not informative enough, even if the performance improves, it is unclear whether the improvement merely comes from more detailed instructions in the feedback prompt or from the self-correction step itself.\n\nTo illustrate such prompt design issues in the self-correction evaluation of some prior work, we take the Constrained Generation task in Madaan et al. (2023) as an example, where the task requires models to generate coherent sentences using all 20-30 input concepts. The original prompt in Madaan et al. (2023) (Figure 7) does not clearly specify that the LLM needs to include all concepts in the prompt; thus, they show that self-correction improves task performance by asking the model to identify missing concepts and then guiding it to incorporate these concepts through feedback.\n\nBased on this observation, we add the following instruction \"Write a reasonable paragraph that includes *ALL* of the above concepts\" to the prompt for initial response generation (refer to Figure 8 for the full prompt). Following Madaan et al. (2023), we use concept coverage as the metric. We reference their results and replicate their experiments using gpt-3.5-turbo-0613. Table 8 demonstrates that our new prompt, denoted as Standard Prompting (ours), significantly outperforms the results after self-correction of Madaan et al. (2023), and applying their self-correction prompt on top of model responses from our stronger version of the standard prompting again leads to a decrease in performance.\n\n## 6 CONCLUSION AND DISCUSSION\n\n[DOC3_A8 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT]\nAlthough we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their safety (Bai et al., 2022; Ganguli et al., 2023, Madaan et al., 2023). A key distinction arises in the capability of LLMs to accurately assess their responses in relation to the given tasks. For example, LLMs can properly evaluate whether a response is inappropriate Ganguli et al. 2023), but they may struggle to identify errors in their reasoning.\n\nFurthermore, several prior works have already shown that LLM self-correction performance becomes significantly weaker without access to external feedback (Gou et al., 2023, Zhou et al., 2023a) and can be easily biased by misleading feedback (Wang et al., 2023a), which is consistent with our findings in this work. However, we still identified prevailing ambiguity in the wider community. Some existing literature may inadvertently contribute to this confusion, either by relegating crucial details about label usage to less prominent sections or by failing to clarify that their designed selfcorrection strategies actually incorporate external feedback. Regarding this, our paper serves as a call to action, urging researchers to approach this domain with a discerning and critical perspective. We also encourage future research to explore approaches that can genuinely enhance reasoning.\n\n## REPRODUCIBILITY STATEMENT",
+        "source_window_anchor_ids": [
+          "DOC3_A6",
+          "DOC3_A8"
+        ],
+        "primary_anchor_id": "DOC3_A8",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "LARGE",
+          "LANGUAGE",
+          "MoDELS",
+          "CANNOT",
+          "SELF-CorRECT",
+          "REASONING",
+          "YET"
+        ],
+        "anchor_targets": [
+          "LARGE",
+          "LANGUAGE",
+          "MoDELS",
+          "CANNOT"
+        ],
+        "anchor_value_hints": [
+          "7",
+          "2022",
+          "2023,",
+          "2023"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 9,
+            "same_target_paper": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk does not provide explicit citation or reference information about the current paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\". Instead, it discusses the limitations and broader impact of the study, referencing other works but not indicating whether those works cite the current paper. Therefore, we need to continue searching for explicit mentions of the current paper in other provided documents to populate the \"Citation\" field.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A1",
+            "DOC3_A9",
+            "DOC3_A8"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...",
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein...",
+            "LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT This section acknowledges the limitations of the study and its broader impact, noting that self-correction can be effective in other domains but struggles with reasoning tasks without external feedback. Although we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their sa..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A10"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A10",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['LARGE', 'LANGUAGE']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The current query is about LLMs' inability to plan but their potential to help planning in LLM-modulo frameworks. The document title suggests a focus on self-correction in LLMs, which may not directly address the query. However, the abstract (DOC3_A1) could provide a concise summary of the paper's main findings, which might indicate whether the paper has any relevance to the query or if it cites or references other relevant works.</think>\n<search>{\"current_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A9\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A3\": [\"reference_section\", \"citation_format_cue\"], \"DOC3_A8\": [\"reference_section\", \"citation_format_cue\"], \"DOC3_A5\": [\"reference_section\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A9\": 25.0, \"DOC3_A3\": 10.0, \"DOC3_A8\": 10.0, \"DOC3_A5\": 10.0}, \"score_breakdown\": {\"DOC3_A9\": {\"local_relevance\": 42.0, \"answer_utility\": 25.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 15.097, \"redundancy_penalty\": 0.0, \"total\": 89.097}, \"DOC3_A3\": {\"local_relevance\": 34.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 60.714}, \"DOC3_A8\": {\"local_relevance\": 36.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.503, \"redundancy_penalty\": 0.0, \"total\": 60.503}, \"DOC3_A5\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.908, \"redundancy_penalty\": 0.0, \"total\": 52.908}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract\", \"summary\": \"Expanded same-section read window around DOC3_A1: This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that...\", \"text\": \"[DOC3_A1 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract]\\n#### Abstract\\n\\nLarge Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to selfcorrect their responses without external feedback, and at times, their performance even degrades after self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.\\n\\n[DOC3_A5 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 4 MULTI-AGENT DEBATE DOES NOT OUTPERFORM SELF-CONSISTENCY]\\n## 4 MULTI-AGENT DEBATE DOES NOT OUTPERFORM SELF-CONSISTENCY\\n\\nAnother potential approach for LLMs to self-correct their reasoning involves allowing the models to critique and debate through multiple model calls (Du et al., 2023; Liang et al., 2023, Chen et al., 2023a). Du et al. (2023) implement a multi-agent debate method by leveraging multiple instances of a single ChatGPT model and demonstrate significant improvements on reasoning tasks. We adopt their method to test performance on GSM8K. For an unbiased implementation, we use the exact same prompt as Du et al. (2023) and replicate their experiment with the gpt-3.5-turbo-0301 model, incorporating 3 agents and 2 rounds of debate. The only distinction is that, to reduce result variance, we test on the complete test set of GSM8K, compared to their usage of 100 examples. For reference, we also report the results of self-consistency (Wang et al., 2022), which prompts models to generate multiple responses and performs majority voting to select the final answer.\\n\\nTable 7 presents the results. The results indicate that both multi-agent debate and self-consistency achieve significant improvements over standard prompting. However, when comparing multi-agent debate to self-consistency, we observe that the performance of multi-agent is only slightly better than that of self-consistency with the same number of agents ( 3 responses, the baseline also compared in Du et al. (2023)). Furthermore, for self-consistency with an equivalent number of responses, multi-agent debate significantly underperforms simple self-consistency using majority voting.\\n\\nIn fact, rather than labeling the multi-agent debate as a form of \\\"debate\\\" or \\\"critique\\\", it is more appropriate to perceive it as a means to achieve \\\"consistency\\\" across multiple model generations. Fundamentally, its concept mirrors that of self-consistency; the distinction lies in the voting mechanism, whether voting is model-driven or purely based on counts. The observed improvement is evidently not attributed to \\\"self-correction\\\", but rather to \\\"self-consistency\\\". If we aim to argue that LLMs can self-correct reasoning through multi-agent debate, it is preferable to exclude the effects of selection among multiple generations.\\n\\n## 5 PROMPT DESIGN ISSUES IN SELF-CORRECTION EVALUATION\\n\\n[DOC3_A8 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT]\\nAlthough we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their safety (Bai et al., 2022; Ganguli et al., 2023, Madaan et al., 2023). A key distinction arises in the capability of LLMs to accurately assess their responses in relation to the given tasks. For example, LLMs can properly evaluate whether a response is inappropriate Ganguli et al. 2023), but they may struggle to identify errors in their reasoning.\\n\\nFurthermore, several prior works have already shown that LLM self-correction performance becomes significantly weaker without access to external feedback (Gou et al., 2023, Zhou et al., 2023a) and can be easily biased by misleading feedback (Wang et al., 2023a), which is consistent with our findings in this work. However, we still identified prevailing ambiguity in the wider community. Some existing literature may inadvertently contribute to this confusion, either by relegating crucial details about label usage to less prominent sections or by failing to clarify that their designed selfcorrection strategies actually incorporate external feedback. Regarding this, our paper serves as a call to action, urging researchers to approach this domain with a discerning and critical perspective. We also encourage future research to explore approaches that can genuinely enhance reasoning.\\n\\n## REPRODUCIBILITY STATEMENT\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A5\", \"DOC3_A8\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"entity_binding\"], \"anchor_entities\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\", \"SELF-CorRECT\", \"REASONING\", \"YET\"], \"anchor_targets\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\"], \"provenance_hints\": {\"strength\": \"medium\", \"signals\": [], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"same_target_paper\": 9, \"disambiguates\": 9}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}]}</info>\n<think>The abstract of the paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\" provides some context about the paper's focus on self-correction within LLMs. However, it does not explicitly mention any citations or references to other provided papers. Therefore, we need to inspect other parts of the document to find citation and reference information.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The abstract did not provide explicit citation or reference information. The next logical step would be to inspect the references section of the paper, as it is likely to contain direct citations to other works. The section titled \"REFERENCES\" (DOC3_A9) seems like the most promising place to look for this information.</think>\n<search>{\"current_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A9\", \"candidate_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A3\", \"DOC3_A5\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC3_A1\"], \"utility_hits\": {\"DOC3_A9\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A8\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A3\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A5\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A9\": 30.0, \"DOC3_A8\": 30.0, \"DOC3_A3\": 30.0, \"DOC3_A5\": 30.0}, \"relation_hits\": {\"DOC3_A9\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"]}, \"relation_score\": {\"DOC3_A9\": 13.56, \"DOC3_A8\": 13.56, \"DOC3_A3\": 13.56, \"DOC3_A5\": 13.56}, \"anchor_role_hits\": {\"DOC3_A9\": [\"citation_direction\"], \"DOC3_A8\": [\"citation_direction\"], \"DOC3_A3\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A9\": {\"local_relevance\": 70.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 15.097, \"redundancy_penalty\": 0.0, \"total\": 135.657}, \"DOC3_A8\": {\"local_relevance\": 68.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 7.503, \"redundancy_penalty\": 0.0, \"total\": 126.063}, \"DOC3_A3\": {\"local_relevance\": 58.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 118.274}, \"DOC3_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 7.908, \"redundancy_penalty\": 0.0, \"total\": 114.468}}}</search>\n<info>{\"anchor_id\": \"DOC3_A9\", \"anchor_type\": \"attribution_region\", \"section_path\": \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES\", \"summary\": \"Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning.\", \"text\": \"## REFERENCES\\n\\nHussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023.\\n\\nRohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023.\\n\\nYuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhoseini, Cameron McKinnon, et al. Constitutional ai: Harmlessness from ai feedback. arXiv preprint arXiv:2212.08073, 2022.\\n\\nYejin Bang, Samuel Cahyawijaya, Nayeon Lee, Wenliang Dai, Dan Su, Bryan Wilie, Holy Lovenia, Ziwei Ji, Tiezheng Yu, Willy Chung, et al. A multitask, multilingual, multimodal evaluation of chatgpt on reasoning, hallucination, and interactivity. In Proceedings of the 13th International Joint Conference on Natural Language Processing and the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 675-718, 2023.\\n\\nNicholas Carlini, Florian Tramer, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom B Brown, Dawn Song, Ulfar Erlingsson, et al. Extracting training data from large language models. In USENIX Security Symposium, volume 6, 2021.\\n\\nJustin Chih-Yao Chen, Swarnadeep Saha, and Mohit Bansal. Reconcile: Round-table conference improves reasoning via consensus among diverse llms. arXiv preprint arXiv:2309.13007, 2023a.\\n\\nXinyun Chen, Maxwell Lin, Nathanael Schärli, and Denny Zhou. Teaching large language models to self-debug. arXiv preprint arXiv:2304.05128, 2023b.\\n\\nAakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. Palm: Scaling language modeling with pathways. Journal of Machine Learning Research, 24(240):1-113, 2023. URL http: //jmlr.org/papers/v24/22-1144.html\\n\\nKarl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.\\n\\nYilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\nDeep Ganguli, Amanda Askell, Nicholas Schiefer, Thomas Liao, Kamilė Lukošiūtė, Anna Chen, Anna Goldie, Azalia Mirhoseini, Catherine Olsson, Danny Hernandez, et al. The capacity for moral self-correction in large language models. arXiv preprint arXiv:2302.07459, 2023.\\n\\nLuyu Gao, Zhuyun Dai, Panupong Pasupat, Anthony Chen, Arun Tejasvi Chaganty, Yicheng Fan, Vincent Zhao, Ni Lao, Hongrae Lee, Da-Cheng Juan, et al. Rarr: Researching and revising what language models say, using language models. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 16477-16508, 2023.\\n\\nZhibin Gou, Zhihong Shao, Yeyun Gong, Yelong Shen, Yujiu Yang, Nan Duan, and Weizhu Chen. Critic: Large language models can self-correct with tool-interactive critiquing. arXiv preprint arXiv:2305.11738, 2023\\n\\nJie Huang and Kevin Chen-Chuan Chang. Towards reasoning in large language models: A survey. In Findings of the Association for Computational Linguistics: ACL 2023. Association for Computational Linguistics, 2023.\\n\\nJie Huang, Hanyin Shao, and Kevin Chen-Chuan Chang. Are large pre-trained language models leaking your personal information? In Findings of the Association for Computational Linguistics: EMNLP 2022, pp. 2038-2047, Abu Dhabi, United Arab Emirates, 2022. Association for Computational Linguistics.\\n\\nGeunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. Advances in Neural Information Processing Systems, 2023.\\n\\nTakeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. Large language models are zero-shot reasoners. Advances in neural information processing systems, $35: 22199-22213,2022$.\\n\\nHaoran Li, Dadi Guo, Wei Fan, Mingshi Xu, Jie Huang, Fanpu Meng, and Yangqiu Song. Multistep jailbreaking privacy attacks on chatgpt. In Findings of the Association for Computational Linguistics: EMNLP 2023, pp. 4138-4153, 2023.\\n\\nTian Liang, Zhiwei He, Wenxiang Jiao, Xing Wang, Yan Wang, Rui Wang, Yujiu Yang, Zhaopeng Tu, and Shuming Shi. Encouraging divergent thinking in large language models through multiagent debate. arXiv preprint arXiv:2305.19118, 2023.\\n\\nHunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, and Karl Cobbe. Let's verify step by step. arXiv preprint arXiv:2305.20050, 2023.\\n\\nAman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. Advances in Neural Information Processing Systems, 2023.\\n\\nTheo X Olausson, Jeevana Priya Inala, Chenglong Wang, Jianfeng Gao, and Armando SolarLezama. Demystifying gpt self-repair for code generation. arXiv preprint arXiv:2306.09896, 2023.\\n\\nOpenAI. Gpt-4 technical report, 2023.\\n\\nLiangming Pan, Michael Saxon, Wenda Xu, Deepak Nathani, Xinyi Wang, and William Yang Wang. Automatically correcting large language models: Surveying the landscape of diverse selfcorrection strategies. arXiv preprint arXiv:2308.03188, 2023.\\n\\nDebjit Paul, Mete Ismayilzada, Maxime Peyrard, Beatriz Borges, Antoine Bosselut, Robert West, and Boi Faltings. Refiner: Reasoning feedback on intermediate representations. arXiv preprint arXiv:2304.01904, 2023.\\n\\nHanyin Shao, Jie Huang, Shen Zheng, and Kevin Chen-Chuan Chang. Quantifying association capabilities of large language models and its implications on privacy leakage. arXiv preprint arXiv:2305.12707, 2023.\\n\\nFreda Shi, Xinyun Chen, Kanishka Misra, Nathan Scales, David Dohan, Ed H Chi, Nathanael Schärli, and Denny Zhou. Large language models can be easily distracted by irrelevant context. In International Conference on Machine Learning, pp. 31210-31227. PMLR, 2023.\\n\\nNoah Shinn, Federico Cassano, Beck Labash, Ashwin Gopinath, Karthik Narasimhan, and Shunyu Yao. Reflexion: Language agents with verbal reinforcement learning. Advances in Neural Information Processing Systems, 2023.\\n\\nAlon Talmor, Jonathan Herzig, Nicholas Lourie, and Jonathan Berant. Commonsenseqa: A question answering challenge targeting commonsense knowledge. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), pp. 4149-4158, 2019.\\n\\nHugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288, 2023.\\n\\nBoshi Wang, Xiang Yue, and Huan Sun. Can chatgpt defend its belief in truth? evaluating llm reasoning via debate. In Findings of the Association for Computational Linguistics: EMNLP 2023, pp. 11865-11881, 2023a.\\n\\nTianlu Wang, Ping Yu, Xiaoqing Ellen Tan, Sean O'Brien, Ramakanth Pasunuru, Jane Dwivedi-Yu, Olga Golovneva, Luke Zettlemoyer, Maryam Fazel-Zarandi, and Asli Celikyilmaz. Shepherd: A critic for language model generation. arXiv preprint arXiv:2308.04592, 2023b.\\n\\nXuezhi Wang, Jason Wei, Dale Schuurmans, Quoc V Le, Ed H Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. Self-consistency improves chain of thought reasoning in language models. In The Eleventh International Conference on Learning Representations, 2022.\\n\\nAlexander Wei, Nika Haghtalab, and Jacob Steinhardt. Jailbroken: How does llm safety training fail? arXiv preprint arXiv:2307.02483, 2023.\\n\\nJason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, et al. Chain-of-thought prompting elicits reasoning in large language models. Advances in Neural Information Processing Systems, 35:24824-24837, 2022.\\n\\nSean Welleck, Ximing Lu, Peter West, Faeze Brahman, Tianxiao Shen, Daniel Khashabi, and Yejin Choi. Generating sequences by learning to self-correct. In The Eleventh International Conference on Learning Representations, 2023.\\n\\nZhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Bengio, William Cohen, Ruslan Salakhutdinov, and Christopher D Manning. Hotpotqa: A dataset for diverse, explainable multi-hop question answering. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, 2018.\\n\\nShen Zheng, Jie Huang, and Kevin Chen-Chuan Chang. Why does chatgpt fall short in providing truthful answers? ArXiv preprint, abs/2304.10513, 2023.\\n\\nAojun Zhou, Ke Wang, Zimu Lu, Weikang Shi, Sichun Luo, Zipeng Qin, Shaoqing Lu, Anya Jia, Linqi Song, Mingjie Zhan, et al. Solving challenging math word problems using gpt-4 code interpreter with code-based self-verification. arXiv preprint arXiv:2308.07921, 2023a.\\n\\nDenny Zhou, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, Claire Cui, Olivier Bousquet, Quoc V Le, et al. Least-to-most prompting enables complex reasoning in large language models. In The Eleventh International Conference on Learning Representations, $2023 \\\\mathrm{~b}$.\\n\\nAndy Zou, Zifan Wang, J Zico Kolter, and Matt Fredrikson. Universal and transferable adversarial attacks on aligned language models. arXiv preprint arXiv:2307.15043, 2023.\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\", \"SELF-CorRECT\", \"REASONING\", \"YET\"], \"anchor_targets\": [\"cited\", \"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\"], \"anchor_value_hints\": [\"15\", \"2\", \"2023\", \"2305.10403\", \"2212.08073\", \"2022\", \"13\", \"3\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The references section provides a list of papers cited by the current paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\". These citations can be used to populate the \"Reference\" field. However, we do not have information about which papers cite the current paper, so the \"Citation\" field remains empty. We should continue searching for any explicit mentions of the current paper in other provided documents to fill the \"Citation\" field.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The references section provided a list of papers cited by the current paper, which helps us populate the \"Reference\" field. However, we still need to find out if any of the provided papers cite the current paper to populate the \"Citation\" field. The \"BACKGROUND AND RELATED WORK\" section (DOC3_A3) is a good candidate because it often contains discussions of other works and may mention the current paper if it is relevant to the topic.</think>\n<search>{\"current_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A8\", \"candidate_anchor_ids\": [\"DOC3_A8\", \"DOC3_A3\", \"DOC3_A5\", \"DOC3_A6\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\"], \"utility_hits\": {\"DOC3_A8\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A3\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A5\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A6\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 30.0, \"DOC3_A3\": 30.0, \"DOC3_A5\": 30.0, \"DOC3_A6\": 30.0}, \"relation_hits\": {\"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"]}, \"relation_score\": {\"DOC3_A8\": 19.12, \"DOC3_A3\": 19.12, \"DOC3_A5\": 19.12, \"DOC3_A6\": 19.12}, \"anchor_role_hits\": {\"DOC3_A8\": [\"citation_direction\"], \"DOC3_A3\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"], \"DOC3_A6\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 68.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 7.503, \"redundancy_penalty\": 0.0, \"total\": 131.623}, \"DOC3_A3\": {\"local_relevance\": 58.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 123.834}, \"DOC3_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 7.908, \"redundancy_penalty\": 0.0, \"total\": 120.028}, \"DOC3_A6\": {\"local_relevance\": 52.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 7.754, \"redundancy_penalty\": 0.0, \"total\": 115.874}}}</search>\n<info>{\"anchor_id\": \"DOC3_A8\", \"anchor_type\": \"attribution_region\", \"section_path\": \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT\", \"summary\": \"Expanded same-section read window around DOC3_A8: This section acknowledges the limitations of the study and its broader impact, noting that self-correction can be effective in other domains but struggles with reasoning tasks w...\", \"text\": \"[DOC3_A6 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 5 PROMPT DESIGN ISSUES IN SELF-CORRECTION EVALUATION]\\nIn Section 3, we observe that although self-correction decreases reasoning performance with all types of feedback prompts we have evaluated, performance varies with different feedback prompts. In this section, we further emphasize the importance of proper prompt design in generating initial LLM responses to fairly measure the performance improvement achieved by self-correction. For example, if a task requires that the model response should meet criteria that can be easily specified\\nin the initial instruction (e.g., the output should contain certain words, the generated code should be efficient, the sentiment should be positive, etc.), instead of including such requirements only in the feedback prompt, an appropriate comparison would be to directly and explicitly incorporate these requirements into the prompt for generating initial responses. Otherwise, when the instruction for generating initial predictions is not informative enough, even if the performance improves, it is unclear whether the improvement merely comes from more detailed instructions in the feedback prompt or from the self-correction step itself.\\n\\nTo illustrate such prompt design issues in the self-correction evaluation of some prior work, we take the Constrained Generation task in Madaan et al. (2023) as an example, where the task requires models to generate coherent sentences using all 20-30 input concepts. The original prompt in Madaan et al. (2023) (Figure 7) does not clearly specify that the LLM needs to include all concepts in the prompt; thus, they show that self-correction improves task performance by asking the model to identify missing concepts and then guiding it to incorporate these concepts through feedback.\\n\\nBased on this observation, we add the following instruction \\\"Write a reasonable paragraph that includes *ALL* of the above concepts\\\" to the prompt for initial response generation (refer to Figure 8 for the full prompt). Following Madaan et al. (2023), we use concept coverage as the metric. We reference their results and replicate their experiments using gpt-3.5-turbo-0613. Table 8 demonstrates that our new prompt, denoted as Standard Prompting (ours), significantly outperforms the results after self-correction of Madaan et al. (2023), and applying their self-correction prompt on top of model responses from our stronger version of the standard prompting again leads to a decrease in performance.\\n\\n## 6 CONCLUSION AND DISCUSSION\\n\\n[DOC3_A8 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT]\\nAlthough we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their safety (Bai et al., 2022; Ganguli et al., 2023, Madaan et al., 2023). A key distinction arises in the capability of LLMs to accurately assess their responses in relation to the given tasks. For example, LLMs can properly evaluate whether a response is inappropriate Ganguli et al. 2023), but they may struggle to identify errors in their reasoning.\\n\\nFurthermore, several prior works have already shown that LLM self-correction performance becomes significantly weaker without access to external feedback (Gou et al., 2023, Zhou et al., 2023a) and can be easily biased by misleading feedback (Wang et al., 2023a), which is consistent with our findings in this work. However, we still identified prevailing ambiguity in the wider community. Some existing literature may inadvertently contribute to this confusion, either by relegating crucial details about label usage to less prominent sections or by failing to clarify that their designed selfcorrection strategies actually incorporate external feedback. Regarding this, our paper serves as a call to action, urging researchers to approach this domain with a discerning and critical perspective. We also encourage future research to explore approaches that can genuinely enhance reasoning.\\n\\n## REPRODUCIBILITY STATEMENT\", \"source_window_anchor_ids\": [\"DOC3_A6\", \"DOC3_A8\"], \"primary_anchor_id\": \"DOC3_A8\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\", \"SELF-CorRECT\", \"REASONING\", \"YET\"], \"anchor_targets\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\"], \"anchor_value_hints\": [\"7\", \"2022\", \"2023,\", \"2023\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk does not provide explicit citation or reference information about the current paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\". Instead, it discusses the limitations and broader impact of the study, referencing other works but not indicating whether those works cite the current paper. Therefore, we need to continue searching for explicit mentions of the current paper in other provided documents to populate the \"Citation\" field.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\", \"DOC3_A8\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT This section acknowledges the limitations of the study and its broader impact, noting that self-correction can be effective in other domains but struggles with reasoning tasks without external feedback. Although we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their sa...\"], \"selected_relation_anchor_ids\": [\"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The current query is about LLMs' inability to plan but their potential to help planning in LLM-modulo frameworks. The document title suggests a focus on self-correction in LLMs, which may not directly address the query. However, the abstract (DOC3_A1) could provide a concise summary of the paper's main findings, which might indicate whether the paper has any relevance to the query or if it cites or references other relevant works.</think>\n<search>{\"current_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A9\": [\"reference_section\", \"likely_reverse_citation_penalty\", \"other_doc_cites_target\", \"citation_direction_reference_list\", \"citation_format_cue\"], \"DOC3_A3\": [\"reference_section\", \"citation_format_cue\"], \"DOC3_A8\": [\"reference_section\", \"citation_format_cue\"], \"DOC3_A5\": [\"reference_section\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A9\": 25.0, \"DOC3_A3\": 10.0, \"DOC3_A8\": 10.0, \"DOC3_A5\": 10.0}, \"score_breakdown\": {\"DOC3_A9\": {\"local_relevance\": 42.0, \"answer_utility\": 25.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 15.097, \"redundancy_penalty\": 0.0, \"total\": 89.097}, \"DOC3_A3\": {\"local_relevance\": 34.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 60.714}, \"DOC3_A8\": {\"local_relevance\": 36.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.503, \"redundancy_penalty\": 0.0, \"total\": 60.503}, \"DOC3_A5\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.908, \"redundancy_penalty\": 0.0, \"total\": 52.908}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract\", \"summary\": \"Expanded same-section read window around DOC3_A1: This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that...\", \"text\": \"[DOC3_A1 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract]\\n#### Abstract\\n\\nLarge Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its true potential and limitations. Central to our investigation is the notion of intrinsic self-correction, whereby an LLM attempts to correct its initial responses based solely on its inherent capabilities, without the crutch of external feedback. In the context of reasoning, our research indicates that LLMs struggle to selfcorrect their responses without external feedback, and at times, their performance even degrades after self-correction. Drawing from these insights, we offer suggestions for future research and practical applications in this field.\\n\\n[DOC3_A5 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 4 MULTI-AGENT DEBATE DOES NOT OUTPERFORM SELF-CONSISTENCY]\\n## 4 MULTI-AGENT DEBATE DOES NOT OUTPERFORM SELF-CONSISTENCY\\n\\nAnother potential approach for LLMs to self-correct their reasoning involves allowing the models to critique and debate through multiple model calls (Du et al., 2023; Liang et al., 2023, Chen et al., 2023a). Du et al. (2023) implement a multi-agent debate method by leveraging multiple instances of a single ChatGPT model and demonstrate significant improvements on reasoning tasks. We adopt their method to test performance on GSM8K. For an unbiased implementation, we use the exact same prompt as Du et al. (2023) and replicate their experiment with the gpt-3.5-turbo-0301 model, incorporating 3 agents and 2 rounds of debate. The only distinction is that, to reduce result variance, we test on the complete test set of GSM8K, compared to their usage of 100 examples. For reference, we also report the results of self-consistency (Wang et al., 2022), which prompts models to generate multiple responses and performs majority voting to select the final answer.\\n\\nTable 7 presents the results. The results indicate that both multi-agent debate and self-consistency achieve significant improvements over standard prompting. However, when comparing multi-agent debate to self-consistency, we observe that the performance of multi-agent is only slightly better than that of self-consistency with the same number of agents ( 3 responses, the baseline also compared in Du et al. (2023)). Furthermore, for self-consistency with an equivalent number of responses, multi-agent debate significantly underperforms simple self-consistency using majority voting.\\n\\nIn fact, rather than labeling the multi-agent debate as a form of \\\"debate\\\" or \\\"critique\\\", it is more appropriate to perceive it as a means to achieve \\\"consistency\\\" across multiple model generations. Fundamentally, its concept mirrors that of self-consistency; the distinction lies in the voting mechanism, whether voting is model-driven or purely based on counts. The observed improvement is evidently not attributed to \\\"self-correction\\\", but rather to \\\"self-consistency\\\". If we aim to argue that LLMs can self-correct reasoning through multi-agent debate, it is preferable to exclude the effects of selection among multiple generations.\\n\\n## 5 PROMPT DESIGN ISSUES IN SELF-CORRECTION EVALUATION\\n\\n[DOC3_A8 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT]\\nAlthough we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their safety (Bai et al., 2022; Ganguli et al., 2023, Madaan et al., 2023). A key distinction arises in the capability of LLMs to accurately assess their responses in relation to the given tasks. For example, LLMs can properly evaluate whether a response is inappropriate Ganguli et al. 2023), but they may struggle to identify errors in their reasoning.\\n\\nFurthermore, several prior works have already shown that LLM self-correction performance becomes significantly weaker without access to external feedback (Gou et al., 2023, Zhou et al., 2023a) and can be easily biased by misleading feedback (Wang et al., 2023a), which is consistent with our findings in this work. However, we still identified prevailing ambiguity in the wider community. Some existing literature may inadvertently contribute to this confusion, either by relegating crucial details about label usage to less prominent sections or by failing to clarify that their designed selfcorrection strategies actually incorporate external feedback. Regarding this, our paper serves as a call to action, urging researchers to approach this domain with a discerning and critical perspective. We also encourage future research to explore approaches that can genuinely enhance reasoning.\\n\\n## REPRODUCIBILITY STATEMENT\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A5\", \"DOC3_A8\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"entity_binding\"], \"anchor_entities\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\", \"SELF-CorRECT\", \"REASONING\", \"YET\"], \"anchor_targets\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\"], \"provenance_hints\": {\"strength\": \"medium\", \"signals\": [], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"same_target_paper\": 9, \"disambiguates\": 9}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}]}</info>\n<think>The abstract of the paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\" provides some context about the paper's focus on self-correction within LLMs. However, it does not explicitly mention any citations or references to other provided papers. Therefore, we need to inspect other parts of the document to find citation and reference information.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The abstract did not provide explicit citation or reference information. The next logical step would be to inspect the references section of the paper, as it is likely to contain direct citations to other works. The section titled \"REFERENCES\" (DOC3_A9) seems like the most promising place to look for this information.</think>\n<search>{\"current_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A9\", \"candidate_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A3\", \"DOC3_A5\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC3_A1\"], \"utility_hits\": {\"DOC3_A9\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A8\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A3\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A5\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A9\": 30.0, \"DOC3_A8\": 30.0, \"DOC3_A3\": 30.0, \"DOC3_A5\": 30.0}, \"relation_hits\": {\"DOC3_A9\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A1\"]}, \"relation_score\": {\"DOC3_A9\": 13.56, \"DOC3_A8\": 13.56, \"DOC3_A3\": 13.56, \"DOC3_A5\": 13.56}, \"anchor_role_hits\": {\"DOC3_A9\": [\"citation_direction\"], \"DOC3_A8\": [\"citation_direction\"], \"DOC3_A3\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A9\": {\"local_relevance\": 70.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 15.097, \"redundancy_penalty\": 0.0, \"total\": 135.657}, \"DOC3_A8\": {\"local_relevance\": 68.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 7.503, \"redundancy_penalty\": 0.0, \"total\": 126.063}, \"DOC3_A3\": {\"local_relevance\": 58.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 118.274}, \"DOC3_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 13.56, \"weak_priors\": 7.908, \"redundancy_penalty\": 0.0, \"total\": 114.468}}}</search>\n<info>{\"anchor_id\": \"DOC3_A9\", \"anchor_type\": \"attribution_region\", \"section_path\": \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES\", \"summary\": \"Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning.\", \"text\": \"## REFERENCES\\n\\nHussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023.\\n\\nRohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023.\\n\\nYuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhoseini, Cameron McKinnon, et al. Constitutional ai: Harmlessness from ai feedback. arXiv preprint arXiv:2212.08073, 2022.\\n\\nYejin Bang, Samuel Cahyawijaya, Nayeon Lee, Wenliang Dai, Dan Su, Bryan Wilie, Holy Lovenia, Ziwei Ji, Tiezheng Yu, Willy Chung, et al. A multitask, multilingual, multimodal evaluation of chatgpt on reasoning, hallucination, and interactivity. In Proceedings of the 13th International Joint Conference on Natural Language Processing and the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 675-718, 2023.\\n\\nNicholas Carlini, Florian Tramer, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom B Brown, Dawn Song, Ulfar Erlingsson, et al. Extracting training data from large language models. In USENIX Security Symposium, volume 6, 2021.\\n\\nJustin Chih-Yao Chen, Swarnadeep Saha, and Mohit Bansal. Reconcile: Round-table conference improves reasoning via consensus among diverse llms. arXiv preprint arXiv:2309.13007, 2023a.\\n\\nXinyun Chen, Maxwell Lin, Nathanael Schärli, and Denny Zhou. Teaching large language models to self-debug. arXiv preprint arXiv:2304.05128, 2023b.\\n\\nAakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. Palm: Scaling language modeling with pathways. Journal of Machine Learning Research, 24(240):1-113, 2023. URL http: //jmlr.org/papers/v24/22-1144.html\\n\\nKarl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168, 2021.\\n\\nYilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\nDeep Ganguli, Amanda Askell, Nicholas Schiefer, Thomas Liao, Kamilė Lukošiūtė, Anna Chen, Anna Goldie, Azalia Mirhoseini, Catherine Olsson, Danny Hernandez, et al. The capacity for moral self-correction in large language models. arXiv preprint arXiv:2302.07459, 2023.\\n\\nLuyu Gao, Zhuyun Dai, Panupong Pasupat, Anthony Chen, Arun Tejasvi Chaganty, Yicheng Fan, Vincent Zhao, Ni Lao, Hongrae Lee, Da-Cheng Juan, et al. Rarr: Researching and revising what language models say, using language models. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 16477-16508, 2023.\\n\\nZhibin Gou, Zhihong Shao, Yeyun Gong, Yelong Shen, Yujiu Yang, Nan Duan, and Weizhu Chen. Critic: Large language models can self-correct with tool-interactive critiquing. arXiv preprint arXiv:2305.11738, 2023\\n\\nJie Huang and Kevin Chen-Chuan Chang. Towards reasoning in large language models: A survey. In Findings of the Association for Computational Linguistics: ACL 2023. Association for Computational Linguistics, 2023.\\n\\nJie Huang, Hanyin Shao, and Kevin Chen-Chuan Chang. Are large pre-trained language models leaking your personal information? In Findings of the Association for Computational Linguistics: EMNLP 2022, pp. 2038-2047, Abu Dhabi, United Arab Emirates, 2022. Association for Computational Linguistics.\\n\\nGeunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. Advances in Neural Information Processing Systems, 2023.\\n\\nTakeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. Large language models are zero-shot reasoners. Advances in neural information processing systems, $35: 22199-22213,2022$.\\n\\nHaoran Li, Dadi Guo, Wei Fan, Mingshi Xu, Jie Huang, Fanpu Meng, and Yangqiu Song. Multistep jailbreaking privacy attacks on chatgpt. In Findings of the Association for Computational Linguistics: EMNLP 2023, pp. 4138-4153, 2023.\\n\\nTian Liang, Zhiwei He, Wenxiang Jiao, Xing Wang, Yan Wang, Rui Wang, Yujiu Yang, Zhaopeng Tu, and Shuming Shi. Encouraging divergent thinking in large language models through multiagent debate. arXiv preprint arXiv:2305.19118, 2023.\\n\\nHunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy Lee, Jan Leike, John Schulman, Ilya Sutskever, and Karl Cobbe. Let's verify step by step. arXiv preprint arXiv:2305.20050, 2023.\\n\\nAman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. Advances in Neural Information Processing Systems, 2023.\\n\\nTheo X Olausson, Jeevana Priya Inala, Chenglong Wang, Jianfeng Gao, and Armando SolarLezama. Demystifying gpt self-repair for code generation. arXiv preprint arXiv:2306.09896, 2023.\\n\\nOpenAI. Gpt-4 technical report, 2023.\\n\\nLiangming Pan, Michael Saxon, Wenda Xu, Deepak Nathani, Xinyi Wang, and William Yang Wang. Automatically correcting large language models: Surveying the landscape of diverse selfcorrection strategies. arXiv preprint arXiv:2308.03188, 2023.\\n\\nDebjit Paul, Mete Ismayilzada, Maxime Peyrard, Beatriz Borges, Antoine Bosselut, Robert West, and Boi Faltings. Refiner: Reasoning feedback on intermediate representations. arXiv preprint arXiv:2304.01904, 2023.\\n\\nHanyin Shao, Jie Huang, Shen Zheng, and Kevin Chen-Chuan Chang. Quantifying association capabilities of large language models and its implications on privacy leakage. arXiv preprint arXiv:2305.12707, 2023.\\n\\nFreda Shi, Xinyun Chen, Kanishka Misra, Nathan Scales, David Dohan, Ed H Chi, Nathanael Schärli, and Denny Zhou. Large language models can be easily distracted by irrelevant context. In International Conference on Machine Learning, pp. 31210-31227. PMLR, 2023.\\n\\nNoah Shinn, Federico Cassano, Beck Labash, Ashwin Gopinath, Karthik Narasimhan, and Shunyu Yao. Reflexion: Language agents with verbal reinforcement learning. Advances in Neural Information Processing Systems, 2023.\\n\\nAlon Talmor, Jonathan Herzig, Nicholas Lourie, and Jonathan Berant. Commonsenseqa: A question answering challenge targeting commonsense knowledge. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), pp. 4149-4158, 2019.\\n\\nHugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288, 2023.\\n\\nBoshi Wang, Xiang Yue, and Huan Sun. Can chatgpt defend its belief in truth? evaluating llm reasoning via debate. In Findings of the Association for Computational Linguistics: EMNLP 2023, pp. 11865-11881, 2023a.\\n\\nTianlu Wang, Ping Yu, Xiaoqing Ellen Tan, Sean O'Brien, Ramakanth Pasunuru, Jane Dwivedi-Yu, Olga Golovneva, Luke Zettlemoyer, Maryam Fazel-Zarandi, and Asli Celikyilmaz. Shepherd: A critic for language model generation. arXiv preprint arXiv:2308.04592, 2023b.\\n\\nXuezhi Wang, Jason Wei, Dale Schuurmans, Quoc V Le, Ed H Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. Self-consistency improves chain of thought reasoning in language models. In The Eleventh International Conference on Learning Representations, 2022.\\n\\nAlexander Wei, Nika Haghtalab, and Jacob Steinhardt. Jailbroken: How does llm safety training fail? arXiv preprint arXiv:2307.02483, 2023.\\n\\nJason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, et al. Chain-of-thought prompting elicits reasoning in large language models. Advances in Neural Information Processing Systems, 35:24824-24837, 2022.\\n\\nSean Welleck, Ximing Lu, Peter West, Faeze Brahman, Tianxiao Shen, Daniel Khashabi, and Yejin Choi. Generating sequences by learning to self-correct. In The Eleventh International Conference on Learning Representations, 2023.\\n\\nZhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Bengio, William Cohen, Ruslan Salakhutdinov, and Christopher D Manning. Hotpotqa: A dataset for diverse, explainable multi-hop question answering. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, 2018.\\n\\nShen Zheng, Jie Huang, and Kevin Chen-Chuan Chang. Why does chatgpt fall short in providing truthful answers? ArXiv preprint, abs/2304.10513, 2023.\\n\\nAojun Zhou, Ke Wang, Zimu Lu, Weikang Shi, Sichun Luo, Zipeng Qin, Shaoqing Lu, Anya Jia, Linqi Song, Mingjie Zhan, et al. Solving challenging math word problems using gpt-4 code interpreter with code-based self-verification. arXiv preprint arXiv:2308.07921, 2023a.\\n\\nDenny Zhou, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, Claire Cui, Olivier Bousquet, Quoc V Le, et al. Least-to-most prompting enables complex reasoning in large language models. In The Eleventh International Conference on Learning Representations, $2023 \\\\mathrm{~b}$.\\n\\nAndy Zou, Zifan Wang, J Zico Kolter, and Matt Fredrikson. Universal and transferable adversarial attacks on aligned language models. arXiv preprint arXiv:2307.15043, 2023.\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\", \"SELF-CorRECT\", \"REASONING\", \"YET\"], \"anchor_targets\": [\"cited\", \"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\"], \"anchor_value_hints\": [\"15\", \"2\", \"2023\", \"2305.10403\", \"2212.08073\", \"2022\", \"13\", \"3\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The references section provides a list of papers cited by the current paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\". These citations can be used to populate the \"Reference\" field. However, we do not have information about which papers cite the current paper, so the \"Citation\" field remains empty. We should continue searching for any explicit mentions of the current paper in other provided documents to fill the \"Citation\" field.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The references section provided a list of papers cited by the current paper, which helps us populate the \"Reference\" field. However, we still need to find out if any of the provided papers cite the current paper to populate the \"Citation\" field. The \"BACKGROUND AND RELATED WORK\" section (DOC3_A3) is a good candidate because it often contains discussions of other works and may mention the current paper if it is relevant to the topic.</think>\n<search>{\"current_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC3_A8\", \"candidate_anchor_ids\": [\"DOC3_A8\", \"DOC3_A3\", \"DOC3_A5\", \"DOC3_A6\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein...\"], \"selected_relation_anchor_ids\": [\"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\"], \"utility_hits\": {\"DOC3_A8\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A3\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A5\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC3_A6\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC3_A8\": 30.0, \"DOC3_A3\": 30.0, \"DOC3_A5\": 30.0, \"DOC3_A6\": 30.0}, \"relation_hits\": {\"DOC3_A8\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"], \"DOC3_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A9\", \"supports_selected=DOC3_A1\", \"same_target_paper_selected=DOC3_A9\", \"same_target_paper_selected=DOC3_A1\"]}, \"relation_score\": {\"DOC3_A8\": 19.12, \"DOC3_A3\": 19.12, \"DOC3_A5\": 19.12, \"DOC3_A6\": 19.12}, \"anchor_role_hits\": {\"DOC3_A8\": [\"citation_direction\"], \"DOC3_A3\": [\"citation_direction\"], \"DOC3_A5\": [\"citation_direction\"], \"DOC3_A6\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 68.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 7.503, \"redundancy_penalty\": 0.0, \"total\": 131.623}, \"DOC3_A3\": {\"local_relevance\": 58.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 9.714, \"redundancy_penalty\": 0.0, \"total\": 123.834}, \"DOC3_A5\": {\"local_relevance\": 56.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 7.908, \"redundancy_penalty\": 0.0, \"total\": 120.028}, \"DOC3_A6\": {\"local_relevance\": 52.0, \"answer_utility\": 30.0, \"coverage\": 7.0, \"relation\": 19.12, \"weak_priors\": 7.754, \"redundancy_penalty\": 0.0, \"total\": 115.874}}}</search>\n<info>{\"anchor_id\": \"DOC3_A8\", \"anchor_type\": \"attribution_region\", \"section_path\": \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT\", \"summary\": \"Expanded same-section read window around DOC3_A8: This section acknowledges the limitations of the study and its broader impact, noting that self-correction can be effective in other domains but struggles with reasoning tasks w...\", \"text\": \"[DOC3_A6 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 5 PROMPT DESIGN ISSUES IN SELF-CORRECTION EVALUATION]\\nIn Section 3, we observe that although self-correction decreases reasoning performance with all types of feedback prompts we have evaluated, performance varies with different feedback prompts. In this section, we further emphasize the importance of proper prompt design in generating initial LLM responses to fairly measure the performance improvement achieved by self-correction. For example, if a task requires that the model response should meet criteria that can be easily specified\\nin the initial instruction (e.g., the output should contain certain words, the generated code should be efficient, the sentiment should be positive, etc.), instead of including such requirements only in the feedback prompt, an appropriate comparison would be to directly and explicitly incorporate these requirements into the prompt for generating initial responses. Otherwise, when the instruction for generating initial predictions is not informative enough, even if the performance improves, it is unclear whether the improvement merely comes from more detailed instructions in the feedback prompt or from the self-correction step itself.\\n\\nTo illustrate such prompt design issues in the self-correction evaluation of some prior work, we take the Constrained Generation task in Madaan et al. (2023) as an example, where the task requires models to generate coherent sentences using all 20-30 input concepts. The original prompt in Madaan et al. (2023) (Figure 7) does not clearly specify that the LLM needs to include all concepts in the prompt; thus, they show that self-correction improves task performance by asking the model to identify missing concepts and then guiding it to incorporate these concepts through feedback.\\n\\nBased on this observation, we add the following instruction \\\"Write a reasonable paragraph that includes *ALL* of the above concepts\\\" to the prompt for initial response generation (refer to Figure 8 for the full prompt). Following Madaan et al. (2023), we use concept coverage as the metric. We reference their results and replicate their experiments using gpt-3.5-turbo-0613. Table 8 demonstrates that our new prompt, denoted as Standard Prompting (ours), significantly outperforms the results after self-correction of Madaan et al. (2023), and applying their self-correction prompt on top of model responses from our stronger version of the standard prompting again leads to a decrease in performance.\\n\\n## 6 CONCLUSION AND DISCUSSION\\n\\n[DOC3_A8 | LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT]\\nAlthough we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their safety (Bai et al., 2022; Ganguli et al., 2023, Madaan et al., 2023). A key distinction arises in the capability of LLMs to accurately assess their responses in relation to the given tasks. For example, LLMs can properly evaluate whether a response is inappropriate Ganguli et al. 2023), but they may struggle to identify errors in their reasoning.\\n\\nFurthermore, several prior works have already shown that LLM self-correction performance becomes significantly weaker without access to external feedback (Gou et al., 2023, Zhou et al., 2023a) and can be easily biased by misleading feedback (Wang et al., 2023a), which is consistent with our findings in this work. However, we still identified prevailing ambiguity in the wider community. Some existing literature may inadvertently contribute to this confusion, either by relegating crucial details about label usage to less prominent sections or by failing to clarify that their designed selfcorrection strategies actually incorporate external feedback. Regarding this, our paper serves as a call to action, urging researchers to approach this domain with a discerning and critical perspective. We also encourage future research to explore approaches that can genuinely enhance reasoning.\\n\\n## REPRODUCIBILITY STATEMENT\", \"source_window_anchor_ids\": [\"DOC3_A6\", \"DOC3_A8\"], \"primary_anchor_id\": \"DOC3_A8\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\", \"SELF-CorRECT\", \"REASONING\", \"YET\"], \"anchor_targets\": [\"LARGE\", \"LANGUAGE\", \"MoDELS\", \"CANNOT\"], \"anchor_value_hints\": [\"7\", \"2022\", \"2023,\", \"2023\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk does not provide explicit citation or reference information about the current paper \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET\". Instead, it discusses the limitations and broader impact of the study, referencing other works but not indicating whether those works cite the current paper. Therefore, we need to continue searching for explicit mentions of the current paper in other provided documents to populate the \"Citation\" field.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citation and reference information within the paper 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'.\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A9\", \"DOC3_A8\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > Abstract This paper examines the role and efficacy of self-correction within Large Language Models (LLMs), focusing on intrinsic self-correction without external feedback. It finds that LLMs struggle to self-correct their reasoning and sometimes perform worse after self-correction. #### Abstract Large Language Models (LLMs) have emerged as a groundbreaking technology with their unparalleled text generation capabilities across various applications. Nevertheless, concerns persist regarding the accuracy and appropriateness of their generated content. A contemporary methodology, self-correction, has been proposed as a remedy to these issues. Building upon this premise, this paper critically examines the role and efficacy of self-correction within LLMs, shedding light on its...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > REFERENCES Lists the references cited in the paper, detailing various studies related to LLMs, self-correction, and reasoning. ## REFERENCES Hussam Alkaissi and Samy I McFarlane. Artificial hallucinations in chatgpt: implications in scientific writing. Cureus, 15(2), 2023. Rohan Anil, Andrew M Dai, Orhan Firat, Melvin Johnson, Dmitry Lepikhin, Alexandre Passos, Siamak Shakeri, Emanuel Taropa, Paige Bailey, Zhifeng Chen, et al. Palm 2 technical report. arXiv preprint arXiv:2305.10403, 2023. Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhosein...\", \"LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET > 7 LIMITATIONS AND BROADER IMPACT This section acknowledges the limitations of the study and its broader impact, noting that self-correction can be effective in other domains but struggles with reasoning tasks without external feedback. Although we have conducted a comprehensive evaluation spanning a variety of self-correction strategies, prompts, and benchmarks, our work focuses on evaluating reasoning of LLMs. Thus, it is plausible that there exist self-correction strategies that could enhance LLM performance in other domains. For example, prior works have demonstrated the successful usage of self-correction that aligns model responses with specific preferences, such as altering the style of responses or enhancing their sa...\"], \"selected_relation_anchor_ids\": [\"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['LARGE', 'LANGUAGE']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

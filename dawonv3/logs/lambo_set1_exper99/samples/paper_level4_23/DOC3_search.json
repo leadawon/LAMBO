@@ -1,0 +1,259 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "Understanding the Difficulty of Training Transformers",
+  "task_mode": "chain",
+  "think": "The current query is focused on constructing a citation chain from the provided papers. To find the citation chain, I need to look at the references section of the document to identify citations to other papers in the set. The most promising anchor to inspect next would be DOC3_A9, which contains the references section.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC3_A9",
+  "candidate_anchor_ids": [
+    "DOC3_A9"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A9",
+    "DOC3_A2",
+    "DOC3_A7",
+    "DOC3_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A9",
+    "DOC3_A2",
+    "DOC3_A7",
+    "DOC3_A4",
+    "DOC3_A3",
+    "DOC3_A1",
+    "DOC3_A5",
+    "DOC3_A6",
+    "DOC3_A8"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A9",
+      "score": 54.297,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=6",
+        "section_prior=14",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.20",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 12.297,
+        "redundancy_penalty": 0.0,
+        "total": 54.297
+      },
+      "summary": "The references section lists academic papers and resources cited throughout the document, providing context and background for the research presented."
+    },
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 49.901,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=5",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=1.40",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 7.901,
+        "redundancy_penalty": 0.0,
+        "total": 49.901
+      },
+      "summary": "The introduction discusses the effectiveness of Transformers in NLP tasks and the challenges in their training, such as the failure of conventional SGD and the importance of war..."
+    },
+    {
+      "anchor_id": "DOC3_A7",
+      "score": 48.921,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=5",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=0.42",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 6.921,
+        "redundancy_penalty": 0.0,
+        "total": 48.921
+      },
+      "summary": "This section reviews related work on Transformers and deep network initialization, highlighting the contributions of the paper in identifying the amplification effect and propos..."
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 41.891,
+      "reasons": [
+        "query_overlap=5",
+        "instruction_overlap=4",
+        "citation_cue",
+        "position_bonus=0.89",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 28.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 3.891,
+        "redundancy_penalty": 0.0,
+        "total": 41.891
+      },
+      "summary": "The section analyzes the issue of unbalanced gradients, particularly focusing on gradient vanishing in Post-LN Transformers. It establishes that only Post-LN decoders suffer fro..."
+    }
+  ],
+  "utility_hits": {
+    "DOC3_A9": [
+      "citation_format_cue"
+    ],
+    "DOC3_A2": [
+      "citation_format_cue"
+    ],
+    "DOC3_A7": [
+      "citation_format_cue"
+    ],
+    "DOC3_A4": [
+      "citation_format_cue"
+    ]
+  },
+  "utility_score": {
+    "DOC3_A9": 3.0,
+    "DOC3_A2": 3.0,
+    "DOC3_A7": 3.0,
+    "DOC3_A4": 3.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC3_A9": 5.0,
+    "DOC3_A2": 5.0,
+    "DOC3_A7": 5.0,
+    "DOC3_A4": 5.0
+  },
+  "anchor_role_hits": {
+    "DOC3_A9": [
+      "citation_direction"
+    ],
+    "DOC3_A2": [
+      "citation_direction"
+    ],
+    "DOC3_A7": [
+      "citation_direction"
+    ],
+    "DOC3_A4": [
+      "citation_direction"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "ordered relations or decision/result mappings",
+      "citation/reference evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC3_A9": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 12.297,
+      "redundancy_penalty": 0.0,
+      "total": 54.297
+    },
+    "DOC3_A2": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 7.901,
+      "redundancy_penalty": 0.0,
+      "total": 49.901
+    },
+    "DOC3_A7": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 6.921,
+      "redundancy_penalty": 0.0,
+      "total": 48.921
+    },
+    "DOC3_A4": {
+      "local_relevance": 28.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 3.891,
+      "redundancy_penalty": 0.0,
+      "total": 41.891
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for Understanding the Difficulty of Training Transformers. First coordinate candidate is DOC3_A9.",
+  "raw_plan_text": "<think>The current query is focused on constructing a citation chain from the provided papers. To find the citation chain, I need to look at the references section of the document to identify citations to other papers in the set. The most promising anchor to inspect next would be DOC3_A9, which contains the references section.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"citation/reference evidence\"],\"next_anchor_id\":\"DOC3_A9\",\"candidate_anchor_ids\":[\"DOC3_A9\"]}</search>",
+  "tagged_trace": "<think>The current query is focused on constructing a citation chain from the provided papers. To find the citation chain, I need to look at the references section of the document to identify citations to other papers in the set. The most promising anchor to inspect next would be DOC3_A9, which contains the references section.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC3_A9\"], \"next_anchor_id\": \"DOC3_A9\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC3_A9\": 5.0, \"DOC3_A2\": 5.0, \"DOC3_A7\": 5.0, \"DOC3_A4\": 5.0}, \"anchor_role_hits\": {\"DOC3_A9\": [\"citation_direction\"], \"DOC3_A2\": [\"citation_direction\"], \"DOC3_A7\": [\"citation_direction\"], \"DOC3_A4\": [\"citation_direction\"]}}</search>"
+}

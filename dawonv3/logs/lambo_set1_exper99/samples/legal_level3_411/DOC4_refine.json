@@ -1,0 +1,456 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "selected_anchor_ids": [
+    "DOC4_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A2",
+        "candidate_anchor_ids": [
+          "DOC4_A2",
+          "DOC4_A11",
+          "DOC4_A10",
+          "DOC4_A6"
+        ],
+        "utility_hits": {
+          "DOC4_A8": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A11": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC4_A8": 11.0,
+          "DOC4_A11": 11.0,
+          "DOC4_A3": 11.0,
+          "DOC4_A4": 11.0
+        },
+        "score_breakdown": {
+          "DOC4_A8": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 8.603,
+            "redundancy_penalty": 0.0,
+            "total": 31.603
+          },
+          "DOC4_A11": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 8.315,
+            "redundancy_penalty": 0.0,
+            "total": 31.315
+          },
+          "DOC4_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC4_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC4_A2",
+      "plan_think": "The document appears to be a civil case due to the mention of inheritance disputes and court proceedings between parties. I will select an anchor that provides more context on the nature of the case to confirm if it falls under the '民事案件' category.",
+      "info": {
+        "anchor_id": "DOC4_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC4_A2: 郑某1、郑某2因法定继承纠纷不服一审判决，向法院提起上诉。",
+        "text": "[DOC4_A1 | 当事人信息]\n上诉人（原审原告）：郑某1，女，1966年10月9日出生，汉族，身份证住址广东省广州市越秀区。\n\n上诉人（原审原告）：郑某2，男，1967年5月20日出生，汉族，身份证住址广东省广州市天河区。\n\n上述二上诉人的共同委托诉讼代理人：徐慧鹏，广东金辩律师事务所律师。\n\n被上诉人（原审被告）：郑某3，男，1974年12月20日出生，汉族，身份证住址广东省广州市天河区。\n\n委托诉讼代理人：李华，广东信德盛律师事务所律师。\n\n委托诉讼代理人：杨文若，广东信德盛律师事务所律师。\n\n原审第三人：郑某4，女，1971年2月6日出生，汉族，户籍地址广东省广州市荔湾区之一。\n\n[DOC4_A2 | 案件背景]\n上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。本院于2023年11月8日立案后，依法组成合议庭进行了审理。本案现已审理终结。\n\n[DOC4_A4 | 被上诉人答辩]\n郑某3辩称，一审法院查明被继承人郭某的法定继承人郑某、郑某1、郑某2、郑某4及郑某3在案涉两份《股份继承情况》上签字并捺印，明确约定案涉遗产由郑某3一人继承，其他继承人无异议；本案各方当事人和XX经济联社均确认案涉遗产登记在郑某3名下，郑某1、郑某2在一审庭审时也确认案涉遗产已于2017年11月办理手续登记在郑某3名下；被继承人郭某和郑某一直与郑某3共同生活。上述事实有《股份继承情况》、XX经济联社出具的《证明》、一审法院的调查笔录、庭审笔录和证人周某予以证明，一审法院据此认定案涉遗产已做分割的事实正确且依法有据。郑某1、郑某2主张XX经济联社出具虚假证明和在一审法院调查时作出虚假陈述均系其个人臆想，无任何事实依据，且郑某1、郑某2至今未提交任何可证明其主张的证据材料，反观XX经济联社出具的《证明》和接受一审法院调查时作出的陈述均与各方当事人及证人提交的证据及一致确认的案件事实相印证，无任何虚假陈述的情形。综上，根据各方当事人一审提交的证据和庭审时各方确认的事实可知，案涉遗产已分割处理，郑某1、郑某2在案涉遗产处理后提起诉讼要求对案涉遗产再次处理的诉讼请求依法无据，不应获得支持。请求二审法院依法驳回上诉，维持原判。\n\n[DOC4_A5 | 原审第三人陈述]\n郑某4述称，同意一审判决。\n\n[DOC4_A6 | 一审诉讼请求]\n郑某1、郑某2向一审法院起诉请求：1.确认郑某1、郑某2对XX经济联社原始股23股的股权分别占有四分之一份额并分割相应的分红（该股权登记在郭某名下，目前由郑某3支配，分红自2017年11月16日起算）；2.确认郑某1、郑某2对郑某3名下XX经济联社学生公寓20股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；3.确认郑某1、郑某2对郑某3名下XX经济联社酒店30股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；4.确认郑某1、郑某2对郑某3名下挂靠在广州市天河区XXXXX公司的广州XX银行4000股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；5.判令郑某3承担本案诉讼费。\n\n[DOC4_A7 | 一审法院认定事实]\n一审法院认定事实：被继承人郭某与案外人郑某系夫妻关系，二人育有婚生子女四人，分别为长女郑某1、长子郑某2、次女郑某4、次子郑某3。2017年8月13日，郭某因病于家中逝世。郭某去世时，没有立下书面遗嘱，其法定继承人有配偶郑某及四子女郑某1、郑某2、郑某4、郑某3。2021年3月3日，郑某因病逝世。\n\n郑某1与郑某2主张，郭某在世时，其名下有XX经济联社原始股权23股等股份，郭某去世后，子女四人与父亲郑某经协商将上述股权交由郑某3掌管并代为领取相应分红。因父亲郑某与郑某3共同生活，且郑某年事已高，需要看病，为方便照顾郑某，各方没有约定股权分红由谁获得，商定等郑某百年后再进行分割。郑某去世后，郑某1与郑某2多次要求郑某3将上述股权及相应分红款进行分割，但郑某3均置之不理。为此，郑某1、郑某3提供《股份继承情况》两份（签署时间分别为2017年11月13日、2017年11月16日）、郑某2与郑某3微信聊天记录予以证明。《股份继承情况》（2017年11月13日）载明：郭某及配偶郑某共同育有四名子女，分别是长女郑某1、长子郑某2、三女郑某4、四子郑某3，经现时有继承权的家人协商一致，同意把郭某在广州市XXXX有限公司名下的学生公寓股20股、原始股份23股、酒店股30股所产生的分红转给四子郑某3名下，其他所有继承人没有异议。《股份继承情况》（2017年11月16日）除确认前一份《股份继承情况》的内容外，另确认挂靠在广州市天河区XXXXX公司名下广州XX行股份4000股所产生的分红转给四子郑某3名下，其他所有继承人没有异议。郑某、郑某1、郑某2、郑某4及郑某3均在上述两份《股份继承情况》中签名并捺印。郑某2与郑某3微信聊天记录显示郑某2于2021年12月24日向郑某3发送信息要求分割股份，郑某3未回应。针对上述证据，郑某3质证表示对两份《股份继承情况》的真实性、合法性及关联性均予以认可，但《股份继承情况》的内容已明确写明了全体继承人同意案涉股份由郑某3继承，并没有由郑某3代为掌管的意思，郑某1与郑某2的主张是恶意曲解《股份继承情况》的真实意思表示；对郑某2与郑某3微信聊天记录的真实性与合法性予以确认，关联性不予确认，案涉股份已分割完毕，不应再次分割。郑某4确认两份《股份继承情况》的真实性，其表示该《股份继承情况》是兄妹四人当着郑某的面签，案涉股份由郑某3一人继承是郭某与郑某共同的意思。\n\n郑某3为证明郭某、郑某一直与其共同生活，两位老人晚年生活起居、生病住院等均由其照顾，郑某1、郑某2未尽到基本的赡养责任，且案涉股份在2017年11月16日至2022年6月30日期间的分红总计为184668元，已用于支付郭某的丧葬费、郑某的生活费、医疗费和丧葬费的事实，申请证人周某出庭作证，并另提供《原3社郭某2017年-2022年股红分配明细表》、郭某病历、郭某2017年住院治疗费用清单、发票及部分支付凭证、郑某病历、建设银行交易明细清单、郑某医疗费支付凭证及部分医疗费用结算单、丧葬费用收据、呼吸机购买单据、郑某的病历及医疗费用发票等证据证明。证人周某出庭作证表示其所经营的快餐店在郑某3住房对面，郭某、郑某一直是与郑某3共同生活。《原3社郭某2017年-2022年股红分配明细表》由XX经济联社出具，显示2017年至2022年案涉股份的分红合计184668元。经质证，郑某1、郑某2对证人周某的证言无异议；对《原3社郭某2017年-2022年股红分配明细表》及呼吸机购买单据的真实性、合法性、关联性均予以认可，对其余证据的真实性、合法性认可，关联性不予认可。郑某1、郑某2表示其二人也有对郭某、郑某尽到照顾义务，在2016年之前郭某、郑某的医药费均是由四兄妹平摊，且郭某的医疗费可以在村里报销7成，郑某过世前每月有4000多至5000多元的退休金，民政局也给两位老人发放了丧葬费，故郑某3的实际支出并没有这么多。郑某4对郑某3的上述证据均予以认可。\n\n郑某1、郑某2为证明其二人与郭某、郑某关系融洽、并承担了郭某、郑某的医疗费，提交了郑某2与郑某3微信聊天记录、医疗发票及收费清单、郭某与郑某病历本首页、生活照等证据。针对上述证据，郑某3与郑某4共同表示郑某2与郑某3微信聊天记录仅显示郑某2女儿支付了4637.5元，无法证明其承担了赡养责任；医疗发票不能证明郑某1有实际支付该医疗费；未看到病历本原件，对该证据的真实性不予认可；照片拍摄时间为2007年或2008年，照片内容不能反映郑某1、郑某2与父母的实际关系。\n\n一审庭审中，郑某1、郑某2、郑某3及郑某4均确认，郭某去世前已就其余遗产进行了分割。\n\n一审庭后，一审法院前往XX经济联社调查，该社工作人员答复：XX经济联社在2017年11月收到郑某3等人提交的两份《股份继承情况》后即将案涉股份转移登记至郑某3名下，郑某2在2022年前未曾向XX经济联社提出异议；村民股东身份在1994年已经固化，股东去世后，其继承人仅享有股份分红，不继承股东身份，也没有其他股东权益；郭某、郑某生前一直与郑某3共同生活。\n\n一审法院认为，根据《中华人民共和国继承法》第十条的规定，继承开始后，应由被继承人的配偶、父母、子女作为第一顺序继承人继承被继承人的遗产。本案中，被继承人郭某去世前已就除案涉股份外的其余遗产进行了分割，但未就案涉股份进行分割或订立遗嘱，案涉股份应由各继承人按照法定继承的规则进行继承。而在郭某去世后，其遗产继承人即郑某、郑某1、郑某2、郑某4及郑某3经协商一致，先后签署两份《股份继承情况》，确定案涉股份分红全部转至郑某3名下，其余继承人均没有异议。该两份《股份继承情况》内容具体明确，不存在歧义。现经核实，案涉股份仅享有分红的权利，各方对分红款的领取未设定期限，且全部股份已在2017年11月办理转移登记手续。此后，郑某1、郑某2未对股份分割提出过异议，亦未主张过分割分红款，无法印证郑某2、郑某1有关由郑某3代为掌管并代为领取分红的意思表示。综合各方确认的郭某、郑某生前均与郑某3一同居住，由其照顾老人的日常生活起居的事实，一审法院认定郭某过世后，其各继承人已就案涉股份分割完毕，现郑某1、郑某2在没有其他证据证明的情况下要求对案涉股份重新分割理据不足，不予支持。\n\n[DOC4_A8 | 一审判决结果]\n综上，一审法院依照《最高人民法院关于适用<中华人民共和国民法典>时间效力的若干规定》第一条第二款，《中华人民共和国继承法》第二条、第十条、第十五条、第二十五条，《关于贯彻执行<中华人民共和国继承法>若干问题的意见》第五十条，《中华人民共和国民事诉讼法》第六十七条第一款之规定，于2023年10月12日判决：驳回郑某1、郑某2的诉讼请求。一审案件受理费2108元，由郑某1、郑某2负担。\n\n[DOC4_A9 | 二审证据提交]\n本院二审期间，当事人围绕上诉请求依法提交了证据。本院组织当事人进行了证据交换和质证。\n\n郑某1、郑某2提交了郑某2向XX经济联社提交的《申请》及XX经济联社出具的《关于郭某名下股份说明的复函》，拟证明案涉股权至今仍登记在被继承人郭某名下。\n\n郑某3质证称，上述证据的真实性、合法性由法院审核，该证据不能证明案涉股权没有按被继承人郭某去世后各法定继承人达成的分割意见进行分割，从一审法院的调查笔录和XX经济联社出具的证明可知，案涉股权已按经济联社的要求办理了相应的继承手续，郑某1、郑某2认为案涉股权没有进行分割处理是其错误认知和出于自身的主张故意曲解该证据的证明内容。\n\n郑某4质证称，同意郑某3的质证意见。\n\n二审另查明，XX经济联社于2023年11月14日出具《关于郭某名下股份说明的复函》，载明：“郑某2阁下：我联社于2023年11月13日收到阁下的《申请》，据我联社工作人员查册所得，兹有原3社社员郭某名下分别持有广州市天河区XX街XX股份合作经济联社股份23股、酒店股30股、公寓股20股、以及广州市天河区XXXXX公司代购的广州农商银行股4000股。以上就是郭某名下所有的股份情况。特此函复。”据此，本院认定争议的郭某名下的股份仍登记在其名下，一审法院查明的其余事实清楚、属实，本院予以确认。\n\n[DOC4_A11 | 二审判决结果]\n驳回上诉，维持原判。\n\n二审案件受理费2108元，由上诉人郑某1、郑某2共同负担。\n\n本判决为终审判决。",
+        "source_window_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A4",
+          "DOC4_A5",
+          "DOC4_A6",
+          "DOC4_A7",
+          "DOC4_A8",
+          "DOC4_A9",
+          "DOC4_A11"
+        ],
+        "primary_anchor_id": "DOC4_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书4"
+        ],
+        "anchor_targets": [
+          "判决文书4"
+        ],
+        "anchor_value_hints": [
+          "4",
+          "1",
+          "2",
+          "3",
+          "2022",
+          "0106",
+          "34460",
+          "2023"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 9,
+            "same_case": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC4_A9",
+            "DOC4_A8",
+            "DOC4_A7",
+            "DOC4_A6",
+            "DOC4_A4",
+            "DOC4_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk indicates that the case involves a dispute over inheritance and is categorized as a civil case due to the involvement of a civil court and the nature of the dispute. The chunk provides enough information to classify the document as a '民事案件'. No further evidence is needed from this document to fulfill the task.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A9",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A8",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A7",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书4"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC4_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 郑某1、郑某2因法定继承纠纷不服一审判决，向法院提起上诉。 上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。本院于2023年11月8日立案后，依法组成合议庭进行了审理。本案现已审理终结。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC4_A9",
+            "DOC4_A8",
+            "DOC4_A7",
+            "DOC4_A6",
+            "DOC4_A4",
+            "DOC4_A3",
+            "DOC4_A11",
+            "DOC4_A10",
+            "DOC4_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A11",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A10",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A9",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A9",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A8",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document appears to be a civil case due to the mention of inheritance disputes and court proceedings between parties. I will select an anchor that provides more context on the nature of the case to confirm if it falls under the '民事案件' category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A2\", \"DOC4_A11\", \"DOC4_A10\", \"DOC4_A6\"], \"utility_hits\": {\"DOC4_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A11\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC4_A8\": 11.0, \"DOC4_A11\": 11.0, \"DOC4_A3\": 11.0, \"DOC4_A4\": 11.0}, \"score_breakdown\": {\"DOC4_A8\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.603, \"redundancy_penalty\": 0.0, \"total\": 31.603}, \"DOC4_A11\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.315, \"redundancy_penalty\": 0.0, \"total\": 31.315}, \"DOC4_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC4_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC4_A2: 郑某1、郑某2因法定继承纠纷不服一审判决，向法院提起上诉。\", \"text\": \"[DOC4_A1 | 当事人信息]\\n上诉人（原审原告）：郑某1，女，1966年10月9日出生，汉族，身份证住址广东省广州市越秀区。\\n\\n上诉人（原审原告）：郑某2，男，1967年5月20日出生，汉族，身份证住址广东省广州市天河区。\\n\\n上述二上诉人的共同委托诉讼代理人：徐慧鹏，广东金辩律师事务所律师。\\n\\n被上诉人（原审被告）：郑某3，男，1974年12月20日出生，汉族，身份证住址广东省广州市天河区。\\n\\n委托诉讼代理人：李华，广东信德盛律师事务所律师。\\n\\n委托诉讼代理人：杨文若，广东信德盛律师事务所律师。\\n\\n原审第三人：郑某4，女，1971年2月6日出生，汉族，户籍地址广东省广州市荔湾区之一。\\n\\n[DOC4_A2 | 案件背景]\\n上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。本院于2023年11月8日立案后，依法组成合议庭进行了审理。本案现已审理终结。\\n\\n[DOC4_A4 | 被上诉人答辩]\\n郑某3辩称，一审法院查明被继承人郭某的法定继承人郑某、郑某1、郑某2、郑某4及郑某3在案涉两份《股份继承情况》上签字并捺印，明确约定案涉遗产由郑某3一人继承，其他继承人无异议；本案各方当事人和XX经济联社均确认案涉遗产登记在郑某3名下，郑某1、郑某2在一审庭审时也确认案涉遗产已于2017年11月办理手续登记在郑某3名下；被继承人郭某和郑某一直与郑某3共同生活。上述事实有《股份继承情况》、XX经济联社出具的《证明》、一审法院的调查笔录、庭审笔录和证人周某予以证明，一审法院据此认定案涉遗产已做分割的事实正确且依法有据。郑某1、郑某2主张XX经济联社出具虚假证明和在一审法院调查时作出虚假陈述均系其个人臆想，无任何事实依据，且郑某1、郑某2至今未提交任何可证明其主张的证据材料，反观XX经济联社出具的《证明》和接受一审法院调查时作出的陈述均与各方当事人及证人提交的证据及一致确认的案件事实相印证，无任何虚假陈述的情形。综上，根据各方当事人一审提交的证据和庭审时各方确认的事实可知，案涉遗产已分割处理，郑某1、郑某2在案涉遗产处理后提起诉讼要求对案涉遗产再次处理的诉讼请求依法无据，不应获得支持。请求二审法院依法驳回上诉，维持原判。\\n\\n[DOC4_A5 | 原审第三人陈述]\\n郑某4述称，同意一审判决。\\n\\n[DOC4_A6 | 一审诉讼请求]\\n郑某1、郑某2向一审法院起诉请求：1.确认郑某1、郑某2对XX经济联社原始股23股的股权分别占有四分之一份额并分割相应的分红（该股权登记在郭某名下，目前由郑某3支配，分红自2017年11月16日起算）；2.确认郑某1、郑某2对郑某3名下XX经济联社学生公寓20股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；3.确认郑某1、郑某2对郑某3名下XX经济联社酒店30股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；4.确认郑某1、郑某2对郑某3名下挂靠在广州市天河区XXXXX公司的广州XX银行4000股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；5.判令郑某3承担本案诉讼费。\\n\\n[DOC4_A7 | 一审法院认定事实]\\n一审法院认定事实：被继承人郭某与案外人郑某系夫妻关系，二人育有婚生子女四人，分别为长女郑某1、长子郑某2、次女郑某4、次子郑某3。2017年8月13日，郭某因病于家中逝世。郭某去世时，没有立下书面遗嘱，其法定继承人有配偶郑某及四子女郑某1、郑某2、郑某4、郑某3。2021年3月3日，郑某因病逝世。\\n\\n郑某1与郑某2主张，郭某在世时，其名下有XX经济联社原始股权23股等股份，郭某去世后，子女四人与父亲郑某经协商将上述股权交由郑某3掌管并代为领取相应分红。因父亲郑某与郑某3共同生活，且郑某年事已高，需要看病，为方便照顾郑某，各方没有约定股权分红由谁获得，商定等郑某百年后再进行分割。郑某去世后，郑某1与郑某2多次要求郑某3将上述股权及相应分红款进行分割，但郑某3均置之不理。为此，郑某1、郑某3提供《股份继承情况》两份（签署时间分别为2017年11月13日、2017年11月16日）、郑某2与郑某3微信聊天记录予以证明。《股份继承情况》（2017年11月13日）载明：郭某及配偶郑某共同育有四名子女，分别是长女郑某1、长子郑某2、三女郑某4、四子郑某3，经现时有继承权的家人协商一致，同意把郭某在广州市XXXX有限公司名下的学生公寓股20股、原始股份23股、酒店股30股所产生的分红转给四子郑某3名下，其他所有继承人没有异议。《股份继承情况》（2017年11月16日）除确认前一份《股份继承情况》的内容外，另确认挂靠在广州市天河区XXXXX公司名下广州XX行股份4000股所产生的分红转给四子郑某3名下，其他所有继承人没有异议。郑某、郑某1、郑某2、郑某4及郑某3均在上述两份《股份继承情况》中签名并捺印。郑某2与郑某3微信聊天记录显示郑某2于2021年12月24日向郑某3发送信息要求分割股份，郑某3未回应。针对上述证据，郑某3质证表示对两份《股份继承情况》的真实性、合法性及关联性均予以认可，但《股份继承情况》的内容已明确写明了全体继承人同意案涉股份由郑某3继承，并没有由郑某3代为掌管的意思，郑某1与郑某2的主张是恶意曲解《股份继承情况》的真实意思表示；对郑某2与郑某3微信聊天记录的真实性与合法性予以确认，关联性不予确认，案涉股份已分割完毕，不应再次分割。郑某4确认两份《股份继承情况》的真实性，其表示该《股份继承情况》是兄妹四人当着郑某的面签，案涉股份由郑某3一人继承是郭某与郑某共同的意思。\\n\\n郑某3为证明郭某、郑某一直与其共同生活，两位老人晚年生活起居、生病住院等均由其照顾，郑某1、郑某2未尽到基本的赡养责任，且案涉股份在2017年11月16日至2022年6月30日期间的分红总计为184668元，已用于支付郭某的丧葬费、郑某的生活费、医疗费和丧葬费的事实，申请证人周某出庭作证，并另提供《原3社郭某2017年-2022年股红分配明细表》、郭某病历、郭某2017年住院治疗费用清单、发票及部分支付凭证、郑某病历、建设银行交易明细清单、郑某医疗费支付凭证及部分医疗费用结算单、丧葬费用收据、呼吸机购买单据、郑某的病历及医疗费用发票等证据证明。证人周某出庭作证表示其所经营的快餐店在郑某3住房对面，郭某、郑某一直是与郑某3共同生活。《原3社郭某2017年-2022年股红分配明细表》由XX经济联社出具，显示2017年至2022年案涉股份的分红合计184668元。经质证，郑某1、郑某2对证人周某的证言无异议；对《原3社郭某2017年-2022年股红分配明细表》及呼吸机购买单据的真实性、合法性、关联性均予以认可，对其余证据的真实性、合法性认可，关联性不予认可。郑某1、郑某2表示其二人也有对郭某、郑某尽到照顾义务，在2016年之前郭某、郑某的医药费均是由四兄妹平摊，且郭某的医疗费可以在村里报销7成，郑某过世前每月有4000多至5000多元的退休金，民政局也给两位老人发放了丧葬费，故郑某3的实际支出并没有这么多。郑某4对郑某3的上述证据均予以认可。\\n\\n郑某1、郑某2为证明其二人与郭某、郑某关系融洽、并承担了郭某、郑某的医疗费，提交了郑某2与郑某3微信聊天记录、医疗发票及收费清单、郭某与郑某病历本首页、生活照等证据。针对上述证据，郑某3与郑某4共同表示郑某2与郑某3微信聊天记录仅显示郑某2女儿支付了4637.5元，无法证明其承担了赡养责任；医疗发票不能证明郑某1有实际支付该医疗费；未看到病历本原件，对该证据的真实性不予认可；照片拍摄时间为2007年或2008年，照片内容不能反映郑某1、郑某2与父母的实际关系。\\n\\n一审庭审中，郑某1、郑某2、郑某3及郑某4均确认，郭某去世前已就其余遗产进行了分割。\\n\\n一审庭后，一审法院前往XX经济联社调查，该社工作人员答复：XX经济联社在2017年11月收到郑某3等人提交的两份《股份继承情况》后即将案涉股份转移登记至郑某3名下，郑某2在2022年前未曾向XX经济联社提出异议；村民股东身份在1994年已经固化，股东去世后，其继承人仅享有股份分红，不继承股东身份，也没有其他股东权益；郭某、郑某生前一直与郑某3共同生活。\\n\\n一审法院认为，根据《中华人民共和国继承法》第十条的规定，继承开始后，应由被继承人的配偶、父母、子女作为第一顺序继承人继承被继承人的遗产。本案中，被继承人郭某去世前已就除案涉股份外的其余遗产进行了分割，但未就案涉股份进行分割或订立遗嘱，案涉股份应由各继承人按照法定继承的规则进行继承。而在郭某去世后，其遗产继承人即郑某、郑某1、郑某2、郑某4及郑某3经协商一致，先后签署两份《股份继承情况》，确定案涉股份分红全部转至郑某3名下，其余继承人均没有异议。该两份《股份继承情况》内容具体明确，不存在歧义。现经核实，案涉股份仅享有分红的权利，各方对分红款的领取未设定期限，且全部股份已在2017年11月办理转移登记手续。此后，郑某1、郑某2未对股份分割提出过异议，亦未主张过分割分红款，无法印证郑某2、郑某1有关由郑某3代为掌管并代为领取分红的意思表示。综合各方确认的郭某、郑某生前均与郑某3一同居住，由其照顾老人的日常生活起居的事实，一审法院认定郭某过世后，其各继承人已就案涉股份分割完毕，现郑某1、郑某2在没有其他证据证明的情况下要求对案涉股份重新分割理据不足，不予支持。\\n\\n[DOC4_A8 | 一审判决结果]\\n综上，一审法院依照《最高人民法院关于适用<中华人民共和国民法典>时间效力的若干规定》第一条第二款，《中华人民共和国继承法》第二条、第十条、第十五条、第二十五条，《关于贯彻执行<中华人民共和国继承法>若干问题的意见》第五十条，《中华人民共和国民事诉讼法》第六十七条第一款之规定，于2023年10月12日判决：驳回郑某1、郑某2的诉讼请求。一审案件受理费2108元，由郑某1、郑某2负担。\\n\\n[DOC4_A9 | 二审证据提交]\\n本院二审期间，当事人围绕上诉请求依法提交了证据。本院组织当事人进行了证据交换和质证。\\n\\n郑某1、郑某2提交了郑某2向XX经济联社提交的《申请》及XX经济联社出具的《关于郭某名下股份说明的复函》，拟证明案涉股权至今仍登记在被继承人郭某名下。\\n\\n郑某3质证称，上述证据的真实性、合法性由法院审核，该证据不能证明案涉股权没有按被继承人郭某去世后各法定继承人达成的分割意见进行分割，从一审法院的调查笔录和XX经济联社出具的证明可知，案涉股权已按经济联社的要求办理了相应的继承手续，郑某1、郑某2认为案涉股权没有进行分割处理是其错误认知和出于自身的主张故意曲解该证据的证明内容。\\n\\n郑某4质证称，同意郑某3的质证意见。\\n\\n二审另查明，XX经济联社于2023年11月14日出具《关于郭某名下股份说明的复函》，载明：“郑某2阁下：我联社于2023年11月13日收到阁下的《申请》，据我联社工作人员查册所得，兹有原3社社员郭某名下分别持有广州市天河区XX街XX股份合作经济联社股份23股、酒店股30股、公寓股20股、以及广州市天河区XXXXX公司代购的广州农商银行股4000股。以上就是郭某名下所有的股份情况。特此函复。”据此，本院认定争议的郭某名下的股份仍登记在其名下，一审法院查明的其余事实清楚、属实，本院予以确认。\\n\\n[DOC4_A11 | 二审判决结果]\\n驳回上诉，维持原判。\\n\\n二审案件受理费2108元，由上诉人郑某1、郑某2共同负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\", \"DOC4_A7\", \"DOC4_A8\", \"DOC4_A9\", \"DOC4_A11\"], \"primary_anchor_id\": \"DOC4_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"判决文书4\"], \"anchor_value_hints\": [\"4\", \"1\", \"2\", \"3\", \"2022\", \"0106\", \"34460\", \"2023\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_case\": 9}, \"top_related_anchor_ids\": [\"DOC4_A9\", \"DOC4_A8\", \"DOC4_A7\", \"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk indicates that the case involves a dispute over inheritance and is categorized as a civil case due to the involvement of a civil court and the nature of the dispute. The chunk provides enough information to classify the document as a '民事案件'. No further evidence is needed from this document to fulfill the task.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 郑某1、郑某2因法定继承纠纷不服一审判决，向法院提起上诉。 上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。本院于2023年11月8日立案后，依法组成合议庭进行了审理。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC4_A9\", \"DOC4_A8\", \"DOC4_A7\", \"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A11\", \"DOC4_A10\", \"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A11\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document appears to be a civil case due to the mention of inheritance disputes and court proceedings between parties. I will select an anchor that provides more context on the nature of the case to confirm if it falls under the '民事案件' category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A2\", \"DOC4_A11\", \"DOC4_A10\", \"DOC4_A6\"], \"utility_hits\": {\"DOC4_A8\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A11\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC4_A8\": 11.0, \"DOC4_A11\": 11.0, \"DOC4_A3\": 11.0, \"DOC4_A4\": 11.0}, \"score_breakdown\": {\"DOC4_A8\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.603, \"redundancy_penalty\": 0.0, \"total\": 31.603}, \"DOC4_A11\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.315, \"redundancy_penalty\": 0.0, \"total\": 31.315}, \"DOC4_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC4_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC4_A2: 郑某1、郑某2因法定继承纠纷不服一审判决，向法院提起上诉。\", \"text\": \"[DOC4_A1 | 当事人信息]\\n上诉人（原审原告）：郑某1，女，1966年10月9日出生，汉族，身份证住址广东省广州市越秀区。\\n\\n上诉人（原审原告）：郑某2，男，1967年5月20日出生，汉族，身份证住址广东省广州市天河区。\\n\\n上述二上诉人的共同委托诉讼代理人：徐慧鹏，广东金辩律师事务所律师。\\n\\n被上诉人（原审被告）：郑某3，男，1974年12月20日出生，汉族，身份证住址广东省广州市天河区。\\n\\n委托诉讼代理人：李华，广东信德盛律师事务所律师。\\n\\n委托诉讼代理人：杨文若，广东信德盛律师事务所律师。\\n\\n原审第三人：郑某4，女，1971年2月6日出生，汉族，户籍地址广东省广州市荔湾区之一。\\n\\n[DOC4_A2 | 案件背景]\\n上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。本院于2023年11月8日立案后，依法组成合议庭进行了审理。本案现已审理终结。\\n\\n[DOC4_A4 | 被上诉人答辩]\\n郑某3辩称，一审法院查明被继承人郭某的法定继承人郑某、郑某1、郑某2、郑某4及郑某3在案涉两份《股份继承情况》上签字并捺印，明确约定案涉遗产由郑某3一人继承，其他继承人无异议；本案各方当事人和XX经济联社均确认案涉遗产登记在郑某3名下，郑某1、郑某2在一审庭审时也确认案涉遗产已于2017年11月办理手续登记在郑某3名下；被继承人郭某和郑某一直与郑某3共同生活。上述事实有《股份继承情况》、XX经济联社出具的《证明》、一审法院的调查笔录、庭审笔录和证人周某予以证明，一审法院据此认定案涉遗产已做分割的事实正确且依法有据。郑某1、郑某2主张XX经济联社出具虚假证明和在一审法院调查时作出虚假陈述均系其个人臆想，无任何事实依据，且郑某1、郑某2至今未提交任何可证明其主张的证据材料，反观XX经济联社出具的《证明》和接受一审法院调查时作出的陈述均与各方当事人及证人提交的证据及一致确认的案件事实相印证，无任何虚假陈述的情形。综上，根据各方当事人一审提交的证据和庭审时各方确认的事实可知，案涉遗产已分割处理，郑某1、郑某2在案涉遗产处理后提起诉讼要求对案涉遗产再次处理的诉讼请求依法无据，不应获得支持。请求二审法院依法驳回上诉，维持原判。\\n\\n[DOC4_A5 | 原审第三人陈述]\\n郑某4述称，同意一审判决。\\n\\n[DOC4_A6 | 一审诉讼请求]\\n郑某1、郑某2向一审法院起诉请求：1.确认郑某1、郑某2对XX经济联社原始股23股的股权分别占有四分之一份额并分割相应的分红（该股权登记在郭某名下，目前由郑某3支配，分红自2017年11月16日起算）；2.确认郑某1、郑某2对郑某3名下XX经济联社学生公寓20股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；3.确认郑某1、郑某2对郑某3名下XX经济联社酒店30股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；4.确认郑某1、郑某2对郑某3名下挂靠在广州市天河区XXXXX公司的广州XX银行4000股股权分别占有四分之一份额并分割相应的分红（分红自2017年11月16日起算）；5.判令郑某3承担本案诉讼费。\\n\\n[DOC4_A7 | 一审法院认定事实]\\n一审法院认定事实：被继承人郭某与案外人郑某系夫妻关系，二人育有婚生子女四人，分别为长女郑某1、长子郑某2、次女郑某4、次子郑某3。2017年8月13日，郭某因病于家中逝世。郭某去世时，没有立下书面遗嘱，其法定继承人有配偶郑某及四子女郑某1、郑某2、郑某4、郑某3。2021年3月3日，郑某因病逝世。\\n\\n郑某1与郑某2主张，郭某在世时，其名下有XX经济联社原始股权23股等股份，郭某去世后，子女四人与父亲郑某经协商将上述股权交由郑某3掌管并代为领取相应分红。因父亲郑某与郑某3共同生活，且郑某年事已高，需要看病，为方便照顾郑某，各方没有约定股权分红由谁获得，商定等郑某百年后再进行分割。郑某去世后，郑某1与郑某2多次要求郑某3将上述股权及相应分红款进行分割，但郑某3均置之不理。为此，郑某1、郑某3提供《股份继承情况》两份（签署时间分别为2017年11月13日、2017年11月16日）、郑某2与郑某3微信聊天记录予以证明。《股份继承情况》（2017年11月13日）载明：郭某及配偶郑某共同育有四名子女，分别是长女郑某1、长子郑某2、三女郑某4、四子郑某3，经现时有继承权的家人协商一致，同意把郭某在广州市XXXX有限公司名下的学生公寓股20股、原始股份23股、酒店股30股所产生的分红转给四子郑某3名下，其他所有继承人没有异议。《股份继承情况》（2017年11月16日）除确认前一份《股份继承情况》的内容外，另确认挂靠在广州市天河区XXXXX公司名下广州XX行股份4000股所产生的分红转给四子郑某3名下，其他所有继承人没有异议。郑某、郑某1、郑某2、郑某4及郑某3均在上述两份《股份继承情况》中签名并捺印。郑某2与郑某3微信聊天记录显示郑某2于2021年12月24日向郑某3发送信息要求分割股份，郑某3未回应。针对上述证据，郑某3质证表示对两份《股份继承情况》的真实性、合法性及关联性均予以认可，但《股份继承情况》的内容已明确写明了全体继承人同意案涉股份由郑某3继承，并没有由郑某3代为掌管的意思，郑某1与郑某2的主张是恶意曲解《股份继承情况》的真实意思表示；对郑某2与郑某3微信聊天记录的真实性与合法性予以确认，关联性不予确认，案涉股份已分割完毕，不应再次分割。郑某4确认两份《股份继承情况》的真实性，其表示该《股份继承情况》是兄妹四人当着郑某的面签，案涉股份由郑某3一人继承是郭某与郑某共同的意思。\\n\\n郑某3为证明郭某、郑某一直与其共同生活，两位老人晚年生活起居、生病住院等均由其照顾，郑某1、郑某2未尽到基本的赡养责任，且案涉股份在2017年11月16日至2022年6月30日期间的分红总计为184668元，已用于支付郭某的丧葬费、郑某的生活费、医疗费和丧葬费的事实，申请证人周某出庭作证，并另提供《原3社郭某2017年-2022年股红分配明细表》、郭某病历、郭某2017年住院治疗费用清单、发票及部分支付凭证、郑某病历、建设银行交易明细清单、郑某医疗费支付凭证及部分医疗费用结算单、丧葬费用收据、呼吸机购买单据、郑某的病历及医疗费用发票等证据证明。证人周某出庭作证表示其所经营的快餐店在郑某3住房对面，郭某、郑某一直是与郑某3共同生活。《原3社郭某2017年-2022年股红分配明细表》由XX经济联社出具，显示2017年至2022年案涉股份的分红合计184668元。经质证，郑某1、郑某2对证人周某的证言无异议；对《原3社郭某2017年-2022年股红分配明细表》及呼吸机购买单据的真实性、合法性、关联性均予以认可，对其余证据的真实性、合法性认可，关联性不予认可。郑某1、郑某2表示其二人也有对郭某、郑某尽到照顾义务，在2016年之前郭某、郑某的医药费均是由四兄妹平摊，且郭某的医疗费可以在村里报销7成，郑某过世前每月有4000多至5000多元的退休金，民政局也给两位老人发放了丧葬费，故郑某3的实际支出并没有这么多。郑某4对郑某3的上述证据均予以认可。\\n\\n郑某1、郑某2为证明其二人与郭某、郑某关系融洽、并承担了郭某、郑某的医疗费，提交了郑某2与郑某3微信聊天记录、医疗发票及收费清单、郭某与郑某病历本首页、生活照等证据。针对上述证据，郑某3与郑某4共同表示郑某2与郑某3微信聊天记录仅显示郑某2女儿支付了4637.5元，无法证明其承担了赡养责任；医疗发票不能证明郑某1有实际支付该医疗费；未看到病历本原件，对该证据的真实性不予认可；照片拍摄时间为2007年或2008年，照片内容不能反映郑某1、郑某2与父母的实际关系。\\n\\n一审庭审中，郑某1、郑某2、郑某3及郑某4均确认，郭某去世前已就其余遗产进行了分割。\\n\\n一审庭后，一审法院前往XX经济联社调查，该社工作人员答复：XX经济联社在2017年11月收到郑某3等人提交的两份《股份继承情况》后即将案涉股份转移登记至郑某3名下，郑某2在2022年前未曾向XX经济联社提出异议；村民股东身份在1994年已经固化，股东去世后，其继承人仅享有股份分红，不继承股东身份，也没有其他股东权益；郭某、郑某生前一直与郑某3共同生活。\\n\\n一审法院认为，根据《中华人民共和国继承法》第十条的规定，继承开始后，应由被继承人的配偶、父母、子女作为第一顺序继承人继承被继承人的遗产。本案中，被继承人郭某去世前已就除案涉股份外的其余遗产进行了分割，但未就案涉股份进行分割或订立遗嘱，案涉股份应由各继承人按照法定继承的规则进行继承。而在郭某去世后，其遗产继承人即郑某、郑某1、郑某2、郑某4及郑某3经协商一致，先后签署两份《股份继承情况》，确定案涉股份分红全部转至郑某3名下，其余继承人均没有异议。该两份《股份继承情况》内容具体明确，不存在歧义。现经核实，案涉股份仅享有分红的权利，各方对分红款的领取未设定期限，且全部股份已在2017年11月办理转移登记手续。此后，郑某1、郑某2未对股份分割提出过异议，亦未主张过分割分红款，无法印证郑某2、郑某1有关由郑某3代为掌管并代为领取分红的意思表示。综合各方确认的郭某、郑某生前均与郑某3一同居住，由其照顾老人的日常生活起居的事实，一审法院认定郭某过世后，其各继承人已就案涉股份分割完毕，现郑某1、郑某2在没有其他证据证明的情况下要求对案涉股份重新分割理据不足，不予支持。\\n\\n[DOC4_A8 | 一审判决结果]\\n综上，一审法院依照《最高人民法院关于适用<中华人民共和国民法典>时间效力的若干规定》第一条第二款，《中华人民共和国继承法》第二条、第十条、第十五条、第二十五条，《关于贯彻执行<中华人民共和国继承法>若干问题的意见》第五十条，《中华人民共和国民事诉讼法》第六十七条第一款之规定，于2023年10月12日判决：驳回郑某1、郑某2的诉讼请求。一审案件受理费2108元，由郑某1、郑某2负担。\\n\\n[DOC4_A9 | 二审证据提交]\\n本院二审期间，当事人围绕上诉请求依法提交了证据。本院组织当事人进行了证据交换和质证。\\n\\n郑某1、郑某2提交了郑某2向XX经济联社提交的《申请》及XX经济联社出具的《关于郭某名下股份说明的复函》，拟证明案涉股权至今仍登记在被继承人郭某名下。\\n\\n郑某3质证称，上述证据的真实性、合法性由法院审核，该证据不能证明案涉股权没有按被继承人郭某去世后各法定继承人达成的分割意见进行分割，从一审法院的调查笔录和XX经济联社出具的证明可知，案涉股权已按经济联社的要求办理了相应的继承手续，郑某1、郑某2认为案涉股权没有进行分割处理是其错误认知和出于自身的主张故意曲解该证据的证明内容。\\n\\n郑某4质证称，同意郑某3的质证意见。\\n\\n二审另查明，XX经济联社于2023年11月14日出具《关于郭某名下股份说明的复函》，载明：“郑某2阁下：我联社于2023年11月13日收到阁下的《申请》，据我联社工作人员查册所得，兹有原3社社员郭某名下分别持有广州市天河区XX街XX股份合作经济联社股份23股、酒店股30股、公寓股20股、以及广州市天河区XXXXX公司代购的广州农商银行股4000股。以上就是郭某名下所有的股份情况。特此函复。”据此，本院认定争议的郭某名下的股份仍登记在其名下，一审法院查明的其余事实清楚、属实，本院予以确认。\\n\\n[DOC4_A11 | 二审判决结果]\\n驳回上诉，维持原判。\\n\\n二审案件受理费2108元，由上诉人郑某1、郑某2共同负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\", \"DOC4_A7\", \"DOC4_A8\", \"DOC4_A9\", \"DOC4_A11\"], \"primary_anchor_id\": \"DOC4_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"判决文书4\"], \"anchor_value_hints\": [\"4\", \"1\", \"2\", \"3\", \"2022\", \"0106\", \"34460\", \"2023\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_case\": 9}, \"top_related_anchor_ids\": [\"DOC4_A9\", \"DOC4_A8\", \"DOC4_A7\", \"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk indicates that the case involves a dispute over inheritance and is categorized as a civil case due to the involvement of a civil court and the nature of the dispute. The chunk provides enough information to classify the document as a '民事案件'. No further evidence is needed from this document to fulfill the task.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 郑某1、郑某2因法定继承纠纷不服一审判决，向法院提起上诉。 上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提起上诉。本院于2023年11月8日立案后，依法组成合议庭进行了审理。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC4_A9\", \"DOC4_A8\", \"DOC4_A7\", \"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A11\", \"DOC4_A10\", \"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A11\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}]}}</retrieve>"
+}

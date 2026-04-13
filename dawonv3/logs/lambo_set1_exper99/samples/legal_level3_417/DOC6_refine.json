@@ -1,0 +1,449 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "selected_anchor_ids": [
+    "DOC6_A7"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC6_A7",
+        "candidate_anchor_ids": [
+          "DOC6_A7"
+        ],
+        "utility_hits": {
+          "DOC6_A7": [
+            "legal_label_hit=['赔偿案件', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC6_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC6_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC6_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC6_A7": 16.0,
+          "DOC6_A2": 11.0,
+          "DOC6_A3": 11.0,
+          "DOC6_A4": 11.0
+        },
+        "score_breakdown": {
+          "DOC6_A7": {
+            "local_relevance": 20.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.221,
+            "redundancy_penalty": 0.0,
+            "total": 49.221
+          },
+          "DOC6_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC6_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC6_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC6_A7",
+      "plan_think": "The document seems to involve a compensation claim related to a death in custody, which suggests it could fall under the '赔偿案件' (compensation case) category. I will inspect the chunk that provides details on the court's decision to confirm the type of case.",
+      "info": {
+        "anchor_id": "DOC6_A7",
+        "anchor_type": "paragraph_region",
+        "section_path": "决定结果",
+        "summary": "Expanded same-section read window around DOC6_A7: 法院决定维持广东省公安厅的复议决定，驳回李惠元的赔偿请求。",
+        "text": "[DOC6_A1 | 当事人信息]\n赔偿请求人：李惠元，女，汉族，1969年10月21日出生，住广东省阳江市海陵岛试验区。系死者冯某的妻子。\n\n委托代理人：邓小宇、张运云，均为泰和泰（深圳）律师事务所律师。\n\n赔偿义务机关：阳江市公安局。住所地：广东省阳江市江城区东风三路99号。\n\n法定代表人：方小勇，该局局长。\n\n委托代理人：张朝泽、莫冠军，均为该局工作人员。\n\n复议机关：广东省公安厅。住所地：广东省广州市越秀区黄**路97号。\n\n法定代表人：刘国周，该厅厅长。\n\n委托代理人：刘人源、陈盛琴，均为该厅工作人员。\n\n[DOC6_A2 | 案件背景]\n赔偿请求人李惠元申请赔偿义务机关阳江市公安局怠于履行监管职责致死国家赔偿一案，不服广东省公安厅作出的粤公赔复决字[2024]1号刑事赔偿复议决定，向本院赔偿委员会申请作出赔偿决定。本院赔偿委员会依法对本案进行审理，现已审理终结。\n\n2023年9月7日，李惠元认为阳江市公安局怠于履行监管职责，对冯某的死亡负有责任，向阳江市公安局申请国家赔偿。\n\n2023年11月6日，阳江市公安局作出阳公刑赔决字［2023］002号《刑事赔偿决定书》，认为冯某死亡的原因是患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，阳江市看守所不存在延误救治的情形，决定不予赔偿。\n\n李惠元不服，向广东省公安厅提出刑事赔偿复议申请。2024年1月14日，复议机关广东省公安厅作出粤公赔复决字[2024]1号《刑事赔偿复议决定书》，认为阳江市公安局作出的不予赔偿决定符合规定，决定维持阳江市公安局作出的阳公刑赔决字[2023]002号《刑事赔偿决定书》。\n\n[DOC6_A3 | 赔偿请求]\n李惠元不服，向本院赔偿委员会申请作出赔偿决定，提出如下赔偿请求：1.赔偿义务机关向赔偿请求人支付死亡赔偿金2280580元；2.赔偿义务机关向赔偿请求人支付丧葬费人民币57014.5元；3.赔偿义务机关向赔偿请求人支付精神损害抚慰金人民币110000元。以上合计2447594.5元。主要事实和理由归纳概况如下：1.广东省公安厅的《刑事赔偿复议决定书》认定事实错误，没有认真核实证据，得出冯某的死亡与阳江市看守所的执法行为之间不存在因果关系的错误结论。2.冯某在阳江市看守所死亡，阳江市医学会、阳江市人民检察院、广东省公安厅均明确赔偿义务机关存在不足之处，已经明确赔偿义务机关的执法行为与冯某的死亡结果存在因果关系，赔偿义务机关及复议机关拒绝赔偿，于法无据。3.阳江市医学会认定冯某在阳江市看守所病情没有得到跟踪治疗，则确认阳江市看守所对冯某的死亡存在过错，应当承担赔偿责任。恳请本院赔偿委员会查明赔偿义务机关的责任比重。4.冯某多次要求出所就医未获允许。2022年12月28日，阳江市看守所未及时发现冯某发病，后冯某经抢救无效在看守所就已经死亡；在120救护车到达后，阳江市看守所仍强行安排拉走冯某并且未安排警力随车，阳江市公安局的上述行为与冯某的死亡存在因果关系。5.阳江市公安局依法应当对赔偿请求人承担赔偿责任有判例及法律支持。\n\n[DOC6_A4 | 质证过程]\n2024年3月12日上午，本院赔偿委员会主持赔偿请求人和赔偿义务机关，对阳江市公安局是否存在怠于履行监管职责的行为，阳江市公安局的监管行为与冯某的死亡是否存在因果关系，阳江市公安局是否应当对冯某的死亡承担刑事赔偿责任等问题进行质证。赔偿请求人李惠元及其委托代理人邓小宇、张运云，赔偿义务机关阳江市公安局的委托代理人张朝泽、莫冠军，广东省公安厅的委托代理人刘人源参加质证。\n\n阳江市公安局答辩称：阳江市看守所民警及工作人员的处理措施符合《中华人民共和国看守所条例》、公安部《看守所执法细则》等有关法律法规及相关规定，冯某因疾病死亡不属于国家赔偿的范畴，其死亡的原因是患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。阳江市看守所在冯某死亡一案中不存在延误治疗的情形，根据现有证据，阳江市看守所对冯某依法监管、积极救治，并无过错。冯某的死亡与阳江市看守所的监管、救治行为不存在因果关系。赔偿请求人要求该局对冯某的死亡承担国家赔偿责任，缺乏事实和法律依据。南方医科大学司法鉴定中心对冯某的死因作出鉴定意见：冯某符合在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。阳江市人民检察院驻阳江市看守所检察室《关于冯某死亡事故案件调查情况及家属有关申请事项的回复》已告知赔偿请求人冯某的死亡属于因病正常死亡。该局作出的阳公刑赔决字［2023］002号《刑事赔偿决定书》和广东省公安厅粤公赔复决字［2024］1号《刑事赔偿复议决定书》，认定的事实清楚、证据充分、依据准确、程序合法,请本院赔偿委员会依法予以维持。\n\n广东省公安厅陈述称：本案中，冯某因被采取刑事强制措施、判处有期徒刑，羁押于阳江市看守所，赔偿请求人认为阳江市看守所怠于履行法定职责要求赔偿，适用《中华人民共和国国家赔偿法》第十七条，属于刑事赔偿范围。冯某羁押于阳江市看守所期间突发疾病，同仓人员发现并报告后，民辅警、驻所医务人员及时到达现场并将冯某运送至医务室进行抢救、拨打120，已依法履行监管、救助等职责。冯某系在患有高血压疾病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，其死亡与公安机关的执法行为不存在法律上的因果关系。受害人没有取得赔偿的权利。根据相关法律规定，该厅作出维持阳江市公安局不予赔偿的决定。综上，该厅作出的刑事赔偿复议决定符合有关法律规定，请本院赔偿委员会依法予以维持。\n\n[DOC6_A5 | 事实查明]\n经审理查明，冯某因涉嫌掩饰、隐瞒犯罪所得收益罪，于2021年10月29日被阳江市公安局海陵分局决定刑事拘留，10月30日被送阳江市看守所羁押，12月3日被逮捕，2022年1月28日被移送审查起诉，12月21日被人民法院判处有期徒刑2年6个月。冯某在2021年10月29日入所体检时自称有腰椎间盘突出手术史、湿疹，无传染病史，Ｂ超显示前列腺增大伴钙化，胸片显示左上肺纤维增殖灶，符合看守所收押条件。入所后，冯某出现痛风、湿疹、水肿、气促等症状，阳江市人民医院派驻看守所医务人员（以下简称“驻所医务人员”）对冯某进行了治疗。2022年12月20日、21日，冯某到医务室看病，自诉少尿、气促4天，双下肢及颜面部水肿10余天，经医生诊断为心力衰竭、肾功能不全。由于冯某的情况不属于重症、急症，且经治疗后情况有所好转，阳江市看守所决定将冯某继续留在看守所内就医。12月22日至27日，驻所医务人员均到冯某监室问诊或发药。12月28日16时5分，16号监室在押人员向看守所值班室报告称冯某晕倒；16时10分，驻所医务人员进入16号监室查看冯某情况；16时13分，驻所医务人员、民辅警将冯某运送到医务室进行抢救并拨打120；17时，120救护车到达将冯某送往阳江市人民医院。根据该医院门诊病历，12月28日17时20分开始抢救，冯某面色苍白，全身发绀，呼之不应，无自主呼吸，触诊大动脉搏动消失，血压监测不到，双侧瞳孔对称、散大，对光反射消失，考虑院前死亡；17时28分心电图显示一直线，证实已经死亡。2023年3月13日，南方医科大学司法鉴定中心鉴定意见认为：冯某符合在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。2023年5月10日，经阳江市公安局发函，阳江市卫健局委托阳江市医学会就驻所医务人员对冯某的诊疗、抢救行为是否存在过错进行调查鉴定，认为在治疗过程中医方诊断明确，并予相应的有效治疗方案，患者症状有所好转，但存在未及时复查相关医学指标，未能全面评估患者的病情变化，并给予相应治疗方案调整，存在不足之处。\n\n另查明，阳江市公安局与阳江市人民医院签订了《阳江市看守所医疗卫生专业化服务合同》，约定阳江市人民医院在阳江市看守所设立“阳江市人民医院驻阳江市看守所门诊部”，承担在押人员每天24小时基本医疗服务和入所健康检查工作。\n\n以上事实有下列证据证明：阳江市公安局出具的立案决定书、拘留证、逮捕证、判决书等刑事案卷证据材料，阳江市公安机关场所治疗手册、阳江市人民医院诊断证明书、抢救记录、阳江市看守所监控视频、南方医科大学司法鉴定中心法医病理司法鉴定意见书、阳江市医学会调查鉴定意见书、赔偿请求人申请赔偿的材料等。\n\n[DOC6_A6 | 法律分析]\n本院赔偿委员会认为，本案的焦点是阳江市公安局有没有怠于履行救治职责，有没有延误对冯某的救治；冯某的死亡与阳江市公安局的监管行为有没有法律上的因果关系；阳江市公安局是否应当对冯某的死亡承担刑事赔偿责任。本案中，冯某在2021年10月29日入所体检时符合收押条件。入所后，冯某出现痛风、湿疹、水肿、气促等症状，驻所医务人员已对冯某进行了诊治。2022年12月20日、21日，冯某自诉少尿、气促4天，双下肢及颜面部水肿10余天，经医生诊断为心力衰竭、肾功能不全。由于冯某的情况不属于重症、急症，且经治疗后情况有所好转，阳江市看守所决定将冯某继续留在看守所内就医。12月22日至27日，驻所医务人员均到冯某监室问诊或发药。2022年12月28日16时5分，在同监室在押人员向阳江市××室报告称冯某晕倒的情况下，阳江市看守所民警及驻所医务人员立即到达现场并将冯某送至医务室进行抢救，后又拨打120急救电话，全力抢救冯某直至其被宣布临床死亡。阳江市公安局在救治冯某的过程中，已尽到合理、及时的注意义务，不存在延误对冯某救治的行为。虽然阳江市看守所在送冯某出所就医时，没有配备相应的警力押解，存在执法不规范的行为，但该行为与冯某的死亡不存在法律上的因果关系。冯某是在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，其死亡与阳江市公安局的羁押、看管、救治等行为不存在法律上的因果关系。根据相关法律规定，受害人没有取得国家赔偿的权利。赔偿请求人如认为阳江市人民医院在对冯某的诊治过程中存在过错，应当另循其他法律途径解决。\n\n[DOC6_A7 | 决定结果]\n综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。依照《最高人民法院关于人民法院赔偿委员会审理国家赔偿案件程序的规定》第十九条第一项的规定，决定如下：\n\n维持广东省公安厅粤公赔复决字[2024]1号刑事赔偿复议决定。\n\n本决定为发生法律效力的决定。",
+        "source_window_anchor_ids": [
+          "DOC6_A1",
+          "DOC6_A2",
+          "DOC6_A3",
+          "DOC6_A4",
+          "DOC6_A5",
+          "DOC6_A6",
+          "DOC6_A7"
+        ],
+        "primary_anchor_id": "DOC6_A7",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence",
+          "background_context"
+        ],
+        "anchor_entities": [
+          "判决文书6"
+        ],
+        "anchor_targets": [
+          "赔偿案件",
+          "判决文书6"
+        ],
+        "anchor_value_hints": [
+          "6",
+          "2024",
+          "1"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 5,
+            "same_case": 6,
+            "disambiguates": 6,
+            "likely_same_entity": 1
+          },
+          "top_related_anchor_ids": [
+            "DOC6_A6",
+            "DOC6_A5",
+            "DOC6_A4",
+            "DOC6_A3",
+            "DOC6_A2",
+            "DOC6_A6"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC6_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC6_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC6_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC6_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC6_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC6_A6",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书6']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk confirms that the document is a '赔偿案件' (compensation case) as it involves a decision regarding a compensation request. The document title '判决文书6' can be classified accordingly.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "赔偿案件",
+            "value": "判决文书6",
+            "normalized_value": "判决文书6",
+            "evidence_text": "综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。",
+            "source_doc_id": "DOC6",
+            "source_anchor_id": "DOC6_A7",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC6_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC6_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC6_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC6_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC6_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC6_A6",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书6']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "赔偿案件"
+          ],
+          "known_value_signatures": [
+            "判决文书6"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC6_A7"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "决定结果 法院决定维持广东省公安厅的复议决定，驳回李惠元的赔偿请求。 综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。依照《最高人民法院关于人民法院赔偿委员会审理国家赔偿案件程序的规定》第十九条第一项的规定，决定如下： 维持广东省公安厅粤公赔复决字[2024]1号刑事赔偿复议决定。 本决定为发生法律效力的决定。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC6_A6",
+            "DOC6_A5",
+            "DOC6_A4",
+            "DOC6_A3",
+            "DOC6_A2",
+            "DOC6_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书6']"
+            },
+            {
+              "source_anchor_id": "DOC6_A7",
+              "target_anchor_id": "DOC6_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "赔偿案件",
+      "value": "判决文书6",
+      "normalized_value": "判决文书6",
+      "evidence_text": "综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。",
+      "source_doc_id": "DOC6",
+      "source_anchor_id": "DOC6_A7",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC6_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC6_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC6_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC6_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC6_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC6_A6",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书6']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to involve a compensation claim related to a death in custody, which suggests it could fall under the '赔偿案件' (compensation case) category. I will inspect the chunk that provides details on the court's decision to confirm the type of case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A7\", \"candidate_anchor_ids\": [\"DOC6_A7\"], \"utility_hits\": {\"DOC6_A7\": [\"legal_label_hit=['赔偿案件', '判决文书']\", \"legal_decision_context\"], \"DOC6_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC6_A7\": 16.0, \"DOC6_A2\": 11.0, \"DOC6_A3\": 11.0, \"DOC6_A4\": 11.0}, \"score_breakdown\": {\"DOC6_A7\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.221, \"redundancy_penalty\": 0.0, \"total\": 49.221}, \"DOC6_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC6_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC6_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC6_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"决定结果\", \"summary\": \"Expanded same-section read window around DOC6_A7: 法院决定维持广东省公安厅的复议决定，驳回李惠元的赔偿请求。\", \"text\": \"[DOC6_A1 | 当事人信息]\\n赔偿请求人：李惠元，女，汉族，1969年10月21日出生，住广东省阳江市海陵岛试验区。系死者冯某的妻子。\\n\\n委托代理人：邓小宇、张运云，均为泰和泰（深圳）律师事务所律师。\\n\\n赔偿义务机关：阳江市公安局。住所地：广东省阳江市江城区东风三路99号。\\n\\n法定代表人：方小勇，该局局长。\\n\\n委托代理人：张朝泽、莫冠军，均为该局工作人员。\\n\\n复议机关：广东省公安厅。住所地：广东省广州市越秀区黄**路97号。\\n\\n法定代表人：刘国周，该厅厅长。\\n\\n委托代理人：刘人源、陈盛琴，均为该厅工作人员。\\n\\n[DOC6_A2 | 案件背景]\\n赔偿请求人李惠元申请赔偿义务机关阳江市公安局怠于履行监管职责致死国家赔偿一案，不服广东省公安厅作出的粤公赔复决字[2024]1号刑事赔偿复议决定，向本院赔偿委员会申请作出赔偿决定。本院赔偿委员会依法对本案进行审理，现已审理终结。\\n\\n2023年9月7日，李惠元认为阳江市公安局怠于履行监管职责，对冯某的死亡负有责任，向阳江市公安局申请国家赔偿。\\n\\n2023年11月6日，阳江市公安局作出阳公刑赔决字［2023］002号《刑事赔偿决定书》，认为冯某死亡的原因是患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，阳江市看守所不存在延误救治的情形，决定不予赔偿。\\n\\n李惠元不服，向广东省公安厅提出刑事赔偿复议申请。2024年1月14日，复议机关广东省公安厅作出粤公赔复决字[2024]1号《刑事赔偿复议决定书》，认为阳江市公安局作出的不予赔偿决定符合规定，决定维持阳江市公安局作出的阳公刑赔决字[2023]002号《刑事赔偿决定书》。\\n\\n[DOC6_A3 | 赔偿请求]\\n李惠元不服，向本院赔偿委员会申请作出赔偿决定，提出如下赔偿请求：1.赔偿义务机关向赔偿请求人支付死亡赔偿金2280580元；2.赔偿义务机关向赔偿请求人支付丧葬费人民币57014.5元；3.赔偿义务机关向赔偿请求人支付精神损害抚慰金人民币110000元。以上合计2447594.5元。主要事实和理由归纳概况如下：1.广东省公安厅的《刑事赔偿复议决定书》认定事实错误，没有认真核实证据，得出冯某的死亡与阳江市看守所的执法行为之间不存在因果关系的错误结论。2.冯某在阳江市看守所死亡，阳江市医学会、阳江市人民检察院、广东省公安厅均明确赔偿义务机关存在不足之处，已经明确赔偿义务机关的执法行为与冯某的死亡结果存在因果关系，赔偿义务机关及复议机关拒绝赔偿，于法无据。3.阳江市医学会认定冯某在阳江市看守所病情没有得到跟踪治疗，则确认阳江市看守所对冯某的死亡存在过错，应当承担赔偿责任。恳请本院赔偿委员会查明赔偿义务机关的责任比重。4.冯某多次要求出所就医未获允许。2022年12月28日，阳江市看守所未及时发现冯某发病，后冯某经抢救无效在看守所就已经死亡；在120救护车到达后，阳江市看守所仍强行安排拉走冯某并且未安排警力随车，阳江市公安局的上述行为与冯某的死亡存在因果关系。5.阳江市公安局依法应当对赔偿请求人承担赔偿责任有判例及法律支持。\\n\\n[DOC6_A4 | 质证过程]\\n2024年3月12日上午，本院赔偿委员会主持赔偿请求人和赔偿义务机关，对阳江市公安局是否存在怠于履行监管职责的行为，阳江市公安局的监管行为与冯某的死亡是否存在因果关系，阳江市公安局是否应当对冯某的死亡承担刑事赔偿责任等问题进行质证。赔偿请求人李惠元及其委托代理人邓小宇、张运云，赔偿义务机关阳江市公安局的委托代理人张朝泽、莫冠军，广东省公安厅的委托代理人刘人源参加质证。\\n\\n阳江市公安局答辩称：阳江市看守所民警及工作人员的处理措施符合《中华人民共和国看守所条例》、公安部《看守所执法细则》等有关法律法规及相关规定，冯某因疾病死亡不属于国家赔偿的范畴，其死亡的原因是患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。阳江市看守所在冯某死亡一案中不存在延误治疗的情形，根据现有证据，阳江市看守所对冯某依法监管、积极救治，并无过错。冯某的死亡与阳江市看守所的监管、救治行为不存在因果关系。赔偿请求人要求该局对冯某的死亡承担国家赔偿责任，缺乏事实和法律依据。南方医科大学司法鉴定中心对冯某的死因作出鉴定意见：冯某符合在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。阳江市人民检察院驻阳江市看守所检察室《关于冯某死亡事故案件调查情况及家属有关申请事项的回复》已告知赔偿请求人冯某的死亡属于因病正常死亡。该局作出的阳公刑赔决字［2023］002号《刑事赔偿决定书》和广东省公安厅粤公赔复决字［2024］1号《刑事赔偿复议决定书》，认定的事实清楚、证据充分、依据准确、程序合法,请本院赔偿委员会依法予以维持。\\n\\n广东省公安厅陈述称：本案中，冯某因被采取刑事强制措施、判处有期徒刑，羁押于阳江市看守所，赔偿请求人认为阳江市看守所怠于履行法定职责要求赔偿，适用《中华人民共和国国家赔偿法》第十七条，属于刑事赔偿范围。冯某羁押于阳江市看守所期间突发疾病，同仓人员发现并报告后，民辅警、驻所医务人员及时到达现场并将冯某运送至医务室进行抢救、拨打120，已依法履行监管、救助等职责。冯某系在患有高血压疾病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，其死亡与公安机关的执法行为不存在法律上的因果关系。受害人没有取得赔偿的权利。根据相关法律规定，该厅作出维持阳江市公安局不予赔偿的决定。综上，该厅作出的刑事赔偿复议决定符合有关法律规定，请本院赔偿委员会依法予以维持。\\n\\n[DOC6_A5 | 事实查明]\\n经审理查明，冯某因涉嫌掩饰、隐瞒犯罪所得收益罪，于2021年10月29日被阳江市公安局海陵分局决定刑事拘留，10月30日被送阳江市看守所羁押，12月3日被逮捕，2022年1月28日被移送审查起诉，12月21日被人民法院判处有期徒刑2年6个月。冯某在2021年10月29日入所体检时自称有腰椎间盘突出手术史、湿疹，无传染病史，Ｂ超显示前列腺增大伴钙化，胸片显示左上肺纤维增殖灶，符合看守所收押条件。入所后，冯某出现痛风、湿疹、水肿、气促等症状，阳江市人民医院派驻看守所医务人员（以下简称“驻所医务人员”）对冯某进行了治疗。2022年12月20日、21日，冯某到医务室看病，自诉少尿、气促4天，双下肢及颜面部水肿10余天，经医生诊断为心力衰竭、肾功能不全。由于冯某的情况不属于重症、急症，且经治疗后情况有所好转，阳江市看守所决定将冯某继续留在看守所内就医。12月22日至27日，驻所医务人员均到冯某监室问诊或发药。12月28日16时5分，16号监室在押人员向看守所值班室报告称冯某晕倒；16时10分，驻所医务人员进入16号监室查看冯某情况；16时13分，驻所医务人员、民辅警将冯某运送到医务室进行抢救并拨打120；17时，120救护车到达将冯某送往阳江市人民医院。根据该医院门诊病历，12月28日17时20分开始抢救，冯某面色苍白，全身发绀，呼之不应，无自主呼吸，触诊大动脉搏动消失，血压监测不到，双侧瞳孔对称、散大，对光反射消失，考虑院前死亡；17时28分心电图显示一直线，证实已经死亡。2023年3月13日，南方医科大学司法鉴定中心鉴定意见认为：冯某符合在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。2023年5月10日，经阳江市公安局发函，阳江市卫健局委托阳江市医学会就驻所医务人员对冯某的诊疗、抢救行为是否存在过错进行调查鉴定，认为在治疗过程中医方诊断明确，并予相应的有效治疗方案，患者症状有所好转，但存在未及时复查相关医学指标，未能全面评估患者的病情变化，并给予相应治疗方案调整，存在不足之处。\\n\\n另查明，阳江市公安局与阳江市人民医院签订了《阳江市看守所医疗卫生专业化服务合同》，约定阳江市人民医院在阳江市看守所设立“阳江市人民医院驻阳江市看守所门诊部”，承担在押人员每天24小时基本医疗服务和入所健康检查工作。\\n\\n以上事实有下列证据证明：阳江市公安局出具的立案决定书、拘留证、逮捕证、判决书等刑事案卷证据材料，阳江市公安机关场所治疗手册、阳江市人民医院诊断证明书、抢救记录、阳江市看守所监控视频、南方医科大学司法鉴定中心法医病理司法鉴定意见书、阳江市医学会调查鉴定意见书、赔偿请求人申请赔偿的材料等。\\n\\n[DOC6_A6 | 法律分析]\\n本院赔偿委员会认为，本案的焦点是阳江市公安局有没有怠于履行救治职责，有没有延误对冯某的救治；冯某的死亡与阳江市公安局的监管行为有没有法律上的因果关系；阳江市公安局是否应当对冯某的死亡承担刑事赔偿责任。本案中，冯某在2021年10月29日入所体检时符合收押条件。入所后，冯某出现痛风、湿疹、水肿、气促等症状，驻所医务人员已对冯某进行了诊治。2022年12月20日、21日，冯某自诉少尿、气促4天，双下肢及颜面部水肿10余天，经医生诊断为心力衰竭、肾功能不全。由于冯某的情况不属于重症、急症，且经治疗后情况有所好转，阳江市看守所决定将冯某继续留在看守所内就医。12月22日至27日，驻所医务人员均到冯某监室问诊或发药。2022年12月28日16时5分，在同监室在押人员向阳江市××室报告称冯某晕倒的情况下，阳江市看守所民警及驻所医务人员立即到达现场并将冯某送至医务室进行抢救，后又拨打120急救电话，全力抢救冯某直至其被宣布临床死亡。阳江市公安局在救治冯某的过程中，已尽到合理、及时的注意义务，不存在延误对冯某救治的行为。虽然阳江市看守所在送冯某出所就医时，没有配备相应的警力押解，存在执法不规范的行为，但该行为与冯某的死亡不存在法律上的因果关系。冯某是在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，其死亡与阳江市公安局的羁押、看管、救治等行为不存在法律上的因果关系。根据相关法律规定，受害人没有取得国家赔偿的权利。赔偿请求人如认为阳江市人民医院在对冯某的诊治过程中存在过错，应当另循其他法律途径解决。\\n\\n[DOC6_A7 | 决定结果]\\n综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。依照《最高人民法院关于人民法院赔偿委员会审理国家赔偿案件程序的规定》第十九条第一项的规定，决定如下：\\n\\n维持广东省公安厅粤公赔复决字[2024]1号刑事赔偿复议决定。\\n\\n本决定为发生法律效力的决定。\", \"source_window_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\", \"DOC6_A5\", \"DOC6_A6\", \"DOC6_A7\"], \"primary_anchor_id\": \"DOC6_A7\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书6\"], \"anchor_targets\": [\"赔偿案件\", \"判决文书6\"], \"anchor_value_hints\": [\"6\", \"2024\", \"1\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 6, \"disambiguates\": 6, \"likely_same_entity\": 1}, \"top_related_anchor_ids\": [\"DOC6_A6\", \"DOC6_A5\", \"DOC6_A4\", \"DOC6_A3\", \"DOC6_A2\", \"DOC6_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}]}</info>\n<think>The selected chunk confirms that the document is a '赔偿案件' (compensation case) as it involves a decision regarding a compensation request. The document title '判决文书6' can be classified accordingly.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"判决文书6\", \"normalized_value\": \"判决文书6\", \"evidence_text\": \"综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。\", \"source_doc_id\": \"DOC6\", \"source_anchor_id\": \"DOC6_A7\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书6\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC6_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"决定结果 法院决定维持广东省公安厅的复议决定，驳回李惠元的赔偿请求。 综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。依照《最高人民法院关于人民法院赔偿委员会审理国家赔偿案件程序的规定》第十九条第一项的规定，决定如下： 维持广东省公安厅粤公赔复决字[2024]1号刑事赔偿复议决定。 本决定为发生法律效力的决定。\"], \"selected_relation_anchor_ids\": [\"DOC6_A6\", \"DOC6_A5\", \"DOC6_A4\", \"DOC6_A3\", \"DOC6_A2\", \"DOC6_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a compensation claim related to a death in custody, which suggests it could fall under the '赔偿案件' (compensation case) category. I will inspect the chunk that provides details on the court's decision to confirm the type of case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '赔偿案件' '行政案件' '执行案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC6_A7\", \"candidate_anchor_ids\": [\"DOC6_A7\"], \"utility_hits\": {\"DOC6_A7\": [\"legal_label_hit=['赔偿案件', '判决文书']\", \"legal_decision_context\"], \"DOC6_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC6_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC6_A7\": 16.0, \"DOC6_A2\": 11.0, \"DOC6_A3\": 11.0, \"DOC6_A4\": 11.0}, \"score_breakdown\": {\"DOC6_A7\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.221, \"redundancy_penalty\": 0.0, \"total\": 49.221}, \"DOC6_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC6_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC6_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC6_A7\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"决定结果\", \"summary\": \"Expanded same-section read window around DOC6_A7: 法院决定维持广东省公安厅的复议决定，驳回李惠元的赔偿请求。\", \"text\": \"[DOC6_A1 | 当事人信息]\\n赔偿请求人：李惠元，女，汉族，1969年10月21日出生，住广东省阳江市海陵岛试验区。系死者冯某的妻子。\\n\\n委托代理人：邓小宇、张运云，均为泰和泰（深圳）律师事务所律师。\\n\\n赔偿义务机关：阳江市公安局。住所地：广东省阳江市江城区东风三路99号。\\n\\n法定代表人：方小勇，该局局长。\\n\\n委托代理人：张朝泽、莫冠军，均为该局工作人员。\\n\\n复议机关：广东省公安厅。住所地：广东省广州市越秀区黄**路97号。\\n\\n法定代表人：刘国周，该厅厅长。\\n\\n委托代理人：刘人源、陈盛琴，均为该厅工作人员。\\n\\n[DOC6_A2 | 案件背景]\\n赔偿请求人李惠元申请赔偿义务机关阳江市公安局怠于履行监管职责致死国家赔偿一案，不服广东省公安厅作出的粤公赔复决字[2024]1号刑事赔偿复议决定，向本院赔偿委员会申请作出赔偿决定。本院赔偿委员会依法对本案进行审理，现已审理终结。\\n\\n2023年9月7日，李惠元认为阳江市公安局怠于履行监管职责，对冯某的死亡负有责任，向阳江市公安局申请国家赔偿。\\n\\n2023年11月6日，阳江市公安局作出阳公刑赔决字［2023］002号《刑事赔偿决定书》，认为冯某死亡的原因是患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，阳江市看守所不存在延误救治的情形，决定不予赔偿。\\n\\n李惠元不服，向广东省公安厅提出刑事赔偿复议申请。2024年1月14日，复议机关广东省公安厅作出粤公赔复决字[2024]1号《刑事赔偿复议决定书》，认为阳江市公安局作出的不予赔偿决定符合规定，决定维持阳江市公安局作出的阳公刑赔决字[2023]002号《刑事赔偿决定书》。\\n\\n[DOC6_A3 | 赔偿请求]\\n李惠元不服，向本院赔偿委员会申请作出赔偿决定，提出如下赔偿请求：1.赔偿义务机关向赔偿请求人支付死亡赔偿金2280580元；2.赔偿义务机关向赔偿请求人支付丧葬费人民币57014.5元；3.赔偿义务机关向赔偿请求人支付精神损害抚慰金人民币110000元。以上合计2447594.5元。主要事实和理由归纳概况如下：1.广东省公安厅的《刑事赔偿复议决定书》认定事实错误，没有认真核实证据，得出冯某的死亡与阳江市看守所的执法行为之间不存在因果关系的错误结论。2.冯某在阳江市看守所死亡，阳江市医学会、阳江市人民检察院、广东省公安厅均明确赔偿义务机关存在不足之处，已经明确赔偿义务机关的执法行为与冯某的死亡结果存在因果关系，赔偿义务机关及复议机关拒绝赔偿，于法无据。3.阳江市医学会认定冯某在阳江市看守所病情没有得到跟踪治疗，则确认阳江市看守所对冯某的死亡存在过错，应当承担赔偿责任。恳请本院赔偿委员会查明赔偿义务机关的责任比重。4.冯某多次要求出所就医未获允许。2022年12月28日，阳江市看守所未及时发现冯某发病，后冯某经抢救无效在看守所就已经死亡；在120救护车到达后，阳江市看守所仍强行安排拉走冯某并且未安排警力随车，阳江市公安局的上述行为与冯某的死亡存在因果关系。5.阳江市公安局依法应当对赔偿请求人承担赔偿责任有判例及法律支持。\\n\\n[DOC6_A4 | 质证过程]\\n2024年3月12日上午，本院赔偿委员会主持赔偿请求人和赔偿义务机关，对阳江市公安局是否存在怠于履行监管职责的行为，阳江市公安局的监管行为与冯某的死亡是否存在因果关系，阳江市公安局是否应当对冯某的死亡承担刑事赔偿责任等问题进行质证。赔偿请求人李惠元及其委托代理人邓小宇、张运云，赔偿义务机关阳江市公安局的委托代理人张朝泽、莫冠军，广东省公安厅的委托代理人刘人源参加质证。\\n\\n阳江市公安局答辩称：阳江市看守所民警及工作人员的处理措施符合《中华人民共和国看守所条例》、公安部《看守所执法细则》等有关法律法规及相关规定，冯某因疾病死亡不属于国家赔偿的范畴，其死亡的原因是患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。阳江市看守所在冯某死亡一案中不存在延误治疗的情形，根据现有证据，阳江市看守所对冯某依法监管、积极救治，并无过错。冯某的死亡与阳江市看守所的监管、救治行为不存在因果关系。赔偿请求人要求该局对冯某的死亡承担国家赔偿责任，缺乏事实和法律依据。南方医科大学司法鉴定中心对冯某的死因作出鉴定意见：冯某符合在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。阳江市人民检察院驻阳江市看守所检察室《关于冯某死亡事故案件调查情况及家属有关申请事项的回复》已告知赔偿请求人冯某的死亡属于因病正常死亡。该局作出的阳公刑赔决字［2023］002号《刑事赔偿决定书》和广东省公安厅粤公赔复决字［2024］1号《刑事赔偿复议决定书》，认定的事实清楚、证据充分、依据准确、程序合法,请本院赔偿委员会依法予以维持。\\n\\n广东省公安厅陈述称：本案中，冯某因被采取刑事强制措施、判处有期徒刑，羁押于阳江市看守所，赔偿请求人认为阳江市看守所怠于履行法定职责要求赔偿，适用《中华人民共和国国家赔偿法》第十七条，属于刑事赔偿范围。冯某羁押于阳江市看守所期间突发疾病，同仓人员发现并报告后，民辅警、驻所医务人员及时到达现场并将冯某运送至医务室进行抢救、拨打120，已依法履行监管、救助等职责。冯某系在患有高血压疾病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，其死亡与公安机关的执法行为不存在法律上的因果关系。受害人没有取得赔偿的权利。根据相关法律规定，该厅作出维持阳江市公安局不予赔偿的决定。综上，该厅作出的刑事赔偿复议决定符合有关法律规定，请本院赔偿委员会依法予以维持。\\n\\n[DOC6_A5 | 事实查明]\\n经审理查明，冯某因涉嫌掩饰、隐瞒犯罪所得收益罪，于2021年10月29日被阳江市公安局海陵分局决定刑事拘留，10月30日被送阳江市看守所羁押，12月3日被逮捕，2022年1月28日被移送审查起诉，12月21日被人民法院判处有期徒刑2年6个月。冯某在2021年10月29日入所体检时自称有腰椎间盘突出手术史、湿疹，无传染病史，Ｂ超显示前列腺增大伴钙化，胸片显示左上肺纤维增殖灶，符合看守所收押条件。入所后，冯某出现痛风、湿疹、水肿、气促等症状，阳江市人民医院派驻看守所医务人员（以下简称“驻所医务人员”）对冯某进行了治疗。2022年12月20日、21日，冯某到医务室看病，自诉少尿、气促4天，双下肢及颜面部水肿10余天，经医生诊断为心力衰竭、肾功能不全。由于冯某的情况不属于重症、急症，且经治疗后情况有所好转，阳江市看守所决定将冯某继续留在看守所内就医。12月22日至27日，驻所医务人员均到冯某监室问诊或发药。12月28日16时5分，16号监室在押人员向看守所值班室报告称冯某晕倒；16时10分，驻所医务人员进入16号监室查看冯某情况；16时13分，驻所医务人员、民辅警将冯某运送到医务室进行抢救并拨打120；17时，120救护车到达将冯某送往阳江市人民医院。根据该医院门诊病历，12月28日17时20分开始抢救，冯某面色苍白，全身发绀，呼之不应，无自主呼吸，触诊大动脉搏动消失，血压监测不到，双侧瞳孔对称、散大，对光反射消失，考虑院前死亡；17时28分心电图显示一直线，证实已经死亡。2023年3月13日，南方医科大学司法鉴定中心鉴定意见认为：冯某符合在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死。2023年5月10日，经阳江市公安局发函，阳江市卫健局委托阳江市医学会就驻所医务人员对冯某的诊疗、抢救行为是否存在过错进行调查鉴定，认为在治疗过程中医方诊断明确，并予相应的有效治疗方案，患者症状有所好转，但存在未及时复查相关医学指标，未能全面评估患者的病情变化，并给予相应治疗方案调整，存在不足之处。\\n\\n另查明，阳江市公安局与阳江市人民医院签订了《阳江市看守所医疗卫生专业化服务合同》，约定阳江市人民医院在阳江市看守所设立“阳江市人民医院驻阳江市看守所门诊部”，承担在押人员每天24小时基本医疗服务和入所健康检查工作。\\n\\n以上事实有下列证据证明：阳江市公安局出具的立案决定书、拘留证、逮捕证、判决书等刑事案卷证据材料，阳江市公安机关场所治疗手册、阳江市人民医院诊断证明书、抢救记录、阳江市看守所监控视频、南方医科大学司法鉴定中心法医病理司法鉴定意见书、阳江市医学会调查鉴定意见书、赔偿请求人申请赔偿的材料等。\\n\\n[DOC6_A6 | 法律分析]\\n本院赔偿委员会认为，本案的焦点是阳江市公安局有没有怠于履行救治职责，有没有延误对冯某的救治；冯某的死亡与阳江市公安局的监管行为有没有法律上的因果关系；阳江市公安局是否应当对冯某的死亡承担刑事赔偿责任。本案中，冯某在2021年10月29日入所体检时符合收押条件。入所后，冯某出现痛风、湿疹、水肿、气促等症状，驻所医务人员已对冯某进行了诊治。2022年12月20日、21日，冯某自诉少尿、气促4天，双下肢及颜面部水肿10余天，经医生诊断为心力衰竭、肾功能不全。由于冯某的情况不属于重症、急症，且经治疗后情况有所好转，阳江市看守所决定将冯某继续留在看守所内就医。12月22日至27日，驻所医务人员均到冯某监室问诊或发药。2022年12月28日16时5分，在同监室在押人员向阳江市××室报告称冯某晕倒的情况下，阳江市看守所民警及驻所医务人员立即到达现场并将冯某送至医务室进行抢救，后又拨打120急救电话，全力抢救冯某直至其被宣布临床死亡。阳江市公安局在救治冯某的过程中，已尽到合理、及时的注意义务，不存在延误对冯某救治的行为。虽然阳江市看守所在送冯某出所就医时，没有配备相应的警力押解，存在执法不规范的行为，但该行为与冯某的死亡不存在法律上的因果关系。冯某是在患有高血压病的基础上因冠状动脉粥样硬化性心脏病急性发作而猝死，其死亡与阳江市公安局的羁押、看管、救治等行为不存在法律上的因果关系。根据相关法律规定，受害人没有取得国家赔偿的权利。赔偿请求人如认为阳江市人民医院在对冯某的诊治过程中存在过错，应当另循其他法律途径解决。\\n\\n[DOC6_A7 | 决定结果]\\n综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。依照《最高人民法院关于人民法院赔偿委员会审理国家赔偿案件程序的规定》第十九条第一项的规定，决定如下：\\n\\n维持广东省公安厅粤公赔复决字[2024]1号刑事赔偿复议决定。\\n\\n本决定为发生法律效力的决定。\", \"source_window_anchor_ids\": [\"DOC6_A1\", \"DOC6_A2\", \"DOC6_A3\", \"DOC6_A4\", \"DOC6_A5\", \"DOC6_A6\", \"DOC6_A7\"], \"primary_anchor_id\": \"DOC6_A7\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书6\"], \"anchor_targets\": [\"赔偿案件\", \"判决文书6\"], \"anchor_value_hints\": [\"6\", \"2024\", \"1\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 6, \"disambiguates\": 6, \"likely_same_entity\": 1}, \"top_related_anchor_ids\": [\"DOC6_A6\", \"DOC6_A5\", \"DOC6_A4\", \"DOC6_A3\", \"DOC6_A2\", \"DOC6_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}]}</info>\n<think>The selected chunk confirms that the document is a '赔偿案件' (compensation case) as it involves a decision regarding a compensation request. The document title '判决文书6' can be classified accordingly.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"判决文书6\", \"normalized_value\": \"判决文书6\", \"evidence_text\": \"综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。\", \"source_doc_id\": \"DOC6\", \"source_anchor_id\": \"DOC6_A7\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC6_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC6_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书6\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC6_A7\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"决定结果 法院决定维持广东省公安厅的复议决定，驳回李惠元的赔偿请求。 综上，赔偿请求人李惠元的赔偿请求没有事实和法律依据，依法不予支持。广东省公安厅维持赔偿义务机关阳江市公安局不予赔偿的复议决定正确，依法应予维持。依照《最高人民法院关于人民法院赔偿委员会审理国家赔偿案件程序的规定》第十九条第一项的规定，决定如下： 维持广东省公安厅粤公赔复决字[2024]1号刑事赔偿复议决定。 本决定为发生法律效力的决定。\"], \"selected_relation_anchor_ids\": [\"DOC6_A6\", \"DOC6_A5\", \"DOC6_A4\", \"DOC6_A3\", \"DOC6_A2\", \"DOC6_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书6']\"}, {\"source_anchor_id\": \"DOC6_A7\", \"target_anchor_id\": \"DOC6_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

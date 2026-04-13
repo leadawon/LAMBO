@@ -1,0 +1,938 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A3"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A2"
+        ],
+        "utility_hits": {
+          "DOC3_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A6": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A7": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A3": 11.0,
+          "DOC3_A5": 11.0,
+          "DOC3_A6": 11.0,
+          "DOC3_A7": 11.0
+        },
+        "score_breakdown": {
+          "DOC3_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC3_A5": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 28.508
+          },
+          "DOC3_A6": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 0.0,
+            "total": 28.354
+          },
+          "DOC3_A7": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.221,
+            "redundancy_penalty": 0.0,
+            "total": 28.221
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The document seems to involve a dispute between neighbors over property damage and other related issues. The case appears to be a civil case due to the nature of the disputes and the involvement of compensation claims. I will inspect the chunk that provides more context on the case background to confirm the type of the case.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC3_A2: 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。",
+        "text": "[DOC3_A1 | 当事人信息]\n上诉人（原审原告、反诉被告）：古志梁，男，1989年9月25日出生，汉族，住广东省广州市海珠区。\n\n上诉人（原审原告、反诉被告）：钟运枚，女，1993年7月8日出生，汉族，住广东省广州市海珠区。\n\n被上诉人（原审被告、反诉原告）：麦汉莲，女，1960年9月22日出生，汉族，住广东省广州市海珠区。\n\n委托诉讼代理人：曾静仪，广东比心律师事务所律师。\n\n委托诉讼代理人：郭文慧，麦汉莲的女儿。\n\n[DOC3_A2 | 案件背景]\n上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\n\n[DOC3_A4 | 一审诉求]\n上诉人向一审法院起诉请求：1、判决被上诉人向上诉人赔偿损坏智能门锁金额1899元；2、被上诉人向上诉人赔偿儿童车、平衡车损失款1250元；3、被上诉人向上诉人赔偿精神损失费5000元；4、要求被上诉人拆除被上诉人门口的摄像头，今后不能安装带旋转角度的摄像头来窥视上诉人家；5、要求被上诉人整改面向过道的3台排气扇(全部要接入公用烟道内)；6、被上诉人向上诉人方赔偿误工费12000元；7、要求被上诉人停止对上诉人的任何报复和骚扰。(赔偿金额合计20149元)。\n\n被上诉人向一审法院反诉请求：1、判决上诉人立即停止侵害，将放置在广州市海珠区昌岗中路114号4楼楼道的杂物清理干净，并责令其不得在4楼楼道放置任何物品；2、判决上诉人向被上诉人赔偿摄像头损坏的金额135元；3、判决上诉人立即停止侵害，拆除正对着被上诉人的带有监控功能的电子门锁；4、判决上诉人以公开的方式向被上诉人赔礼道歉；5、判决上诉人向被上诉人赔偿精神损失5000元。\n\n[DOC3_A5 | 一审认定事实]\n一审法院认定事实：上诉人古志梁、钟运枚是广州市海珠区昌岗中路114号四门402房(下称402房)的权属人(共同共有)。被上诉人麦汉莲是广州市海珠区昌岗中路114号四门401房(下称401房)的权属人。402房与401房紧紧相邻。\n\n近年，因上诉人在家门口的墙角落经常放置儿童车、杂物及垃圾；被上诉人麦汉莲在窗户上设置排气扇(废气能排到上诉人大门口)，并在窗户上悬挂镜子和剪刀，所安装的监控摄像头镜头对着上诉人家门口等，双方产生多次纠纷，并曾报警。\n\n本案诉讼中，上诉人方表示愿意向麦汉莲赔偿摄像头损失款135元。\n\n上诉人方提供多段视频主张被上诉人麦汉莲对其大门泼水，导致智能门锁损坏，并暴力摔坏儿童车、平衡车，对上诉人方进行谩骂；在窗户上设置排气扇，将废气排到上诉人大门口等，对上诉人造成侵害。(麦汉莲对视频的真实性无异议，但认为不能证明上诉人的主张，且视频不能完整反映事情的全部经过。)\n\n上诉人方还提供网上信息证明智能门锁金额为1899元。(麦汉莲对此不予确认。)\n\n报警记录与视频。(麦汉莲对证据的真实性无异议。)\n\n另，一审法院于2023年12月14日到涉案现场进行查看。现场可见大楼第4层只有2个住户，分别是401房和402房；402房与401房紧紧相邻，两户的大门成90度面向楼道分布，中间隔着401房的厨房窗户，由此，401厨房窗户的对出位置正好是402房大门处；401房厨房窗户上方固定玻璃处安装有2台排气扇，相隔约20厘米处还安装了1台直径约15厘米小排气扇(有活动盖子，由管道连通卫生间的吸顶排气扇)；窗户上没有悬挂镜子和剪刀；401房大门右上角安装有监控摄像头，旁边安装有一块长方形的板材遮挡(由此可以遮挡摄像头，避免能够拍摄到402房大门口的范围)；另进入401房，可见卫生间没有窗户，只有天花上的吸顶排气扇可以通风；厨房门口边角处是大楼的公用烟道，与抽油烟机相连接。\n\n[DOC3_A6 | 一审判决]\n一审法院认为：本案是相邻纠纷。上诉人古志梁、钟运枚与被上诉人麦汉莲是共同使用涉案大楼4层的邻居，理应按照有利生产、方便生活、团结互助、公平合理的精神，正确合理使用房屋。\n\n关于本诉诉求一，古志梁主张麦汉莲对其大门泼水，导致智能门锁损坏，并提供了视频来证明。麦汉莲对此辩称虽有向对方大门泼水，但并未损坏对方的智能门锁。根据古志梁提供的2023年3月29日视频，可见麦汉莲一方用水多次洒泼了古志梁家的大门，之后2023年4月10日古志梁更换了门锁。因此，古志梁主张因麦汉莲的该侵权行为导致智能门锁损坏的意见，在麦汉莲不能举证反驳的情况下，可予采信。考虑到折旧率的问题，本项宜由麦汉莲赔偿1500元。\n\n关于本诉诉求二，虽然古志梁提供的视频显示有麦汉莲家人拿走儿童车的举动和车子平放在楼梯拐角层的照片，但缺乏对车辆实施侵损的证据。麦汉莲现亦予否认。由于古志梁不能举证证明因麦汉莲实施了侵权行为，导致儿童车、平衡车受损，故其要求赔偿儿童车、平衡车损失款1250元，理据不足，一审法院不予支持。\n\n关于本诉诉求四，经现场查看，401房门口上方的监控视频摄像头已作了调整，只能面向楼梯走廊，且旁边安装有一块板材遮挡，已无法拍摄到古志梁家门口的情况。鉴于此，该项诉求予以驳回。\n\n关于本诉诉求五，经现场查看，401房卫生间没有窗户，仅靠吸顶排气扇通风透气。故此，麦汉莲在走廊窗户上安装(小的)排气扇连通卫生间来使用，客观上有该使用需求。至于另外2台(大的)排气扇，现场是安装在401厨房窗户的上方，离地超过2米。上述排气扇正常使用时均不会将风直接吹到进出402房的人员身上。而且，通常而言上诉人方开门出入所需的时间很短暂，基本不会对上诉人方进出房屋造成影响。据此，古志梁方要求麦汉莲调整现有排气扇的设置，将送风口接入公用排烟道的意见，理据不足，一审法院不予支持。\n\n关于本诉诉求六，古志梁主张存在误工损失，但并未提供相关证据证明发生了实际误工且被扣减了工资报酬待遇等，以及与涉案纠纷存在必然的因果关系，故其要求麦汉莲赔偿误工损失12000元，理据不足，一审法院不予支持。\n\n关于本诉诉求三、七，上诉人、被上诉人作为邻居，理应发扬互相帮助、互相体谅的友好精神，遇到分歧矛盾时应采取友好协商的态度积极解决。本案中，古志梁提供的视频照片资料证明麦汉莲一方采取了往古志梁放置在门口的物品多次洒淋水及浇淋监控摄像头，搅乱整理好的垃圾并有意弄脏古志梁家门口等情况，甚至对镜头做出不文明并带有侮辱性的动作。对此，应给予麦汉莲一方严肃批评。今后，麦汉莲一方应当注意自己的言行，以避免纠纷的发生。由于没有证据证明麦汉莲一方目前仍然在实施骚扰、威胁、报复的行为，且古志梁一方亦未举证证明因对方的侵权行为导致发生严重的精神损害，故其该部分的诉求，不能支持。\n\n关于反诉请求1，走廊公用通道属于大楼的全体业主共有，任何个人都无权占有使用。因此，古志梁长期将包括儿童车、鞋子在内的物品放置在402房大门口角落的公用通道上，既影响了环境卫生，又妨碍了美观，实属不妥。此举也是引发双方矛盾的原因之一，故古志梁一方对此要有正确的认识，并予以改正。现麦汉莲以影响相邻关系为由要求古志梁清空该处物品，合理，一审法院予以支持。\n\n关于反诉请求2，古志梁在庭审中确认可以赔偿麦汉莲的摄像头损失135元，可按此处理。\n\n关于反诉请求3、古志梁安装具有拍摄功能的智能门锁，主要目的是为了防盗安全，并没有证据证明该门锁对麦汉莲构成权利损害。故此，麦汉莲要求古志梁方拆除该智能门锁，缺乏理据，不能支持。\n\n关于反诉请求4，5，麦汉莲并未举证证明古志梁对其实施侵权行为，导致其精神受到严重损害，故其要求古志梁方赔礼道歉并赔偿精神损失5000元，缺乏事实法律依据，一审法院不予支持。\n\n综上所述，依照《中华人民共和国民法典》第一千一百六十五条的规定，一审法院判决如下：一、麦汉莲在该判决生效之日起10日内，向古志梁、钟运枚赔偿更换智能门锁损失款1500元。二、古志梁、钟运枚在该判决生效之日起10日内，将放置在广州市海珠区昌岗中路114号四门402房门口角落的物品(包括但不限于儿童车、鞋子等)清空搬离。三、古志梁、钟运枚在该判决生效之日起10日内，向麦汉莲赔偿摄像头损失款135元。四、驳回古志梁、钟运枚的其他诉讼请求。五、驳回麦汉莲的其他反诉请求。一审案件本诉受理费304元、反诉受理费25元，由古志梁、钟运枚负担本诉受理费281元、反诉受理费1元；由麦汉莲负担本诉受理费23元、反诉受理费24元。上述本诉受理费已由上诉人预交，上诉人同意由被上诉人在履行该判决时将其应承担的受理费直接支付给上诉人。\n\n[DOC3_A7 | 二审补充证据]\n经本院查明，一审法院查明的事实属实，本院予以确认。\n\n二审期间，上诉人向本院提交了证据1薪资证明拟证明误工费和计算标准；证据2关于昌岗中路114号4门401户排气整改的诉求状拟证明多名业主联名诉求；证据3被上诉人厨房厕所排气改造现状拟证明其排气正对上诉人大门；证据4楼梯间通风现状拟证明加装电梯封了玻璃窗导致无法快速逸散楼道气体。被上诉人质证称证据1-2三性不予认可；证据3其确认现状，对于上诉人所述不予确认；证据4中聊天记录真实性认可，关联性不予认可。\n\n本院认为，《中华人民共和国民事诉讼法》第一百七十五条规定：“第二审人民法院应当对上诉请求的有关事实和适用法律进行审查。”因上诉人二审所提出的上诉请求第四、五项已超出其一审诉请范围，且被上诉人二审庭询时亦表示不同意就该两项诉请进行调解，故本院对该两项诉请不予审查。本案系相邻关系纠纷。根据《中华人民共和国民法典》第八条规定：“民事主体从事民事活动，不得违反法律，不得违背公序良俗。”第二百八十八条规定：“不动产的相邻人应当按照有利生产、方便生活、团结互助、公平合理的原则，正确处理相邻关系。”本案上诉人、被上诉人作为相邻不动产的权利人，应按照上述规定，各方在行使自己合法权利的同时，亦要尊重他人权利的行使以及尊重社会公德，从而正确处理好相邻关系。\n\n[DOC3_A8 | 二审判决]\n关于被上诉人是否应当赔偿上诉人儿童车及平衡车的损失问题。现有证据并不足以证明被上诉人对上述物品实施侵权损坏行为，且上诉人将上述物品放置在公共区域，并不能排除有其他原因导致物品损坏的可能，故上诉人应承担举证不能的不利法律后果，本院对其该主张不予支持。\n\n关于被上诉人是否应当整改涉案三个排气扇的问题。经一审法院到现场查看确认，401房卫生间无窗户，仅靠吸顶排气扇通风透气，由于卫生间空间较为狭小，空气流通不畅确会存在安全隐患，故被上诉人在走廊窗户安装排气扇（小的）连通卫生间一并排气确有必要需求。上诉人上诉认为其他业主未作出类似改装以及被上诉人使用的电热水器无燃烧废气的安全隐患故而被上诉人无安装排气扇的客观需求的理由与于理无据，本院不予支持。至于另外2台（大的）排气扇，诚如一审所述，上述排气扇离地较高且上诉人进入门口的时间亦较短，对上诉人基本影响不大，本院予以认可。上诉人上诉主张被上诉人该排气扇排出的废气会对身体产生危害与事实不符，本院不予支持。\n\n关于被上诉人是否应当赔偿上诉人误工费的问题。现有证据尚未能证明上诉人主张的误工事实与涉案纠纷存在直接因果关系，该误工损失并不属于因被上诉人侵犯相邻权所应承担的赔偿责任范畴，故本院对此亦不予支持。\n\n综上所述，上诉人古志梁、钟运枚的上诉请求不成立，本院予以驳回。一审判决认定事实清楚，适用法律正确，应予以维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项的规定，判决如下：\n\n[DOC3_A9 | 终审判决]\n驳回上诉，维持原判。\n\n二审案件受理费281元，由古志梁、钟运枚负担。\n\n本判决为终审判决。",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A4",
+          "DOC3_A5",
+          "DOC3_A6",
+          "DOC3_A7",
+          "DOC3_A8",
+          "DOC3_A9"
+        ],
+        "primary_anchor_id": "DOC3_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书3"
+        ],
+        "anchor_targets": [
+          "判决文书3"
+        ],
+        "anchor_value_hints": [
+          "3",
+          "2023",
+          "0105",
+          "10757",
+          "2024",
+          "2",
+          "18"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 8,
+            "same_case": 8,
+            "disambiguates": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information about the case background, indicating that the case involves a dispute between neighbors over adjacent property issues. This suggests that the case falls under the category of '民事案件' (civil cases). However, to fully categorize the document, we need to ensure there are no other types of cases mentioned within the document.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书3》",
+            "normalized_value": "判决文书3",
+            "evidence_text": "上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A9",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A8",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A7",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书3"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC3_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A3",
+        "candidate_anchor_ids": [
+          "DOC3_A3",
+          "DOC3_A5",
+          "DOC3_A6",
+          "DOC3_A7"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书3"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC3_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC3_A2"
+        ],
+        "utility_hits": {
+          "DOC3_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A6": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A7": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A3": 11.0,
+          "DOC3_A5": 11.0,
+          "DOC3_A6": 11.0,
+          "DOC3_A7": 11.0
+        },
+        "relation_hits": {
+          "DOC3_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_case_selected=DOC3_A2"
+          ],
+          "DOC3_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_case_selected=DOC3_A2"
+          ],
+          "DOC3_A6": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_case_selected=DOC3_A2"
+          ],
+          "DOC3_A7": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A2",
+            "same_case_selected=DOC3_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC3_A3": 14.56,
+          "DOC3_A5": 14.56,
+          "DOC3_A6": 14.56,
+          "DOC3_A7": 14.56
+        },
+        "anchor_role_hits": {
+          "DOC3_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC3_A5": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC3_A6": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC3_A7": [
+            "case_identity",
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC3_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 14.56,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 34.474
+          },
+          "DOC3_A5": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 14.56,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 3.0,
+            "total": 34.068
+          },
+          "DOC3_A6": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 14.56,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 3.0,
+            "total": 33.914
+          },
+          "DOC3_A7": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 14.56,
+            "weak_priors": 5.221,
+            "redundancy_penalty": 3.0,
+            "total": 33.781
+          }
+        }
+      },
+      "anchor_id": "DOC3_A3",
+      "plan_think": "The current evidence strongly indicates that the case is a '民事案件' (civil case). Since we have identified the category of the document and it aligns with the must-find checklist, we can conclude that there is no need to inspect further chunks for additional categories. We can now proceed to the next document if available or finalize the categorization based on the evidence gathered.",
+      "info": {
+        "anchor_id": "DOC3_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "上诉请求",
+        "summary": "Expanded same-section read window around DOC3_A3: 上诉人提出多项请求，包括赔偿儿童自行车和平衡车损失、整改排气扇、赔偿误工损失等，被上诉人则辩称上诉人的请求没有事实和法律依据。",
+        "text": "[DOC3_A1 | 当事人信息]\n上诉人（原审原告、反诉被告）：古志梁，男，1989年9月25日出生，汉族，住广东省广州市海珠区。\n\n上诉人（原审原告、反诉被告）：钟运枚，女，1993年7月8日出生，汉族，住广东省广州市海珠区。\n\n被上诉人（原审被告、反诉原告）：麦汉莲，女，1960年9月22日出生，汉族，住广东省广州市海珠区。\n\n委托诉讼代理人：曾静仪，广东比心律师事务所律师。\n\n委托诉讼代理人：郭文慧，麦汉莲的女儿。\n\n[DOC3_A2 | 案件背景]\n上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\n\n[DOC3_A3 | 上诉请求]\n古志梁、钟运枚上诉请求：1.判令被上诉人赔偿上诉人儿童自行车和平衡车，总金额为1250元；2.判令被上诉人整改厨房和厕所排气扇；禁止将厨房、厕所废气臭气排向楼道公共区域，影响大家通行的空气环境；3.判令被上诉人应赔偿上诉人双方离岗误工损失，共计12000元；4.判令被上诉人清理门口焚烧的香炉，并责令禁止制造令人不适的烟雾和气体；5.判令法院提供有效的方式让被上诉人承诺永不对上诉人做出任何报复行为的保证，并公示整个昌岗中路114号大院所有邻居住户，没收斧头利器。事实和理由：一、被上诉人及其家人多次在上诉人监控摄像头下利用不文明的方式进行挑衅和侮辱。并经常对上诉人摆放在门口的物品通过泼水、摔打、踢踹等方式进行故意破坏，甚至故意扔掉，造成上诉人财产损失。案涉自行车于2021年12月购买、平衡车于2021年9月购买，经过被上诉人恶意毁坏已经无法使用，另外还有被扔掉的鞋子、柜门等。一审判决以未有被上诉人破坏的直接证据为由不予支持上诉人诉求,却又认定被上诉人有拿走儿童车的举动和车子散乱卧倒在楼梯拐角层的行为，这显然是自相矛盾的。综合本案，已经可以认定被上诉人实施了破坏行为。二、一审法院表示被上诉人的风扇吹不到上诉人身上，但是上诉人自始至终从未表达过其被排气扇的风吹到而感到不适,而是被上诉人常年排放的厨房废气和厕所臭味造成其严重生活困扰。上诉人购房时被上诉人还未开始装修，被上诉人系在2022年初装修完，原本这栋楼有公共烟道，但被上诉人弃用公共烟道，而是在自家的厨房窗户上安装两台大功率排气扇和一个厕所排气扇，排气方向正对上诉人家大门,一日三餐的油烟和厕所臭气均向上诉人家大门口排放，且由于楼梯是整栋楼唯一通道，现加装了电梯，电梯南面封窗，导致更严重影响空气流通。异味已经逸散到整栋楼，影响所有上下楼的居住同行。一审判决认为，401房卫生间没有窗户，仅靠吸顶气扇通风透气。故此，被上诉人在走廊窗户上安装气扇连通卫生间来使用，客观上有该使用需求。上诉人认为一审如此认定是没有充分考虑整栋楼的通风环境而做出的不合理的结论。根据楼层设计所有的卫生间均是靠吸顶排气扇（小的）连接公共烟道来实现通风的，其他业主均未做出类似改装，可见设计是完全可以满足通风需求的，并且被上诉人一审期间反诉状中提交了被上诉人厕所照片，明显可看到被上诉人使用的是电热水器，完全无关于燃烧废气安全隐患相关风险的客观需求。一审判决还认为，至于另外2台(大的)排气扇，现场是安装在401厨房窗户的上方，离地超过2米。上述排气扇正常使用时均不会将风直接吹到进出402房的人员身上。而且，通常而言上诉人方开门出入所需的时间很短暂，基本不会对上诉人方进出房屋造成影响。上诉人认为该认定缺乏生活依据，从被上诉人排气扇排到公共楼道的废气，具有异味，甚至是有毒有害的，这是众所周知的。而且这些废臭气体在相对封闭的空间难以逸散，并不是不直接吹向人体就忽略其危害性和伤害性。而且被上诉人有故意开启设备对上诉人进行骚扰，经常监控上诉人家人出入家门时，随后进行排风。作为402户主，当初买房前就是看中了正门朝东阳台朝南形成很强的通风效果，装修时选装的大门也选用门中门结构，本来为了能东南空气对流，确保室内空气循环。但由于被上诉人的行为导致上诉人整个家庭的居住环境发生重大改变。三、根据上诉人提供的证据材料能充分证明误工情况是客观存在的，可以推断误工损失也是客观存在的，只是上诉人未提供准确的工资情况。被上诉人已退休在家无所事事,专挑上诉人工作上班时间对上诉人家老人辱骂、恐吓和泼水、暴力摔、踹上诉人家物品，上诉人家老人语言沟通不顺,导致上诉人必须离岗回家处理,包括报警、起诉等，就报警记录就有7次。上诉人古志梁2023年全年实收税后薪资为233660元（不含股份分红）,其中每月底薪18000元，提成3000-10000不等。因被上诉人挑起的矛盾，上诉人古志梁因离岗导致受不同程度的罚款，此罚款因被上诉人挑起事端，理应由其赔偿损失。按误工不含工作日计算，每日固定标准薪资为：18000元/21.75天=828元。经统计，上诉人古志梁总共被公司罚款13511.48元。上诉人钟运枚平均税前月薪13000元，也受到不同程度的扣薪处罚，但为防止被上诉人到其单位闹事和报复,不便透露所任职的单位信息和薪资证明。即使按广州最低薪资标准为2300元/月，其中因被上诉人挑起的事端引起的多次报警及起诉流程两上诉人均共同在场，所以造成上诉人钟运枚的误工损失同样是客观存在的。\n\n麦汉莲辩称：被上诉人不同意上诉人的全部上诉请求，其上诉所称没有事实与法律依据，请求二审法院依法驳回，意见如下：一、一审认定被上诉人无需向上诉人赔偿儿童车车辆损坏金额1250元合法合理。（一）关于上诉人所称的向其物品泼水、挑拨的问题。首先，被上诉人己深刻意识泼水是不理智的错误行为，在2023年3月29日经派出所调解后，已经没有往上诉人放置到消防楼道的杂物泼水。然被上诉人之所以往上诉人放置在楼道的杂物泼水，是因在上诉人拒不整改违法占用楼道的情况下，被上诉人由于法律意识的淡薄，使用了错误的行为反击上诉人的违法行为。被上诉人做出上述行为实属情有可原，且并不会造成上诉人物品损坏。（二）被上诉人虽有泼水行为，但泼水并不能致使上诉人的儿童车损坏。上诉人提供的证据也不能证明是被上诉人造成其儿童车的损坏。首先，上诉人提供的证据只能证明被上诉人将上诉人的儿童车拿走。其次，从上诉人提供的照片看，案涉儿童车并没有上诉人所称的配件破碎脱落的情况，也没有其所称的轮胎变形的情况。而且仅凭一张照片并不能证明其损失情况。再次，从上诉人提供的证据显示，儿童车并不存在其所称的生锈严重的情况。且上诉人自入住当天，儿童车一直闲置消防通道，无法证明儿童车本能正常使用，加之其儿童车使用多年也会自然损耗，存在生锈的情况。退一步说，民法的功能主要在于填补受害人的损失，而不在于赔偿，如果上诉人的车辆确实有损坏的情况，其应当对车辆进行针对性维修，再主张维修费用，而不是按照购买的整车的原价格进行索赔。二、一审法院判决驳回上诉人关于整改排气扇的诉求事实清楚，适用法律正确。首先，被上诉人在没有窗户的卫生间设置通风设施是客观安全需要。一审法院的法官于2023年12月14日到被上诉人家里进行勘察，涉案大楼构造先天缺陷，其所居住的401房的厨房和厕所连成一体，先进入厨房再到厕所，被上诉人的厕所没有窗户是客观事实，厨房只有楼道的一个窗户。被上诉人安装了储水式电热水器，厨房窗口换气扇的作用是辅助换气，如果无法及时换气，洗手间会产生大量湿气无法挥发，水汽容易导致电器、线路潮湿，容易引起电路短路。其次，被上诉人在没有窗户的卫生间设置通风设施符合法律法规的规定。根据住房和城乡建设部发布的《住宅设计规范》GB50096-2011第6章第8条第4点规定，厨房和卫生间的烟气性质不同，合用排气道会互相串味。另外，由于厨房和卫生间气体成分不同，分别设置也可避免互相混合产生的危险;第8第5第3点规定有相关要求设置机械通风设施或预留机械通风（一般为排气扇）条件。再次，因为卫生间通风问题已经发生过安全事故。2014年12月19日被上诉人的老父亲因洗手间空气不足，导致在洗澡时无法呼吸窒息猝死而亡。所以被上诉人在没有窗户的卫生间中设置机械通风设施是必要的需求，也是法律规定的要求。关于厨房另外安装的两台换气扇，被上诉人也是为了气流循环的安全需要安装的。上诉人认为对其产生了影响应当承担举证责任。三、上诉人主张误工费没有事实与法律依据，请求二审法院依法驳回。首先，一审时，上诉人称因为处理报警事宜而产生误工费，对此，其并没有提供证据证明，也没有提供证据证明其误工与本案存在关联性。上诉人提供新证据以证明其主张，但是该证据只有单位盖章，没有负责人或者相关主管人员签名，不具有证据应具有的法律效力，依法不应采纳。另获悉上诉人是其公司的董事，完全可以随意盖章。而且上诉人提供的证据没有相关劳动合同、考勤记录和工资流水佐证，也不能证明其工资标准和实际的误工损失。其次，退一步说，就算上诉人确有误工，其提供的证据不能证明误工与被上诉人具有关联性。再次，本案上诉人主张被上诉人造成其财产损失，而需要向其赔偿误工费。根据《中华人民共和国民法典》第一千一百八十四条规定，误工费并不属于财产损害的赔偿范围，只有受害人遭受人身损害时，才可向侵权人主张赔偿误工费。本案上诉人因为财产损失主张误工费没有法律依据。最后，本案虽然是上诉人先起诉，但是就损害结果的发生，上诉人同样也有过错。从案件的来龙去脉可以看出，正是因为上诉人占领消防楼道，违法私自放置个人物品，在承诺清走而拒不清走的情况下，双方的纠纷才愈演愈烈。四、关于上诉人的上诉请求四、五，并不在其一审诉求的范围内，请法院依法驳回。\n\n[DOC3_A7 | 二审补充证据]\n经本院查明，一审法院查明的事实属实，本院予以确认。\n\n二审期间，上诉人向本院提交了证据1薪资证明拟证明误工费和计算标准；证据2关于昌岗中路114号4门401户排气整改的诉求状拟证明多名业主联名诉求；证据3被上诉人厨房厕所排气改造现状拟证明其排气正对上诉人大门；证据4楼梯间通风现状拟证明加装电梯封了玻璃窗导致无法快速逸散楼道气体。被上诉人质证称证据1-2三性不予认可；证据3其确认现状，对于上诉人所述不予确认；证据4中聊天记录真实性认可，关联性不予认可。\n\n本院认为，《中华人民共和国民事诉讼法》第一百七十五条规定：“第二审人民法院应当对上诉请求的有关事实和适用法律进行审查。”因上诉人二审所提出的上诉请求第四、五项已超出其一审诉请范围，且被上诉人二审庭询时亦表示不同意就该两项诉请进行调解，故本院对该两项诉请不予审查。本案系相邻关系纠纷。根据《中华人民共和国民法典》第八条规定：“民事主体从事民事活动，不得违反法律，不得违背公序良俗。”第二百八十八条规定：“不动产的相邻人应当按照有利生产、方便生活、团结互助、公平合理的原则，正确处理相邻关系。”本案上诉人、被上诉人作为相邻不动产的权利人，应按照上述规定，各方在行使自己合法权利的同时，亦要尊重他人权利的行使以及尊重社会公德，从而正确处理好相邻关系。\n\n[DOC3_A8 | 二审判决]\n关于被上诉人是否应当赔偿上诉人儿童车及平衡车的损失问题。现有证据并不足以证明被上诉人对上述物品实施侵权损坏行为，且上诉人将上述物品放置在公共区域，并不能排除有其他原因导致物品损坏的可能，故上诉人应承担举证不能的不利法律后果，本院对其该主张不予支持。\n\n关于被上诉人是否应当整改涉案三个排气扇的问题。经一审法院到现场查看确认，401房卫生间无窗户，仅靠吸顶排气扇通风透气，由于卫生间空间较为狭小，空气流通不畅确会存在安全隐患，故被上诉人在走廊窗户安装排气扇（小的）连通卫生间一并排气确有必要需求。上诉人上诉认为其他业主未作出类似改装以及被上诉人使用的电热水器无燃烧废气的安全隐患故而被上诉人无安装排气扇的客观需求的理由与于理无据，本院不予支持。至于另外2台（大的）排气扇，诚如一审所述，上述排气扇离地较高且上诉人进入门口的时间亦较短，对上诉人基本影响不大，本院予以认可。上诉人上诉主张被上诉人该排气扇排出的废气会对身体产生危害与事实不符，本院不予支持。\n\n关于被上诉人是否应当赔偿上诉人误工费的问题。现有证据尚未能证明上诉人主张的误工事实与涉案纠纷存在直接因果关系，该误工损失并不属于因被上诉人侵犯相邻权所应承担的赔偿责任范畴，故本院对此亦不予支持。\n\n综上所述，上诉人古志梁、钟运枚的上诉请求不成立，本院予以驳回。一审判决认定事实清楚，适用法律正确，应予以维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项的规定，判决如下：\n\n[DOC3_A9 | 终审判决]\n驳回上诉，维持原判。\n\n二审案件受理费281元，由古志梁、钟运枚负担。\n\n本判决为终审判决。",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A7",
+          "DOC3_A8",
+          "DOC3_A9"
+        ],
+        "primary_anchor_id": "DOC3_A3",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "metric_binding",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书3"
+        ],
+        "anchor_targets": [
+          "判决文书3",
+          "金额"
+        ],
+        "anchor_value_hints": [
+          "3",
+          "1",
+          "1250元",
+          "2",
+          "12000元",
+          "4",
+          "5",
+          "114"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "metric_term",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 8,
+            "same_case": 8,
+            "disambiguates": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides details about the specific requests made by the appellants, including compensation for damaged items, rectification of exhaust fans, and compensation for lost wages. These details further support the classification of the case as a '民事案件' (civil case), but do not introduce any new categories. Therefore, no new evidence items are extracted from this chunk.",
+      "retrieve": {
+        "items": [],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书3"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC3_A2",
+            "DOC3_A3"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。",
+            "上诉请求 上诉人提出多项请求，包括赔偿儿童自行车和平衡车损失、整改排气扇、赔偿误工损失等，被上诉人则辩称上诉人的请求没有事实和法律依据。 古志梁、钟运枚上诉请求：1.判令被上诉人赔偿上诉人儿童自行车和平衡车，总金额为1250元；2.判令被上诉人整改厨房和厕所排气扇；禁止将厨房、厕所废气臭气排向楼道公共区域，影响大家通行的空气环境；3.判令被上诉人应赔偿上诉人双方离岗误工损失，共计12000元；4.判令被上诉人清理门口焚烧的香炉，并责令禁止制造令人不适的烟雾和气体；5.判令法院提供有效的方式让被上诉人承诺永不对上诉人做出任何报复行为的保证，并公示整个昌岗中路114号大院所有邻居住户，没收斧头利器。事实和理由：一、被上诉人及其家人多次在上诉人监控摄像头下利用不文明的方式进行挑衅和侮辱。并经常对上诉人摆放在门口的物品通过泼水、摔打、踢踹等方式进行故意破坏，甚至故意扔掉，造成上诉人财产损失。案涉自行车于2021年12月购买、平衡车于2021年9月购买，经过被上诉人恶意毁坏已经无法使用，另外还有被扔掉的鞋子、柜门等。一审判决以未有被上诉人破坏的直接证据为由不予支持上诉人诉求,却又认定被上诉人有拿走儿童车的举动和车子散乱卧倒在楼梯拐角层的行为，这显然是自相矛盾的。综合本案，已经可以认定被上诉人实施了破坏行为。二、一审法院表示被..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A5",
+            "DOC3_A4",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书3》",
+      "normalized_value": "判决文书3",
+      "evidence_text": "上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A9",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A8",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to involve a dispute between neighbors over property damage and other related issues. The case appears to be a civil case due to the nature of the disputes and the involvement of compensation claims. I will inspect the chunk that provides more context on the case background to confirm the type of the case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\"], \"utility_hits\": {\"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A3\": 11.0, \"DOC3_A5\": 11.0, \"DOC3_A6\": 11.0, \"DOC3_A7\": 11.0}, \"score_breakdown\": {\"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC3_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}, \"DOC3_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 28.354}, \"DOC3_A7\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.221, \"redundancy_penalty\": 0.0, \"total\": 28.221}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC3_A2: 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n上诉人（原审原告、反诉被告）：古志梁，男，1989年9月25日出生，汉族，住广东省广州市海珠区。\\n\\n上诉人（原审原告、反诉被告）：钟运枚，女，1993年7月8日出生，汉族，住广东省广州市海珠区。\\n\\n被上诉人（原审被告、反诉原告）：麦汉莲，女，1960年9月22日出生，汉族，住广东省广州市海珠区。\\n\\n委托诉讼代理人：曾静仪，广东比心律师事务所律师。\\n\\n委托诉讼代理人：郭文慧，麦汉莲的女儿。\\n\\n[DOC3_A2 | 案件背景]\\n上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\\n\\n[DOC3_A4 | 一审诉求]\\n上诉人向一审法院起诉请求：1、判决被上诉人向上诉人赔偿损坏智能门锁金额1899元；2、被上诉人向上诉人赔偿儿童车、平衡车损失款1250元；3、被上诉人向上诉人赔偿精神损失费5000元；4、要求被上诉人拆除被上诉人门口的摄像头，今后不能安装带旋转角度的摄像头来窥视上诉人家；5、要求被上诉人整改面向过道的3台排气扇(全部要接入公用烟道内)；6、被上诉人向上诉人方赔偿误工费12000元；7、要求被上诉人停止对上诉人的任何报复和骚扰。(赔偿金额合计20149元)。\\n\\n被上诉人向一审法院反诉请求：1、判决上诉人立即停止侵害，将放置在广州市海珠区昌岗中路114号4楼楼道的杂物清理干净，并责令其不得在4楼楼道放置任何物品；2、判决上诉人向被上诉人赔偿摄像头损坏的金额135元；3、判决上诉人立即停止侵害，拆除正对着被上诉人的带有监控功能的电子门锁；4、判决上诉人以公开的方式向被上诉人赔礼道歉；5、判决上诉人向被上诉人赔偿精神损失5000元。\\n\\n[DOC3_A5 | 一审认定事实]\\n一审法院认定事实：上诉人古志梁、钟运枚是广州市海珠区昌岗中路114号四门402房(下称402房)的权属人(共同共有)。被上诉人麦汉莲是广州市海珠区昌岗中路114号四门401房(下称401房)的权属人。402房与401房紧紧相邻。\\n\\n近年，因上诉人在家门口的墙角落经常放置儿童车、杂物及垃圾；被上诉人麦汉莲在窗户上设置排气扇(废气能排到上诉人大门口)，并在窗户上悬挂镜子和剪刀，所安装的监控摄像头镜头对着上诉人家门口等，双方产生多次纠纷，并曾报警。\\n\\n本案诉讼中，上诉人方表示愿意向麦汉莲赔偿摄像头损失款135元。\\n\\n上诉人方提供多段视频主张被上诉人麦汉莲对其大门泼水，导致智能门锁损坏，并暴力摔坏儿童车、平衡车，对上诉人方进行谩骂；在窗户上设置排气扇，将废气排到上诉人大门口等，对上诉人造成侵害。(麦汉莲对视频的真实性无异议，但认为不能证明上诉人的主张，且视频不能完整反映事情的全部经过。)\\n\\n上诉人方还提供网上信息证明智能门锁金额为1899元。(麦汉莲对此不予确认。)\\n\\n报警记录与视频。(麦汉莲对证据的真实性无异议。)\\n\\n另，一审法院于2023年12月14日到涉案现场进行查看。现场可见大楼第4层只有2个住户，分别是401房和402房；402房与401房紧紧相邻，两户的大门成90度面向楼道分布，中间隔着401房的厨房窗户，由此，401厨房窗户的对出位置正好是402房大门处；401房厨房窗户上方固定玻璃处安装有2台排气扇，相隔约20厘米处还安装了1台直径约15厘米小排气扇(有活动盖子，由管道连通卫生间的吸顶排气扇)；窗户上没有悬挂镜子和剪刀；401房大门右上角安装有监控摄像头，旁边安装有一块长方形的板材遮挡(由此可以遮挡摄像头，避免能够拍摄到402房大门口的范围)；另进入401房，可见卫生间没有窗户，只有天花上的吸顶排气扇可以通风；厨房门口边角处是大楼的公用烟道，与抽油烟机相连接。\\n\\n[DOC3_A6 | 一审判决]\\n一审法院认为：本案是相邻纠纷。上诉人古志梁、钟运枚与被上诉人麦汉莲是共同使用涉案大楼4层的邻居，理应按照有利生产、方便生活、团结互助、公平合理的精神，正确合理使用房屋。\\n\\n关于本诉诉求一，古志梁主张麦汉莲对其大门泼水，导致智能门锁损坏，并提供了视频来证明。麦汉莲对此辩称虽有向对方大门泼水，但并未损坏对方的智能门锁。根据古志梁提供的2023年3月29日视频，可见麦汉莲一方用水多次洒泼了古志梁家的大门，之后2023年4月10日古志梁更换了门锁。因此，古志梁主张因麦汉莲的该侵权行为导致智能门锁损坏的意见，在麦汉莲不能举证反驳的情况下，可予采信。考虑到折旧率的问题，本项宜由麦汉莲赔偿1500元。\\n\\n关于本诉诉求二，虽然古志梁提供的视频显示有麦汉莲家人拿走儿童车的举动和车子平放在楼梯拐角层的照片，但缺乏对车辆实施侵损的证据。麦汉莲现亦予否认。由于古志梁不能举证证明因麦汉莲实施了侵权行为，导致儿童车、平衡车受损，故其要求赔偿儿童车、平衡车损失款1250元，理据不足，一审法院不予支持。\\n\\n关于本诉诉求四，经现场查看，401房门口上方的监控视频摄像头已作了调整，只能面向楼梯走廊，且旁边安装有一块板材遮挡，已无法拍摄到古志梁家门口的情况。鉴于此，该项诉求予以驳回。\\n\\n关于本诉诉求五，经现场查看，401房卫生间没有窗户，仅靠吸顶排气扇通风透气。故此，麦汉莲在走廊窗户上安装(小的)排气扇连通卫生间来使用，客观上有该使用需求。至于另外2台(大的)排气扇，现场是安装在401厨房窗户的上方，离地超过2米。上述排气扇正常使用时均不会将风直接吹到进出402房的人员身上。而且，通常而言上诉人方开门出入所需的时间很短暂，基本不会对上诉人方进出房屋造成影响。据此，古志梁方要求麦汉莲调整现有排气扇的设置，将送风口接入公用排烟道的意见，理据不足，一审法院不予支持。\\n\\n关于本诉诉求六，古志梁主张存在误工损失，但并未提供相关证据证明发生了实际误工且被扣减了工资报酬待遇等，以及与涉案纠纷存在必然的因果关系，故其要求麦汉莲赔偿误工损失12000元，理据不足，一审法院不予支持。\\n\\n关于本诉诉求三、七，上诉人、被上诉人作为邻居，理应发扬互相帮助、互相体谅的友好精神，遇到分歧矛盾时应采取友好协商的态度积极解决。本案中，古志梁提供的视频照片资料证明麦汉莲一方采取了往古志梁放置在门口的物品多次洒淋水及浇淋监控摄像头，搅乱整理好的垃圾并有意弄脏古志梁家门口等情况，甚至对镜头做出不文明并带有侮辱性的动作。对此，应给予麦汉莲一方严肃批评。今后，麦汉莲一方应当注意自己的言行，以避免纠纷的发生。由于没有证据证明麦汉莲一方目前仍然在实施骚扰、威胁、报复的行为，且古志梁一方亦未举证证明因对方的侵权行为导致发生严重的精神损害，故其该部分的诉求，不能支持。\\n\\n关于反诉请求1，走廊公用通道属于大楼的全体业主共有，任何个人都无权占有使用。因此，古志梁长期将包括儿童车、鞋子在内的物品放置在402房大门口角落的公用通道上，既影响了环境卫生，又妨碍了美观，实属不妥。此举也是引发双方矛盾的原因之一，故古志梁一方对此要有正确的认识，并予以改正。现麦汉莲以影响相邻关系为由要求古志梁清空该处物品，合理，一审法院予以支持。\\n\\n关于反诉请求2，古志梁在庭审中确认可以赔偿麦汉莲的摄像头损失135元，可按此处理。\\n\\n关于反诉请求3、古志梁安装具有拍摄功能的智能门锁，主要目的是为了防盗安全，并没有证据证明该门锁对麦汉莲构成权利损害。故此，麦汉莲要求古志梁方拆除该智能门锁，缺乏理据，不能支持。\\n\\n关于反诉请求4，5，麦汉莲并未举证证明古志梁对其实施侵权行为，导致其精神受到严重损害，故其要求古志梁方赔礼道歉并赔偿精神损失5000元，缺乏事实法律依据，一审法院不予支持。\\n\\n综上所述，依照《中华人民共和国民法典》第一千一百六十五条的规定，一审法院判决如下：一、麦汉莲在该判决生效之日起10日内，向古志梁、钟运枚赔偿更换智能门锁损失款1500元。二、古志梁、钟运枚在该判决生效之日起10日内，将放置在广州市海珠区昌岗中路114号四门402房门口角落的物品(包括但不限于儿童车、鞋子等)清空搬离。三、古志梁、钟运枚在该判决生效之日起10日内，向麦汉莲赔偿摄像头损失款135元。四、驳回古志梁、钟运枚的其他诉讼请求。五、驳回麦汉莲的其他反诉请求。一审案件本诉受理费304元、反诉受理费25元，由古志梁、钟运枚负担本诉受理费281元、反诉受理费1元；由麦汉莲负担本诉受理费23元、反诉受理费24元。上述本诉受理费已由上诉人预交，上诉人同意由被上诉人在履行该判决时将其应承担的受理费直接支付给上诉人。\\n\\n[DOC3_A7 | 二审补充证据]\\n经本院查明，一审法院查明的事实属实，本院予以确认。\\n\\n二审期间，上诉人向本院提交了证据1薪资证明拟证明误工费和计算标准；证据2关于昌岗中路114号4门401户排气整改的诉求状拟证明多名业主联名诉求；证据3被上诉人厨房厕所排气改造现状拟证明其排气正对上诉人大门；证据4楼梯间通风现状拟证明加装电梯封了玻璃窗导致无法快速逸散楼道气体。被上诉人质证称证据1-2三性不予认可；证据3其确认现状，对于上诉人所述不予确认；证据4中聊天记录真实性认可，关联性不予认可。\\n\\n本院认为，《中华人民共和国民事诉讼法》第一百七十五条规定：“第二审人民法院应当对上诉请求的有关事实和适用法律进行审查。”因上诉人二审所提出的上诉请求第四、五项已超出其一审诉请范围，且被上诉人二审庭询时亦表示不同意就该两项诉请进行调解，故本院对该两项诉请不予审查。本案系相邻关系纠纷。根据《中华人民共和国民法典》第八条规定：“民事主体从事民事活动，不得违反法律，不得违背公序良俗。”第二百八十八条规定：“不动产的相邻人应当按照有利生产、方便生活、团结互助、公平合理的原则，正确处理相邻关系。”本案上诉人、被上诉人作为相邻不动产的权利人，应按照上述规定，各方在行使自己合法权利的同时，亦要尊重他人权利的行使以及尊重社会公德，从而正确处理好相邻关系。\\n\\n[DOC3_A8 | 二审判决]\\n关于被上诉人是否应当赔偿上诉人儿童车及平衡车的损失问题。现有证据并不足以证明被上诉人对上述物品实施侵权损坏行为，且上诉人将上述物品放置在公共区域，并不能排除有其他原因导致物品损坏的可能，故上诉人应承担举证不能的不利法律后果，本院对其该主张不予支持。\\n\\n关于被上诉人是否应当整改涉案三个排气扇的问题。经一审法院到现场查看确认，401房卫生间无窗户，仅靠吸顶排气扇通风透气，由于卫生间空间较为狭小，空气流通不畅确会存在安全隐患，故被上诉人在走廊窗户安装排气扇（小的）连通卫生间一并排气确有必要需求。上诉人上诉认为其他业主未作出类似改装以及被上诉人使用的电热水器无燃烧废气的安全隐患故而被上诉人无安装排气扇的客观需求的理由与于理无据，本院不予支持。至于另外2台（大的）排气扇，诚如一审所述，上述排气扇离地较高且上诉人进入门口的时间亦较短，对上诉人基本影响不大，本院予以认可。上诉人上诉主张被上诉人该排气扇排出的废气会对身体产生危害与事实不符，本院不予支持。\\n\\n关于被上诉人是否应当赔偿上诉人误工费的问题。现有证据尚未能证明上诉人主张的误工事实与涉案纠纷存在直接因果关系，该误工损失并不属于因被上诉人侵犯相邻权所应承担的赔偿责任范畴，故本院对此亦不予支持。\\n\\n综上所述，上诉人古志梁、钟运枚的上诉请求不成立，本院予以驳回。一审判决认定事实清楚，适用法律正确，应予以维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项的规定，判决如下：\\n\\n[DOC3_A9 | 终审判决]\\n驳回上诉，维持原判。\\n\\n二审案件受理费281元，由古志梁、钟运枚负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A7\", \"DOC3_A8\", \"DOC3_A9\"], \"primary_anchor_id\": \"DOC3_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"2023\", \"0105\", \"10757\", \"2024\", \"2\", \"18\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_case\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides information about the case background, indicating that the case involves a dispute between neighbors over adjacent property issues. This suggests that the case falls under the category of '民事案件' (civil cases). However, to fully categorize the document, we need to ensure there are no other types of cases mentioned within the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>\n<think>The current evidence strongly indicates that the case is a '民事案件' (civil case). Since we have identified the category of the document and it aligns with the must-find checklist, we can conclude that there is no need to inspect further chunks for additional categories. We can now proceed to the next document if available or finalize the categorization based on the evidence gathered.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A3\", \"candidate_anchor_ids\": [\"DOC3_A3\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A7\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A2\"], \"utility_hits\": {\"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A3\": 11.0, \"DOC3_A5\": 11.0, \"DOC3_A6\": 11.0, \"DOC3_A7\": 11.0}, \"relation_hits\": {\"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"], \"DOC3_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"], \"DOC3_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"]}, \"relation_score\": {\"DOC3_A3\": 14.56, \"DOC3_A5\": 14.56, \"DOC3_A6\": 14.56, \"DOC3_A7\": 14.56}, \"anchor_role_hits\": {\"DOC3_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A6\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A7\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 34.474}, \"DOC3_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 34.068}, \"DOC3_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.354, \"redundancy_penalty\": 3.0, \"total\": 33.914}, \"DOC3_A7\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.221, \"redundancy_penalty\": 3.0, \"total\": 33.781}}}</search>\n<info>{\"anchor_id\": \"DOC3_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"上诉请求\", \"summary\": \"Expanded same-section read window around DOC3_A3: 上诉人提出多项请求，包括赔偿儿童自行车和平衡车损失、整改排气扇、赔偿误工损失等，被上诉人则辩称上诉人的请求没有事实和法律依据。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n上诉人（原审原告、反诉被告）：古志梁，男，1989年9月25日出生，汉族，住广东省广州市海珠区。\\n\\n上诉人（原审原告、反诉被告）：钟运枚，女，1993年7月8日出生，汉族，住广东省广州市海珠区。\\n\\n被上诉人（原审被告、反诉原告）：麦汉莲，女，1960年9月22日出生，汉族，住广东省广州市海珠区。\\n\\n委托诉讼代理人：曾静仪，广东比心律师事务所律师。\\n\\n委托诉讼代理人：郭文慧，麦汉莲的女儿。\\n\\n[DOC3_A2 | 案件背景]\\n上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\\n\\n[DOC3_A3 | 上诉请求]\\n古志梁、钟运枚上诉请求：1.判令被上诉人赔偿上诉人儿童自行车和平衡车，总金额为1250元；2.判令被上诉人整改厨房和厕所排气扇；禁止将厨房、厕所废气臭气排向楼道公共区域，影响大家通行的空气环境；3.判令被上诉人应赔偿上诉人双方离岗误工损失，共计12000元；4.判令被上诉人清理门口焚烧的香炉，并责令禁止制造令人不适的烟雾和气体；5.判令法院提供有效的方式让被上诉人承诺永不对上诉人做出任何报复行为的保证，并公示整个昌岗中路114号大院所有邻居住户，没收斧头利器。事实和理由：一、被上诉人及其家人多次在上诉人监控摄像头下利用不文明的方式进行挑衅和侮辱。并经常对上诉人摆放在门口的物品通过泼水、摔打、踢踹等方式进行故意破坏，甚至故意扔掉，造成上诉人财产损失。案涉自行车于2021年12月购买、平衡车于2021年9月购买，经过被上诉人恶意毁坏已经无法使用，另外还有被扔掉的鞋子、柜门等。一审判决以未有被上诉人破坏的直接证据为由不予支持上诉人诉求,却又认定被上诉人有拿走儿童车的举动和车子散乱卧倒在楼梯拐角层的行为，这显然是自相矛盾的。综合本案，已经可以认定被上诉人实施了破坏行为。二、一审法院表示被上诉人的风扇吹不到上诉人身上，但是上诉人自始至终从未表达过其被排气扇的风吹到而感到不适,而是被上诉人常年排放的厨房废气和厕所臭味造成其严重生活困扰。上诉人购房时被上诉人还未开始装修，被上诉人系在2022年初装修完，原本这栋楼有公共烟道，但被上诉人弃用公共烟道，而是在自家的厨房窗户上安装两台大功率排气扇和一个厕所排气扇，排气方向正对上诉人家大门,一日三餐的油烟和厕所臭气均向上诉人家大门口排放，且由于楼梯是整栋楼唯一通道，现加装了电梯，电梯南面封窗，导致更严重影响空气流通。异味已经逸散到整栋楼，影响所有上下楼的居住同行。一审判决认为，401房卫生间没有窗户，仅靠吸顶气扇通风透气。故此，被上诉人在走廊窗户上安装气扇连通卫生间来使用，客观上有该使用需求。上诉人认为一审如此认定是没有充分考虑整栋楼的通风环境而做出的不合理的结论。根据楼层设计所有的卫生间均是靠吸顶排气扇（小的）连接公共烟道来实现通风的，其他业主均未做出类似改装，可见设计是完全可以满足通风需求的，并且被上诉人一审期间反诉状中提交了被上诉人厕所照片，明显可看到被上诉人使用的是电热水器，完全无关于燃烧废气安全隐患相关风险的客观需求。一审判决还认为，至于另外2台(大的)排气扇，现场是安装在401厨房窗户的上方，离地超过2米。上述排气扇正常使用时均不会将风直接吹到进出402房的人员身上。而且，通常而言上诉人方开门出入所需的时间很短暂，基本不会对上诉人方进出房屋造成影响。上诉人认为该认定缺乏生活依据，从被上诉人排气扇排到公共楼道的废气，具有异味，甚至是有毒有害的，这是众所周知的。而且这些废臭气体在相对封闭的空间难以逸散，并不是不直接吹向人体就忽略其危害性和伤害性。而且被上诉人有故意开启设备对上诉人进行骚扰，经常监控上诉人家人出入家门时，随后进行排风。作为402户主，当初买房前就是看中了正门朝东阳台朝南形成很强的通风效果，装修时选装的大门也选用门中门结构，本来为了能东南空气对流，确保室内空气循环。但由于被上诉人的行为导致上诉人整个家庭的居住环境发生重大改变。三、根据上诉人提供的证据材料能充分证明误工情况是客观存在的，可以推断误工损失也是客观存在的，只是上诉人未提供准确的工资情况。被上诉人已退休在家无所事事,专挑上诉人工作上班时间对上诉人家老人辱骂、恐吓和泼水、暴力摔、踹上诉人家物品，上诉人家老人语言沟通不顺,导致上诉人必须离岗回家处理,包括报警、起诉等，就报警记录就有7次。上诉人古志梁2023年全年实收税后薪资为233660元（不含股份分红）,其中每月底薪18000元，提成3000-10000不等。因被上诉人挑起的矛盾，上诉人古志梁因离岗导致受不同程度的罚款，此罚款因被上诉人挑起事端，理应由其赔偿损失。按误工不含工作日计算，每日固定标准薪资为：18000元/21.75天=828元。经统计，上诉人古志梁总共被公司罚款13511.48元。上诉人钟运枚平均税前月薪13000元，也受到不同程度的扣薪处罚，但为防止被上诉人到其单位闹事和报复,不便透露所任职的单位信息和薪资证明。即使按广州最低薪资标准为2300元/月，其中因被上诉人挑起的事端引起的多次报警及起诉流程两上诉人均共同在场，所以造成上诉人钟运枚的误工损失同样是客观存在的。\\n\\n麦汉莲辩称：被上诉人不同意上诉人的全部上诉请求，其上诉所称没有事实与法律依据，请求二审法院依法驳回，意见如下：一、一审认定被上诉人无需向上诉人赔偿儿童车车辆损坏金额1250元合法合理。（一）关于上诉人所称的向其物品泼水、挑拨的问题。首先，被上诉人己深刻意识泼水是不理智的错误行为，在2023年3月29日经派出所调解后，已经没有往上诉人放置到消防楼道的杂物泼水。然被上诉人之所以往上诉人放置在楼道的杂物泼水，是因在上诉人拒不整改违法占用楼道的情况下，被上诉人由于法律意识的淡薄，使用了错误的行为反击上诉人的违法行为。被上诉人做出上述行为实属情有可原，且并不会造成上诉人物品损坏。（二）被上诉人虽有泼水行为，但泼水并不能致使上诉人的儿童车损坏。上诉人提供的证据也不能证明是被上诉人造成其儿童车的损坏。首先，上诉人提供的证据只能证明被上诉人将上诉人的儿童车拿走。其次，从上诉人提供的照片看，案涉儿童车并没有上诉人所称的配件破碎脱落的情况，也没有其所称的轮胎变形的情况。而且仅凭一张照片并不能证明其损失情况。再次，从上诉人提供的证据显示，儿童车并不存在其所称的生锈严重的情况。且上诉人自入住当天，儿童车一直闲置消防通道，无法证明儿童车本能正常使用，加之其儿童车使用多年也会自然损耗，存在生锈的情况。退一步说，民法的功能主要在于填补受害人的损失，而不在于赔偿，如果上诉人的车辆确实有损坏的情况，其应当对车辆进行针对性维修，再主张维修费用，而不是按照购买的整车的原价格进行索赔。二、一审法院判决驳回上诉人关于整改排气扇的诉求事实清楚，适用法律正确。首先，被上诉人在没有窗户的卫生间设置通风设施是客观安全需要。一审法院的法官于2023年12月14日到被上诉人家里进行勘察，涉案大楼构造先天缺陷，其所居住的401房的厨房和厕所连成一体，先进入厨房再到厕所，被上诉人的厕所没有窗户是客观事实，厨房只有楼道的一个窗户。被上诉人安装了储水式电热水器，厨房窗口换气扇的作用是辅助换气，如果无法及时换气，洗手间会产生大量湿气无法挥发，水汽容易导致电器、线路潮湿，容易引起电路短路。其次，被上诉人在没有窗户的卫生间设置通风设施符合法律法规的规定。根据住房和城乡建设部发布的《住宅设计规范》GB50096-2011第6章第8条第4点规定，厨房和卫生间的烟气性质不同，合用排气道会互相串味。另外，由于厨房和卫生间气体成分不同，分别设置也可避免互相混合产生的危险;第8第5第3点规定有相关要求设置机械通风设施或预留机械通风（一般为排气扇）条件。再次，因为卫生间通风问题已经发生过安全事故。2014年12月19日被上诉人的老父亲因洗手间空气不足，导致在洗澡时无法呼吸窒息猝死而亡。所以被上诉人在没有窗户的卫生间中设置机械通风设施是必要的需求，也是法律规定的要求。关于厨房另外安装的两台换气扇，被上诉人也是为了气流循环的安全需要安装的。上诉人认为对其产生了影响应当承担举证责任。三、上诉人主张误工费没有事实与法律依据，请求二审法院依法驳回。首先，一审时，上诉人称因为处理报警事宜而产生误工费，对此，其并没有提供证据证明，也没有提供证据证明其误工与本案存在关联性。上诉人提供新证据以证明其主张，但是该证据只有单位盖章，没有负责人或者相关主管人员签名，不具有证据应具有的法律效力，依法不应采纳。另获悉上诉人是其公司的董事，完全可以随意盖章。而且上诉人提供的证据没有相关劳动合同、考勤记录和工资流水佐证，也不能证明其工资标准和实际的误工损失。其次，退一步说，就算上诉人确有误工，其提供的证据不能证明误工与被上诉人具有关联性。再次，本案上诉人主张被上诉人造成其财产损失，而需要向其赔偿误工费。根据《中华人民共和国民法典》第一千一百八十四条规定，误工费并不属于财产损害的赔偿范围，只有受害人遭受人身损害时，才可向侵权人主张赔偿误工费。本案上诉人因为财产损失主张误工费没有法律依据。最后，本案虽然是上诉人先起诉，但是就损害结果的发生，上诉人同样也有过错。从案件的来龙去脉可以看出，正是因为上诉人占领消防楼道，违法私自放置个人物品，在承诺清走而拒不清走的情况下，双方的纠纷才愈演愈烈。四、关于上诉人的上诉请求四、五，并不在其一审诉求的范围内，请法院依法驳回。\\n\\n[DOC3_A7 | 二审补充证据]\\n经本院查明，一审法院查明的事实属实，本院予以确认。\\n\\n二审期间，上诉人向本院提交了证据1薪资证明拟证明误工费和计算标准；证据2关于昌岗中路114号4门401户排气整改的诉求状拟证明多名业主联名诉求；证据3被上诉人厨房厕所排气改造现状拟证明其排气正对上诉人大门；证据4楼梯间通风现状拟证明加装电梯封了玻璃窗导致无法快速逸散楼道气体。被上诉人质证称证据1-2三性不予认可；证据3其确认现状，对于上诉人所述不予确认；证据4中聊天记录真实性认可，关联性不予认可。\\n\\n本院认为，《中华人民共和国民事诉讼法》第一百七十五条规定：“第二审人民法院应当对上诉请求的有关事实和适用法律进行审查。”因上诉人二审所提出的上诉请求第四、五项已超出其一审诉请范围，且被上诉人二审庭询时亦表示不同意就该两项诉请进行调解，故本院对该两项诉请不予审查。本案系相邻关系纠纷。根据《中华人民共和国民法典》第八条规定：“民事主体从事民事活动，不得违反法律，不得违背公序良俗。”第二百八十八条规定：“不动产的相邻人应当按照有利生产、方便生活、团结互助、公平合理的原则，正确处理相邻关系。”本案上诉人、被上诉人作为相邻不动产的权利人，应按照上述规定，各方在行使自己合法权利的同时，亦要尊重他人权利的行使以及尊重社会公德，从而正确处理好相邻关系。\\n\\n[DOC3_A8 | 二审判决]\\n关于被上诉人是否应当赔偿上诉人儿童车及平衡车的损失问题。现有证据并不足以证明被上诉人对上述物品实施侵权损坏行为，且上诉人将上述物品放置在公共区域，并不能排除有其他原因导致物品损坏的可能，故上诉人应承担举证不能的不利法律后果，本院对其该主张不予支持。\\n\\n关于被上诉人是否应当整改涉案三个排气扇的问题。经一审法院到现场查看确认，401房卫生间无窗户，仅靠吸顶排气扇通风透气，由于卫生间空间较为狭小，空气流通不畅确会存在安全隐患，故被上诉人在走廊窗户安装排气扇（小的）连通卫生间一并排气确有必要需求。上诉人上诉认为其他业主未作出类似改装以及被上诉人使用的电热水器无燃烧废气的安全隐患故而被上诉人无安装排气扇的客观需求的理由与于理无据，本院不予支持。至于另外2台（大的）排气扇，诚如一审所述，上述排气扇离地较高且上诉人进入门口的时间亦较短，对上诉人基本影响不大，本院予以认可。上诉人上诉主张被上诉人该排气扇排出的废气会对身体产生危害与事实不符，本院不予支持。\\n\\n关于被上诉人是否应当赔偿上诉人误工费的问题。现有证据尚未能证明上诉人主张的误工事实与涉案纠纷存在直接因果关系，该误工损失并不属于因被上诉人侵犯相邻权所应承担的赔偿责任范畴，故本院对此亦不予支持。\\n\\n综上所述，上诉人古志梁、钟运枚的上诉请求不成立，本院予以驳回。一审判决认定事实清楚，适用法律正确，应予以维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项的规定，判决如下：\\n\\n[DOC3_A9 | 终审判决]\\n驳回上诉，维持原判。\\n\\n二审案件受理费281元，由古志梁、钟运枚负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A7\", \"DOC3_A8\", \"DOC3_A9\"], \"primary_anchor_id\": \"DOC3_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\", \"金额\"], \"anchor_value_hints\": [\"3\", \"1\", \"1250元\", \"2\", \"12000元\", \"4\", \"5\", \"114\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_case\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides details about the specific requests made by the appellants, including compensation for damaged items, rectification of exhaust fans, and compensation for lost wages. These details further support the classification of the case as a '民事案件' (civil case), but do not introduce any new categories. Therefore, no new evidence items are extracted from this chunk.</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\", \"上诉请求 上诉人提出多项请求，包括赔偿儿童自行车和平衡车损失、整改排气扇、赔偿误工损失等，被上诉人则辩称上诉人的请求没有事实和法律依据。 古志梁、钟运枚上诉请求：1.判令被上诉人赔偿上诉人儿童自行车和平衡车，总金额为1250元；2.判令被上诉人整改厨房和厕所排气扇；禁止将厨房、厕所废气臭气排向楼道公共区域，影响大家通行的空气环境；3.判令被上诉人应赔偿上诉人双方离岗误工损失，共计12000元；4.判令被上诉人清理门口焚烧的香炉，并责令禁止制造令人不适的烟雾和气体；5.判令法院提供有效的方式让被上诉人承诺永不对上诉人做出任何报复行为的保证，并公示整个昌岗中路114号大院所有邻居住户，没收斧头利器。事实和理由：一、被上诉人及其家人多次在上诉人监控摄像头下利用不文明的方式进行挑衅和侮辱。并经常对上诉人摆放在门口的物品通过泼水、摔打、踢踹等方式进行故意破坏，甚至故意扔掉，造成上诉人财产损失。案涉自行车于2021年12月购买、平衡车于2021年9月购买，经过被上诉人恶意毁坏已经无法使用，另外还有被扔掉的鞋子、柜门等。一审判决以未有被上诉人破坏的直接证据为由不予支持上诉人诉求,却又认定被上诉人有拿走儿童车的举动和车子散乱卧倒在楼梯拐角层的行为，这显然是自相矛盾的。综合本案，已经可以认定被上诉人实施了破坏行为。二、一审法院表示被...\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a dispute between neighbors over property damage and other related issues. The case appears to be a civil case due to the nature of the disputes and the involvement of compensation claims. I will inspect the chunk that provides more context on the case background to confirm the type of the case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\"], \"utility_hits\": {\"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A3\": 11.0, \"DOC3_A5\": 11.0, \"DOC3_A6\": 11.0, \"DOC3_A7\": 11.0}, \"score_breakdown\": {\"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC3_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}, \"DOC3_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 28.354}, \"DOC3_A7\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.221, \"redundancy_penalty\": 0.0, \"total\": 28.221}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC3_A2: 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n上诉人（原审原告、反诉被告）：古志梁，男，1989年9月25日出生，汉族，住广东省广州市海珠区。\\n\\n上诉人（原审原告、反诉被告）：钟运枚，女，1993年7月8日出生，汉族，住广东省广州市海珠区。\\n\\n被上诉人（原审被告、反诉原告）：麦汉莲，女，1960年9月22日出生，汉族，住广东省广州市海珠区。\\n\\n委托诉讼代理人：曾静仪，广东比心律师事务所律师。\\n\\n委托诉讼代理人：郭文慧，麦汉莲的女儿。\\n\\n[DOC3_A2 | 案件背景]\\n上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\\n\\n[DOC3_A4 | 一审诉求]\\n上诉人向一审法院起诉请求：1、判决被上诉人向上诉人赔偿损坏智能门锁金额1899元；2、被上诉人向上诉人赔偿儿童车、平衡车损失款1250元；3、被上诉人向上诉人赔偿精神损失费5000元；4、要求被上诉人拆除被上诉人门口的摄像头，今后不能安装带旋转角度的摄像头来窥视上诉人家；5、要求被上诉人整改面向过道的3台排气扇(全部要接入公用烟道内)；6、被上诉人向上诉人方赔偿误工费12000元；7、要求被上诉人停止对上诉人的任何报复和骚扰。(赔偿金额合计20149元)。\\n\\n被上诉人向一审法院反诉请求：1、判决上诉人立即停止侵害，将放置在广州市海珠区昌岗中路114号4楼楼道的杂物清理干净，并责令其不得在4楼楼道放置任何物品；2、判决上诉人向被上诉人赔偿摄像头损坏的金额135元；3、判决上诉人立即停止侵害，拆除正对着被上诉人的带有监控功能的电子门锁；4、判决上诉人以公开的方式向被上诉人赔礼道歉；5、判决上诉人向被上诉人赔偿精神损失5000元。\\n\\n[DOC3_A5 | 一审认定事实]\\n一审法院认定事实：上诉人古志梁、钟运枚是广州市海珠区昌岗中路114号四门402房(下称402房)的权属人(共同共有)。被上诉人麦汉莲是广州市海珠区昌岗中路114号四门401房(下称401房)的权属人。402房与401房紧紧相邻。\\n\\n近年，因上诉人在家门口的墙角落经常放置儿童车、杂物及垃圾；被上诉人麦汉莲在窗户上设置排气扇(废气能排到上诉人大门口)，并在窗户上悬挂镜子和剪刀，所安装的监控摄像头镜头对着上诉人家门口等，双方产生多次纠纷，并曾报警。\\n\\n本案诉讼中，上诉人方表示愿意向麦汉莲赔偿摄像头损失款135元。\\n\\n上诉人方提供多段视频主张被上诉人麦汉莲对其大门泼水，导致智能门锁损坏，并暴力摔坏儿童车、平衡车，对上诉人方进行谩骂；在窗户上设置排气扇，将废气排到上诉人大门口等，对上诉人造成侵害。(麦汉莲对视频的真实性无异议，但认为不能证明上诉人的主张，且视频不能完整反映事情的全部经过。)\\n\\n上诉人方还提供网上信息证明智能门锁金额为1899元。(麦汉莲对此不予确认。)\\n\\n报警记录与视频。(麦汉莲对证据的真实性无异议。)\\n\\n另，一审法院于2023年12月14日到涉案现场进行查看。现场可见大楼第4层只有2个住户，分别是401房和402房；402房与401房紧紧相邻，两户的大门成90度面向楼道分布，中间隔着401房的厨房窗户，由此，401厨房窗户的对出位置正好是402房大门处；401房厨房窗户上方固定玻璃处安装有2台排气扇，相隔约20厘米处还安装了1台直径约15厘米小排气扇(有活动盖子，由管道连通卫生间的吸顶排气扇)；窗户上没有悬挂镜子和剪刀；401房大门右上角安装有监控摄像头，旁边安装有一块长方形的板材遮挡(由此可以遮挡摄像头，避免能够拍摄到402房大门口的范围)；另进入401房，可见卫生间没有窗户，只有天花上的吸顶排气扇可以通风；厨房门口边角处是大楼的公用烟道，与抽油烟机相连接。\\n\\n[DOC3_A6 | 一审判决]\\n一审法院认为：本案是相邻纠纷。上诉人古志梁、钟运枚与被上诉人麦汉莲是共同使用涉案大楼4层的邻居，理应按照有利生产、方便生活、团结互助、公平合理的精神，正确合理使用房屋。\\n\\n关于本诉诉求一，古志梁主张麦汉莲对其大门泼水，导致智能门锁损坏，并提供了视频来证明。麦汉莲对此辩称虽有向对方大门泼水，但并未损坏对方的智能门锁。根据古志梁提供的2023年3月29日视频，可见麦汉莲一方用水多次洒泼了古志梁家的大门，之后2023年4月10日古志梁更换了门锁。因此，古志梁主张因麦汉莲的该侵权行为导致智能门锁损坏的意见，在麦汉莲不能举证反驳的情况下，可予采信。考虑到折旧率的问题，本项宜由麦汉莲赔偿1500元。\\n\\n关于本诉诉求二，虽然古志梁提供的视频显示有麦汉莲家人拿走儿童车的举动和车子平放在楼梯拐角层的照片，但缺乏对车辆实施侵损的证据。麦汉莲现亦予否认。由于古志梁不能举证证明因麦汉莲实施了侵权行为，导致儿童车、平衡车受损，故其要求赔偿儿童车、平衡车损失款1250元，理据不足，一审法院不予支持。\\n\\n关于本诉诉求四，经现场查看，401房门口上方的监控视频摄像头已作了调整，只能面向楼梯走廊，且旁边安装有一块板材遮挡，已无法拍摄到古志梁家门口的情况。鉴于此，该项诉求予以驳回。\\n\\n关于本诉诉求五，经现场查看，401房卫生间没有窗户，仅靠吸顶排气扇通风透气。故此，麦汉莲在走廊窗户上安装(小的)排气扇连通卫生间来使用，客观上有该使用需求。至于另外2台(大的)排气扇，现场是安装在401厨房窗户的上方，离地超过2米。上述排气扇正常使用时均不会将风直接吹到进出402房的人员身上。而且，通常而言上诉人方开门出入所需的时间很短暂，基本不会对上诉人方进出房屋造成影响。据此，古志梁方要求麦汉莲调整现有排气扇的设置，将送风口接入公用排烟道的意见，理据不足，一审法院不予支持。\\n\\n关于本诉诉求六，古志梁主张存在误工损失，但并未提供相关证据证明发生了实际误工且被扣减了工资报酬待遇等，以及与涉案纠纷存在必然的因果关系，故其要求麦汉莲赔偿误工损失12000元，理据不足，一审法院不予支持。\\n\\n关于本诉诉求三、七，上诉人、被上诉人作为邻居，理应发扬互相帮助、互相体谅的友好精神，遇到分歧矛盾时应采取友好协商的态度积极解决。本案中，古志梁提供的视频照片资料证明麦汉莲一方采取了往古志梁放置在门口的物品多次洒淋水及浇淋监控摄像头，搅乱整理好的垃圾并有意弄脏古志梁家门口等情况，甚至对镜头做出不文明并带有侮辱性的动作。对此，应给予麦汉莲一方严肃批评。今后，麦汉莲一方应当注意自己的言行，以避免纠纷的发生。由于没有证据证明麦汉莲一方目前仍然在实施骚扰、威胁、报复的行为，且古志梁一方亦未举证证明因对方的侵权行为导致发生严重的精神损害，故其该部分的诉求，不能支持。\\n\\n关于反诉请求1，走廊公用通道属于大楼的全体业主共有，任何个人都无权占有使用。因此，古志梁长期将包括儿童车、鞋子在内的物品放置在402房大门口角落的公用通道上，既影响了环境卫生，又妨碍了美观，实属不妥。此举也是引发双方矛盾的原因之一，故古志梁一方对此要有正确的认识，并予以改正。现麦汉莲以影响相邻关系为由要求古志梁清空该处物品，合理，一审法院予以支持。\\n\\n关于反诉请求2，古志梁在庭审中确认可以赔偿麦汉莲的摄像头损失135元，可按此处理。\\n\\n关于反诉请求3、古志梁安装具有拍摄功能的智能门锁，主要目的是为了防盗安全，并没有证据证明该门锁对麦汉莲构成权利损害。故此，麦汉莲要求古志梁方拆除该智能门锁，缺乏理据，不能支持。\\n\\n关于反诉请求4，5，麦汉莲并未举证证明古志梁对其实施侵权行为，导致其精神受到严重损害，故其要求古志梁方赔礼道歉并赔偿精神损失5000元，缺乏事实法律依据，一审法院不予支持。\\n\\n综上所述，依照《中华人民共和国民法典》第一千一百六十五条的规定，一审法院判决如下：一、麦汉莲在该判决生效之日起10日内，向古志梁、钟运枚赔偿更换智能门锁损失款1500元。二、古志梁、钟运枚在该判决生效之日起10日内，将放置在广州市海珠区昌岗中路114号四门402房门口角落的物品(包括但不限于儿童车、鞋子等)清空搬离。三、古志梁、钟运枚在该判决生效之日起10日内，向麦汉莲赔偿摄像头损失款135元。四、驳回古志梁、钟运枚的其他诉讼请求。五、驳回麦汉莲的其他反诉请求。一审案件本诉受理费304元、反诉受理费25元，由古志梁、钟运枚负担本诉受理费281元、反诉受理费1元；由麦汉莲负担本诉受理费23元、反诉受理费24元。上述本诉受理费已由上诉人预交，上诉人同意由被上诉人在履行该判决时将其应承担的受理费直接支付给上诉人。\\n\\n[DOC3_A7 | 二审补充证据]\\n经本院查明，一审法院查明的事实属实，本院予以确认。\\n\\n二审期间，上诉人向本院提交了证据1薪资证明拟证明误工费和计算标准；证据2关于昌岗中路114号4门401户排气整改的诉求状拟证明多名业主联名诉求；证据3被上诉人厨房厕所排气改造现状拟证明其排气正对上诉人大门；证据4楼梯间通风现状拟证明加装电梯封了玻璃窗导致无法快速逸散楼道气体。被上诉人质证称证据1-2三性不予认可；证据3其确认现状，对于上诉人所述不予确认；证据4中聊天记录真实性认可，关联性不予认可。\\n\\n本院认为，《中华人民共和国民事诉讼法》第一百七十五条规定：“第二审人民法院应当对上诉请求的有关事实和适用法律进行审查。”因上诉人二审所提出的上诉请求第四、五项已超出其一审诉请范围，且被上诉人二审庭询时亦表示不同意就该两项诉请进行调解，故本院对该两项诉请不予审查。本案系相邻关系纠纷。根据《中华人民共和国民法典》第八条规定：“民事主体从事民事活动，不得违反法律，不得违背公序良俗。”第二百八十八条规定：“不动产的相邻人应当按照有利生产、方便生活、团结互助、公平合理的原则，正确处理相邻关系。”本案上诉人、被上诉人作为相邻不动产的权利人，应按照上述规定，各方在行使自己合法权利的同时，亦要尊重他人权利的行使以及尊重社会公德，从而正确处理好相邻关系。\\n\\n[DOC3_A8 | 二审判决]\\n关于被上诉人是否应当赔偿上诉人儿童车及平衡车的损失问题。现有证据并不足以证明被上诉人对上述物品实施侵权损坏行为，且上诉人将上述物品放置在公共区域，并不能排除有其他原因导致物品损坏的可能，故上诉人应承担举证不能的不利法律后果，本院对其该主张不予支持。\\n\\n关于被上诉人是否应当整改涉案三个排气扇的问题。经一审法院到现场查看确认，401房卫生间无窗户，仅靠吸顶排气扇通风透气，由于卫生间空间较为狭小，空气流通不畅确会存在安全隐患，故被上诉人在走廊窗户安装排气扇（小的）连通卫生间一并排气确有必要需求。上诉人上诉认为其他业主未作出类似改装以及被上诉人使用的电热水器无燃烧废气的安全隐患故而被上诉人无安装排气扇的客观需求的理由与于理无据，本院不予支持。至于另外2台（大的）排气扇，诚如一审所述，上述排气扇离地较高且上诉人进入门口的时间亦较短，对上诉人基本影响不大，本院予以认可。上诉人上诉主张被上诉人该排气扇排出的废气会对身体产生危害与事实不符，本院不予支持。\\n\\n关于被上诉人是否应当赔偿上诉人误工费的问题。现有证据尚未能证明上诉人主张的误工事实与涉案纠纷存在直接因果关系，该误工损失并不属于因被上诉人侵犯相邻权所应承担的赔偿责任范畴，故本院对此亦不予支持。\\n\\n综上所述，上诉人古志梁、钟运枚的上诉请求不成立，本院予以驳回。一审判决认定事实清楚，适用法律正确，应予以维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项的规定，判决如下：\\n\\n[DOC3_A9 | 终审判决]\\n驳回上诉，维持原判。\\n\\n二审案件受理费281元，由古志梁、钟运枚负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A7\", \"DOC3_A8\", \"DOC3_A9\"], \"primary_anchor_id\": \"DOC3_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"2023\", \"0105\", \"10757\", \"2024\", \"2\", \"18\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_case\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides information about the case background, indicating that the case involves a dispute between neighbors over adjacent property issues. This suggests that the case falls under the category of '民事案件' (civil cases). However, to fully categorize the document, we need to ensure there are no other types of cases mentioned within the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>\n<think>The current evidence strongly indicates that the case is a '民事案件' (civil case). Since we have identified the category of the document and it aligns with the must-find checklist, we can conclude that there is no need to inspect further chunks for additional categories. We can now proceed to the next document if available or finalize the categorization based on the evidence gathered.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A3\", \"candidate_anchor_ids\": [\"DOC3_A3\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A7\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A2\"], \"utility_hits\": {\"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A7\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A3\": 11.0, \"DOC3_A5\": 11.0, \"DOC3_A6\": 11.0, \"DOC3_A7\": 11.0}, \"relation_hits\": {\"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"], \"DOC3_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"], \"DOC3_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"], \"DOC3_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A2\", \"same_case_selected=DOC3_A2\"]}, \"relation_score\": {\"DOC3_A3\": 14.56, \"DOC3_A5\": 14.56, \"DOC3_A6\": 14.56, \"DOC3_A7\": 14.56}, \"anchor_role_hits\": {\"DOC3_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A6\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A7\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC3_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 34.474}, \"DOC3_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 34.068}, \"DOC3_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.354, \"redundancy_penalty\": 3.0, \"total\": 33.914}, \"DOC3_A7\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.56, \"weak_priors\": 5.221, \"redundancy_penalty\": 3.0, \"total\": 33.781}}}</search>\n<info>{\"anchor_id\": \"DOC3_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"上诉请求\", \"summary\": \"Expanded same-section read window around DOC3_A3: 上诉人提出多项请求，包括赔偿儿童自行车和平衡车损失、整改排气扇、赔偿误工损失等，被上诉人则辩称上诉人的请求没有事实和法律依据。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n上诉人（原审原告、反诉被告）：古志梁，男，1989年9月25日出生，汉族，住广东省广州市海珠区。\\n\\n上诉人（原审原告、反诉被告）：钟运枚，女，1993年7月8日出生，汉族，住广东省广州市海珠区。\\n\\n被上诉人（原审被告、反诉原告）：麦汉莲，女，1960年9月22日出生，汉族，住广东省广州市海珠区。\\n\\n委托诉讼代理人：曾静仪，广东比心律师事务所律师。\\n\\n委托诉讼代理人：郭文慧，麦汉莲的女儿。\\n\\n[DOC3_A2 | 案件背景]\\n上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\\n\\n[DOC3_A3 | 上诉请求]\\n古志梁、钟运枚上诉请求：1.判令被上诉人赔偿上诉人儿童自行车和平衡车，总金额为1250元；2.判令被上诉人整改厨房和厕所排气扇；禁止将厨房、厕所废气臭气排向楼道公共区域，影响大家通行的空气环境；3.判令被上诉人应赔偿上诉人双方离岗误工损失，共计12000元；4.判令被上诉人清理门口焚烧的香炉，并责令禁止制造令人不适的烟雾和气体；5.判令法院提供有效的方式让被上诉人承诺永不对上诉人做出任何报复行为的保证，并公示整个昌岗中路114号大院所有邻居住户，没收斧头利器。事实和理由：一、被上诉人及其家人多次在上诉人监控摄像头下利用不文明的方式进行挑衅和侮辱。并经常对上诉人摆放在门口的物品通过泼水、摔打、踢踹等方式进行故意破坏，甚至故意扔掉，造成上诉人财产损失。案涉自行车于2021年12月购买、平衡车于2021年9月购买，经过被上诉人恶意毁坏已经无法使用，另外还有被扔掉的鞋子、柜门等。一审判决以未有被上诉人破坏的直接证据为由不予支持上诉人诉求,却又认定被上诉人有拿走儿童车的举动和车子散乱卧倒在楼梯拐角层的行为，这显然是自相矛盾的。综合本案，已经可以认定被上诉人实施了破坏行为。二、一审法院表示被上诉人的风扇吹不到上诉人身上，但是上诉人自始至终从未表达过其被排气扇的风吹到而感到不适,而是被上诉人常年排放的厨房废气和厕所臭味造成其严重生活困扰。上诉人购房时被上诉人还未开始装修，被上诉人系在2022年初装修完，原本这栋楼有公共烟道，但被上诉人弃用公共烟道，而是在自家的厨房窗户上安装两台大功率排气扇和一个厕所排气扇，排气方向正对上诉人家大门,一日三餐的油烟和厕所臭气均向上诉人家大门口排放，且由于楼梯是整栋楼唯一通道，现加装了电梯，电梯南面封窗，导致更严重影响空气流通。异味已经逸散到整栋楼，影响所有上下楼的居住同行。一审判决认为，401房卫生间没有窗户，仅靠吸顶气扇通风透气。故此，被上诉人在走廊窗户上安装气扇连通卫生间来使用，客观上有该使用需求。上诉人认为一审如此认定是没有充分考虑整栋楼的通风环境而做出的不合理的结论。根据楼层设计所有的卫生间均是靠吸顶排气扇（小的）连接公共烟道来实现通风的，其他业主均未做出类似改装，可见设计是完全可以满足通风需求的，并且被上诉人一审期间反诉状中提交了被上诉人厕所照片，明显可看到被上诉人使用的是电热水器，完全无关于燃烧废气安全隐患相关风险的客观需求。一审判决还认为，至于另外2台(大的)排气扇，现场是安装在401厨房窗户的上方，离地超过2米。上述排气扇正常使用时均不会将风直接吹到进出402房的人员身上。而且，通常而言上诉人方开门出入所需的时间很短暂，基本不会对上诉人方进出房屋造成影响。上诉人认为该认定缺乏生活依据，从被上诉人排气扇排到公共楼道的废气，具有异味，甚至是有毒有害的，这是众所周知的。而且这些废臭气体在相对封闭的空间难以逸散，并不是不直接吹向人体就忽略其危害性和伤害性。而且被上诉人有故意开启设备对上诉人进行骚扰，经常监控上诉人家人出入家门时，随后进行排风。作为402户主，当初买房前就是看中了正门朝东阳台朝南形成很强的通风效果，装修时选装的大门也选用门中门结构，本来为了能东南空气对流，确保室内空气循环。但由于被上诉人的行为导致上诉人整个家庭的居住环境发生重大改变。三、根据上诉人提供的证据材料能充分证明误工情况是客观存在的，可以推断误工损失也是客观存在的，只是上诉人未提供准确的工资情况。被上诉人已退休在家无所事事,专挑上诉人工作上班时间对上诉人家老人辱骂、恐吓和泼水、暴力摔、踹上诉人家物品，上诉人家老人语言沟通不顺,导致上诉人必须离岗回家处理,包括报警、起诉等，就报警记录就有7次。上诉人古志梁2023年全年实收税后薪资为233660元（不含股份分红）,其中每月底薪18000元，提成3000-10000不等。因被上诉人挑起的矛盾，上诉人古志梁因离岗导致受不同程度的罚款，此罚款因被上诉人挑起事端，理应由其赔偿损失。按误工不含工作日计算，每日固定标准薪资为：18000元/21.75天=828元。经统计，上诉人古志梁总共被公司罚款13511.48元。上诉人钟运枚平均税前月薪13000元，也受到不同程度的扣薪处罚，但为防止被上诉人到其单位闹事和报复,不便透露所任职的单位信息和薪资证明。即使按广州最低薪资标准为2300元/月，其中因被上诉人挑起的事端引起的多次报警及起诉流程两上诉人均共同在场，所以造成上诉人钟运枚的误工损失同样是客观存在的。\\n\\n麦汉莲辩称：被上诉人不同意上诉人的全部上诉请求，其上诉所称没有事实与法律依据，请求二审法院依法驳回，意见如下：一、一审认定被上诉人无需向上诉人赔偿儿童车车辆损坏金额1250元合法合理。（一）关于上诉人所称的向其物品泼水、挑拨的问题。首先，被上诉人己深刻意识泼水是不理智的错误行为，在2023年3月29日经派出所调解后，已经没有往上诉人放置到消防楼道的杂物泼水。然被上诉人之所以往上诉人放置在楼道的杂物泼水，是因在上诉人拒不整改违法占用楼道的情况下，被上诉人由于法律意识的淡薄，使用了错误的行为反击上诉人的违法行为。被上诉人做出上述行为实属情有可原，且并不会造成上诉人物品损坏。（二）被上诉人虽有泼水行为，但泼水并不能致使上诉人的儿童车损坏。上诉人提供的证据也不能证明是被上诉人造成其儿童车的损坏。首先，上诉人提供的证据只能证明被上诉人将上诉人的儿童车拿走。其次，从上诉人提供的照片看，案涉儿童车并没有上诉人所称的配件破碎脱落的情况，也没有其所称的轮胎变形的情况。而且仅凭一张照片并不能证明其损失情况。再次，从上诉人提供的证据显示，儿童车并不存在其所称的生锈严重的情况。且上诉人自入住当天，儿童车一直闲置消防通道，无法证明儿童车本能正常使用，加之其儿童车使用多年也会自然损耗，存在生锈的情况。退一步说，民法的功能主要在于填补受害人的损失，而不在于赔偿，如果上诉人的车辆确实有损坏的情况，其应当对车辆进行针对性维修，再主张维修费用，而不是按照购买的整车的原价格进行索赔。二、一审法院判决驳回上诉人关于整改排气扇的诉求事实清楚，适用法律正确。首先，被上诉人在没有窗户的卫生间设置通风设施是客观安全需要。一审法院的法官于2023年12月14日到被上诉人家里进行勘察，涉案大楼构造先天缺陷，其所居住的401房的厨房和厕所连成一体，先进入厨房再到厕所，被上诉人的厕所没有窗户是客观事实，厨房只有楼道的一个窗户。被上诉人安装了储水式电热水器，厨房窗口换气扇的作用是辅助换气，如果无法及时换气，洗手间会产生大量湿气无法挥发，水汽容易导致电器、线路潮湿，容易引起电路短路。其次，被上诉人在没有窗户的卫生间设置通风设施符合法律法规的规定。根据住房和城乡建设部发布的《住宅设计规范》GB50096-2011第6章第8条第4点规定，厨房和卫生间的烟气性质不同，合用排气道会互相串味。另外，由于厨房和卫生间气体成分不同，分别设置也可避免互相混合产生的危险;第8第5第3点规定有相关要求设置机械通风设施或预留机械通风（一般为排气扇）条件。再次，因为卫生间通风问题已经发生过安全事故。2014年12月19日被上诉人的老父亲因洗手间空气不足，导致在洗澡时无法呼吸窒息猝死而亡。所以被上诉人在没有窗户的卫生间中设置机械通风设施是必要的需求，也是法律规定的要求。关于厨房另外安装的两台换气扇，被上诉人也是为了气流循环的安全需要安装的。上诉人认为对其产生了影响应当承担举证责任。三、上诉人主张误工费没有事实与法律依据，请求二审法院依法驳回。首先，一审时，上诉人称因为处理报警事宜而产生误工费，对此，其并没有提供证据证明，也没有提供证据证明其误工与本案存在关联性。上诉人提供新证据以证明其主张，但是该证据只有单位盖章，没有负责人或者相关主管人员签名，不具有证据应具有的法律效力，依法不应采纳。另获悉上诉人是其公司的董事，完全可以随意盖章。而且上诉人提供的证据没有相关劳动合同、考勤记录和工资流水佐证，也不能证明其工资标准和实际的误工损失。其次，退一步说，就算上诉人确有误工，其提供的证据不能证明误工与被上诉人具有关联性。再次，本案上诉人主张被上诉人造成其财产损失，而需要向其赔偿误工费。根据《中华人民共和国民法典》第一千一百八十四条规定，误工费并不属于财产损害的赔偿范围，只有受害人遭受人身损害时，才可向侵权人主张赔偿误工费。本案上诉人因为财产损失主张误工费没有法律依据。最后，本案虽然是上诉人先起诉，但是就损害结果的发生，上诉人同样也有过错。从案件的来龙去脉可以看出，正是因为上诉人占领消防楼道，违法私自放置个人物品，在承诺清走而拒不清走的情况下，双方的纠纷才愈演愈烈。四、关于上诉人的上诉请求四、五，并不在其一审诉求的范围内，请法院依法驳回。\\n\\n[DOC3_A7 | 二审补充证据]\\n经本院查明，一审法院查明的事实属实，本院予以确认。\\n\\n二审期间，上诉人向本院提交了证据1薪资证明拟证明误工费和计算标准；证据2关于昌岗中路114号4门401户排气整改的诉求状拟证明多名业主联名诉求；证据3被上诉人厨房厕所排气改造现状拟证明其排气正对上诉人大门；证据4楼梯间通风现状拟证明加装电梯封了玻璃窗导致无法快速逸散楼道气体。被上诉人质证称证据1-2三性不予认可；证据3其确认现状，对于上诉人所述不予确认；证据4中聊天记录真实性认可，关联性不予认可。\\n\\n本院认为，《中华人民共和国民事诉讼法》第一百七十五条规定：“第二审人民法院应当对上诉请求的有关事实和适用法律进行审查。”因上诉人二审所提出的上诉请求第四、五项已超出其一审诉请范围，且被上诉人二审庭询时亦表示不同意就该两项诉请进行调解，故本院对该两项诉请不予审查。本案系相邻关系纠纷。根据《中华人民共和国民法典》第八条规定：“民事主体从事民事活动，不得违反法律，不得违背公序良俗。”第二百八十八条规定：“不动产的相邻人应当按照有利生产、方便生活、团结互助、公平合理的原则，正确处理相邻关系。”本案上诉人、被上诉人作为相邻不动产的权利人，应按照上述规定，各方在行使自己合法权利的同时，亦要尊重他人权利的行使以及尊重社会公德，从而正确处理好相邻关系。\\n\\n[DOC3_A8 | 二审判决]\\n关于被上诉人是否应当赔偿上诉人儿童车及平衡车的损失问题。现有证据并不足以证明被上诉人对上述物品实施侵权损坏行为，且上诉人将上述物品放置在公共区域，并不能排除有其他原因导致物品损坏的可能，故上诉人应承担举证不能的不利法律后果，本院对其该主张不予支持。\\n\\n关于被上诉人是否应当整改涉案三个排气扇的问题。经一审法院到现场查看确认，401房卫生间无窗户，仅靠吸顶排气扇通风透气，由于卫生间空间较为狭小，空气流通不畅确会存在安全隐患，故被上诉人在走廊窗户安装排气扇（小的）连通卫生间一并排气确有必要需求。上诉人上诉认为其他业主未作出类似改装以及被上诉人使用的电热水器无燃烧废气的安全隐患故而被上诉人无安装排气扇的客观需求的理由与于理无据，本院不予支持。至于另外2台（大的）排气扇，诚如一审所述，上述排气扇离地较高且上诉人进入门口的时间亦较短，对上诉人基本影响不大，本院予以认可。上诉人上诉主张被上诉人该排气扇排出的废气会对身体产生危害与事实不符，本院不予支持。\\n\\n关于被上诉人是否应当赔偿上诉人误工费的问题。现有证据尚未能证明上诉人主张的误工事实与涉案纠纷存在直接因果关系，该误工损失并不属于因被上诉人侵犯相邻权所应承担的赔偿责任范畴，故本院对此亦不予支持。\\n\\n综上所述，上诉人古志梁、钟运枚的上诉请求不成立，本院予以驳回。一审判决认定事实清楚，适用法律正确，应予以维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项的规定，判决如下：\\n\\n[DOC3_A9 | 终审判决]\\n驳回上诉，维持原判。\\n\\n二审案件受理费281元，由古志梁、钟运枚负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A7\", \"DOC3_A8\", \"DOC3_A9\"], \"primary_anchor_id\": \"DOC3_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\", \"金额\"], \"anchor_value_hints\": [\"3\", \"1\", \"1250元\", \"2\", \"12000元\", \"4\", \"5\", \"114\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_case\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk provides details about the specific requests made by the appellants, including compensation for damaged items, rectification of exhaust fans, and compensation for lost wages. These details further support the classification of the case as a '民事案件' (civil case), but do not introduce any new categories. Therefore, no new evidence items are extracted from this chunk.</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\", \"DOC3_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人古志梁、钟运枚因相邻关系纠纷不服一审判决，向法院提起上诉。 上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。本院于2024年2月18日立案后，依法组成合议庭进行了审理。本案现已审理终结。\", \"上诉请求 上诉人提出多项请求，包括赔偿儿童自行车和平衡车损失、整改排气扇、赔偿误工损失等，被上诉人则辩称上诉人的请求没有事实和法律依据。 古志梁、钟运枚上诉请求：1.判令被上诉人赔偿上诉人儿童自行车和平衡车，总金额为1250元；2.判令被上诉人整改厨房和厕所排气扇；禁止将厨房、厕所废气臭气排向楼道公共区域，影响大家通行的空气环境；3.判令被上诉人应赔偿上诉人双方离岗误工损失，共计12000元；4.判令被上诉人清理门口焚烧的香炉，并责令禁止制造令人不适的烟雾和气体；5.判令法院提供有效的方式让被上诉人承诺永不对上诉人做出任何报复行为的保证，并公示整个昌岗中路114号大院所有邻居住户，没收斧头利器。事实和理由：一、被上诉人及其家人多次在上诉人监控摄像头下利用不文明的方式进行挑衅和侮辱。并经常对上诉人摆放在门口的物品通过泼水、摔打、踢踹等方式进行故意破坏，甚至故意扔掉，造成上诉人财产损失。案涉自行车于2021年12月购买、平衡车于2021年9月购买，经过被上诉人恶意毁坏已经无法使用，另外还有被扔掉的鞋子、柜门等。一审判决以未有被上诉人破坏的直接证据为由不予支持上诉人诉求,却又认定被上诉人有拿走儿童车的举动和车子散乱卧倒在楼梯拐角层的行为，这显然是自相矛盾的。综合本案，已经可以认定被上诉人实施了破坏行为。二、一审法院表示被...\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A5\", \"DOC3_A4\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>"
+}

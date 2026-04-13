@@ -1,0 +1,466 @@
+{
+  "doc_id": "DOC9",
+  "doc_title": "《判决文书9》",
+  "selected_anchor_ids": [
+    "DOC9_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC9_A2",
+        "candidate_anchor_ids": [
+          "DOC9_A1",
+          "DOC9_A2"
+        ],
+        "utility_hits": {
+          "DOC9_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC9_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC9_A2": 11.0,
+          "DOC9_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC9_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC9_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 20.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC9_A2",
+      "plan_think": "The summary of DOC9_A2 indicates that the case involves a civil dispute over information network dissemination rights and unfair competition, leading to a jurisdictional appeal. This suggests that the case can be categorized as both a '民事案件' (civil case) and potentially a '管辖案件' (jurisdiction case), depending on the primary focus of the judgment. Since we need to determine the category of the document, it's important to inspect DOC9_A2 first to confirm the nature of the case.",
+      "info": {
+        "anchor_id": "DOC9_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件概述",
+        "summary": "Expanded same-section read window around DOC9_A2: 描述了上诉人北京某1科技有限公司因不服重庆市第一中级人民法院关于侵害信息网络传播权及不正当竞争纠纷的民事裁定而提起上诉，并最终申请撤回管辖权异议上诉的过程。法院裁定准予上诉人撤回上诉，该裁定为终审裁定。",
+        "text": "[DOC9_A1 | 当事人信息]\n上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。\n\n法定代表人：耿某某，执行董事。\n\n被上诉人（原审原告）：某2科技（北京）有限公司，住所地北京市海淀区。\n\n法定代表人：奚某，董事长兼总经理。\n\n被上诉人（原审原告）：重庆某2信息技术有限公司，住所地重庆市北碚区。\n\n法定代表人：卢某，董事长。\n\n被上诉人（原审原告）：深圳市某2计算机系统有限公司，住所地深圳市南山区。\n\n法定代表人：马某某，董事长兼总经理。\n\n原审被告：重庆某某汽车租赁有限公司，住所地重庆市渝北区。\n\n法定代表人：宋某，执行董事兼经理。\n\n[DOC9_A2 | 案件概述]\n上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。\n\n本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。依照《中华人民共和国民事诉讼法》第一百八十条的规定，裁定如下：\n\n准予上诉人北京某1科技有限公司撤回上诉。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC9_A1",
+          "DOC9_A2"
+        ],
+        "primary_anchor_id": "DOC9_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书9"
+        ],
+        "anchor_targets": [
+          "判决文书9"
+        ],
+        "anchor_value_hints": [
+          "9",
+          "1",
+          "2",
+          "2023",
+          "01",
+          "866"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 6,
+          "relation_type_counts": {
+            "supports": 1,
+            "same_case": 1,
+            "disambiguates": 1,
+            "likely_same_entity": 1,
+            "prev_next": 1,
+            "nearby_window": 1
+          },
+          "top_related_anchor_ids": [
+            "DOC9_A1",
+            "DOC9_A1",
+            "DOC9_A1",
+            "DOC9_A1",
+            "DOC9_A1",
+            "DOC9_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC9_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC9_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书9']"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC9_A1",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          },
+          {
+            "relation_type": "likely_same_entity",
+            "target_anchor_id": "DOC9_A1",
+            "weight": 2.2,
+            "reason": "shared entity ['判决文书9']"
+          },
+          {
+            "relation_type": "prev_next",
+            "target_anchor_id": "DOC9_A1",
+            "weight": 1.4,
+            "reason": "previous anchor"
+          },
+          {
+            "relation_type": "nearby_window",
+            "target_anchor_id": "DOC9_A1",
+            "weight": 1.0,
+            "reason": "within local read window"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information that the case involves a civil dispute over information network dissemination rights and unfair competition, which falls under '民事案件'. Additionally, there is a mention of a jurisdictional appeal, indicating that it could also be categorized as a '管辖案件'. However, the primary nature of the case seems to be a civil dispute, so it should primarily be classified as a '民事案件'. The chunk does not provide enough information to categorize it solely as a '执行案件' or '刑事案件'. Therefore, the document should be classified as a '民事案件' with a secondary classification as a '管辖案件' if necessary.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "['《判决文书9》']",
+            "normalized_value": "判决文书9",
+            "evidence_text": "上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。",
+            "source_doc_id": "DOC9",
+            "source_anchor_id": "DOC9_A2",
+            "confidence": 0.8,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书9']"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              },
+              {
+                "relation_type": "likely_same_entity",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 2.2,
+                "reason": "shared entity ['判决文书9']"
+              },
+              {
+                "relation_type": "prev_next",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 1.4,
+                "reason": "previous anchor"
+              },
+              {
+                "relation_type": "nearby_window",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 1.0,
+                "reason": "within local read window"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          },
+          {
+            "answer_key": "管辖案件",
+            "value": "['《判决文书9》']",
+            "normalized_value": "判决文书9",
+            "evidence_text": "本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。",
+            "source_doc_id": "DOC9",
+            "source_anchor_id": "DOC9_A2",
+            "confidence": 0.6,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书9']"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              },
+              {
+                "relation_type": "likely_same_entity",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 2.2,
+                "reason": "shared entity ['判决文书9']"
+              },
+              {
+                "relation_type": "prev_next",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 1.4,
+                "reason": "previous anchor"
+              },
+              {
+                "relation_type": "nearby_window",
+                "target_anchor_id": "DOC9_A1",
+                "weight": 1.0,
+                "reason": "within local read window"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件",
+            "管辖案件"
+          ],
+          "known_value_signatures": [
+            "判决文书9"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC9_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件概述 描述了上诉人北京某1科技有限公司因不服重庆市第一中级人民法院关于侵害信息网络传播权及不正当竞争纠纷的民事裁定而提起上诉，并最终申请撤回管辖权异议上诉的过程。法院裁定准予上诉人撤回上诉，该裁定为终审裁定。 上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。 本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。依照《中华人民共和国民事诉讼法》第一百八十条的规定，裁定如下： 准予上诉人北京某1科技有限公司撤回上诉。 本裁定为终审裁定。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC9_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC9_A2",
+              "target_anchor_id": "DOC9_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC9_A2",
+              "target_anchor_id": "DOC9_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书9']"
+            },
+            {
+              "source_anchor_id": "DOC9_A2",
+              "target_anchor_id": "DOC9_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC9_A2",
+              "target_anchor_id": "DOC9_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书9']"
+            },
+            {
+              "source_anchor_id": "DOC9_A2",
+              "target_anchor_id": "DOC9_A1",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "['《判决文书9》']",
+      "normalized_value": "判决文书9",
+      "evidence_text": "上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。",
+      "source_doc_id": "DOC9",
+      "source_anchor_id": "DOC9_A2",
+      "confidence": 0.8,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书9']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "likely_same_entity",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 2.2,
+          "reason": "shared entity ['判决文书9']"
+        },
+        {
+          "relation_type": "prev_next",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 1.4,
+          "reason": "previous anchor"
+        },
+        {
+          "relation_type": "nearby_window",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 1.0,
+          "reason": "within local read window"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "管辖案件",
+      "value": "['《判决文书9》']",
+      "normalized_value": "判决文书9",
+      "evidence_text": "本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。",
+      "source_doc_id": "DOC9",
+      "source_anchor_id": "DOC9_A2",
+      "confidence": 0.6,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书9']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "likely_same_entity",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 2.2,
+          "reason": "shared entity ['判决文书9']"
+        },
+        {
+          "relation_type": "prev_next",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 1.4,
+          "reason": "previous anchor"
+        },
+        {
+          "relation_type": "nearby_window",
+          "target_anchor_id": "DOC9_A1",
+          "weight": 1.0,
+          "reason": "within local read window"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The summary of DOC9_A2 indicates that the case involves a civil dispute over information network dissemination rights and unfair competition, leading to a jurisdictional appeal. This suggests that the case can be categorized as both a '民事案件' (civil case) and potentially a '管辖案件' (jurisdiction case), depending on the primary focus of the judgment. Since we need to determine the category of the document, it's important to inspect DOC9_A2 first to confirm the nature of the case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A2\", \"candidate_anchor_ids\": [\"DOC9_A1\", \"DOC9_A2\"], \"utility_hits\": {\"DOC9_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC9_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC9_A2\": 11.0, \"DOC9_A1\": 5.0}, \"score_breakdown\": {\"DOC9_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC9_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC9_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件概述\", \"summary\": \"Expanded same-section read window around DOC9_A2: 描述了上诉人北京某1科技有限公司因不服重庆市第一中级人民法院关于侵害信息网络传播权及不正当竞争纠纷的民事裁定而提起上诉，并最终申请撤回管辖权异议上诉的过程。法院裁定准予上诉人撤回上诉，该裁定为终审裁定。\", \"text\": \"[DOC9_A1 | 当事人信息]\\n上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。\\n\\n法定代表人：耿某某，执行董事。\\n\\n被上诉人（原审原告）：某2科技（北京）有限公司，住所地北京市海淀区。\\n\\n法定代表人：奚某，董事长兼总经理。\\n\\n被上诉人（原审原告）：重庆某2信息技术有限公司，住所地重庆市北碚区。\\n\\n法定代表人：卢某，董事长。\\n\\n被上诉人（原审原告）：深圳市某2计算机系统有限公司，住所地深圳市南山区。\\n\\n法定代表人：马某某，董事长兼总经理。\\n\\n原审被告：重庆某某汽车租赁有限公司，住所地重庆市渝北区。\\n\\n法定代表人：宋某，执行董事兼经理。\\n\\n[DOC9_A2 | 案件概述]\\n上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。\\n\\n本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。依照《中华人民共和国民事诉讼法》第一百八十条的规定，裁定如下：\\n\\n准予上诉人北京某1科技有限公司撤回上诉。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC9_A1\", \"DOC9_A2\"], \"primary_anchor_id\": \"DOC9_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书9\"], \"anchor_targets\": [\"判决文书9\"], \"anchor_value_hints\": [\"9\", \"1\", \"2\", \"2023\", \"01\", \"866\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 6, \"relation_type_counts\": {\"supports\": 1, \"same_case\": 1, \"disambiguates\": 1, \"likely_same_entity\": 1, \"prev_next\": 1, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}</info>\n<think>The selected chunk provides information that the case involves a civil dispute over information network dissemination rights and unfair competition, which falls under '民事案件'. Additionally, there is a mention of a jurisdictional appeal, indicating that it could also be categorized as a '管辖案件'. However, the primary nature of the case seems to be a civil dispute, so it should primarily be classified as a '民事案件'. The chunk does not provide enough information to categorize it solely as a '执行案件' or '刑事案件'. Therefore, the document should be classified as a '民事案件' with a secondary classification as a '管辖案件' if necessary.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"['《判决文书9》']\", \"normalized_value\": \"判决文书9\", \"evidence_text\": \"上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC9\", \"source_anchor_id\": \"DOC9_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"answer_key\": \"管辖案件\", \"value\": \"['《判决文书9》']\", \"normalized_value\": \"判决文书9\", \"evidence_text\": \"本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。\", \"source_doc_id\": \"DOC9\", \"source_anchor_id\": \"DOC9_A2\", \"confidence\": 0.6, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书9\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC9_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 描述了上诉人北京某1科技有限公司因不服重庆市第一中级人民法院关于侵害信息网络传播权及不正当竞争纠纷的民事裁定而提起上诉，并最终申请撤回管辖权异议上诉的过程。法院裁定准予上诉人撤回上诉，该裁定为终审裁定。 上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。 本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。依照《中华人民共和国民事诉讼法》第一百八十条的规定，裁定如下： 准予上诉人北京某1科技有限公司撤回上诉。 本裁定为终审裁定。\"], \"selected_relation_anchor_ids\": [\"DOC9_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The summary of DOC9_A2 indicates that the case involves a civil dispute over information network dissemination rights and unfair competition, leading to a jurisdictional appeal. This suggests that the case can be categorized as both a '民事案件' (civil case) and potentially a '管辖案件' (jurisdiction case), depending on the primary focus of the judgment. Since we need to determine the category of the document, it's important to inspect DOC9_A2 first to confirm the nature of the case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A2\", \"candidate_anchor_ids\": [\"DOC9_A1\", \"DOC9_A2\"], \"utility_hits\": {\"DOC9_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC9_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC9_A2\": 11.0, \"DOC9_A1\": 5.0}, \"score_breakdown\": {\"DOC9_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC9_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC9_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件概述\", \"summary\": \"Expanded same-section read window around DOC9_A2: 描述了上诉人北京某1科技有限公司因不服重庆市第一中级人民法院关于侵害信息网络传播权及不正当竞争纠纷的民事裁定而提起上诉，并最终申请撤回管辖权异议上诉的过程。法院裁定准予上诉人撤回上诉，该裁定为终审裁定。\", \"text\": \"[DOC9_A1 | 当事人信息]\\n上诉人（原审被告）：北京某1科技有限公司，住所地北京市海淀区。\\n\\n法定代表人：耿某某，执行董事。\\n\\n被上诉人（原审原告）：某2科技（北京）有限公司，住所地北京市海淀区。\\n\\n法定代表人：奚某，董事长兼总经理。\\n\\n被上诉人（原审原告）：重庆某2信息技术有限公司，住所地重庆市北碚区。\\n\\n法定代表人：卢某，董事长。\\n\\n被上诉人（原审原告）：深圳市某2计算机系统有限公司，住所地深圳市南山区。\\n\\n法定代表人：马某某，董事长兼总经理。\\n\\n原审被告：重庆某某汽车租赁有限公司，住所地重庆市渝北区。\\n\\n法定代表人：宋某，执行董事兼经理。\\n\\n[DOC9_A2 | 案件概述]\\n上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。\\n\\n本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。依照《中华人民共和国民事诉讼法》第一百八十条的规定，裁定如下：\\n\\n准予上诉人北京某1科技有限公司撤回上诉。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC9_A1\", \"DOC9_A2\"], \"primary_anchor_id\": \"DOC9_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书9\"], \"anchor_targets\": [\"判决文书9\"], \"anchor_value_hints\": [\"9\", \"1\", \"2\", \"2023\", \"01\", \"866\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 6, \"relation_type_counts\": {\"supports\": 1, \"same_case\": 1, \"disambiguates\": 1, \"likely_same_entity\": 1, \"prev_next\": 1, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\", \"DOC9_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}</info>\n<think>The selected chunk provides information that the case involves a civil dispute over information network dissemination rights and unfair competition, which falls under '民事案件'. Additionally, there is a mention of a jurisdictional appeal, indicating that it could also be categorized as a '管辖案件'. However, the primary nature of the case seems to be a civil dispute, so it should primarily be classified as a '民事案件'. The chunk does not provide enough information to categorize it solely as a '执行案件' or '刑事案件'. Therefore, the document should be classified as a '民事案件' with a secondary classification as a '管辖案件' if necessary.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"['《判决文书9》']\", \"normalized_value\": \"判决文书9\", \"evidence_text\": \"上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC9\", \"source_anchor_id\": \"DOC9_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"answer_key\": \"管辖案件\", \"value\": \"['《判决文书9》']\", \"normalized_value\": \"判决文书9\", \"evidence_text\": \"本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。\", \"source_doc_id\": \"DOC9\", \"source_anchor_id\": \"DOC9_A2\", \"confidence\": 0.6, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC9_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书9\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC9_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 描述了上诉人北京某1科技有限公司因不服重庆市第一中级人民法院关于侵害信息网络传播权及不正当竞争纠纷的民事裁定而提起上诉，并最终申请撤回管辖权异议上诉的过程。法院裁定准予上诉人撤回上诉，该裁定为终审裁定。 上诉人北京某1科技有限公司与被上诉人某2科技（北京）有限公司、重庆某2信息技术有限公司、深圳市某2计算机系统有限公司、原审被告重庆某某汽车租赁有限公司侵害信息网络传播权及不正当竞争纠纷一案，不服重庆市第一中级人民法院（2023）渝01民初866号民事裁定，向本院提起上诉。 本院审理过程中，上诉人北京某1科技有限公司申请撤回管辖权异议上诉。本院经审查认为，上诉人撤回管辖权异议上诉，不违反法律规定，本院予以准许。依照《中华人民共和国民事诉讼法》第一百八十条的规定，裁定如下： 准予上诉人北京某1科技有限公司撤回上诉。 本裁定为终审裁定。\"], \"selected_relation_anchor_ids\": [\"DOC9_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书9']\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书9']\"}, {\"source_anchor_id\": \"DOC9_A2\", \"target_anchor_id\": \"DOC9_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+}

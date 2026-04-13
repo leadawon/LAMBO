@@ -1,0 +1,455 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A9"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A9",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A9"
+        ],
+        "utility_hits": {
+          "DOC1_A9": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A9": 11.0,
+          "DOC1_A1": 11.0,
+          "DOC1_A3": 11.0,
+          "DOC1_A4": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A9": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 8.497,
+            "redundancy_penalty": 0.0,
+            "total": 31.497
+          },
+          "DOC1_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 29.3
+          },
+          "DOC1_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC1_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A9",
+      "plan_think": "The document title is \"《判决文书1》\" and the content suggests that it involves a criminal case due to the mention of \"故意伤害罪\" (intentional injury crime). The current query requires categorizing the judgment documents into three types: criminal cases, administrative cases, and civil cases. Since there's clear evidence pointing towards a criminal case, I will select an anchor that contains the most explicit information about the case type to confirm the classification.",
+      "info": {
+        "anchor_id": "DOC1_A9",
+        "anchor_type": "paragraph_region",
+        "section_path": "一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。",
+        "summary": "Expanded same-section read window around DOC1_A9: 二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。",
+        "text": "[DOC1_A1 | 案件基本信息]\n原公诉机关泉州市人民检察院。\n\n上诉人（原审被告人）柯某宁，男，1990年7月21日出生，初中文化，务工，住福建省泉州市晋江市。因涉嫌犯故意伤害罪于2023年4月27日被刑事拘留，同年5月11日被逮捕。现羁押于晋江市看守所。\n\n辩护人柯某木、刘某含。\n\n泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。宣判后，在法定期限内，附带民事诉讼原告人李某锡、郑某珠和被告人柯某宁均不服，分别向本院提出上诉。本院依法组成合议庭，在审理本案过程中，上诉人李某锡、郑某珠申请撤回上诉，本院经审查认为符合法律规定，另行裁定予以准许。对本案刑事部分，经阅卷、讯问上诉人、审阅上诉状和辩护词，认为本案事实清楚，不属于依法应当开庭审理的案件，决定不开庭审理。现已审理终结。\n\n[DOC1_A2 | 案件事实]\n原判认定，2023年4月27日1时许，被告人柯某宁酒后到被害人李某杰所在晋江市**街道某某南路xxx号沙县某甲店吃夜宵。在扫码付款后认为被害人李某杰服务态度不好，双方发生纠纷，被告人柯某宁打了被害人李某杰一耳光，被害人李某杰随即抄起店内一把菜刀追砍被告人柯某宁。被告人柯某宁逃离现场，到附近某乙戊店购买一把水果刀返回沙县某甲店。被害人李某杰见状，即又持菜刀冲向被告人柯某宁，被告人柯某宁在逃跑过程中，返身持所购水果刀刺中李某杰颈前下方（胸骨上窝）部位致其倒地。被害人李某杰经送医院救治无效死亡。经法医鉴定，被害人李某杰符合锐器作用致大出血死亡。案发后，被告人柯某宁让其女友姜某涯分别拨打120、110电话，并在现场等待，后被民警带回晋江市公安局灵源派出所调查。\n\n另查明，案发后被害人李某杰经晋江市某某抢救共花费人民币1287.59元。一审审理期间，被告人柯某宁的家属支付给附带民事诉讼原告人郑某珠丧葬费人民币100000元。\n\n[DOC1_A3 | 证据列表]\n原判据以认定以上事实的证据有：物证水果刀一把，证人郑某珠、李某锡、柯某扬、姜某涯、王某、许某晰等人的证言，现场勘验笔录、提取笔录、提取痕迹、物证登记表、电子数据提取固定清单，案发现场附近、某乙戊店等相关监控视频，被害人死因法医学鉴定意见、ＤＮＡ鉴定意见，户籍证明、违法犯罪经历查询记录和抓获经过、破案经过、投案证明，被告人柯某宁的供述，以及附带民事诉讼原告人及诉讼代理人提供的户口本复印件、医疗费用清单、发票等，被告人柯某宁的辩护人提供的转账记录、收条、现场照片、相关出车凭证等。\n\n原判认为，被告人柯某宁故意非法伤害他人身体健康，致一人死亡，其行为已构成故意伤害罪。柯某宁于案发后叫他人报警并在现场等候公安人员到来，归案后如实供述所犯罪行，视为具有自首情节，依法可以从轻处罚。柯某宁的犯罪行为致被害人李某杰死亡而给附带民事诉讼原告人李某锡、郑某珠所造成的经济损失，依法应予赔偿。柯某宁的家属已支付丧葬费100000元，可予以照准。据此，依法作出判决：（一）被告人柯某宁犯故意伤害罪，判处有期徒刑十三年，剥夺政治权利二年。（二）被告人柯某宁应在判决生效后十日内赔偿附带民事诉讼原告人李某锡、郑某珠经济损失人民币3287.59元。（三）驳回附带民事诉讼原告人李某锡、郑某珠的其他诉讼请求。\n\n[DOC1_A4 | 一审判决]\n上诉人柯某宁及辩护人的诉辩意见：被害人李某杰存在严重过错；其家属将进一步对被害人家属进行赔偿，其系初犯、偶犯，认罪认罚，请求从轻处罚。\n\n经审理查明，原判认定上诉人柯某宁因扫码付款问题与被害人李某杰产生纠纷，持刀故意捅刺李某杰致死的犯罪事实清楚。有下列经一审庭审举证、质证的证据予以证实：\n\n[DOC1_A6 | 勘验检查]\n（1）提取笔录、提取痕迹、物证登记表，证实2023年4月27日1时许，出警民警在晋江市**街道**附近一家某甲甲店门口地上发现躺着一人，该人左侧地面上发现一把菜刀（总长约27厘米，黑色木柄，银色刀刃），侦查人员在见证人见证下，将该菜刀提取装入物证袋。\n\n（2）提取笔录、提取痕迹、物证登记表，证实侦查人员在见证人见证下，为收集证据，对柯某宁双手手部血迹及柯某宁左手自身血样进行提取，并送晋江市公安局物证鉴定室。\n\n（3）电子数据现场提取笔录、电子数据提取固定清单、提取照片，证实侦查人员从柯某宁使用的一部蓝色ｉＰｈｏｎｅ13手机（号码：135****6716）的支付宝应用中通过拍照提取。完整提取柯某宁的支付宝个人信息和交易记录，提取照片共3张。2023／4／2700：55：42支付宝扫收款码付款12元给沙县小吃，2023／4／2700：58：04支付宝扫收款码付款5元给建民食杂。\n\n（4）现场勘验笔录（勘验号：（晋）公（刑）勘〔2023〕042608号）、现场照片（晋公刑现照字〔2023〕042608号）、现场平面示意图、提取痕迹物证登记表，证实现场位于晋江市**街道**社区财珍商厦西侧平台，该平台西侧为南北走向的泉安南路，南北走向的泉安南路与东西走向的某某路形成交叉的十字路口，北侧为中国石化某某加油站。现场实物提取到橙色刀柄金属刀身水果刀1把、黑色拖鞋2只、黑色镜框透明镜片眼镜1个、透明眼镜片1个、橙色刀鞘2个，擦拭提取血迹10处，并依次标记为①-⑩，并对橙色刀柄金属刀身的水果刀进行扣押。\n\n（5）辨认笔录、截图，证实2023年5月11日上午，在侦查人员组织下，对辨认人柯某宁说明辨认目的后，向柯某宁播放晋江市**街道**监控视频、晋江市**街道张前-某某路泉安南路监控视频、晋江市**街道某某某乙戊店内监控视频共三段，经柯某宁仔细观看该视频后辨认出他本人和沙县某甲店老板。\n\n某某场店铺门口、加油站门口及某乙戊店相关监控视频，证实2023年4月27日1时许，在晋江市**街道某某南路xxx号沙县某甲店门口，被害人李某杰持菜刀追砍柯某宁，后柯某宁到某乙戊店购买一把水果刀返回沙县某甲店，被害人李某杰再次持菜刀在店门口追砍被告人柯某宁，柯某宁逃跑过程中返身持刀刺向被害人李某杰，李某杰追了几步后倒地。\n\n18.上诉人柯某宁的供述和辩解、辨认笔录、照片及说明，证实2023年4月26日21时许，他在晋江市**街道**社区新疆羊肉串跟朋友一起吃夜宵喝啤酒。到了22时许，他女朋友姜某涯过来找他一起吃夜宵到4月27日凌晨0时许，他就去某某加油站旁边的沙县小吃吃东西，姜某涯到隔壁的米粉店吃东西。在沙县小吃吃完东西的时候，他用支付宝支付了12元餐费。他忘记因为什么原因与沙县某甲店的老板发生口角并用手打了沙县某甲店老板一巴掌。然后沙县某某店老板就拿了一把菜刀追他，追到沙县某某店门口的红绿灯路口没有追到他，他在跑的过程中还摔倒了，两条腿的膝盖处擦伤。之后他就到旁边的建民便利店买了一把全新的水果刀，全长约20厘米、尖头单刃，塑料刀柄长约10厘米，橘色刀柄，橘色刀鞘，并用支付宝付了5元。然后他就过去沙县某某店找那个老板理论，当时那个老板就站在沙县某甲店门口，他过去的时候，那个老板看到他就又拿着菜刀追出来，某乙乙店门口拿菜刀砍他，他闪了一下，没有砍到他。他就把水果刀拔出来朝他的胸口上面一点位置刺过去，刺到了他胸口靠近脖子的地方。某乙丙店门口跑，那个老板在后面追他，某乙丁店门口的位置那个老板就倒下去了。他当时就觉得不对，他女朋友姜某涯站在旁边，他就马上叫姜某涯先打120再打110，他告诉姜某涯说他用刀刺伤那个老板了。然后他就站在原地等警察，警察来了之后，他把事情的经过告诉了警察，警察就把他带到晋江市公安局灵源派出所接受调查。\n\n[DOC1_A7 | 上诉人供述]\n柯某宁辨认指认了他与沙县某甲店老板发生争执的具体地点（晋江市**街道某某路xxx号沙县某甲店）、沙县某甲店老板被他捅刺后倒地的具体位置（晋江市**街道某某路xxx号某甲甲店门口）及购买作案水果刀的具体地点（晋江市**街道某某路xx号某乙戊店）。\n\n以上证据来源合法，内容真实客观且能相互印证，足以认定本案犯罪事实，本院予以确认。\n\n[DOC1_A8 | 二审情况]\n本院审理期间，上诉人柯某宁的家属再次代柯某宁赔偿300000元，被害人家属李某锡、郑某珠接受赔偿，对柯某宁的行为表示谅解，并撤回附带民事上诉，有相关转账凭证、谅解书、收条等予以证实。\n\n关于上诉人柯某宁及其辩护人提出被害人李某杰存在严重过错的诉辩理由。经查，案发当晚柯某宁与李某杰因扫码付款问题产生纠纷，柯某宁先动手打了李某杰一巴掌引发冲突，后又购买刀具返回并捅刺李某杰致其死亡。原判未认定被害人李某杰存在严重过错并无不当。该诉辩理由，不能成立，不予采纳。\n\n本院认为，上诉人柯某宁故意非法伤害他人身体健康，致一人死亡，其行为已构成故意伤害罪。柯某宁在矛盾纠纷发生后，不能正确处理，反而购买刀具捅刺被害人，造成被害人死亡，后果严重，应依法惩处。案发后柯某宁主动让他人报案并在现场等候，可视为自动投案，归案后如实供述自己罪行，具有自首情节，予以从轻处罚。原判认定事实清楚，证据确实、充分，定罪准确，审判程序合法。鉴于二审期间柯某宁家属积极代为赔偿300000元并取得被害方谅解，可予以从轻处罚。柯某宁及其辩护人的诉辩理由部分成立，予以采纳。依照《中华人民共和国刑法》第二百三十四条第一、二款、第六十七条第一款、第五十六条第一款、第五十五条、第六十四条、《中华人民共和国刑事诉讼法》第二百三十六条第一款第（二）项之规定，判决如下：\n\n[DOC1_A9 | 一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。]\n一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。\n\n二、上诉人柯某宁犯故意伤害罪，判处有期徒刑十年，\n\n剥夺政治权利二年。\n\n（刑期从判决执行之日起计算，判决执行以前先行羁押的，羁押一日折抵刑期一日，即从2023年4月27日起至2033年4月26日止。）\n\n三、作案工具水果刀一把，由扣押机关予以没收，上缴国库。\n\n本判决为终审判决。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A6",
+          "DOC1_A7",
+          "DOC1_A8",
+          "DOC1_A9"
+        ],
+        "primary_anchor_id": "DOC1_A9",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "05",
+          "46",
+          "4",
+          "27",
+          "2033",
+          "26"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 6,
+            "same_case": 8,
+            "disambiguates": 4
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A6",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected anchor chunk confirms that the document is a criminal case involving the defendant柯某宁 who was convicted of intentional injury. This chunk provides clear evidence that the document should be categorized under '刑事案件'. No further evidence is needed from this document to fulfill the task.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "刑事案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A9",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A8",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "刑事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A9"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。 二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。 一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。 二、上诉人柯某宁犯故意伤害罪，判处有期徒刑十年， 剥夺政治权利二年。 （刑期从判决执行之日起计算，判决执行以前先行羁押的，羁押一日折抵刑期一日，即从2023年4月27日起至2033年4月26日止。） 三、作案工具水果刀一把，由扣押机关予以没收，上缴国库。 本判决为终审判决。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A8",
+            "DOC1_A6",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A1",
+            "DOC1_A7",
+            "DOC1_A5"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A9",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "刑事案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A9",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A8",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document title is \"《判决文书1》\" and the content suggests that it involves a criminal case due to the mention of \"故意伤害罪\" (intentional injury crime). The current query requires categorizing the judgment documents into three types: criminal cases, administrative cases, and civil cases. Since there's clear evidence pointing towards a criminal case, I will select an anchor that contains the most explicit information about the case type to confirm the classification.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A9\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A9\"], \"utility_hits\": {\"DOC1_A9\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A9\": 11.0, \"DOC1_A1\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0}, \"score_breakdown\": {\"DOC1_A9\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.497, \"redundancy_penalty\": 0.0, \"total\": 31.497}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}, \"DOC1_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A9\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。\", \"summary\": \"Expanded same-section read window around DOC1_A9: 二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。\", \"text\": \"[DOC1_A1 | 案件基本信息]\\n原公诉机关泉州市人民检察院。\\n\\n上诉人（原审被告人）柯某宁，男，1990年7月21日出生，初中文化，务工，住福建省泉州市晋江市。因涉嫌犯故意伤害罪于2023年4月27日被刑事拘留，同年5月11日被逮捕。现羁押于晋江市看守所。\\n\\n辩护人柯某木、刘某含。\\n\\n泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。宣判后，在法定期限内，附带民事诉讼原告人李某锡、郑某珠和被告人柯某宁均不服，分别向本院提出上诉。本院依法组成合议庭，在审理本案过程中，上诉人李某锡、郑某珠申请撤回上诉，本院经审查认为符合法律规定，另行裁定予以准许。对本案刑事部分，经阅卷、讯问上诉人、审阅上诉状和辩护词，认为本案事实清楚，不属于依法应当开庭审理的案件，决定不开庭审理。现已审理终结。\\n\\n[DOC1_A2 | 案件事实]\\n原判认定，2023年4月27日1时许，被告人柯某宁酒后到被害人李某杰所在晋江市**街道某某南路xxx号沙县某甲店吃夜宵。在扫码付款后认为被害人李某杰服务态度不好，双方发生纠纷，被告人柯某宁打了被害人李某杰一耳光，被害人李某杰随即抄起店内一把菜刀追砍被告人柯某宁。被告人柯某宁逃离现场，到附近某乙戊店购买一把水果刀返回沙县某甲店。被害人李某杰见状，即又持菜刀冲向被告人柯某宁，被告人柯某宁在逃跑过程中，返身持所购水果刀刺中李某杰颈前下方（胸骨上窝）部位致其倒地。被害人李某杰经送医院救治无效死亡。经法医鉴定，被害人李某杰符合锐器作用致大出血死亡。案发后，被告人柯某宁让其女友姜某涯分别拨打120、110电话，并在现场等待，后被民警带回晋江市公安局灵源派出所调查。\\n\\n另查明，案发后被害人李某杰经晋江市某某抢救共花费人民币1287.59元。一审审理期间，被告人柯某宁的家属支付给附带民事诉讼原告人郑某珠丧葬费人民币100000元。\\n\\n[DOC1_A3 | 证据列表]\\n原判据以认定以上事实的证据有：物证水果刀一把，证人郑某珠、李某锡、柯某扬、姜某涯、王某、许某晰等人的证言，现场勘验笔录、提取笔录、提取痕迹、物证登记表、电子数据提取固定清单，案发现场附近、某乙戊店等相关监控视频，被害人死因法医学鉴定意见、ＤＮＡ鉴定意见，户籍证明、违法犯罪经历查询记录和抓获经过、破案经过、投案证明，被告人柯某宁的供述，以及附带民事诉讼原告人及诉讼代理人提供的户口本复印件、医疗费用清单、发票等，被告人柯某宁的辩护人提供的转账记录、收条、现场照片、相关出车凭证等。\\n\\n原判认为，被告人柯某宁故意非法伤害他人身体健康，致一人死亡，其行为已构成故意伤害罪。柯某宁于案发后叫他人报警并在现场等候公安人员到来，归案后如实供述所犯罪行，视为具有自首情节，依法可以从轻处罚。柯某宁的犯罪行为致被害人李某杰死亡而给附带民事诉讼原告人李某锡、郑某珠所造成的经济损失，依法应予赔偿。柯某宁的家属已支付丧葬费100000元，可予以照准。据此，依法作出判决：（一）被告人柯某宁犯故意伤害罪，判处有期徒刑十三年，剥夺政治权利二年。（二）被告人柯某宁应在判决生效后十日内赔偿附带民事诉讼原告人李某锡、郑某珠经济损失人民币3287.59元。（三）驳回附带民事诉讼原告人李某锡、郑某珠的其他诉讼请求。\\n\\n[DOC1_A4 | 一审判决]\\n上诉人柯某宁及辩护人的诉辩意见：被害人李某杰存在严重过错；其家属将进一步对被害人家属进行赔偿，其系初犯、偶犯，认罪认罚，请求从轻处罚。\\n\\n经审理查明，原判认定上诉人柯某宁因扫码付款问题与被害人李某杰产生纠纷，持刀故意捅刺李某杰致死的犯罪事实清楚。有下列经一审庭审举证、质证的证据予以证实：\\n\\n[DOC1_A6 | 勘验检查]\\n（1）提取笔录、提取痕迹、物证登记表，证实2023年4月27日1时许，出警民警在晋江市**街道**附近一家某甲甲店门口地上发现躺着一人，该人左侧地面上发现一把菜刀（总长约27厘米，黑色木柄，银色刀刃），侦查人员在见证人见证下，将该菜刀提取装入物证袋。\\n\\n（2）提取笔录、提取痕迹、物证登记表，证实侦查人员在见证人见证下，为收集证据，对柯某宁双手手部血迹及柯某宁左手自身血样进行提取，并送晋江市公安局物证鉴定室。\\n\\n（3）电子数据现场提取笔录、电子数据提取固定清单、提取照片，证实侦查人员从柯某宁使用的一部蓝色ｉＰｈｏｎｅ13手机（号码：135****6716）的支付宝应用中通过拍照提取。完整提取柯某宁的支付宝个人信息和交易记录，提取照片共3张。2023／4／2700：55：42支付宝扫收款码付款12元给沙县小吃，2023／4／2700：58：04支付宝扫收款码付款5元给建民食杂。\\n\\n（4）现场勘验笔录（勘验号：（晋）公（刑）勘〔2023〕042608号）、现场照片（晋公刑现照字〔2023〕042608号）、现场平面示意图、提取痕迹物证登记表，证实现场位于晋江市**街道**社区财珍商厦西侧平台，该平台西侧为南北走向的泉安南路，南北走向的泉安南路与东西走向的某某路形成交叉的十字路口，北侧为中国石化某某加油站。现场实物提取到橙色刀柄金属刀身水果刀1把、黑色拖鞋2只、黑色镜框透明镜片眼镜1个、透明眼镜片1个、橙色刀鞘2个，擦拭提取血迹10处，并依次标记为①-⑩，并对橙色刀柄金属刀身的水果刀进行扣押。\\n\\n（5）辨认笔录、截图，证实2023年5月11日上午，在侦查人员组织下，对辨认人柯某宁说明辨认目的后，向柯某宁播放晋江市**街道**监控视频、晋江市**街道张前-某某路泉安南路监控视频、晋江市**街道某某某乙戊店内监控视频共三段，经柯某宁仔细观看该视频后辨认出他本人和沙县某甲店老板。\\n\\n某某场店铺门口、加油站门口及某乙戊店相关监控视频，证实2023年4月27日1时许，在晋江市**街道某某南路xxx号沙县某甲店门口，被害人李某杰持菜刀追砍柯某宁，后柯某宁到某乙戊店购买一把水果刀返回沙县某甲店，被害人李某杰再次持菜刀在店门口追砍被告人柯某宁，柯某宁逃跑过程中返身持刀刺向被害人李某杰，李某杰追了几步后倒地。\\n\\n18.上诉人柯某宁的供述和辩解、辨认笔录、照片及说明，证实2023年4月26日21时许，他在晋江市**街道**社区新疆羊肉串跟朋友一起吃夜宵喝啤酒。到了22时许，他女朋友姜某涯过来找他一起吃夜宵到4月27日凌晨0时许，他就去某某加油站旁边的沙县小吃吃东西，姜某涯到隔壁的米粉店吃东西。在沙县小吃吃完东西的时候，他用支付宝支付了12元餐费。他忘记因为什么原因与沙县某甲店的老板发生口角并用手打了沙县某甲店老板一巴掌。然后沙县某某店老板就拿了一把菜刀追他，追到沙县某某店门口的红绿灯路口没有追到他，他在跑的过程中还摔倒了，两条腿的膝盖处擦伤。之后他就到旁边的建民便利店买了一把全新的水果刀，全长约20厘米、尖头单刃，塑料刀柄长约10厘米，橘色刀柄，橘色刀鞘，并用支付宝付了5元。然后他就过去沙县某某店找那个老板理论，当时那个老板就站在沙县某甲店门口，他过去的时候，那个老板看到他就又拿着菜刀追出来，某乙乙店门口拿菜刀砍他，他闪了一下，没有砍到他。他就把水果刀拔出来朝他的胸口上面一点位置刺过去，刺到了他胸口靠近脖子的地方。某乙丙店门口跑，那个老板在后面追他，某乙丁店门口的位置那个老板就倒下去了。他当时就觉得不对，他女朋友姜某涯站在旁边，他就马上叫姜某涯先打120再打110，他告诉姜某涯说他用刀刺伤那个老板了。然后他就站在原地等警察，警察来了之后，他把事情的经过告诉了警察，警察就把他带到晋江市公安局灵源派出所接受调查。\\n\\n[DOC1_A7 | 上诉人供述]\\n柯某宁辨认指认了他与沙县某甲店老板发生争执的具体地点（晋江市**街道某某路xxx号沙县某甲店）、沙县某甲店老板被他捅刺后倒地的具体位置（晋江市**街道某某路xxx号某甲甲店门口）及购买作案水果刀的具体地点（晋江市**街道某某路xx号某乙戊店）。\\n\\n以上证据来源合法，内容真实客观且能相互印证，足以认定本案犯罪事实，本院予以确认。\\n\\n[DOC1_A8 | 二审情况]\\n本院审理期间，上诉人柯某宁的家属再次代柯某宁赔偿300000元，被害人家属李某锡、郑某珠接受赔偿，对柯某宁的行为表示谅解，并撤回附带民事上诉，有相关转账凭证、谅解书、收条等予以证实。\\n\\n关于上诉人柯某宁及其辩护人提出被害人李某杰存在严重过错的诉辩理由。经查，案发当晚柯某宁与李某杰因扫码付款问题产生纠纷，柯某宁先动手打了李某杰一巴掌引发冲突，后又购买刀具返回并捅刺李某杰致其死亡。原判未认定被害人李某杰存在严重过错并无不当。该诉辩理由，不能成立，不予采纳。\\n\\n本院认为，上诉人柯某宁故意非法伤害他人身体健康，致一人死亡，其行为已构成故意伤害罪。柯某宁在矛盾纠纷发生后，不能正确处理，反而购买刀具捅刺被害人，造成被害人死亡，后果严重，应依法惩处。案发后柯某宁主动让他人报案并在现场等候，可视为自动投案，归案后如实供述自己罪行，具有自首情节，予以从轻处罚。原判认定事实清楚，证据确实、充分，定罪准确，审判程序合法。鉴于二审期间柯某宁家属积极代为赔偿300000元并取得被害方谅解，可予以从轻处罚。柯某宁及其辩护人的诉辩理由部分成立，予以采纳。依照《中华人民共和国刑法》第二百三十四条第一、二款、第六十七条第一款、第五十六条第一款、第五十五条、第六十四条、《中华人民共和国刑事诉讼法》第二百三十六条第一款第（二）项之规定，判决如下：\\n\\n[DOC1_A9 | 一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。]\\n一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。\\n\\n二、上诉人柯某宁犯故意伤害罪，判处有期徒刑十年，\\n\\n剥夺政治权利二年。\\n\\n（刑期从判决执行之日起计算，判决执行以前先行羁押的，羁押一日折抵刑期一日，即从2023年4月27日起至2033年4月26日止。）\\n\\n三、作案工具水果刀一把，由扣押机关予以没收，上缴国库。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\", \"DOC1_A9\"], \"primary_anchor_id\": \"DOC1_A9\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"05\", \"46\", \"4\", \"27\", \"2033\", \"26\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 8, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A6\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected anchor chunk confirms that the document is a criminal case involving the defendant柯某宁 who was convicted of intentional injury. This chunk provides clear evidence that the document should be categorized under '刑事案件'. No further evidence is needed from this document to fulfill the task.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A9\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"刑事案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A9\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。 二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。 一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。 二、上诉人柯某宁犯故意伤害罪，判处有期徒刑十年， 剥夺政治权利二年。 （刑期从判决执行之日起计算，判决执行以前先行羁押的，羁押一日折抵刑期一日，即从2023年4月27日起至2033年4月26日止。） 三、作案工具水果刀一把，由扣押机关予以没收，上缴国库。 本判决为终审判决。\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A6\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A7\", \"DOC1_A5\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title is \"《判决文书1》\" and the content suggests that it involves a criminal case due to the mention of \"故意伤害罪\" (intentional injury crime). The current query requires categorizing the judgment documents into three types: criminal cases, administrative cases, and civil cases. Since there's clear evidence pointing towards a criminal case, I will select an anchor that contains the most explicit information about the case type to confirm the classification.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '行政案件' '民事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A9\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A9\"], \"utility_hits\": {\"DOC1_A9\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A9\": 11.0, \"DOC1_A1\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0}, \"score_breakdown\": {\"DOC1_A9\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.497, \"redundancy_penalty\": 0.0, \"total\": 31.497}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}, \"DOC1_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A9\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。\", \"summary\": \"Expanded same-section read window around DOC1_A9: 二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。\", \"text\": \"[DOC1_A1 | 案件基本信息]\\n原公诉机关泉州市人民检察院。\\n\\n上诉人（原审被告人）柯某宁，男，1990年7月21日出生，初中文化，务工，住福建省泉州市晋江市。因涉嫌犯故意伤害罪于2023年4月27日被刑事拘留，同年5月11日被逮捕。现羁押于晋江市看守所。\\n\\n辩护人柯某木、刘某含。\\n\\n泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（2023）闽05刑初46号刑事附带民事判决。宣判后，在法定期限内，附带民事诉讼原告人李某锡、郑某珠和被告人柯某宁均不服，分别向本院提出上诉。本院依法组成合议庭，在审理本案过程中，上诉人李某锡、郑某珠申请撤回上诉，本院经审查认为符合法律规定，另行裁定予以准许。对本案刑事部分，经阅卷、讯问上诉人、审阅上诉状和辩护词，认为本案事实清楚，不属于依法应当开庭审理的案件，决定不开庭审理。现已审理终结。\\n\\n[DOC1_A2 | 案件事实]\\n原判认定，2023年4月27日1时许，被告人柯某宁酒后到被害人李某杰所在晋江市**街道某某南路xxx号沙县某甲店吃夜宵。在扫码付款后认为被害人李某杰服务态度不好，双方发生纠纷，被告人柯某宁打了被害人李某杰一耳光，被害人李某杰随即抄起店内一把菜刀追砍被告人柯某宁。被告人柯某宁逃离现场，到附近某乙戊店购买一把水果刀返回沙县某甲店。被害人李某杰见状，即又持菜刀冲向被告人柯某宁，被告人柯某宁在逃跑过程中，返身持所购水果刀刺中李某杰颈前下方（胸骨上窝）部位致其倒地。被害人李某杰经送医院救治无效死亡。经法医鉴定，被害人李某杰符合锐器作用致大出血死亡。案发后，被告人柯某宁让其女友姜某涯分别拨打120、110电话，并在现场等待，后被民警带回晋江市公安局灵源派出所调查。\\n\\n另查明，案发后被害人李某杰经晋江市某某抢救共花费人民币1287.59元。一审审理期间，被告人柯某宁的家属支付给附带民事诉讼原告人郑某珠丧葬费人民币100000元。\\n\\n[DOC1_A3 | 证据列表]\\n原判据以认定以上事实的证据有：物证水果刀一把，证人郑某珠、李某锡、柯某扬、姜某涯、王某、许某晰等人的证言，现场勘验笔录、提取笔录、提取痕迹、物证登记表、电子数据提取固定清单，案发现场附近、某乙戊店等相关监控视频，被害人死因法医学鉴定意见、ＤＮＡ鉴定意见，户籍证明、违法犯罪经历查询记录和抓获经过、破案经过、投案证明，被告人柯某宁的供述，以及附带民事诉讼原告人及诉讼代理人提供的户口本复印件、医疗费用清单、发票等，被告人柯某宁的辩护人提供的转账记录、收条、现场照片、相关出车凭证等。\\n\\n原判认为，被告人柯某宁故意非法伤害他人身体健康，致一人死亡，其行为已构成故意伤害罪。柯某宁于案发后叫他人报警并在现场等候公安人员到来，归案后如实供述所犯罪行，视为具有自首情节，依法可以从轻处罚。柯某宁的犯罪行为致被害人李某杰死亡而给附带民事诉讼原告人李某锡、郑某珠所造成的经济损失，依法应予赔偿。柯某宁的家属已支付丧葬费100000元，可予以照准。据此，依法作出判决：（一）被告人柯某宁犯故意伤害罪，判处有期徒刑十三年，剥夺政治权利二年。（二）被告人柯某宁应在判决生效后十日内赔偿附带民事诉讼原告人李某锡、郑某珠经济损失人民币3287.59元。（三）驳回附带民事诉讼原告人李某锡、郑某珠的其他诉讼请求。\\n\\n[DOC1_A4 | 一审判决]\\n上诉人柯某宁及辩护人的诉辩意见：被害人李某杰存在严重过错；其家属将进一步对被害人家属进行赔偿，其系初犯、偶犯，认罪认罚，请求从轻处罚。\\n\\n经审理查明，原判认定上诉人柯某宁因扫码付款问题与被害人李某杰产生纠纷，持刀故意捅刺李某杰致死的犯罪事实清楚。有下列经一审庭审举证、质证的证据予以证实：\\n\\n[DOC1_A6 | 勘验检查]\\n（1）提取笔录、提取痕迹、物证登记表，证实2023年4月27日1时许，出警民警在晋江市**街道**附近一家某甲甲店门口地上发现躺着一人，该人左侧地面上发现一把菜刀（总长约27厘米，黑色木柄，银色刀刃），侦查人员在见证人见证下，将该菜刀提取装入物证袋。\\n\\n（2）提取笔录、提取痕迹、物证登记表，证实侦查人员在见证人见证下，为收集证据，对柯某宁双手手部血迹及柯某宁左手自身血样进行提取，并送晋江市公安局物证鉴定室。\\n\\n（3）电子数据现场提取笔录、电子数据提取固定清单、提取照片，证实侦查人员从柯某宁使用的一部蓝色ｉＰｈｏｎｅ13手机（号码：135****6716）的支付宝应用中通过拍照提取。完整提取柯某宁的支付宝个人信息和交易记录，提取照片共3张。2023／4／2700：55：42支付宝扫收款码付款12元给沙县小吃，2023／4／2700：58：04支付宝扫收款码付款5元给建民食杂。\\n\\n（4）现场勘验笔录（勘验号：（晋）公（刑）勘〔2023〕042608号）、现场照片（晋公刑现照字〔2023〕042608号）、现场平面示意图、提取痕迹物证登记表，证实现场位于晋江市**街道**社区财珍商厦西侧平台，该平台西侧为南北走向的泉安南路，南北走向的泉安南路与东西走向的某某路形成交叉的十字路口，北侧为中国石化某某加油站。现场实物提取到橙色刀柄金属刀身水果刀1把、黑色拖鞋2只、黑色镜框透明镜片眼镜1个、透明眼镜片1个、橙色刀鞘2个，擦拭提取血迹10处，并依次标记为①-⑩，并对橙色刀柄金属刀身的水果刀进行扣押。\\n\\n（5）辨认笔录、截图，证实2023年5月11日上午，在侦查人员组织下，对辨认人柯某宁说明辨认目的后，向柯某宁播放晋江市**街道**监控视频、晋江市**街道张前-某某路泉安南路监控视频、晋江市**街道某某某乙戊店内监控视频共三段，经柯某宁仔细观看该视频后辨认出他本人和沙县某甲店老板。\\n\\n某某场店铺门口、加油站门口及某乙戊店相关监控视频，证实2023年4月27日1时许，在晋江市**街道某某南路xxx号沙县某甲店门口，被害人李某杰持菜刀追砍柯某宁，后柯某宁到某乙戊店购买一把水果刀返回沙县某甲店，被害人李某杰再次持菜刀在店门口追砍被告人柯某宁，柯某宁逃跑过程中返身持刀刺向被害人李某杰，李某杰追了几步后倒地。\\n\\n18.上诉人柯某宁的供述和辩解、辨认笔录、照片及说明，证实2023年4月26日21时许，他在晋江市**街道**社区新疆羊肉串跟朋友一起吃夜宵喝啤酒。到了22时许，他女朋友姜某涯过来找他一起吃夜宵到4月27日凌晨0时许，他就去某某加油站旁边的沙县小吃吃东西，姜某涯到隔壁的米粉店吃东西。在沙县小吃吃完东西的时候，他用支付宝支付了12元餐费。他忘记因为什么原因与沙县某甲店的老板发生口角并用手打了沙县某甲店老板一巴掌。然后沙县某某店老板就拿了一把菜刀追他，追到沙县某某店门口的红绿灯路口没有追到他，他在跑的过程中还摔倒了，两条腿的膝盖处擦伤。之后他就到旁边的建民便利店买了一把全新的水果刀，全长约20厘米、尖头单刃，塑料刀柄长约10厘米，橘色刀柄，橘色刀鞘，并用支付宝付了5元。然后他就过去沙县某某店找那个老板理论，当时那个老板就站在沙县某甲店门口，他过去的时候，那个老板看到他就又拿着菜刀追出来，某乙乙店门口拿菜刀砍他，他闪了一下，没有砍到他。他就把水果刀拔出来朝他的胸口上面一点位置刺过去，刺到了他胸口靠近脖子的地方。某乙丙店门口跑，那个老板在后面追他，某乙丁店门口的位置那个老板就倒下去了。他当时就觉得不对，他女朋友姜某涯站在旁边，他就马上叫姜某涯先打120再打110，他告诉姜某涯说他用刀刺伤那个老板了。然后他就站在原地等警察，警察来了之后，他把事情的经过告诉了警察，警察就把他带到晋江市公安局灵源派出所接受调查。\\n\\n[DOC1_A7 | 上诉人供述]\\n柯某宁辨认指认了他与沙县某甲店老板发生争执的具体地点（晋江市**街道某某路xxx号沙县某甲店）、沙县某甲店老板被他捅刺后倒地的具体位置（晋江市**街道某某路xxx号某甲甲店门口）及购买作案水果刀的具体地点（晋江市**街道某某路xx号某乙戊店）。\\n\\n以上证据来源合法，内容真实客观且能相互印证，足以认定本案犯罪事实，本院予以确认。\\n\\n[DOC1_A8 | 二审情况]\\n本院审理期间，上诉人柯某宁的家属再次代柯某宁赔偿300000元，被害人家属李某锡、郑某珠接受赔偿，对柯某宁的行为表示谅解，并撤回附带民事上诉，有相关转账凭证、谅解书、收条等予以证实。\\n\\n关于上诉人柯某宁及其辩护人提出被害人李某杰存在严重过错的诉辩理由。经查，案发当晚柯某宁与李某杰因扫码付款问题产生纠纷，柯某宁先动手打了李某杰一巴掌引发冲突，后又购买刀具返回并捅刺李某杰致其死亡。原判未认定被害人李某杰存在严重过错并无不当。该诉辩理由，不能成立，不予采纳。\\n\\n本院认为，上诉人柯某宁故意非法伤害他人身体健康，致一人死亡，其行为已构成故意伤害罪。柯某宁在矛盾纠纷发生后，不能正确处理，反而购买刀具捅刺被害人，造成被害人死亡，后果严重，应依法惩处。案发后柯某宁主动让他人报案并在现场等候，可视为自动投案，归案后如实供述自己罪行，具有自首情节，予以从轻处罚。原判认定事实清楚，证据确实、充分，定罪准确，审判程序合法。鉴于二审期间柯某宁家属积极代为赔偿300000元并取得被害方谅解，可予以从轻处罚。柯某宁及其辩护人的诉辩理由部分成立，予以采纳。依照《中华人民共和国刑法》第二百三十四条第一、二款、第六十七条第一款、第五十六条第一款、第五十五条、第六十四条、《中华人民共和国刑事诉讼法》第二百三十六条第一款第（二）项之规定，判决如下：\\n\\n[DOC1_A9 | 一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。]\\n一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。\\n\\n二、上诉人柯某宁犯故意伤害罪，判处有期徒刑十年，\\n\\n剥夺政治权利二年。\\n\\n（刑期从判决执行之日起计算，判决执行以前先行羁押的，羁押一日折抵刑期一日，即从2023年4月27日起至2033年4月26日止。）\\n\\n三、作案工具水果刀一把，由扣押机关予以没收，上缴国库。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\", \"DOC1_A9\"], \"primary_anchor_id\": \"DOC1_A9\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"05\", \"46\", \"4\", \"27\", \"2033\", \"26\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 6, \"same_case\": 8, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC1_A8\", \"DOC1_A6\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected anchor chunk confirms that the document is a criminal case involving the defendant柯某宁 who was convicted of intentional injury. This chunk provides clear evidence that the document should be categorized under '刑事案件'. No further evidence is needed from this document to fulfill the task.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A9\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"刑事案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A9\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。 二审法院撤销一审判决，改判柯某宁犯故意伤害罪，判处有期徒刑十年，剥夺政治权利二年，并没收作案工具水果刀。 一、撤销泉州市中级人民法院（2023）闽05刑初46号刑事附带民事判决中的第一项，即对被告人柯某宁的定罪量刑的刑事判决。 二、上诉人柯某宁犯故意伤害罪，判处有期徒刑十年， 剥夺政治权利二年。 （刑期从判决执行之日起计算，判决执行以前先行羁押的，羁押一日折抵刑期一日，即从2023年4月27日起至2033年4月26日止。） 三、作案工具水果刀一把，由扣押机关予以没收，上缴国库。 本判决为终审判决。\"], \"selected_relation_anchor_ids\": [\"DOC1_A8\", \"DOC1_A6\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A1\", \"DOC1_A7\", \"DOC1_A5\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A9\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}}</retrieve>"
+}

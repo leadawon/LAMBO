@@ -1,0 +1,907 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2"
+  ],
+  "final_current_query": "确认案件的具体类别，例如'行政行为-行政裁决'或其他可能的类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "案件分类",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "utility_hits": {
+          "DOC3_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A2": 11.0,
+          "DOC3_A3": 11.0,
+          "DOC3_A4": 11.0,
+          "DOC3_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC3_A2": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 25.201
+          },
+          "DOC3_A3": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 24.914
+          },
+          "DOC3_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 24.691
+          },
+          "DOC3_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 16.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "The current document, titled '《判决文书3》', seems to involve an administrative case related to administrative detention and administrative reconsideration based on the summaries provided. The summaries suggest that it might fall under the category of '行政行为-行政裁决'. I will inspect the first chunk (DOC3_A1) to confirm the details of the parties involved and the nature of the dispute.",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "Expanded same-section read window around DOC3_A1: 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。",
+        "text": "[DOC3_A1 | 当事人信息]\n再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。\n\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。\n\n法定代表人：金宝，该局局长。\n\n委托诉讼代理人：曹某，男，该局法制大队工作人员。\n\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。\n\n法定代表人：苗龙，该局局长。\n\n委托诉讼代理人：董某，男，该局法制支队工作人员。\n\n原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\n\n[DOC3_A2 | 案件背景]\n再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。\n\n天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为，情节较轻，依据《中华人民共和国治安管理处罚法》第四十三条第一款，对其行政拘留三日。综上，被诉行政处罚决定认定事实清楚、程序合法、法律适用准确，请求驳回秦某的再审申请。\n\n乌鲁木齐市公安局辩称，乌鲁木齐市公安局依法受理秦某的复议申请后，经过审理认为天山区公安分局作出的行政处罚决定认定事实清楚，证据确凿，法律适用正确，程序合法，处罚适当，依据《中华人民共和国行政复议法》第二十八条第一款第一项之规定依法予以维持。综上，请求驳回秦某的再审申请。\n\n司某未到庭，亦未提交书面意见。\n\n[DOC3_A3 | 法院观点]\n本院认为，本案的争议焦点是被诉行政处罚决定及行政复议决定是否合法。\n\n关于被诉行政处罚决定及行政复议决定的合法性问题，对于事实认定，被诉行政处罚决定认定秦某实施殴打他人行为，有到案经过、询问笔录、证人证言、监控视频、伤情鉴定等证据予以证实。本案中，秦某虽未承认实施殴打行为，但在案其他证据能够证明其存在殴打他人的事实，天山区公安分局认定并无不当。秦某主张监控视频系伪造，但未提交证据予以证明，本院不予支持。对于处罚幅度，《中华人民共和国治安管理处罚法》第四十三条第一款规定，殴打他人的，或者故意伤害他人身体的，处五日以上十日以下拘留，并处二百元以上五百元以下罚款；情节较轻的，处五日以下拘留或者五百元以下罚款。《公安机关对部分违反治安管理行为实施处罚的裁量指导意见》第四十条规定，有下列情形之一的，属于“情节较轻”：（一）被侵害方有过错，且伤害后果较轻的；（二）亲友、邻里或者同事之间因琐事发生纠纷，双方均有过错，且伤害后果较轻的；（三）已满十四周岁未成年在校学生初次殴打他人、故意伤害他人身体，悔过态度较好且伤害后果较轻的；（四）因民间纠纷引发且行为人主动赔偿合理费用，伤害后果较轻的；（五）其他情节较轻的情形。本案中，秦某系因司某从机动车行驶通道出入实施殴打行为，且伤害后果较轻，天山区公安分局对其处以三日行政拘留并无不当。对于处罚程序，从在案证据来看，案涉行政处罚决定在办案期限、受案经过、调查过程、送达等程序上并无不当。秦某主张天山区公安分局对其存在逼供情形，但其在行政处罚告知笔录中明确表明不提出陈述和申辩，在一、二审审理过程中亦未表示天山区公安分局存在逼供情形，秦某在再审审查阶段方才提出该主张且未提交相关证据，本院不予支持。乌鲁木齐市公安局依法受理秦某的复议申请后，基于上述事实依法作出维持决定并无不当，本院予以确认。\n\n关于本案的审理程序问题，天山区公安分局于2023年4月24日收到一审行政判决书，于2023年4月25日向一审法院提交上诉状，未超过法定上诉期限，秦某主张超期上诉的理由缺乏事实和法律依据，本院不予支持。\n\n[DOC3_A4 | 裁定结果]\n综上，秦某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\n\n驳回秦某的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "primary_anchor_id": "DOC3_A1",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书3"
+        ],
+        "anchor_targets": [
+          "判决文书3"
+        ],
+        "anchor_value_hints": [
+          "3",
+          "966",
+          "29"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 15,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 1,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          }
+        ]
+      },
+      "extract_think": "This chunk provides information about the parties involved in the case but does not specify the category label for the document. It mentions administrative actions such as administrative reconsideration and administrative detention, which suggests the case could fall under '行政行为-行政裁决'. However, more context is needed to confirm the exact category and ensure there are no other relevant categories mentioned in the document.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "确认案件的具体类别，例如'行政行为-行政裁决'或其他可能的类别",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [
+            "当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "确认案件的具体类别，例如'行政行为-行政裁决'或其他可能的类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC3_A1"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [
+            "当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A2",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC3_A1"
+        ],
+        "utility_hits": {
+          "DOC3_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A4": 11.0,
+          "DOC3_A2": 11.0,
+          "DOC3_A3": 11.0
+        },
+        "relation_hits": {
+          "DOC3_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A1",
+            "same_case_selected=DOC3_A1",
+            "disambiguates_selected=DOC3_A1",
+            "likely_same_entity_selected=DOC3_A1",
+            "prerequisite_of_selected=DOC3_A1"
+          ],
+          "DOC3_A2": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A1",
+            "same_case_selected=DOC3_A1",
+            "disambiguates_selected=DOC3_A1",
+            "likely_same_entity_selected=DOC3_A1",
+            "nearby_window_selected=DOC3_A1"
+          ],
+          "DOC3_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC3_A1",
+            "same_case_selected=DOC3_A1",
+            "disambiguates_selected=DOC3_A1",
+            "likely_same_entity_selected=DOC3_A1",
+            "nearby_window_selected=DOC3_A1"
+          ]
+        },
+        "relation_score": {
+          "DOC3_A4": 22.95,
+          "DOC3_A2": 20.98,
+          "DOC3_A3": 20.98
+        },
+        "anchor_role_hits": {
+          "DOC3_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC3_A2": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC3_A3": [
+            "case_identity",
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC3_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 4.0,
+            "relation": 22.95,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 43.641
+          },
+          "DOC3_A2": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 4.0,
+            "relation": 20.98,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 42.181
+          },
+          "DOC3_A3": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 4.0,
+            "relation": 20.98,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 41.894
+          }
+        }
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The next logical step would be to inspect the section that provides the case background (DOC3_A2). This section likely contains information about the nature of the dispute and the specific legal actions taken, which can help determine the category of the case. Since the document involves administrative detention and reconsideration, it's important to verify if it falls under '行政行为-行政裁决' or another category.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC3_A2: 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。各方当事人的基本立场和理由。",
+        "text": "[DOC3_A1 | 当事人信息]\n再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。\n\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。\n\n法定代表人：金宝，该局局长。\n\n委托诉讼代理人：曹某，男，该局法制大队工作人员。\n\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。\n\n法定代表人：苗龙，该局局长。\n\n委托诉讼代理人：董某，男，该局法制支队工作人员。\n\n原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\n\n[DOC3_A2 | 案件背景]\n再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。\n\n天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为，情节较轻，依据《中华人民共和国治安管理处罚法》第四十三条第一款，对其行政拘留三日。综上，被诉行政处罚决定认定事实清楚、程序合法、法律适用准确，请求驳回秦某的再审申请。\n\n乌鲁木齐市公安局辩称，乌鲁木齐市公安局依法受理秦某的复议申请后，经过审理认为天山区公安分局作出的行政处罚决定认定事实清楚，证据确凿，法律适用正确，程序合法，处罚适当，依据《中华人民共和国行政复议法》第二十八条第一款第一项之规定依法予以维持。综上，请求驳回秦某的再审申请。\n\n司某未到庭，亦未提交书面意见。\n\n[DOC3_A3 | 法院观点]\n本院认为，本案的争议焦点是被诉行政处罚决定及行政复议决定是否合法。\n\n关于被诉行政处罚决定及行政复议决定的合法性问题，对于事实认定，被诉行政处罚决定认定秦某实施殴打他人行为，有到案经过、询问笔录、证人证言、监控视频、伤情鉴定等证据予以证实。本案中，秦某虽未承认实施殴打行为，但在案其他证据能够证明其存在殴打他人的事实，天山区公安分局认定并无不当。秦某主张监控视频系伪造，但未提交证据予以证明，本院不予支持。对于处罚幅度，《中华人民共和国治安管理处罚法》第四十三条第一款规定，殴打他人的，或者故意伤害他人身体的，处五日以上十日以下拘留，并处二百元以上五百元以下罚款；情节较轻的，处五日以下拘留或者五百元以下罚款。《公安机关对部分违反治安管理行为实施处罚的裁量指导意见》第四十条规定，有下列情形之一的，属于“情节较轻”：（一）被侵害方有过错，且伤害后果较轻的；（二）亲友、邻里或者同事之间因琐事发生纠纷，双方均有过错，且伤害后果较轻的；（三）已满十四周岁未成年在校学生初次殴打他人、故意伤害他人身体，悔过态度较好且伤害后果较轻的；（四）因民间纠纷引发且行为人主动赔偿合理费用，伤害后果较轻的；（五）其他情节较轻的情形。本案中，秦某系因司某从机动车行驶通道出入实施殴打行为，且伤害后果较轻，天山区公安分局对其处以三日行政拘留并无不当。对于处罚程序，从在案证据来看，案涉行政处罚决定在办案期限、受案经过、调查过程、送达等程序上并无不当。秦某主张天山区公安分局对其存在逼供情形，但其在行政处罚告知笔录中明确表明不提出陈述和申辩，在一、二审审理过程中亦未表示天山区公安分局存在逼供情形，秦某在再审审查阶段方才提出该主张且未提交相关证据，本院不予支持。乌鲁木齐市公安局依法受理秦某的复议申请后，基于上述事实依法作出维持决定并无不当，本院予以确认。\n\n关于本案的审理程序问题，天山区公安分局于2023年4月24日收到一审行政判决书，于2023年4月25日向一审法院提交上诉状，未超过法定上诉期限，秦某主张超期上诉的理由缺乏事实和法律依据，本院不予支持。\n\n[DOC3_A4 | 裁定结果]\n综上，秦某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\n\n驳回秦某的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ],
+        "primary_anchor_id": "DOC3_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书3"
+        ],
+        "anchor_targets": [
+          "判决文书3"
+        ],
+        "anchor_value_hints": [
+          "3",
+          "2023",
+          "01",
+          "164",
+          "4",
+          "15",
+          "2020",
+          "6"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 17,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 2,
+            "nearby_window": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A1",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC3_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书3']"
+          }
+        ]
+      },
+      "extract_think": "This chunk provides detailed information about the case background, including the nature of the dispute involving administrative detention and administrative reconsideration. The case clearly involves '行政行为-行政裁决' due to the involvement of administrative detention and the subsequent administrative reconsideration process. No other categories from the given list appear to be applicable based on the information provided in this chunk.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政裁决",
+            "value": "《判决文书3》",
+            "normalized_value": "判决文书3",
+            "evidence_text": "再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC3_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书3']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政行为-行政裁决"
+          ],
+          "known_value_signatures": [
+            "判决文书3"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC3_A1",
+            "DOC3_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。",
+            "案件背景 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。各方当事人的基本立场和理由。 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。 秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。 天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A4",
+            "DOC3_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A1",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政裁决",
+      "value": "《判决文书3》",
+      "normalized_value": "判决文书3",
+      "evidence_text": "再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC3_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书3']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document, titled '《判决文书3》', seems to involve an administrative case related to administrative detention and administrative reconsideration based on the summaries provided. The summaries suggest that it might fall under the category of '行政行为-行政裁决'. I will inspect the first chunk (DOC3_A1) to confirm the details of the parties involved and the nature of the dispute.</think>\n<search>{\"current_query\": \"案件分类\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC3_A2\": 11.0, \"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0, \"DOC3_A1\": 5.0}, \"score_breakdown\": {\"DOC3_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 25.201}, \"DOC3_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 24.914}, \"DOC3_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 24.691}, \"DOC3_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 16.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC3_A1: 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。\\n\\n法定代表人：金宝，该局局长。\\n\\n委托诉讼代理人：曹某，男，该局法制大队工作人员。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。\\n\\n法定代表人：苗龙，该局局长。\\n\\n委托诉讼代理人：董某，男，该局法制支队工作人员。\\n\\n原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\\n\\n[DOC3_A2 | 案件背景]\\n再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。\\n\\n天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为，情节较轻，依据《中华人民共和国治安管理处罚法》第四十三条第一款，对其行政拘留三日。综上，被诉行政处罚决定认定事实清楚、程序合法、法律适用准确，请求驳回秦某的再审申请。\\n\\n乌鲁木齐市公安局辩称，乌鲁木齐市公安局依法受理秦某的复议申请后，经过审理认为天山区公安分局作出的行政处罚决定认定事实清楚，证据确凿，法律适用正确，程序合法，处罚适当，依据《中华人民共和国行政复议法》第二十八条第一款第一项之规定依法予以维持。综上，请求驳回秦某的再审申请。\\n\\n司某未到庭，亦未提交书面意见。\\n\\n[DOC3_A3 | 法院观点]\\n本院认为，本案的争议焦点是被诉行政处罚决定及行政复议决定是否合法。\\n\\n关于被诉行政处罚决定及行政复议决定的合法性问题，对于事实认定，被诉行政处罚决定认定秦某实施殴打他人行为，有到案经过、询问笔录、证人证言、监控视频、伤情鉴定等证据予以证实。本案中，秦某虽未承认实施殴打行为，但在案其他证据能够证明其存在殴打他人的事实，天山区公安分局认定并无不当。秦某主张监控视频系伪造，但未提交证据予以证明，本院不予支持。对于处罚幅度，《中华人民共和国治安管理处罚法》第四十三条第一款规定，殴打他人的，或者故意伤害他人身体的，处五日以上十日以下拘留，并处二百元以上五百元以下罚款；情节较轻的，处五日以下拘留或者五百元以下罚款。《公安机关对部分违反治安管理行为实施处罚的裁量指导意见》第四十条规定，有下列情形之一的，属于“情节较轻”：（一）被侵害方有过错，且伤害后果较轻的；（二）亲友、邻里或者同事之间因琐事发生纠纷，双方均有过错，且伤害后果较轻的；（三）已满十四周岁未成年在校学生初次殴打他人、故意伤害他人身体，悔过态度较好且伤害后果较轻的；（四）因民间纠纷引发且行为人主动赔偿合理费用，伤害后果较轻的；（五）其他情节较轻的情形。本案中，秦某系因司某从机动车行驶通道出入实施殴打行为，且伤害后果较轻，天山区公安分局对其处以三日行政拘留并无不当。对于处罚程序，从在案证据来看，案涉行政处罚决定在办案期限、受案经过、调查过程、送达等程序上并无不当。秦某主张天山区公安分局对其存在逼供情形，但其在行政处罚告知笔录中明确表明不提出陈述和申辩，在一、二审审理过程中亦未表示天山区公安分局存在逼供情形，秦某在再审审查阶段方才提出该主张且未提交相关证据，本院不予支持。乌鲁木齐市公安局依法受理秦某的复议申请后，基于上述事实依法作出维持决定并无不当，本院予以确认。\\n\\n关于本案的审理程序问题，天山区公安分局于2023年4月24日收到一审行政判决书，于2023年4月25日向一审法院提交上诉状，未超过法定上诉期限，秦某主张超期上诉的理由缺乏事实和法律依据，本院不予支持。\\n\\n[DOC3_A4 | 裁定结果]\\n综上，秦某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n驳回秦某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"966\", \"29\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 15, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}</info>\n<think>This chunk provides information about the parties involved in the case but does not specify the category label for the document. It mentions administrative actions such as administrative reconsideration and administrative detention, which suggests the case could fall under '行政行为-行政裁决'. However, more context is needed to confirm the exact category and ensure there are no other relevant categories mentioned in the document.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"确认案件的具体类别，例如'行政行为-行政裁决'或其他可能的类别\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [\"当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\"], \"selected_relation_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}]}}</retrieve>\n<think>The next logical step would be to inspect the section that provides the case background (DOC3_A2). This section likely contains information about the nature of the dispute and the specific legal actions taken, which can help determine the category of the case. Since the document involves administrative detention and reconsideration, it's important to verify if it falls under '行政行为-行政裁决' or another category.</think>\n<search>{\"current_query\": \"确认案件的具体类别，例如'行政行为-行政裁决'或其他可能的类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [\"当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\"], \"selected_relation_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A1\"], \"utility_hits\": {\"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A4\": 11.0, \"DOC3_A2\": 11.0, \"DOC3_A3\": 11.0}, \"relation_hits\": {\"DOC3_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_case_selected=DOC3_A1\", \"disambiguates_selected=DOC3_A1\", \"likely_same_entity_selected=DOC3_A1\", \"prerequisite_of_selected=DOC3_A1\"], \"DOC3_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_case_selected=DOC3_A1\", \"disambiguates_selected=DOC3_A1\", \"likely_same_entity_selected=DOC3_A1\", \"nearby_window_selected=DOC3_A1\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_case_selected=DOC3_A1\", \"disambiguates_selected=DOC3_A1\", \"likely_same_entity_selected=DOC3_A1\", \"nearby_window_selected=DOC3_A1\"]}, \"relation_score\": {\"DOC3_A4\": 22.95, \"DOC3_A2\": 20.98, \"DOC3_A3\": 20.98}, \"anchor_role_hits\": {\"DOC3_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A3\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC3_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 4.0, \"relation\": 22.95, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 43.641}, \"DOC3_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 4.0, \"relation\": 20.98, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 42.181}, \"DOC3_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 4.0, \"relation\": 20.98, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 41.894}}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC3_A2: 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。各方当事人的基本立场和理由。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。\\n\\n法定代表人：金宝，该局局长。\\n\\n委托诉讼代理人：曹某，男，该局法制大队工作人员。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。\\n\\n法定代表人：苗龙，该局局长。\\n\\n委托诉讼代理人：董某，男，该局法制支队工作人员。\\n\\n原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\\n\\n[DOC3_A2 | 案件背景]\\n再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。\\n\\n天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为，情节较轻，依据《中华人民共和国治安管理处罚法》第四十三条第一款，对其行政拘留三日。综上，被诉行政处罚决定认定事实清楚、程序合法、法律适用准确，请求驳回秦某的再审申请。\\n\\n乌鲁木齐市公安局辩称，乌鲁木齐市公安局依法受理秦某的复议申请后，经过审理认为天山区公安分局作出的行政处罚决定认定事实清楚，证据确凿，法律适用正确，程序合法，处罚适当，依据《中华人民共和国行政复议法》第二十八条第一款第一项之规定依法予以维持。综上，请求驳回秦某的再审申请。\\n\\n司某未到庭，亦未提交书面意见。\\n\\n[DOC3_A3 | 法院观点]\\n本院认为，本案的争议焦点是被诉行政处罚决定及行政复议决定是否合法。\\n\\n关于被诉行政处罚决定及行政复议决定的合法性问题，对于事实认定，被诉行政处罚决定认定秦某实施殴打他人行为，有到案经过、询问笔录、证人证言、监控视频、伤情鉴定等证据予以证实。本案中，秦某虽未承认实施殴打行为，但在案其他证据能够证明其存在殴打他人的事实，天山区公安分局认定并无不当。秦某主张监控视频系伪造，但未提交证据予以证明，本院不予支持。对于处罚幅度，《中华人民共和国治安管理处罚法》第四十三条第一款规定，殴打他人的，或者故意伤害他人身体的，处五日以上十日以下拘留，并处二百元以上五百元以下罚款；情节较轻的，处五日以下拘留或者五百元以下罚款。《公安机关对部分违反治安管理行为实施处罚的裁量指导意见》第四十条规定，有下列情形之一的，属于“情节较轻”：（一）被侵害方有过错，且伤害后果较轻的；（二）亲友、邻里或者同事之间因琐事发生纠纷，双方均有过错，且伤害后果较轻的；（三）已满十四周岁未成年在校学生初次殴打他人、故意伤害他人身体，悔过态度较好且伤害后果较轻的；（四）因民间纠纷引发且行为人主动赔偿合理费用，伤害后果较轻的；（五）其他情节较轻的情形。本案中，秦某系因司某从机动车行驶通道出入实施殴打行为，且伤害后果较轻，天山区公安分局对其处以三日行政拘留并无不当。对于处罚程序，从在案证据来看，案涉行政处罚决定在办案期限、受案经过、调查过程、送达等程序上并无不当。秦某主张天山区公安分局对其存在逼供情形，但其在行政处罚告知笔录中明确表明不提出陈述和申辩，在一、二审审理过程中亦未表示天山区公安分局存在逼供情形，秦某在再审审查阶段方才提出该主张且未提交相关证据，本院不予支持。乌鲁木齐市公安局依法受理秦某的复议申请后，基于上述事实依法作出维持决定并无不当，本院予以确认。\\n\\n关于本案的审理程序问题，天山区公安分局于2023年4月24日收到一审行政判决书，于2023年4月25日向一审法院提交上诉状，未超过法定上诉期限，秦某主张超期上诉的理由缺乏事实和法律依据，本院不予支持。\\n\\n[DOC3_A4 | 裁定结果]\\n综上，秦某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n驳回秦某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"primary_anchor_id\": \"DOC3_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"2023\", \"01\", \"164\", \"4\", \"15\", \"2020\", \"6\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}</info>\n<think>This chunk provides detailed information about the case background, including the nature of the dispute involving administrative detention and administrative reconsideration. The case clearly involves '行政行为-行政裁决' due to the involvement of administrative detention and the subsequent administrative reconsideration process. No other categories from the given list appear to be applicable based on the information provided in this chunk.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政裁决\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\", \"案件背景 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。各方当事人的基本立场和理由。 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。 秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。 天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为...\"], \"selected_relation_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document, titled '《判决文书3》', seems to involve an administrative case related to administrative detention and administrative reconsideration based on the summaries provided. The summaries suggest that it might fall under the category of '行政行为-行政裁决'. I will inspect the first chunk (DOC3_A1) to confirm the details of the parties involved and the nature of the dispute.</think>\n<search>{\"current_query\": \"案件分类\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"utility_hits\": {\"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC3_A2\": 11.0, \"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0, \"DOC3_A1\": 5.0}, \"score_breakdown\": {\"DOC3_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 25.201}, \"DOC3_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 24.914}, \"DOC3_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 24.691}, \"DOC3_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 16.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC3_A1: 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。\\n\\n法定代表人：金宝，该局局长。\\n\\n委托诉讼代理人：曹某，男，该局法制大队工作人员。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。\\n\\n法定代表人：苗龙，该局局长。\\n\\n委托诉讼代理人：董某，男，该局法制支队工作人员。\\n\\n原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\\n\\n[DOC3_A2 | 案件背景]\\n再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。\\n\\n天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为，情节较轻，依据《中华人民共和国治安管理处罚法》第四十三条第一款，对其行政拘留三日。综上，被诉行政处罚决定认定事实清楚、程序合法、法律适用准确，请求驳回秦某的再审申请。\\n\\n乌鲁木齐市公安局辩称，乌鲁木齐市公安局依法受理秦某的复议申请后，经过审理认为天山区公安分局作出的行政处罚决定认定事实清楚，证据确凿，法律适用正确，程序合法，处罚适当，依据《中华人民共和国行政复议法》第二十八条第一款第一项之规定依法予以维持。综上，请求驳回秦某的再审申请。\\n\\n司某未到庭，亦未提交书面意见。\\n\\n[DOC3_A3 | 法院观点]\\n本院认为，本案的争议焦点是被诉行政处罚决定及行政复议决定是否合法。\\n\\n关于被诉行政处罚决定及行政复议决定的合法性问题，对于事实认定，被诉行政处罚决定认定秦某实施殴打他人行为，有到案经过、询问笔录、证人证言、监控视频、伤情鉴定等证据予以证实。本案中，秦某虽未承认实施殴打行为，但在案其他证据能够证明其存在殴打他人的事实，天山区公安分局认定并无不当。秦某主张监控视频系伪造，但未提交证据予以证明，本院不予支持。对于处罚幅度，《中华人民共和国治安管理处罚法》第四十三条第一款规定，殴打他人的，或者故意伤害他人身体的，处五日以上十日以下拘留，并处二百元以上五百元以下罚款；情节较轻的，处五日以下拘留或者五百元以下罚款。《公安机关对部分违反治安管理行为实施处罚的裁量指导意见》第四十条规定，有下列情形之一的，属于“情节较轻”：（一）被侵害方有过错，且伤害后果较轻的；（二）亲友、邻里或者同事之间因琐事发生纠纷，双方均有过错，且伤害后果较轻的；（三）已满十四周岁未成年在校学生初次殴打他人、故意伤害他人身体，悔过态度较好且伤害后果较轻的；（四）因民间纠纷引发且行为人主动赔偿合理费用，伤害后果较轻的；（五）其他情节较轻的情形。本案中，秦某系因司某从机动车行驶通道出入实施殴打行为，且伤害后果较轻，天山区公安分局对其处以三日行政拘留并无不当。对于处罚程序，从在案证据来看，案涉行政处罚决定在办案期限、受案经过、调查过程、送达等程序上并无不当。秦某主张天山区公安分局对其存在逼供情形，但其在行政处罚告知笔录中明确表明不提出陈述和申辩，在一、二审审理过程中亦未表示天山区公安分局存在逼供情形，秦某在再审审查阶段方才提出该主张且未提交相关证据，本院不予支持。乌鲁木齐市公安局依法受理秦某的复议申请后，基于上述事实依法作出维持决定并无不当，本院予以确认。\\n\\n关于本案的审理程序问题，天山区公安分局于2023年4月24日收到一审行政判决书，于2023年4月25日向一审法院提交上诉状，未超过法定上诉期限，秦某主张超期上诉的理由缺乏事实和法律依据，本院不予支持。\\n\\n[DOC3_A4 | 裁定结果]\\n综上，秦某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n驳回秦某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"primary_anchor_id\": \"DOC3_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"966\", \"29\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 15, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}</info>\n<think>This chunk provides information about the parties involved in the case but does not specify the category label for the document. It mentions administrative actions such as administrative reconsideration and administrative detention, which suggests the case could fall under '行政行为-行政裁决'. However, more context is needed to confirm the exact category and ensure there are no other relevant categories mentioned in the document.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"确认案件的具体类别，例如'行政行为-行政裁决'或其他可能的类别\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [\"当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\"], \"selected_relation_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}]}}</retrieve>\n<think>The next logical step would be to inspect the section that provides the case background (DOC3_A2). This section likely contains information about the nature of the dispute and the specific legal actions taken, which can help determine the category of the case. Since the document involves administrative detention and reconsideration, it's important to verify if it falls under '行政行为-行政裁决' or another category.</think>\n<search>{\"current_query\": \"确认案件的具体类别，例如'行政行为-行政裁决'或其他可能的类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [\"DOC3_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [\"当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\"], \"selected_relation_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}]}, \"avoid_anchor_ids\": [\"DOC3_A1\"], \"utility_hits\": {\"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A4\": 11.0, \"DOC3_A2\": 11.0, \"DOC3_A3\": 11.0}, \"relation_hits\": {\"DOC3_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_case_selected=DOC3_A1\", \"disambiguates_selected=DOC3_A1\", \"likely_same_entity_selected=DOC3_A1\", \"prerequisite_of_selected=DOC3_A1\"], \"DOC3_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_case_selected=DOC3_A1\", \"disambiguates_selected=DOC3_A1\", \"likely_same_entity_selected=DOC3_A1\", \"nearby_window_selected=DOC3_A1\"], \"DOC3_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC3_A1\", \"same_case_selected=DOC3_A1\", \"disambiguates_selected=DOC3_A1\", \"likely_same_entity_selected=DOC3_A1\", \"nearby_window_selected=DOC3_A1\"]}, \"relation_score\": {\"DOC3_A4\": 22.95, \"DOC3_A2\": 20.98, \"DOC3_A3\": 20.98}, \"anchor_role_hits\": {\"DOC3_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A3\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC3_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 4.0, \"relation\": 22.95, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 43.641}, \"DOC3_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 4.0, \"relation\": 20.98, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 42.181}, \"DOC3_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 4.0, \"relation\": 20.98, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 41.894}}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC3_A2: 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。各方当事人的基本立场和理由。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。\\n\\n法定代表人：金宝，该局局长。\\n\\n委托诉讼代理人：曹某，男，该局法制大队工作人员。\\n\\n被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。\\n\\n法定代表人：苗龙，该局局长。\\n\\n委托诉讼代理人：董某，男，该局法制支队工作人员。\\n\\n原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\\n\\n[DOC3_A2 | 案件背景]\\n再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。\\n\\n天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为，情节较轻，依据《中华人民共和国治安管理处罚法》第四十三条第一款，对其行政拘留三日。综上，被诉行政处罚决定认定事实清楚、程序合法、法律适用准确，请求驳回秦某的再审申请。\\n\\n乌鲁木齐市公安局辩称，乌鲁木齐市公安局依法受理秦某的复议申请后，经过审理认为天山区公安分局作出的行政处罚决定认定事实清楚，证据确凿，法律适用正确，程序合法，处罚适当，依据《中华人民共和国行政复议法》第二十八条第一款第一项之规定依法予以维持。综上，请求驳回秦某的再审申请。\\n\\n司某未到庭，亦未提交书面意见。\\n\\n[DOC3_A3 | 法院观点]\\n本院认为，本案的争议焦点是被诉行政处罚决定及行政复议决定是否合法。\\n\\n关于被诉行政处罚决定及行政复议决定的合法性问题，对于事实认定，被诉行政处罚决定认定秦某实施殴打他人行为，有到案经过、询问笔录、证人证言、监控视频、伤情鉴定等证据予以证实。本案中，秦某虽未承认实施殴打行为，但在案其他证据能够证明其存在殴打他人的事实，天山区公安分局认定并无不当。秦某主张监控视频系伪造，但未提交证据予以证明，本院不予支持。对于处罚幅度，《中华人民共和国治安管理处罚法》第四十三条第一款规定，殴打他人的，或者故意伤害他人身体的，处五日以上十日以下拘留，并处二百元以上五百元以下罚款；情节较轻的，处五日以下拘留或者五百元以下罚款。《公安机关对部分违反治安管理行为实施处罚的裁量指导意见》第四十条规定，有下列情形之一的，属于“情节较轻”：（一）被侵害方有过错，且伤害后果较轻的；（二）亲友、邻里或者同事之间因琐事发生纠纷，双方均有过错，且伤害后果较轻的；（三）已满十四周岁未成年在校学生初次殴打他人、故意伤害他人身体，悔过态度较好且伤害后果较轻的；（四）因民间纠纷引发且行为人主动赔偿合理费用，伤害后果较轻的；（五）其他情节较轻的情形。本案中，秦某系因司某从机动车行驶通道出入实施殴打行为，且伤害后果较轻，天山区公安分局对其处以三日行政拘留并无不当。对于处罚程序，从在案证据来看，案涉行政处罚决定在办案期限、受案经过、调查过程、送达等程序上并无不当。秦某主张天山区公安分局对其存在逼供情形，但其在行政处罚告知笔录中明确表明不提出陈述和申辩，在一、二审审理过程中亦未表示天山区公安分局存在逼供情形，秦某在再审审查阶段方才提出该主张且未提交相关证据，本院不予支持。乌鲁木齐市公安局依法受理秦某的复议申请后，基于上述事实依法作出维持决定并无不当，本院予以确认。\\n\\n关于本案的审理程序问题，天山区公安分局于2023年4月24日收到一审行政判决书，于2023年4月25日向一审法院提交上诉状，未超过法定上诉期限，秦某主张超期上诉的理由缺乏事实和法律依据，本院不予支持。\\n\\n[DOC3_A4 | 裁定结果]\\n综上，秦某的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n驳回秦某的再审申请。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"primary_anchor_id\": \"DOC3_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"判决文书3\"], \"anchor_value_hints\": [\"3\", \"2023\", \"01\", \"164\", \"4\", \"15\", \"2020\", \"6\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}</info>\n<think>This chunk provides detailed information about the case background, including the nature of the dispute involving administrative detention and administrative reconsideration. The case clearly involves '行政行为-行政裁决' due to the involvement of administrative detention and the subsequent administrative reconsideration process. No other categories from the given list appear to be applicable based on the information provided in this chunk.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC3_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政裁决\"], \"known_value_signatures\": [\"判决文书3\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人秦某，被申请人乌鲁木齐市公安局天山区分局及其法定代表人金宝、委托诉讼代理人曹某，被申请人乌鲁木齐市公安局及其法定代表人苗龙、委托诉讼代理人董某，原审第三人司某的基本信息。 再审申请人（一审原告、二审被上诉人）：秦某，男，住新疆维吾尔自治区石河子市。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市天山区团结路966号。 法定代表人：金宝，该局局长。 委托诉讼代理人：曹某，男，该局法制大队工作人员。 被申请人（一审被告、二审上诉人）：乌鲁木齐市公安局，住所地新疆维吾尔自治区乌鲁木齐市水磨沟区南湖东路29号。 法定代表人：苗龙，该局局长。 委托诉讼代理人：董某，男，该局法制支队工作人员。 原审第三人：司某，女，住新疆维吾尔自治区乌鲁木齐市水磨沟区。\", \"案件背景 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局、乌鲁木齐市公安局及原审第三人司某的行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，向本院申请再审。各方当事人的基本立场和理由。 再审申请人秦某因与被申请人乌鲁木齐市公安局天山区分局（以下简称天山区公安分局）、乌鲁木齐市公安局、原审第三人司某行政拘留及行政复议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01行终164号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。 秦某申请再审称，一、天山区公安分局在判决生效后4个月进行上诉，超过法定的15日期限。二、天山区公安分局存在殴打、不允许饮水进食等逼供情形，签字均非本人真实意思表示，行政处罚决定书中亦载明秦某未承认殴打行为。三、天山区公安分局在二审中提交的视频证据与一审不一致，存在伪造证据的行为。综上，请求撤销二审判决，维持一审判决。 天山区公安分局辩称，2020年6月1日，天山区公安分局接到司某报案称在天山区某号门前被人殴打，天山区公安分局东门派出所依法受理调查。经查，2020年6月1日14时许，秦某在天山区某号门口，因司某从车辆通道出小区的行为不满，双方发生争吵，过程中秦某殴打司某致其受伤。以上事实有秦某本人供述、受害人司某陈述、证人证言、现场监控视频、伤情鉴定文书、抓获经过等证据证实。秦某的行为构成治安违法行为...\"], \"selected_relation_anchor_ids\": [\"DOC3_A4\", \"DOC3_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A1\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>"
+}

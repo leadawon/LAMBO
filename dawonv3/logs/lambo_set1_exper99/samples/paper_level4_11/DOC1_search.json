@@ -1,0 +1,262 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+  "task_mode": "chain",
+  "think": "The acknowledgments section (DOC1_A8) is likely to contain citations and references to other papers, which could provide evidence for constructing the citation chain.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "ordered relations or decision/result mappings",
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC1_A8",
+  "candidate_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A6",
+    "DOC1_A2",
+    "DOC1_A8",
+    "DOC1_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A6",
+    "DOC1_A2",
+    "DOC1_A8",
+    "DOC1_A4",
+    "DOC1_A3",
+    "DOC1_A5",
+    "DOC1_A1",
+    "DOC1_A7"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A6",
+      "score": 55.154,
+      "reasons": [
+        "query_overlap=7",
+        "instruction_overlap=6",
+        "section_prior=4",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.55",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 36.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 9.154,
+        "redundancy_penalty": 0.0,
+        "total": 55.154
+      },
+      "summary": "The related work section reviews large language models and multi-stage text retrieval methods. It contrasts the current work with previous approaches, emphasizing the novelty of..."
+    },
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 49.901,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=5",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=1.40",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 7.901,
+        "redundancy_penalty": 0.0,
+        "total": 49.901
+      },
+      "summary": "The introduction discusses the importance of text retrieval in various applications and the benefits of using pre-trained language models. It highlights the limitations of exist..."
+    },
+    {
+      "anchor_id": "DOC1_A8",
+      "score": 49.503,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=6",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.30",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 7.503,
+        "redundancy_penalty": 0.0,
+        "total": 49.503
+      },
+      "summary": "Acknowledgments thank funding sources, and references list the academic papers and resources cited throughout the document."
+    },
+    {
+      "anchor_id": "DOC1_A4",
+      "score": 47.291,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=5",
+        "section_prior=4",
+        "citation_cue",
+        "position_bonus=0.89",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 5.291,
+        "redundancy_penalty": 0.0,
+        "total": 47.291
+      },
+      "summary": "The experiments section describes the datasets used, the training and evaluation procedures for both passage and document retrieval tasks. It provides detailed results comparing..."
+    }
+  ],
+  "utility_hits": {
+    "DOC1_A6": [
+      "citation_format_cue"
+    ],
+    "DOC1_A2": [
+      "citation_format_cue"
+    ],
+    "DOC1_A8": [
+      "citation_format_cue"
+    ],
+    "DOC1_A4": [
+      "citation_format_cue"
+    ]
+  },
+  "utility_score": {
+    "DOC1_A6": 3.0,
+    "DOC1_A2": 3.0,
+    "DOC1_A8": 3.0,
+    "DOC1_A4": 3.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC1_A6": 5.0,
+    "DOC1_A2": 5.0,
+    "DOC1_A8": 5.0,
+    "DOC1_A4": 5.0
+  },
+  "anchor_role_hits": {
+    "DOC1_A6": [
+      "citation_direction"
+    ],
+    "DOC1_A2": [
+      "citation_direction"
+    ],
+    "DOC1_A8": [
+      "citation_direction"
+    ],
+    "DOC1_A4": [
+      "citation_direction"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "ordered relations or decision/result mappings",
+      "citation/reference evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC1_A6": {
+      "local_relevance": 36.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 9.154,
+      "redundancy_penalty": 0.0,
+      "total": 55.154
+    },
+    "DOC1_A2": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 7.901,
+      "redundancy_penalty": 0.0,
+      "total": 49.901
+    },
+    "DOC1_A8": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 7.503,
+      "redundancy_penalty": 0.0,
+      "total": 49.503
+    },
+    "DOC1_A4": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 5.291,
+      "redundancy_penalty": 0.0,
+      "total": 47.291
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for Fine-Tuning LLaMA for Multi-Stage Text Retrieval. First coordinate candidate is DOC1_A8.",
+  "raw_plan_text": "<think>The acknowledgments section (DOC1_A8) is likely to contain citations and references to other papers, which could provide evidence for constructing the citation chain.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"ordered relations or decision/result mappings\", \"citation/reference evidence\"],\"next_anchor_id\":\"DOC1_A8\",\"candidate_anchor_ids\":[\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\", \"DOC1_A6\", \"DOC1_A7\", \"DOC1_A8\"]}</search>",
+  "tagged_trace": "<think>The acknowledgments section (DOC1_A8) is likely to contain citations and references to other papers, which could provide evidence for constructing the citation chain.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"next_anchor_id\": \"DOC1_A8\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC1_A6\": 5.0, \"DOC1_A2\": 5.0, \"DOC1_A8\": 5.0, \"DOC1_A4\": 5.0}, \"anchor_role_hits\": {\"DOC1_A6\": [\"citation_direction\"], \"DOC1_A2\": [\"citation_direction\"], \"DOC1_A8\": [\"citation_direction\"], \"DOC1_A4\": [\"citation_direction\"]}}</search>"
+}

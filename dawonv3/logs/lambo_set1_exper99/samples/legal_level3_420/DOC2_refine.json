@@ -1,0 +1,454 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "selected_anchor_ids": [
+    "DOC2_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A2",
+        "candidate_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4"
+        ],
+        "utility_hits": {
+          "DOC2_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC2_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC2_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC2_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A2": 11.0,
+          "DOC2_A5": 11.0,
+          "DOC2_A4": 11.0,
+          "DOC2_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC2_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC2_A5": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 28.508
+          },
+          "DOC2_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 25.691
+          },
+          "DOC2_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 20.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC2_A2",
+      "plan_think": "The document appears to involve a dispute over property and inheritance, which suggests it might fall under the category of '民事案件'. I will inspect the chunk that provides background information on the case to confirm this.",
+      "info": {
+        "anchor_id": "DOC2_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC2_A2: 上诉人张某因分家析产、法定继承纠纷不服一审判决提起上诉，涉及《协议书》内容的理解和执行。",
+        "text": "[DOC2_A1 | 当事人信息]\n上诉人（原审被告）：张某，女，1976年9月11日出生，汉族，住上海市嘉定区。\n\n被上诉人（原审原告）：高某1，男，1939年11月14日出生，汉族，住上海市嘉定区。\n\n被上诉人（原审原告）：高某2，女，1964年1月29日出生，汉族，住上海市嘉定区。\n\n被上诉人（原审原告）：高某3，女，1966年4月10日出生，汉族，住上海市嘉定区。\n\n上列三被上诉人共同委托诉讼代理人：毛某，某某律师事务所律师。\n\n被上诉人（原审被告）：高某4，男，1949年2月3日出生，汉族，住上海市嘉定区。\n\n被上诉人（原审被告）：汤某，女，1953年7月11日出生，汉族，住上海市嘉定区。\n\n被上诉人（原审被告）：高某5，男，1976年3月10日出生，汉族，住上海市嘉定区。\n\n委托诉讼代理人：汤某（系高某5母亲），住上海市嘉定区。\n\n[DOC2_A2 | 案件背景]\n上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。本院于2023年12月26日立案后，依法组成合议庭对本案进行了审理。本案现已审理终结。\n\n张某上诉请求：撤销一审判决，改判驳回高某1、高某2、高某3（以下简称高某1一方）在一审的全部诉讼请求。事实和理由：一、上诉人与高某1一方于2020年10月10日签订的《协议书》，系由高某1一方起草，对于协议书的内容，上诉人并不完全了解。《协议书》第一条中：“乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。”，上诉人的理解为房屋的使用面积为30平方米，而非宅基地面积30平方米。在此情况下，上诉人由于对于“30平方米”标准的误解才与高某1一方签订《协议书》。若高某1一方在签订协议时与上诉人说明此情况，上诉人是绝对不会签订该《协议书》的。上诉人与高某1一方协议约定的房屋的实际建造图纸也与当时口头的约定发生了重大变化。同时，《协议书》上甲方的签名，其中上诉人的签名是由高某4代为签署，上诉人对于《协议书》的内容，在一审证据出示前，是完全不知情的，实际上也侵害了上诉人的实际利益。二、高某1一方系非农户口，不享有农村新建房屋的资格，也无权在上诉人新申请的宅基地上建造房屋。对于已拆除的原房屋，应当以原始的31.9平方米的面积补偿高某1一方，由上诉人享有塔桥村200号新建房屋的实际权力。三、塔桥村200号是上诉人一家五口唯一的住宅，且两个70几岁的老年人都身患各种慢性病，考虑实际住房需要，不利于和高某1一方共同居住。四、根据一审中提供的证据也可以看出，2014年双方在法院达成调解协议后，归朱某、高某1一方所有的，从双方达成调解协议后双方已经分为两户人家。对一审中高某1一方提交的《农村宅基地和建房（规划许可）资格认定表》和《户代表推举表》的真实性不能确认，上诉人全家都没有看到高某1一方去签字。一审判决认定事实不清且有错误，判决明显不公，请求支持上诉人的上诉请求。\n\n高某1一方辩称，本案所涉只有一块宅基地，并不因分户行为增加宅基地。本次只是之前宅基地的置换，并不是新申请宅基地，因此原宅基地的权利人仍然有权利。而且高某1对嘉定区房屋的建造也进行了实际出资。一审认定事实清楚，适用法律正确。请求驳回上诉，维持原判。\n\n高某4、汤某、高某5辩称，高某4、汤某进行申请建造新房已经申请了十余年，高某1一方从未参与过。高某2、高某3不是农村集体户口，没有资格申请农村建房。同意上诉人的上诉请求。\n\n[DOC2_A3 | 一审诉求]\n高某1一方秋向一审法院起诉请求：1.判令位于嘉定区房屋中西面一上一下楼房归高某1一方所有，高某4、汤某、高某5、张某（以下简称高某4一方）腾退房屋；2.本案诉讼费由高某4一方承担。\n\n[DOC2_A4 | 一审事实]\n一审法院认定事实：张桂英（1999年死亡）与高万祥（1966年死亡）系夫妻关系，生育高某1、高某4；高某1与朱某（2015年1月25日死亡）系夫妻关系，生育高某2、高某3；高某4与汤某系夫妻关系，生育高某5；高某5与张某系夫妻关系。\n\n1972年2月张桂英申请建造位于嘉定县（即嘉定区）的平房两间及棚舍一间，立基人为高某1、朱某、高某2、高某3、高某4。1990年3月上述房屋颁发了以高某4为户主的宅基地使用证。因对该房屋的分割意见不一，2014年高某1、朱某、高某2、高某3将高某4诉至一审法院。经审理，双方达成调解协议，一审法院院据此依法作出（2014）嘉民一（民）初字第3892号民事调解书，确认：坐落于上海市嘉定区平房两间及棚舍一间（建筑面积57.9平方米），其中东面平房一间、棚舍一间归高某1、朱某、高某2、高某3所有，西面平房一间归高某4所有。后经申请，归高某1、朱某、高某2、高某3所有的，归高某4所有的房屋门牌号仍为200号，但双方所有房屋仍属于同一宅基地。\n\n2020年5月20日，高某5（户主）、汤某以原200号房屋已破旧、墙面开裂、宅基面积小为由申请出宅建造新房，并填写了《农村宅基地和建房（规划许可）资格认定表》和《户代表推举表》。相关部门在审批过程中发现，高某2、高某3的户口在200号-1房屋中，遂通知高某2、高某3作为家庭成员一并申请建房。后经审批，相关部门对200号、200号-1原宅基地作置换处理，置换后的新宅基地为塔桥村五组仓库场地，批准宅基地用地面积140平方米，建筑占地90平方米，建筑面积180平方米。新宅基地房屋立基人口为高某5、汤某、高某2、高某3，门牌号为。\n\n为建造新的宅基地房屋，高某2的配偶毛曙新出面联系某某公司的法定代表人王忠保，表示高某1一方、高某4一方要共同建造三上三下楼房，其中高某1一方是西侧一上一下共两间房屋，高某4一方是东侧二上二下共四间房屋。就西侧一上一下楼房，高某2、高某3与王忠保于2020年8月15日签订了《房屋翻建合同》，但双方仅口头协商建造的是一上一下楼房，书面合同对此未予明确。关于建造房屋的费用，起初两家是分别向王忠保支付的，高某1一方共计向王忠保支付22万元，高某4一方共计向王忠保支付73万元。因房屋建造过程中两家之间产生矛盾，高某4一方要求就三上三下楼房与王忠保统一进行结算，王忠保答应高某4一方并向高某1一方表示要将高某1一方已支付的22万元退还，但高某1一方认为西侧一上一下楼房是属于高某1一方的，故不予同意。\n\n此外，2020年10月10日，高某4一方（甲方）与高某1一方（乙方）签订协议书一份，载明：甲乙双方共同拥有宅基地117平方米及所属住房57.9平方米。1990年3月由村委会对该处宅基地和房屋予以登记。2014年6月经法院对上述房屋进行了析产[（2014）嘉民一（民）初字第3892号]，并由公安部门作了分户。2020年4月甲方申请建造新房得到批准，因上述宅基地偏小，相关部门作宅基地置换方式处理，置换后的新宅基地为塔桥村五组仓库场地，并收缴上述200、200-1号原宅基地、拆除所有附属建筑物（含乙方的房屋），乙方提出争议，经镇规划和土地管理所、塔桥村委会协调认为，原宅基地作置换处理后，乙方在新宅基地上具有原房屋占地面积的份额。为此，甲乙双方根据上述部门意见，商量达成以下协议：一、依据原宅基地房屋产权面积，甲方房屋占地面积为26平方米，乙方房屋占地面积为31.9平方米。宅基地置换后，乙方在新宅基地中的面积为30平方米。二、甲乙双方同时在新宅基地上按所得面积建造新房，各自享有独立房屋单元空间，甲方为东侧，乙方为西侧。三、甲乙双方各自承担房屋建造、附属设施及水电等配套建设费用。四、本协议由镇规划和土地管理所、塔桥村委会见证，在相关档案资料中予以备案。五、本协议一式六份，甲乙双方各执二份；镇规划和土地管理所、塔桥村委会各一份备案。\n\n一审另查明，1.为建造新的宅基地房屋，高某4一方支付场地折价费28,000元、建房测绘费1,304元、建房保险服务费3,000元、造房押金35,000元；2.新宅基地房屋中东侧二上二下楼房与西侧一上一下楼房原本都有独立的楼梯，后来高某4一方让施工队将西侧一上一下楼房的楼梯砸掉了。\n\n一审审理中，高某1一方表示同意分担高某4一方支付的除造房押金之外的费用。高某4一方则表示双方未协商过费用分担，费用应由高某4一方承担；因后来建造房屋的图纸与开始的图纸有变化，房屋结构发生严重变化，因此高某4一方不认可双方签订的协议，并让施工队砸掉了西侧一上一下楼房的楼梯。\n\n以上事实，有（2014）嘉民一（民）初字第3892号民事调解书、居民死亡医学证明书、《农村宅基地和建房（规划许可）资格认定表》《户代表推举表》《关于塔桥5队村民建房的决议》《农村宅基地和建房（规划许可）审批表》、乡村建设规划许可证、《华亭镇农村村民住房建设开工备案表》《房屋翻建合同》、上海市农村集体经济组织统一收据、上海市增值税普通发票、证明、协议书、营业执照、银行交易明细清单、银行转账回执、收条、王忠保的调查笔录及当事人陈述等为证，一审法院予以确认。\n\n一审法院认为，公民的合法财产受法律保护。就系争的嘉定区房屋，高某1一方、高某4一方签订的协议书系双方当事人真实意思表示，且未违反法律法规的效力性强制性规定，故合法有效，对双方当事人均有约束力。该协议明确高某1一方在新宅基地中的面积为30平方米，双方同时在新宅基地上按所得面积建造新房，各自享有独立房屋单元空间，各自承担房屋建造费用。结合三上三下楼房的实际建造过程，西侧一上一下楼房由高某1一方与王忠保签订《房屋翻建合同》，并由高某1一方支付相应建房费用，故一审法院认为双方签订的协议书中所明确的高某1一方在新宅基地上的面积30平方米应为建筑占地面积。高某1一方要求西侧一上一下楼房归其所有的诉讼请求，合法有据，一审法院予以支持。现西侧一上一下楼房由高某4一方占有，高某4一方理应腾退该房屋，并将房屋移交给高某1一方。关于高某4一方支付的场地折价费28,000元、建房测绘费1,304元、建房保险服务费3,000元，该费用确系为房屋所支出，且高某1一方同意分担该费用，故应由高某1一方承担其中三分之一的费用即10,768元。据此，依照《中华人民共和国民法典》第三百零三条、第三百零四条第一款之规定，一审法院判决：一、坐落于上海市嘉定区三上三下楼房中的西面一上一下楼房归高某1、高某2、高某3所有；二、坐落于上海市嘉定区三上三下楼房中的东面二上二下楼房归高某4、汤某、高某5、张某所有；三、高某4、汤某、高某5、张某应于判决生效之日起十日内从上海市嘉定区三上三下楼房中的西面一上一下楼房中腾退，并将房屋移交给高某1、高某2、高某3；四、高某1、高某2、高某3应于判决生效之日起十日内支付高某4、汤某、高某5、张某10,768元。如果未按判决指定的期间履行给付金钱义务，应当依照《中华人民共和国民事诉讼法》第二百六十条规定，加倍支付迟延履行期间的债务利息。一审案件受理费13,300元，减半收取6,650元，由高某1、高某2、高某3负担2,217元，高某4、汤某、高某5、张某负担4,433元。高某4、汤某、高某5、张某负担之款，应于判决生效之日起七日内缴付一审法院。\n\n[DOC2_A5 | 二审情况]\n二审中，各方当事人均未提交符合法律规定的新证据。\n\n本院经审理查明，一审法院认定的事实无误，本院予以确认。\n\n本院认为，根据本案在案证据，涉案的嘉定区系对200号、200号-1宅基地置换取得，高某2、高某3的非集体组织成员身份不影响其在涉案宅基地上房屋的权利。高某1一方、高某4一方针对双方争议的该宅基地上房屋签订协议书。上诉人张某主张该协议书上张某的签名系高某5代签，且对协议中约定的“乙方在新宅基地中的面积为30平方米”的标准存在误解，与双方口头上的约定不一致。本院认为，张某与高某5系夫妻关系，且张某也确认高某5签署协议后已告知张某，张某亦未对代签名一事提出异议。一审认定该协议为双方真实意思表示，对双方均有约束力并无不当。一审法院依据当事人之间的协议，综合考虑涉案宅基地上房屋的实际情况所作判决并无不当。上诉人的上诉请求缺乏事实和法律依据，本院难以支持。综上所述，上诉人的上诉请求不能成立，应予驳回；一审判决认定事实清楚，适用法律正确，应予维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项之规定，判决如下：\n\n驳回上诉，维持原判。\n\n二审案件受理费4,600元，由上诉人张某负担。\n\n本判决为终审判决。",
+        "source_window_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5"
+        ],
+        "primary_anchor_id": "DOC2_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence",
+          "background_context"
+        ],
+        "anchor_entities": [
+          "判决文书2"
+        ],
+        "anchor_targets": [
+          "乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。",
+          "30平方米",
+          "判决文书2"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "1",
+          "3",
+          "4",
+          "5",
+          "2023",
+          "0114",
+          "22338"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 4,
+            "disambiguates": 4,
+            "likely_same_entity": 4,
+            "prerequisite_of": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A1",
+            "DOC2_A5",
+            "DOC2_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书2']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书2']"
+          }
+        ]
+      },
+      "extract_think": "该段落提供了关于案件背景的信息，明确指出这是一个涉及分家析产和法定继承纠纷的案件，且属于民事案件范畴。因此，可以确定《判决文书2》属于民事案件。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书2》",
+            "normalized_value": "判决文书2",
+            "evidence_text": "上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC2_A5",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书2']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC2_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书2']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书2"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 上诉人张某因分家析产、法定继承纠纷不服一审判决提起上诉，涉及《协议书》内容的理解和执行。 上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。本院于2023年12月26日立案后，依法组成合议庭对本案进行了审理。本案现已审理终结。 张某上诉请求：撤销一审判决，改判驳回高某1、高某2、高某3（以下简称高某1一方）在一审的全部诉讼请求。事实和理由：一、上诉人与高某1一方于2020年10月10日签订的《协议书》，系由高某1一方起草，对于协议书的内容，上诉人并不完全了解。《协议书》第一条中：“乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。”，上诉人的理解为房屋的使用面积为30平方米，而非宅基地面积30平方米。在此情况下，上诉人由于对于“30平方米”标准的误解才与高某1一方签订《协议书》。若高某1一方在签订协议时与上诉人说明此情况，上诉人是绝对不会签订该《协议书》的。上诉人与高某1一方协议约定的房屋的实际建造图纸也与当时口头的约定发生了重大变化。同时，《协议书》上甲方的签名，其中上诉人的签名是由高某4代为签署，上诉人对于《协议书》的内容，在..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC2_A2",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书2》",
+      "normalized_value": "判决文书2",
+      "evidence_text": "上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC2_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书2']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC2_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书2']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document appears to involve a dispute over property and inheritance, which suggests it might fall under the category of '民事案件'. I will inspect the chunk that provides background information on the case to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"utility_hits\": {\"DOC2_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC2_A2\": 11.0, \"DOC2_A5\": 11.0, \"DOC2_A4\": 11.0, \"DOC2_A1\": 5.0}, \"score_breakdown\": {\"DOC2_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC2_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}, \"DOC2_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 25.691}, \"DOC2_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC2_A2: 上诉人张某因分家析产、法定继承纠纷不服一审判决提起上诉，涉及《协议书》内容的理解和执行。\", \"text\": \"[DOC2_A1 | 当事人信息]\\n上诉人（原审被告）：张某，女，1976年9月11日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审原告）：高某1，男，1939年11月14日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审原告）：高某2，女，1964年1月29日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审原告）：高某3，女，1966年4月10日出生，汉族，住上海市嘉定区。\\n\\n上列三被上诉人共同委托诉讼代理人：毛某，某某律师事务所律师。\\n\\n被上诉人（原审被告）：高某4，男，1949年2月3日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审被告）：汤某，女，1953年7月11日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审被告）：高某5，男，1976年3月10日出生，汉族，住上海市嘉定区。\\n\\n委托诉讼代理人：汤某（系高某5母亲），住上海市嘉定区。\\n\\n[DOC2_A2 | 案件背景]\\n上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。本院于2023年12月26日立案后，依法组成合议庭对本案进行了审理。本案现已审理终结。\\n\\n张某上诉请求：撤销一审判决，改判驳回高某1、高某2、高某3（以下简称高某1一方）在一审的全部诉讼请求。事实和理由：一、上诉人与高某1一方于2020年10月10日签订的《协议书》，系由高某1一方起草，对于协议书的内容，上诉人并不完全了解。《协议书》第一条中：“乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。”，上诉人的理解为房屋的使用面积为30平方米，而非宅基地面积30平方米。在此情况下，上诉人由于对于“30平方米”标准的误解才与高某1一方签订《协议书》。若高某1一方在签订协议时与上诉人说明此情况，上诉人是绝对不会签订该《协议书》的。上诉人与高某1一方协议约定的房屋的实际建造图纸也与当时口头的约定发生了重大变化。同时，《协议书》上甲方的签名，其中上诉人的签名是由高某4代为签署，上诉人对于《协议书》的内容，在一审证据出示前，是完全不知情的，实际上也侵害了上诉人的实际利益。二、高某1一方系非农户口，不享有农村新建房屋的资格，也无权在上诉人新申请的宅基地上建造房屋。对于已拆除的原房屋，应当以原始的31.9平方米的面积补偿高某1一方，由上诉人享有塔桥村200号新建房屋的实际权力。三、塔桥村200号是上诉人一家五口唯一的住宅，且两个70几岁的老年人都身患各种慢性病，考虑实际住房需要，不利于和高某1一方共同居住。四、根据一审中提供的证据也可以看出，2014年双方在法院达成调解协议后，归朱某、高某1一方所有的，从双方达成调解协议后双方已经分为两户人家。对一审中高某1一方提交的《农村宅基地和建房（规划许可）资格认定表》和《户代表推举表》的真实性不能确认，上诉人全家都没有看到高某1一方去签字。一审判决认定事实不清且有错误，判决明显不公，请求支持上诉人的上诉请求。\\n\\n高某1一方辩称，本案所涉只有一块宅基地，并不因分户行为增加宅基地。本次只是之前宅基地的置换，并不是新申请宅基地，因此原宅基地的权利人仍然有权利。而且高某1对嘉定区房屋的建造也进行了实际出资。一审认定事实清楚，适用法律正确。请求驳回上诉，维持原判。\\n\\n高某4、汤某、高某5辩称，高某4、汤某进行申请建造新房已经申请了十余年，高某1一方从未参与过。高某2、高某3不是农村集体户口，没有资格申请农村建房。同意上诉人的上诉请求。\\n\\n[DOC2_A3 | 一审诉求]\\n高某1一方秋向一审法院起诉请求：1.判令位于嘉定区房屋中西面一上一下楼房归高某1一方所有，高某4、汤某、高某5、张某（以下简称高某4一方）腾退房屋；2.本案诉讼费由高某4一方承担。\\n\\n[DOC2_A4 | 一审事实]\\n一审法院认定事实：张桂英（1999年死亡）与高万祥（1966年死亡）系夫妻关系，生育高某1、高某4；高某1与朱某（2015年1月25日死亡）系夫妻关系，生育高某2、高某3；高某4与汤某系夫妻关系，生育高某5；高某5与张某系夫妻关系。\\n\\n1972年2月张桂英申请建造位于嘉定县（即嘉定区）的平房两间及棚舍一间，立基人为高某1、朱某、高某2、高某3、高某4。1990年3月上述房屋颁发了以高某4为户主的宅基地使用证。因对该房屋的分割意见不一，2014年高某1、朱某、高某2、高某3将高某4诉至一审法院。经审理，双方达成调解协议，一审法院院据此依法作出（2014）嘉民一（民）初字第3892号民事调解书，确认：坐落于上海市嘉定区平房两间及棚舍一间（建筑面积57.9平方米），其中东面平房一间、棚舍一间归高某1、朱某、高某2、高某3所有，西面平房一间归高某4所有。后经申请，归高某1、朱某、高某2、高某3所有的，归高某4所有的房屋门牌号仍为200号，但双方所有房屋仍属于同一宅基地。\\n\\n2020年5月20日，高某5（户主）、汤某以原200号房屋已破旧、墙面开裂、宅基面积小为由申请出宅建造新房，并填写了《农村宅基地和建房（规划许可）资格认定表》和《户代表推举表》。相关部门在审批过程中发现，高某2、高某3的户口在200号-1房屋中，遂通知高某2、高某3作为家庭成员一并申请建房。后经审批，相关部门对200号、200号-1原宅基地作置换处理，置换后的新宅基地为塔桥村五组仓库场地，批准宅基地用地面积140平方米，建筑占地90平方米，建筑面积180平方米。新宅基地房屋立基人口为高某5、汤某、高某2、高某3，门牌号为。\\n\\n为建造新的宅基地房屋，高某2的配偶毛曙新出面联系某某公司的法定代表人王忠保，表示高某1一方、高某4一方要共同建造三上三下楼房，其中高某1一方是西侧一上一下共两间房屋，高某4一方是东侧二上二下共四间房屋。就西侧一上一下楼房，高某2、高某3与王忠保于2020年8月15日签订了《房屋翻建合同》，但双方仅口头协商建造的是一上一下楼房，书面合同对此未予明确。关于建造房屋的费用，起初两家是分别向王忠保支付的，高某1一方共计向王忠保支付22万元，高某4一方共计向王忠保支付73万元。因房屋建造过程中两家之间产生矛盾，高某4一方要求就三上三下楼房与王忠保统一进行结算，王忠保答应高某4一方并向高某1一方表示要将高某1一方已支付的22万元退还，但高某1一方认为西侧一上一下楼房是属于高某1一方的，故不予同意。\\n\\n此外，2020年10月10日，高某4一方（甲方）与高某1一方（乙方）签订协议书一份，载明：甲乙双方共同拥有宅基地117平方米及所属住房57.9平方米。1990年3月由村委会对该处宅基地和房屋予以登记。2014年6月经法院对上述房屋进行了析产[（2014）嘉民一（民）初字第3892号]，并由公安部门作了分户。2020年4月甲方申请建造新房得到批准，因上述宅基地偏小，相关部门作宅基地置换方式处理，置换后的新宅基地为塔桥村五组仓库场地，并收缴上述200、200-1号原宅基地、拆除所有附属建筑物（含乙方的房屋），乙方提出争议，经镇规划和土地管理所、塔桥村委会协调认为，原宅基地作置换处理后，乙方在新宅基地上具有原房屋占地面积的份额。为此，甲乙双方根据上述部门意见，商量达成以下协议：一、依据原宅基地房屋产权面积，甲方房屋占地面积为26平方米，乙方房屋占地面积为31.9平方米。宅基地置换后，乙方在新宅基地中的面积为30平方米。二、甲乙双方同时在新宅基地上按所得面积建造新房，各自享有独立房屋单元空间，甲方为东侧，乙方为西侧。三、甲乙双方各自承担房屋建造、附属设施及水电等配套建设费用。四、本协议由镇规划和土地管理所、塔桥村委会见证，在相关档案资料中予以备案。五、本协议一式六份，甲乙双方各执二份；镇规划和土地管理所、塔桥村委会各一份备案。\\n\\n一审另查明，1.为建造新的宅基地房屋，高某4一方支付场地折价费28,000元、建房测绘费1,304元、建房保险服务费3,000元、造房押金35,000元；2.新宅基地房屋中东侧二上二下楼房与西侧一上一下楼房原本都有独立的楼梯，后来高某4一方让施工队将西侧一上一下楼房的楼梯砸掉了。\\n\\n一审审理中，高某1一方表示同意分担高某4一方支付的除造房押金之外的费用。高某4一方则表示双方未协商过费用分担，费用应由高某4一方承担；因后来建造房屋的图纸与开始的图纸有变化，房屋结构发生严重变化，因此高某4一方不认可双方签订的协议，并让施工队砸掉了西侧一上一下楼房的楼梯。\\n\\n以上事实，有（2014）嘉民一（民）初字第3892号民事调解书、居民死亡医学证明书、《农村宅基地和建房（规划许可）资格认定表》《户代表推举表》《关于塔桥5队村民建房的决议》《农村宅基地和建房（规划许可）审批表》、乡村建设规划许可证、《华亭镇农村村民住房建设开工备案表》《房屋翻建合同》、上海市农村集体经济组织统一收据、上海市增值税普通发票、证明、协议书、营业执照、银行交易明细清单、银行转账回执、收条、王忠保的调查笔录及当事人陈述等为证，一审法院予以确认。\\n\\n一审法院认为，公民的合法财产受法律保护。就系争的嘉定区房屋，高某1一方、高某4一方签订的协议书系双方当事人真实意思表示，且未违反法律法规的效力性强制性规定，故合法有效，对双方当事人均有约束力。该协议明确高某1一方在新宅基地中的面积为30平方米，双方同时在新宅基地上按所得面积建造新房，各自享有独立房屋单元空间，各自承担房屋建造费用。结合三上三下楼房的实际建造过程，西侧一上一下楼房由高某1一方与王忠保签订《房屋翻建合同》，并由高某1一方支付相应建房费用，故一审法院认为双方签订的协议书中所明确的高某1一方在新宅基地上的面积30平方米应为建筑占地面积。高某1一方要求西侧一上一下楼房归其所有的诉讼请求，合法有据，一审法院予以支持。现西侧一上一下楼房由高某4一方占有，高某4一方理应腾退该房屋，并将房屋移交给高某1一方。关于高某4一方支付的场地折价费28,000元、建房测绘费1,304元、建房保险服务费3,000元，该费用确系为房屋所支出，且高某1一方同意分担该费用，故应由高某1一方承担其中三分之一的费用即10,768元。据此，依照《中华人民共和国民法典》第三百零三条、第三百零四条第一款之规定，一审法院判决：一、坐落于上海市嘉定区三上三下楼房中的西面一上一下楼房归高某1、高某2、高某3所有；二、坐落于上海市嘉定区三上三下楼房中的东面二上二下楼房归高某4、汤某、高某5、张某所有；三、高某4、汤某、高某5、张某应于判决生效之日起十日内从上海市嘉定区三上三下楼房中的西面一上一下楼房中腾退，并将房屋移交给高某1、高某2、高某3；四、高某1、高某2、高某3应于判决生效之日起十日内支付高某4、汤某、高某5、张某10,768元。如果未按判决指定的期间履行给付金钱义务，应当依照《中华人民共和国民事诉讼法》第二百六十条规定，加倍支付迟延履行期间的债务利息。一审案件受理费13,300元，减半收取6,650元，由高某1、高某2、高某3负担2,217元，高某4、汤某、高某5、张某负担4,433元。高某4、汤某、高某5、张某负担之款，应于判决生效之日起七日内缴付一审法院。\\n\\n[DOC2_A5 | 二审情况]\\n二审中，各方当事人均未提交符合法律规定的新证据。\\n\\n本院经审理查明，一审法院认定的事实无误，本院予以确认。\\n\\n本院认为，根据本案在案证据，涉案的嘉定区系对200号、200号-1宅基地置换取得，高某2、高某3的非集体组织成员身份不影响其在涉案宅基地上房屋的权利。高某1一方、高某4一方针对双方争议的该宅基地上房屋签订协议书。上诉人张某主张该协议书上张某的签名系高某5代签，且对协议中约定的“乙方在新宅基地中的面积为30平方米”的标准存在误解，与双方口头上的约定不一致。本院认为，张某与高某5系夫妻关系，且张某也确认高某5签署协议后已告知张某，张某亦未对代签名一事提出异议。一审认定该协议为双方真实意思表示，对双方均有约束力并无不当。一审法院依据当事人之间的协议，综合考虑涉案宅基地上房屋的实际情况所作判决并无不当。上诉人的上诉请求缺乏事实和法律依据，本院难以支持。综上所述，上诉人的上诉请求不能成立，应予驳回；一审判决认定事实清楚，适用法律正确，应予维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项之规定，判决如下：\\n\\n驳回上诉，维持原判。\\n\\n二审案件受理费4,600元，由上诉人张某负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"], \"primary_anchor_id\": \"DOC2_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书2\"], \"anchor_targets\": [\"乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。\", \"30平方米\", \"判决文书2\"], \"anchor_value_hints\": [\"2\", \"1\", \"3\", \"4\", \"5\", \"2023\", \"0114\", \"22338\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prerequisite_of\": 2}, \"top_related_anchor_ids\": [\"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}]}</info>\n<think>该段落提供了关于案件背景的信息，明确指出这是一个涉及分家析产和法定继承纠纷的案件，且属于民事案件范畴。因此，可以确定《判决文书2》属于民事案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书2\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人张某因分家析产、法定继承纠纷不服一审判决提起上诉，涉及《协议书》内容的理解和执行。 上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。本院于2023年12月26日立案后，依法组成合议庭对本案进行了审理。本案现已审理终结。 张某上诉请求：撤销一审判决，改判驳回高某1、高某2、高某3（以下简称高某1一方）在一审的全部诉讼请求。事实和理由：一、上诉人与高某1一方于2020年10月10日签订的《协议书》，系由高某1一方起草，对于协议书的内容，上诉人并不完全了解。《协议书》第一条中：“乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。”，上诉人的理解为房屋的使用面积为30平方米，而非宅基地面积30平方米。在此情况下，上诉人由于对于“30平方米”标准的误解才与高某1一方签订《协议书》。若高某1一方在签订协议时与上诉人说明此情况，上诉人是绝对不会签订该《协议书》的。上诉人与高某1一方协议约定的房屋的实际建造图纸也与当时口头的约定发生了重大变化。同时，《协议书》上甲方的签名，其中上诉人的签名是由高某4代为签署，上诉人对于《协议书》的内容，在...\"], \"selected_relation_anchor_ids\": [\"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document appears to involve a dispute over property and inheritance, which suggests it might fall under the category of '民事案件'. I will inspect the chunk that provides background information on the case to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"utility_hits\": {\"DOC2_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC2_A2\": 11.0, \"DOC2_A5\": 11.0, \"DOC2_A4\": 11.0, \"DOC2_A1\": 5.0}, \"score_breakdown\": {\"DOC2_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC2_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}, \"DOC2_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 25.691}, \"DOC2_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC2_A2: 上诉人张某因分家析产、法定继承纠纷不服一审判决提起上诉，涉及《协议书》内容的理解和执行。\", \"text\": \"[DOC2_A1 | 当事人信息]\\n上诉人（原审被告）：张某，女，1976年9月11日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审原告）：高某1，男，1939年11月14日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审原告）：高某2，女，1964年1月29日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审原告）：高某3，女，1966年4月10日出生，汉族，住上海市嘉定区。\\n\\n上列三被上诉人共同委托诉讼代理人：毛某，某某律师事务所律师。\\n\\n被上诉人（原审被告）：高某4，男，1949年2月3日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审被告）：汤某，女，1953年7月11日出生，汉族，住上海市嘉定区。\\n\\n被上诉人（原审被告）：高某5，男，1976年3月10日出生，汉族，住上海市嘉定区。\\n\\n委托诉讼代理人：汤某（系高某5母亲），住上海市嘉定区。\\n\\n[DOC2_A2 | 案件背景]\\n上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。本院于2023年12月26日立案后，依法组成合议庭对本案进行了审理。本案现已审理终结。\\n\\n张某上诉请求：撤销一审判决，改判驳回高某1、高某2、高某3（以下简称高某1一方）在一审的全部诉讼请求。事实和理由：一、上诉人与高某1一方于2020年10月10日签订的《协议书》，系由高某1一方起草，对于协议书的内容，上诉人并不完全了解。《协议书》第一条中：“乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。”，上诉人的理解为房屋的使用面积为30平方米，而非宅基地面积30平方米。在此情况下，上诉人由于对于“30平方米”标准的误解才与高某1一方签订《协议书》。若高某1一方在签订协议时与上诉人说明此情况，上诉人是绝对不会签订该《协议书》的。上诉人与高某1一方协议约定的房屋的实际建造图纸也与当时口头的约定发生了重大变化。同时，《协议书》上甲方的签名，其中上诉人的签名是由高某4代为签署，上诉人对于《协议书》的内容，在一审证据出示前，是完全不知情的，实际上也侵害了上诉人的实际利益。二、高某1一方系非农户口，不享有农村新建房屋的资格，也无权在上诉人新申请的宅基地上建造房屋。对于已拆除的原房屋，应当以原始的31.9平方米的面积补偿高某1一方，由上诉人享有塔桥村200号新建房屋的实际权力。三、塔桥村200号是上诉人一家五口唯一的住宅，且两个70几岁的老年人都身患各种慢性病，考虑实际住房需要，不利于和高某1一方共同居住。四、根据一审中提供的证据也可以看出，2014年双方在法院达成调解协议后，归朱某、高某1一方所有的，从双方达成调解协议后双方已经分为两户人家。对一审中高某1一方提交的《农村宅基地和建房（规划许可）资格认定表》和《户代表推举表》的真实性不能确认，上诉人全家都没有看到高某1一方去签字。一审判决认定事实不清且有错误，判决明显不公，请求支持上诉人的上诉请求。\\n\\n高某1一方辩称，本案所涉只有一块宅基地，并不因分户行为增加宅基地。本次只是之前宅基地的置换，并不是新申请宅基地，因此原宅基地的权利人仍然有权利。而且高某1对嘉定区房屋的建造也进行了实际出资。一审认定事实清楚，适用法律正确。请求驳回上诉，维持原判。\\n\\n高某4、汤某、高某5辩称，高某4、汤某进行申请建造新房已经申请了十余年，高某1一方从未参与过。高某2、高某3不是农村集体户口，没有资格申请农村建房。同意上诉人的上诉请求。\\n\\n[DOC2_A3 | 一审诉求]\\n高某1一方秋向一审法院起诉请求：1.判令位于嘉定区房屋中西面一上一下楼房归高某1一方所有，高某4、汤某、高某5、张某（以下简称高某4一方）腾退房屋；2.本案诉讼费由高某4一方承担。\\n\\n[DOC2_A4 | 一审事实]\\n一审法院认定事实：张桂英（1999年死亡）与高万祥（1966年死亡）系夫妻关系，生育高某1、高某4；高某1与朱某（2015年1月25日死亡）系夫妻关系，生育高某2、高某3；高某4与汤某系夫妻关系，生育高某5；高某5与张某系夫妻关系。\\n\\n1972年2月张桂英申请建造位于嘉定县（即嘉定区）的平房两间及棚舍一间，立基人为高某1、朱某、高某2、高某3、高某4。1990年3月上述房屋颁发了以高某4为户主的宅基地使用证。因对该房屋的分割意见不一，2014年高某1、朱某、高某2、高某3将高某4诉至一审法院。经审理，双方达成调解协议，一审法院院据此依法作出（2014）嘉民一（民）初字第3892号民事调解书，确认：坐落于上海市嘉定区平房两间及棚舍一间（建筑面积57.9平方米），其中东面平房一间、棚舍一间归高某1、朱某、高某2、高某3所有，西面平房一间归高某4所有。后经申请，归高某1、朱某、高某2、高某3所有的，归高某4所有的房屋门牌号仍为200号，但双方所有房屋仍属于同一宅基地。\\n\\n2020年5月20日，高某5（户主）、汤某以原200号房屋已破旧、墙面开裂、宅基面积小为由申请出宅建造新房，并填写了《农村宅基地和建房（规划许可）资格认定表》和《户代表推举表》。相关部门在审批过程中发现，高某2、高某3的户口在200号-1房屋中，遂通知高某2、高某3作为家庭成员一并申请建房。后经审批，相关部门对200号、200号-1原宅基地作置换处理，置换后的新宅基地为塔桥村五组仓库场地，批准宅基地用地面积140平方米，建筑占地90平方米，建筑面积180平方米。新宅基地房屋立基人口为高某5、汤某、高某2、高某3，门牌号为。\\n\\n为建造新的宅基地房屋，高某2的配偶毛曙新出面联系某某公司的法定代表人王忠保，表示高某1一方、高某4一方要共同建造三上三下楼房，其中高某1一方是西侧一上一下共两间房屋，高某4一方是东侧二上二下共四间房屋。就西侧一上一下楼房，高某2、高某3与王忠保于2020年8月15日签订了《房屋翻建合同》，但双方仅口头协商建造的是一上一下楼房，书面合同对此未予明确。关于建造房屋的费用，起初两家是分别向王忠保支付的，高某1一方共计向王忠保支付22万元，高某4一方共计向王忠保支付73万元。因房屋建造过程中两家之间产生矛盾，高某4一方要求就三上三下楼房与王忠保统一进行结算，王忠保答应高某4一方并向高某1一方表示要将高某1一方已支付的22万元退还，但高某1一方认为西侧一上一下楼房是属于高某1一方的，故不予同意。\\n\\n此外，2020年10月10日，高某4一方（甲方）与高某1一方（乙方）签订协议书一份，载明：甲乙双方共同拥有宅基地117平方米及所属住房57.9平方米。1990年3月由村委会对该处宅基地和房屋予以登记。2014年6月经法院对上述房屋进行了析产[（2014）嘉民一（民）初字第3892号]，并由公安部门作了分户。2020年4月甲方申请建造新房得到批准，因上述宅基地偏小，相关部门作宅基地置换方式处理，置换后的新宅基地为塔桥村五组仓库场地，并收缴上述200、200-1号原宅基地、拆除所有附属建筑物（含乙方的房屋），乙方提出争议，经镇规划和土地管理所、塔桥村委会协调认为，原宅基地作置换处理后，乙方在新宅基地上具有原房屋占地面积的份额。为此，甲乙双方根据上述部门意见，商量达成以下协议：一、依据原宅基地房屋产权面积，甲方房屋占地面积为26平方米，乙方房屋占地面积为31.9平方米。宅基地置换后，乙方在新宅基地中的面积为30平方米。二、甲乙双方同时在新宅基地上按所得面积建造新房，各自享有独立房屋单元空间，甲方为东侧，乙方为西侧。三、甲乙双方各自承担房屋建造、附属设施及水电等配套建设费用。四、本协议由镇规划和土地管理所、塔桥村委会见证，在相关档案资料中予以备案。五、本协议一式六份，甲乙双方各执二份；镇规划和土地管理所、塔桥村委会各一份备案。\\n\\n一审另查明，1.为建造新的宅基地房屋，高某4一方支付场地折价费28,000元、建房测绘费1,304元、建房保险服务费3,000元、造房押金35,000元；2.新宅基地房屋中东侧二上二下楼房与西侧一上一下楼房原本都有独立的楼梯，后来高某4一方让施工队将西侧一上一下楼房的楼梯砸掉了。\\n\\n一审审理中，高某1一方表示同意分担高某4一方支付的除造房押金之外的费用。高某4一方则表示双方未协商过费用分担，费用应由高某4一方承担；因后来建造房屋的图纸与开始的图纸有变化，房屋结构发生严重变化，因此高某4一方不认可双方签订的协议，并让施工队砸掉了西侧一上一下楼房的楼梯。\\n\\n以上事实，有（2014）嘉民一（民）初字第3892号民事调解书、居民死亡医学证明书、《农村宅基地和建房（规划许可）资格认定表》《户代表推举表》《关于塔桥5队村民建房的决议》《农村宅基地和建房（规划许可）审批表》、乡村建设规划许可证、《华亭镇农村村民住房建设开工备案表》《房屋翻建合同》、上海市农村集体经济组织统一收据、上海市增值税普通发票、证明、协议书、营业执照、银行交易明细清单、银行转账回执、收条、王忠保的调查笔录及当事人陈述等为证，一审法院予以确认。\\n\\n一审法院认为，公民的合法财产受法律保护。就系争的嘉定区房屋，高某1一方、高某4一方签订的协议书系双方当事人真实意思表示，且未违反法律法规的效力性强制性规定，故合法有效，对双方当事人均有约束力。该协议明确高某1一方在新宅基地中的面积为30平方米，双方同时在新宅基地上按所得面积建造新房，各自享有独立房屋单元空间，各自承担房屋建造费用。结合三上三下楼房的实际建造过程，西侧一上一下楼房由高某1一方与王忠保签订《房屋翻建合同》，并由高某1一方支付相应建房费用，故一审法院认为双方签订的协议书中所明确的高某1一方在新宅基地上的面积30平方米应为建筑占地面积。高某1一方要求西侧一上一下楼房归其所有的诉讼请求，合法有据，一审法院予以支持。现西侧一上一下楼房由高某4一方占有，高某4一方理应腾退该房屋，并将房屋移交给高某1一方。关于高某4一方支付的场地折价费28,000元、建房测绘费1,304元、建房保险服务费3,000元，该费用确系为房屋所支出，且高某1一方同意分担该费用，故应由高某1一方承担其中三分之一的费用即10,768元。据此，依照《中华人民共和国民法典》第三百零三条、第三百零四条第一款之规定，一审法院判决：一、坐落于上海市嘉定区三上三下楼房中的西面一上一下楼房归高某1、高某2、高某3所有；二、坐落于上海市嘉定区三上三下楼房中的东面二上二下楼房归高某4、汤某、高某5、张某所有；三、高某4、汤某、高某5、张某应于判决生效之日起十日内从上海市嘉定区三上三下楼房中的西面一上一下楼房中腾退，并将房屋移交给高某1、高某2、高某3；四、高某1、高某2、高某3应于判决生效之日起十日内支付高某4、汤某、高某5、张某10,768元。如果未按判决指定的期间履行给付金钱义务，应当依照《中华人民共和国民事诉讼法》第二百六十条规定，加倍支付迟延履行期间的债务利息。一审案件受理费13,300元，减半收取6,650元，由高某1、高某2、高某3负担2,217元，高某4、汤某、高某5、张某负担4,433元。高某4、汤某、高某5、张某负担之款，应于判决生效之日起七日内缴付一审法院。\\n\\n[DOC2_A5 | 二审情况]\\n二审中，各方当事人均未提交符合法律规定的新证据。\\n\\n本院经审理查明，一审法院认定的事实无误，本院予以确认。\\n\\n本院认为，根据本案在案证据，涉案的嘉定区系对200号、200号-1宅基地置换取得，高某2、高某3的非集体组织成员身份不影响其在涉案宅基地上房屋的权利。高某1一方、高某4一方针对双方争议的该宅基地上房屋签订协议书。上诉人张某主张该协议书上张某的签名系高某5代签，且对协议中约定的“乙方在新宅基地中的面积为30平方米”的标准存在误解，与双方口头上的约定不一致。本院认为，张某与高某5系夫妻关系，且张某也确认高某5签署协议后已告知张某，张某亦未对代签名一事提出异议。一审认定该协议为双方真实意思表示，对双方均有约束力并无不当。一审法院依据当事人之间的协议，综合考虑涉案宅基地上房屋的实际情况所作判决并无不当。上诉人的上诉请求缺乏事实和法律依据，本院难以支持。综上所述，上诉人的上诉请求不能成立，应予驳回；一审判决认定事实清楚，适用法律正确，应予维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项之规定，判决如下：\\n\\n驳回上诉，维持原判。\\n\\n二审案件受理费4,600元，由上诉人张某负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"], \"primary_anchor_id\": \"DOC2_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书2\"], \"anchor_targets\": [\"乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。\", \"30平方米\", \"判决文书2\"], \"anchor_value_hints\": [\"2\", \"1\", \"3\", \"4\", \"5\", \"2023\", \"0114\", \"22338\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prerequisite_of\": 2}, \"top_related_anchor_ids\": [\"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}]}</info>\n<think>该段落提供了关于案件背景的信息，明确指出这是一个涉及分家析产和法定继承纠纷的案件，且属于民事案件范畴。因此，可以确定《判决文书2》属于民事案件。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书2\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 上诉人张某因分家析产、法定继承纠纷不服一审判决提起上诉，涉及《协议书》内容的理解和执行。 上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号民事判决，向本院提起上诉。本院于2023年12月26日立案后，依法组成合议庭对本案进行了审理。本案现已审理终结。 张某上诉请求：撤销一审判决，改判驳回高某1、高某2、高某3（以下简称高某1一方）在一审的全部诉讼请求。事实和理由：一、上诉人与高某1一方于2020年10月10日签订的《协议书》，系由高某1一方起草，对于协议书的内容，上诉人并不完全了解。《协议书》第一条中：“乙方（被上诉人四、五、六）在新宅基地中的面积为30平方米。”，上诉人的理解为房屋的使用面积为30平方米，而非宅基地面积30平方米。在此情况下，上诉人由于对于“30平方米”标准的误解才与高某1一方签订《协议书》。若高某1一方在签订协议时与上诉人说明此情况，上诉人是绝对不会签订该《协议书》的。上诉人与高某1一方协议约定的房屋的实际建造图纸也与当时口头的约定发生了重大变化。同时，《协议书》上甲方的签名，其中上诉人的签名是由高某4代为签署，上诉人对于《协议书》的内容，在...\"], \"selected_relation_anchor_ids\": [\"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC2_A2\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

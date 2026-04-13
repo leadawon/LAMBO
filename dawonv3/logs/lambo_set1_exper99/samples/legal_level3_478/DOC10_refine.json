@@ -1,0 +1,1418 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "selected_anchor_ids": [
+    "DOC10_A2",
+    "DOC10_A5",
+    "DOC10_A4"
+  ],
+  "final_current_query": "继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A2",
+        "candidate_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ],
+        "utility_hits": {
+          "DOC10_A5": [
+            "legal_label_hit=['民间借贷纠纷', '民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A2": [
+            "legal_label_hit=['民间借贷纠纷', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A4": [
+            "legal_label_hit=['民间借贷纠纷', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A6": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC10_A5": 21.0,
+          "DOC10_A2": 16.0,
+          "DOC10_A4": 16.0,
+          "DOC10_A6": 16.0
+        },
+        "score_breakdown": {
+          "DOC10_A5": {
+            "local_relevance": 24.0,
+            "answer_utility": 21.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 58.508
+          },
+          "DOC10_A2": {
+            "local_relevance": 20.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 47.201
+          },
+          "DOC10_A4": {
+            "local_relevance": 20.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 46.691
+          },
+          "DOC10_A6": {
+            "local_relevance": 8.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 0.0,
+            "total": 37.354
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC10_A2",
+      "plan_think": "The document seems to involve a case related to '民间借贷纠纷'. I will inspect the chunk that provides more details on the case background to confirm the category.",
+      "info": {
+        "anchor_id": "DOC10_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC10_A2: 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。",
+        "text": "[DOC10_A1 | 当事人信息]\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\n\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\n\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\n\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\n\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\n\n[DOC10_A2 | 案件背景]\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\n\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\n\n[DOC10_A3 | 管辖权异议]\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\n\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\n\n[DOC10_A4 | 管辖权争议]\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\n\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\n\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\n\n[DOC10_A5 | 最高人民法院裁定]\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\n\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\n\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\n\n[DOC10_A6 | 裁定结果]\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\n\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\n\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\n\n本裁定一经作出即发生法律效力。",
+        "source_window_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4",
+          "DOC10_A5",
+          "DOC10_A6"
+        ],
+        "primary_anchor_id": "DOC10_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书10"
+        ],
+        "anchor_targets": [
+          "民间借贷纠纷",
+          "判决文书10"
+        ],
+        "anchor_value_hints": [
+          "10",
+          "2022",
+          "7",
+          "5",
+          "1258000元",
+          "850000元"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 5,
+            "same_case": 5,
+            "disambiguates": 5,
+            "likely_same_entity": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A5",
+            "DOC10_A4",
+            "DOC10_A3",
+            "DOC10_A1",
+            "DOC10_A6"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC10_A6",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书10']"
+          }
+        ]
+      },
+      "extract_think": "The chunk clearly indicates that the case involves a '民间借贷纠纷'. The document title '判决文书10' can be categorized under '民间借贷纠纷'. No other categories are mentioned in this chunk, so we need to continue searching for other documents to complete the full categorization.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民间借贷纠纷",
+            "value": "判决文书10",
+            "normalized_value": "判决文书10",
+            "evidence_text": "原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。",
+            "source_doc_id": "DOC10",
+            "source_anchor_id": "DOC10_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC10_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC10_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC10_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC10_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC10_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC10_A6",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书10']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民间借贷纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书10"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC10_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A5",
+            "DOC10_A4",
+            "DOC10_A3",
+            "DOC10_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A5",
+        "candidate_anchor_ids": [
+          "NEXT_DOC_A1",
+          "NEXT_DOC_A2",
+          "NEXT_DOC_A3",
+          "NEXT_DOC_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "民间借贷纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书10"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC10_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A5",
+            "DOC10_A4",
+            "DOC10_A3",
+            "DOC10_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC10_A2"
+        ],
+        "utility_hits": {
+          "DOC10_A5": [
+            "legal_label_hit=['民间借贷纠纷', '民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A4": [
+            "legal_label_hit=['民间借贷纠纷', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A6": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A3": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC10_A5": 21.0,
+          "DOC10_A4": 16.0,
+          "DOC10_A6": 16.0,
+          "DOC10_A3": 16.0
+        },
+        "relation_hits": {
+          "DOC10_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A2"
+          ],
+          "DOC10_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A2"
+          ],
+          "DOC10_A6": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A2"
+          ],
+          "DOC10_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC10_A5": 18.18,
+          "DOC10_A4": 15.18,
+          "DOC10_A6": 18.18,
+          "DOC10_A3": 15.18
+        },
+        "anchor_role_hits": {
+          "DOC10_A5": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC10_A4": [
+            "case_identity"
+          ],
+          "DOC10_A6": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC10_A3": [
+            "case_identity"
+          ]
+        },
+        "score_breakdown": {
+          "DOC10_A5": {
+            "local_relevance": 16.0,
+            "answer_utility": 21.0,
+            "coverage": 2.0,
+            "relation": 18.18,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 3.0,
+            "total": 59.688
+          },
+          "DOC10_A4": {
+            "local_relevance": 12.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 15.18,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 47.871
+          },
+          "DOC10_A6": {
+            "local_relevance": 4.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 18.18,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 3.0,
+            "total": 42.534
+          },
+          "DOC10_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 15.18,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 40.094
+          }
+        }
+      },
+      "anchor_id": "DOC10_A5",
+      "plan_think": "The current document has been categorized as '民间借贷纠纷'. Since there are no other categories mentioned within this document, it's time to move on to another document to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'. I will proceed to the next document to continue the classification process.",
+      "info": {
+        "anchor_id": "DOC10_A5",
+        "anchor_type": "paragraph_region",
+        "section_path": "最高人民法院裁定",
+        "summary": "Expanded same-section read window around DOC10_A5: 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。",
+        "text": "[DOC10_A1 | 当事人信息]\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\n\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\n\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\n\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\n\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\n\n[DOC10_A2 | 案件背景]\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\n\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\n\n[DOC10_A3 | 管辖权异议]\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\n\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\n\n[DOC10_A4 | 管辖权争议]\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\n\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\n\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\n\n[DOC10_A5 | 最高人民法院裁定]\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\n\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\n\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\n\n[DOC10_A6 | 裁定结果]\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\n\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\n\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\n\n本裁定一经作出即发生法律效力。",
+        "source_window_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4",
+          "DOC10_A5",
+          "DOC10_A6"
+        ],
+        "primary_anchor_id": "DOC10_A5",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书10"
+        ],
+        "anchor_targets": [
+          "民间借贷纠纷",
+          "因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。",
+          "债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。",
+          "合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。",
+          "判决文书10"
+        ],
+        "anchor_value_hints": [
+          "10"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 5,
+            "same_case": 5,
+            "disambiguates": 5,
+            "likely_same_entity": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A4",
+            "DOC10_A3",
+            "DOC10_A2",
+            "DOC10_A1",
+            "DOC10_A6"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC10_A6",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书10']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk from the highest court's ruling reiterates that the case is a '民间借贷纠纷'. It does not provide any new categories or additional documents to classify. Therefore, no new evidence items are extracted, but we should continue searching for other documents to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民间借贷纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书10"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC10_A2",
+            "DOC10_A5"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。",
+            "最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A4",
+            "DOC10_A3",
+            "DOC10_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A4",
+        "candidate_anchor_ids": [
+          "NEXT_DOC_A1",
+          "NEXT_DOC_A2",
+          "NEXT_DOC_A3",
+          "NEXT_DOC_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "民间借贷纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书10"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC10_A2",
+            "DOC10_A5"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。",
+            "最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A4",
+            "DOC10_A3",
+            "DOC10_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC10_A2",
+          "DOC10_A5"
+        ],
+        "utility_hits": {
+          "DOC10_A4": [
+            "legal_label_hit=['民间借贷纠纷', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A6": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A3": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC10_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC10_A4": 16.0,
+          "DOC10_A6": 16.0,
+          "DOC10_A3": 16.0,
+          "DOC10_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC10_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A5",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A5",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A5",
+            "disambiguates_selected=DOC10_A2",
+            "likely_same_entity_selected=DOC10_A5"
+          ],
+          "DOC10_A6": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A5",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A5",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A5",
+            "disambiguates_selected=DOC10_A2",
+            "likely_same_entity_selected=DOC10_A5"
+          ],
+          "DOC10_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A5",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A5",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A5",
+            "disambiguates_selected=DOC10_A2",
+            "likely_same_entity_selected=DOC10_A5"
+          ],
+          "DOC10_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC10_A5",
+            "supports_selected=DOC10_A2",
+            "same_case_selected=DOC10_A5",
+            "same_case_selected=DOC10_A2",
+            "disambiguates_selected=DOC10_A5",
+            "disambiguates_selected=DOC10_A2",
+            "likely_same_entity_selected=DOC10_A5"
+          ]
+        },
+        "relation_score": {
+          "DOC10_A4": 25.91,
+          "DOC10_A6": 28.91,
+          "DOC10_A3": 25.91,
+          "DOC10_A1": 25.91
+        },
+        "anchor_role_hits": {
+          "DOC10_A4": [
+            "case_identity"
+          ],
+          "DOC10_A6": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC10_A3": [
+            "case_identity"
+          ],
+          "DOC10_A1": [
+            "case_identity"
+          ]
+        },
+        "score_breakdown": {
+          "DOC10_A4": {
+            "local_relevance": 12.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 25.91,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 58.601
+          },
+          "DOC10_A6": {
+            "local_relevance": 4.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 28.91,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 3.0,
+            "total": 53.264
+          },
+          "DOC10_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 25.91,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 50.824
+          },
+          "DOC10_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 25.91,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 36.21
+          }
+        }
+      },
+      "anchor_id": "DOC10_A4",
+      "plan_think": "The current document '判决文书10' has already been categorized as '民间借贷纠纷'. To continue the classification process, we need to inspect the next document to identify cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'. Since we have exhausted the relevant information in the current document, we should move on to the next document.",
+      "info": {
+        "anchor_id": "DOC10_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "管辖权争议",
+        "summary": "Expanded same-section read window around DOC10_A4: 北京市平谷区人民法院认为自己无管辖权，层报北京市高级人民法院，北京市高级人民法院与新疆维吾尔自治区高级人民法院协商未果，报请最高人民法院指定管辖。",
+        "text": "[DOC10_A1 | 当事人信息]\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\n\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\n\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\n\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\n\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\n\n[DOC10_A2 | 案件背景]\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\n\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\n\n[DOC10_A3 | 管辖权异议]\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\n\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\n\n[DOC10_A4 | 管辖权争议]\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\n\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\n\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\n\n[DOC10_A5 | 最高人民法院裁定]\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\n\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\n\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\n\n[DOC10_A6 | 裁定结果]\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\n\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\n\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\n\n本裁定一经作出即发生法律效力。",
+        "source_window_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4",
+          "DOC10_A5",
+          "DOC10_A6"
+        ],
+        "primary_anchor_id": "DOC10_A4",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书10"
+        ],
+        "anchor_targets": [
+          "民间借贷纠纷",
+          "判决文书10"
+        ],
+        "anchor_value_hints": [
+          "10"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 5,
+            "same_case": 5,
+            "disambiguates": 5,
+            "likely_same_entity": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A5",
+            "DOC10_A3",
+            "DOC10_A2",
+            "DOC10_A1",
+            "DOC10_A6"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC10_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC10_A6",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书10']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk discusses jurisdictional disputes and confirms that the case is a '民间借贷纠纷'. However, it does not provide any new categories or additional documents to classify. Therefore, no new evidence items are extracted, but we should continue searching for other documents to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民间借贷纠纷"
+          ],
+          "known_value_signatures": [
+            "判决文书10"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC10_A2",
+            "DOC10_A5",
+            "DOC10_A4"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。",
+            "最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收...",
+            "管辖权争议 北京市平谷区人民法院认为自己无管辖权，层报北京市高级人民法院，北京市高级人民法院与新疆维吾尔自治区高级人民法院协商未果，报请最高人民法院指定管辖。 北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。 北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC10_A6",
+            "DOC10_A3",
+            "DOC10_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC10_A2",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书10']"
+            },
+            {
+              "source_anchor_id": "DOC10_A5",
+              "target_anchor_id": "DOC10_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC10_A5",
+              "target_anchor_id": "DOC10_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民间借贷纠纷",
+      "value": "判决文书10",
+      "normalized_value": "判决文书10",
+      "evidence_text": "原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。",
+      "source_doc_id": "DOC10",
+      "source_anchor_id": "DOC10_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC10_A6",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书10']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The document seems to involve a case related to '民间借贷纠纷'. I will inspect the chunk that provides more details on the case background to confirm the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"], \"utility_hits\": {\"DOC10_A5\": [\"legal_label_hit=['民间借贷纠纷', '民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A2\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A4\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A6\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC10_A5\": 21.0, \"DOC10_A2\": 16.0, \"DOC10_A4\": 16.0, \"DOC10_A6\": 16.0}, \"score_breakdown\": {\"DOC10_A5\": {\"local_relevance\": 24.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 58.508}, \"DOC10_A2\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 47.201}, \"DOC10_A4\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 46.691}, \"DOC10_A6\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 37.354}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC10_A2: 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"text\": \"[DOC10_A1 | 当事人信息]\\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\\n\\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\\n\\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\\n\\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\\n\\n[DOC10_A2 | 案件背景]\\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\\n\\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\\n\\n[DOC10_A3 | 管辖权异议]\\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\\n\\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\\n\\n[DOC10_A4 | 管辖权争议]\\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\\n\\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\\n\\n[DOC10_A5 | 最高人民法院裁定]\\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\\n\\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\\n\\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\\n\\n[DOC10_A6 | 裁定结果]\\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\\n\\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\\n\\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n本裁定一经作出即发生法律效力。\", \"source_window_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\", \"DOC10_A5\", \"DOC10_A6\"], \"primary_anchor_id\": \"DOC10_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书10\"], \"anchor_targets\": [\"民间借贷纠纷\", \"判决文书10\"], \"anchor_value_hints\": [\"10\", \"2022\", \"7\", \"5\", \"1258000元\", \"850000元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\", \"DOC10_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}]}</info>\n<think>The chunk clearly indicates that the case involves a '民间借贷纠纷'. The document title '判决文书10' can be categorized under '民间借贷纠纷'. No other categories are mentioned in this chunk, so we need to continue searching for other documents to complete the full categorization.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民间借贷纠纷\", \"value\": \"判决文书10\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The current document has been categorized as '民间借贷纠纷'. Since there are no other categories mentioned within this document, it's time to move on to another document to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'. I will proceed to the next document to continue the classification process.</think>\n<search>{\"current_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A5\", \"candidate_anchor_ids\": [\"NEXT_DOC_A1\", \"NEXT_DOC_A2\", \"NEXT_DOC_A3\", \"NEXT_DOC_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC10_A2\"], \"utility_hits\": {\"DOC10_A5\": [\"legal_label_hit=['民间借贷纠纷', '民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A4\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A6\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC10_A5\": 21.0, \"DOC10_A4\": 16.0, \"DOC10_A6\": 16.0, \"DOC10_A3\": 16.0}, \"relation_hits\": {\"DOC10_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"], \"DOC10_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"], \"DOC10_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"], \"DOC10_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"]}, \"relation_score\": {\"DOC10_A5\": 18.18, \"DOC10_A4\": 15.18, \"DOC10_A6\": 18.18, \"DOC10_A3\": 15.18}, \"anchor_role_hits\": {\"DOC10_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A4\": [\"case_identity\"], \"DOC10_A6\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A3\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC10_A5\": {\"local_relevance\": 16.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 59.688}, \"DOC10_A4\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 15.18, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 47.871}, \"DOC10_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.354, \"redundancy_penalty\": 3.0, \"total\": 42.534}, \"DOC10_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 15.18, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 40.094}}}</search>\n<info>{\"anchor_id\": \"DOC10_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"最高人民法院裁定\", \"summary\": \"Expanded same-section read window around DOC10_A5: 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\", \"text\": \"[DOC10_A1 | 当事人信息]\\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\\n\\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\\n\\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\\n\\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\\n\\n[DOC10_A2 | 案件背景]\\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\\n\\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\\n\\n[DOC10_A3 | 管辖权异议]\\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\\n\\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\\n\\n[DOC10_A4 | 管辖权争议]\\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\\n\\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\\n\\n[DOC10_A5 | 最高人民法院裁定]\\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\\n\\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\\n\\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\\n\\n[DOC10_A6 | 裁定结果]\\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\\n\\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\\n\\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n本裁定一经作出即发生法律效力。\", \"source_window_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\", \"DOC10_A5\", \"DOC10_A6\"], \"primary_anchor_id\": \"DOC10_A5\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书10\"], \"anchor_targets\": [\"民间借贷纠纷\", \"因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。\", \"债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。\", \"合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。\", \"判决文书10\"], \"anchor_value_hints\": [\"10\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC10_A6\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A2\", \"DOC10_A1\", \"DOC10_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}]}</info>\n<think>The selected chunk from the highest court's ruling reiterates that the case is a '民间借贷纠纷'. It does not provide any new categories or additional documents to classify. Therefore, no new evidence items are extracted, but we should continue searching for other documents to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收...\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The current document '判决文书10' has already been categorized as '民间借贷纠纷'. To continue the classification process, we need to inspect the next document to identify cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'. Since we have exhausted the relevant information in the current document, we should move on to the next document.</think>\n<search>{\"current_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A4\", \"candidate_anchor_ids\": [\"NEXT_DOC_A1\", \"NEXT_DOC_A2\", \"NEXT_DOC_A3\", \"NEXT_DOC_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收...\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\"], \"utility_hits\": {\"DOC10_A4\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A6\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC10_A4\": 16.0, \"DOC10_A6\": 16.0, \"DOC10_A3\": 16.0, \"DOC10_A1\": 5.0}, \"relation_hits\": {\"DOC10_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"], \"DOC10_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"], \"DOC10_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"], \"DOC10_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"]}, \"relation_score\": {\"DOC10_A4\": 25.91, \"DOC10_A6\": 28.91, \"DOC10_A3\": 25.91, \"DOC10_A1\": 25.91}, \"anchor_role_hits\": {\"DOC10_A4\": [\"case_identity\"], \"DOC10_A6\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A3\": [\"case_identity\"], \"DOC10_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC10_A4\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 25.91, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 58.601}, \"DOC10_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 28.91, \"weak_priors\": 5.354, \"redundancy_penalty\": 3.0, \"total\": 53.264}, \"DOC10_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 25.91, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 50.824}, \"DOC10_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 25.91, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 36.21}}}</search>\n<info>{\"anchor_id\": \"DOC10_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"管辖权争议\", \"summary\": \"Expanded same-section read window around DOC10_A4: 北京市平谷区人民法院认为自己无管辖权，层报北京市高级人民法院，北京市高级人民法院与新疆维吾尔自治区高级人民法院协商未果，报请最高人民法院指定管辖。\", \"text\": \"[DOC10_A1 | 当事人信息]\\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\\n\\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\\n\\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\\n\\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\\n\\n[DOC10_A2 | 案件背景]\\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\\n\\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\\n\\n[DOC10_A3 | 管辖权异议]\\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\\n\\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\\n\\n[DOC10_A4 | 管辖权争议]\\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\\n\\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\\n\\n[DOC10_A5 | 最高人民法院裁定]\\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\\n\\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\\n\\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\\n\\n[DOC10_A6 | 裁定结果]\\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\\n\\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\\n\\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n本裁定一经作出即发生法律效力。\", \"source_window_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\", \"DOC10_A5\", \"DOC10_A6\"], \"primary_anchor_id\": \"DOC10_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书10\"], \"anchor_targets\": [\"民间借贷纠纷\", \"判决文书10\"], \"anchor_value_hints\": [\"10\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A3\", \"DOC10_A2\", \"DOC10_A1\", \"DOC10_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}]}</info>\n<think>The selected chunk discusses jurisdictional disputes and confirms that the case is a '民间借贷纠纷'. However, it does not provide any new categories or additional documents to classify. Therefore, no new evidence items are extracted, but we should continue searching for other documents to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\", \"DOC10_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收...\", \"管辖权争议 北京市平谷区人民法院认为自己无管辖权，层报北京市高级人民法院，北京市高级人民法院与新疆维吾尔自治区高级人民法院协商未果，报请最高人民法院指定管辖。 北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。 北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人...\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A5\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A5\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a case related to '民间借贷纠纷'. I will inspect the chunk that provides more details on the case background to confirm the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"], \"utility_hits\": {\"DOC10_A5\": [\"legal_label_hit=['民间借贷纠纷', '民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A2\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A4\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A6\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC10_A5\": 21.0, \"DOC10_A2\": 16.0, \"DOC10_A4\": 16.0, \"DOC10_A6\": 16.0}, \"score_breakdown\": {\"DOC10_A5\": {\"local_relevance\": 24.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 58.508}, \"DOC10_A2\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 47.201}, \"DOC10_A4\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 46.691}, \"DOC10_A6\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 37.354}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC10_A2: 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"text\": \"[DOC10_A1 | 当事人信息]\\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\\n\\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\\n\\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\\n\\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\\n\\n[DOC10_A2 | 案件背景]\\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\\n\\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\\n\\n[DOC10_A3 | 管辖权异议]\\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\\n\\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\\n\\n[DOC10_A4 | 管辖权争议]\\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\\n\\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\\n\\n[DOC10_A5 | 最高人民法院裁定]\\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\\n\\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\\n\\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\\n\\n[DOC10_A6 | 裁定结果]\\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\\n\\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\\n\\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n本裁定一经作出即发生法律效力。\", \"source_window_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\", \"DOC10_A5\", \"DOC10_A6\"], \"primary_anchor_id\": \"DOC10_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书10\"], \"anchor_targets\": [\"民间借贷纠纷\", \"判决文书10\"], \"anchor_value_hints\": [\"10\", \"2022\", \"7\", \"5\", \"1258000元\", \"850000元\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\", \"DOC10_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}]}</info>\n<think>The chunk clearly indicates that the case involves a '民间借贷纠纷'. The document title '判决文书10' can be categorized under '民间借贷纠纷'. No other categories are mentioned in this chunk, so we need to continue searching for other documents to complete the full categorization.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民间借贷纠纷\", \"value\": \"判决文书10\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The current document has been categorized as '民间借贷纠纷'. Since there are no other categories mentioned within this document, it's time to move on to another document to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'. I will proceed to the next document to continue the classification process.</think>\n<search>{\"current_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A5\", \"candidate_anchor_ids\": [\"NEXT_DOC_A1\", \"NEXT_DOC_A2\", \"NEXT_DOC_A3\", \"NEXT_DOC_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC10_A2\"], \"utility_hits\": {\"DOC10_A5\": [\"legal_label_hit=['民间借贷纠纷', '民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A4\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A6\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC10_A5\": 21.0, \"DOC10_A4\": 16.0, \"DOC10_A6\": 16.0, \"DOC10_A3\": 16.0}, \"relation_hits\": {\"DOC10_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"], \"DOC10_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"], \"DOC10_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"], \"DOC10_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A2\"]}, \"relation_score\": {\"DOC10_A5\": 18.18, \"DOC10_A4\": 15.18, \"DOC10_A6\": 18.18, \"DOC10_A3\": 15.18}, \"anchor_role_hits\": {\"DOC10_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A4\": [\"case_identity\"], \"DOC10_A6\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A3\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC10_A5\": {\"local_relevance\": 16.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 59.688}, \"DOC10_A4\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 15.18, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 47.871}, \"DOC10_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 18.18, \"weak_priors\": 5.354, \"redundancy_penalty\": 3.0, \"total\": 42.534}, \"DOC10_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 15.18, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 40.094}}}</search>\n<info>{\"anchor_id\": \"DOC10_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"最高人民法院裁定\", \"summary\": \"Expanded same-section read window around DOC10_A5: 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\", \"text\": \"[DOC10_A1 | 当事人信息]\\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\\n\\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\\n\\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\\n\\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\\n\\n[DOC10_A2 | 案件背景]\\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\\n\\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\\n\\n[DOC10_A3 | 管辖权异议]\\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\\n\\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\\n\\n[DOC10_A4 | 管辖权争议]\\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\\n\\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\\n\\n[DOC10_A5 | 最高人民法院裁定]\\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\\n\\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\\n\\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\\n\\n[DOC10_A6 | 裁定结果]\\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\\n\\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\\n\\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n本裁定一经作出即发生法律效力。\", \"source_window_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\", \"DOC10_A5\", \"DOC10_A6\"], \"primary_anchor_id\": \"DOC10_A5\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书10\"], \"anchor_targets\": [\"民间借贷纠纷\", \"因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。\", \"债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。\", \"合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。\", \"判决文书10\"], \"anchor_value_hints\": [\"10\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC10_A6\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A2\", \"DOC10_A1\", \"DOC10_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}]}</info>\n<think>The selected chunk from the highest court's ruling reiterates that the case is a '民间借贷纠纷'. It does not provide any new categories or additional documents to classify. Therefore, no new evidence items are extracted, but we should continue searching for other documents to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收...\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The current document '判决文书10' has already been categorized as '民间借贷纠纷'. To continue the classification process, we need to inspect the next document to identify cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'. Since we have exhausted the relevant information in the current document, we should move on to the next document.</think>\n<search>{\"current_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A4\", \"candidate_anchor_ids\": [\"NEXT_DOC_A1\", \"NEXT_DOC_A2\", \"NEXT_DOC_A3\", \"NEXT_DOC_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收...\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A4\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\"], \"utility_hits\": {\"DOC10_A4\": [\"legal_label_hit=['民间借贷纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC10_A6\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC10_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC10_A4\": 16.0, \"DOC10_A6\": 16.0, \"DOC10_A3\": 16.0, \"DOC10_A1\": 5.0}, \"relation_hits\": {\"DOC10_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"], \"DOC10_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"], \"DOC10_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"], \"DOC10_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC10_A5\", \"supports_selected=DOC10_A2\", \"same_case_selected=DOC10_A5\", \"same_case_selected=DOC10_A2\", \"disambiguates_selected=DOC10_A5\", \"disambiguates_selected=DOC10_A2\", \"likely_same_entity_selected=DOC10_A5\"]}, \"relation_score\": {\"DOC10_A4\": 25.91, \"DOC10_A6\": 28.91, \"DOC10_A3\": 25.91, \"DOC10_A1\": 25.91}, \"anchor_role_hits\": {\"DOC10_A4\": [\"case_identity\"], \"DOC10_A6\": [\"case_identity\", \"decision_evidence\"], \"DOC10_A3\": [\"case_identity\"], \"DOC10_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC10_A4\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 25.91, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 58.601}, \"DOC10_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 28.91, \"weak_priors\": 5.354, \"redundancy_penalty\": 3.0, \"total\": 53.264}, \"DOC10_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 25.91, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 50.824}, \"DOC10_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 25.91, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 36.21}}}</search>\n<info>{\"anchor_id\": \"DOC10_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"管辖权争议\", \"summary\": \"Expanded same-section read window around DOC10_A4: 北京市平谷区人民法院认为自己无管辖权，层报北京市高级人民法院，北京市高级人民法院与新疆维吾尔自治区高级人民法院协商未果，报请最高人民法院指定管辖。\", \"text\": \"[DOC10_A1 | 当事人信息]\\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\\n\\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\\n\\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\\n\\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\\n\\n[DOC10_A2 | 案件背景]\\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\\n\\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\\n\\n[DOC10_A3 | 管辖权异议]\\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\\n\\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\\n\\n[DOC10_A4 | 管辖权争议]\\n北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。\\n\\n北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n北京市高级人民法院发函与新疆维吾尔自治区高级人民法院协商，新疆维吾尔自治区高级人民法院认为，本案系民间借贷纠纷，因案涉主合同中没有约定协议管辖条款，则应由被告住所地或者合同履行地人民法院管辖。因主债务人及担保人均为被告，且被告住所地与主合同履行地亦不重合，故各被告住所地及主合同履行地法院都有管辖权。北京市平谷区人民法院作为被告李某生经常居住地人民法院对本案具有管辖权。本案应当由北京市平谷区人民法院管辖。北京市高级人民法院经与新疆维吾尔自治区高级人民法院协商未果,报请本院指定管辖。\\n\\n[DOC10_A5 | 最高人民法院裁定]\\n本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。\\n\\n《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即陈某文所在地。故，赵某住所地河北省唐山市丰润区与陈某文住所地新疆维吾尔自治区乌鲁木齐市头屯河区人民法院对本案均有管辖权。\\n\\n陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故陈某文住所地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经北京法院沟通，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理，本案可以由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院管辖。\\n\\n[DOC10_A6 | 裁定结果]\\n综上，本院依照《中华人民共和国民事诉讼法》第三十八条第二款、《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第四十条、第四十一条规定，裁定如下：\\n\\n一、撤销北京市丰台区人民法院（2022）京0106民初13596号之一民事裁定；\\n\\n二、本案由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。\\n\\n本裁定一经作出即发生法律效力。\", \"source_window_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\", \"DOC10_A5\", \"DOC10_A6\"], \"primary_anchor_id\": \"DOC10_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书10\"], \"anchor_targets\": [\"民间借贷纠纷\", \"判决文书10\"], \"anchor_value_hints\": [\"10\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC10_A6\", \"DOC10_A5\", \"DOC10_A3\", \"DOC10_A2\", \"DOC10_A1\", \"DOC10_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}]}</info>\n<think>The selected chunk discusses jurisdictional disputes and confirms that the case is a '民间借贷纠纷'. However, it does not provide any new categories or additional documents to classify. Therefore, no new evidence items are extracted, but we should continue searching for other documents to find cases that fall into the remaining categories: '继承纠纷', '执行案由-民事', '行政行为-行政处罚', and '行政行为-其他行政行为'.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"继续查找其他判决文书，以确定它们属于'继承纠纷'、'执行案由-民事'、'行政行为-行政处罚'或'行政行为-其他行政行为'中的哪一类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民间借贷纠纷\"], \"known_value_signatures\": [\"判决文书10\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC10_A2\", \"DOC10_A5\", \"DOC10_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 陈某文与赵某等人的民间借贷纠纷案于2022年7月5日在北京市丰台区人民法院立案，陈某文请求赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。 原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。 陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\", \"最高人民法院裁定 最高人民法院认为本案应由主债务人赵某住所地或者合同履行地人民法院管辖，最终裁定由新疆维吾尔自治区乌鲁木齐市头屯河区人民法院审理。 本院认为，本案系民间借贷纠纷。《中华人民共和国民事诉讼法》第二十四条规定，“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”《最高人民法院关于适用<中华人民共和国民法典>有关担保制度的解释》第二十一条第二款规定，“债权人一并起诉债务人和担保人的，应当根据主合同确定管辖法院。”本案中，债权人陈某文因赵某未依约偿还借款本金及利息，同时起诉主债务人赵某以及担保人刘某冉、陈某毅、李某生，鉴于担保债务的从属性，本案应当根据陈某文与赵某之间的主债权债务关系确定管辖法院。因本案系合同纠纷，双方仅就部分借款签订了书面协议，且协议中未约定管辖法院，故本案应由主债务人赵某住所地或者主债权债务关系的合同履行地人民法院管辖。 《最高人民法院关于适用<中华人民共和国民事诉讼法>的解释》第十八条第二款规定，“合同对履行地点没有约定或者约定不明确，争议标的为给付货币的，接收货币一方所在地为合同履行地；交付不动产的，不动产所在地为合同履行地；其他标的，履行义务一方所在地为合同履行地。即时结清的合同，交易行为地为合同履行地。”因案涉借款未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收...\", \"管辖权争议 北京市平谷区人民法院认为自己无管辖权，层报北京市高级人民法院，北京市高级人民法院与新疆维吾尔自治区高级人民法院协商未果，报请最高人民法院指定管辖。 北京市平谷区人民法院认为，债权人对债务人和担保人一并提起诉讼的，应当按照主合同来确定管辖。本案中，债权人陈某文同时起诉了主债务人赵某以及担保人刘某冉、陈某毅、李某生，并且担保人刘某冉、陈某毅、李某生仅是其中多个债权中的一个债权的担保人，本案仅部分债权签订了书面协议，且协议中未约定管辖法院，应由债务人住所地或主合同履行地的人民法院管辖，北京市平谷区人民法院对本案无管辖权。遂层报北京市高级人民法院。 北京市高级人民法院认为，案涉借款合同未约定合同履行地，且争议标的为给付货币，故本案合同履行地为接收货币一方，即原告陈某文所在地，陈某文虽表示其经常居住地位于新疆维吾尔自治区乌鲁木齐市沙依巴克区，但无法提供经常居住地证明，故本案原告陈某文所在地应当以户籍所在地认定，即新疆维吾尔自治区乌鲁木齐市头屯河区。本案中，债务人赵某住所地为河北省唐山市丰润区，合同履行地为原告陈某文所在地新疆维吾尔自治区乌鲁木齐市头屯河区，北京市平谷区人民法院并非被告住所地或者合同履行地法院，对本案无管辖权。经与案件当事人沟通，在无法提交经常居住地证明的情况下，陈某文要求将本案移送至新疆维吾尔自治区乌鲁木齐市头屯河区人...\"], \"selected_relation_anchor_ids\": [\"DOC10_A6\", \"DOC10_A3\", \"DOC10_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC10_A2\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书10']\"}, {\"source_anchor_id\": \"DOC10_A5\", \"target_anchor_id\": \"DOC10_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC10_A5\", \"target_anchor_id\": \"DOC10_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+}

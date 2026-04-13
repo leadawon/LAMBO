@@ -1,0 +1,207 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "selected_anchor_ids": [
+    "DOC7_A1"
+  ],
+  "final_current_query": "请提供关于《判决文书7》是否涉及执行或刑事方面的更多信息。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC7_A1",
+        "candidate_anchor_ids": [
+          "DOC7_A1"
+        ],
+        "utility_hits": {
+          "DOC7_A1": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC7_A1": 11.0
+        },
+        "score_breakdown": {
+          "DOC7_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 29.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC7_A1",
+      "plan_think": "The summary indicates that the case involves a jurisdiction dispute as it mentions the court's inability to exercise jurisdiction and the need for a higher court to designate a different court to handle the case. Therefore, the next anchor to inspect should be the one that provides more details on the jurisdiction aspect of the case.",
+      "info": {
+        "anchor_id": "DOC7_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息及裁定内容",
+        "summary": "原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院因不便行使管辖权，报请上级法院指定管辖。依据《中华人民共和国民事诉讼法》第三十八条第一款规定，裁定本案由重庆市万州区人民法院审理，该裁定一经作出即生效。",
+        "text": "原告：李某1，1975年10月9日出生，汉族，住重庆市垫江县。\n\n被告：李某某，1954年6月27日出生，汉族，住重庆市垫江县。\n\n被告：李某2，1980年2月17日出生，汉族，住重庆市垫江县。\n\n第三人：谭某某，1968年7月2日出生，汉族，住重庆市垫江县。\n\n原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。为保障公正审理本案，依照《中华人民共和国民事诉讼法》第三十八条第一款的规定，裁定如下：\n\n本案由重庆市万州区人民法院审理。\n\n本裁定一经作出即生效。",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书7"
+        ],
+        "anchor_targets": [
+          "判决文书7"
+        ],
+        "anchor_value_hints": [
+          "7",
+          "1",
+          "2",
+          "1975",
+          "10",
+          "9",
+          "1954",
+          "6"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 0,
+          "relation_type_counts": {},
+          "top_related_anchor_ids": []
+        }
+      },
+      "extract_think": "The chunk contains information indicating that the case is a partnership contract dispute, which falls under civil cases. The document also mentions that the court is unable to exercise jurisdiction over the case, leading to a request for another court to take over, which suggests this is related to a jurisdiction case. However, the specific category assignment for the document is not explicitly stated, so we can infer but not definitively assign the category without further context.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "管辖案件",
+            "value": "《判决文书7》",
+            "normalized_value": "判决文书7",
+            "evidence_text": "原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A1",
+            "confidence": 0.7,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          },
+          {
+            "answer_key": "民事案件",
+            "value": "《判决文书7》",
+            "normalized_value": "判决文书7",
+            "evidence_text": "原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A1",
+            "confidence": 0.7,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "请提供关于《判决文书7》是否涉及执行或刑事方面的更多信息。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "管辖案件",
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书7"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC7_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息及裁定内容 原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院因不便行使管辖权，报请上级法院指定管辖。依据《中华人民共和国民事诉讼法》第三十八条第一款规定，裁定本案由重庆市万州区人民法院审理，该裁定一经作出即生效。 原告：李某1，1975年10月9日出生，汉族，住重庆市垫江县。 被告：李某某，1954年6月27日出生，汉族，住重庆市垫江县。 被告：李某2，1980年2月17日出生，汉族，住重庆市垫江县。 第三人：谭某某，1968年7月2日出生，汉族，住重庆市垫江县。 原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。为保障公正审理本案，依照《中华人民共和国民事诉讼法》第三十八条第一款的规定，裁定如下： 本案由重庆市万州区人民法院审理。 本裁定一经作出即生效。"
+          ],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "管辖案件",
+      "value": "《判决文书7》",
+      "normalized_value": "判决文书7",
+      "evidence_text": "原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A1",
+      "confidence": 0.7,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "民事案件",
+      "value": "《判决文书7》",
+      "normalized_value": "判决文书7",
+      "evidence_text": "原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A1",
+      "confidence": 0.7,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The summary indicates that the case involves a jurisdiction dispute as it mentions the court's inability to exercise jurisdiction and the need for a higher court to designate a different court to handle the case. Therefore, the next anchor to inspect should be the one that provides more details on the jurisdiction aspect of the case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A1\", \"candidate_anchor_ids\": [\"DOC7_A1\"], \"utility_hits\": {\"DOC7_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC7_A1\": 11.0}, \"score_breakdown\": {\"DOC7_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC7_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及裁定内容\", \"summary\": \"原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院因不便行使管辖权，报请上级法院指定管辖。依据《中华人民共和国民事诉讼法》第三十八条第一款规定，裁定本案由重庆市万州区人民法院审理，该裁定一经作出即生效。\", \"text\": \"原告：李某1，1975年10月9日出生，汉族，住重庆市垫江县。\\n\\n被告：李某某，1954年6月27日出生，汉族，住重庆市垫江县。\\n\\n被告：李某2，1980年2月17日出生，汉族，住重庆市垫江县。\\n\\n第三人：谭某某，1968年7月2日出生，汉族，住重庆市垫江县。\\n\\n原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。为保障公正审理本案，依照《中华人民共和国民事诉讼法》第三十八条第一款的规定，裁定如下：\\n\\n本案由重庆市万州区人民法院审理。\\n\\n本裁定一经作出即生效。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书7\"], \"anchor_targets\": [\"判决文书7\"], \"anchor_value_hints\": [\"7\", \"1\", \"2\", \"1975\", \"10\", \"9\", \"1954\", \"6\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>The chunk contains information indicating that the case is a partnership contract dispute, which falls under civil cases. The document also mentions that the court is unable to exercise jurisdiction over the case, leading to a request for another court to take over, which suggests this is related to a jurisdiction case. However, the specific category assignment for the document is not explicitly stated, so we can infer but not definitively assign the category without further context.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"管辖案件\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 0.7, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"answer_key\": \"民事案件\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 0.7, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供关于《判决文书7》是否涉及执行或刑事方面的更多信息。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"管辖案件\", \"民事案件\"], \"known_value_signatures\": [\"判决文书7\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息及裁定内容 原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院因不便行使管辖权，报请上级法院指定管辖。依据《中华人民共和国民事诉讼法》第三十八条第一款规定，裁定本案由重庆市万州区人民法院审理，该裁定一经作出即生效。 原告：李某1，1975年10月9日出生，汉族，住重庆市垫江县。 被告：李某某，1954年6月27日出生，汉族，住重庆市垫江县。 被告：李某2，1980年2月17日出生，汉族，住重庆市垫江县。 第三人：谭某某，1968年7月2日出生，汉族，住重庆市垫江县。 原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。为保障公正审理本案，依照《中华人民共和国民事诉讼法》第三十八条第一款的规定，裁定如下： 本案由重庆市万州区人民法院审理。 本裁定一经作出即生效。\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+  },
+  "tagged_trace": "<think>The summary indicates that the case involves a jurisdiction dispute as it mentions the court's inability to exercise jurisdiction and the need for a higher court to designate a different court to handle the case. Therefore, the next anchor to inspect should be the one that provides more details on the jurisdiction aspect of the case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '管辖案件' '刑事案件'这4种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A1\", \"candidate_anchor_ids\": [\"DOC7_A1\"], \"utility_hits\": {\"DOC7_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC7_A1\": 11.0}, \"score_breakdown\": {\"DOC7_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC7_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及裁定内容\", \"summary\": \"原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院因不便行使管辖权，报请上级法院指定管辖。依据《中华人民共和国民事诉讼法》第三十八条第一款规定，裁定本案由重庆市万州区人民法院审理，该裁定一经作出即生效。\", \"text\": \"原告：李某1，1975年10月9日出生，汉族，住重庆市垫江县。\\n\\n被告：李某某，1954年6月27日出生，汉族，住重庆市垫江县。\\n\\n被告：李某2，1980年2月17日出生，汉族，住重庆市垫江县。\\n\\n第三人：谭某某，1968年7月2日出生，汉族，住重庆市垫江县。\\n\\n原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。为保障公正审理本案，依照《中华人民共和国民事诉讼法》第三十八条第一款的规定，裁定如下：\\n\\n本案由重庆市万州区人民法院审理。\\n\\n本裁定一经作出即生效。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书7\"], \"anchor_targets\": [\"判决文书7\"], \"anchor_value_hints\": [\"7\", \"1\", \"2\", \"1975\", \"10\", \"9\", \"1954\", \"6\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>The chunk contains information indicating that the case is a partnership contract dispute, which falls under civil cases. The document also mentions that the court is unable to exercise jurisdiction over the case, leading to a request for another court to take over, which suggests this is related to a jurisdiction case. However, the specific category assignment for the document is not explicitly stated, so we can infer but not definitively assign the category without further context.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"管辖案件\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 0.7, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"answer_key\": \"民事案件\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 0.7, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供关于《判决文书7》是否涉及执行或刑事方面的更多信息。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"管辖案件\", \"民事案件\"], \"known_value_signatures\": [\"判决文书7\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息及裁定内容 原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院因不便行使管辖权，报请上级法院指定管辖。依据《中华人民共和国民事诉讼法》第三十八条第一款规定，裁定本案由重庆市万州区人民法院审理，该裁定一经作出即生效。 原告：李某1，1975年10月9日出生，汉族，住重庆市垫江县。 被告：李某某，1954年6月27日出生，汉族，住重庆市垫江县。 被告：李某2，1980年2月17日出生，汉族，住重庆市垫江县。 第三人：谭某某，1968年7月2日出生，汉族，住重庆市垫江县。 原告李某1与被告李某某、李某2、第三人谭某某合伙合同纠纷一案，重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖。为保障公正审理本案，依照《中华人民共和国民事诉讼法》第三十八条第一款的规定，裁定如下： 本案由重庆市万州区人民法院审理。 本裁定一经作出即生效。\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+}

@@ -1,0 +1,449 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "selected_anchor_ids": [
+    "DOC4_A5"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A5",
+        "candidate_anchor_ids": [
+          "DOC4_A5",
+          "DOC4_A4"
+        ],
+        "utility_hits": {
+          "DOC4_A5": [
+            "legal_label_hit=['行政行为', '行政处罚', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A6": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC4_A5": 21.0,
+          "DOC4_A4": 11.0,
+          "DOC4_A6": 11.0,
+          "DOC4_A2": 11.0
+        },
+        "score_breakdown": {
+          "DOC4_A5": {
+            "local_relevance": 12.0,
+            "answer_utility": 21.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 46.508
+          },
+          "DOC4_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          },
+          "DOC4_A6": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 0.0,
+            "total": 28.354
+          },
+          "DOC4_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 26.201
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC4_A5",
+      "plan_think": "The document seems to involve an administrative penalty case, as it discusses a lawsuit against a police department's administrative detention and fine decision. The focus of the document is on whether the plaintiff's lawsuit was filed within the legal time limit. Therefore, I will inspect the anchor that contains information about the administrative penalty to confirm the category.",
+      "info": {
+        "anchor_id": "DOC4_A5",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院意见",
+        "summary": "Expanded same-section read window around DOC4_A5: 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认...",
+        "text": "[DOC4_A1 | 当事人信息]\n再审申请人（一审原告、二审上诉人）：赵某甲，男，1992年5月9日出生，住新疆维吾尔自治区乌鲁木齐市头屯河区。\n\n再审被申请人（一审被告、二审被上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市团结路966号。\n\n法定代表人：金宝，该分局局长。\n\n委托诉讼代理人：刘某，男，乌鲁木齐市公安局天山区分局法制大队民警。\n\n委托诉讼代理人：汤某，男，乌鲁木齐市公安局天山区分局碱泉街派出所民警。\n\n[DOC4_A2 | 案件背景]\n再审申请人赵某因其诉被申请人乌鲁木齐市公安局天山区分局（以下简称天山区分局）行政拘留及罚款一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院作出的（2023）新01行终216号行政裁定，向本院申请再审。本院受理后依法组成合议庭对本案进行了审查，现已审查终结。\n\n[DOC4_A3 | 再审申请人陈述]\n赵某甲申请再审称，一、案外人赵某乙、赵某丙联合进行婚恋诈骗，骗取其钱财。申请人未对案外人进行骚扰，只是去向其讨要被骗取的钱财。天山区分局徇私枉法未依法追究上述人员责任。二、因疫情期间耽误起诉时间，且申请人并不知晓提起行政诉讼有起诉期限的规定，原审法院认为申请人提起本案诉讼超过起诉期限的认定错误。据此，请求依法再审本案。\n\n[DOC4_A4 | 被申请人答辩]\n天山区分局辩称，案件相关事实有赵某甲本人供述、赵某甲笔录、抓获经过、现场照片等证据予以证实，根据《中华人民共和国治安管理处罚法》第二十六条第四项规定，对其作出行政拘留十五日并罚款1,000元的处罚决定，事实清楚、程序合法、适用法律正确。案涉处罚决定作出和送达时间均为2020年1月，赵某甲于2023年5月5日提起行政诉讼已超过法定起诉期限，请求依法驳回其再审申请。\n\n[DOC4_A5 | 法院意见]\n本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不足，本院不予支持。\n\n[DOC4_A6 | 裁定结果]\n综上，申请人的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用＜中华人民共和国行政诉讼法＞的解释》第一百一十六条第二款之规定，裁定如下：\n\n驳回赵某甲的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4",
+          "DOC4_A5",
+          "DOC4_A6"
+        ],
+        "primary_anchor_id": "DOC4_A5",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书4"
+        ],
+        "anchor_targets": [
+          "判决文书4"
+        ],
+        "anchor_value_hints": [
+          "4",
+          "2020",
+          "1",
+          "7",
+          "2023",
+          "5"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 5,
+            "same_case": 5,
+            "disambiguates": 5,
+            "likely_same_entity": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC4_A6",
+            "DOC4_A4",
+            "DOC4_A3",
+            "DOC4_A2",
+            "DOC4_A1",
+            "DOC4_A6"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC4_A6",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书4']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides clear evidence that the case involves an administrative penalty, specifically an appeal against an administrative detention and fine decision made by the police department. The document should be categorized under '行政行为-行政处罚'. There is enough evidence from this chunk to classify the document.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政处罚",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A5",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC4_A6",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书4']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政行为-行政处罚"
+          ],
+          "known_value_signatures": [
+            "判决文书4"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC4_A5"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "法院意见 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不足，本院不予支持。 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC4_A6",
+            "DOC4_A4",
+            "DOC4_A3",
+            "DOC4_A2",
+            "DOC4_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A6",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC4_A5",
+              "target_anchor_id": "DOC4_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政处罚",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A5",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC4_A6",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书4']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to involve an administrative penalty case, as it discusses a lawsuit against a police department's administrative detention and fine decision. The focus of the document is on whether the plaintiff's lawsuit was filed within the legal time limit. Therefore, I will inspect the anchor that contains information about the administrative penalty to confirm the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A5\", \"candidate_anchor_ids\": [\"DOC4_A5\", \"DOC4_A4\"], \"utility_hits\": {\"DOC4_A5\": [\"legal_label_hit=['行政行为', '行政处罚', '判决文书']\", \"legal_decision_context\"], \"DOC4_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC4_A5\": 21.0, \"DOC4_A4\": 11.0, \"DOC4_A6\": 11.0, \"DOC4_A2\": 11.0}, \"score_breakdown\": {\"DOC4_A5\": {\"local_relevance\": 12.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 46.508}, \"DOC4_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC4_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 28.354}, \"DOC4_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"Expanded same-section read window around DOC4_A5: 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认...\", \"text\": \"[DOC4_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：赵某甲，男，1992年5月9日出生，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n再审被申请人（一审被告、二审被上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市团结路966号。\\n\\n法定代表人：金宝，该分局局长。\\n\\n委托诉讼代理人：刘某，男，乌鲁木齐市公安局天山区分局法制大队民警。\\n\\n委托诉讼代理人：汤某，男，乌鲁木齐市公安局天山区分局碱泉街派出所民警。\\n\\n[DOC4_A2 | 案件背景]\\n再审申请人赵某因其诉被申请人乌鲁木齐市公安局天山区分局（以下简称天山区分局）行政拘留及罚款一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院作出的（2023）新01行终216号行政裁定，向本院申请再审。本院受理后依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n[DOC4_A3 | 再审申请人陈述]\\n赵某甲申请再审称，一、案外人赵某乙、赵某丙联合进行婚恋诈骗，骗取其钱财。申请人未对案外人进行骚扰，只是去向其讨要被骗取的钱财。天山区分局徇私枉法未依法追究上述人员责任。二、因疫情期间耽误起诉时间，且申请人并不知晓提起行政诉讼有起诉期限的规定，原审法院认为申请人提起本案诉讼超过起诉期限的认定错误。据此，请求依法再审本案。\\n\\n[DOC4_A4 | 被申请人答辩]\\n天山区分局辩称，案件相关事实有赵某甲本人供述、赵某甲笔录、抓获经过、现场照片等证据予以证实，根据《中华人民共和国治安管理处罚法》第二十六条第四项规定，对其作出行政拘留十五日并罚款1,000元的处罚决定，事实清楚、程序合法、适用法律正确。案涉处罚决定作出和送达时间均为2020年1月，赵某甲于2023年5月5日提起行政诉讼已超过法定起诉期限，请求依法驳回其再审申请。\\n\\n[DOC4_A5 | 法院意见]\\n本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不足，本院不予支持。\\n\\n[DOC4_A6 | 裁定结果]\\n综上，申请人的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用＜中华人民共和国行政诉讼法＞的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回赵某甲的再审申请。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\"], \"primary_anchor_id\": \"DOC4_A5\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"判决文书4\"], \"anchor_value_hints\": [\"4\", \"2020\", \"1\", \"7\", \"2023\", \"5\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A1\", \"DOC4_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}]}</info>\n<think>The selected chunk provides clear evidence that the case involves an administrative penalty, specifically an appeal against an administrative detention and fine decision made by the police department. The document should be categorized under '行政行为-行政处罚'. There is enough evidence from this chunk to classify the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政处罚\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A5\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政处罚\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A5\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院意见 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不足，本院不予支持。 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不...\"], \"selected_relation_anchor_ids\": [\"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve an administrative penalty case, as it discusses a lawsuit against a police department's administrative detention and fine decision. The focus of the document is on whether the plaintiff's lawsuit was filed within the legal time limit. Therefore, I will inspect the anchor that contains information about the administrative penalty to confirm the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A5\", \"candidate_anchor_ids\": [\"DOC4_A5\", \"DOC4_A4\"], \"utility_hits\": {\"DOC4_A5\": [\"legal_label_hit=['行政行为', '行政处罚', '判决文书']\", \"legal_decision_context\"], \"DOC4_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A6\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC4_A5\": 21.0, \"DOC4_A4\": 11.0, \"DOC4_A6\": 11.0, \"DOC4_A2\": 11.0}, \"score_breakdown\": {\"DOC4_A5\": {\"local_relevance\": 12.0, \"answer_utility\": 21.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 46.508}, \"DOC4_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC4_A6\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 28.354}, \"DOC4_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"Expanded same-section read window around DOC4_A5: 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认...\", \"text\": \"[DOC4_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：赵某甲，男，1992年5月9日出生，住新疆维吾尔自治区乌鲁木齐市头屯河区。\\n\\n再审被申请人（一审被告、二审被上诉人）：乌鲁木齐市公安局天山区分局，住所地新疆维吾尔自治区乌鲁木齐市团结路966号。\\n\\n法定代表人：金宝，该分局局长。\\n\\n委托诉讼代理人：刘某，男，乌鲁木齐市公安局天山区分局法制大队民警。\\n\\n委托诉讼代理人：汤某，男，乌鲁木齐市公安局天山区分局碱泉街派出所民警。\\n\\n[DOC4_A2 | 案件背景]\\n再审申请人赵某因其诉被申请人乌鲁木齐市公安局天山区分局（以下简称天山区分局）行政拘留及罚款一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院作出的（2023）新01行终216号行政裁定，向本院申请再审。本院受理后依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n[DOC4_A3 | 再审申请人陈述]\\n赵某甲申请再审称，一、案外人赵某乙、赵某丙联合进行婚恋诈骗，骗取其钱财。申请人未对案外人进行骚扰，只是去向其讨要被骗取的钱财。天山区分局徇私枉法未依法追究上述人员责任。二、因疫情期间耽误起诉时间，且申请人并不知晓提起行政诉讼有起诉期限的规定，原审法院认为申请人提起本案诉讼超过起诉期限的认定错误。据此，请求依法再审本案。\\n\\n[DOC4_A4 | 被申请人答辩]\\n天山区分局辩称，案件相关事实有赵某甲本人供述、赵某甲笔录、抓获经过、现场照片等证据予以证实，根据《中华人民共和国治安管理处罚法》第二十六条第四项规定，对其作出行政拘留十五日并罚款1,000元的处罚决定，事实清楚、程序合法、适用法律正确。案涉处罚决定作出和送达时间均为2020年1月，赵某甲于2023年5月5日提起行政诉讼已超过法定起诉期限，请求依法驳回其再审申请。\\n\\n[DOC4_A5 | 法院意见]\\n本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不足，本院不予支持。\\n\\n[DOC4_A6 | 裁定结果]\\n综上，申请人的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用＜中华人民共和国行政诉讼法＞的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回赵某甲的再审申请。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\"], \"primary_anchor_id\": \"DOC4_A5\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"判决文书4\"], \"anchor_value_hints\": [\"4\", \"2020\", \"1\", \"7\", \"2023\", \"5\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 3}, \"top_related_anchor_ids\": [\"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A1\", \"DOC4_A6\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}]}</info>\n<think>The selected chunk provides clear evidence that the case involves an administrative penalty, specifically an appeal against an administrative detention and fine decision made by the police department. The document should be categorized under '行政行为-行政处罚'. There is enough evidence from this chunk to classify the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政处罚\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A5\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政处罚\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A5\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"法院意见 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不足，本院不予支持。 本院认为，本案的焦点问题是赵某提起本案诉讼是否超过起诉期限。法律赋予公民诉权的同时规定时间期限，其目的是督促公民、法人或其他组织在法定期限内行使诉权，以及时解决纠纷，避免行政管理秩序长期处于不稳定状态。本案被诉行政处罚决定系于2020年1月作出，赵某甲于原审中自述天山区分局已于作出该处罚决定当日向其宣读处罚内容，其本人亦在被诉处罚决定书上签字捺印，且认可已于2020年1月收到案涉处罚决定书。根据《中华人民共和国行政诉讼法》第四十六条第一款规定，公民、法人或者其他组织直接向人民法院提起诉讼的，应当自知道或者应当知道作出行政行为之日起六个月内提出。据此，赵某甲至迟应于2020年7月提起诉讼，其于2023年5月提起本案诉讼已超过法定起诉期限，原审裁定驳回其起诉并无不当。赵某甲主张疫情期间应当依法扣除，且其不知晓行政诉讼起诉期限规定，超过起诉期限属于不能归责于其自身因素，因而其提起本案诉讼并未超过法定起诉期限。对此，经本院审查，即便扣除疫情期间，赵某甲提起本案诉讼仍然超过法律规定的六个月起诉期限，且天山区公安分局向赵某送达的处罚决定文本中已明确载明复议、起诉期限内容。赵某甲上述主张依据不...\"], \"selected_relation_anchor_ids\": [\"DOC4_A6\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A6\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A5\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

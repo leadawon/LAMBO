@@ -1,0 +1,265 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The document title and summaries suggest that this case involves an administrative dispute over a penalty decision made by the Dongguan Ecological Environment Bureau. The applicant, Wu Moumou, is dissatisfied with the administrative judgment of the Intermediate People's Court of Dongguan City. Therefore, it seems likely that this is an '行政案件' (administrative case). I will confirm this by inspecting the first chunk summary, DOC3_A1, which contains the basic information of the parties involved.",
+  "current_query": "阅读以上判决文书，请按照'民事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A1",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 29.201,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 29.201
+      },
+      "summary": "吴某某因不服东莞市中级人民法院的行政判决，申请再审，认为东莞市生态环境局对其处以287000元罚款的决定适用法律错误，要求撤销该决定并重新审理。"
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 28.914,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 5.914,
+        "redundancy_penalty": 0.0,
+        "total": 28.914
+      },
+      "summary": "法院审查后认为东莞市生态环境局的行政处罚决定事实清楚、证据确凿、适用法律正确、量罚适当、程序合法，吴某某的再审申请理由不成立。"
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 25.691,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 5.691,
+        "redundancy_penalty": 0.0,
+        "total": 25.691
+      },
+      "summary": "驳回吴某某的再审申请。"
+    },
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 20.3,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 5.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 5.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 20.3
+      },
+      "summary": "再审申请人吴某某及其委托代理人王本权，被申请人东莞市生态环境局及其法定代表人胡毅峰的基本信息。"
+    }
+  ],
+  "utility_hits": {
+    "DOC3_A2": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC3_A3": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC3_A4": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC3_A1": [
+      "legal_label_hit=['判决文书']"
+    ]
+  },
+  "utility_score": {
+    "DOC3_A2": 11.0,
+    "DOC3_A3": 11.0,
+    "DOC3_A4": 11.0,
+    "DOC3_A1": 5.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC3_A2": 6.0,
+    "DOC3_A3": 6.0,
+    "DOC3_A4": 3.0,
+    "DOC3_A1": 3.0
+  },
+  "anchor_role_hits": {
+    "DOC3_A2": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC3_A3": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC3_A4": [
+      "decision_evidence"
+    ],
+    "DOC3_A1": [
+      "case_identity"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC3_A2": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 29.201
+    },
+    "DOC3_A3": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 5.914,
+      "redundancy_penalty": 0.0,
+      "total": 28.914
+    },
+    "DOC3_A4": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 5.691,
+      "redundancy_penalty": 0.0,
+      "total": 25.691
+    },
+    "DOC3_A1": {
+      "local_relevance": 4.0,
+      "answer_utility": 5.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 20.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A1.",
+  "raw_plan_text": "<think>The document title and summaries suggest that this case involves an administrative dispute over a penalty decision made by the Dongguan Ecological Environment Bureau. The applicant, Wu Moumou, is dissatisfied with the administrative judgment of the Intermediate People's Court of Dongguan City. Therefore, it seems likely that this is an '行政案件' (administrative case). I will confirm this by inspecting the first chunk summary, DOC3_A1, which contains the basic information of the parties involved.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'民事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A1\",\"candidate_anchor_ids\":[\"DOC3_A1\",\"DOC3_A2\",\"DOC3_A3\",\"DOC3_A4\"]}</search>",
+  "tagged_trace": "<think>The document title and summaries suggest that this case involves an administrative dispute over a penalty decision made by the Dongguan Ecological Environment Bureau. The applicant, Wu Moumou, is dissatisfied with the administrative judgment of the Intermediate People's Court of Dongguan City. Therefore, it seems likely that this is an '行政案件' (administrative case). I will confirm this by inspecting the first chunk summary, DOC3_A1, which contains the basic information of the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'民事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A1\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC3_A2\": 6.0, \"DOC3_A3\": 6.0, \"DOC3_A4\": 3.0, \"DOC3_A1\": 3.0}, \"anchor_role_hits\": {\"DOC3_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A4\": [\"decision_evidence\"], \"DOC3_A1\": [\"case_identity\"]}}</search>"
+}

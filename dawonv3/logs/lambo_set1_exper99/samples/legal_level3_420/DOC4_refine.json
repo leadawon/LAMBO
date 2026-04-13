@@ -1,0 +1,363 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "selected_anchor_ids": [
+    "DOC4_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A2",
+        "candidate_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2"
+        ],
+        "utility_hits": {
+          "DOC4_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC4_A2": 11.0,
+          "DOC4_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC4_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC4_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 20.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC4_A2",
+      "plan_think": "The summary of DOC4_A2 indicates that the case involves a dispute over a work injury insurance qualification determination, which suggests it is an administrative case. I will select DOC4_A2 as the next anchor coordinate to inspect.",
+      "info": {
+        "anchor_id": "DOC4_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件详情",
+        "summary": "Expanded same-section read window around DOC4_A2: 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因工伤保险资格认定案不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，申请再审后又撤回了再审申请，法院准许其撤回再审申请。",
+        "text": "[DOC4_A1 | 当事人信息]\n再审申请人（一审原告、二审上诉人）：河南省某某建筑防水工程有限公司松原市开发区分公司，住所地吉林省松原经济技术开发区。\n\n法定代表人：代某，该分公司经理。\n\n被申请人（原审被告、二审被上诉人）：乌鲁木齐市人力资源和社会保障局。住所地：新疆维吾尔自治区乌鲁木齐市水磨沟区南湖西路。\n\n法定代表人：申霜天，该局局长。\n\n原审第三人：王某某，女，1972年6月20日出生，无固定职业，住河南省上蔡县。\n\n[DOC4_A2 | 案件详情]\n再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。\n\n本院认为，再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司自愿撤回再审申请，意思表达真实，不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下：\n\n准许河南省某某建筑防水工程有限公司松原市开发区分公司撤回再审申请。",
+        "source_window_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2"
+        ],
+        "primary_anchor_id": "DOC4_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书4"
+        ],
+        "anchor_targets": [
+          "判决文书4"
+        ],
+        "anchor_value_hints": [
+          "4",
+          "2024",
+          "01",
+          "16"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 6,
+          "relation_type_counts": {
+            "supports": 1,
+            "same_case": 1,
+            "disambiguates": 1,
+            "likely_same_entity": 1,
+            "prev_next": 1,
+            "nearby_window": 1
+          },
+          "top_related_anchor_ids": [
+            "DOC4_A1",
+            "DOC4_A1",
+            "DOC4_A1",
+            "DOC4_A1",
+            "DOC4_A1",
+            "DOC4_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC4_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书4']"
+          },
+          {
+            "relation_type": "disambiguates",
+            "target_anchor_id": "DOC4_A1",
+            "weight": 2.8,
+            "reason": "binding anchor disambiguates evidence"
+          },
+          {
+            "relation_type": "likely_same_entity",
+            "target_anchor_id": "DOC4_A1",
+            "weight": 2.2,
+            "reason": "shared entity ['判决文书4']"
+          },
+          {
+            "relation_type": "prev_next",
+            "target_anchor_id": "DOC4_A1",
+            "weight": 1.4,
+            "reason": "previous anchor"
+          },
+          {
+            "relation_type": "nearby_window",
+            "target_anchor_id": "DOC4_A1",
+            "weight": 1.0,
+            "reason": "within local read window"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information that the case involves a dispute over a work injury insurance qualification determination and is categorized as an administrative case due to the involvement of the administrative court (新疆维吾尔自治区乌鲁木齐市中级人民法院). This chunk is sufficient to classify the document under '行政案件'. No further queries are needed for this document.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政案件",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC4_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书4']"
+              },
+              {
+                "relation_type": "disambiguates",
+                "target_anchor_id": "DOC4_A1",
+                "weight": 2.8,
+                "reason": "binding anchor disambiguates evidence"
+              },
+              {
+                "relation_type": "likely_same_entity",
+                "target_anchor_id": "DOC4_A1",
+                "weight": 2.2,
+                "reason": "shared entity ['判决文书4']"
+              },
+              {
+                "relation_type": "prev_next",
+                "target_anchor_id": "DOC4_A1",
+                "weight": 1.4,
+                "reason": "previous anchor"
+              },
+              {
+                "relation_type": "nearby_window",
+                "target_anchor_id": "DOC4_A1",
+                "weight": 1.0,
+                "reason": "within local read window"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政案件"
+          ],
+          "known_value_signatures": [
+            "判决文书4"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC4_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件详情 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因工伤保险资格认定案不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，申请再审后又撤回了再审申请，法院准许其撤回再审申请。 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。 本院认为，再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司自愿撤回再审申请，意思表达真实，不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下： 准许河南省某某建筑防水工程有限公司松原市开发区分公司撤回再审申请。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC4_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A2",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政案件",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书4']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "likely_same_entity",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 2.2,
+          "reason": "shared entity ['判决文书4']"
+        },
+        {
+          "relation_type": "prev_next",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 1.4,
+          "reason": "previous anchor"
+        },
+        {
+          "relation_type": "nearby_window",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 1.0,
+          "reason": "within local read window"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The summary of DOC4_A2 indicates that the case involves a dispute over a work injury insurance qualification determination, which suggests it is an administrative case. I will select DOC4_A2 as the next anchor coordinate to inspect.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\"], \"utility_hits\": {\"DOC4_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC4_A2\": 11.0, \"DOC4_A1\": 5.0}, \"score_breakdown\": {\"DOC4_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC4_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情\", \"summary\": \"Expanded same-section read window around DOC4_A2: 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因工伤保险资格认定案不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，申请再审后又撤回了再审申请，法院准许其撤回再审申请。\", \"text\": \"[DOC4_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：河南省某某建筑防水工程有限公司松原市开发区分公司，住所地吉林省松原经济技术开发区。\\n\\n法定代表人：代某，该分公司经理。\\n\\n被申请人（原审被告、二审被上诉人）：乌鲁木齐市人力资源和社会保障局。住所地：新疆维吾尔自治区乌鲁木齐市水磨沟区南湖西路。\\n\\n法定代表人：申霜天，该局局长。\\n\\n原审第三人：王某某，女，1972年6月20日出生，无固定职业，住河南省上蔡县。\\n\\n[DOC4_A2 | 案件详情]\\n再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。\\n\\n本院认为，再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司自愿撤回再审申请，意思表达真实，不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下：\\n\\n准许河南省某某建筑防水工程有限公司松原市开发区分公司撤回再审申请。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\"], \"primary_anchor_id\": \"DOC4_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"判决文书4\"], \"anchor_value_hints\": [\"4\", \"2024\", \"01\", \"16\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 6, \"relation_type_counts\": {\"supports\": 1, \"same_case\": 1, \"disambiguates\": 1, \"likely_same_entity\": 1, \"prev_next\": 1, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书4']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}</info>\n<think>The selected chunk provides information that the case involves a dispute over a work injury insurance qualification determination and is categorized as an administrative case due to the involvement of the administrative court (新疆维吾尔自治区乌鲁木齐市中级人民法院). This chunk is sufficient to classify the document under '行政案件'. No further queries are needed for this document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书4']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件详情 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因工伤保险资格认定案不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，申请再审后又撤回了再审申请，法院准许其撤回再审申请。 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。 本院认为，再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司自愿撤回再审申请，意思表达真实，不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下： 准许河南省某某建筑防水工程有限公司松原市开发区分公司撤回再审申请。\"], \"selected_relation_anchor_ids\": [\"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The summary of DOC4_A2 indicates that the case involves a dispute over a work injury insurance qualification determination, which suggests it is an administrative case. I will select DOC4_A2 as the next anchor coordinate to inspect.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\"], \"utility_hits\": {\"DOC4_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC4_A2\": 11.0, \"DOC4_A1\": 5.0}, \"score_breakdown\": {\"DOC4_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC4_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情\", \"summary\": \"Expanded same-section read window around DOC4_A2: 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因工伤保险资格认定案不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，申请再审后又撤回了再审申请，法院准许其撤回再审申请。\", \"text\": \"[DOC4_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）：河南省某某建筑防水工程有限公司松原市开发区分公司，住所地吉林省松原经济技术开发区。\\n\\n法定代表人：代某，该分公司经理。\\n\\n被申请人（原审被告、二审被上诉人）：乌鲁木齐市人力资源和社会保障局。住所地：新疆维吾尔自治区乌鲁木齐市水磨沟区南湖西路。\\n\\n法定代表人：申霜天，该局局长。\\n\\n原审第三人：王某某，女，1972年6月20日出生，无固定职业，住河南省上蔡县。\\n\\n[DOC4_A2 | 案件详情]\\n再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。\\n\\n本院认为，再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司自愿撤回再审申请，意思表达真实，不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下：\\n\\n准许河南省某某建筑防水工程有限公司松原市开发区分公司撤回再审申请。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\"], \"primary_anchor_id\": \"DOC4_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"判决文书4\"], \"anchor_value_hints\": [\"4\", \"2024\", \"01\", \"16\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 6, \"relation_type_counts\": {\"supports\": 1, \"same_case\": 1, \"disambiguates\": 1, \"likely_same_entity\": 1, \"prev_next\": 1, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\", \"DOC4_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书4']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}</info>\n<think>The selected chunk provides information that the case involves a dispute over a work injury insurance qualification determination and is categorized as an administrative case due to the involvement of the administrative court (新疆维吾尔自治区乌鲁木齐市中级人民法院). This chunk is sufficient to classify the document under '行政案件'. No further queries are needed for this document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书4']\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}, {\"relation_type\": \"nearby_window\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 1.0, \"reason\": \"within local read window\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件详情 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因工伤保险资格认定案不服新疆维吾尔自治区乌鲁木齐市中级人民法院的行政判决，申请再审后又撤回了再审申请，法院准许其撤回再审申请。 再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司因其诉被申请人乌鲁木齐市人力资源和社会保障局、原审第三人王某某工伤保险资格认定一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决，向本院申请再审。本案审查过程中，申请人河南省某某建筑防水工程有限公司松原市开发区分公司向本院申请撤回再审申请。 本院认为，再审申请人河南省某某建筑防水工程有限公司松原市开发区分公司自愿撤回再审申请，意思表达真实，不违反法律规定，本院予以准许。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款之规定，裁定如下： 准许河南省某某建筑防水工程有限公司松原市开发区分公司撤回再审申请。\"], \"selected_relation_anchor_ids\": [\"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A2\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+}

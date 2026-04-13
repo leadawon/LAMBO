@@ -1,0 +1,1020 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A5"
+  ],
+  "final_current_query": "进一步检查文档以确认案件类型为执行案件的具体细节。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "utility_hits": {
+          "DOC1_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A2": 11.0,
+          "DOC1_A3": 11.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A5": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC1_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC1_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          },
+          "DOC1_A5": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 28.508
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The document seems to be related to a case where a village committee is disputing an execution ruling from a maritime court. The content suggests that this might be an '执行案件' (execution case). I will inspect the first chunk summary to confirm the type of case and gather more context.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "Expanded same-section read window around DOC1_A1: 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。\n\n法定代表人：周庆国，主任\n\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\n\n[DOC1_A2 | 案件背景]\n复议申请人大连长兴岛经济技术开发区交流岛街道大山村民委员会（以下简称大山村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了大山村委会集体账户（1747××××0012和3103××××7761），并扣划了3103××××7761银行账户内149058.82元，但上述款项中的102248元为代转付的动迁款，46810.82元为累年结转代收转付动迁款所产生的孳息。大山村委会对上述款项没有所有权。\n\n刘广东答辩称，大山村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\n\n[DOC1_A3 | 法院查明事实]\n大连海事法院查明，该院于2021年4月23日作出（2021）辽72执146号执行裁定，到中国银行股份有限公司大连交流岛支行冻结大山村委会3103××××7761银行账户存款149058.82元，并于2021年6月1日予以扣划。该院于2022年5月31日作出（2022）辽72执恢28号执行裁定，对大山村委会在大连农村商业银行股份有限公司交流岛支行1747××××0012银行账户存款进行冻结。\n\n大连长兴岛经济技术开发区交流岛街道村级财务代理中心出具证明：2012年-2021年中国银行大连长兴岛支行账号为3103××××7761的《银行存款日记账》，其中2012年6月8日和7月4日《银行存款日记账》摘要为转存马路屯动迁款、借方共计34416337元和2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元。\n\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划大山村委会的账户存款行为是否合法，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，第一，大山村委会未提供证据证明中国银行股份有限公司大连交流岛支行3103××××7761和大连农村商业银行股份有限公司交流岛支行1747××××0012的银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户。第二，大山村委会未提供证据证明2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元系为他人应发的动迁款，亦未提供其他证据证明该149058.82元与该院2021年4月23日冻结并于2021年6月1日扣划的大山村委会的3103××××7761银行账户存款149058.82元为同一笔款项。故大山村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回大山村委会的异议请求。\n\n[DOC1_A4 | 复议申请]\n复议申请人大山村委会向本院申请复议，请求撤销大连海事法院异议裁定及支持其异议请求。主要理由同异议理由。\n\n本院对大连海事法院查明的事实予以确认。\n\n本院认为，本案焦点问题是大连海事法院冻结和扣划大山村委会的账户存款行为是否符合法律规定，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定：“人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产”。本案中，大山村委会未提供证据证明案涉银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，相关法律规定及最高人民法院相关司法解释、通知、答复等不得查封、扣押、冻结的财产中，亦不包含大山村委会主张的案涉账户，即案涉账户不符合法律规定的执行豁免条件。原审裁定驳回大山村委会的异议请求，在处理结果上是正确的。关于大山村委会提出案涉款项属他人所有问题，应由相关权利人提出，本院对此不予审查。\n\n[DOC1_A5 | 最终裁定]\n综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下：\n\n驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5"
+        ],
+        "primary_anchor_id": "DOC1_A1",
+        "anchor_role_candidates": [
+          "value_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 15,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 4,
+            "likely_same_entity": 4,
+            "prev_next": 1,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A5",
+            "DOC1_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent sections suggest that this is an '执行案件' (execution case) due to the discussion of execution actions such as freezing and seizing funds. To fully confirm the categorization, we need to inspect further details in other chunks.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A2",
+            "confidence": 0.8,
+            "source_anchor_role": "value_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "进一步检查文档以确认案件类型为执行案件的具体细节。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "进一步检查文档以确认案件类型为执行案件的具体细节。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A5",
+        "candidate_anchor_ids": [
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A1"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A1"
+        ],
+        "utility_hits": {
+          "DOC1_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A2": 11.0,
+          "DOC1_A3": 11.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A5": 11.0
+        },
+        "relation_hits": {
+          "DOC1_A2": [
+            "candidate_in_selected_relation_frontier",
+            "same_case_selected=DOC1_A1",
+            "disambiguates_selected=DOC1_A1",
+            "likely_same_entity_selected=DOC1_A1"
+          ],
+          "DOC1_A3": [
+            "candidate_in_selected_relation_frontier",
+            "same_case_selected=DOC1_A1",
+            "disambiguates_selected=DOC1_A1",
+            "likely_same_entity_selected=DOC1_A1"
+          ],
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "same_case_selected=DOC1_A1",
+            "disambiguates_selected=DOC1_A1",
+            "likely_same_entity_selected=DOC1_A1"
+          ],
+          "DOC1_A5": [
+            "candidate_in_selected_relation_frontier",
+            "same_case_selected=DOC1_A1",
+            "disambiguates_selected=DOC1_A1",
+            "likely_same_entity_selected=DOC1_A1"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A2": 15.87,
+          "DOC1_A3": 15.87,
+          "DOC1_A4": 15.87,
+          "DOC1_A5": 15.87
+        },
+        "anchor_role_hits": {
+          "DOC1_A2": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A5": [
+            "case_identity",
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A2": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 15.87,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 3.0,
+            "total": 32.071
+          },
+          "DOC1_A3": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 15.87,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 31.784
+          },
+          "DOC1_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 15.87,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 31.561
+          },
+          "DOC1_A5": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 15.87,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 3.0,
+            "total": 31.378
+          }
+        }
+      },
+      "anchor_id": "DOC1_A5",
+      "plan_think": "The current evidence strongly suggests that the document is related to an '执行案件'. However, to ensure completeness and accuracy, it would be prudent to review additional sections that provide more context on the case's disposition and final ruling. Inspecting DOC1_A5, which contains the final ruling, will help solidify the categorization.",
+      "info": {
+        "anchor_id": "DOC1_A5",
+        "anchor_type": "paragraph_region",
+        "section_path": "最终裁定",
+        "summary": "Expanded same-section read window around DOC1_A5: 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院的执行裁定。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。\n\n法定代表人：周庆国，主任\n\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\n\n[DOC1_A2 | 案件背景]\n复议申请人大连长兴岛经济技术开发区交流岛街道大山村民委员会（以下简称大山村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了大山村委会集体账户（1747××××0012和3103××××7761），并扣划了3103××××7761银行账户内149058.82元，但上述款项中的102248元为代转付的动迁款，46810.82元为累年结转代收转付动迁款所产生的孳息。大山村委会对上述款项没有所有权。\n\n刘广东答辩称，大山村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\n\n[DOC1_A3 | 法院查明事实]\n大连海事法院查明，该院于2021年4月23日作出（2021）辽72执146号执行裁定，到中国银行股份有限公司大连交流岛支行冻结大山村委会3103××××7761银行账户存款149058.82元，并于2021年6月1日予以扣划。该院于2022年5月31日作出（2022）辽72执恢28号执行裁定，对大山村委会在大连农村商业银行股份有限公司交流岛支行1747××××0012银行账户存款进行冻结。\n\n大连长兴岛经济技术开发区交流岛街道村级财务代理中心出具证明：2012年-2021年中国银行大连长兴岛支行账号为3103××××7761的《银行存款日记账》，其中2012年6月8日和7月4日《银行存款日记账》摘要为转存马路屯动迁款、借方共计34416337元和2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元。\n\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划大山村委会的账户存款行为是否合法，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，第一，大山村委会未提供证据证明中国银行股份有限公司大连交流岛支行3103××××7761和大连农村商业银行股份有限公司交流岛支行1747××××0012的银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户。第二，大山村委会未提供证据证明2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元系为他人应发的动迁款，亦未提供其他证据证明该149058.82元与该院2021年4月23日冻结并于2021年6月1日扣划的大山村委会的3103××××7761银行账户存款149058.82元为同一笔款项。故大山村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回大山村委会的异议请求。\n\n[DOC1_A4 | 复议申请]\n复议申请人大山村委会向本院申请复议，请求撤销大连海事法院异议裁定及支持其异议请求。主要理由同异议理由。\n\n本院对大连海事法院查明的事实予以确认。\n\n本院认为，本案焦点问题是大连海事法院冻结和扣划大山村委会的账户存款行为是否符合法律规定，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定：“人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产”。本案中，大山村委会未提供证据证明案涉银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，相关法律规定及最高人民法院相关司法解释、通知、答复等不得查封、扣押、冻结的财产中，亦不包含大山村委会主张的案涉账户，即案涉账户不符合法律规定的执行豁免条件。原审裁定驳回大山村委会的异议请求，在处理结果上是正确的。关于大山村委会提出案涉款项属他人所有问题，应由相关权利人提出，本院对此不予审查。\n\n[DOC1_A5 | 最终裁定]\n综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下：\n\n驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5"
+        ],
+        "primary_anchor_id": "DOC1_A5",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "72",
+          "108"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 4,
+            "disambiguates": 4,
+            "likely_same_entity": 4,
+            "prev_next": 1,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides the final ruling of the case, confirming that it involves an execution dispute. The text explicitly mentions maintaining the execution ruling made by the maritime court, which aligns with the '执行案件' (execution case) classification. This chunk solidifies the categorization of the document as an execution case.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A5",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A2",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A1",
+            "DOC1_A5"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。",
+            "最终裁定 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院的执行裁定。 综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下： 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。 本裁定为终审裁定。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A1",
+              "target_anchor_id": "DOC1_A2",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC1_A5",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "执行案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "confidence": 0.8,
+      "source_anchor_role": "value_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "执行案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A5",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to be related to a case where a village committee is disputing an execution ruling from a maritime court. The content suggests that this might be an '执行案件' (execution case). I will inspect the first chunk summary to confirm the type of case and gather more context.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A5\": 11.0}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC1_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC1_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC1_A1: 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。\\n\\n法定代表人：周庆国，主任\\n\\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\\n\\n[DOC1_A2 | 案件背景]\\n复议申请人大连长兴岛经济技术开发区交流岛街道大山村民委员会（以下简称大山村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了大山村委会集体账户（1747××××0012和3103××××7761），并扣划了3103××××7761银行账户内149058.82元，但上述款项中的102248元为代转付的动迁款，46810.82元为累年结转代收转付动迁款所产生的孳息。大山村委会对上述款项没有所有权。\\n\\n刘广东答辩称，大山村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\\n\\n[DOC1_A3 | 法院查明事实]\\n大连海事法院查明，该院于2021年4月23日作出（2021）辽72执146号执行裁定，到中国银行股份有限公司大连交流岛支行冻结大山村委会3103××××7761银行账户存款149058.82元，并于2021年6月1日予以扣划。该院于2022年5月31日作出（2022）辽72执恢28号执行裁定，对大山村委会在大连农村商业银行股份有限公司交流岛支行1747××××0012银行账户存款进行冻结。\\n\\n大连长兴岛经济技术开发区交流岛街道村级财务代理中心出具证明：2012年-2021年中国银行大连长兴岛支行账号为3103××××7761的《银行存款日记账》，其中2012年6月8日和7月4日《银行存款日记账》摘要为转存马路屯动迁款、借方共计34416337元和2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元。\\n\\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划大山村委会的账户存款行为是否合法，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，第一，大山村委会未提供证据证明中国银行股份有限公司大连交流岛支行3103××××7761和大连农村商业银行股份有限公司交流岛支行1747××××0012的银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户。第二，大山村委会未提供证据证明2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元系为他人应发的动迁款，亦未提供其他证据证明该149058.82元与该院2021年4月23日冻结并于2021年6月1日扣划的大山村委会的3103××××7761银行账户存款149058.82元为同一笔款项。故大山村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回大山村委会的异议请求。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人大山村委会向本院申请复议，请求撤销大连海事法院异议裁定及支持其异议请求。主要理由同异议理由。\\n\\n本院对大连海事法院查明的事实予以确认。\\n\\n本院认为，本案焦点问题是大连海事法院冻结和扣划大山村委会的账户存款行为是否符合法律规定，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定：“人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产”。本案中，大山村委会未提供证据证明案涉银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，相关法律规定及最高人民法院相关司法解释、通知、答复等不得查封、扣押、冻结的财产中，亦不包含大山村委会主张的案涉账户，即案涉账户不符合法律规定的执行豁免条件。原审裁定驳回大山村委会的异议请求，在处理结果上是正确的。关于大山村委会提出案涉款项属他人所有问题，应由相关权利人提出，本院对此不予审查。\\n\\n[DOC1_A5 | 最终裁定]\\n综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下：\\n\\n驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 15, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A5\", \"DOC1_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent sections suggest that this is an '执行案件' (execution case) due to the discussion of execution actions such as freezing and seizing funds. To fully confirm the categorization, we need to inspect further details in other chunks.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"进一步检查文档以确认案件类型为执行案件的具体细节。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}}</retrieve>\n<think>The current evidence strongly suggests that the document is related to an '执行案件'. However, to ensure completeness and accuracy, it would be prudent to review additional sections that provide more context on the case's disposition and final ruling. Inspecting DOC1_A5, which contains the final ruling, will help solidify the categorization.</think>\n<search>{\"current_query\": \"进一步检查文档以确认案件类型为执行案件的具体细节。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A5\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A5\": 11.0}, \"relation_hits\": {\"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"], \"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"]}, \"relation_score\": {\"DOC1_A2\": 15.87, \"DOC1_A3\": 15.87, \"DOC1_A4\": 15.87, \"DOC1_A5\": 15.87}, \"anchor_role_hits\": {\"DOC1_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A5\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 6.201, \"redundancy_penalty\": 3.0, \"total\": 32.071}, \"DOC1_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 31.784}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 31.561}, \"DOC1_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 31.378}}}</search>\n<info>{\"anchor_id\": \"DOC1_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"最终裁定\", \"summary\": \"Expanded same-section read window around DOC1_A5: 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院的执行裁定。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。\\n\\n法定代表人：周庆国，主任\\n\\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\\n\\n[DOC1_A2 | 案件背景]\\n复议申请人大连长兴岛经济技术开发区交流岛街道大山村民委员会（以下简称大山村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了大山村委会集体账户（1747××××0012和3103××××7761），并扣划了3103××××7761银行账户内149058.82元，但上述款项中的102248元为代转付的动迁款，46810.82元为累年结转代收转付动迁款所产生的孳息。大山村委会对上述款项没有所有权。\\n\\n刘广东答辩称，大山村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\\n\\n[DOC1_A3 | 法院查明事实]\\n大连海事法院查明，该院于2021年4月23日作出（2021）辽72执146号执行裁定，到中国银行股份有限公司大连交流岛支行冻结大山村委会3103××××7761银行账户存款149058.82元，并于2021年6月1日予以扣划。该院于2022年5月31日作出（2022）辽72执恢28号执行裁定，对大山村委会在大连农村商业银行股份有限公司交流岛支行1747××××0012银行账户存款进行冻结。\\n\\n大连长兴岛经济技术开发区交流岛街道村级财务代理中心出具证明：2012年-2021年中国银行大连长兴岛支行账号为3103××××7761的《银行存款日记账》，其中2012年6月8日和7月4日《银行存款日记账》摘要为转存马路屯动迁款、借方共计34416337元和2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元。\\n\\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划大山村委会的账户存款行为是否合法，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，第一，大山村委会未提供证据证明中国银行股份有限公司大连交流岛支行3103××××7761和大连农村商业银行股份有限公司交流岛支行1747××××0012的银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户。第二，大山村委会未提供证据证明2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元系为他人应发的动迁款，亦未提供其他证据证明该149058.82元与该院2021年4月23日冻结并于2021年6月1日扣划的大山村委会的3103××××7761银行账户存款149058.82元为同一笔款项。故大山村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回大山村委会的异议请求。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人大山村委会向本院申请复议，请求撤销大连海事法院异议裁定及支持其异议请求。主要理由同异议理由。\\n\\n本院对大连海事法院查明的事实予以确认。\\n\\n本院认为，本案焦点问题是大连海事法院冻结和扣划大山村委会的账户存款行为是否符合法律规定，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定：“人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产”。本案中，大山村委会未提供证据证明案涉银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，相关法律规定及最高人民法院相关司法解释、通知、答复等不得查封、扣押、冻结的财产中，亦不包含大山村委会主张的案涉账户，即案涉账户不符合法律规定的执行豁免条件。原审裁定驳回大山村委会的异议请求，在处理结果上是正确的。关于大山村委会提出案涉款项属他人所有问题，应由相关权利人提出，本院对此不予审查。\\n\\n[DOC1_A5 | 最终裁定]\\n综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下：\\n\\n驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A5\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"72\", \"108\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>The selected chunk provides the final ruling of the case, confirming that it involves an execution dispute. The text explicitly mentions maintaining the execution ruling made by the maritime court, which aligns with the '执行案件' (execution case) classification. This chunk solidifies the categorization of the document as an execution case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A5\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\", \"DOC1_A5\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\", \"最终裁定 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院的执行裁定。 综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下： 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。 本裁定为终审裁定。\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A5\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to a case where a village committee is disputing an execution ruling from a maritime court. The content suggests that this might be an '执行案件' (execution case). I will inspect the first chunk summary to confirm the type of case and gather more context.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '民事案件' '执行案件' '赔偿案件' '刑事案件'这5种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '赔偿案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A5\": 11.0}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC1_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC1_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 28.508}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC1_A1: 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。\\n\\n法定代表人：周庆国，主任\\n\\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\\n\\n[DOC1_A2 | 案件背景]\\n复议申请人大连长兴岛经济技术开发区交流岛街道大山村民委员会（以下简称大山村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了大山村委会集体账户（1747××××0012和3103××××7761），并扣划了3103××××7761银行账户内149058.82元，但上述款项中的102248元为代转付的动迁款，46810.82元为累年结转代收转付动迁款所产生的孳息。大山村委会对上述款项没有所有权。\\n\\n刘广东答辩称，大山村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\\n\\n[DOC1_A3 | 法院查明事实]\\n大连海事法院查明，该院于2021年4月23日作出（2021）辽72执146号执行裁定，到中国银行股份有限公司大连交流岛支行冻结大山村委会3103××××7761银行账户存款149058.82元，并于2021年6月1日予以扣划。该院于2022年5月31日作出（2022）辽72执恢28号执行裁定，对大山村委会在大连农村商业银行股份有限公司交流岛支行1747××××0012银行账户存款进行冻结。\\n\\n大连长兴岛经济技术开发区交流岛街道村级财务代理中心出具证明：2012年-2021年中国银行大连长兴岛支行账号为3103××××7761的《银行存款日记账》，其中2012年6月8日和7月4日《银行存款日记账》摘要为转存马路屯动迁款、借方共计34416337元和2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元。\\n\\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划大山村委会的账户存款行为是否合法，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，第一，大山村委会未提供证据证明中国银行股份有限公司大连交流岛支行3103××××7761和大连农村商业银行股份有限公司交流岛支行1747××××0012的银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户。第二，大山村委会未提供证据证明2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元系为他人应发的动迁款，亦未提供其他证据证明该149058.82元与该院2021年4月23日冻结并于2021年6月1日扣划的大山村委会的3103××××7761银行账户存款149058.82元为同一笔款项。故大山村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回大山村委会的异议请求。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人大山村委会向本院申请复议，请求撤销大连海事法院异议裁定及支持其异议请求。主要理由同异议理由。\\n\\n本院对大连海事法院查明的事实予以确认。\\n\\n本院认为，本案焦点问题是大连海事法院冻结和扣划大山村委会的账户存款行为是否符合法律规定，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定：“人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产”。本案中，大山村委会未提供证据证明案涉银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，相关法律规定及最高人民法院相关司法解释、通知、答复等不得查封、扣押、冻结的财产中，亦不包含大山村委会主张的案涉账户，即案涉账户不符合法律规定的执行豁免条件。原审裁定驳回大山村委会的异议请求，在处理结果上是正确的。关于大山村委会提出案涉款项属他人所有问题，应由相关权利人提出，本院对此不予审查。\\n\\n[DOC1_A5 | 最终裁定]\\n综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下：\\n\\n驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 15, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A5\", \"DOC1_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>The selected chunk provides information on the parties involved in the case but does not directly indicate the type of case. However, the subsequent sections suggest that this is an '执行案件' (execution case) due to the discussion of execution actions such as freezing and seizing funds. To fully confirm the categorization, we need to inspect further details in other chunks.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"进一步检查文档以确认案件类型为执行案件的具体细节。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}}</retrieve>\n<think>The current evidence strongly suggests that the document is related to an '执行案件'. However, to ensure completeness and accuracy, it would be prudent to review additional sections that provide more context on the case's disposition and final ruling. Inspecting DOC1_A5, which contains the final ruling, will help solidify the categorization.</think>\n<search>{\"current_query\": \"进一步检查文档以确认案件类型为执行案件的具体细节。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A5\", \"candidate_anchor_ids\": [\"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A2\": 11.0, \"DOC1_A3\": 11.0, \"DOC1_A4\": 11.0, \"DOC1_A5\": 11.0}, \"relation_hits\": {\"DOC1_A2\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"], \"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"], \"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"same_case_selected=DOC1_A1\", \"disambiguates_selected=DOC1_A1\", \"likely_same_entity_selected=DOC1_A1\"]}, \"relation_score\": {\"DOC1_A2\": 15.87, \"DOC1_A3\": 15.87, \"DOC1_A4\": 15.87, \"DOC1_A5\": 15.87}, \"anchor_role_hits\": {\"DOC1_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A5\": [\"case_identity\", \"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 6.201, \"redundancy_penalty\": 3.0, \"total\": 32.071}, \"DOC1_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 31.784}, \"DOC1_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 31.561}, \"DOC1_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 15.87, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 31.378}}}</search>\n<info>{\"anchor_id\": \"DOC1_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"最终裁定\", \"summary\": \"Expanded same-section read window around DOC1_A5: 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院的执行裁定。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。\\n\\n法定代表人：周庆国，主任\\n\\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\\n\\n[DOC1_A2 | 案件背景]\\n复议申请人大连长兴岛经济技术开发区交流岛街道大山村民委员会（以下简称大山村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n大连海事法院在执行申请执行人刘广东与被执行人大山村委会海上养殖损害责任纠纷一案中，大山村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了大山村委会集体账户（1747××××0012和3103××××7761），并扣划了3103××××7761银行账户内149058.82元，但上述款项中的102248元为代转付的动迁款，46810.82元为累年结转代收转付动迁款所产生的孳息。大山村委会对上述款项没有所有权。\\n\\n刘广东答辩称，大山村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\\n\\n[DOC1_A3 | 法院查明事实]\\n大连海事法院查明，该院于2021年4月23日作出（2021）辽72执146号执行裁定，到中国银行股份有限公司大连交流岛支行冻结大山村委会3103××××7761银行账户存款149058.82元，并于2021年6月1日予以扣划。该院于2022年5月31日作出（2022）辽72执恢28号执行裁定，对大山村委会在大连农村商业银行股份有限公司交流岛支行1747××××0012银行账户存款进行冻结。\\n\\n大连长兴岛经济技术开发区交流岛街道村级财务代理中心出具证明：2012年-2021年中国银行大连长兴岛支行账号为3103××××7761的《银行存款日记账》，其中2012年6月8日和7月4日《银行存款日记账》摘要为转存马路屯动迁款、借方共计34416337元和2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元。\\n\\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划大山村委会的账户存款行为是否合法，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，第一，大山村委会未提供证据证明中国银行股份有限公司大连交流岛支行3103××××7761和大连农村商业银行股份有限公司交流岛支行1747××××0012的银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户。第二，大山村委会未提供证据证明2021年12月17日《银行存款日记账》摘要为转付法院划扣款、贷方为149058.82元系为他人应发的动迁款，亦未提供其他证据证明该149058.82元与该院2021年4月23日冻结并于2021年6月1日扣划的大山村委会的3103××××7761银行账户存款149058.82元为同一笔款项。故大山村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回大山村委会的异议请求。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人大山村委会向本院申请复议，请求撤销大连海事法院异议裁定及支持其异议请求。主要理由同异议理由。\\n\\n本院对大连海事法院查明的事实予以确认。\\n\\n本院认为，本案焦点问题是大连海事法院冻结和扣划大山村委会的账户存款行为是否符合法律规定，大山村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定：“人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产”。本案中，大山村委会未提供证据证明案涉银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，相关法律规定及最高人民法院相关司法解释、通知、答复等不得查封、扣押、冻结的财产中，亦不包含大山村委会主张的案涉账户，即案涉账户不符合法律规定的执行豁免条件。原审裁定驳回大山村委会的异议请求，在处理结果上是正确的。关于大山村委会提出案涉款项属他人所有问题，应由相关权利人提出，本院对此不予审查。\\n\\n[DOC1_A5 | 最终裁定]\\n综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下：\\n\\n驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A5\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"72\", \"108\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>The selected chunk provides the final ruling of the case, confirming that it involves an execution dispute. The text explicitly mentions maintaining the execution ruling made by the maritime court, which aligns with the '执行案件' (execution case) classification. This chunk solidifies the categorization of the document as an execution case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A5\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\", \"DOC1_A5\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道大山村民委员会，申请执行人为刘广东。 复议申请人（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道大山村民委员会，住所地大连长兴岛经济技术开发区交流岛街道大山村。 法定代表人：周庆国，主任 申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\", \"最终裁定 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院的执行裁定。 综上，依照《中华人民共和国民事诉讼法》第二百三十六条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项之规定，裁定如下： 驳回大连长兴岛经济技术开发区交流岛街道大山村民委员会的复议申请，维持大连海事法院（2023）辽72执异108号执行裁定。 本裁定为终审裁定。\"], \"selected_relation_anchor_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A1\", \"target_anchor_id\": \"DOC1_A2\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC1_A5\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+}

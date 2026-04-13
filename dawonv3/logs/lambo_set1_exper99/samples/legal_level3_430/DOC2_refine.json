@@ -1,0 +1,458 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "selected_anchor_ids": [
+    "DOC2_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A1",
+        "candidate_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4"
+        ],
+        "utility_hits": {
+          "DOC2_A9": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC2_A10": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC2_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC2_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A9": 11.0,
+          "DOC2_A10": 11.0,
+          "DOC2_A5": 11.0,
+          "DOC2_A3": 11.0
+        },
+        "score_breakdown": {
+          "DOC2_A9": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 8.497,
+            "redundancy_penalty": 0.0,
+            "total": 31.497
+          },
+          "DOC2_A10": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 8.402,
+            "redundancy_penalty": 0.0,
+            "total": 31.402
+          },
+          "DOC2_A5": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 9.008,
+            "redundancy_penalty": 0.0,
+            "total": 29.008
+          },
+          "DOC2_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC2_A1",
+      "plan_think": "The document appears to be related to a house征收 case, which falls under administrative cases. I will inspect the first chunk (DOC2_A1) to confirm the type of case and gather information on the parties involved.",
+      "info": {
+        "anchor_id": "DOC2_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "Expanded same-section read window around DOC2_A1: 再审申请人包括欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠，被申请人是苏州市姑苏区人民政府。",
+        "text": "[DOC2_A1 | 当事人信息]\n再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。\n\n再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。\n\n再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。\n\n再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。\n\n再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。\n\n被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。\n\n[DOC2_A2 | 案件背景]\n法定代表人陈羔，该区代区长。\n\n再审申请人欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠（以下简称欧阳德凤等五人）因诉苏州市姑苏区人民政府（以下简称姑苏区政府）房屋征收决定一案，不服本院（2022）苏行终25号行政判决，向本院申请再审。本院立案受理后依法组成合议庭审查了本案，现已审查终结。\n\n[DOC2_A3 | 再审申请理由]\n申请人欧阳德凤等五人申请再审称：一、案涉征收补偿方案产权调换房源位置不明确、房源面积不足，征收补偿费用无法满足补偿安置的需要；二、一审判决认为社会稳定风险评估不违反相关规定，实际上社会稳定风险评估存在重大问题；三、被申请人征收决定程序不合法，被申请人在作出姑苏府〔2020〕190号《苏州市姑苏区人民政府国有土地上房屋征收决定》（以下简称190号《征收决定》）之前，没有对未经登记建筑进行最终认定。综上，请求本院撤销一、二审判决，依法提起再审。\n\n被申请人姑苏区政府答辩称：1．案涉项目经征收实施单位概算，补偿资金约为5023.76万元，在作出征收房屋征收决定前专用账户的存款余额为5023.76万元，该费用完全能满足补偿安置的需要。同时，项目配置了长江花园等小区的产权调换房源及和泰花园等小区定销商品房，上述资金及房源能充分保障被征收人对补偿方式的选择权；2．本案中，征收部门对征收范围内拟征收的房屋权属、用途、建筑面积等情况进行了调查登记，苏州市自然资源和规划局（以下简称苏州市资规局）出具了《未经登记建筑认定意见函》，对未经登记建筑进行了认定，后征收部门将上述材料在征收现场予以公布，程序符合相关规定；3．案涉征收决定核发前，征收部门及征收实施单位会同有关单位对案涉征收项目进行社会稳定风险评估，形成社会稳定风险评估评审表，评估结论为低风险，被申请人对社会稳定风险评估工作及结果予以认可。综上，一、二审法院作出的判决事实认定清楚，法律适用正确，请求本院依法驳回申请人的再审申请。\n\n[DOC2_A4 | 被申请人答辩]\n本院经审查认为，本案的争议焦点为190号《征收决定》是否合法。\n\n[DOC2_A5 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。]\n一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。\n\n[DOC2_A6 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。]\n二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。\n\n[DOC2_A7 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 三、关于社会稳定风险评估以及补偿资金的问题。姑苏区政府在一审中提交的《江苏省社会稳定风险评估评审表》证明，其在作出190号《征收决定》前，已经进行社会稳定风险评估，评估结论为社会稳定风险等级低风险。此外，姑苏区政府提交的《白洋湾街道新概念工业园地块项目征收补偿资金估算》《开户许可证》、中国工商银行《往来户历史明细清单》《苏州城区房屋征收项目安置房源计划供应方案》等证据显示，案涉征收项目约需资金5023.76万元。在190号《征收决定》作出之前，5023.76万元资金已经存入案涉房屋征收专用账户，案涉项目征收补偿费用足额到位。此外，被申请人提供和泰花园等小区定销商品房房源8套，面积约840平方米，以及长江花园等小区产权调换房约250平方米供被征收人选择。无论被征收人选择货币补偿还是产权调换，均能依法予以保障。故190号《征收决定》符合《征补条例》第十二条的规定。]\n三、关于社会稳定风险评估以及补偿资金的问题。姑苏区政府在一审中提交的《江苏省社会稳定风险评估评审表》证明，其在作出190号《征收决定》前，已经进行社会稳定风险评估，评估结论为社会稳定风险等级低风险。此外，姑苏区政府提交的《白洋湾街道新概念工业园地块项目征收补偿资金估算》《开户许可证》、中国工商银行《往来户历史明细清单》《苏州城区房屋征收项目安置房源计划供应方案》等证据显示，案涉征收项目约需资金5023.76万元。在190号《征收决定》作出之前，5023.76万元资金已经存入案涉房屋征收专用账户，案涉项目征收补偿费用足额到位。此外，被申请人提供和泰花园等小区定销商品房房源8套，面积约840平方米，以及长江花园等小区产权调换房约250平方米供被征收人选择。无论被征收人选择货币补偿还是产权调换，均能依法予以保障。故190号《征收决定》符合《征补条例》第十二条的规定。\n\n[DOC2_A8 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 四、关于被征收房屋的调查登记问题。姑苏区政府提交的《未经登记建筑认定意见函》《被征收房屋调查结果汇总表》及公示照片能够证明，190号《征收决定》作出前，姑苏区征收办对征收范围内拟征收房屋的权属、用途、建筑面积等情况进行了调查登记，苏州市资规局出具了《未经登记建筑认定意见函》，后姑苏区征收办将房屋的调查结果和未经登记建筑认定意见在征收现场予以公布。故190号《征收决定》符合《征补条例》第十五条的规定。]\n四、关于被征收房屋的调查登记问题。姑苏区政府提交的《未经登记建筑认定意见函》《被征收房屋调查结果汇总表》及公示照片能够证明，190号《征收决定》作出前，姑苏区征收办对征收范围内拟征收房屋的权属、用途、建筑面积等情况进行了调查登记，苏州市资规局出具了《未经登记建筑认定意见函》，后姑苏区征收办将房屋的调查结果和未经登记建筑认定意见在征收现场予以公布。故190号《征收决定》符合《征补条例》第十五条的规定。\n\n[DOC2_A9 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。]\n五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。\n\n[DOC2_A10 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。]\n综上，一审法院判决驳回欧阳德凤等五人要求撤销190号《征收决定》的诉讼请求，二审法院予以维持，并无不当。欧阳德凤等五人的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用<中华人民共和国行政诉讼法>的解释》第一百一十六条第二款的规定，裁定如下：\n\n驳回欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10"
+        ],
+        "primary_anchor_id": "DOC2_A1",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书2"
+        ],
+        "anchor_targets": [
+          "判决文书2"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "1937",
+          "11",
+          "24",
+          "1962",
+          "1",
+          "29",
+          "1963"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 5,
+            "same_case": 9,
+            "disambiguates": 4
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A7",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A10",
+            "DOC2_A9"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A10",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC2_A9",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书2']"
+          }
+        ]
+      },
+      "extract_think": "This chunk provides information about the parties involved in the case but does not specify the type of case. However, the subsequent sections indicate that this is a case involving a house征收 decision, which is an administrative case. The document title can be used to classify this document as an administrative case.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政案件",
+            "value": "《判决文书2》",
+            "normalized_value": "判决文书2",
+            "evidence_text": "再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A1",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A9",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A7",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC2_A10",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC2_A9",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书2']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政案件"
+          ],
+          "known_value_signatures": [
+            "判决文书2"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "当事人信息 再审申请人包括欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠，被申请人是苏州市姑苏区人民政府。 再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。 再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。 被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A7",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A10",
+            "DOC2_A8",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A10",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书2']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政案件",
+      "value": "《判决文书2》",
+      "normalized_value": "判决文书2",
+      "evidence_text": "再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A1",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A9",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A10",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC2_A9",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书2']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document appears to be related to a house征收 case, which falls under administrative cases. I will inspect the first chunk (DOC2_A1) to confirm the type of case and gather information on the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"utility_hits\": {\"DOC2_A9\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A10\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC2_A9\": 11.0, \"DOC2_A10\": 11.0, \"DOC2_A5\": 11.0, \"DOC2_A3\": 11.0}, \"score_breakdown\": {\"DOC2_A9\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.497, \"redundancy_penalty\": 0.0, \"total\": 31.497}, \"DOC2_A10\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.402, \"redundancy_penalty\": 0.0, \"total\": 31.402}, \"DOC2_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 9.008, \"redundancy_penalty\": 0.0, \"total\": 29.008}, \"DOC2_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC2_A1: 再审申请人包括欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠，被申请人是苏州市姑苏区人民政府。\", \"text\": \"[DOC2_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。\\n\\n再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。\\n\\n再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。\\n\\n再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。\\n\\n再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。\\n\\n被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。\\n\\n[DOC2_A2 | 案件背景]\\n法定代表人陈羔，该区代区长。\\n\\n再审申请人欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠（以下简称欧阳德凤等五人）因诉苏州市姑苏区人民政府（以下简称姑苏区政府）房屋征收决定一案，不服本院（2022）苏行终25号行政判决，向本院申请再审。本院立案受理后依法组成合议庭审查了本案，现已审查终结。\\n\\n[DOC2_A3 | 再审申请理由]\\n申请人欧阳德凤等五人申请再审称：一、案涉征收补偿方案产权调换房源位置不明确、房源面积不足，征收补偿费用无法满足补偿安置的需要；二、一审判决认为社会稳定风险评估不违反相关规定，实际上社会稳定风险评估存在重大问题；三、被申请人征收决定程序不合法，被申请人在作出姑苏府〔2020〕190号《苏州市姑苏区人民政府国有土地上房屋征收决定》（以下简称190号《征收决定》）之前，没有对未经登记建筑进行最终认定。综上，请求本院撤销一、二审判决，依法提起再审。\\n\\n被申请人姑苏区政府答辩称：1．案涉项目经征收实施单位概算，补偿资金约为5023.76万元，在作出征收房屋征收决定前专用账户的存款余额为5023.76万元，该费用完全能满足补偿安置的需要。同时，项目配置了长江花园等小区的产权调换房源及和泰花园等小区定销商品房，上述资金及房源能充分保障被征收人对补偿方式的选择权；2．本案中，征收部门对征收范围内拟征收的房屋权属、用途、建筑面积等情况进行了调查登记，苏州市自然资源和规划局（以下简称苏州市资规局）出具了《未经登记建筑认定意见函》，对未经登记建筑进行了认定，后征收部门将上述材料在征收现场予以公布，程序符合相关规定；3．案涉征收决定核发前，征收部门及征收实施单位会同有关单位对案涉征收项目进行社会稳定风险评估，形成社会稳定风险评估评审表，评估结论为低风险，被申请人对社会稳定风险评估工作及结果予以认可。综上，一、二审法院作出的判决事实认定清楚，法律适用正确，请求本院依法驳回申请人的再审申请。\\n\\n[DOC2_A4 | 被申请人答辩]\\n本院经审查认为，本案的争议焦点为190号《征收决定》是否合法。\\n\\n[DOC2_A5 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。]\\n一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。\\n\\n[DOC2_A6 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。]\\n二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。\\n\\n[DOC2_A7 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 三、关于社会稳定风险评估以及补偿资金的问题。姑苏区政府在一审中提交的《江苏省社会稳定风险评估评审表》证明，其在作出190号《征收决定》前，已经进行社会稳定风险评估，评估结论为社会稳定风险等级低风险。此外，姑苏区政府提交的《白洋湾街道新概念工业园地块项目征收补偿资金估算》《开户许可证》、中国工商银行《往来户历史明细清单》《苏州城区房屋征收项目安置房源计划供应方案》等证据显示，案涉征收项目约需资金5023.76万元。在190号《征收决定》作出之前，5023.76万元资金已经存入案涉房屋征收专用账户，案涉项目征收补偿费用足额到位。此外，被申请人提供和泰花园等小区定销商品房房源8套，面积约840平方米，以及长江花园等小区产权调换房约250平方米供被征收人选择。无论被征收人选择货币补偿还是产权调换，均能依法予以保障。故190号《征收决定》符合《征补条例》第十二条的规定。]\\n三、关于社会稳定风险评估以及补偿资金的问题。姑苏区政府在一审中提交的《江苏省社会稳定风险评估评审表》证明，其在作出190号《征收决定》前，已经进行社会稳定风险评估，评估结论为社会稳定风险等级低风险。此外，姑苏区政府提交的《白洋湾街道新概念工业园地块项目征收补偿资金估算》《开户许可证》、中国工商银行《往来户历史明细清单》《苏州城区房屋征收项目安置房源计划供应方案》等证据显示，案涉征收项目约需资金5023.76万元。在190号《征收决定》作出之前，5023.76万元资金已经存入案涉房屋征收专用账户，案涉项目征收补偿费用足额到位。此外，被申请人提供和泰花园等小区定销商品房房源8套，面积约840平方米，以及长江花园等小区产权调换房约250平方米供被征收人选择。无论被征收人选择货币补偿还是产权调换，均能依法予以保障。故190号《征收决定》符合《征补条例》第十二条的规定。\\n\\n[DOC2_A8 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 四、关于被征收房屋的调查登记问题。姑苏区政府提交的《未经登记建筑认定意见函》《被征收房屋调查结果汇总表》及公示照片能够证明，190号《征收决定》作出前，姑苏区征收办对征收范围内拟征收房屋的权属、用途、建筑面积等情况进行了调查登记，苏州市资规局出具了《未经登记建筑认定意见函》，后姑苏区征收办将房屋的调查结果和未经登记建筑认定意见在征收现场予以公布。故190号《征收决定》符合《征补条例》第十五条的规定。]\\n四、关于被征收房屋的调查登记问题。姑苏区政府提交的《未经登记建筑认定意见函》《被征收房屋调查结果汇总表》及公示照片能够证明，190号《征收决定》作出前，姑苏区征收办对征收范围内拟征收房屋的权属、用途、建筑面积等情况进行了调查登记，苏州市资规局出具了《未经登记建筑认定意见函》，后姑苏区征收办将房屋的调查结果和未经登记建筑认定意见在征收现场予以公布。故190号《征收决定》符合《征补条例》第十五条的规定。\\n\\n[DOC2_A9 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。]\\n五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。\\n\\n[DOC2_A10 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。]\\n综上，一审法院判决驳回欧阳德凤等五人要求撤销190号《征收决定》的诉讼请求，二审法院予以维持，并无不当。欧阳德凤等五人的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用<中华人民共和国行政诉讼法>的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n驳回欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠的再审申请。\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\", \"DOC2_A6\", \"DOC2_A7\", \"DOC2_A8\", \"DOC2_A9\", \"DOC2_A10\"], \"primary_anchor_id\": \"DOC2_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书2\"], \"anchor_targets\": [\"判决文书2\"], \"anchor_value_hints\": [\"2\", \"1937\", \"11\", \"24\", \"1962\", \"1\", \"29\", \"1963\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 9, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A7\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\", \"DOC2_A9\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A10\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}]}</info>\n<think>This chunk provides information about the parties involved in the case but does not specify the type of case. However, the subsequent sections indicate that this is a case involving a house征收 decision, which is an administrative case. The document title can be used to classify this document as an administrative case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A1\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A10\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书2\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人包括欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠，被申请人是苏州市姑苏区人民政府。 再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。 再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。 被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A7\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\", \"DOC2_A8\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document appears to be related to a house征收 case, which falls under administrative cases. I will inspect the first chunk (DOC2_A1) to confirm the type of case and gather information on the parties involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政案件' '执行案件' '刑事案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '刑事案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"utility_hits\": {\"DOC2_A9\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A10\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC2_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC2_A9\": 11.0, \"DOC2_A10\": 11.0, \"DOC2_A5\": 11.0, \"DOC2_A3\": 11.0}, \"score_breakdown\": {\"DOC2_A9\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.497, \"redundancy_penalty\": 0.0, \"total\": 31.497}, \"DOC2_A10\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 8.402, \"redundancy_penalty\": 0.0, \"total\": 31.402}, \"DOC2_A5\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 9.008, \"redundancy_penalty\": 0.0, \"total\": 29.008}, \"DOC2_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC2_A1: 再审申请人包括欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠，被申请人是苏州市姑苏区人民政府。\", \"text\": \"[DOC2_A1 | 当事人信息]\\n再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。\\n\\n再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。\\n\\n再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。\\n\\n再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。\\n\\n再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。\\n\\n被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。\\n\\n[DOC2_A2 | 案件背景]\\n法定代表人陈羔，该区代区长。\\n\\n再审申请人欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠（以下简称欧阳德凤等五人）因诉苏州市姑苏区人民政府（以下简称姑苏区政府）房屋征收决定一案，不服本院（2022）苏行终25号行政判决，向本院申请再审。本院立案受理后依法组成合议庭审查了本案，现已审查终结。\\n\\n[DOC2_A3 | 再审申请理由]\\n申请人欧阳德凤等五人申请再审称：一、案涉征收补偿方案产权调换房源位置不明确、房源面积不足，征收补偿费用无法满足补偿安置的需要；二、一审判决认为社会稳定风险评估不违反相关规定，实际上社会稳定风险评估存在重大问题；三、被申请人征收决定程序不合法，被申请人在作出姑苏府〔2020〕190号《苏州市姑苏区人民政府国有土地上房屋征收决定》（以下简称190号《征收决定》）之前，没有对未经登记建筑进行最终认定。综上，请求本院撤销一、二审判决，依法提起再审。\\n\\n被申请人姑苏区政府答辩称：1．案涉项目经征收实施单位概算，补偿资金约为5023.76万元，在作出征收房屋征收决定前专用账户的存款余额为5023.76万元，该费用完全能满足补偿安置的需要。同时，项目配置了长江花园等小区的产权调换房源及和泰花园等小区定销商品房，上述资金及房源能充分保障被征收人对补偿方式的选择权；2．本案中，征收部门对征收范围内拟征收的房屋权属、用途、建筑面积等情况进行了调查登记，苏州市自然资源和规划局（以下简称苏州市资规局）出具了《未经登记建筑认定意见函》，对未经登记建筑进行了认定，后征收部门将上述材料在征收现场予以公布，程序符合相关规定；3．案涉征收决定核发前，征收部门及征收实施单位会同有关单位对案涉征收项目进行社会稳定风险评估，形成社会稳定风险评估评审表，评估结论为低风险，被申请人对社会稳定风险评估工作及结果予以认可。综上，一、二审法院作出的判决事实认定清楚，法律适用正确，请求本院依法驳回申请人的再审申请。\\n\\n[DOC2_A4 | 被申请人答辩]\\n本院经审查认为，本案的争议焦点为190号《征收决定》是否合法。\\n\\n[DOC2_A5 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。]\\n一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。\\n\\n[DOC2_A6 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。]\\n二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。\\n\\n[DOC2_A7 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 三、关于社会稳定风险评估以及补偿资金的问题。姑苏区政府在一审中提交的《江苏省社会稳定风险评估评审表》证明，其在作出190号《征收决定》前，已经进行社会稳定风险评估，评估结论为社会稳定风险等级低风险。此外，姑苏区政府提交的《白洋湾街道新概念工业园地块项目征收补偿资金估算》《开户许可证》、中国工商银行《往来户历史明细清单》《苏州城区房屋征收项目安置房源计划供应方案》等证据显示，案涉征收项目约需资金5023.76万元。在190号《征收决定》作出之前，5023.76万元资金已经存入案涉房屋征收专用账户，案涉项目征收补偿费用足额到位。此外，被申请人提供和泰花园等小区定销商品房房源8套，面积约840平方米，以及长江花园等小区产权调换房约250平方米供被征收人选择。无论被征收人选择货币补偿还是产权调换，均能依法予以保障。故190号《征收决定》符合《征补条例》第十二条的规定。]\\n三、关于社会稳定风险评估以及补偿资金的问题。姑苏区政府在一审中提交的《江苏省社会稳定风险评估评审表》证明，其在作出190号《征收决定》前，已经进行社会稳定风险评估，评估结论为社会稳定风险等级低风险。此外，姑苏区政府提交的《白洋湾街道新概念工业园地块项目征收补偿资金估算》《开户许可证》、中国工商银行《往来户历史明细清单》《苏州城区房屋征收项目安置房源计划供应方案》等证据显示，案涉征收项目约需资金5023.76万元。在190号《征收决定》作出之前，5023.76万元资金已经存入案涉房屋征收专用账户，案涉项目征收补偿费用足额到位。此外，被申请人提供和泰花园等小区定销商品房房源8套，面积约840平方米，以及长江花园等小区产权调换房约250平方米供被征收人选择。无论被征收人选择货币补偿还是产权调换，均能依法予以保障。故190号《征收决定》符合《征补条例》第十二条的规定。\\n\\n[DOC2_A8 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 四、关于被征收房屋的调查登记问题。姑苏区政府提交的《未经登记建筑认定意见函》《被征收房屋调查结果汇总表》及公示照片能够证明，190号《征收决定》作出前，姑苏区征收办对征收范围内拟征收房屋的权属、用途、建筑面积等情况进行了调查登记，苏州市资规局出具了《未经登记建筑认定意见函》，后姑苏区征收办将房屋的调查结果和未经登记建筑认定意见在征收现场予以公布。故190号《征收决定》符合《征补条例》第十五条的规定。]\\n四、关于被征收房屋的调查登记问题。姑苏区政府提交的《未经登记建筑认定意见函》《被征收房屋调查结果汇总表》及公示照片能够证明，190号《征收决定》作出前，姑苏区征收办对征收范围内拟征收房屋的权属、用途、建筑面积等情况进行了调查登记，苏州市资规局出具了《未经登记建筑认定意见函》，后姑苏区征收办将房屋的调查结果和未经登记建筑认定意见在征收现场予以公布。故190号《征收决定》符合《征补条例》第十五条的规定。\\n\\n[DOC2_A9 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。]\\n五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。\\n\\n[DOC2_A10 | 一、关于公共利益的问题。本案中，姑苏区政府在一审中提交了苏发改中心〔2010〕51号《关于金阊区螳螂桥港、僧塘圩南港河道整治及驳岸工程项目计划任务书的批复》《苏州市国民经济和社会发展第十三个五年规划纲要》（节选）、《姑苏区房屋征收项目联合证明单》、苏州市金阊新城控制性详细规划调整2019用地规划图以及基本控制单元图、苏州市中心城区土地利用规划图等证据。本院认为，姑苏区政府实施案涉征收项目是为满足河道建设、绿化建设、停车建设等公共事业的需要，符合公共利益的需要，姑苏区政府在一审中提供的证据能够证明案涉房屋征收项目符合国民经济和社会发展规划、土地利用总体规划、城乡规划。故190号《征收决定》符合《国有土地上房屋征收与补偿条例》（以下简称《征补条例》）第八条第三项、第九条第一款的规定。 > 二、关于征收补偿方案的问题。苏州市姑苏区房屋征收与补偿办公室（以下简称姑苏区征收办）在作出190号《征收决定》之前已经拟定征收补偿方案，2020年6月23日，姑苏区政府对姑苏府〔2020〕127号《姑苏区人民政府关于对〈白洋湾街道新概念工业园地块项目房屋征收补偿方案（征求意见稿）〉公开征求意见的通知》公开征求公众意见，期限从2020年6月23日至2020年7月22日。针对征求意见期间收到的异议，姑苏区政府经专题研讨，决定对征收补偿方案不作修改，并于2020年8月7日将征求意见情况和不予修改情况予以公布。同时，征收补偿方案明确，住宅房屋被征收人可以选择货币补偿，也可以选择产权调换，保障了被征收人对补偿安置方式的选择权。故190号《征收决定》符合《征补条例》第十条、第十一条和第二十一条第一款的规定。 > 五、关于190号《征收决定》公告的问题。姑苏区政府于2020年9月15日作出190号《征收决定》并于次日通过苏州日报进行公告，公告中载明征收补偿方案和行政复议、行政诉讼权利等事项。故190号《征收决定》符合《征补条例》第十三条第一款的规定。]\\n综上，一审法院判决驳回欧阳德凤等五人要求撤销190号《征收决定》的诉讼请求，二审法院予以维持，并无不当。欧阳德凤等五人的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用<中华人民共和国行政诉讼法>的解释》第一百一十六条第二款的规定，裁定如下：\\n\\n驳回欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠的再审申请。\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\", \"DOC2_A6\", \"DOC2_A7\", \"DOC2_A8\", \"DOC2_A9\", \"DOC2_A10\"], \"primary_anchor_id\": \"DOC2_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书2\"], \"anchor_targets\": [\"判决文书2\"], \"anchor_value_hints\": [\"2\", \"1937\", \"11\", \"24\", \"1962\", \"1\", \"29\", \"1963\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 5, \"same_case\": 9, \"disambiguates\": 4}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A7\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\", \"DOC2_A9\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A10\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}]}</info>\n<think>This chunk provides information about the parties involved in the case but does not specify the type of case. However, the subsequent sections indicate that this is a case involving a house征收 decision, which is an administrative case. The document title can be used to classify this document as an administrative case.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政案件\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A1\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A10\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政案件\"], \"known_value_signatures\": [\"判决文书2\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"当事人信息 再审申请人包括欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠，被申请人是苏州市姑苏区人民政府。 再审申请人（一审原告、二审上诉人）欧阳德凤，男，1937年11月24日生，汉族，住湖南省绥宁县。 再审申请人（一审原告、二审上诉人）沈夕坤，男，1962年1月29日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）蔡福男，男，1963年8月6日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）吴金珠，女，1947年11月15日生，汉族，住江苏省苏州市姑苏区。 再审申请人（一审原告、二审上诉人）陈惠忠，男，1969年2月18日生，汉族，住江苏省苏州市姑苏区。 被申请人（一审被告、二审被上诉人）苏州市姑苏区人民政府，住所地江苏省苏州市姑苏区平川路510号。\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A7\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\", \"DOC2_A8\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}]}}</retrieve>"
+}

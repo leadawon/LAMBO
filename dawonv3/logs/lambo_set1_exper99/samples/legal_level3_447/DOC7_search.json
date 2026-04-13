@@ -1,0 +1,140 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "task_mode": "clustering",
+  "think": "The current document,《判决文书7》, seems to involve a case where there was a fine and confiscation of illegal gains, which might fall under '行政行为-行政处罚'. I will inspect the chunk that contains the case details to confirm if it fits into this category.",
+  "current_query": "行政处罚相关证据",
+  "must_find": [
+    "行政处罚"
+  ],
+  "next_anchor_id": "DOC7_A2",
+  "candidate_anchor_ids": [
+    "DOC7_A2"
+  ],
+  "ranked_anchor_ids": [
+    "DOC7_A2",
+    "DOC7_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC7_A2",
+    "DOC7_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC7_A2",
+      "score": 20.201,
+      "reasons": [
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 6.0,
+      "utility_hits": [
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 0.0,
+        "answer_utility": 6.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 20.201
+      },
+      "summary": "罗某某因与被申请人没收违法所得、罚款及行政复议一案，不服原审法院裁定，申请再审后撤回再审申请，法院准许撤回再审申请。"
+    },
+    {
+      "anchor_id": "DOC7_A1",
+      "score": 11.3,
+      "reasons": [
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 0.0,
+      "utility_hits": [],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 0.0,
+        "answer_utility": 0.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 11.3
+      },
+      "summary": "再审申请人罗某某及其委托诉讼代理人信息，以及被申请人中国证券监督管理委员会新疆监管局和中国证券监督管理委员会的法定代表人信息。"
+    }
+  ],
+  "utility_hits": {
+    "DOC7_A2": [
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC7_A2": 6.0,
+    "DOC7_A1": 0.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC7_A2": 6.0,
+    "DOC7_A1": 3.0
+  },
+  "anchor_role_hits": {
+    "DOC7_A2": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC7_A1": [
+      "case_identity"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC7_A2": {
+      "local_relevance": 0.0,
+      "answer_utility": 6.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 20.201
+    },
+    "DOC7_A1": {
+      "local_relevance": 0.0,
+      "answer_utility": 0.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 11.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书7》. First coordinate candidate is DOC7_A2.",
+  "raw_plan_text": "<think>The current document,《判决文书7》, seems to involve a case where there was a fine and confiscation of illegal gains, which might fall under '行政行为-行政处罚'. I will inspect the chunk that contains the case details to confirm if it fits into this category.</think>\n<search>{\"current_query\":\"行政处罚相关证据\",\"must_find\":[\"行政处罚\"], \"next_anchor_id\":\"DOC7_A2\",\"candidate_anchor_ids\":[\"DOC7_A2\"]}</search>",
+  "tagged_trace": "<think>The current document,《判决文书7》, seems to involve a case where there was a fine and confiscation of illegal gains, which might fall under '行政行为-行政处罚'. I will inspect the chunk that contains the case details to confirm if it fits into this category.</think>\n<search>{\"current_query\": \"行政处罚相关证据\", \"must_find\": [\"行政处罚\"], \"candidate_anchor_ids\": [\"DOC7_A2\"], \"next_anchor_id\": \"DOC7_A2\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC7_A2\": 6.0, \"DOC7_A1\": 3.0}, \"anchor_role_hits\": {\"DOC7_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC7_A1\": [\"case_identity\"]}}</search>"
+}

@@ -1,0 +1,182 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "final_current_query": "是否可以确认《判决文书1》属于'渎职罪'类别？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1"
+        ],
+        "utility_hits": {
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A1": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 29.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The first chunk summary indicates that the document involves a case where Li Shuangxi appealed against the abuse of power by the Shenyang Intermediate People's Court, which does not seem to fit into any of the provided categories directly. However, it mentions a criminal ruling, which might be related to '渎职罪' (dereliction of duty). I will inspect this chunk to confirm if it fits into the category.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "申诉详情与处理结果",
+        "summary": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。",
+        "text": "李双喜：\n\n你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。\n\n本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。\n\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\n\n特此通知。",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence",
+          "background_context"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等",
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "0105",
+          "518",
+          "01",
+          "574"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 0,
+          "relation_type_counts": {},
+          "top_related_anchor_ids": []
+        }
+      },
+      "extract_think": "The selected chunk describes a case where Li Shuangxi appealed against the abuse of power by the Shenyang Intermediate People's Court. The case involves a criminal ruling and the appeal was dismissed because the case did not fall under the self-prosecution cases handled directly by the court. This suggests that the case could be categorized under '渎职罪' (dereliction of duty) since it involves accusations of abuse of power. However, the chunk does not provide explicit confirmation that this is the final classification of the case. More context might be needed to ensure accuracy.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "渎职罪",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A1",
+            "confidence": 0.7,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否可以确认《判决文书1》属于'渎职罪'类别？",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "渎职罪"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "申诉详情与处理结果 李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。 李双喜： 你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。 本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。 你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。 特此通知。"
+          ],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "渎职罪",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "confidence": 0.7,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The first chunk summary indicates that the document involves a case where Li Shuangxi appealed against the abuse of power by the Shenyang Intermediate People's Court, which does not seem to fit into any of the provided categories directly. However, it mentions a criminal ruling, which might be related to '渎职罪' (dereliction of duty). I will inspect this chunk to confirm if it fits into the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A1\": 11.0}, \"score_breakdown\": {\"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉详情与处理结果\", \"summary\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。\", \"text\": \"李双喜：\\n\\n你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。\\n\\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"0105\", \"518\", \"01\", \"574\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>The selected chunk describes a case where Li Shuangxi appealed against the abuse of power by the Shenyang Intermediate People's Court. The case involves a criminal ruling and the appeal was dismissed because the case did not fall under the self-prosecution cases handled directly by the court. This suggests that the case could be categorized under '渎职罪' (dereliction of duty) since it involves accusations of abuse of power. However, the chunk does not provide explicit confirmation that this is the final classification of the case. More context might be needed to ensure accuracy.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"渎职罪\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 0.7, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否可以确认《判决文书1》属于'渎职罪'类别？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"渎职罪\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉详情与处理结果 李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。 李双喜： 你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。 本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。 你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。 特此通知。\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+  },
+  "tagged_trace": "<think>The first chunk summary indicates that the document involves a case where Li Shuangxi appealed against the abuse of power by the Shenyang Intermediate People's Court, which does not seem to fit into any of the provided categories directly. However, it mentions a criminal ruling, which might be related to '渎职罪' (dereliction of duty). I will inspect this chunk to confirm if it fits into the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A1\": 11.0}, \"score_breakdown\": {\"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉详情与处理结果\", \"summary\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。\", \"text\": \"李双喜：\\n\\n你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。\\n\\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等\", \"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"0105\", \"518\", \"01\", \"574\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>The selected chunk describes a case where Li Shuangxi appealed against the abuse of power by the Shenyang Intermediate People's Court. The case involves a criminal ruling and the appeal was dismissed because the case did not fall under the self-prosecution cases handled directly by the court. This suggests that the case could be categorized under '渎职罪' (dereliction of duty) since it involves accusations of abuse of power. However, the chunk does not provide explicit confirmation that this is the final classification of the case. More context might be needed to ensure accuracy.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"渎职罪\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 0.7, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"是否可以确认《判决文书1》属于'渎职罪'类别？\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"渎职罪\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉详情与处理结果 李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。 李双喜： 你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号刑事裁定，以“滥用职权罪不是自诉案件的罪名，原审法院超越宪法授权，弄虚作假编造假案枉法裁判，非法下发法律文书，沈阳市中级人民法院构成犯罪等”为主要理由，向本院提出申诉。 本院经审查认为，根据《中华人民共和国刑事诉讼法》第二百一十条及《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》第一条、第三百一十六条、第三百二十条之规定，你对沈阳市中级人民法院提起刑事自诉，因你的告诉不属于人民法院直接受理的自诉案件范围，原审法院对你的告诉裁定不予受理正确。你的申诉理由没有事实和法律依据，本院不予采纳。 你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。 特此通知。\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+}

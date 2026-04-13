@@ -1,0 +1,274 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "task_mode": "clustering",
+  "think": "The document seems to be related to a case involving a penalty decision and enforcement actions. The content does not clearly indicate whether it is a '赔偿案件' (compensation case), '民事案件' (civil case), or '执行案件' (enforcement case). However, given the context of enforcement actions and penalties, it is most likely an '执行案件'. I will inspect the first chunk to confirm this.",
+  "current_query": "阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC2_A1",
+  "candidate_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A6",
+    "DOC2_A2",
+    "DOC2_A5",
+    "DOC2_A3"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A6",
+    "DOC2_A2",
+    "DOC2_A5",
+    "DOC2_A3",
+    "DOC2_A4",
+    "DOC2_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A6",
+      "score": 31.854,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.55",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 8.854,
+        "redundancy_penalty": 0.0,
+        "total": 31.854
+      },
+      "summary": "法院认为，西吉县法院（2023）宁0422执821号《执行通知书》和（2023）宁0422执异5号执行裁定书符合法律规定，驳回宁某公司复议申请，维持原裁定。"
+    },
+    {
+      "anchor_id": "DOC2_A2",
+      "score": 29.201,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 29.201
+      },
+      "summary": "宁某公司不服西吉县法院作出的（2023）宁0422执异5号执行裁定书，向本院申请复议。西吉县法院查明，西吉城管执法局作出西城（执）罚字［2022］（003）号行政处罚决定书，决定对宁某公司处罚挪用的专项维修资金1899008.82元1倍的罚款1899008.82元。罚款的履行期限及方式：当事人应当自接到本处罚决定书之日起15日内，携带本处罚决定书到中国..."
+    },
+    {
+      "anchor_id": "DOC2_A5",
+      "score": 29.008,
+      "reasons": [
+        "query_overlap=1",
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.71",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 9.008,
+        "redundancy_penalty": 0.0,
+        "total": 29.008
+      },
+      "summary": "法院查明，西吉城管执法局作出西城（执）罚字［2022］（003）号《行政处罚决定书》，决定处罚挪用的专项维修资金1899008.82元1倍的罚款即1899008.82元。宁某公司未在法定期限内申请复议或提起诉讼，也未缴纳罚款。西吉县法院作出（2023）宁0422行审17号行政裁定书，裁定准予强制执行。"
+    },
+    {
+      "anchor_id": "DOC2_A3",
+      "score": 28.914,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 5.914,
+        "redundancy_penalty": 0.0,
+        "total": 28.914
+      },
+      "summary": "宁某公司复议称，请求撤销西吉县法院（2023）宁0422执异5号执行裁定书和（2023）宁0422行审17号行政裁定书。理由包括执行金额有误和适用法律有误。"
+    }
+  ],
+  "utility_hits": {
+    "DOC2_A6": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC2_A2": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC2_A5": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC2_A3": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC2_A6": 11.0,
+    "DOC2_A2": 11.0,
+    "DOC2_A5": 11.0,
+    "DOC2_A3": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC2_A6": 6.0,
+    "DOC2_A2": 6.0,
+    "DOC2_A5": 3.0,
+    "DOC2_A3": 6.0
+  },
+  "anchor_role_hits": {
+    "DOC2_A6": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC2_A2": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC2_A5": [
+      "case_identity"
+    ],
+    "DOC2_A3": [
+      "case_identity",
+      "decision_evidence"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC2_A6": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 8.854,
+      "redundancy_penalty": 0.0,
+      "total": 31.854
+    },
+    "DOC2_A2": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 29.201
+    },
+    "DOC2_A5": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 9.008,
+      "redundancy_penalty": 0.0,
+      "total": 29.008
+    },
+    "DOC2_A3": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 5.914,
+      "redundancy_penalty": 0.0,
+      "total": 28.914
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书2》. First coordinate candidate is DOC2_A1.",
+  "raw_plan_text": "<think>The document seems to be related to a case involving a penalty decision and enforcement actions. The content does not clearly indicate whether it is a '赔偿案件' (compensation case), '民事案件' (civil case), or '执行案件' (enforcement case). However, given the context of enforcement actions and penalties, it is most likely an '执行案件'. I will inspect the first chunk to confirm this.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC2_A1\",\"candidate_anchor_ids\":[\"DOC2_A1\",\"DOC2_A2\",\"DOC2_A3\",\"DOC2_A4\",\"DOC2_A5\",\"DOC2_A6\"]}</search>",
+  "tagged_trace": "<think>The document seems to be related to a case involving a penalty decision and enforcement actions. The content does not clearly indicate whether it is a '赔偿案件' (compensation case), '民事案件' (civil case), or '执行案件' (enforcement case). However, given the context of enforcement actions and penalties, it is most likely an '执行案件'. I will inspect the first chunk to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"next_anchor_id\": \"DOC2_A1\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC2_A6\": 6.0, \"DOC2_A2\": 6.0, \"DOC2_A5\": 3.0, \"DOC2_A3\": 6.0}, \"anchor_role_hits\": {\"DOC2_A6\": [\"case_identity\", \"decision_evidence\"], \"DOC2_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC2_A5\": [\"case_identity\"], \"DOC2_A3\": [\"case_identity\", \"decision_evidence\"]}}</search>"
+}

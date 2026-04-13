@@ -1,0 +1,182 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "final_current_query": "请提供有关民事案件和管辖案件的信息。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1"
+        ],
+        "utility_hits": {
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A1": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 29.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "Since the document summary mentions \"刑事判决\", it seems likely that this document falls under the category of '刑事案件'. I will inspect the first anchor coordinate to confirm this.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "申诉内容与法院审查结果",
+        "summary": "王建华因不服抚顺市望花区人民法院的刑事判决，提出申诉，认为原判认定事实不清，证据不足，程序违法，适用法律错误。法院审查后认为，原判认定受贿事实有充分证据支持，程序合法，适用法律正确，驳回了申诉。",
+        "text": "王建华：\n\n你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。\n\n本院经审查认为，原判认定你受贿的犯罪事实，有行贿人王某以及张某、郭某等人的证言，银行交易明细、抚顺市自来水公司与抚顺市顺海能源有限公司协议书、收条等书证，扣押物品清单及你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对检察机关指控的犯罪事实供认不讳。你身为国家司法机关工作人员，利用职务便利，非法收受他人财物，为他人谋取利益，数额较大，原判认定你的行为构成受贿罪，并无不当。你所称原判认定事实不清，原判据以定罪的证据不确实、不充分，主要证据之间存在矛盾的理由，与查明的事实和证据不符，本院不予采信。所称本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据的理由，无事实和证据支持，本院不予采纳。你的犯罪行为发生在2015年11月1日《中华人民共和国刑法修正案（九）》实施之前，按修正前、后的法律规定，你的行为均构成受贿罪，但按修正后的法律量刑对你有利，故原判对你适用《中华人民共和国刑法修正案（九）》实施之前的法律规定定罪，但按修正后的法律规定对你量刑，符合法律规定，你所称本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误的理由不成立，本院不予支持。原判认定事实清楚，证据确实、充分，定罪准确，量刑适当，审判程序合法。\n\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\n\n特此通知。",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence",
+          "background_context"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2019",
+          "0404",
+          "216",
+          "5000",
+          "2015",
+          "11"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 0,
+          "relation_type_counts": {},
+          "top_related_anchor_ids": []
+        }
+      },
+      "extract_think": "该段落提到王建华因不服抚顺市望花区人民法院的刑事判决而提出申诉，因此可以确定这是一个刑事案件。然而，我们还需要进一步确认是否还有其他类型的案件需要分类。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "刑事案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "王建华因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A1",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "请提供有关民事案件和管辖案件的信息。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "刑事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "申诉内容与法院审查结果 王建华因不服抚顺市望花区人民法院的刑事判决，提出申诉，认为原判认定事实不清，证据不足，程序违法，适用法律错误。法院审查后认为，原判认定受贿事实有充分证据支持，程序合法，适用法律正确，驳回了申诉。 王建华： 你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。 本院经审查认为，原判认定你受贿的犯罪事实，有行贿人王某以及张某、郭某等人的证言，银行交易明细、抚顺市自来水公司与抚顺市顺海能源有限公司协议书、收条等书证，扣押物品清单及你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对检察机关指控的犯罪事实供认不讳。你身为国..."
+          ],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "刑事案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "王建华因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>Since the document summary mentions \"刑事判决\", it seems likely that this document falls under the category of '刑事案件'. I will inspect the first anchor coordinate to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A1\": 11.0}, \"score_breakdown\": {\"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉内容与法院审查结果\", \"summary\": \"王建华因不服抚顺市望花区人民法院的刑事判决，提出申诉，认为原判认定事实不清，证据不足，程序违法，适用法律错误。法院审查后认为，原判认定受贿事实有充分证据支持，程序合法，适用法律正确，驳回了申诉。\", \"text\": \"王建华：\\n\\n你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，原判认定你受贿的犯罪事实，有行贿人王某以及张某、郭某等人的证言，银行交易明细、抚顺市自来水公司与抚顺市顺海能源有限公司协议书、收条等书证，扣押物品清单及你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对检察机关指控的犯罪事实供认不讳。你身为国家司法机关工作人员，利用职务便利，非法收受他人财物，为他人谋取利益，数额较大，原判认定你的行为构成受贿罪，并无不当。你所称原判认定事实不清，原判据以定罪的证据不确实、不充分，主要证据之间存在矛盾的理由，与查明的事实和证据不符，本院不予采信。所称本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据的理由，无事实和证据支持，本院不予采纳。你的犯罪行为发生在2015年11月1日《中华人民共和国刑法修正案（九）》实施之前，按修正前、后的法律规定，你的行为均构成受贿罪，但按修正后的法律量刑对你有利，故原判对你适用《中华人民共和国刑法修正案（九）》实施之前的法律规定定罪，但按修正后的法律规定对你量刑，符合法律规定，你所称本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误的理由不成立，本院不予支持。原判认定事实清楚，证据确实、充分，定罪准确，量刑适当，审判程序合法。\\n\\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2019\", \"0404\", \"216\", \"5000\", \"2015\", \"11\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>该段落提到王建华因不服抚顺市望花区人民法院的刑事判决而提出申诉，因此可以确定这是一个刑事案件。然而，我们还需要进一步确认是否还有其他类型的案件需要分类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"王建华因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供有关民事案件和管辖案件的信息。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"刑事案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉内容与法院审查结果 王建华因不服抚顺市望花区人民法院的刑事判决，提出申诉，认为原判认定事实不清，证据不足，程序违法，适用法律错误。法院审查后认为，原判认定受贿事实有充分证据支持，程序合法，适用法律正确，驳回了申诉。 王建华： 你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。 本院经审查认为，原判认定你受贿的犯罪事实，有行贿人王某以及张某、郭某等人的证言，银行交易明细、抚顺市自来水公司与抚顺市顺海能源有限公司协议书、收条等书证，扣押物品清单及你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对检察机关指控的犯罪事实供认不讳。你身为国...\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+  },
+  "tagged_trace": "<think>Since the document summary mentions \"刑事判决\", it seems likely that this document falls under the category of '刑事案件'. I will inspect the first anchor coordinate to confirm this.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A1\": 11.0}, \"score_breakdown\": {\"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉内容与法院审查结果\", \"summary\": \"王建华因不服抚顺市望花区人民法院的刑事判决，提出申诉，认为原判认定事实不清，证据不足，程序违法，适用法律错误。法院审查后认为，原判认定受贿事实有充分证据支持，程序合法，适用法律正确，驳回了申诉。\", \"text\": \"王建华：\\n\\n你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，原判认定你受贿的犯罪事实，有行贿人王某以及张某、郭某等人的证言，银行交易明细、抚顺市自来水公司与抚顺市顺海能源有限公司协议书、收条等书证，扣押物品清单及你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对检察机关指控的犯罪事实供认不讳。你身为国家司法机关工作人员，利用职务便利，非法收受他人财物，为他人谋取利益，数额较大，原判认定你的行为构成受贿罪，并无不当。你所称原判认定事实不清，原判据以定罪的证据不确实、不充分，主要证据之间存在矛盾的理由，与查明的事实和证据不符，本院不予采信。所称本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据的理由，无事实和证据支持，本院不予采纳。你的犯罪行为发生在2015年11月1日《中华人民共和国刑法修正案（九）》实施之前，按修正前、后的法律规定，你的行为均构成受贿罪，但按修正后的法律量刑对你有利，故原判对你适用《中华人民共和国刑法修正案（九）》实施之前的法律规定定罪，但按修正后的法律规定对你量刑，符合法律规定，你所称本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误的理由不成立，本院不予支持。原判认定事实清楚，证据确实、充分，定罪准确，量刑适当，审判程序合法。\\n\\n你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2019\", \"0404\", \"216\", \"5000\", \"2015\", \"11\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>该段落提到王建华因不服抚顺市望花区人民法院的刑事判决而提出申诉，因此可以确定这是一个刑事案件。然而，我们还需要进一步确认是否还有其他类型的案件需要分类。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"王建华因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供有关民事案件和管辖案件的信息。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"刑事案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉内容与法院审查结果 王建华因不服抚顺市望花区人民法院的刑事判决，提出申诉，认为原判认定事实不清，证据不足，程序违法，适用法律错误。法院审查后认为，原判认定受贿事实有充分证据支持，程序合法，适用法律正确，驳回了申诉。 王建华： 你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决，以“原判认定事实不清，证据不足，我在担任抚顺市公安局经济侦查支队第十大队负责人期间，没有负责办理过王某的相关案件，当时是由八大队来负责办理王某的相关案件；我收取王某5000美金的主观方面及是否有为王某谋取利益的客观事实原判没有审查核实；仅仅依据王某的证言和与案件有着利害冲突关系的证人证言，没有调取王某案件卷宗就认定我受贿罪成立错误。本案侦查阶段程序严重违法，非法取得的证据依法应予以排除，不能作为定案的证据。本案在2019年时审理，应当适用《刑法修正案（九）》，但判决明确称不适用《刑法修正案（九）》，属适用法律错误，应依法宣告我无罪等”为主要理由，向本院提出申诉。 本院经审查认为，原判认定你受贿的犯罪事实，有行贿人王某以及张某、郭某等人的证言，银行交易明细、抚顺市自来水公司与抚顺市顺海能源有限公司协议书、收条等书证，扣押物品清单及你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对检察机关指控的犯罪事实供认不讳。你身为国...\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+}

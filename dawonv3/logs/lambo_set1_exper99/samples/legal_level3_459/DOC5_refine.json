@@ -1,0 +1,934 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "selected_anchor_ids": [
+    "DOC5_A2",
+    "DOC5_A4"
+  ],
+  "final_current_query": "进一步查找涉及其他案由类别的证据",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到给定的案由类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A2",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ],
+        "utility_hits": {
+          "DOC5_A4": [
+            "legal_label_hit=['行政行为', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A2": [
+            "legal_label_hit=['行政复议', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC5_A4": 16.0,
+          "DOC5_A2": 16.0,
+          "DOC5_A5": 11.0,
+          "DOC5_A3": 11.0
+        },
+        "score_breakdown": {
+          "DOC5_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 29.691
+          },
+          "DOC5_A2": {
+            "local_relevance": 0.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 27.201
+          },
+          "DOC5_A5": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 24.508
+          },
+          "DOC5_A3": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 21.914
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC5_A2",
+      "plan_think": "The document seems to involve an administrative case related to a market supervision bureau's penalty decision against a company, and it mentions administrative reconsideration. Therefore, I will inspect the chunk that discusses the case background, as it may provide more details on whether this case falls under '行政行为-行政复议' (administrative reconsideration).",
+      "info": {
+        "anchor_id": "DOC5_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC5_A2: 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。",
+        "text": "[DOC5_A1 | 当事人信息]\n再审申请人（一审被告、二审被上诉人）青岛市崂山区市场监督管理局，住所地青岛市崂山区深圳路181号。\n\n法定代表人王鹏海，局长。\n\n委托代理人李冠群，该局工作人员。\n\n委托代理人赵艳楠，山东国曜琴岛（青岛）律师事务所律师。\n\n被申请人（一审原告、二审上诉人）青岛某某健康产业有限公司，住所地青岛市崂山区。\n\n法定代表人蔡某群，董事长。\n\n一审被告、二审被上诉人青岛市市场监督管理局，住所地青岛市市南区福州南路83号。\n\n法定代表人张咏雁，局长。\n\n委托代理人苏刚，该局工作人员。\n\n一审被告、二审被上诉人青岛市人民政府，住所地青岛市香港中路11号。\n\n法定代表人赵豪志，市长。\n\n[DOC5_A2 | 案件背景]\n再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n[DOC5_A3 | 再审理由]\n崂山市场监管局以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\n\n[DOC5_A4 | 法院观点]\n本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。\n\n《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包装规格与崂山市场监管局主张的标注虚假生产日期的产品包装规格不同。二审法院认为被诉处罚决定认定的违法事实不清，应当予以撤销，并无不当。崂山市场监管局主张其在二审中补充提交的证据35-41系针对某某公司在一审中提交的证人证言的反驳性证据，并非是作出被诉行政行为的证据，二审法院依据《中华人民共和国行政诉讼法》第三十四条的规定对该补充证据不予接纳系适用法律错误。如前述分析，崂山市场监管局认定本案存在违法行为的证据并不充分，不足以达到排除合理怀疑的证明标准，故其在诉讼中再补充证据以推翻某某公司证人证言的方式来主张其认定违法事实清楚，二审法院不予接纳，并无不当。\n\n关于一审中证人证言应否采信的问题。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第四十五条规定：“被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。”本案所涉证人证言并非某某公司在行政程序中应当负有的举证义务，崂山市场监管局以上述司法解释的规定主张证人证言不应采纳，本院不予支持。\n\n关于证据34的采信问题。该证据系某某公司原仓库管理员姜晓磊向崂山市场监管局提交，姜某磊手写标注“本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。”崂山市场监管局并未将该份材料作为作出被诉处罚决定的证据使用，而是在一审审理中作为证明被诉处罚决定正确的证据提交。一审判决在查明事实部分陈述姜某磊提交了该份材料及其个人拟证明的情况，系对该份材料的客观描述；在“本院认为”部分并未将其作为认定被诉处罚决定合法的证据。二审法院对一审判决的有关评析确有不当，本院予以指正。\n\n[DOC5_A5 | 裁定结果]\n综上，青岛市崂山区市场监督管理局的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款之规定，裁定如下：\n\n驳回青岛市崂山区市场监督管理局的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4",
+          "DOC5_A5"
+        ],
+        "primary_anchor_id": "DOC5_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书5"
+        ],
+        "anchor_targets": [
+          "判决文书5"
+        ],
+        "anchor_value_hints": [
+          "5",
+          "2022",
+          "71",
+          "238"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 4,
+            "disambiguates": 4,
+            "likely_same_entity": 4,
+            "prev_next": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC5_A5",
+            "DOC5_A4",
+            "DOC5_A3",
+            "DOC5_A1",
+            "DOC5_A5",
+            "DOC5_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk provides information about a case involving administrative reconsideration ('行政复议') between the Qingdao Laoshan District Market Supervision and Administration Bureau and Qingdao XX Health Industry Co., Ltd. This suggests that the document should be categorized under '行政行为-行政复议'. However, the chunk does not provide enough information to categorize the document into other potential categories.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政复议",
+            "value": "《判决文书5》",
+            "normalized_value": "判决文书5",
+            "evidence_text": "再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A2",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC5_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A5",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC5_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书5']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "进一步查找涉及其他案由类别的证据",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政行为-行政复议"
+          ],
+          "known_value_signatures": [
+            "判决文书5"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC5_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC5_A5",
+            "DOC5_A4",
+            "DOC5_A3",
+            "DOC5_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "进一步查找涉及其他案由类别的证据",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A4",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "行政行为-行政复议"
+          ],
+          "known_value_signatures": [
+            "判决文书5"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC5_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC5_A5",
+            "DOC5_A4",
+            "DOC5_A3",
+            "DOC5_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC5_A2"
+        ],
+        "utility_hits": {
+          "DOC5_A4": [
+            "legal_label_hit=['行政行为', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A5": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC5_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC5_A4": 16.0,
+          "DOC5_A5": 11.0,
+          "DOC5_A3": 11.0,
+          "DOC5_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC5_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC5_A2",
+            "same_case_selected=DOC5_A2",
+            "disambiguates_selected=DOC5_A2",
+            "likely_same_entity_selected=DOC5_A2"
+          ],
+          "DOC5_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC5_A2",
+            "same_case_selected=DOC5_A2",
+            "disambiguates_selected=DOC5_A2",
+            "likely_same_entity_selected=DOC5_A2"
+          ],
+          "DOC5_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC5_A2",
+            "same_case_selected=DOC5_A2",
+            "disambiguates_selected=DOC5_A2",
+            "likely_same_entity_selected=DOC5_A2"
+          ],
+          "DOC5_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC5_A2",
+            "same_case_selected=DOC5_A2",
+            "disambiguates_selected=DOC5_A2",
+            "likely_same_entity_selected=DOC5_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC5_A4": 19.73,
+          "DOC5_A5": 19.73,
+          "DOC5_A3": 16.73,
+          "DOC5_A1": 16.73
+        },
+        "anchor_role_hits": {
+          "DOC5_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC5_A5": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC5_A3": [
+            "case_identity"
+          ],
+          "DOC5_A1": [
+            "case_identity"
+          ]
+        },
+        "score_breakdown": {
+          "DOC5_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 19.73,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 40.421
+          },
+          "DOC5_A5": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 19.73,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 3.0,
+            "total": 35.238
+          },
+          "DOC5_A3": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 16.73,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 32.644
+          },
+          "DOC5_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 16.73,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 27.03
+          }
+        }
+      },
+      "anchor_id": "DOC5_A4",
+      "plan_think": "The current evidence indicates that the document should be categorized under '行政行为-行政复议'. However, we still need to check if there are any other relevant categories mentioned in the document. The court view section (DOC5_A4) might contain additional information about the case that could help us identify if the document fits into other categories such as '行政行为-行政强制' or '执行案由-行政非诉执行'. I will inspect DOC5_A4 next.",
+      "info": {
+        "anchor_id": "DOC5_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院观点",
+        "summary": "Expanded same-section read window around DOC5_A4: 法院认为二审判决撤销被诉处罚决定的理由成立，因为崂山市场监管局提供的证据不足以证明某某公司存在违法行为。同时，法院还讨论了一审中证人证言的采信问题和证据34的使用情况。",
+        "text": "[DOC5_A1 | 当事人信息]\n再审申请人（一审被告、二审被上诉人）青岛市崂山区市场监督管理局，住所地青岛市崂山区深圳路181号。\n\n法定代表人王鹏海，局长。\n\n委托代理人李冠群，该局工作人员。\n\n委托代理人赵艳楠，山东国曜琴岛（青岛）律师事务所律师。\n\n被申请人（一审原告、二审上诉人）青岛某某健康产业有限公司，住所地青岛市崂山区。\n\n法定代表人蔡某群，董事长。\n\n一审被告、二审被上诉人青岛市市场监督管理局，住所地青岛市市南区福州南路83号。\n\n法定代表人张咏雁，局长。\n\n委托代理人苏刚，该局工作人员。\n\n一审被告、二审被上诉人青岛市人民政府，住所地青岛市香港中路11号。\n\n法定代表人赵豪志，市长。\n\n[DOC5_A2 | 案件背景]\n再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n[DOC5_A3 | 再审理由]\n崂山市场监管局以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\n\n[DOC5_A4 | 法院观点]\n本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。\n\n《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包装规格与崂山市场监管局主张的标注虚假生产日期的产品包装规格不同。二审法院认为被诉处罚决定认定的违法事实不清，应当予以撤销，并无不当。崂山市场监管局主张其在二审中补充提交的证据35-41系针对某某公司在一审中提交的证人证言的反驳性证据，并非是作出被诉行政行为的证据，二审法院依据《中华人民共和国行政诉讼法》第三十四条的规定对该补充证据不予接纳系适用法律错误。如前述分析，崂山市场监管局认定本案存在违法行为的证据并不充分，不足以达到排除合理怀疑的证明标准，故其在诉讼中再补充证据以推翻某某公司证人证言的方式来主张其认定违法事实清楚，二审法院不予接纳，并无不当。\n\n关于一审中证人证言应否采信的问题。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第四十五条规定：“被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。”本案所涉证人证言并非某某公司在行政程序中应当负有的举证义务，崂山市场监管局以上述司法解释的规定主张证人证言不应采纳，本院不予支持。\n\n关于证据34的采信问题。该证据系某某公司原仓库管理员姜晓磊向崂山市场监管局提交，姜某磊手写标注“本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。”崂山市场监管局并未将该份材料作为作出被诉处罚决定的证据使用，而是在一审审理中作为证明被诉处罚决定正确的证据提交。一审判决在查明事实部分陈述姜某磊提交了该份材料及其个人拟证明的情况，系对该份材料的客观描述；在“本院认为”部分并未将其作为认定被诉处罚决定合法的证据。二审法院对一审判决的有关评析确有不当，本院予以指正。\n\n[DOC5_A5 | 裁定结果]\n综上，青岛市崂山区市场监督管理局的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款之规定，裁定如下：\n\n驳回青岛市崂山区市场监督管理局的再审申请。",
+        "source_window_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4",
+          "DOC5_A5"
+        ],
+        "primary_anchor_id": "DOC5_A4",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "metric_binding",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书5"
+        ],
+        "anchor_targets": [
+          "除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。",
+          "经营标注虚假生产日期的食品",
+          "被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。",
+          "本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。",
+          "收入"
+        ],
+        "anchor_value_hints": [
+          "5",
+          "34",
+          "11",
+          "10",
+          "13",
+          "14",
+          "23",
+          "2016"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "metric_term",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 4,
+            "disambiguates": 4,
+            "likely_same_entity": 4,
+            "prev_next": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC5_A5",
+            "DOC5_A3",
+            "DOC5_A2",
+            "DOC5_A1",
+            "DOC5_A5",
+            "DOC5_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC5_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC5_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书5']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk from the '法院观点' section provides detailed information about the court's evaluation of the evidence presented in the case. It confirms that the document involves an administrative reconsideration ('行政复议') but does not mention any other specific categories like '行政行为-行政强制' or '执行案由-行政非诉执行'. The chunk does not provide additional evidence to support categorization into other specified categories. Therefore, we can conclude that the document should be categorized under '行政行为-行政复议' based on the available evidence.",
+      "retrieve": {
+        "items": [],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "行政行为-行政复议"
+          ],
+          "known_value_signatures": [
+            "判决文书5"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC5_A2",
+            "DOC5_A4"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。",
+            "法院观点 法院认为二审判决撤销被诉处罚决定的理由成立，因为崂山市场监管局提供的证据不足以证明某某公司存在违法行为。同时，法院还讨论了一审中证人证言的采信问题和证据34的使用情况。 本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。 《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC5_A5",
+            "DOC5_A3",
+            "DOC5_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A5",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            },
+            {
+              "source_anchor_id": "DOC5_A2",
+              "target_anchor_id": "DOC5_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书5']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政复议",
+      "value": "《判决文书5》",
+      "normalized_value": "判决文书5",
+      "evidence_text": "再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to involve an administrative case related to a market supervision bureau's penalty decision against a company, and it mentions administrative reconsideration. Therefore, I will inspect the chunk that discusses the case background, as it may provide more details on whether this case falls under '行政行为-行政复议' (administrative reconsideration).</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"utility_hits\": {\"DOC5_A4\": [\"legal_label_hit=['行政行为', '判决文书']\", \"legal_decision_context\"], \"DOC5_A2\": [\"legal_label_hit=['行政复议', '判决文书']\", \"legal_decision_context\"], \"DOC5_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC5_A4\": 16.0, \"DOC5_A2\": 16.0, \"DOC5_A5\": 11.0, \"DOC5_A3\": 11.0}, \"score_breakdown\": {\"DOC5_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 29.691}, \"DOC5_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 27.201}, \"DOC5_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 24.508}, \"DOC5_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 21.914}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC5_A2: 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n再审申请人（一审被告、二审被上诉人）青岛市崂山区市场监督管理局，住所地青岛市崂山区深圳路181号。\\n\\n法定代表人王鹏海，局长。\\n\\n委托代理人李冠群，该局工作人员。\\n\\n委托代理人赵艳楠，山东国曜琴岛（青岛）律师事务所律师。\\n\\n被申请人（一审原告、二审上诉人）青岛某某健康产业有限公司，住所地青岛市崂山区。\\n\\n法定代表人蔡某群，董事长。\\n\\n一审被告、二审被上诉人青岛市市场监督管理局，住所地青岛市市南区福州南路83号。\\n\\n法定代表人张咏雁，局长。\\n\\n委托代理人苏刚，该局工作人员。\\n\\n一审被告、二审被上诉人青岛市人民政府，住所地青岛市香港中路11号。\\n\\n法定代表人赵豪志，市长。\\n\\n[DOC5_A2 | 案件背景]\\n再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n[DOC5_A3 | 再审理由]\\n崂山市场监管局以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\\n\\n[DOC5_A4 | 法院观点]\\n本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。\\n\\n《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包装规格与崂山市场监管局主张的标注虚假生产日期的产品包装规格不同。二审法院认为被诉处罚决定认定的违法事实不清，应当予以撤销，并无不当。崂山市场监管局主张其在二审中补充提交的证据35-41系针对某某公司在一审中提交的证人证言的反驳性证据，并非是作出被诉行政行为的证据，二审法院依据《中华人民共和国行政诉讼法》第三十四条的规定对该补充证据不予接纳系适用法律错误。如前述分析，崂山市场监管局认定本案存在违法行为的证据并不充分，不足以达到排除合理怀疑的证明标准，故其在诉讼中再补充证据以推翻某某公司证人证言的方式来主张其认定违法事实清楚，二审法院不予接纳，并无不当。\\n\\n关于一审中证人证言应否采信的问题。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第四十五条规定：“被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。”本案所涉证人证言并非某某公司在行政程序中应当负有的举证义务，崂山市场监管局以上述司法解释的规定主张证人证言不应采纳，本院不予支持。\\n\\n关于证据34的采信问题。该证据系某某公司原仓库管理员姜晓磊向崂山市场监管局提交，姜某磊手写标注“本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。”崂山市场监管局并未将该份材料作为作出被诉处罚决定的证据使用，而是在一审审理中作为证明被诉处罚决定正确的证据提交。一审判决在查明事实部分陈述姜某磊提交了该份材料及其个人拟证明的情况，系对该份材料的客观描述；在“本院认为”部分并未将其作为认定被诉处罚决定合法的证据。二审法院对一审判决的有关评析确有不当，本院予以指正。\\n\\n[DOC5_A5 | 裁定结果]\\n综上，青岛市崂山区市场监督管理局的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回青岛市崂山区市场监督管理局的再审申请。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\", \"DOC5_A5\"], \"primary_anchor_id\": \"DOC5_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"判决文书5\"], \"anchor_value_hints\": [\"5\", \"2022\", \"71\", \"238\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 2}, \"top_related_anchor_ids\": [\"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\", \"DOC5_A5\", \"DOC5_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk provides information about a case involving administrative reconsideration ('行政复议') between the Qingdao Laoshan District Market Supervision and Administration Bureau and Qingdao XX Health Industry Co., Ltd. This suggests that the document should be categorized under '行政行为-行政复议'. However, the chunk does not provide enough information to categorize the document into other potential categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"进一步查找涉及其他案由类别的证据\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政复议\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"], \"selected_relation_anchor_ids\": [\"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The current evidence indicates that the document should be categorized under '行政行为-行政复议'. However, we still need to check if there are any other relevant categories mentioned in the document. The court view section (DOC5_A4) might contain additional information about the case that could help us identify if the document fits into other categories such as '行政行为-行政强制' or '执行案由-行政非诉执行'. I will inspect DOC5_A4 next.</think>\n<search>{\"current_query\": \"进一步查找涉及其他案由类别的证据\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A4\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"行政行为-行政复议\"], \"known_value_signatures\": [\"判决文书5\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"], \"selected_relation_anchor_ids\": [\"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC5_A2\"], \"utility_hits\": {\"DOC5_A4\": [\"legal_label_hit=['行政行为', '判决文书']\", \"legal_decision_context\"], \"DOC5_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC5_A4\": 16.0, \"DOC5_A5\": 11.0, \"DOC5_A3\": 11.0, \"DOC5_A1\": 5.0}, \"relation_hits\": {\"DOC5_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"], \"DOC5_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"], \"DOC5_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"], \"DOC5_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"]}, \"relation_score\": {\"DOC5_A4\": 19.73, \"DOC5_A5\": 19.73, \"DOC5_A3\": 16.73, \"DOC5_A1\": 16.73}, \"anchor_role_hits\": {\"DOC5_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A3\": [\"case_identity\"], \"DOC5_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC5_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 40.421}, \"DOC5_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 35.238}, \"DOC5_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 16.73, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 32.644}, \"DOC5_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 16.73, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 27.03}}}</search>\n<info>{\"anchor_id\": \"DOC5_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院观点\", \"summary\": \"Expanded same-section read window around DOC5_A4: 法院认为二审判决撤销被诉处罚决定的理由成立，因为崂山市场监管局提供的证据不足以证明某某公司存在违法行为。同时，法院还讨论了一审中证人证言的采信问题和证据34的使用情况。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n再审申请人（一审被告、二审被上诉人）青岛市崂山区市场监督管理局，住所地青岛市崂山区深圳路181号。\\n\\n法定代表人王鹏海，局长。\\n\\n委托代理人李冠群，该局工作人员。\\n\\n委托代理人赵艳楠，山东国曜琴岛（青岛）律师事务所律师。\\n\\n被申请人（一审原告、二审上诉人）青岛某某健康产业有限公司，住所地青岛市崂山区。\\n\\n法定代表人蔡某群，董事长。\\n\\n一审被告、二审被上诉人青岛市市场监督管理局，住所地青岛市市南区福州南路83号。\\n\\n法定代表人张咏雁，局长。\\n\\n委托代理人苏刚，该局工作人员。\\n\\n一审被告、二审被上诉人青岛市人民政府，住所地青岛市香港中路11号。\\n\\n法定代表人赵豪志，市长。\\n\\n[DOC5_A2 | 案件背景]\\n再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n[DOC5_A3 | 再审理由]\\n崂山市场监管局以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\\n\\n[DOC5_A4 | 法院观点]\\n本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。\\n\\n《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包装规格与崂山市场监管局主张的标注虚假生产日期的产品包装规格不同。二审法院认为被诉处罚决定认定的违法事实不清，应当予以撤销，并无不当。崂山市场监管局主张其在二审中补充提交的证据35-41系针对某某公司在一审中提交的证人证言的反驳性证据，并非是作出被诉行政行为的证据，二审法院依据《中华人民共和国行政诉讼法》第三十四条的规定对该补充证据不予接纳系适用法律错误。如前述分析，崂山市场监管局认定本案存在违法行为的证据并不充分，不足以达到排除合理怀疑的证明标准，故其在诉讼中再补充证据以推翻某某公司证人证言的方式来主张其认定违法事实清楚，二审法院不予接纳，并无不当。\\n\\n关于一审中证人证言应否采信的问题。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第四十五条规定：“被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。”本案所涉证人证言并非某某公司在行政程序中应当负有的举证义务，崂山市场监管局以上述司法解释的规定主张证人证言不应采纳，本院不予支持。\\n\\n关于证据34的采信问题。该证据系某某公司原仓库管理员姜晓磊向崂山市场监管局提交，姜某磊手写标注“本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。”崂山市场监管局并未将该份材料作为作出被诉处罚决定的证据使用，而是在一审审理中作为证明被诉处罚决定正确的证据提交。一审判决在查明事实部分陈述姜某磊提交了该份材料及其个人拟证明的情况，系对该份材料的客观描述；在“本院认为”部分并未将其作为认定被诉处罚决定合法的证据。二审法院对一审判决的有关评析确有不当，本院予以指正。\\n\\n[DOC5_A5 | 裁定结果]\\n综上，青岛市崂山区市场监督管理局的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回青岛市崂山区市场监督管理局的再审申请。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\", \"DOC5_A5\"], \"primary_anchor_id\": \"DOC5_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。\", \"经营标注虚假生产日期的食品\", \"被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。\", \"本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。\", \"收入\"], \"anchor_value_hints\": [\"5\", \"34\", \"11\", \"10\", \"13\", \"14\", \"23\", \"2016\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 2}, \"top_related_anchor_ids\": [\"DOC5_A5\", \"DOC5_A3\", \"DOC5_A2\", \"DOC5_A1\", \"DOC5_A5\", \"DOC5_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk from the '法院观点' section provides detailed information about the court's evaluation of the evidence presented in the case. It confirms that the document involves an administrative reconsideration ('行政复议') but does not mention any other specific categories like '行政行为-行政强制' or '执行案由-行政非诉执行'. The chunk does not provide additional evidence to support categorization into other specified categories. Therefore, we can conclude that the document should be categorized under '行政行为-行政复议' based on the available evidence.</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政复议\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\", \"DOC5_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\", \"法院观点 法院认为二审判决撤销被诉处罚决定的理由成立，因为崂山市场监管局提供的证据不足以证明某某公司存在违法行为。同时，法院还讨论了一审中证人证言的采信问题和证据34的使用情况。 本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。 《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包...\"], \"selected_relation_anchor_ids\": [\"DOC5_A5\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve an administrative case related to a market supervision bureau's penalty decision against a company, and it mentions administrative reconsideration. Therefore, I will inspect the chunk that discusses the case background, as it may provide more details on whether this case falls under '行政行为-行政复议' (administrative reconsideration).</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"utility_hits\": {\"DOC5_A4\": [\"legal_label_hit=['行政行为', '判决文书']\", \"legal_decision_context\"], \"DOC5_A2\": [\"legal_label_hit=['行政复议', '判决文书']\", \"legal_decision_context\"], \"DOC5_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC5_A4\": 16.0, \"DOC5_A2\": 16.0, \"DOC5_A5\": 11.0, \"DOC5_A3\": 11.0}, \"score_breakdown\": {\"DOC5_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 29.691}, \"DOC5_A2\": {\"local_relevance\": 0.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 27.201}, \"DOC5_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 24.508}, \"DOC5_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 21.914}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC5_A2: 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n再审申请人（一审被告、二审被上诉人）青岛市崂山区市场监督管理局，住所地青岛市崂山区深圳路181号。\\n\\n法定代表人王鹏海，局长。\\n\\n委托代理人李冠群，该局工作人员。\\n\\n委托代理人赵艳楠，山东国曜琴岛（青岛）律师事务所律师。\\n\\n被申请人（一审原告、二审上诉人）青岛某某健康产业有限公司，住所地青岛市崂山区。\\n\\n法定代表人蔡某群，董事长。\\n\\n一审被告、二审被上诉人青岛市市场监督管理局，住所地青岛市市南区福州南路83号。\\n\\n法定代表人张咏雁，局长。\\n\\n委托代理人苏刚，该局工作人员。\\n\\n一审被告、二审被上诉人青岛市人民政府，住所地青岛市香港中路11号。\\n\\n法定代表人赵豪志，市长。\\n\\n[DOC5_A2 | 案件背景]\\n再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n[DOC5_A3 | 再审理由]\\n崂山市场监管局以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\\n\\n[DOC5_A4 | 法院观点]\\n本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。\\n\\n《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包装规格与崂山市场监管局主张的标注虚假生产日期的产品包装规格不同。二审法院认为被诉处罚决定认定的违法事实不清，应当予以撤销，并无不当。崂山市场监管局主张其在二审中补充提交的证据35-41系针对某某公司在一审中提交的证人证言的反驳性证据，并非是作出被诉行政行为的证据，二审法院依据《中华人民共和国行政诉讼法》第三十四条的规定对该补充证据不予接纳系适用法律错误。如前述分析，崂山市场监管局认定本案存在违法行为的证据并不充分，不足以达到排除合理怀疑的证明标准，故其在诉讼中再补充证据以推翻某某公司证人证言的方式来主张其认定违法事实清楚，二审法院不予接纳，并无不当。\\n\\n关于一审中证人证言应否采信的问题。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第四十五条规定：“被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。”本案所涉证人证言并非某某公司在行政程序中应当负有的举证义务，崂山市场监管局以上述司法解释的规定主张证人证言不应采纳，本院不予支持。\\n\\n关于证据34的采信问题。该证据系某某公司原仓库管理员姜晓磊向崂山市场监管局提交，姜某磊手写标注“本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。”崂山市场监管局并未将该份材料作为作出被诉处罚决定的证据使用，而是在一审审理中作为证明被诉处罚决定正确的证据提交。一审判决在查明事实部分陈述姜某磊提交了该份材料及其个人拟证明的情况，系对该份材料的客观描述；在“本院认为”部分并未将其作为认定被诉处罚决定合法的证据。二审法院对一审判决的有关评析确有不当，本院予以指正。\\n\\n[DOC5_A5 | 裁定结果]\\n综上，青岛市崂山区市场监督管理局的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回青岛市崂山区市场监督管理局的再审申请。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\", \"DOC5_A5\"], \"primary_anchor_id\": \"DOC5_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"判决文书5\"], \"anchor_value_hints\": [\"5\", \"2022\", \"71\", \"238\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 2}, \"top_related_anchor_ids\": [\"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\", \"DOC5_A5\", \"DOC5_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk provides information about a case involving administrative reconsideration ('行政复议') between the Qingdao Laoshan District Market Supervision and Administration Bureau and Qingdao XX Health Industry Co., Ltd. This suggests that the document should be categorized under '行政行为-行政复议'. However, the chunk does not provide enough information to categorize the document into other potential categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"进一步查找涉及其他案由类别的证据\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政复议\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"], \"selected_relation_anchor_ids\": [\"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>\n<think>The current evidence indicates that the document should be categorized under '行政行为-行政复议'. However, we still need to check if there are any other relevant categories mentioned in the document. The court view section (DOC5_A4) might contain additional information about the case that could help us identify if the document fits into other categories such as '行政行为-行政强制' or '执行案由-行政非诉执行'. I will inspect DOC5_A4 next.</think>\n<search>{\"current_query\": \"进一步查找涉及其他案由类别的证据\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A4\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"行政行为-行政复议\"], \"known_value_signatures\": [\"判决文书5\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"], \"selected_relation_anchor_ids\": [\"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}, \"avoid_anchor_ids\": [\"DOC5_A2\"], \"utility_hits\": {\"DOC5_A4\": [\"legal_label_hit=['行政行为', '判决文书']\", \"legal_decision_context\"], \"DOC5_A5\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC5_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC5_A4\": 16.0, \"DOC5_A5\": 11.0, \"DOC5_A3\": 11.0, \"DOC5_A1\": 5.0}, \"relation_hits\": {\"DOC5_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"], \"DOC5_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"], \"DOC5_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"], \"DOC5_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC5_A2\", \"same_case_selected=DOC5_A2\", \"disambiguates_selected=DOC5_A2\", \"likely_same_entity_selected=DOC5_A2\"]}, \"relation_score\": {\"DOC5_A4\": 19.73, \"DOC5_A5\": 19.73, \"DOC5_A3\": 16.73, \"DOC5_A1\": 16.73}, \"anchor_role_hits\": {\"DOC5_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC5_A3\": [\"case_identity\"], \"DOC5_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC5_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 40.421}, \"DOC5_A5\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 35.238}, \"DOC5_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 16.73, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 32.644}, \"DOC5_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 16.73, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 27.03}}}</search>\n<info>{\"anchor_id\": \"DOC5_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院观点\", \"summary\": \"Expanded same-section read window around DOC5_A4: 法院认为二审判决撤销被诉处罚决定的理由成立，因为崂山市场监管局提供的证据不足以证明某某公司存在违法行为。同时，法院还讨论了一审中证人证言的采信问题和证据34的使用情况。\", \"text\": \"[DOC5_A1 | 当事人信息]\\n再审申请人（一审被告、二审被上诉人）青岛市崂山区市场监督管理局，住所地青岛市崂山区深圳路181号。\\n\\n法定代表人王鹏海，局长。\\n\\n委托代理人李冠群，该局工作人员。\\n\\n委托代理人赵艳楠，山东国曜琴岛（青岛）律师事务所律师。\\n\\n被申请人（一审原告、二审上诉人）青岛某某健康产业有限公司，住所地青岛市崂山区。\\n\\n法定代表人蔡某群，董事长。\\n\\n一审被告、二审被上诉人青岛市市场监督管理局，住所地青岛市市南区福州南路83号。\\n\\n法定代表人张咏雁，局长。\\n\\n委托代理人苏刚，该局工作人员。\\n\\n一审被告、二审被上诉人青岛市人民政府，住所地青岛市香港中路11号。\\n\\n法定代表人赵豪志，市长。\\n\\n[DOC5_A2 | 案件背景]\\n再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n[DOC5_A3 | 再审理由]\\n崂山市场监管局以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\\n\\n[DOC5_A4 | 法院观点]\\n本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。\\n\\n《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包装规格与崂山市场监管局主张的标注虚假生产日期的产品包装规格不同。二审法院认为被诉处罚决定认定的违法事实不清，应当予以撤销，并无不当。崂山市场监管局主张其在二审中补充提交的证据35-41系针对某某公司在一审中提交的证人证言的反驳性证据，并非是作出被诉行政行为的证据，二审法院依据《中华人民共和国行政诉讼法》第三十四条的规定对该补充证据不予接纳系适用法律错误。如前述分析，崂山市场监管局认定本案存在违法行为的证据并不充分，不足以达到排除合理怀疑的证明标准，故其在诉讼中再补充证据以推翻某某公司证人证言的方式来主张其认定违法事实清楚，二审法院不予接纳，并无不当。\\n\\n关于一审中证人证言应否采信的问题。《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第四十五条规定：“被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。”本案所涉证人证言并非某某公司在行政程序中应当负有的举证义务，崂山市场监管局以上述司法解释的规定主张证人证言不应采纳，本院不予支持。\\n\\n关于证据34的采信问题。该证据系某某公司原仓库管理员姜晓磊向崂山市场监管局提交，姜某磊手写标注“本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。”崂山市场监管局并未将该份材料作为作出被诉处罚决定的证据使用，而是在一审审理中作为证明被诉处罚决定正确的证据提交。一审判决在查明事实部分陈述姜某磊提交了该份材料及其个人拟证明的情况，系对该份材料的客观描述；在“本院认为”部分并未将其作为认定被诉处罚决定合法的证据。二审法院对一审判决的有关评析确有不当，本院予以指正。\\n\\n[DOC5_A5 | 裁定结果]\\n综上，青岛市崂山区市场监督管理局的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款之规定，裁定如下：\\n\\n驳回青岛市崂山区市场监督管理局的再审申请。\", \"source_window_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\", \"DOC5_A5\"], \"primary_anchor_id\": \"DOC5_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书5\"], \"anchor_targets\": [\"除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。\", \"经营标注虚假生产日期的食品\", \"被告有证据证明其在行政程序中依照法定程序要求原告或者第三人提供证据，原告或者第三人依法应当提供而没有提供，在诉讼程序中提供的证据，人民法院一般不予采纳。\", \"本表格为10粒*90袋小球藻粒的出入台账，它是由10粒*3000袋/箱的小球藻粒重新包装而成，包装后盒子喷码日期为2018年2月。\", \"收入\"], \"anchor_value_hints\": [\"5\", \"34\", \"11\", \"10\", \"13\", \"14\", \"23\", \"2016\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 2}, \"top_related_anchor_ids\": [\"DOC5_A5\", \"DOC5_A3\", \"DOC5_A2\", \"DOC5_A1\", \"DOC5_A5\", \"DOC5_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}]}</info>\n<think>The selected chunk from the '法院观点' section provides detailed information about the court's evaluation of the evidence presented in the case. It confirms that the document involves an administrative reconsideration ('行政复议') but does not mention any other specific categories like '行政行为-行政强制' or '执行案由-行政非诉执行'. The chunk does not provide additional evidence to support categorization into other specified categories. Therefore, we can conclude that the document should be categorized under '行政行为-行政复议' based on the available evidence.</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"行政行为-行政复议\"], \"known_value_signatures\": [\"判决文书5\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC5_A2\", \"DOC5_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 再审申请人青岛市崂山区市场监督管理局因与被申请人青岛某某健康产业有限公司没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院的行政判决，向本院申请再审。 再审申请人青岛市崂山区市场监督管理局（以下简称崂山市场监管局）因与被申请人青岛某某健康产业有限公司（以下简称某某公司）没收违法所得、罚款及行政复议一案，不服济南铁路运输中级人民法院(2022)鲁71行终238号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\", \"法院观点 法院认为二审判决撤销被诉处罚决定的理由成立，因为崂山市场监管局提供的证据不足以证明某某公司存在违法行为。同时，法院还讨论了一审中证人证言的采信问题和证据34的使用情况。 本院认为：本案再审审查的焦点是二审判决认为被诉处罚决定存在事实不清的情形，因此撤销该处罚决定是否正确。 《中华人民共和国行政处罚法》第五十四条第一款规定：“除本法第五十一条规定的可以当场作出的行政处罚外，行政机关发现公民、法人或者其他组织有依法应当给予行政处罚的行为的，必须全面、客观、公正地调查，收集有关证据；必要时，依照法律、法规的规定，可以进行检查。”由此，行政机关负有全面调查取证的义务，以确保证据的全面、客观、真实。本案中，崂山市场监管局认定某某公司实施了“经营标注虚假生产日期的食品”的违法行为，主张相应的证据为一审证据11收入明细账、证据10销售发票、证据5对某某公司法定代表人蔡某群的询问笔录、证据13进货明细、库存明细、记账凭证、入库单、证据14产品价格等事项说明、证据34出库明细、证据23未虚假标注生产日期食品的销售明细账及发票。但从上述证据载明的内容来看，尚不足以充分证明某某公司作为食品销售给收入明细账中所载明客户的产品，系将外包装箱上标明生产日期为2016年的小球藻粒重新包装为生产日期为2018年2月1日的产品，且相关客户已在一审中出庭作证，均称其购买的小球藻粒包...\"], \"selected_relation_anchor_ids\": [\"DOC5_A5\", \"DOC5_A3\", \"DOC5_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}, {\"source_anchor_id\": \"DOC5_A2\", \"target_anchor_id\": \"DOC5_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书5']\"}]}}</retrieve>"
+}

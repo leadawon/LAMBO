@@ -1,0 +1,458 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "selected_anchor_ids": [
+    "DOC4_A6"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A6",
+        "candidate_anchor_ids": [
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4",
+          "DOC4_A5"
+        ],
+        "utility_hits": {
+          "DOC4_A6": [
+            "legal_label_hit=['赔偿案件', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC4_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC4_A6": 16.0,
+          "DOC4_A2": 11.0,
+          "DOC4_A3": 11.0,
+          "DOC4_A4": 11.0
+        },
+        "score_breakdown": {
+          "DOC4_A6": {
+            "local_relevance": 20.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.354,
+            "redundancy_penalty": 0.0,
+            "total": 49.354
+          },
+          "DOC4_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 29.201
+          },
+          "DOC4_A3": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 28.914
+          },
+          "DOC4_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC4_A6",
+      "plan_think": "The document seems to be related to a compensation case as it involves a claim for damages due to alleged abuse during incarceration. The key information is likely to be found in sections that discuss the nature of the case and the court's decision. DOC4_A6 mentions the court's decision to reject the appeal based on the case not falling under the scope of the State Compensation Law, which indicates this is indeed a compensation case. I will select DOC4_A6 to confirm the categorization.",
+      "info": {
+        "anchor_id": "DOC4_A6",
+        "anchor_type": "paragraph_region",
+        "section_path": "申诉审查",
+        "summary": "Expanded same-section read window around DOC4_A6: 本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。",
+        "text": "[DOC4_A1 | 当事人信息]\n申诉人（赔偿请求人）：祝某某。\n\n被申诉人（赔偿义务机关）：湖北省沙洋荷花垸监狱。住所地：湖北省天门市多宝镇荷花垸。\n\n法定代表人：谢俊，监狱长。\n\n复议机关：湖北省监狱管理局。住所地：湖北省武汉市武昌区中南三路21号。\n\n法定代表人：熊亚平，局长。\n\n[DOC4_A2 | 案件背景]\n申诉人祝某某因申请湖北省沙洋荷花垸监狱（以下简称荷花垸监狱）殴打、虐待致伤及无罪羁押赔偿一案，不服湖北省高级人民法院赔偿委员会（2023）鄂委赔1号决定，向本院赔偿委员会申诉。本院赔偿委员会依法对本案进行了审查，本案现已审查终结。\n\n2021年11月16日，祝某某以荷花垸监狱殴打、虐待致其受伤残疾及无罪羁押为由申请国家赔偿，要求赔偿残疾赔偿金、误工收入、后期医疗费、精神损害抚慰金、非法羁押损害费、交通费、住旅费、护理费等共计5571030元。荷花垸监狱于2022年1月10日作出沙洋荷监赔字（2021）第01号决定，对祝某某的国家赔偿申请不予赔偿。祝某某不服申请复议，湖北省监狱管理局于2022年2月9日作出鄂监复决字[2022]第01号决定，不予受理祝某某的赔偿申请。祝某某不服，向湖北省高级人民法院赔偿委员会申请作出赔偿决定。\n\n[DOC4_A3 | 案件事实]\n湖北省高级人民法院赔偿委员会经审理查明，1991年10月18日，湖北省麻城市人民法院以（1991）麻法刑字第157号刑事判决，认定祝某某犯盗窃罪，判处祝某某有期徒刑二年，刑期自1991年7月5日至1993年7月4日止。该刑事判决生效后，同年11月20日，祝某某被投入荷花垸监狱。服刑期间，祝某某曾于1992年5月、6月间，遭同监服刑人员李某某、韩某等人殴打，致其重伤。后经湖北省沙洋县人民法院判决，对李某某、韩某犯故意伤害罪，各判处有期徒刑五年。祝某某对该故意伤害案末提出刑事附带民事赔偿诉讼。\n\n1993年7月4日，因祝某某服刑期满，荷花垸监狱发放（93）字第487号《释放证明书》，依法将其释放。祝某某以其在服刑期间被故意伤害未得到赔偿等为由，拒绝在释放证明书上签名，并且在释放出监后，长期逗留荷花垸监狱办公场所及中队附近。监狱为解决祝某某临时食宿事宜，腾出老残中队仓库供其暂住。\n\n1998年4月，祝某某返回原籍，次月起，荷花垸监狱从人道主义精神出发，按月补助祝某某生活困难费120元，后历年有所增加，自2011年后至今每月补助450元。期间，于2008年至2012年曾每年另外补助福利费100元至450元不等。\n\n2007年4月28日，经麻城市司法局歧亭司法所委托，湖北同济法医学司法鉴定中心对祝某某伤残程度等依法鉴定，出具同济法医临床2007-0278号《法医学鉴定书》，鉴定结论为：祝某某双下肢损害后果评定为三级残，相当于一般劳动能力丧失80%。同年6月6日，在麻城市司法局主持下，荷花垸监狱与祝某某达成协议，就祝某某在监狱服刑期间被他犯伤害之事，达成道义性补偿协议：一、鉴于祝某某生活困难，荷花垸监狱给予一次性生活补助19000元人民币；二、荷花垸监狱按其所在地老残生活费标准支付给祝某某每月260元生活补助费；三、祝某某不再因此事或身体上的病变而到监狱系统及地方政府上访。该协议书经麻城公证处以（2007）麻证字第1093号公证书予以公证。自1998年5月起至祝某某申请国家赔偿之日，荷花垸监狱已累计支付其生活困难费、福利费、一次性生活补助费达110806元人民币。\n\n另查明，2020年，祝某某以服刑期间被殴打、虐待致伤为由，向湖北省荆门市中级人民法院赔偿委员会申请荷花垸监狱国家赔偿。荆门市中级人民法院于2020年5月1日作出（2020）鄂08委赔2号不予受理案件决定，明确祝某某被殴打、虐待致伤发生于1992年，1995年1月1日施行的《中华人民共和国国家赔偿法》不溯及既往，决定对祝某某的国家赔偿申请不予受理。\n\n还查明，2002年祝某某在其原籍麻城市歧亭镇划分了责任田，办理了农村合作医疗，并于2007年7月纳入了农村低保。麻城市司法局于2012年为祝某某申请了8万元补助金。\n\n[DOC4_A4 | 法院决定]\n湖北省高级人民法院赔偿委员会认为，《中华人民共和国国家赔偿法》自1995年1月1日起施行，该法施行以前发生的有关侵权情形不适用国家赔偿法予以调整。《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》中第一条明确规定：“《国家赔偿法》1995年1月1日起施行。《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理……”。本案中，祝某某被侵犯人身权的行为发生及终止均在国家赔偿法施行之前，故祝某某提出的赔偿申请不属于国家赔偿法规定的受案范围，不应予以受理，受理后应当依法驳回其申请。祝某某提出其于1993年出狱后被荷花垸监狱原政委张某某强行非法拘留、无罪羁押多年，直到2006年才让其出狱的事实，祝某某对此并未提交相关证据予以证实。祝某某并不存在被荷花垸监狱非法拘留、无罪羁押的情形。\n\n综上，湖北省高级人民法院赔偿委员会于2023年4月3日作出（2023）鄂委赔1号决定，决定如下：一、维持湖北省监狱管理局鄂监复决字〔2022〕第01号不予受理决定；二、驳回赔偿请求人祝某某的国家赔偿申请。\n\n[DOC4_A5 | 申诉内容]\n申诉人祝某某向本院赔偿委员会提出申诉，请求撤销原决定，重新审理本案；由荷花垸监狱赔偿申诉人残疾赔偿金、误工收入、后期医疗费、精神损害抚慰金、非法拘留无罪羁押损害费、交通费、护理费、差旅费等共计5571030元。主要事实和理由：申诉人在××队服刑期间，遭受狱警及工作人员王某某、丁某某、范某某、张某某、李某某、杨某某等人殴打和虐待，导致左、右两个大腿股骨头骨折，胸肋骨骨折五根，后司法鉴定为两下肢体三级重伤残，劳动能力丧失80%，后期医疗费18万元。1993年申诉人刑满后提出二点要求，一是追究监狱参加殴打和虐待申诉人的侵权人员刑事责任，二是给予申诉人人身损害赔偿。荷花垸监狱原副政委张某某强行把申诉人送去荷花垸监狱十五队仓库内非法拘留，非法超期无罪羁押申诉人多年，至2006年5月9日才签发出狱释放证明，让申诉人出狱。出狱后申诉人要求监狱对多名工作人员追究刑事责任，解决人身损害赔偿及非法拘留、监视居住、无罪羁押多年的损害赔偿问题。荷花垸监狱已经处分了相关责任人员，证明监狱承认其行为的违法性，应当给予刑事赔偿。\n\n本院赔偿委员会审查查明的事实与原审查明的事实一致。\n\n[DOC4_A6 | 申诉审查]\n本院赔偿委员会认为，本案审查的焦点是本案应否适用国家赔偿法调整以及是否符合受理条件。\n\n首先，本案不属于国家赔偿法的调整范围。现行国家赔偿法自1995年1月1日起施行，根据《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》第一条规定，《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理；发生在1994年12月31日以前，但持续至1995年1月1日以后，并经依法确认的，属于1995年1月1日以后应予赔偿的部分，适用国家赔偿法予以赔偿。申诉人祝某某主张的荷花垸监狱干警及同监犯人对其殴打、虐待的行为发生于其服刑期间（1991年7月5日至1993年7月4日），其已于1993年7月4日刑满释放。祝某某在被释放后仍然滞留在荷花垸监狱，主要是为解决其在服刑期间被殴打致伤一事，其主张荷花垸监狱将其违法羁押至2006年5月，缺乏证据证明，该项主张亦不属于上述批复规定的侵权行为持续至1995年1月1日以后的情形。由于祝某某主张的侵权行为发生在国家赔偿法实施之前，因此，国家赔偿法对于祝某某主张的被殴打致伤赔偿问题没有溯及力。原决定认为本案不适用国家赔偿法调整，适用法律正确。\n\n其次，本案属于重复向人民法院赔偿委员会申请作出赔偿决定。祝某某曾于2020年以与本案相同的请求和事由向湖北省荆门市中级人民法院赔偿委员会申请作出赔偿决定，请求责令荷花垸监狱给予国家赔偿，荆门市中级人民法院于2020年5月1日作出（2020）鄂08委赔2号不予受理案件决定，对其赔偿申请不予受理。该决定已经发生法律效力，祝某某不服，可依法通过向上级人民法院申诉寻求救济，其向湖北省高级人民法院申请作出赔偿决定属于重复申请，不符合人民法院赔偿委员会受理国家赔偿案件的条件。\n\n第三，对于申诉人主张的被殴打致伤一事，有关部门已经作出过处理。一是湖北省沙洋县人民法院对参与殴打祝某某的李某某、韩某以故意伤害罪追究了刑事责任，祝某某在该案审理中未提出刑事附带民事诉讼。二是自1998年5月起至祝某某申请国家赔偿之日，荷花垸监狱本着人道主义按月向其支付数额不等的生活困难费用，并于2007年6月给予祝某某一次性生活补助19000元，累计支付其生活困难费、福利费、一次性生活补助费等110806元。三是2002年祝某某所在原籍湖北省麻城市歧亭镇给其划分了责任田，办理了农村合作医疗，并于2007年7月纳入农村低保。麻城市司法局还于2012年为祝某某申请了8万元补助金。因此，本案虽然不能适用国家赔偿法调整，但荷花垸监狱和相关政府部门也以不同形式对其给予了生活补助和困难帮扶。\n\n综上，祝某某的申诉理由不成立，本案不符合《最高人民法院关于国家赔偿监督程序若干问题的规定》第十一条规定的重新审理情形。依照《中华人民共和国国家赔偿法》第三十条、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\n\n驳回祝某某的申诉。",
+        "source_window_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4",
+          "DOC4_A5",
+          "DOC4_A6"
+        ],
+        "primary_anchor_id": "DOC4_A6",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "metric_binding",
+          "case_identity",
+          "decision_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书4"
+        ],
+        "anchor_targets": [
+          "赔偿案件",
+          "判决文书4",
+          "权益",
+          "费用"
+        ],
+        "anchor_value_hints": [
+          "4",
+          "1995",
+          "1",
+          "1994",
+          "12",
+          "31",
+          "1991",
+          "7"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "metric_term",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 4,
+            "same_case": 5,
+            "disambiguates": 5,
+            "likely_same_entity": 4
+          },
+          "top_related_anchor_ids": [
+            "DOC4_A5",
+            "DOC4_A4",
+            "DOC4_A3",
+            "DOC4_A2",
+            "DOC4_A5",
+            "DOC4_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC4_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC4_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书4']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC4_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书4']"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk confirms that the document is related to a compensation case, specifically involving a claim for damages due to alleged abuse during incarceration. The document explicitly states that the case does not fall under the scope of the State Compensation Law and that the application is considered a repeat application. This information is sufficient to classify the document as a '赔偿案件'. No further evidence is needed from this document to fulfill the task.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "赔偿案件",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A6",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC4_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC4_A5",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书4']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC4_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书4']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "赔偿案件"
+          ],
+          "known_value_signatures": [
+            "判决文书4"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC4_A6"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "申诉审查 本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。 本院赔偿委员会认为，本案审查的焦点是本案应否适用国家赔偿法调整以及是否符合受理条件。 首先，本案不属于国家赔偿法的调整范围。现行国家赔偿法自1995年1月1日起施行，根据《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》第一条规定，《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理；发生在1994年12月31日以前，但持续至1995年1月1日以后，并经依法确认的，属于1995年1月1日以后应予赔偿的部分，适用国家赔偿法予以赔偿。申诉人祝某某主张的荷花垸监狱干警及同监犯人对其殴打、虐待的行为发生于其服刑期间（1991年7月5日至1993年7月4日），其已于1993年7月4日刑满释放。祝某某在被释放后仍然滞留在荷花垸监狱，主要是为解决其在服刑期间被殴打致伤一事，其主张荷花垸监狱将其违法羁押至2006年5月，缺乏证据证明，该项主张亦不属于上述批复规定的侵权行为持续至1995年1月1日以后的情形。由于祝某某主张的侵权行为发生在国家赔偿法实施..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC4_A5",
+            "DOC4_A4",
+            "DOC4_A3",
+            "DOC4_A2",
+            "DOC4_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A2",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书4']"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC4_A6",
+              "target_anchor_id": "DOC4_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "赔偿案件",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A6",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC4_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书4']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC4_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书4']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to be related to a compensation case as it involves a claim for damages due to alleged abuse during incarceration. The key information is likely to be found in sections that discuss the nature of the case and the court's decision. DOC4_A6 mentions the court's decision to reject the appeal based on the case not falling under the scope of the State Compensation Law, which indicates this is indeed a compensation case. I will select DOC4_A6 to confirm the categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A6\", \"candidate_anchor_ids\": [\"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\"], \"utility_hits\": {\"DOC4_A6\": [\"legal_label_hit=['赔偿案件', '判决文书']\", \"legal_decision_context\"], \"DOC4_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC4_A6\": 16.0, \"DOC4_A2\": 11.0, \"DOC4_A3\": 11.0, \"DOC4_A4\": 11.0}, \"score_breakdown\": {\"DOC4_A6\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 49.354}, \"DOC4_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC4_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC4_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A6\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉审查\", \"summary\": \"Expanded same-section read window around DOC4_A6: 本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。\", \"text\": \"[DOC4_A1 | 当事人信息]\\n申诉人（赔偿请求人）：祝某某。\\n\\n被申诉人（赔偿义务机关）：湖北省沙洋荷花垸监狱。住所地：湖北省天门市多宝镇荷花垸。\\n\\n法定代表人：谢俊，监狱长。\\n\\n复议机关：湖北省监狱管理局。住所地：湖北省武汉市武昌区中南三路21号。\\n\\n法定代表人：熊亚平，局长。\\n\\n[DOC4_A2 | 案件背景]\\n申诉人祝某某因申请湖北省沙洋荷花垸监狱（以下简称荷花垸监狱）殴打、虐待致伤及无罪羁押赔偿一案，不服湖北省高级人民法院赔偿委员会（2023）鄂委赔1号决定，向本院赔偿委员会申诉。本院赔偿委员会依法对本案进行了审查，本案现已审查终结。\\n\\n2021年11月16日，祝某某以荷花垸监狱殴打、虐待致其受伤残疾及无罪羁押为由申请国家赔偿，要求赔偿残疾赔偿金、误工收入、后期医疗费、精神损害抚慰金、非法羁押损害费、交通费、住旅费、护理费等共计5571030元。荷花垸监狱于2022年1月10日作出沙洋荷监赔字（2021）第01号决定，对祝某某的国家赔偿申请不予赔偿。祝某某不服申请复议，湖北省监狱管理局于2022年2月9日作出鄂监复决字[2022]第01号决定，不予受理祝某某的赔偿申请。祝某某不服，向湖北省高级人民法院赔偿委员会申请作出赔偿决定。\\n\\n[DOC4_A3 | 案件事实]\\n湖北省高级人民法院赔偿委员会经审理查明，1991年10月18日，湖北省麻城市人民法院以（1991）麻法刑字第157号刑事判决，认定祝某某犯盗窃罪，判处祝某某有期徒刑二年，刑期自1991年7月5日至1993年7月4日止。该刑事判决生效后，同年11月20日，祝某某被投入荷花垸监狱。服刑期间，祝某某曾于1992年5月、6月间，遭同监服刑人员李某某、韩某等人殴打，致其重伤。后经湖北省沙洋县人民法院判决，对李某某、韩某犯故意伤害罪，各判处有期徒刑五年。祝某某对该故意伤害案末提出刑事附带民事赔偿诉讼。\\n\\n1993年7月4日，因祝某某服刑期满，荷花垸监狱发放（93）字第487号《释放证明书》，依法将其释放。祝某某以其在服刑期间被故意伤害未得到赔偿等为由，拒绝在释放证明书上签名，并且在释放出监后，长期逗留荷花垸监狱办公场所及中队附近。监狱为解决祝某某临时食宿事宜，腾出老残中队仓库供其暂住。\\n\\n1998年4月，祝某某返回原籍，次月起，荷花垸监狱从人道主义精神出发，按月补助祝某某生活困难费120元，后历年有所增加，自2011年后至今每月补助450元。期间，于2008年至2012年曾每年另外补助福利费100元至450元不等。\\n\\n2007年4月28日，经麻城市司法局歧亭司法所委托，湖北同济法医学司法鉴定中心对祝某某伤残程度等依法鉴定，出具同济法医临床2007-0278号《法医学鉴定书》，鉴定结论为：祝某某双下肢损害后果评定为三级残，相当于一般劳动能力丧失80%。同年6月6日，在麻城市司法局主持下，荷花垸监狱与祝某某达成协议，就祝某某在监狱服刑期间被他犯伤害之事，达成道义性补偿协议：一、鉴于祝某某生活困难，荷花垸监狱给予一次性生活补助19000元人民币；二、荷花垸监狱按其所在地老残生活费标准支付给祝某某每月260元生活补助费；三、祝某某不再因此事或身体上的病变而到监狱系统及地方政府上访。该协议书经麻城公证处以（2007）麻证字第1093号公证书予以公证。自1998年5月起至祝某某申请国家赔偿之日，荷花垸监狱已累计支付其生活困难费、福利费、一次性生活补助费达110806元人民币。\\n\\n另查明，2020年，祝某某以服刑期间被殴打、虐待致伤为由，向湖北省荆门市中级人民法院赔偿委员会申请荷花垸监狱国家赔偿。荆门市中级人民法院于2020年5月1日作出（2020）鄂08委赔2号不予受理案件决定，明确祝某某被殴打、虐待致伤发生于1992年，1995年1月1日施行的《中华人民共和国国家赔偿法》不溯及既往，决定对祝某某的国家赔偿申请不予受理。\\n\\n还查明，2002年祝某某在其原籍麻城市歧亭镇划分了责任田，办理了农村合作医疗，并于2007年7月纳入了农村低保。麻城市司法局于2012年为祝某某申请了8万元补助金。\\n\\n[DOC4_A4 | 法院决定]\\n湖北省高级人民法院赔偿委员会认为，《中华人民共和国国家赔偿法》自1995年1月1日起施行，该法施行以前发生的有关侵权情形不适用国家赔偿法予以调整。《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》中第一条明确规定：“《国家赔偿法》1995年1月1日起施行。《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理……”。本案中，祝某某被侵犯人身权的行为发生及终止均在国家赔偿法施行之前，故祝某某提出的赔偿申请不属于国家赔偿法规定的受案范围，不应予以受理，受理后应当依法驳回其申请。祝某某提出其于1993年出狱后被荷花垸监狱原政委张某某强行非法拘留、无罪羁押多年，直到2006年才让其出狱的事实，祝某某对此并未提交相关证据予以证实。祝某某并不存在被荷花垸监狱非法拘留、无罪羁押的情形。\\n\\n综上，湖北省高级人民法院赔偿委员会于2023年4月3日作出（2023）鄂委赔1号决定，决定如下：一、维持湖北省监狱管理局鄂监复决字〔2022〕第01号不予受理决定；二、驳回赔偿请求人祝某某的国家赔偿申请。\\n\\n[DOC4_A5 | 申诉内容]\\n申诉人祝某某向本院赔偿委员会提出申诉，请求撤销原决定，重新审理本案；由荷花垸监狱赔偿申诉人残疾赔偿金、误工收入、后期医疗费、精神损害抚慰金、非法拘留无罪羁押损害费、交通费、护理费、差旅费等共计5571030元。主要事实和理由：申诉人在××队服刑期间，遭受狱警及工作人员王某某、丁某某、范某某、张某某、李某某、杨某某等人殴打和虐待，导致左、右两个大腿股骨头骨折，胸肋骨骨折五根，后司法鉴定为两下肢体三级重伤残，劳动能力丧失80%，后期医疗费18万元。1993年申诉人刑满后提出二点要求，一是追究监狱参加殴打和虐待申诉人的侵权人员刑事责任，二是给予申诉人人身损害赔偿。荷花垸监狱原副政委张某某强行把申诉人送去荷花垸监狱十五队仓库内非法拘留，非法超期无罪羁押申诉人多年，至2006年5月9日才签发出狱释放证明，让申诉人出狱。出狱后申诉人要求监狱对多名工作人员追究刑事责任，解决人身损害赔偿及非法拘留、监视居住、无罪羁押多年的损害赔偿问题。荷花垸监狱已经处分了相关责任人员，证明监狱承认其行为的违法性，应当给予刑事赔偿。\\n\\n本院赔偿委员会审查查明的事实与原审查明的事实一致。\\n\\n[DOC4_A6 | 申诉审查]\\n本院赔偿委员会认为，本案审查的焦点是本案应否适用国家赔偿法调整以及是否符合受理条件。\\n\\n首先，本案不属于国家赔偿法的调整范围。现行国家赔偿法自1995年1月1日起施行，根据《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》第一条规定，《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理；发生在1994年12月31日以前，但持续至1995年1月1日以后，并经依法确认的，属于1995年1月1日以后应予赔偿的部分，适用国家赔偿法予以赔偿。申诉人祝某某主张的荷花垸监狱干警及同监犯人对其殴打、虐待的行为发生于其服刑期间（1991年7月5日至1993年7月4日），其已于1993年7月4日刑满释放。祝某某在被释放后仍然滞留在荷花垸监狱，主要是为解决其在服刑期间被殴打致伤一事，其主张荷花垸监狱将其违法羁押至2006年5月，缺乏证据证明，该项主张亦不属于上述批复规定的侵权行为持续至1995年1月1日以后的情形。由于祝某某主张的侵权行为发生在国家赔偿法实施之前，因此，国家赔偿法对于祝某某主张的被殴打致伤赔偿问题没有溯及力。原决定认为本案不适用国家赔偿法调整，适用法律正确。\\n\\n其次，本案属于重复向人民法院赔偿委员会申请作出赔偿决定。祝某某曾于2020年以与本案相同的请求和事由向湖北省荆门市中级人民法院赔偿委员会申请作出赔偿决定，请求责令荷花垸监狱给予国家赔偿，荆门市中级人民法院于2020年5月1日作出（2020）鄂08委赔2号不予受理案件决定，对其赔偿申请不予受理。该决定已经发生法律效力，祝某某不服，可依法通过向上级人民法院申诉寻求救济，其向湖北省高级人民法院申请作出赔偿决定属于重复申请，不符合人民法院赔偿委员会受理国家赔偿案件的条件。\\n\\n第三，对于申诉人主张的被殴打致伤一事，有关部门已经作出过处理。一是湖北省沙洋县人民法院对参与殴打祝某某的李某某、韩某以故意伤害罪追究了刑事责任，祝某某在该案审理中未提出刑事附带民事诉讼。二是自1998年5月起至祝某某申请国家赔偿之日，荷花垸监狱本着人道主义按月向其支付数额不等的生活困难费用，并于2007年6月给予祝某某一次性生活补助19000元，累计支付其生活困难费、福利费、一次性生活补助费等110806元。三是2002年祝某某所在原籍湖北省麻城市歧亭镇给其划分了责任田，办理了农村合作医疗，并于2007年7月纳入农村低保。麻城市司法局还于2012年为祝某某申请了8万元补助金。因此，本案虽然不能适用国家赔偿法调整，但荷花垸监狱和相关政府部门也以不同形式对其给予了生活补助和困难帮扶。\\n\\n综上，祝某某的申诉理由不成立，本案不符合《最高人民法院关于国家赔偿监督程序若干问题的规定》第十一条规定的重新审理情形。依照《中华人民共和国国家赔偿法》第三十条、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回祝某某的申诉。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\"], \"primary_anchor_id\": \"DOC4_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"赔偿案件\", \"判决文书4\", \"权益\", \"费用\"], \"anchor_value_hints\": [\"4\", \"1995\", \"1\", \"1994\", \"12\", \"31\", \"1991\", \"7\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 4}, \"top_related_anchor_ids\": [\"DOC4_A5\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A5\", \"DOC4_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}]}</info>\n<think>The selected chunk confirms that the document is related to a compensation case, specifically involving a claim for damages due to alleged abuse during incarceration. The document explicitly states that the case does not fall under the scope of the State Compensation Law and that the application is considered a repeat application. This information is sufficient to classify the document as a '赔偿案件'. No further evidence is needed from this document to fulfill the task.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A6\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉审查 本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。 本院赔偿委员会认为，本案审查的焦点是本案应否适用国家赔偿法调整以及是否符合受理条件。 首先，本案不属于国家赔偿法的调整范围。现行国家赔偿法自1995年1月1日起施行，根据《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》第一条规定，《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理；发生在1994年12月31日以前，但持续至1995年1月1日以后，并经依法确认的，属于1995年1月1日以后应予赔偿的部分，适用国家赔偿法予以赔偿。申诉人祝某某主张的荷花垸监狱干警及同监犯人对其殴打、虐待的行为发生于其服刑期间（1991年7月5日至1993年7月4日），其已于1993年7月4日刑满释放。祝某某在被释放后仍然滞留在荷花垸监狱，主要是为解决其在服刑期间被殴打致伤一事，其主张荷花垸监狱将其违法羁押至2006年5月，缺乏证据证明，该项主张亦不属于上述批复规定的侵权行为持续至1995年1月1日以后的情形。由于祝某某主张的侵权行为发生在国家赔偿法实施...\"], \"selected_relation_anchor_ids\": [\"DOC4_A5\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to a compensation case as it involves a claim for damages due to alleged abuse during incarceration. The key information is likely to be found in sections that discuss the nature of the case and the court's decision. DOC4_A6 mentions the court's decision to reject the appeal based on the case not falling under the scope of the State Compensation Law, which indicates this is indeed a compensation case. I will select DOC4_A6 to confirm the categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'赔偿案件' '民事案件' '执行案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'赔偿案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A6\", \"candidate_anchor_ids\": [\"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\"], \"utility_hits\": {\"DOC4_A6\": [\"legal_label_hit=['赔偿案件', '判决文书']\", \"legal_decision_context\"], \"DOC4_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC4_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC4_A6\": 16.0, \"DOC4_A2\": 11.0, \"DOC4_A3\": 11.0, \"DOC4_A4\": 11.0}, \"score_breakdown\": {\"DOC4_A6\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.354, \"redundancy_penalty\": 0.0, \"total\": 49.354}, \"DOC4_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 29.201}, \"DOC4_A3\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 28.914}, \"DOC4_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC4_A6\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉审查\", \"summary\": \"Expanded same-section read window around DOC4_A6: 本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。\", \"text\": \"[DOC4_A1 | 当事人信息]\\n申诉人（赔偿请求人）：祝某某。\\n\\n被申诉人（赔偿义务机关）：湖北省沙洋荷花垸监狱。住所地：湖北省天门市多宝镇荷花垸。\\n\\n法定代表人：谢俊，监狱长。\\n\\n复议机关：湖北省监狱管理局。住所地：湖北省武汉市武昌区中南三路21号。\\n\\n法定代表人：熊亚平，局长。\\n\\n[DOC4_A2 | 案件背景]\\n申诉人祝某某因申请湖北省沙洋荷花垸监狱（以下简称荷花垸监狱）殴打、虐待致伤及无罪羁押赔偿一案，不服湖北省高级人民法院赔偿委员会（2023）鄂委赔1号决定，向本院赔偿委员会申诉。本院赔偿委员会依法对本案进行了审查，本案现已审查终结。\\n\\n2021年11月16日，祝某某以荷花垸监狱殴打、虐待致其受伤残疾及无罪羁押为由申请国家赔偿，要求赔偿残疾赔偿金、误工收入、后期医疗费、精神损害抚慰金、非法羁押损害费、交通费、住旅费、护理费等共计5571030元。荷花垸监狱于2022年1月10日作出沙洋荷监赔字（2021）第01号决定，对祝某某的国家赔偿申请不予赔偿。祝某某不服申请复议，湖北省监狱管理局于2022年2月9日作出鄂监复决字[2022]第01号决定，不予受理祝某某的赔偿申请。祝某某不服，向湖北省高级人民法院赔偿委员会申请作出赔偿决定。\\n\\n[DOC4_A3 | 案件事实]\\n湖北省高级人民法院赔偿委员会经审理查明，1991年10月18日，湖北省麻城市人民法院以（1991）麻法刑字第157号刑事判决，认定祝某某犯盗窃罪，判处祝某某有期徒刑二年，刑期自1991年7月5日至1993年7月4日止。该刑事判决生效后，同年11月20日，祝某某被投入荷花垸监狱。服刑期间，祝某某曾于1992年5月、6月间，遭同监服刑人员李某某、韩某等人殴打，致其重伤。后经湖北省沙洋县人民法院判决，对李某某、韩某犯故意伤害罪，各判处有期徒刑五年。祝某某对该故意伤害案末提出刑事附带民事赔偿诉讼。\\n\\n1993年7月4日，因祝某某服刑期满，荷花垸监狱发放（93）字第487号《释放证明书》，依法将其释放。祝某某以其在服刑期间被故意伤害未得到赔偿等为由，拒绝在释放证明书上签名，并且在释放出监后，长期逗留荷花垸监狱办公场所及中队附近。监狱为解决祝某某临时食宿事宜，腾出老残中队仓库供其暂住。\\n\\n1998年4月，祝某某返回原籍，次月起，荷花垸监狱从人道主义精神出发，按月补助祝某某生活困难费120元，后历年有所增加，自2011年后至今每月补助450元。期间，于2008年至2012年曾每年另外补助福利费100元至450元不等。\\n\\n2007年4月28日，经麻城市司法局歧亭司法所委托，湖北同济法医学司法鉴定中心对祝某某伤残程度等依法鉴定，出具同济法医临床2007-0278号《法医学鉴定书》，鉴定结论为：祝某某双下肢损害后果评定为三级残，相当于一般劳动能力丧失80%。同年6月6日，在麻城市司法局主持下，荷花垸监狱与祝某某达成协议，就祝某某在监狱服刑期间被他犯伤害之事，达成道义性补偿协议：一、鉴于祝某某生活困难，荷花垸监狱给予一次性生活补助19000元人民币；二、荷花垸监狱按其所在地老残生活费标准支付给祝某某每月260元生活补助费；三、祝某某不再因此事或身体上的病变而到监狱系统及地方政府上访。该协议书经麻城公证处以（2007）麻证字第1093号公证书予以公证。自1998年5月起至祝某某申请国家赔偿之日，荷花垸监狱已累计支付其生活困难费、福利费、一次性生活补助费达110806元人民币。\\n\\n另查明，2020年，祝某某以服刑期间被殴打、虐待致伤为由，向湖北省荆门市中级人民法院赔偿委员会申请荷花垸监狱国家赔偿。荆门市中级人民法院于2020年5月1日作出（2020）鄂08委赔2号不予受理案件决定，明确祝某某被殴打、虐待致伤发生于1992年，1995年1月1日施行的《中华人民共和国国家赔偿法》不溯及既往，决定对祝某某的国家赔偿申请不予受理。\\n\\n还查明，2002年祝某某在其原籍麻城市歧亭镇划分了责任田，办理了农村合作医疗，并于2007年7月纳入了农村低保。麻城市司法局于2012年为祝某某申请了8万元补助金。\\n\\n[DOC4_A4 | 法院决定]\\n湖北省高级人民法院赔偿委员会认为，《中华人民共和国国家赔偿法》自1995年1月1日起施行，该法施行以前发生的有关侵权情形不适用国家赔偿法予以调整。《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》中第一条明确规定：“《国家赔偿法》1995年1月1日起施行。《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理……”。本案中，祝某某被侵犯人身权的行为发生及终止均在国家赔偿法施行之前，故祝某某提出的赔偿申请不属于国家赔偿法规定的受案范围，不应予以受理，受理后应当依法驳回其申请。祝某某提出其于1993年出狱后被荷花垸监狱原政委张某某强行非法拘留、无罪羁押多年，直到2006年才让其出狱的事实，祝某某对此并未提交相关证据予以证实。祝某某并不存在被荷花垸监狱非法拘留、无罪羁押的情形。\\n\\n综上，湖北省高级人民法院赔偿委员会于2023年4月3日作出（2023）鄂委赔1号决定，决定如下：一、维持湖北省监狱管理局鄂监复决字〔2022〕第01号不予受理决定；二、驳回赔偿请求人祝某某的国家赔偿申请。\\n\\n[DOC4_A5 | 申诉内容]\\n申诉人祝某某向本院赔偿委员会提出申诉，请求撤销原决定，重新审理本案；由荷花垸监狱赔偿申诉人残疾赔偿金、误工收入、后期医疗费、精神损害抚慰金、非法拘留无罪羁押损害费、交通费、护理费、差旅费等共计5571030元。主要事实和理由：申诉人在××队服刑期间，遭受狱警及工作人员王某某、丁某某、范某某、张某某、李某某、杨某某等人殴打和虐待，导致左、右两个大腿股骨头骨折，胸肋骨骨折五根，后司法鉴定为两下肢体三级重伤残，劳动能力丧失80%，后期医疗费18万元。1993年申诉人刑满后提出二点要求，一是追究监狱参加殴打和虐待申诉人的侵权人员刑事责任，二是给予申诉人人身损害赔偿。荷花垸监狱原副政委张某某强行把申诉人送去荷花垸监狱十五队仓库内非法拘留，非法超期无罪羁押申诉人多年，至2006年5月9日才签发出狱释放证明，让申诉人出狱。出狱后申诉人要求监狱对多名工作人员追究刑事责任，解决人身损害赔偿及非法拘留、监视居住、无罪羁押多年的损害赔偿问题。荷花垸监狱已经处分了相关责任人员，证明监狱承认其行为的违法性，应当给予刑事赔偿。\\n\\n本院赔偿委员会审查查明的事实与原审查明的事实一致。\\n\\n[DOC4_A6 | 申诉审查]\\n本院赔偿委员会认为，本案审查的焦点是本案应否适用国家赔偿法调整以及是否符合受理条件。\\n\\n首先，本案不属于国家赔偿法的调整范围。现行国家赔偿法自1995年1月1日起施行，根据《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》第一条规定，《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理；发生在1994年12月31日以前，但持续至1995年1月1日以后，并经依法确认的，属于1995年1月1日以后应予赔偿的部分，适用国家赔偿法予以赔偿。申诉人祝某某主张的荷花垸监狱干警及同监犯人对其殴打、虐待的行为发生于其服刑期间（1991年7月5日至1993年7月4日），其已于1993年7月4日刑满释放。祝某某在被释放后仍然滞留在荷花垸监狱，主要是为解决其在服刑期间被殴打致伤一事，其主张荷花垸监狱将其违法羁押至2006年5月，缺乏证据证明，该项主张亦不属于上述批复规定的侵权行为持续至1995年1月1日以后的情形。由于祝某某主张的侵权行为发生在国家赔偿法实施之前，因此，国家赔偿法对于祝某某主张的被殴打致伤赔偿问题没有溯及力。原决定认为本案不适用国家赔偿法调整，适用法律正确。\\n\\n其次，本案属于重复向人民法院赔偿委员会申请作出赔偿决定。祝某某曾于2020年以与本案相同的请求和事由向湖北省荆门市中级人民法院赔偿委员会申请作出赔偿决定，请求责令荷花垸监狱给予国家赔偿，荆门市中级人民法院于2020年5月1日作出（2020）鄂08委赔2号不予受理案件决定，对其赔偿申请不予受理。该决定已经发生法律效力，祝某某不服，可依法通过向上级人民法院申诉寻求救济，其向湖北省高级人民法院申请作出赔偿决定属于重复申请，不符合人民法院赔偿委员会受理国家赔偿案件的条件。\\n\\n第三，对于申诉人主张的被殴打致伤一事，有关部门已经作出过处理。一是湖北省沙洋县人民法院对参与殴打祝某某的李某某、韩某以故意伤害罪追究了刑事责任，祝某某在该案审理中未提出刑事附带民事诉讼。二是自1998年5月起至祝某某申请国家赔偿之日，荷花垸监狱本着人道主义按月向其支付数额不等的生活困难费用，并于2007年6月给予祝某某一次性生活补助19000元，累计支付其生活困难费、福利费、一次性生活补助费等110806元。三是2002年祝某某所在原籍湖北省麻城市歧亭镇给其划分了责任田，办理了农村合作医疗，并于2007年7月纳入农村低保。麻城市司法局还于2012年为祝某某申请了8万元补助金。因此，本案虽然不能适用国家赔偿法调整，但荷花垸监狱和相关政府部门也以不同形式对其给予了生活补助和困难帮扶。\\n\\n综上，祝某某的申诉理由不成立，本案不符合《最高人民法院关于国家赔偿监督程序若干问题的规定》第十一条规定的重新审理情形。依照《中华人民共和国国家赔偿法》第三十条、《最高人民法院关于国家赔偿监督程序若干问题的规定》第十三条第二项之规定，决定如下：\\n\\n驳回祝某某的申诉。\", \"source_window_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\", \"DOC4_A5\", \"DOC4_A6\"], \"primary_anchor_id\": \"DOC4_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"metric_binding\", \"case_identity\", \"decision_evidence\"], \"anchor_entities\": [\"判决文书4\"], \"anchor_targets\": [\"赔偿案件\", \"判决文书4\", \"权益\", \"费用\"], \"anchor_value_hints\": [\"4\", \"1995\", \"1\", \"1994\", \"12\", \"31\", \"1991\", \"7\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"metric_term\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 4, \"same_case\": 5, \"disambiguates\": 5, \"likely_same_entity\": 4}, \"top_related_anchor_ids\": [\"DOC4_A5\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A5\", \"DOC4_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}]}</info>\n<think>The selected chunk confirms that the document is related to a compensation case, specifically involving a claim for damages due to alleged abuse during incarceration. The document explicitly states that the case does not fall under the scope of the State Compensation Law and that the application is considered a repeat application. This information is sufficient to classify the document as a '赔偿案件'. No further evidence is needed from this document to fulfill the task.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"赔偿案件\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A6\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"赔偿案件\"], \"known_value_signatures\": [\"判决文书4\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC4_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉审查 本院赔偿委员会认为，祝某某的侵权行为发生在国家赔偿法实施之前，不属于国家赔偿法的调整范围，且其申请属于重复申请。尽管不能适用国家赔偿法，荷花垸监狱和相关部门已给予祝某某生活补助和困难帮扶。最终驳回祝某某的申诉。 本院赔偿委员会认为，本案审查的焦点是本案应否适用国家赔偿法调整以及是否符合受理条件。 首先，本案不属于国家赔偿法的调整范围。现行国家赔偿法自1995年1月1日起施行，根据《最高人民法院关于〈中华人民共和国国家赔偿法〉溯及力和人民法院赔偿委员会受案范围问题的批复》第一条规定，《国家赔偿法》不溯及既往。即：国家机关及其工作人员行使职权时侵犯公民、法人和其他组织合法权益的行为，发生在1994年12月31日以前的，依照以前的有关规定处理；发生在1994年12月31日以前，但持续至1995年1月1日以后，并经依法确认的，属于1995年1月1日以后应予赔偿的部分，适用国家赔偿法予以赔偿。申诉人祝某某主张的荷花垸监狱干警及同监犯人对其殴打、虐待的行为发生于其服刑期间（1991年7月5日至1993年7月4日），其已于1993年7月4日刑满释放。祝某某在被释放后仍然滞留在荷花垸监狱，主要是为解决其在服刑期间被殴打致伤一事，其主张荷花垸监狱将其违法羁押至2006年5月，缺乏证据证明，该项主张亦不属于上述批复规定的侵权行为持续至1995年1月1日以后的情形。由于祝某某主张的侵权行为发生在国家赔偿法实施...\"], \"selected_relation_anchor_ids\": [\"DOC4_A5\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A2\", \"DOC4_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A2\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC4_A6\", \"target_anchor_id\": \"DOC4_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}]}}</retrieve>"
+}

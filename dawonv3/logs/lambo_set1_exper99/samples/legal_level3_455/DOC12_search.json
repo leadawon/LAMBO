@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC12",
+  "doc_title": "《判决文书12》",
+  "task_mode": "clustering",
+  "think": "The current document summary does not provide enough information to categorize it under any of the specified case causes. The summary mentions a case related to a court's abuse of power, but it doesn't clearly indicate if it falls under '渎职罪' (dereliction of duty) or another category. To make a proper classification, I need to inspect the full content of the document to find more specific details about the case cause.",
+  "current_query": "阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC12_A1",
+  "candidate_anchor_ids": [
+    "DOC12_A1"
+  ],
+  "ranked_anchor_ids": [
+    "DOC12_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC12_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC12_A1",
+      "score": 29.3,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 29.3
+      },
+      "summary": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，提出申诉。申诉理由未被采纳，申诉不符合再审条件，被驳回。"
+    }
+  ],
+  "utility_hits": {
+    "DOC12_A1": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC12_A1": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC12_A1": 6.0
+  },
+  "anchor_role_hits": {
+    "DOC12_A1": [
+      "case_identity",
+      "decision_evidence"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC12_A1": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 29.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书12》. First coordinate candidate is DOC12_A1.",
+  "raw_plan_text": "<think>The current document summary does not provide enough information to categorize it under any of the specified case causes. The summary mentions a case related to a court's abuse of power, but it doesn't clearly indicate if it falls under '渎职罪' (dereliction of duty) or another category. To make a proper classification, I need to inspect the full content of the document to find more specific details about the case cause.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC12_A1\",\"candidate_anchor_ids\":[\"DOC12_A1\"]}</search>",
+  "tagged_trace": "<think>The current document summary does not provide enough information to categorize it under any of the specified case causes. The summary mentions a case related to a court's abuse of power, but it doesn't clearly indicate if it falls under '渎职罪' (dereliction of duty) or another category. To make a proper classification, I need to inspect the full content of the document to find more specific details about the case cause.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政许可' '渎职罪' '行政主体-司法行政管理（司法行政）' '行政主体-房屋拆迁管理（拆迁）' '破坏社会主义市场经济秩序罪' '非刑事赔偿-错误执行赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政许可': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '破坏社会主义市场经济秩序罪': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC12_A1\"], \"next_anchor_id\": \"DOC12_A1\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC12_A1\": 6.0}, \"anchor_role_hits\": {\"DOC12_A1\": [\"case_identity\", \"decision_evidence\"]}}</search>"
+}

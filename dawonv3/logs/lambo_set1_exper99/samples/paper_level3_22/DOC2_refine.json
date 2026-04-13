@@ -1,0 +1,1359 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Can Large Language Models Really Improve by Self-critiquing Their Own Plans?",
+  "selected_anchor_ids": [
+    "DOC2_A9",
+    "DOC2_A6",
+    "DOC2_A4"
+  ],
+  "final_current_query": "References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A9",
+        "candidate_anchor_ids": [
+          "DOC2_A9"
+        ],
+        "utility_hits": {
+          "DOC2_A9": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC2_A6": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC2_A3": [
+            "citation_format_cue"
+          ],
+          "DOC2_A4": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A9": 10.0,
+          "DOC2_A6": 10.0,
+          "DOC2_A3": 3.0,
+          "DOC2_A4": 3.0
+        },
+        "score_breakdown": {
+          "DOC2_A9": {
+            "local_relevance": 44.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 15.097,
+            "redundancy_penalty": 0.0,
+            "total": 76.097
+          },
+          "DOC2_A6": {
+            "local_relevance": 38.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 9.154,
+            "redundancy_penalty": 0.0,
+            "total": 64.154
+          },
+          "DOC2_A3": {
+            "local_relevance": 26.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 43.614
+          },
+          "DOC2_A4": {
+            "local_relevance": 26.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 43.391
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC2_A9",
+      "plan_think": "The current query is about the citation and reference relationships of the paper titled \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks.\" However, we are currently examining the document \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\" Since we need to identify if there's any citation or reference relationship between these two documents, it would be most efficient to start by looking at the references section of the current document to see if it cites the target paper. Therefore, I will inspect the references section next.",
+      "info": {
+        "anchor_id": "DOC2_A9",
+        "anchor_type": "attribution_region",
+        "section_path": "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References",
+        "summary": "Expanded same-section read window around DOC2_A9: The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques.",
+        "text": "[DOC2_A1 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans?]\nKarthik Valmeekam ${ }^{*}$<br>School of Computing \\& AI<br>Arizona State University Tempe.<br>kvalmeek@asu.edu\n\nMatthew Marquez*<br>School of Computing \\& AI<br>Arizona State University, Tempe.<br>mmarqu22@asu.edu\n\nSubbarao Kambhampati<br>School of Computing \\& AI<br>Arizona State University, Tempe.<br>rao@asu.edu\n\n[DOC2_A5 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 3 Background]\n## 3 Background\n\nWe specifically are interested in classical planning problems that are represented within the PDDL (Planning Domain and Definition Language) framework [8]. These problem classes consist of a domain, initial state and a goal state. The domain consists of a set of predicates and a set of actions. The state-space of the planning problem is represented with some truth-assignment on the predicates. Every action in domain have a set of preconditions which determine when an action can be applied and a set of effects which determine the modifications to the state after the action is applied. A plan here is a sequence of actions which are present in the domain that when executed in the initial state, satisfy the goal conditions.\n\n![](https://cdn.mathpix.com/cropped/2024_06_04_05e1f31d9191dc8af540g-3.jpg?height=564&width=1209&top_left_y=255&top_left_x=469)\n\nFigure 1: Overall evaluation architecture\n\n[DOC2_A8 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 6 Conclusion and Future Work]\n## 6 Conclusion and Future Work\n\nIn this paper, we conducted a systematic investigation into the ability of Large Language Models (LLMs) to critique their own outputs, specifically within the context of classical planning problems. While recent research has been optimistic about LLMs' potential in self-critiquing, especially in iterative settings, our findings present a different perspective.\n\nOur empirical evaluations on Blocksworld, a simple common-sense domain, highlighted the ineffectiveness of self-critiquing in LLMs in the context of planning. We showed that the verifier LLM generates a significant number of false positives which be detrimental to the overall system's reliability, particularly in domains where the correctness of plans is paramount. Interestingly, the nature of feedback, whether binary or detailed, did not have a pronounced impact on plan generation performance, suggesting that the core issue lies in the LLM's binary verification capabilities rather than the granularity of feedback.\n\nIn the future, we plan to conduct more extensive experiments with respect to the number of instances, the number of domains and prompting methods (such as chain-of-thought).\n\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\n## References\n\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\n\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\n\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\n\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\n\n[5] IPC. International planning competition, 1998.\n\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\n\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\n\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\n\n[9] OpenAI. Gpt-4 technical report, 2023.\n\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\n\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\n\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\n\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\n\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\n\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\n\n[^0]:    * Equal Contribution",
+        "source_window_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A5",
+          "DOC2_A8",
+          "DOC2_A9"
+        ],
+        "primary_anchor_id": "DOC2_A9",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Can",
+          "Large",
+          "Language",
+          "Models",
+          "Really",
+          "Improve",
+          "by",
+          "Self-critiquing",
+          "Their",
+          "Own"
+        ],
+        "anchor_targets": [
+          "Can",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2305.13281",
+          "2023",
+          "2",
+          "2305.14325",
+          "3",
+          "2305.18654",
+          "4"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 8,
+            "same_target_paper": 8,
+            "disambiguates": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk contains the references section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". This section lists all the papers cited by this document. However, none of the listed references match the title \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we can conclude that the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\" does not cite the target paper. To determine if the target paper cites this one, we would need to examine the references section of the target paper.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC2_A9"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A6",
+        "candidate_anchor_ids": [
+          "TARGET_DOC_REF_SECTION"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC2_A9"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC2_A9"
+        ],
+        "utility_hits": {
+          "DOC2_A6": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC2_A3": [
+            "citation_format_cue"
+          ],
+          "DOC2_A4": [
+            "citation_format_cue"
+          ],
+          "DOC2_A5": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A6": 10.0,
+          "DOC2_A3": 3.0,
+          "DOC2_A4": 3.0,
+          "DOC2_A5": 3.0
+        },
+        "relation_hits": {
+          "DOC2_A6": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A9",
+            "disambiguates_selected=DOC2_A9"
+          ],
+          "DOC2_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A9",
+            "disambiguates_selected=DOC2_A9"
+          ],
+          "DOC2_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A9",
+            "disambiguates_selected=DOC2_A9"
+          ],
+          "DOC2_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A9",
+            "disambiguates_selected=DOC2_A9"
+          ]
+        },
+        "relation_score": {
+          "DOC2_A6": 17.18,
+          "DOC2_A3": 17.18,
+          "DOC2_A4": 17.18,
+          "DOC2_A5": 17.18
+        },
+        "anchor_role_hits": {
+          "DOC2_A6": [
+            "citation_direction"
+          ],
+          "DOC2_A3": [
+            "citation_direction"
+          ],
+          "DOC2_A4": [
+            "citation_direction"
+          ],
+          "DOC2_A5": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC2_A6": {
+            "local_relevance": 38.0,
+            "answer_utility": 10.0,
+            "coverage": 7.0,
+            "relation": 17.18,
+            "weak_priors": 9.154,
+            "redundancy_penalty": 0.0,
+            "total": 81.334
+          },
+          "DOC2_A3": {
+            "local_relevance": 26.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 57.794
+          },
+          "DOC2_A4": {
+            "local_relevance": 26.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 57.571
+          },
+          "DOC2_A5": {
+            "local_relevance": 24.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 17.18,
+            "weak_priors": 5.808,
+            "redundancy_penalty": 0.0,
+            "total": 53.988
+          }
+        }
+      },
+      "anchor_id": "DOC2_A6",
+      "plan_think": "The current document does not contain any citation to the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". To determine if the target paper cites the current document, we need to inspect the references section of the target paper. Therefore, the next step is to retrieve and inspect the references section of the target paper.",
+      "info": {
+        "anchor_id": "DOC2_A6",
+        "anchor_type": "attribution_region",
+        "section_path": "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology",
+        "summary": "Expanded same-section read window around DOC2_A6: The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the ver...",
+        "text": "[DOC2_A6 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology]\n## 4 Methodology\n\n### 4.1 The LLM+LLM planning system\n\nThe LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting that there are no constraints on the type or format of feedback the verifier LLM produces. The system ceases generation either when the verifier LLM approves the candidate plan as valid or when the number of prompting iterations exceeds a set threshold (for our experiments, this threshold is set at 15 iterations). This method is similar to the backprompting technique described in [12]. However, the main distinction lies in the type of verifier employed. In our system, both the verifier and generator are LLMs, whereas the referenced approach utilizes an external sound verifier, VAL [4]. For all our experiments, GPT-4 serves as the default LLM.\n\n### 4.2 Prompt generation\n\nFor the LLM+LLM Planning system described above, we utilize distinct prompts for the generator and verifier LLMs. The prompt generator (as shown in Figure 1) utilizes the PDDL domain and instance files to generate the required prompts in natural language. Our prompts are structured similarly to the natural language prompts found in [12]. For plan generation, our prompts are one-shot: we begin by presenting the domain description, followed by an example instance (along with its corresponding plan). We then present the query instance. These example instances are randomly selected from our set of instances, and this forms the input for the generator LLM. For the verifier LLM, we adopt a zero-shot approach. Here, we present the domain description, followed by the query instance and its corresponding plan. The verifier LLM is then tasked with verifying the query plan and providing feedback if necessary. As mentioned earlier, we do not restrict the type or format of the feedback for the verifier LLM. Detailed examples of the prompts given to both the generator and verifier LLMs can be found in the Appendix.\n\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\n## References\n\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\n\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\n\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\n\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\n\n[5] IPC. International planning competition, 1998.\n\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\n\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\n\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\n\n[9] OpenAI. Gpt-4 technical report, 2023.\n\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\n\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\n\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\n\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\n\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\n\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\n\n[^0]:    * Equal Contribution",
+        "source_window_anchor_ids": [
+          "DOC2_A6",
+          "DOC2_A9"
+        ],
+        "primary_anchor_id": "DOC2_A6",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Can",
+          "Large",
+          "Language",
+          "Models",
+          "Really",
+          "Improve",
+          "by",
+          "Self-critiquing",
+          "Their",
+          "Own"
+        ],
+        "anchor_targets": [
+          "Can",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_value_hints": [
+          "4",
+          "-4",
+          "4.1",
+          "1",
+          "15",
+          "12",
+          "4.2"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 8,
+            "same_target_paper": 8,
+            "disambiguates": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk includes the methodology section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". It describes the LLM+LLM planning system and mentions references [12] and [4], but does not provide any information about the citation or reference relationship with the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we need to continue searching for the references section of the target paper to determine if it cites the current paper.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A6"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...",
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A4",
+        "candidate_anchor_ids": [
+          "TARGET_DOC_REF_SECTION"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A6"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...",
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC2_A9",
+          "DOC2_A6"
+        ],
+        "utility_hits": {
+          "DOC2_A4": [
+            "citation_format_cue"
+          ],
+          "DOC2_A5": [
+            "citation_format_cue"
+          ],
+          "DOC2_A3": [
+            "citation_format_cue"
+          ],
+          "DOC2_A7": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A4": 3.0,
+          "DOC2_A5": 3.0,
+          "DOC2_A3": 3.0,
+          "DOC2_A7": 3.0
+        },
+        "relation_hits": {
+          "DOC2_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "supports_selected=DOC2_A6",
+            "same_target_paper_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A6",
+            "disambiguates_selected=DOC2_A9"
+          ],
+          "DOC2_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "supports_selected=DOC2_A6",
+            "same_target_paper_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A6",
+            "disambiguates_selected=DOC2_A9"
+          ],
+          "DOC2_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "supports_selected=DOC2_A6",
+            "same_target_paper_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A6",
+            "disambiguates_selected=DOC2_A9"
+          ],
+          "DOC2_A7": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A9",
+            "supports_selected=DOC2_A6",
+            "same_target_paper_selected=DOC2_A9",
+            "same_target_paper_selected=DOC2_A6",
+            "disambiguates_selected=DOC2_A9"
+          ]
+        },
+        "relation_score": {
+          "DOC2_A4": 22.74,
+          "DOC2_A5": 22.74,
+          "DOC2_A3": 22.74,
+          "DOC2_A7": 22.74
+        },
+        "anchor_role_hits": {
+          "DOC2_A4": [
+            "citation_direction"
+          ],
+          "DOC2_A5": [
+            "citation_direction"
+          ],
+          "DOC2_A3": [
+            "citation_direction"
+          ],
+          "DOC2_A7": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC2_A4": {
+            "local_relevance": 34.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 22.74,
+            "weak_priors": 7.391,
+            "redundancy_penalty": 0.0,
+            "total": 71.131
+          },
+          "DOC2_A5": {
+            "local_relevance": 32.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 22.74,
+            "weak_priors": 5.808,
+            "redundancy_penalty": 0.0,
+            "total": 67.548
+          },
+          "DOC2_A3": {
+            "local_relevance": 30.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 22.74,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 67.354
+          },
+          "DOC2_A7": {
+            "local_relevance": 34.0,
+            "answer_utility": 3.0,
+            "coverage": 4.0,
+            "relation": 22.74,
+            "weak_priors": 3.421,
+            "redundancy_penalty": 0.0,
+            "total": 67.161
+          }
+        }
+      },
+      "anchor_id": "DOC2_A4",
+      "plan_think": "The current document does not contain any citation to the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". To determine if the target paper cites the current document, we need to inspect the references section of the target paper. Therefore, the next step is to retrieve and inspect the references section of the target paper.",
+      "info": {
+        "anchor_id": "DOC2_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work",
+        "summary": "Expanded same-section read window around DOC2_A4: The related work section reviews studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. The authors highlight their focus on systemati...",
+        "text": "[DOC2_A4 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work]\n## 2 Related Work\n\nThere has been significant interest in investigating the reasoning capabilities of LLMs, spanning from planning [12] to logic and arithmetic [3], and even puzzles [15]. As the initial excitement from triumphant anecdotes about LLMs' reasoning capabilities began to wane with systematic studies [12, 11, 3], researchers proposed that allowing LLMs to verify their own candidate solutions and iterate over this process could enhance their reasoning abilities [10, 7, 6, 14]. Our work systematically investigates the effect of iterative self-critiquing in the context of planning.\n\nThere have also been studies that utilize multiple LLMs to generate and verify candidate solutions, either in the form of a debate [2] or through cross-examination [1]. However, these studies still rely solely on the verification/self-critiquing abilities of the LLMs, an aspect our work critically examines in the context of planning. Our results provide compelling reasons to question the use of LLMs for self-critiquing in planning.\n\n[DOC2_A8 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 6 Conclusion and Future Work]\n## 6 Conclusion and Future Work\n\nIn this paper, we conducted a systematic investigation into the ability of Large Language Models (LLMs) to critique their own outputs, specifically within the context of classical planning problems. While recent research has been optimistic about LLMs' potential in self-critiquing, especially in iterative settings, our findings present a different perspective.\n\nOur empirical evaluations on Blocksworld, a simple common-sense domain, highlighted the ineffectiveness of self-critiquing in LLMs in the context of planning. We showed that the verifier LLM generates a significant number of false positives which be detrimental to the overall system's reliability, particularly in domains where the correctness of plans is paramount. Interestingly, the nature of feedback, whether binary or detailed, did not have a pronounced impact on plan generation performance, suggesting that the core issue lies in the LLM's binary verification capabilities rather than the granularity of feedback.\n\nIn the future, we plan to conduct more extensive experiments with respect to the number of instances, the number of domains and prompting methods (such as chain-of-thought).\n\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\n## References\n\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\n\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\n\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\n\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\n\n[5] IPC. International planning competition, 1998.\n\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\n\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\n\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\n\n[9] OpenAI. Gpt-4 technical report, 2023.\n\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\n\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\n\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\n\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\n\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\n\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\n\n[^0]:    * Equal Contribution",
+        "source_window_anchor_ids": [
+          "DOC2_A4",
+          "DOC2_A8",
+          "DOC2_A9"
+        ],
+        "primary_anchor_id": "DOC2_A4",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Can",
+          "Large",
+          "Language",
+          "Models",
+          "Really",
+          "Improve",
+          "by",
+          "Self-critiquing",
+          "Their",
+          "Own"
+        ],
+        "anchor_targets": [
+          "Can",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "12",
+          "3",
+          "15",
+          "12,",
+          "11,",
+          "10,",
+          "7,"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 8,
+            "same_target_paper": 8,
+            "disambiguates": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk is from the \"Related Work\" section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". It discusses various studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. However, it does not provide any direct citation or reference information regarding the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we need to continue searching for the references section of the target paper to determine if it cites the current paper.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract local citation/reference relations only among provided documents.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "Reference",
+            "Citation",
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "selected_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A6",
+            "DOC2_A4"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...",
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting...",
+            "Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work The related work section reviews studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. The authors highlight their focus on systematic investigation of iterative self-critiquing in planning and question the efficacy of LLMs as verifiers. ## 2 Related Work There has been significant interest in investigating the reasoning capabilities of LLMs, spanning from planning [12] to logic and arithmetic [3], and even puzzles [15]. As the initial excitement from triumphant anecdotes about LLMs' reasoning capabilities began to wane with systematic studies [12, 11, 3], researchers proposed that allowing LLMs to verify their own candidate solutions and iterate over this process could enhance their reasoning abilities [10, 7, 6, 14]. Our wo..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A5",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            },
+            {
+              "source_anchor_id": "DOC2_A9",
+              "target_anchor_id": "DOC2_A1",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Can', 'Large']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The current query is about the citation and reference relationships of the paper titled \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks.\" However, we are currently examining the document \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\" Since we need to identify if there's any citation or reference relationship between these two documents, it would be most efficient to start by looking at the references section of the current document to see if it cites the target paper. Therefore, I will inspect the references section next.</think>\n<search>{\"current_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A9\", \"candidate_anchor_ids\": [\"DOC2_A9\"], \"utility_hits\": {\"DOC2_A9\": [\"reference_section\", \"citation_format_cue\"], \"DOC2_A6\": [\"reference_section\", \"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"], \"DOC2_A4\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A9\": 10.0, \"DOC2_A6\": 10.0, \"DOC2_A3\": 3.0, \"DOC2_A4\": 3.0}, \"score_breakdown\": {\"DOC2_A9\": {\"local_relevance\": 44.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 15.097, \"redundancy_penalty\": 0.0, \"total\": 76.097}, \"DOC2_A6\": {\"local_relevance\": 38.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 64.154}, \"DOC2_A3\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 43.614}, \"DOC2_A4\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 43.391}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A9\", \"anchor_type\": \"attribution_region\", \"section_path\": \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References\", \"summary\": \"Expanded same-section read window around DOC2_A9: The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques.\", \"text\": \"[DOC2_A1 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans?]\\nKarthik Valmeekam ${ }^{*}$<br>School of Computing \\\\& AI<br>Arizona State University Tempe.<br>kvalmeek@asu.edu\\n\\nMatthew Marquez*<br>School of Computing \\\\& AI<br>Arizona State University, Tempe.<br>mmarqu22@asu.edu\\n\\nSubbarao Kambhampati<br>School of Computing \\\\& AI<br>Arizona State University, Tempe.<br>rao@asu.edu\\n\\n[DOC2_A5 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 3 Background]\\n## 3 Background\\n\\nWe specifically are interested in classical planning problems that are represented within the PDDL (Planning Domain and Definition Language) framework [8]. These problem classes consist of a domain, initial state and a goal state. The domain consists of a set of predicates and a set of actions. The state-space of the planning problem is represented with some truth-assignment on the predicates. Every action in domain have a set of preconditions which determine when an action can be applied and a set of effects which determine the modifications to the state after the action is applied. A plan here is a sequence of actions which are present in the domain that when executed in the initial state, satisfy the goal conditions.\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_05e1f31d9191dc8af540g-3.jpg?height=564&width=1209&top_left_y=255&top_left_x=469)\\n\\nFigure 1: Overall evaluation architecture\\n\\n[DOC2_A8 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 6 Conclusion and Future Work]\\n## 6 Conclusion and Future Work\\n\\nIn this paper, we conducted a systematic investigation into the ability of Large Language Models (LLMs) to critique their own outputs, specifically within the context of classical planning problems. While recent research has been optimistic about LLMs' potential in self-critiquing, especially in iterative settings, our findings present a different perspective.\\n\\nOur empirical evaluations on Blocksworld, a simple common-sense domain, highlighted the ineffectiveness of self-critiquing in LLMs in the context of planning. We showed that the verifier LLM generates a significant number of false positives which be detrimental to the overall system's reliability, particularly in domains where the correctness of plans is paramount. Interestingly, the nature of feedback, whether binary or detailed, did not have a pronounced impact on plan generation performance, suggesting that the core issue lies in the LLM's binary verification capabilities rather than the granularity of feedback.\\n\\nIn the future, we plan to conduct more extensive experiments with respect to the number of instances, the number of domains and prompting methods (such as chain-of-thought).\\n\\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\\n## References\\n\\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\\n\\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\\n\\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\\n\\n[5] IPC. International planning competition, 1998.\\n\\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\\n\\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\\n\\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\\n\\n[9] OpenAI. Gpt-4 technical report, 2023.\\n\\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\\n\\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\\n\\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\\n\\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\\n\\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\\n\\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\\n\\n[^0]:    * Equal Contribution\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A5\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A9\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Can\", \"Large\", \"Language\", \"Models\", \"Really\", \"Improve\", \"by\", \"Self-critiquing\", \"Their\", \"Own\"], \"anchor_targets\": [\"Can\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"1\", \"2305.13281\", \"2023\", \"2\", \"2305.14325\", \"3\", \"2305.18654\", \"4\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_target_paper\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains the references section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". This section lists all the papers cited by this document. However, none of the listed references match the title \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we can conclude that the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\" does not cite the target paper. To determine if the target paper cites this one, we would need to examine the references section of the target paper.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}}</retrieve>\n<think>The current document does not contain any citation to the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". To determine if the target paper cites the current document, we need to inspect the references section of the target paper. Therefore, the next step is to retrieve and inspect the references section of the target paper.</think>\n<search>{\"current_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A6\", \"candidate_anchor_ids\": [\"TARGET_DOC_REF_SECTION\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A9\"], \"utility_hits\": {\"DOC2_A6\": [\"reference_section\", \"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"], \"DOC2_A4\": [\"citation_format_cue\"], \"DOC2_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A6\": 10.0, \"DOC2_A3\": 3.0, \"DOC2_A4\": 3.0, \"DOC2_A5\": 3.0}, \"relation_hits\": {\"DOC2_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"]}, \"relation_score\": {\"DOC2_A6\": 17.18, \"DOC2_A3\": 17.18, \"DOC2_A4\": 17.18, \"DOC2_A5\": 17.18}, \"anchor_role_hits\": {\"DOC2_A6\": [\"citation_direction\"], \"DOC2_A3\": [\"citation_direction\"], \"DOC2_A4\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A6\": {\"local_relevance\": 38.0, \"answer_utility\": 10.0, \"coverage\": 7.0, \"relation\": 17.18, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 81.334}, \"DOC2_A3\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 57.794}, \"DOC2_A4\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 57.571}, \"DOC2_A5\": {\"local_relevance\": 24.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 53.988}}}</search>\n<info>{\"anchor_id\": \"DOC2_A6\", \"anchor_type\": \"attribution_region\", \"section_path\": \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology\", \"summary\": \"Expanded same-section read window around DOC2_A6: The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the ver...\", \"text\": \"[DOC2_A6 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology]\\n## 4 Methodology\\n\\n### 4.1 The LLM+LLM planning system\\n\\nThe LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting that there are no constraints on the type or format of feedback the verifier LLM produces. The system ceases generation either when the verifier LLM approves the candidate plan as valid or when the number of prompting iterations exceeds a set threshold (for our experiments, this threshold is set at 15 iterations). This method is similar to the backprompting technique described in [12]. However, the main distinction lies in the type of verifier employed. In our system, both the verifier and generator are LLMs, whereas the referenced approach utilizes an external sound verifier, VAL [4]. For all our experiments, GPT-4 serves as the default LLM.\\n\\n### 4.2 Prompt generation\\n\\nFor the LLM+LLM Planning system described above, we utilize distinct prompts for the generator and verifier LLMs. The prompt generator (as shown in Figure 1) utilizes the PDDL domain and instance files to generate the required prompts in natural language. Our prompts are structured similarly to the natural language prompts found in [12]. For plan generation, our prompts are one-shot: we begin by presenting the domain description, followed by an example instance (along with its corresponding plan). We then present the query instance. These example instances are randomly selected from our set of instances, and this forms the input for the generator LLM. For the verifier LLM, we adopt a zero-shot approach. Here, we present the domain description, followed by the query instance and its corresponding plan. The verifier LLM is then tasked with verifying the query plan and providing feedback if necessary. As mentioned earlier, we do not restrict the type or format of the feedback for the verifier LLM. Detailed examples of the prompts given to both the generator and verifier LLMs can be found in the Appendix.\\n\\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\\n## References\\n\\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\\n\\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\\n\\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\\n\\n[5] IPC. International planning competition, 1998.\\n\\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\\n\\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\\n\\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\\n\\n[9] OpenAI. Gpt-4 technical report, 2023.\\n\\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\\n\\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\\n\\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\\n\\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\\n\\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\\n\\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\\n\\n[^0]:    * Equal Contribution\", \"source_window_anchor_ids\": [\"DOC2_A6\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Can\", \"Large\", \"Language\", \"Models\", \"Really\", \"Improve\", \"by\", \"Self-critiquing\", \"Their\", \"Own\"], \"anchor_targets\": [\"Can\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"4\", \"-4\", \"4.1\", \"1\", \"15\", \"12\", \"4.2\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_target_paper\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk includes the methodology section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". It describes the LLM+LLM planning system and mentions references [12] and [4], but does not provide any information about the citation or reference relationship with the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we need to continue searching for the references section of the target paper to determine if it cites the current paper.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}}</retrieve>\n<think>The current document does not contain any citation to the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". To determine if the target paper cites the current document, we need to inspect the references section of the target paper. Therefore, the next step is to retrieve and inspect the references section of the target paper.</think>\n<search>{\"current_query\": \"References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A4\", \"candidate_anchor_ids\": [\"TARGET_DOC_REF_SECTION\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\"], \"utility_hits\": {\"DOC2_A4\": [\"citation_format_cue\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"], \"DOC2_A7\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A4\": 3.0, \"DOC2_A5\": 3.0, \"DOC2_A3\": 3.0, \"DOC2_A7\": 3.0}, \"relation_hits\": {\"DOC2_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"]}, \"relation_score\": {\"DOC2_A4\": 22.74, \"DOC2_A5\": 22.74, \"DOC2_A3\": 22.74, \"DOC2_A7\": 22.74}, \"anchor_role_hits\": {\"DOC2_A4\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A3\": [\"citation_direction\"], \"DOC2_A7\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A4\": {\"local_relevance\": 34.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 71.131}, \"DOC2_A5\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 67.548}, \"DOC2_A3\": {\"local_relevance\": 30.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 67.354}, \"DOC2_A7\": {\"local_relevance\": 34.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 3.421, \"redundancy_penalty\": 0.0, \"total\": 67.161}}}</search>\n<info>{\"anchor_id\": \"DOC2_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work\", \"summary\": \"Expanded same-section read window around DOC2_A4: The related work section reviews studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. The authors highlight their focus on systemati...\", \"text\": \"[DOC2_A4 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work]\\n## 2 Related Work\\n\\nThere has been significant interest in investigating the reasoning capabilities of LLMs, spanning from planning [12] to logic and arithmetic [3], and even puzzles [15]. As the initial excitement from triumphant anecdotes about LLMs' reasoning capabilities began to wane with systematic studies [12, 11, 3], researchers proposed that allowing LLMs to verify their own candidate solutions and iterate over this process could enhance their reasoning abilities [10, 7, 6, 14]. Our work systematically investigates the effect of iterative self-critiquing in the context of planning.\\n\\nThere have also been studies that utilize multiple LLMs to generate and verify candidate solutions, either in the form of a debate [2] or through cross-examination [1]. However, these studies still rely solely on the verification/self-critiquing abilities of the LLMs, an aspect our work critically examines in the context of planning. Our results provide compelling reasons to question the use of LLMs for self-critiquing in planning.\\n\\n[DOC2_A8 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 6 Conclusion and Future Work]\\n## 6 Conclusion and Future Work\\n\\nIn this paper, we conducted a systematic investigation into the ability of Large Language Models (LLMs) to critique their own outputs, specifically within the context of classical planning problems. While recent research has been optimistic about LLMs' potential in self-critiquing, especially in iterative settings, our findings present a different perspective.\\n\\nOur empirical evaluations on Blocksworld, a simple common-sense domain, highlighted the ineffectiveness of self-critiquing in LLMs in the context of planning. We showed that the verifier LLM generates a significant number of false positives which be detrimental to the overall system's reliability, particularly in domains where the correctness of plans is paramount. Interestingly, the nature of feedback, whether binary or detailed, did not have a pronounced impact on plan generation performance, suggesting that the core issue lies in the LLM's binary verification capabilities rather than the granularity of feedback.\\n\\nIn the future, we plan to conduct more extensive experiments with respect to the number of instances, the number of domains and prompting methods (such as chain-of-thought).\\n\\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\\n## References\\n\\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\\n\\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\\n\\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\\n\\n[5] IPC. International planning competition, 1998.\\n\\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\\n\\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\\n\\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\\n\\n[9] OpenAI. Gpt-4 technical report, 2023.\\n\\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\\n\\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\\n\\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\\n\\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\\n\\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\\n\\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\\n\\n[^0]:    * Equal Contribution\", \"source_window_anchor_ids\": [\"DOC2_A4\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Can\", \"Large\", \"Language\", \"Models\", \"Really\", \"Improve\", \"by\", \"Self-critiquing\", \"Their\", \"Own\"], \"anchor_targets\": [\"Can\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"12\", \"3\", \"15\", \"12,\", \"11,\", \"10,\", \"7,\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_target_paper\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk is from the \"Related Work\" section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". It discusses various studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. However, it does not provide any direct citation or reference information regarding the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we need to continue searching for the references section of the target paper to determine if it cites the current paper.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\", \"DOC2_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work The related work section reviews studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. The authors highlight their focus on systematic investigation of iterative self-critiquing in planning and question the efficacy of LLMs as verifiers. ## 2 Related Work There has been significant interest in investigating the reasoning capabilities of LLMs, spanning from planning [12] to logic and arithmetic [3], and even puzzles [15]. As the initial excitement from triumphant anecdotes about LLMs' reasoning capabilities began to wane with systematic studies [12, 11, 3], researchers proposed that allowing LLMs to verify their own candidate solutions and iterate over this process could enhance their reasoning abilities [10, 7, 6, 14]. Our wo...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The current query is about the citation and reference relationships of the paper titled \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks.\" However, we are currently examining the document \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\" Since we need to identify if there's any citation or reference relationship between these two documents, it would be most efficient to start by looking at the references section of the current document to see if it cites the target paper. Therefore, I will inspect the references section next.</think>\n<search>{\"current_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A9\", \"candidate_anchor_ids\": [\"DOC2_A9\"], \"utility_hits\": {\"DOC2_A9\": [\"reference_section\", \"citation_format_cue\"], \"DOC2_A6\": [\"reference_section\", \"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"], \"DOC2_A4\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A9\": 10.0, \"DOC2_A6\": 10.0, \"DOC2_A3\": 3.0, \"DOC2_A4\": 3.0}, \"score_breakdown\": {\"DOC2_A9\": {\"local_relevance\": 44.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 15.097, \"redundancy_penalty\": 0.0, \"total\": 76.097}, \"DOC2_A6\": {\"local_relevance\": 38.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 64.154}, \"DOC2_A3\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 43.614}, \"DOC2_A4\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 43.391}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A9\", \"anchor_type\": \"attribution_region\", \"section_path\": \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References\", \"summary\": \"Expanded same-section read window around DOC2_A9: The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques.\", \"text\": \"[DOC2_A1 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans?]\\nKarthik Valmeekam ${ }^{*}$<br>School of Computing \\\\& AI<br>Arizona State University Tempe.<br>kvalmeek@asu.edu\\n\\nMatthew Marquez*<br>School of Computing \\\\& AI<br>Arizona State University, Tempe.<br>mmarqu22@asu.edu\\n\\nSubbarao Kambhampati<br>School of Computing \\\\& AI<br>Arizona State University, Tempe.<br>rao@asu.edu\\n\\n[DOC2_A5 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 3 Background]\\n## 3 Background\\n\\nWe specifically are interested in classical planning problems that are represented within the PDDL (Planning Domain and Definition Language) framework [8]. These problem classes consist of a domain, initial state and a goal state. The domain consists of a set of predicates and a set of actions. The state-space of the planning problem is represented with some truth-assignment on the predicates. Every action in domain have a set of preconditions which determine when an action can be applied and a set of effects which determine the modifications to the state after the action is applied. A plan here is a sequence of actions which are present in the domain that when executed in the initial state, satisfy the goal conditions.\\n\\n![](https://cdn.mathpix.com/cropped/2024_06_04_05e1f31d9191dc8af540g-3.jpg?height=564&width=1209&top_left_y=255&top_left_x=469)\\n\\nFigure 1: Overall evaluation architecture\\n\\n[DOC2_A8 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 6 Conclusion and Future Work]\\n## 6 Conclusion and Future Work\\n\\nIn this paper, we conducted a systematic investigation into the ability of Large Language Models (LLMs) to critique their own outputs, specifically within the context of classical planning problems. While recent research has been optimistic about LLMs' potential in self-critiquing, especially in iterative settings, our findings present a different perspective.\\n\\nOur empirical evaluations on Blocksworld, a simple common-sense domain, highlighted the ineffectiveness of self-critiquing in LLMs in the context of planning. We showed that the verifier LLM generates a significant number of false positives which be detrimental to the overall system's reliability, particularly in domains where the correctness of plans is paramount. Interestingly, the nature of feedback, whether binary or detailed, did not have a pronounced impact on plan generation performance, suggesting that the core issue lies in the LLM's binary verification capabilities rather than the granularity of feedback.\\n\\nIn the future, we plan to conduct more extensive experiments with respect to the number of instances, the number of domains and prompting methods (such as chain-of-thought).\\n\\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\\n## References\\n\\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\\n\\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\\n\\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\\n\\n[5] IPC. International planning competition, 1998.\\n\\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\\n\\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\\n\\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\\n\\n[9] OpenAI. Gpt-4 technical report, 2023.\\n\\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\\n\\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\\n\\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\\n\\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\\n\\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\\n\\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\\n\\n[^0]:    * Equal Contribution\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A5\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A9\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Can\", \"Large\", \"Language\", \"Models\", \"Really\", \"Improve\", \"by\", \"Self-critiquing\", \"Their\", \"Own\"], \"anchor_targets\": [\"Can\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"1\", \"2305.13281\", \"2023\", \"2\", \"2305.14325\", \"3\", \"2305.18654\", \"4\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_target_paper\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains the references section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". This section lists all the papers cited by this document. However, none of the listed references match the title \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we can conclude that the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\" does not cite the target paper. To determine if the target paper cites this one, we would need to examine the references section of the target paper.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}}</retrieve>\n<think>The current document does not contain any citation to the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". To determine if the target paper cites the current document, we need to inspect the references section of the target paper. Therefore, the next step is to retrieve and inspect the references section of the target paper.</think>\n<search>{\"current_query\": \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A6\", \"candidate_anchor_ids\": [\"TARGET_DOC_REF_SECTION\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A9\"], \"utility_hits\": {\"DOC2_A6\": [\"reference_section\", \"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"], \"DOC2_A4\": [\"citation_format_cue\"], \"DOC2_A5\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A6\": 10.0, \"DOC2_A3\": 3.0, \"DOC2_A4\": 3.0, \"DOC2_A5\": 3.0}, \"relation_hits\": {\"DOC2_A6\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A9\", \"disambiguates_selected=DOC2_A9\"]}, \"relation_score\": {\"DOC2_A6\": 17.18, \"DOC2_A3\": 17.18, \"DOC2_A4\": 17.18, \"DOC2_A5\": 17.18}, \"anchor_role_hits\": {\"DOC2_A6\": [\"citation_direction\"], \"DOC2_A3\": [\"citation_direction\"], \"DOC2_A4\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A6\": {\"local_relevance\": 38.0, \"answer_utility\": 10.0, \"coverage\": 7.0, \"relation\": 17.18, \"weak_priors\": 9.154, \"redundancy_penalty\": 0.0, \"total\": 81.334}, \"DOC2_A3\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 57.794}, \"DOC2_A4\": {\"local_relevance\": 26.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 57.571}, \"DOC2_A5\": {\"local_relevance\": 24.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 17.18, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 53.988}}}</search>\n<info>{\"anchor_id\": \"DOC2_A6\", \"anchor_type\": \"attribution_region\", \"section_path\": \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology\", \"summary\": \"Expanded same-section read window around DOC2_A6: The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the ver...\", \"text\": \"[DOC2_A6 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology]\\n## 4 Methodology\\n\\n### 4.1 The LLM+LLM planning system\\n\\nThe LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting that there are no constraints on the type or format of feedback the verifier LLM produces. The system ceases generation either when the verifier LLM approves the candidate plan as valid or when the number of prompting iterations exceeds a set threshold (for our experiments, this threshold is set at 15 iterations). This method is similar to the backprompting technique described in [12]. However, the main distinction lies in the type of verifier employed. In our system, both the verifier and generator are LLMs, whereas the referenced approach utilizes an external sound verifier, VAL [4]. For all our experiments, GPT-4 serves as the default LLM.\\n\\n### 4.2 Prompt generation\\n\\nFor the LLM+LLM Planning system described above, we utilize distinct prompts for the generator and verifier LLMs. The prompt generator (as shown in Figure 1) utilizes the PDDL domain and instance files to generate the required prompts in natural language. Our prompts are structured similarly to the natural language prompts found in [12]. For plan generation, our prompts are one-shot: we begin by presenting the domain description, followed by an example instance (along with its corresponding plan). We then present the query instance. These example instances are randomly selected from our set of instances, and this forms the input for the generator LLM. For the verifier LLM, we adopt a zero-shot approach. Here, we present the domain description, followed by the query instance and its corresponding plan. The verifier LLM is then tasked with verifying the query plan and providing feedback if necessary. As mentioned earlier, we do not restrict the type or format of the feedback for the verifier LLM. Detailed examples of the prompts given to both the generator and verifier LLMs can be found in the Appendix.\\n\\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\\n## References\\n\\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\\n\\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\\n\\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\\n\\n[5] IPC. International planning competition, 1998.\\n\\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\\n\\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\\n\\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\\n\\n[9] OpenAI. Gpt-4 technical report, 2023.\\n\\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\\n\\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\\n\\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\\n\\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\\n\\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\\n\\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\\n\\n[^0]:    * Equal Contribution\", \"source_window_anchor_ids\": [\"DOC2_A6\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A6\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Can\", \"Large\", \"Language\", \"Models\", \"Really\", \"Improve\", \"by\", \"Self-critiquing\", \"Their\", \"Own\"], \"anchor_targets\": [\"Can\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"4\", \"-4\", \"4.1\", \"1\", \"15\", \"12\", \"4.2\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_target_paper\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk includes the methodology section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". It describes the LLM+LLM planning system and mentions references [12] and [4], but does not provide any information about the citation or reference relationship with the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we need to continue searching for the references section of the target paper to determine if it cites the current paper.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}}</retrieve>\n<think>The current document does not contain any citation to the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". To determine if the target paper cites the current document, we need to inspect the references section of the target paper. Therefore, the next step is to retrieve and inspect the references section of the target paper.</think>\n<search>{\"current_query\": \"References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A4\", \"candidate_anchor_ids\": [\"TARGET_DOC_REF_SECTION\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\"], \"utility_hits\": {\"DOC2_A4\": [\"citation_format_cue\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A3\": [\"citation_format_cue\"], \"DOC2_A7\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A4\": 3.0, \"DOC2_A5\": 3.0, \"DOC2_A3\": 3.0, \"DOC2_A7\": 3.0}, \"relation_hits\": {\"DOC2_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"], \"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A9\", \"supports_selected=DOC2_A6\", \"same_target_paper_selected=DOC2_A9\", \"same_target_paper_selected=DOC2_A6\", \"disambiguates_selected=DOC2_A9\"]}, \"relation_score\": {\"DOC2_A4\": 22.74, \"DOC2_A5\": 22.74, \"DOC2_A3\": 22.74, \"DOC2_A7\": 22.74}, \"anchor_role_hits\": {\"DOC2_A4\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A3\": [\"citation_direction\"], \"DOC2_A7\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A4\": {\"local_relevance\": 34.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 7.391, \"redundancy_penalty\": 0.0, \"total\": 71.131}, \"DOC2_A5\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 5.808, \"redundancy_penalty\": 0.0, \"total\": 67.548}, \"DOC2_A3\": {\"local_relevance\": 30.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 67.354}, \"DOC2_A7\": {\"local_relevance\": 34.0, \"answer_utility\": 3.0, \"coverage\": 4.0, \"relation\": 22.74, \"weak_priors\": 3.421, \"redundancy_penalty\": 0.0, \"total\": 67.161}}}</search>\n<info>{\"anchor_id\": \"DOC2_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work\", \"summary\": \"Expanded same-section read window around DOC2_A4: The related work section reviews studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. The authors highlight their focus on systemati...\", \"text\": \"[DOC2_A4 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work]\\n## 2 Related Work\\n\\nThere has been significant interest in investigating the reasoning capabilities of LLMs, spanning from planning [12] to logic and arithmetic [3], and even puzzles [15]. As the initial excitement from triumphant anecdotes about LLMs' reasoning capabilities began to wane with systematic studies [12, 11, 3], researchers proposed that allowing LLMs to verify their own candidate solutions and iterate over this process could enhance their reasoning abilities [10, 7, 6, 14]. Our work systematically investigates the effect of iterative self-critiquing in the context of planning.\\n\\nThere have also been studies that utilize multiple LLMs to generate and verify candidate solutions, either in the form of a debate [2] or through cross-examination [1]. However, these studies still rely solely on the verification/self-critiquing abilities of the LLMs, an aspect our work critically examines in the context of planning. Our results provide compelling reasons to question the use of LLMs for self-critiquing in planning.\\n\\n[DOC2_A8 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 6 Conclusion and Future Work]\\n## 6 Conclusion and Future Work\\n\\nIn this paper, we conducted a systematic investigation into the ability of Large Language Models (LLMs) to critique their own outputs, specifically within the context of classical planning problems. While recent research has been optimistic about LLMs' potential in self-critiquing, especially in iterative settings, our findings present a different perspective.\\n\\nOur empirical evaluations on Blocksworld, a simple common-sense domain, highlighted the ineffectiveness of self-critiquing in LLMs in the context of planning. We showed that the verifier LLM generates a significant number of false positives which be detrimental to the overall system's reliability, particularly in domains where the correctness of plans is paramount. Interestingly, the nature of feedback, whether binary or detailed, did not have a pronounced impact on plan generation performance, suggesting that the core issue lies in the LLM's binary verification capabilities rather than the granularity of feedback.\\n\\nIn the future, we plan to conduct more extensive experiments with respect to the number of instances, the number of domains and prompting methods (such as chain-of-thought).\\n\\n[DOC2_A9 | Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References]\\n## References\\n\\n[1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023.\\n\\n[2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023.\\n\\n[3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D Hwang, et al. Faith and fate: Limits of transformers on compositionality. arXiv preprint arXiv:2305.18654, 2023.\\n\\n[4] Richard Howey, Derek Long, and Maria Fox. VAL: Automatic plan validation, continuous effects and mixed initiative planning using PDDL. In 16th IEEE International Conference on Tools with Artificial Intelligence, pages 294-301. IEEE, 2004.\\n\\n[5] IPC. International planning competition, 1998.\\n\\n[6] Geunwoo Kim, Pierre Baldi, and Stephen McAleer. Language models can solve computer tasks. arXiv preprint arXiv:2303.17491, 2023.\\n\\n[7] Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang, et al. Self-refine: Iterative refinement with self-feedback. arXiv preprint arXiv:2303.17651, 2023.\\n\\n[8] Drew McDermott, Malik Ghallab, Adele E. Howe, Craig A. Knoblock, Ashwin Ram, Manuela M. Veloso, Daniel S. Weld, and David E. Wilkins. Pddl-the planning domain definition language. 1998 .\\n\\n[9] OpenAI. Gpt-4 technical report, 2023.\\n\\n[10] Noah Shinn, Beck Labash, and Ashwin Gopinath. Reflexion: an autonomous agent with dynamic memory and self-reflection. arXiv preprint arXiv:2303.11366, 2023.\\n\\n[11] Tom Silver, Varun Hariprasad, Reece S Shuttleworth, Nishanth Kumar, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. PDDL planning with pretrained large language models. In NeurIPS 2022 Foundation Models for Decision Making Workshop, 2022.\\n\\n[12] Karthik Valmeekam, Matthew Marquez, Sarath Sreedharan, and Subbarao Kambhampati. On the planning abilities of large language models-a critical investigation. arXiv preprint arXiv:2305.15771, 2023.\\n\\n[13] Daniel S Weld. An introduction to least commitment planning. AI magazine, 15(4):27-27, 1994.\\n\\n[14] Yixuan Weng, Minjun Zhu, Shizhu He, Kang Liu, and Jun Zhao. Large language models are reasoners with self-verification. arXiv preprint arXiv:2212.09561, 2022.\\n\\n[15] Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L Griffiths, Yuan Cao, and Karthik Narasimhan. Tree of thoughts: Deliberate problem solving with large language models. arXiv preprint arXiv:2305.10601, 2023.\\n\\n[^0]:    * Equal Contribution\", \"source_window_anchor_ids\": [\"DOC2_A4\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A4\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Can\", \"Large\", \"Language\", \"Models\", \"Really\", \"Improve\", \"by\", \"Self-critiquing\", \"Their\", \"Own\"], \"anchor_targets\": [\"Can\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"12\", \"3\", \"15\", \"12,\", \"11,\", \"10,\", \"7,\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 8, \"same_target_paper\": 8, \"disambiguates\": 2}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk is from the \"Related Work\" section of the paper \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans?\". It discusses various studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. However, it does not provide any direct citation or reference information regarding the target paper \"LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\". Therefore, we need to continue searching for the references section of the target paper to determine if it cites the current paper.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"References section of LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract local citation/reference relations only among provided documents.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"Reference\", \"Citation\", \"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"selected_anchor_ids\": [\"DOC2_A9\", \"DOC2_A6\", \"DOC2_A4\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > References The references section lists academic papers and reports relevant to the study, including works on LLMs, planning, and verification techniques. ## References [1] Roi Cohen, May Hamri, Mor Geva, and Amir Globerson. Lm vs lm: Detecting factual errors via cross examination. arXiv preprint arXiv:2305.13281, 2023. [2] Yilun Du, Shuang Li, Antonio Torralba, Joshua B Tenenbaum, and Igor Mordatch. Improving factuality and reasoning in language models through multiagent debate. arXiv preprint arXiv:2305.14325, 2023. [3] Nouha Dziri, Ximing Lu, Melanie Sclar, Xiang Lorraine Li, Liwei Jian, Bill Yuchen Lin, Peter West, Chandra Bhagavatula, Rona...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 4 Methodology The methodology describes the LLM+LLM planning system where GPT-4 acts as both generator and verifier. The system uses prompts for plan generation and verification, with the verifier providing feedback to the generator until a plan is approved or iteration limits are reached. ## 4 Methodology ### 4.1 The LLM+LLM planning system The LLM+LLM planning system (as shown in Figure 1) consists of a generator LLM and a verifier LLM. For a given instance, the generator LLM produces a candidate plan, while the verifier LLM determines its correctness. If the plan is found to be incorrect, the verifier provides feedback detailing the reasons for its failure. This feedback is then relayed to the generator LLM, prompting the generation of a new candidate plan. It's worth noting...\", \"Can Large Language Models Really Improve by Self-critiquing Their Own Plans? > 2 Related Work The related work section reviews studies on LLMs' reasoning capabilities and the idea of using LLMs to verify their own solutions. The authors highlight their focus on systematic investigation of iterative self-critiquing in planning and question the efficacy of LLMs as verifiers. ## 2 Related Work There has been significant interest in investigating the reasoning capabilities of LLMs, spanning from planning [12] to logic and arithmetic [3], and even puzzles [15]. As the initial excitement from triumphant anecdotes about LLMs' reasoning capabilities began to wane with systematic studies [12, 11, 3], researchers proposed that allowing LLMs to verify their own candidate solutions and iterate over this process could enhance their reasoning abilities [10, 7, 6, 14]. Our wo...\"], \"selected_relation_anchor_ids\": [\"DOC2_A8\", \"DOC2_A7\", \"DOC2_A5\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}, {\"source_anchor_id\": \"DOC2_A9\", \"target_anchor_id\": \"DOC2_A1\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Can', 'Large']\"}]}}</retrieve>"
+}

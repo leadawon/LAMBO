@@ -1,0 +1,265 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "考虑到当前文档中提到的是关于工伤保险资格认定及行政复议的案件，因此可能涉及到\"行政行为-行政复议\"这一类别。接下来应该检查包含案件背景与再审申请的段落，以确认是否符合该类别。",
+  "current_query": "阅读以上判决文书，请按照'行政主体-司法行政管理（司法行政）' '侵权责任纠纷' '执行案由-行政非诉执行' '行政行为-行政强制' '行政行为-行政复议' '刑事赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A2",
+  "candidate_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A2",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A2",
+      "score": 38.201,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_label_hit=['行政复议', '判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 16.0,
+      "utility_hits": [
+        "legal_label_hit=['行政复议', '判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 8.0,
+        "answer_utility": 16.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 38.201
+      },
+      "summary": "再审申请人朱骏杰因工伤保险资格认定及行政复议一案，不服江苏省泰州市中级人民法院的行政裁定，向本院申请再审。申请人认为未超过起诉期限，请求撤销一、二审裁定并提起再审。"
+    },
+    {
+      "anchor_id": "DOC3_A3",
+      "score": 37.914,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11",
+        "legal_label_hit=['行政复议', '判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 16.0,
+      "utility_hits": [
+        "legal_label_hit=['行政复议', '判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 8.0,
+        "answer_utility": 16.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 5.914,
+        "redundancy_penalty": 0.0,
+        "total": 37.914
+      },
+      "summary": "法院认为申请人于2022年11月24日向人民法院提起行政诉讼，明显超过了法定起诉期限且无正当理由，因此一审法院裁定驳回起诉，二审法院予以维持。"
+    },
+    {
+      "anchor_id": "DOC3_A4",
+      "score": 25.691,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 5.691,
+        "redundancy_penalty": 0.0,
+        "total": 25.691
+      },
+      "summary": "驳回朱骏杰的再审申请。"
+    },
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 20.3,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 5.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 5.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 20.3
+      },
+      "summary": "再审申请人朱骏杰及其委托代理人信息，被申请人靖江市人力资源和社会保障局和靖江市人民政府的信息，以及原审第三人靖江市世纪名仕酒店有限公司的信息。"
+    }
+  ],
+  "utility_hits": {
+    "DOC3_A2": [
+      "legal_label_hit=['行政复议', '判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC3_A3": [
+      "legal_label_hit=['行政复议', '判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC3_A4": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC3_A1": [
+      "legal_label_hit=['判决文书']"
+    ]
+  },
+  "utility_score": {
+    "DOC3_A2": 16.0,
+    "DOC3_A3": 16.0,
+    "DOC3_A4": 11.0,
+    "DOC3_A1": 5.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC3_A2": 6.0,
+    "DOC3_A3": 6.0,
+    "DOC3_A4": 3.0,
+    "DOC3_A1": 3.0
+  },
+  "anchor_role_hits": {
+    "DOC3_A2": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC3_A3": [
+      "case_identity",
+      "decision_evidence"
+    ],
+    "DOC3_A4": [
+      "decision_evidence"
+    ],
+    "DOC3_A1": [
+      "case_identity"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC3_A2": {
+      "local_relevance": 8.0,
+      "answer_utility": 16.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 38.201
+    },
+    "DOC3_A3": {
+      "local_relevance": 8.0,
+      "answer_utility": 16.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 5.914,
+      "redundancy_penalty": 0.0,
+      "total": 37.914
+    },
+    "DOC3_A4": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 5.691,
+      "redundancy_penalty": 0.0,
+      "total": 25.691
+    },
+    "DOC3_A1": {
+      "local_relevance": 4.0,
+      "answer_utility": 5.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 20.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A2.",
+  "raw_plan_text": "<think>考虑到当前文档中提到的是关于工伤保险资格认定及行政复议的案件，因此可能涉及到\"行政行为-行政复议\"这一类别。接下来应该检查包含案件背景与再审申请的段落，以确认是否符合该类别。</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'行政主体-司法行政管理（司法行政）' '侵权责任纠纷' '执行案由-行政非诉执行' '行政行为-行政强制' '行政行为-行政复议' '刑事赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A2\",\"candidate_anchor_ids\":[\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"]}</search>",
+  "tagged_trace": "<think>考虑到当前文档中提到的是关于工伤保险资格认定及行政复议的案件，因此可能涉及到\"行政行为-行政复议\"这一类别。接下来应该检查包含案件背景与再审申请的段落，以确认是否符合该类别。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政主体-司法行政管理（司法行政）' '侵权责任纠纷' '执行案由-行政非诉执行' '行政行为-行政强制' '行政行为-行政复议' '刑事赔偿'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政主体-司法行政管理（司法行政）': ['《判决文书a》', '《判决文书b》'], '侵权责任纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"], \"next_anchor_id\": \"DOC3_A2\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC3_A2\": 6.0, \"DOC3_A3\": 6.0, \"DOC3_A4\": 3.0, \"DOC3_A1\": 3.0}, \"anchor_role_hits\": {\"DOC3_A2\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC3_A4\": [\"decision_evidence\"], \"DOC3_A1\": [\"case_identity\"]}}</search>"
+}

@@ -1,0 +1,156 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "task_mode": "clustering",
+  "think": "The first chunk summary (DOC1_A1) mentions a case involving a dispute over a拆迁安置协议 (demolition and resettlement agreement), which seems to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect this coordinate next.",
+  "current_query": "阅读以上判决文书，请按照'海事海商纠纷' '执行案由-行政非诉执行' '行政主体-房屋拆迁管理（拆迁）' '刑事赔偿' '行政主体-劳动和社会保障行政管理（劳动，社会保障）'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC1_A1",
+  "candidate_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2"
+  ],
+  "ranked_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC1_A1",
+      "score": 30.3,
+      "reasons": [
+        "query_overlap=2",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 3.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity"
+      ],
+      "score_breakdown": {
+        "local_relevance": 8.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 3.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 30.3
+      },
+      "summary": "抗诉机关为河北省人民检察院，申诉人为王某庆，其因诉永清县韩村镇人民政府及第三人永清县韩村镇西庄窠村民委员会拆迁安置协议一案，不服河北省廊坊市中级人民法院的裁定，向河北省廊坊市人民检察院申请监督，后河北省人民检察院提出抗诉。"
+    },
+    {
+      "anchor_id": "DOC1_A2",
+      "score": 29.201,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.201,
+        "redundancy_penalty": 0.0,
+        "total": 29.201
+      },
+      "summary": "依据相关法律规定，法院裁定本案由本院提审。"
+    }
+  ],
+  "utility_hits": {
+    "DOC1_A1": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ],
+    "DOC1_A2": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC1_A1": 11.0,
+    "DOC1_A2": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC1_A1": 3.0,
+    "DOC1_A2": 6.0
+  },
+  "anchor_role_hits": {
+    "DOC1_A1": [
+      "case_identity"
+    ],
+    "DOC1_A2": [
+      "case_identity",
+      "decision_evidence"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC1_A1": {
+      "local_relevance": 8.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 3.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 30.3
+    },
+    "DOC1_A2": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.201,
+      "redundancy_penalty": 0.0,
+      "total": 29.201
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书1》. First coordinate candidate is DOC1_A1.",
+  "raw_plan_text": "<think>The first chunk summary (DOC1_A1) mentions a case involving a dispute over a拆迁安置协议 (demolition and resettlement agreement), which seems to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect this coordinate next.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-行政非诉执行' '行政主体-房屋拆迁管理（拆迁）' '刑事赔偿' '行政主体-劳动和社会保障行政管理（劳动，社会保障）'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC1_A1\",\"candidate_anchor_ids\":[\"DOC1_A1\", \"DOC1_A2\"]}</search>",
+  "tagged_trace": "<think>The first chunk summary (DOC1_A1) mentions a case involving a dispute over a拆迁安置协议 (demolition and resettlement agreement), which seems to fall under the category of '行政主体-房屋拆迁管理（拆迁）'. I will inspect this coordinate next.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-行政非诉执行' '行政主体-房屋拆迁管理（拆迁）' '刑事赔偿' '行政主体-劳动和社会保障行政管理（劳动，社会保障）'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\"], \"next_anchor_id\": \"DOC1_A1\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC1_A1\": 3.0, \"DOC1_A2\": 6.0}, \"anchor_role_hits\": {\"DOC1_A1\": [\"case_identity\"], \"DOC1_A2\": [\"case_identity\", \"decision_evidence\"]}}</search>"
+}

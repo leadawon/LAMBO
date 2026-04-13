@@ -1,0 +1,1668 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Context-Aware Learning to Rank with Self-Attention",
+  "selected_anchor_ids": [
+    "DOC1_A138",
+    "DOC1_A139",
+    "DOC1_A150"
+  ],
+  "final_current_query": "Find additional citations or references in the document to extend the citation chain.",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A138",
+        "candidate_anchor_ids": [
+          "DOC1_A138",
+          "DOC1_A139",
+          "DOC1_A147",
+          "DOC1_A150"
+        ],
+        "utility_hits": {
+          "DOC1_A20": [
+            "citation_format_cue"
+          ],
+          "DOC1_A29": [
+            "citation_format_cue"
+          ],
+          "DOC1_A72": [
+            "citation_format_cue"
+          ],
+          "DOC1_A73": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A20": 3.0,
+          "DOC1_A29": 3.0,
+          "DOC1_A72": 3.0,
+          "DOC1_A73": 3.0
+        },
+        "score_breakdown": {
+          "DOC1_A20": {
+            "local_relevance": 32.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 6.5,
+            "redundancy_penalty": 0.0,
+            "total": 48.5
+          },
+          "DOC1_A29": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 6.5,
+            "redundancy_penalty": 0.0,
+            "total": 44.5
+          },
+          "DOC1_A72": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 6.5,
+            "redundancy_penalty": 0.0,
+            "total": 44.5
+          },
+          "DOC1_A73": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 6.5,
+            "redundancy_penalty": 0.0,
+            "total": 44.5
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A138",
+      "plan_think": "The current query aims to find citation chains among the provided papers. To start, I need to look for references or citations within the document to identify potential links in the citation chain. The most promising section for finding such information would be the references section.",
+      "info": {
+        "anchor_id": "DOC1_A138",
+        "anchor_type": "paragraph_region",
+        "section_path": "Context-Aware Learning to Rank with Self-Attention > REFERENCES",
+        "summary": "Expanded same-section read window around DOC1_A138: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Mode...",
+        "text": "[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\n## CCS CONCEPTS\n\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\n\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$l(s, y)=-\\sum_{y_{i}>y_{j}} \\log _{2} \\sum_{\\pi}\\left(\\frac{1}{1+e^{-\\sigma\\left(s_{i}-s_{j}\\right)}}\\right)^{\\left(\\rho_{i j}+\\mu \\delta_{i j}\\right)\\left|G_{i}-G_{j}\\right|} H(\\pi \\mid s)$\n\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere\n\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\n\\begin{gathered}\nG_{i}=\\frac{2^{y_{i}}-1}{\\operatorname{maxDCG}} \\\\\n\\rho_{i j}=\\left|\\frac{1}{D_{i}}-\\frac{1}{D_{j}}\\right| \\\\\n\\delta_{i j}=\\left|\\frac{1}{D_{|i-j|}}-\\frac{1}{D_{|i-j|}+1}\\right| \\\\\nD_{i}=\\log _{2}(1+i)\n\\end{gathered}\n$$\n\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nand $H(\\pi \\mid s)$ is a hard assignment distribution of permutations, i.e.\n\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nH(\\hat{\\pi} \\mid s)=1 \\text { and } H(\\pi \\mid s)=0 \\text { for all } \\pi \\neq \\hat{\\pi}\n$$\n\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere $\\hat{\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\boldsymbol{s}$. Fixed parameter $\\mu$ is set to 10.0 .\n\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\n\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nTo obtain a LambdaRank formula, replace the exponent with\n\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\n\\Delta \\operatorname{NDCG}(i, j)=\\left|G_{i}-G_{j}\\right| \\rho_{i j}\n$$\n\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\n\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nl(s, y)=-\\sum_{j} \\operatorname{softmax}(\\boldsymbol{y})_{j} \\times \\log \\left(\\operatorname{softmax}(s)_{j}\\right)\n$$\n\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nIn binary version, softmax of ground truth $\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\n\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nListMLE [35] is given by:\n\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nl(\\boldsymbol{s}, \\boldsymbol{y})=-\\log P(\\boldsymbol{y} \\mid \\boldsymbol{s})\n$$\n\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere\n\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nP(\\boldsymbol{y} \\mid \\boldsymbol{s})=\\prod_{i}^{n} \\frac{\\exp \\left(f\\left(x_{y(i)}\\right)\\right)}{\\sum_{k=i}^{n} \\exp \\left(f\\left(x_{y(k)}\\right)\\right)}\n$$\n\n[DOC1_A136 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[10] Tianqi Chen and Carlos Guestrin. 2016. XGBoost: A Scalable Tree Boosting System. In Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16). ACM, New York, NY, USA, 785-794. https://doi.org/10.1145/2939672.2939785\n\n[DOC1_A137 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[11] Jianpeng Cheng, Li Dong, and Mirella Lapata. 2016. Long Short-Term MemoryNetworks for Machine Reading. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Austin, Texas, 551-561. https://doi.org/10.18653/v1/D16-1053\n\n[DOC1_A138 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\n\n[DOC1_A139 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\n\n[DOC1_A140 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[14] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2015), 770-778.",
+        "source_window_anchor_ids": [
+          "DOC1_A9",
+          "DOC1_A83",
+          "DOC1_A84",
+          "DOC1_A85",
+          "DOC1_A86",
+          "DOC1_A87",
+          "DOC1_A88",
+          "DOC1_A89",
+          "DOC1_A90",
+          "DOC1_A91",
+          "DOC1_A92",
+          "DOC1_A93",
+          "DOC1_A94",
+          "DOC1_A95",
+          "DOC1_A96",
+          "DOC1_A97",
+          "DOC1_A98",
+          "DOC1_A99",
+          "DOC1_A136",
+          "DOC1_A137",
+          "DOC1_A138",
+          "DOC1_A139",
+          "DOC1_A140"
+        ],
+        "primary_anchor_id": "DOC1_A138",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Context-Aware",
+          "Learning",
+          "to",
+          "Rank",
+          "with",
+          "Self-Attention"
+        ],
+        "anchor_targets": [
+          "Context-Aware",
+          "Learning",
+          "to",
+          "Rank",
+          "with",
+          "Self-Attention"
+        ],
+        "anchor_value_hints": [
+          "12",
+          "2017",
+          "40",
+          "17",
+          "65",
+          "-74",
+          "10.1145",
+          "3077136.3080832"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 18
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A99",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A98",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A97",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A96",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A95",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A94",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk contains a reference to another paper, indicating that \"Context-Aware Learning to Rank with Self-Attention\" cites \"Neural Ranking Models with Weak Supervision\". This provides a piece of the citation chain. However, more evidence is needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "Reference",
+            "value": "Neural Ranking Models with Weak Supervision",
+            "normalized_value": "Neural Ranking Models with Weak Supervision",
+            "evidence_text": "[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A138",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A99",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A98",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A97",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A96",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A95",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A94",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "Find additional citations or references in the document to extend the citation chain.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [
+            "Reference"
+          ],
+          "known_value_signatures": [
+            "Neural Ranking Models with Weak Supervision"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A138"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94",
+            "DOC1_A93",
+            "DOC1_A92",
+            "DOC1_A91",
+            "DOC1_A90",
+            "DOC1_A9",
+            "DOC1_A89"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A99",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A98",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A97",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A96",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A95",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A94",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A93",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A92",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A91",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A90",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A89",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Find additional citations or references in the document to extend the citation chain.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A139",
+        "candidate_anchor_ids": [
+          "DOC1_A139",
+          "DOC1_A141",
+          "DOC1_A143",
+          "DOC1_A148"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "Reference"
+          ],
+          "known_value_signatures": [
+            "Neural Ranking Models with Weak Supervision"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A138"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94",
+            "DOC1_A93",
+            "DOC1_A92",
+            "DOC1_A91",
+            "DOC1_A90",
+            "DOC1_A9",
+            "DOC1_A89"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A99",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A98",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A97",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A96",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A95",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A94",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A93",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A92",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A91",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A90",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A89",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A138"
+        ],
+        "utility_hits": {
+          "DOC1_A139": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC1_A150": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC1_A161": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC1_A129": [
+            "reference_section",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A139": 10.0,
+          "DOC1_A150": 10.0,
+          "DOC1_A161": 10.0,
+          "DOC1_A129": 10.0
+        },
+        "relation_score": {
+          "DOC1_A139": 5.0,
+          "DOC1_A150": 5.0,
+          "DOC1_A161": 5.0,
+          "DOC1_A129": 5.0
+        },
+        "anchor_role_hits": {
+          "DOC1_A139": [
+            "citation_direction"
+          ],
+          "DOC1_A150": [
+            "citation_direction"
+          ],
+          "DOC1_A161": [
+            "citation_direction"
+          ],
+          "DOC1_A129": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A139": {
+            "local_relevance": 28.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 55.0
+          },
+          "DOC1_A150": {
+            "local_relevance": 28.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 55.0
+          },
+          "DOC1_A161": {
+            "local_relevance": 28.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 55.0
+          },
+          "DOC1_A129": {
+            "local_relevance": 26.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 53.0
+          }
+        }
+      },
+      "anchor_id": "DOC1_A139",
+      "plan_think": "To continue building the citation chain, I need to inspect additional references in the document to find more citations. The next logical step is to examine another reference entry in the document to see if it provides further connections in the citation chain.",
+      "info": {
+        "anchor_id": "DOC1_A139",
+        "anchor_type": "paragraph_region",
+        "section_path": "Context-Aware Learning to Rank with Self-Attention > REFERENCES",
+        "summary": "Expanded same-section read window around DOC1_A139: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Effic...",
+        "text": "[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\n## CCS CONCEPTS\n\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\n\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$l(s, y)=-\\sum_{y_{i}>y_{j}} \\log _{2} \\sum_{\\pi}\\left(\\frac{1}{1+e^{-\\sigma\\left(s_{i}-s_{j}\\right)}}\\right)^{\\left(\\rho_{i j}+\\mu \\delta_{i j}\\right)\\left|G_{i}-G_{j}\\right|} H(\\pi \\mid s)$\n\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere\n\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\n\\begin{gathered}\nG_{i}=\\frac{2^{y_{i}}-1}{\\operatorname{maxDCG}} \\\\\n\\rho_{i j}=\\left|\\frac{1}{D_{i}}-\\frac{1}{D_{j}}\\right| \\\\\n\\delta_{i j}=\\left|\\frac{1}{D_{|i-j|}}-\\frac{1}{D_{|i-j|}+1}\\right| \\\\\nD_{i}=\\log _{2}(1+i)\n\\end{gathered}\n$$\n\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nand $H(\\pi \\mid s)$ is a hard assignment distribution of permutations, i.e.\n\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nH(\\hat{\\pi} \\mid s)=1 \\text { and } H(\\pi \\mid s)=0 \\text { for all } \\pi \\neq \\hat{\\pi}\n$$\n\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere $\\hat{\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\boldsymbol{s}$. Fixed parameter $\\mu$ is set to 10.0 .\n\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\n\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nTo obtain a LambdaRank formula, replace the exponent with\n\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\n\\Delta \\operatorname{NDCG}(i, j)=\\left|G_{i}-G_{j}\\right| \\rho_{i j}\n$$\n\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\n\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nl(s, y)=-\\sum_{j} \\operatorname{softmax}(\\boldsymbol{y})_{j} \\times \\log \\left(\\operatorname{softmax}(s)_{j}\\right)\n$$\n\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nIn binary version, softmax of ground truth $\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\n\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nListMLE [35] is given by:\n\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nl(\\boldsymbol{s}, \\boldsymbol{y})=-\\log P(\\boldsymbol{y} \\mid \\boldsymbol{s})\n$$\n\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere\n\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nP(\\boldsymbol{y} \\mid \\boldsymbol{s})=\\prod_{i}^{n} \\frac{\\exp \\left(f\\left(x_{y(i)}\\right)\\right)}{\\sum_{k=i}^{n} \\exp \\left(f\\left(x_{y(k)}\\right)\\right)}\n$$\n\n[DOC1_A137 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[11] Jianpeng Cheng, Li Dong, and Mirella Lapata. 2016. Long Short-Term MemoryNetworks for Machine Reading. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Austin, Texas, 551-561. https://doi.org/10.18653/v1/D16-1053\n\n[DOC1_A138 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\n\n[DOC1_A139 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\n\n[DOC1_A140 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[14] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2015), 770-778.\n\n[DOC1_A141 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[15] Geoffrey Hinton, Oriol Vinyals, and Jeffrey Dean. 2015. Distilling the Knowledge in a Neural Network. In NIPS Deep Learning and Representation Learning Workshop. http://arxiv.org/abs/1503.02531",
+        "source_window_anchor_ids": [
+          "DOC1_A9",
+          "DOC1_A83",
+          "DOC1_A84",
+          "DOC1_A85",
+          "DOC1_A86",
+          "DOC1_A87",
+          "DOC1_A88",
+          "DOC1_A89",
+          "DOC1_A90",
+          "DOC1_A91",
+          "DOC1_A92",
+          "DOC1_A93",
+          "DOC1_A94",
+          "DOC1_A95",
+          "DOC1_A96",
+          "DOC1_A97",
+          "DOC1_A98",
+          "DOC1_A99",
+          "DOC1_A137",
+          "DOC1_A138",
+          "DOC1_A139",
+          "DOC1_A140",
+          "DOC1_A141"
+        ],
+        "primary_anchor_id": "DOC1_A139",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Context-Aware",
+          "Learning",
+          "to",
+          "Rank",
+          "with",
+          "Self-Attention"
+        ],
+        "anchor_targets": [
+          "Context-Aware",
+          "Learning",
+          "to",
+          "Rank",
+          "with",
+          "Self-Attention"
+        ],
+        "anchor_value_hints": [
+          "13",
+          "2015",
+          "28",
+          "1",
+          "15",
+          "1135",
+          "-1143"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 18
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A99",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A98",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A97",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A96",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A95",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A94",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk contains another reference from \"Context-Aware Learning to Rank with Self-Attention\" to \"Learning Both Weights and Connections for Efficient Neural Networks\". This provides another piece of the citation chain. More evidence is still needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "Reference",
+            "value": "Learning Both Weights and Connections for Efficient Neural Networks",
+            "normalized_value": "Learning Both Weights and Connections for Efficient Neural Networks",
+            "evidence_text": "[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A139",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A99",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A98",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A97",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A96",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A95",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A94",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "Find additional citations or references in the document to extend the citation chain.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [
+            "Reference"
+          ],
+          "known_value_signatures": [
+            "Neural Ranking Models with Weak Supervision",
+            "Learning Both Weights and Connections for Efficient Neural Networks"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A138",
+            "DOC1_A139"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832",
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94",
+            "DOC1_A93",
+            "DOC1_A92",
+            "DOC1_A91",
+            "DOC1_A90",
+            "DOC1_A9",
+            "DOC1_A89"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A99",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A98",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A97",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A96",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A95",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A94",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A93",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A92",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A91",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A90",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A89",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Find additional citations or references in the document to extend the citation chain.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC1_A150",
+        "candidate_anchor_ids": [
+          "DOC1_A150",
+          "DOC1_A161",
+          "DOC1_A129",
+          "DOC1_A133"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "Reference"
+          ],
+          "known_value_signatures": [
+            "Neural Ranking Models with Weak Supervision",
+            "Learning Both Weights and Connections for Efficient Neural Networks"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A138",
+            "DOC1_A139"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832",
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94",
+            "DOC1_A93",
+            "DOC1_A92",
+            "DOC1_A91",
+            "DOC1_A90",
+            "DOC1_A9",
+            "DOC1_A89"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A99",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A98",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A97",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A96",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A95",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A94",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A93",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A92",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A91",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A90",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A89",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A138",
+          "DOC1_A139"
+        ],
+        "utility_hits": {
+          "DOC1_A150": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC1_A161": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC1_A129": [
+            "reference_section",
+            "citation_format_cue"
+          ],
+          "DOC1_A133": [
+            "reference_section",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A150": 10.0,
+          "DOC1_A161": 10.0,
+          "DOC1_A129": 10.0,
+          "DOC1_A133": 10.0
+        },
+        "relation_score": {
+          "DOC1_A150": 5.0,
+          "DOC1_A161": 5.0,
+          "DOC1_A129": 5.0,
+          "DOC1_A133": 5.0
+        },
+        "anchor_role_hits": {
+          "DOC1_A150": [
+            "citation_direction"
+          ],
+          "DOC1_A161": [
+            "citation_direction"
+          ],
+          "DOC1_A129": [
+            "citation_direction"
+          ],
+          "DOC1_A133": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A150": {
+            "local_relevance": 28.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 55.0
+          },
+          "DOC1_A161": {
+            "local_relevance": 28.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 55.0
+          },
+          "DOC1_A129": {
+            "local_relevance": 26.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 53.0
+          },
+          "DOC1_A133": {
+            "local_relevance": 26.0,
+            "answer_utility": 10.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 10.0,
+            "redundancy_penalty": 0.0,
+            "total": 53.0
+          }
+        }
+      },
+      "anchor_id": "DOC1_A150",
+      "plan_think": "To continue building the citation chain, I will inspect another reference entry in the document to find more citations. The next logical step is to examine another reference entry in the document to see if it provides further connections in the citation chain. The next candidate is DOC1_A141, which contains another reference that could potentially extend the citation chain.",
+      "info": {
+        "anchor_id": "DOC1_A150",
+        "anchor_type": "paragraph_region",
+        "section_path": "Context-Aware Learning to Rank with Self-Attention > REFERENCES",
+        "summary": "Expanded same-section read window around DOC1_A150: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings...",
+        "text": "[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\n## CCS CONCEPTS\n\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\n\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$l(s, y)=-\\sum_{y_{i}>y_{j}} \\log _{2} \\sum_{\\pi}\\left(\\frac{1}{1+e^{-\\sigma\\left(s_{i}-s_{j}\\right)}}\\right)^{\\left(\\rho_{i j}+\\mu \\delta_{i j}\\right)\\left|G_{i}-G_{j}\\right|} H(\\pi \\mid s)$\n\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere\n\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\n\\begin{gathered}\nG_{i}=\\frac{2^{y_{i}}-1}{\\operatorname{maxDCG}} \\\\\n\\rho_{i j}=\\left|\\frac{1}{D_{i}}-\\frac{1}{D_{j}}\\right| \\\\\n\\delta_{i j}=\\left|\\frac{1}{D_{|i-j|}}-\\frac{1}{D_{|i-j|}+1}\\right| \\\\\nD_{i}=\\log _{2}(1+i)\n\\end{gathered}\n$$\n\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nand $H(\\pi \\mid s)$ is a hard assignment distribution of permutations, i.e.\n\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nH(\\hat{\\pi} \\mid s)=1 \\text { and } H(\\pi \\mid s)=0 \\text { for all } \\pi \\neq \\hat{\\pi}\n$$\n\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere $\\hat{\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\boldsymbol{s}$. Fixed parameter $\\mu$ is set to 10.0 .\n\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\n\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nTo obtain a LambdaRank formula, replace the exponent with\n\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\n\\Delta \\operatorname{NDCG}(i, j)=\\left|G_{i}-G_{j}\\right| \\rho_{i j}\n$$\n\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\n\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nl(s, y)=-\\sum_{j} \\operatorname{softmax}(\\boldsymbol{y})_{j} \\times \\log \\left(\\operatorname{softmax}(s)_{j}\\right)\n$$\n\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nIn binary version, softmax of ground truth $\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\n\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nListMLE [35] is given by:\n\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nl(\\boldsymbol{s}, \\boldsymbol{y})=-\\log P(\\boldsymbol{y} \\mid \\boldsymbol{s})\n$$\n\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\nwhere\n\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\n$$\nP(\\boldsymbol{y} \\mid \\boldsymbol{s})=\\prod_{i}^{n} \\frac{\\exp \\left(f\\left(x_{y(i)}\\right)\\right)}{\\sum_{k=i}^{n} \\exp \\left(f\\left(x_{y(k)}\\right)\\right)}\n$$\n\n[DOC1_A148 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[22] Diederik P. Kingma and Jimmy Ba. 2014. Adam: A Method for Stochastic Optimization. http://arxiv.org/abs/1412.6980 cite arxiv:1412.6980Comment: Published as a conference paper at the 3rd International Conference for Learning Representations, San Diego, 2015.\n\n[DOC1_A149 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[23] Tie-Yan Liu. 2009. Learning to Rank for Information Retrieval. Found. Trends Inf. Retr. 3, 3 (March 2009), 225-331. https://doi.org/10.1561/1500000016\n\n[DOC1_A150 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning (ICML '04). ACM, New York, NY, USA, 78-. https://doi.org/10.1145/ 1015330.1015435\n\n[DOC1_A151 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[25] Zhenxing Niu, Mo Zhou, Le Wang, and Xinbo Gao. 2016. Ordinal Regression with Multiple Output CNN for Age Estimation. 4920-4928. https://doi.org/10. 1109/CVPR.2016.532\n\n[DOC1_A152 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\n[26] Adam Paszke, Sam Gross, Soumith Chintala, Gregory Chanan, Edward Yang, Zachary DeVito, Zeming Lin, Alban Desmaison, Luca Antiga, and Adam Lerer. 2017. Automatic Differentiation in PyTorch. In NIPS Autodiff Workshop.",
+        "source_window_anchor_ids": [
+          "DOC1_A9",
+          "DOC1_A83",
+          "DOC1_A84",
+          "DOC1_A85",
+          "DOC1_A86",
+          "DOC1_A87",
+          "DOC1_A88",
+          "DOC1_A89",
+          "DOC1_A90",
+          "DOC1_A91",
+          "DOC1_A92",
+          "DOC1_A93",
+          "DOC1_A94",
+          "DOC1_A95",
+          "DOC1_A96",
+          "DOC1_A97",
+          "DOC1_A98",
+          "DOC1_A99",
+          "DOC1_A148",
+          "DOC1_A149",
+          "DOC1_A150",
+          "DOC1_A151",
+          "DOC1_A152"
+        ],
+        "primary_anchor_id": "DOC1_A150",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Context-Aware",
+          "Learning",
+          "to",
+          "Rank",
+          "with",
+          "Self-Attention"
+        ],
+        "anchor_targets": [
+          "Context-Aware",
+          "Learning",
+          "to",
+          "Rank",
+          "with",
+          "Self-Attention"
+        ],
+        "anchor_value_hints": [
+          "24",
+          "2004",
+          "1",
+          "2",
+          "04",
+          "78",
+          "10.1145",
+          "1015330.1015435"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 18
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A99",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A98",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A97",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A96",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A95",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A94",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The selected chunk contains another reference from \"Context-Aware Learning to Rank with Self-Attention\" to \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\". This provides another piece of the citation chain. More evidence is still needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "Reference",
+            "value": "Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance",
+            "normalized_value": "Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance",
+            "evidence_text": "[24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance.",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A150",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A99",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A98",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A97",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A96",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A95",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A94",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "Find additional citations or references in the document to extend the citation chain.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [
+            "Reference"
+          ],
+          "known_value_signatures": [
+            "Neural Ranking Models with Weak Supervision",
+            "Learning Both Weights and Connections for Efficient Neural Networks",
+            "Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A138",
+            "DOC1_A139",
+            "DOC1_A150"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832",
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.",
+            "Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning... [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning (ICML '04). ACM, New York, NY, USA, 78-. https://doi.org/10.1145/ 1015330.1015435"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A99",
+            "DOC1_A98",
+            "DOC1_A97",
+            "DOC1_A96",
+            "DOC1_A95",
+            "DOC1_A94",
+            "DOC1_A93",
+            "DOC1_A92",
+            "DOC1_A91",
+            "DOC1_A90",
+            "DOC1_A9",
+            "DOC1_A89"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A99",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A98",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A97",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A96",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A95",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A94",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A93",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A92",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A91",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A90",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A138",
+              "target_anchor_id": "DOC1_A89",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "Reference",
+      "value": "Neural Ranking Models with Weak Supervision",
+      "normalized_value": "Neural Ranking Models with Weak Supervision",
+      "evidence_text": "[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A138",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A99",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A98",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A97",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A96",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A95",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A94",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "Reference",
+      "value": "Learning Both Weights and Connections for Efficient Neural Networks",
+      "normalized_value": "Learning Both Weights and Connections for Efficient Neural Networks",
+      "evidence_text": "[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A139",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A99",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A98",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A97",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A96",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A95",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A94",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "Reference",
+      "value": "Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance",
+      "normalized_value": "Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance",
+      "evidence_text": "[24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance.",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A150",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A99",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A98",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A97",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A96",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A95",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A94",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The current query aims to find citation chains among the provided papers. To start, I need to look for references or citations within the document to identify potential links in the citation chain. The most promising section for finding such information would be the references section.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A138\", \"candidate_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\", \"DOC1_A147\", \"DOC1_A150\"], \"utility_hits\": {\"DOC1_A20\": [\"citation_format_cue\"], \"DOC1_A29\": [\"citation_format_cue\"], \"DOC1_A72\": [\"citation_format_cue\"], \"DOC1_A73\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A20\": 3.0, \"DOC1_A29\": 3.0, \"DOC1_A72\": 3.0, \"DOC1_A73\": 3.0}, \"score_breakdown\": {\"DOC1_A20\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 48.5}, \"DOC1_A29\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 44.5}, \"DOC1_A72\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 44.5}, \"DOC1_A73\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 44.5}}, \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A138\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Context-Aware Learning to Rank with Self-Attention > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A138: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Mode...\", \"text\": \"[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\\n## CCS CONCEPTS\\n\\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\\n\\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$l(s, y)=-\\\\sum_{y_{i}>y_{j}} \\\\log _{2} \\\\sum_{\\\\pi}\\\\left(\\\\frac{1}{1+e^{-\\\\sigma\\\\left(s_{i}-s_{j}\\\\right)}}\\\\right)^{\\\\left(\\\\rho_{i j}+\\\\mu \\\\delta_{i j}\\\\right)\\\\left|G_{i}-G_{j}\\\\right|} H(\\\\pi \\\\mid s)$\\n\\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\begin{gathered}\\nG_{i}=\\\\frac{2^{y_{i}}-1}{\\\\operatorname{maxDCG}} \\\\\\\\\\n\\\\rho_{i j}=\\\\left|\\\\frac{1}{D_{i}}-\\\\frac{1}{D_{j}}\\\\right| \\\\\\\\\\n\\\\delta_{i j}=\\\\left|\\\\frac{1}{D_{|i-j|}}-\\\\frac{1}{D_{|i-j|}+1}\\\\right| \\\\\\\\\\nD_{i}=\\\\log _{2}(1+i)\\n\\\\end{gathered}\\n$$\\n\\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nand $H(\\\\pi \\\\mid s)$ is a hard assignment distribution of permutations, i.e.\\n\\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nH(\\\\hat{\\\\pi} \\\\mid s)=1 \\\\text { and } H(\\\\pi \\\\mid s)=0 \\\\text { for all } \\\\pi \\\\neq \\\\hat{\\\\pi}\\n$$\\n\\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere $\\\\hat{\\\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\\\boldsymbol{s}$. Fixed parameter $\\\\mu$ is set to 10.0 .\\n\\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\\n\\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nTo obtain a LambdaRank formula, replace the exponent with\\n\\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\Delta \\\\operatorname{NDCG}(i, j)=\\\\left|G_{i}-G_{j}\\\\right| \\\\rho_{i j}\\n$$\\n\\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\\n\\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(s, y)=-\\\\sum_{j} \\\\operatorname{softmax}(\\\\boldsymbol{y})_{j} \\\\times \\\\log \\\\left(\\\\operatorname{softmax}(s)_{j}\\\\right)\\n$$\\n\\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nIn binary version, softmax of ground truth $\\\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\\n\\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nListMLE [35] is given by:\\n\\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(\\\\boldsymbol{s}, \\\\boldsymbol{y})=-\\\\log P(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})\\n$$\\n\\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nP(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})=\\\\prod_{i}^{n} \\\\frac{\\\\exp \\\\left(f\\\\left(x_{y(i)}\\\\right)\\\\right)}{\\\\sum_{k=i}^{n} \\\\exp \\\\left(f\\\\left(x_{y(k)}\\\\right)\\\\right)}\\n$$\\n\\n[DOC1_A136 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[10] Tianqi Chen and Carlos Guestrin. 2016. XGBoost: A Scalable Tree Boosting System. In Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16). ACM, New York, NY, USA, 785-794. https://doi.org/10.1145/2939672.2939785\\n\\n[DOC1_A137 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[11] Jianpeng Cheng, Li Dong, and Mirella Lapata. 2016. Long Short-Term MemoryNetworks for Machine Reading. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Austin, Texas, 551-561. https://doi.org/10.18653/v1/D16-1053\\n\\n[DOC1_A138 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\\n\\n[DOC1_A139 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\\n\\n[DOC1_A140 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[14] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2015), 770-778.\", \"source_window_anchor_ids\": [\"DOC1_A9\", \"DOC1_A83\", \"DOC1_A84\", \"DOC1_A85\", \"DOC1_A86\", \"DOC1_A87\", \"DOC1_A88\", \"DOC1_A89\", \"DOC1_A90\", \"DOC1_A91\", \"DOC1_A92\", \"DOC1_A93\", \"DOC1_A94\", \"DOC1_A95\", \"DOC1_A96\", \"DOC1_A97\", \"DOC1_A98\", \"DOC1_A99\", \"DOC1_A136\", \"DOC1_A137\", \"DOC1_A138\", \"DOC1_A139\", \"DOC1_A140\"], \"primary_anchor_id\": \"DOC1_A138\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_targets\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_value_hints\": [\"12\", \"2017\", \"40\", \"17\", \"65\", \"-74\", \"10.1145\", \"3077136.3080832\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 18}, \"top_related_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains a reference to another paper, indicating that \"Context-Aware Learning to Rank with Self-Attention\" cites \"Neural Ranking Models with Weak Supervision\". This provides a piece of the citation chain. However, more evidence is needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Neural Ranking Models with Weak Supervision\", \"normalized_value\": \"Neural Ranking Models with Weak Supervision\", \"evidence_text\": \"[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A138\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>\n<think>To continue building the citation chain, I need to inspect additional references in the document to find more citations. The next logical step is to examine another reference entry in the document to see if it provides further connections in the citation chain.</think>\n<search>{\"current_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A139\", \"candidate_anchor_ids\": [\"DOC1_A139\", \"DOC1_A141\", \"DOC1_A143\", \"DOC1_A148\"], \"coverage_hints\": {\"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\"], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}, \"avoid_anchor_ids\": [\"DOC1_A138\"], \"utility_hits\": {\"DOC1_A139\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A150\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A161\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A129\": [\"reference_section\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A139\": 10.0, \"DOC1_A150\": 10.0, \"DOC1_A161\": 10.0, \"DOC1_A129\": 10.0}, \"relation_score\": {\"DOC1_A139\": 5.0, \"DOC1_A150\": 5.0, \"DOC1_A161\": 5.0, \"DOC1_A129\": 5.0}, \"anchor_role_hits\": {\"DOC1_A139\": [\"citation_direction\"], \"DOC1_A150\": [\"citation_direction\"], \"DOC1_A161\": [\"citation_direction\"], \"DOC1_A129\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A139\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A150\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A161\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A129\": {\"local_relevance\": 26.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 53.0}}}</search>\n<info>{\"anchor_id\": \"DOC1_A139\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Context-Aware Learning to Rank with Self-Attention > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A139: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Effic...\", \"text\": \"[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\\n## CCS CONCEPTS\\n\\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\\n\\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$l(s, y)=-\\\\sum_{y_{i}>y_{j}} \\\\log _{2} \\\\sum_{\\\\pi}\\\\left(\\\\frac{1}{1+e^{-\\\\sigma\\\\left(s_{i}-s_{j}\\\\right)}}\\\\right)^{\\\\left(\\\\rho_{i j}+\\\\mu \\\\delta_{i j}\\\\right)\\\\left|G_{i}-G_{j}\\\\right|} H(\\\\pi \\\\mid s)$\\n\\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\begin{gathered}\\nG_{i}=\\\\frac{2^{y_{i}}-1}{\\\\operatorname{maxDCG}} \\\\\\\\\\n\\\\rho_{i j}=\\\\left|\\\\frac{1}{D_{i}}-\\\\frac{1}{D_{j}}\\\\right| \\\\\\\\\\n\\\\delta_{i j}=\\\\left|\\\\frac{1}{D_{|i-j|}}-\\\\frac{1}{D_{|i-j|}+1}\\\\right| \\\\\\\\\\nD_{i}=\\\\log _{2}(1+i)\\n\\\\end{gathered}\\n$$\\n\\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nand $H(\\\\pi \\\\mid s)$ is a hard assignment distribution of permutations, i.e.\\n\\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nH(\\\\hat{\\\\pi} \\\\mid s)=1 \\\\text { and } H(\\\\pi \\\\mid s)=0 \\\\text { for all } \\\\pi \\\\neq \\\\hat{\\\\pi}\\n$$\\n\\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere $\\\\hat{\\\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\\\boldsymbol{s}$. Fixed parameter $\\\\mu$ is set to 10.0 .\\n\\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\\n\\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nTo obtain a LambdaRank formula, replace the exponent with\\n\\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\Delta \\\\operatorname{NDCG}(i, j)=\\\\left|G_{i}-G_{j}\\\\right| \\\\rho_{i j}\\n$$\\n\\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\\n\\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(s, y)=-\\\\sum_{j} \\\\operatorname{softmax}(\\\\boldsymbol{y})_{j} \\\\times \\\\log \\\\left(\\\\operatorname{softmax}(s)_{j}\\\\right)\\n$$\\n\\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nIn binary version, softmax of ground truth $\\\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\\n\\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nListMLE [35] is given by:\\n\\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(\\\\boldsymbol{s}, \\\\boldsymbol{y})=-\\\\log P(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})\\n$$\\n\\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nP(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})=\\\\prod_{i}^{n} \\\\frac{\\\\exp \\\\left(f\\\\left(x_{y(i)}\\\\right)\\\\right)}{\\\\sum_{k=i}^{n} \\\\exp \\\\left(f\\\\left(x_{y(k)}\\\\right)\\\\right)}\\n$$\\n\\n[DOC1_A137 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[11] Jianpeng Cheng, Li Dong, and Mirella Lapata. 2016. Long Short-Term MemoryNetworks for Machine Reading. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Austin, Texas, 551-561. https://doi.org/10.18653/v1/D16-1053\\n\\n[DOC1_A138 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\\n\\n[DOC1_A139 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\\n\\n[DOC1_A140 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[14] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2015), 770-778.\\n\\n[DOC1_A141 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[15] Geoffrey Hinton, Oriol Vinyals, and Jeffrey Dean. 2015. Distilling the Knowledge in a Neural Network. In NIPS Deep Learning and Representation Learning Workshop. http://arxiv.org/abs/1503.02531\", \"source_window_anchor_ids\": [\"DOC1_A9\", \"DOC1_A83\", \"DOC1_A84\", \"DOC1_A85\", \"DOC1_A86\", \"DOC1_A87\", \"DOC1_A88\", \"DOC1_A89\", \"DOC1_A90\", \"DOC1_A91\", \"DOC1_A92\", \"DOC1_A93\", \"DOC1_A94\", \"DOC1_A95\", \"DOC1_A96\", \"DOC1_A97\", \"DOC1_A98\", \"DOC1_A99\", \"DOC1_A137\", \"DOC1_A138\", \"DOC1_A139\", \"DOC1_A140\", \"DOC1_A141\"], \"primary_anchor_id\": \"DOC1_A139\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_targets\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_value_hints\": [\"13\", \"2015\", \"28\", \"1\", \"15\", \"1135\", \"-1143\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 18}, \"top_related_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains another reference from \"Context-Aware Learning to Rank with Self-Attention\" to \"Learning Both Weights and Connections for Efficient Neural Networks\". This provides another piece of the citation chain. More evidence is still needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Learning Both Weights and Connections for Efficient Neural Networks\", \"normalized_value\": \"Learning Both Weights and Connections for Efficient Neural Networks\", \"evidence_text\": \"[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A139\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\", \"Learning Both Weights and Connections for Efficient Neural Networks\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>\n<think>To continue building the citation chain, I will inspect another reference entry in the document to find more citations. The next logical step is to examine another reference entry in the document to see if it provides further connections in the citation chain. The next candidate is DOC1_A141, which contains another reference that could potentially extend the citation chain.</think>\n<search>{\"current_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A150\", \"candidate_anchor_ids\": [\"DOC1_A150\", \"DOC1_A161\", \"DOC1_A129\", \"DOC1_A133\"], \"coverage_hints\": {\"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\", \"Learning Both Weights and Connections for Efficient Neural Networks\"], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}, \"avoid_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\"], \"utility_hits\": {\"DOC1_A150\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A161\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A129\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A133\": [\"reference_section\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A150\": 10.0, \"DOC1_A161\": 10.0, \"DOC1_A129\": 10.0, \"DOC1_A133\": 10.0}, \"relation_score\": {\"DOC1_A150\": 5.0, \"DOC1_A161\": 5.0, \"DOC1_A129\": 5.0, \"DOC1_A133\": 5.0}, \"anchor_role_hits\": {\"DOC1_A150\": [\"citation_direction\"], \"DOC1_A161\": [\"citation_direction\"], \"DOC1_A129\": [\"citation_direction\"], \"DOC1_A133\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A150\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A161\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A129\": {\"local_relevance\": 26.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 53.0}, \"DOC1_A133\": {\"local_relevance\": 26.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 53.0}}}</search>\n<info>{\"anchor_id\": \"DOC1_A150\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Context-Aware Learning to Rank with Self-Attention > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A150: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings...\", \"text\": \"[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\\n## CCS CONCEPTS\\n\\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\\n\\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$l(s, y)=-\\\\sum_{y_{i}>y_{j}} \\\\log _{2} \\\\sum_{\\\\pi}\\\\left(\\\\frac{1}{1+e^{-\\\\sigma\\\\left(s_{i}-s_{j}\\\\right)}}\\\\right)^{\\\\left(\\\\rho_{i j}+\\\\mu \\\\delta_{i j}\\\\right)\\\\left|G_{i}-G_{j}\\\\right|} H(\\\\pi \\\\mid s)$\\n\\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\begin{gathered}\\nG_{i}=\\\\frac{2^{y_{i}}-1}{\\\\operatorname{maxDCG}} \\\\\\\\\\n\\\\rho_{i j}=\\\\left|\\\\frac{1}{D_{i}}-\\\\frac{1}{D_{j}}\\\\right| \\\\\\\\\\n\\\\delta_{i j}=\\\\left|\\\\frac{1}{D_{|i-j|}}-\\\\frac{1}{D_{|i-j|}+1}\\\\right| \\\\\\\\\\nD_{i}=\\\\log _{2}(1+i)\\n\\\\end{gathered}\\n$$\\n\\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nand $H(\\\\pi \\\\mid s)$ is a hard assignment distribution of permutations, i.e.\\n\\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nH(\\\\hat{\\\\pi} \\\\mid s)=1 \\\\text { and } H(\\\\pi \\\\mid s)=0 \\\\text { for all } \\\\pi \\\\neq \\\\hat{\\\\pi}\\n$$\\n\\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere $\\\\hat{\\\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\\\boldsymbol{s}$. Fixed parameter $\\\\mu$ is set to 10.0 .\\n\\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\\n\\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nTo obtain a LambdaRank formula, replace the exponent with\\n\\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\Delta \\\\operatorname{NDCG}(i, j)=\\\\left|G_{i}-G_{j}\\\\right| \\\\rho_{i j}\\n$$\\n\\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\\n\\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(s, y)=-\\\\sum_{j} \\\\operatorname{softmax}(\\\\boldsymbol{y})_{j} \\\\times \\\\log \\\\left(\\\\operatorname{softmax}(s)_{j}\\\\right)\\n$$\\n\\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nIn binary version, softmax of ground truth $\\\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\\n\\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nListMLE [35] is given by:\\n\\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(\\\\boldsymbol{s}, \\\\boldsymbol{y})=-\\\\log P(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})\\n$$\\n\\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nP(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})=\\\\prod_{i}^{n} \\\\frac{\\\\exp \\\\left(f\\\\left(x_{y(i)}\\\\right)\\\\right)}{\\\\sum_{k=i}^{n} \\\\exp \\\\left(f\\\\left(x_{y(k)}\\\\right)\\\\right)}\\n$$\\n\\n[DOC1_A148 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[22] Diederik P. Kingma and Jimmy Ba. 2014. Adam: A Method for Stochastic Optimization. http://arxiv.org/abs/1412.6980 cite arxiv:1412.6980Comment: Published as a conference paper at the 3rd International Conference for Learning Representations, San Diego, 2015.\\n\\n[DOC1_A149 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[23] Tie-Yan Liu. 2009. Learning to Rank for Information Retrieval. Found. Trends Inf. Retr. 3, 3 (March 2009), 225-331. https://doi.org/10.1561/1500000016\\n\\n[DOC1_A150 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning (ICML '04). ACM, New York, NY, USA, 78-. https://doi.org/10.1145/ 1015330.1015435\\n\\n[DOC1_A151 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[25] Zhenxing Niu, Mo Zhou, Le Wang, and Xinbo Gao. 2016. Ordinal Regression with Multiple Output CNN for Age Estimation. 4920-4928. https://doi.org/10. 1109/CVPR.2016.532\\n\\n[DOC1_A152 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[26] Adam Paszke, Sam Gross, Soumith Chintala, Gregory Chanan, Edward Yang, Zachary DeVito, Zeming Lin, Alban Desmaison, Luca Antiga, and Adam Lerer. 2017. Automatic Differentiation in PyTorch. In NIPS Autodiff Workshop.\", \"source_window_anchor_ids\": [\"DOC1_A9\", \"DOC1_A83\", \"DOC1_A84\", \"DOC1_A85\", \"DOC1_A86\", \"DOC1_A87\", \"DOC1_A88\", \"DOC1_A89\", \"DOC1_A90\", \"DOC1_A91\", \"DOC1_A92\", \"DOC1_A93\", \"DOC1_A94\", \"DOC1_A95\", \"DOC1_A96\", \"DOC1_A97\", \"DOC1_A98\", \"DOC1_A99\", \"DOC1_A148\", \"DOC1_A149\", \"DOC1_A150\", \"DOC1_A151\", \"DOC1_A152\"], \"primary_anchor_id\": \"DOC1_A150\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_targets\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_value_hints\": [\"24\", \"2004\", \"1\", \"2\", \"04\", \"78\", \"10.1145\", \"1015330.1015435\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 18}, \"top_related_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains another reference from \"Context-Aware Learning to Rank with Self-Attention\" to \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\". This provides another piece of the citation chain. More evidence is still needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\", \"normalized_value\": \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\", \"evidence_text\": \"[24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A150\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\", \"Learning Both Weights and Connections for Efficient Neural Networks\", \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\", \"DOC1_A150\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning... [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning (ICML '04). ACM, New York, NY, USA, 78-. https://doi.org/10.1145/ 1015330.1015435\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The current query aims to find citation chains among the provided papers. To start, I need to look for references or citations within the document to identify potential links in the citation chain. The most promising section for finding such information would be the references section.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A138\", \"candidate_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\", \"DOC1_A147\", \"DOC1_A150\"], \"utility_hits\": {\"DOC1_A20\": [\"citation_format_cue\"], \"DOC1_A29\": [\"citation_format_cue\"], \"DOC1_A72\": [\"citation_format_cue\"], \"DOC1_A73\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A20\": 3.0, \"DOC1_A29\": 3.0, \"DOC1_A72\": 3.0, \"DOC1_A73\": 3.0}, \"score_breakdown\": {\"DOC1_A20\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 48.5}, \"DOC1_A29\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 44.5}, \"DOC1_A72\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 44.5}, \"DOC1_A73\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.5, \"redundancy_penalty\": 0.0, \"total\": 44.5}}, \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A138\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Context-Aware Learning to Rank with Self-Attention > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A138: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Mode...\", \"text\": \"[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\\n## CCS CONCEPTS\\n\\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\\n\\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$l(s, y)=-\\\\sum_{y_{i}>y_{j}} \\\\log _{2} \\\\sum_{\\\\pi}\\\\left(\\\\frac{1}{1+e^{-\\\\sigma\\\\left(s_{i}-s_{j}\\\\right)}}\\\\right)^{\\\\left(\\\\rho_{i j}+\\\\mu \\\\delta_{i j}\\\\right)\\\\left|G_{i}-G_{j}\\\\right|} H(\\\\pi \\\\mid s)$\\n\\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\begin{gathered}\\nG_{i}=\\\\frac{2^{y_{i}}-1}{\\\\operatorname{maxDCG}} \\\\\\\\\\n\\\\rho_{i j}=\\\\left|\\\\frac{1}{D_{i}}-\\\\frac{1}{D_{j}}\\\\right| \\\\\\\\\\n\\\\delta_{i j}=\\\\left|\\\\frac{1}{D_{|i-j|}}-\\\\frac{1}{D_{|i-j|}+1}\\\\right| \\\\\\\\\\nD_{i}=\\\\log _{2}(1+i)\\n\\\\end{gathered}\\n$$\\n\\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nand $H(\\\\pi \\\\mid s)$ is a hard assignment distribution of permutations, i.e.\\n\\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nH(\\\\hat{\\\\pi} \\\\mid s)=1 \\\\text { and } H(\\\\pi \\\\mid s)=0 \\\\text { for all } \\\\pi \\\\neq \\\\hat{\\\\pi}\\n$$\\n\\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere $\\\\hat{\\\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\\\boldsymbol{s}$. Fixed parameter $\\\\mu$ is set to 10.0 .\\n\\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\\n\\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nTo obtain a LambdaRank formula, replace the exponent with\\n\\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\Delta \\\\operatorname{NDCG}(i, j)=\\\\left|G_{i}-G_{j}\\\\right| \\\\rho_{i j}\\n$$\\n\\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\\n\\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(s, y)=-\\\\sum_{j} \\\\operatorname{softmax}(\\\\boldsymbol{y})_{j} \\\\times \\\\log \\\\left(\\\\operatorname{softmax}(s)_{j}\\\\right)\\n$$\\n\\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nIn binary version, softmax of ground truth $\\\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\\n\\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nListMLE [35] is given by:\\n\\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(\\\\boldsymbol{s}, \\\\boldsymbol{y})=-\\\\log P(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})\\n$$\\n\\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nP(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})=\\\\prod_{i}^{n} \\\\frac{\\\\exp \\\\left(f\\\\left(x_{y(i)}\\\\right)\\\\right)}{\\\\sum_{k=i}^{n} \\\\exp \\\\left(f\\\\left(x_{y(k)}\\\\right)\\\\right)}\\n$$\\n\\n[DOC1_A136 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[10] Tianqi Chen and Carlos Guestrin. 2016. XGBoost: A Scalable Tree Boosting System. In Proceedings of the 22Nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD '16). ACM, New York, NY, USA, 785-794. https://doi.org/10.1145/2939672.2939785\\n\\n[DOC1_A137 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[11] Jianpeng Cheng, Li Dong, and Mirella Lapata. 2016. Long Short-Term MemoryNetworks for Machine Reading. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Austin, Texas, 551-561. https://doi.org/10.18653/v1/D16-1053\\n\\n[DOC1_A138 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\\n\\n[DOC1_A139 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\\n\\n[DOC1_A140 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[14] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2015), 770-778.\", \"source_window_anchor_ids\": [\"DOC1_A9\", \"DOC1_A83\", \"DOC1_A84\", \"DOC1_A85\", \"DOC1_A86\", \"DOC1_A87\", \"DOC1_A88\", \"DOC1_A89\", \"DOC1_A90\", \"DOC1_A91\", \"DOC1_A92\", \"DOC1_A93\", \"DOC1_A94\", \"DOC1_A95\", \"DOC1_A96\", \"DOC1_A97\", \"DOC1_A98\", \"DOC1_A99\", \"DOC1_A136\", \"DOC1_A137\", \"DOC1_A138\", \"DOC1_A139\", \"DOC1_A140\"], \"primary_anchor_id\": \"DOC1_A138\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_targets\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_value_hints\": [\"12\", \"2017\", \"40\", \"17\", \"65\", \"-74\", \"10.1145\", \"3077136.3080832\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 18}, \"top_related_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains a reference to another paper, indicating that \"Context-Aware Learning to Rank with Self-Attention\" cites \"Neural Ranking Models with Weak Supervision\". This provides a piece of the citation chain. However, more evidence is needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Neural Ranking Models with Weak Supervision\", \"normalized_value\": \"Neural Ranking Models with Weak Supervision\", \"evidence_text\": \"[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A138\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>\n<think>To continue building the citation chain, I need to inspect additional references in the document to find more citations. The next logical step is to examine another reference entry in the document to see if it provides further connections in the citation chain.</think>\n<search>{\"current_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A139\", \"candidate_anchor_ids\": [\"DOC1_A139\", \"DOC1_A141\", \"DOC1_A143\", \"DOC1_A148\"], \"coverage_hints\": {\"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\"], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}, \"avoid_anchor_ids\": [\"DOC1_A138\"], \"utility_hits\": {\"DOC1_A139\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A150\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A161\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A129\": [\"reference_section\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A139\": 10.0, \"DOC1_A150\": 10.0, \"DOC1_A161\": 10.0, \"DOC1_A129\": 10.0}, \"relation_score\": {\"DOC1_A139\": 5.0, \"DOC1_A150\": 5.0, \"DOC1_A161\": 5.0, \"DOC1_A129\": 5.0}, \"anchor_role_hits\": {\"DOC1_A139\": [\"citation_direction\"], \"DOC1_A150\": [\"citation_direction\"], \"DOC1_A161\": [\"citation_direction\"], \"DOC1_A129\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A139\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A150\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A161\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A129\": {\"local_relevance\": 26.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 53.0}}}</search>\n<info>{\"anchor_id\": \"DOC1_A139\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Context-Aware Learning to Rank with Self-Attention > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A139: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Effic...\", \"text\": \"[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\\n## CCS CONCEPTS\\n\\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\\n\\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$l(s, y)=-\\\\sum_{y_{i}>y_{j}} \\\\log _{2} \\\\sum_{\\\\pi}\\\\left(\\\\frac{1}{1+e^{-\\\\sigma\\\\left(s_{i}-s_{j}\\\\right)}}\\\\right)^{\\\\left(\\\\rho_{i j}+\\\\mu \\\\delta_{i j}\\\\right)\\\\left|G_{i}-G_{j}\\\\right|} H(\\\\pi \\\\mid s)$\\n\\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\begin{gathered}\\nG_{i}=\\\\frac{2^{y_{i}}-1}{\\\\operatorname{maxDCG}} \\\\\\\\\\n\\\\rho_{i j}=\\\\left|\\\\frac{1}{D_{i}}-\\\\frac{1}{D_{j}}\\\\right| \\\\\\\\\\n\\\\delta_{i j}=\\\\left|\\\\frac{1}{D_{|i-j|}}-\\\\frac{1}{D_{|i-j|}+1}\\\\right| \\\\\\\\\\nD_{i}=\\\\log _{2}(1+i)\\n\\\\end{gathered}\\n$$\\n\\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nand $H(\\\\pi \\\\mid s)$ is a hard assignment distribution of permutations, i.e.\\n\\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nH(\\\\hat{\\\\pi} \\\\mid s)=1 \\\\text { and } H(\\\\pi \\\\mid s)=0 \\\\text { for all } \\\\pi \\\\neq \\\\hat{\\\\pi}\\n$$\\n\\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere $\\\\hat{\\\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\\\boldsymbol{s}$. Fixed parameter $\\\\mu$ is set to 10.0 .\\n\\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\\n\\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nTo obtain a LambdaRank formula, replace the exponent with\\n\\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\Delta \\\\operatorname{NDCG}(i, j)=\\\\left|G_{i}-G_{j}\\\\right| \\\\rho_{i j}\\n$$\\n\\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\\n\\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(s, y)=-\\\\sum_{j} \\\\operatorname{softmax}(\\\\boldsymbol{y})_{j} \\\\times \\\\log \\\\left(\\\\operatorname{softmax}(s)_{j}\\\\right)\\n$$\\n\\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nIn binary version, softmax of ground truth $\\\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\\n\\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nListMLE [35] is given by:\\n\\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(\\\\boldsymbol{s}, \\\\boldsymbol{y})=-\\\\log P(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})\\n$$\\n\\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nP(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})=\\\\prod_{i}^{n} \\\\frac{\\\\exp \\\\left(f\\\\left(x_{y(i)}\\\\right)\\\\right)}{\\\\sum_{k=i}^{n} \\\\exp \\\\left(f\\\\left(x_{y(k)}\\\\right)\\\\right)}\\n$$\\n\\n[DOC1_A137 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[11] Jianpeng Cheng, Li Dong, and Mirella Lapata. 2016. Long Short-Term MemoryNetworks for Machine Reading. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing. Association for Computational Linguistics, Austin, Texas, 551-561. https://doi.org/10.18653/v1/D16-1053\\n\\n[DOC1_A138 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\\n\\n[DOC1_A139 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\\n\\n[DOC1_A140 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[14] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2015. Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (2015), 770-778.\\n\\n[DOC1_A141 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[15] Geoffrey Hinton, Oriol Vinyals, and Jeffrey Dean. 2015. Distilling the Knowledge in a Neural Network. In NIPS Deep Learning and Representation Learning Workshop. http://arxiv.org/abs/1503.02531\", \"source_window_anchor_ids\": [\"DOC1_A9\", \"DOC1_A83\", \"DOC1_A84\", \"DOC1_A85\", \"DOC1_A86\", \"DOC1_A87\", \"DOC1_A88\", \"DOC1_A89\", \"DOC1_A90\", \"DOC1_A91\", \"DOC1_A92\", \"DOC1_A93\", \"DOC1_A94\", \"DOC1_A95\", \"DOC1_A96\", \"DOC1_A97\", \"DOC1_A98\", \"DOC1_A99\", \"DOC1_A137\", \"DOC1_A138\", \"DOC1_A139\", \"DOC1_A140\", \"DOC1_A141\"], \"primary_anchor_id\": \"DOC1_A139\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_targets\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_value_hints\": [\"13\", \"2015\", \"28\", \"1\", \"15\", \"1135\", \"-1143\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 18}, \"top_related_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains another reference from \"Context-Aware Learning to Rank with Self-Attention\" to \"Learning Both Weights and Connections for Efficient Neural Networks\". This provides another piece of the citation chain. More evidence is still needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Learning Both Weights and Connections for Efficient Neural Networks\", \"normalized_value\": \"Learning Both Weights and Connections for Efficient Neural Networks\", \"evidence_text\": \"[13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A139\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\", \"Learning Both Weights and Connections for Efficient Neural Networks\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>\n<think>To continue building the citation chain, I will inspect another reference entry in the document to find more citations. The next logical step is to examine another reference entry in the document to see if it provides further connections in the citation chain. The next candidate is DOC1_A141, which contains another reference that could potentially extend the citation chain.</think>\n<search>{\"current_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC1_A150\", \"candidate_anchor_ids\": [\"DOC1_A150\", \"DOC1_A161\", \"DOC1_A129\", \"DOC1_A133\"], \"coverage_hints\": {\"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\", \"Learning Both Weights and Connections for Efficient Neural Networks\"], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}, \"avoid_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\"], \"utility_hits\": {\"DOC1_A150\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A161\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A129\": [\"reference_section\", \"citation_format_cue\"], \"DOC1_A133\": [\"reference_section\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC1_A150\": 10.0, \"DOC1_A161\": 10.0, \"DOC1_A129\": 10.0, \"DOC1_A133\": 10.0}, \"relation_score\": {\"DOC1_A150\": 5.0, \"DOC1_A161\": 5.0, \"DOC1_A129\": 5.0, \"DOC1_A133\": 5.0}, \"anchor_role_hits\": {\"DOC1_A150\": [\"citation_direction\"], \"DOC1_A161\": [\"citation_direction\"], \"DOC1_A129\": [\"citation_direction\"], \"DOC1_A133\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC1_A150\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A161\": {\"local_relevance\": 28.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 55.0}, \"DOC1_A129\": {\"local_relevance\": 26.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 53.0}, \"DOC1_A133\": {\"local_relevance\": 26.0, \"answer_utility\": 10.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 10.0, \"redundancy_penalty\": 0.0, \"total\": 53.0}}}</search>\n<info>{\"anchor_id\": \"DOC1_A150\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Context-Aware Learning to Rank with Self-Attention > REFERENCES\", \"summary\": \"Expanded same-section read window around DOC1_A150: Context-Aware Learning to Rank with Self-Attention > REFERENCES: [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings...\", \"text\": \"[DOC1_A9 | Context-Aware Learning to Rank with Self-Attention > CCS CONCEPTS]\\n## CCS CONCEPTS\\n\\n[DOC1_A83 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.3 LambdaLoss, RankNet and LambdaRank. We used NDCGLoss2++ of [34], formulated as follows:\\n\\n[DOC1_A84 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$l(s, y)=-\\\\sum_{y_{i}>y_{j}} \\\\log _{2} \\\\sum_{\\\\pi}\\\\left(\\\\frac{1}{1+e^{-\\\\sigma\\\\left(s_{i}-s_{j}\\\\right)}}\\\\right)^{\\\\left(\\\\rho_{i j}+\\\\mu \\\\delta_{i j}\\\\right)\\\\left|G_{i}-G_{j}\\\\right|} H(\\\\pi \\\\mid s)$\\n\\n[DOC1_A85 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A86 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\begin{gathered}\\nG_{i}=\\\\frac{2^{y_{i}}-1}{\\\\operatorname{maxDCG}} \\\\\\\\\\n\\\\rho_{i j}=\\\\left|\\\\frac{1}{D_{i}}-\\\\frac{1}{D_{j}}\\\\right| \\\\\\\\\\n\\\\delta_{i j}=\\\\left|\\\\frac{1}{D_{|i-j|}}-\\\\frac{1}{D_{|i-j|}+1}\\\\right| \\\\\\\\\\nD_{i}=\\\\log _{2}(1+i)\\n\\\\end{gathered}\\n$$\\n\\n[DOC1_A87 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nand $H(\\\\pi \\\\mid s)$ is a hard assignment distribution of permutations, i.e.\\n\\n[DOC1_A88 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nH(\\\\hat{\\\\pi} \\\\mid s)=1 \\\\text { and } H(\\\\pi \\\\mid s)=0 \\\\text { for all } \\\\pi \\\\neq \\\\hat{\\\\pi}\\n$$\\n\\n[DOC1_A89 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere $\\\\hat{\\\\pi}$ is the permutation in which all items are sorted by decreasing scores $\\\\boldsymbol{s}$. Fixed parameter $\\\\mu$ is set to 10.0 .\\n\\n[DOC1_A90 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nBy removing the exponent in $l(s, y)$ formula we obtain the RankNet loss function, weighing each score pair identically. Similarly, we may obtain differently weighted RankNet variants by changing the formula in the exponent.\\n\\n[DOC1_A91 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nTo obtain a LambdaRank formula, replace the exponent with\\n\\n[DOC1_A92 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\n\\\\Delta \\\\operatorname{NDCG}(i, j)=\\\\left|G_{i}-G_{j}\\\\right| \\\\rho_{i j}\\n$$\\n\\n[DOC1_A93 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n5.2.4 ListNet and ListMLE. ListNet loss [9] is given by the following formula:\\n\\n[DOC1_A94 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(s, y)=-\\\\sum_{j} \\\\operatorname{softmax}(\\\\boldsymbol{y})_{j} \\\\times \\\\log \\\\left(\\\\operatorname{softmax}(s)_{j}\\\\right)\\n$$\\n\\n[DOC1_A95 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nIn binary version, softmax of ground truth $\\\\boldsymbol{y}$ is omitted for singleclick lists and replaced with normalisation by the number of clicks for multiple-click lists.\\n\\n[DOC1_A96 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nListMLE [35] is given by:\\n\\n[DOC1_A97 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nl(\\\\boldsymbol{s}, \\\\boldsymbol{y})=-\\\\log P(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})\\n$$\\n\\n[DOC1_A98 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\nwhere\\n\\n[DOC1_A99 | Context-Aware Learning to Rank with Self-Attention > 5 EXPERIMENTS > 5.2 Loss Functions]\\n$$\\nP(\\\\boldsymbol{y} \\\\mid \\\\boldsymbol{s})=\\\\prod_{i}^{n} \\\\frac{\\\\exp \\\\left(f\\\\left(x_{y(i)}\\\\right)\\\\right)}{\\\\sum_{k=i}^{n} \\\\exp \\\\left(f\\\\left(x_{y(k)}\\\\right)\\\\right)}\\n$$\\n\\n[DOC1_A148 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[22] Diederik P. Kingma and Jimmy Ba. 2014. Adam: A Method for Stochastic Optimization. http://arxiv.org/abs/1412.6980 cite arxiv:1412.6980Comment: Published as a conference paper at the 3rd International Conference for Learning Representations, San Diego, 2015.\\n\\n[DOC1_A149 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[23] Tie-Yan Liu. 2009. Learning to Rank for Information Retrieval. Found. Trends Inf. Retr. 3, 3 (March 2009), 225-331. https://doi.org/10.1561/1500000016\\n\\n[DOC1_A150 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning (ICML '04). ACM, New York, NY, USA, 78-. https://doi.org/10.1145/ 1015330.1015435\\n\\n[DOC1_A151 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[25] Zhenxing Niu, Mo Zhou, Le Wang, and Xinbo Gao. 2016. Ordinal Regression with Multiple Output CNN for Age Estimation. 4920-4928. https://doi.org/10. 1109/CVPR.2016.532\\n\\n[DOC1_A152 | Context-Aware Learning to Rank with Self-Attention > REFERENCES]\\n[26] Adam Paszke, Sam Gross, Soumith Chintala, Gregory Chanan, Edward Yang, Zachary DeVito, Zeming Lin, Alban Desmaison, Luca Antiga, and Adam Lerer. 2017. Automatic Differentiation in PyTorch. In NIPS Autodiff Workshop.\", \"source_window_anchor_ids\": [\"DOC1_A9\", \"DOC1_A83\", \"DOC1_A84\", \"DOC1_A85\", \"DOC1_A86\", \"DOC1_A87\", \"DOC1_A88\", \"DOC1_A89\", \"DOC1_A90\", \"DOC1_A91\", \"DOC1_A92\", \"DOC1_A93\", \"DOC1_A94\", \"DOC1_A95\", \"DOC1_A96\", \"DOC1_A97\", \"DOC1_A98\", \"DOC1_A99\", \"DOC1_A148\", \"DOC1_A149\", \"DOC1_A150\", \"DOC1_A151\", \"DOC1_A152\"], \"primary_anchor_id\": \"DOC1_A150\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_targets\": [\"Context-Aware\", \"Learning\", \"to\", \"Rank\", \"with\", \"Self-Attention\"], \"anchor_value_hints\": [\"24\", \"2004\", \"1\", \"2\", \"04\", \"78\", \"10.1145\", \"1015330.1015435\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 18}, \"top_related_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The selected chunk contains another reference from \"Context-Aware Learning to Rank with Self-Attention\" to \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\". This provides another piece of the citation chain. More evidence is still needed to establish a longer chain or confirm if this is part of the longest chain among the provided papers.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"Reference\", \"value\": \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\", \"normalized_value\": \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\", \"evidence_text\": \"[24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance.\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A150\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A99\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A98\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A97\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A96\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A95\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A94\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"Find additional citations or references in the document to extend the citation chain.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [\"Reference\"], \"known_value_signatures\": [\"Neural Ranking Models with Weak Supervision\", \"Learning Both Weights and Connections for Efficient Neural Networks\", \"Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A138\", \"DOC1_A139\", \"DOC1_A150\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th Internationa... [12] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. 2017. Neural Ranking Models with Weak Supervision. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '17). ACM, New York, NY, USA, 65-74. https: //doi.org/10.1145/3077136.3080832\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Co... [13] Song Han, Jeff Pool, John Tran, and William J. Dally. 2015. Learning Both Weights and Connections for Efficient Neural Networks. In Proceedings of the 28th International Conference on Neural Information Processing Systems - Volume 1 (NIPS'15). MIT Press, Cambridge, MA, USA, 1135-1143.\", \"Context-Aware Learning to Rank with Self-Attention > REFERENCES Context-Aware Learning to Rank with Self-Attention > REFERENCES: [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning... [24] Andrew Y. Ng. 2004. Feature Selection, L1 vs. L2 Regularization, and Rotational Invariance. In Proceedings of the Twenty-first International Conference on Machine Learning (ICML '04). ACM, New York, NY, USA, 78-. https://doi.org/10.1145/ 1015330.1015435\"], \"selected_relation_anchor_ids\": [\"DOC1_A99\", \"DOC1_A98\", \"DOC1_A97\", \"DOC1_A96\", \"DOC1_A95\", \"DOC1_A94\", \"DOC1_A93\", \"DOC1_A92\", \"DOC1_A91\", \"DOC1_A90\", \"DOC1_A9\", \"DOC1_A89\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A99\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A98\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A97\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A96\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A95\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A94\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A93\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A92\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A91\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A90\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A138\", \"target_anchor_id\": \"DOC1_A89\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+}

@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "task_mode": "clustering",
+  "think": "The current document title is '《判决文书3》'. The summary indicates that it involves a case where Li Shuangxi appealed against the Intermediate People's Court of Shenyang for abuse of power, but the court did not accept the appeal as it was not within the scope of self-prosecution cases. This seems to relate to '刑事赔偿' (criminal compensation) or potentially '渎职罪' (dereliction of duty). However, without more context, it's hard to determine the exact category. I will inspect the next anchor to gather more information.",
+  "current_query": "阅读以上判决文书，请按照'渎职罪' '执行案由-行政非诉执行' '刑事赔偿' '民间借贷纠纷' '危害公共安全罪' '产品责任纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'渎职罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC3_A1",
+  "candidate_anchor_ids": [
+    "DOC3_A2"
+  ],
+  "ranked_anchor_ids": [
+    "DOC3_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC3_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC3_A1",
+      "score": 29.3,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 4.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 6.3,
+        "redundancy_penalty": 0.0,
+        "total": 29.3
+      },
+      "summary": "李双喜因自诉沈阳市中级人民法院滥用职权一案，不服相关刑事裁定，向法院提出申诉。法院审查后认为其告诉不属于自诉案件范围，裁定不予受理，并驳回申诉。"
+    }
+  ],
+  "utility_hits": {
+    "DOC3_A1": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC3_A1": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC3_A1": 6.0
+  },
+  "anchor_role_hits": {
+    "DOC3_A1": [
+      "case_identity",
+      "decision_evidence"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC3_A1": {
+      "local_relevance": 4.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 6.3,
+      "redundancy_penalty": 0.0,
+      "total": 29.3
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书3》. First coordinate candidate is DOC3_A1.",
+  "raw_plan_text": "<think>The current document title is '《判决文书3》'. The summary indicates that it involves a case where Li Shuangxi appealed against the Intermediate People's Court of Shenyang for abuse of power, but the court did not accept the appeal as it was not within the scope of self-prosecution cases. This seems to relate to '刑事赔偿' (criminal compensation) or potentially '渎职罪' (dereliction of duty). However, without more context, it's hard to determine the exact category. I will inspect the next anchor to gather more information.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'渎职罪' '执行案由-行政非诉执行' '刑事赔偿' '民间借贷纠纷' '危害公共安全罪' '产品责任纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'渎职罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC3_A2\",\"candidate_anchor_ids\":[\"DOC3_A2\"]}</search>",
+  "tagged_trace": "<think>The current document title is '《判决文书3》'. The summary indicates that it involves a case where Li Shuangxi appealed against the Intermediate People's Court of Shenyang for abuse of power, but the court did not accept the appeal as it was not within the scope of self-prosecution cases. This seems to relate to '刑事赔偿' (criminal compensation) or potentially '渎职罪' (dereliction of duty). However, without more context, it's hard to determine the exact category. I will inspect the next anchor to gather more information.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'渎职罪' '执行案由-行政非诉执行' '刑事赔偿' '民间借贷纠纷' '危害公共安全罪' '产品责任纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'渎职罪': ['《判决文书a》', '《判决文书b》'], '执行案由-行政非诉执行': ['《判决文书a》', '《判决文书b》'], '刑事赔偿': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC3_A2\"], \"next_anchor_id\": \"DOC3_A1\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC3_A1\": 6.0}, \"anchor_role_hits\": {\"DOC3_A1\": [\"case_identity\", \"decision_evidence\"]}}</search>"
+}

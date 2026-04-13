@@ -1,0 +1,265 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models",
+  "task_mode": "chain",
+  "think": "The current query is focused on identifying citation chains among the provided papers. To find relevant information, I should look at the references section of the document, as it will contain citations to other works. The most promising coordinate to inspect next is DOC2_A10, which contains the references listed in the paper.",
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+  "must_find": [
+    "citation/reference evidence"
+  ],
+  "next_anchor_id": "DOC2_A10",
+  "candidate_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A4",
+    "DOC2_A3",
+    "DOC2_A5",
+    "DOC2_A2"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A4",
+    "DOC2_A3",
+    "DOC2_A5",
+    "DOC2_A2",
+    "DOC2_A7",
+    "DOC2_A10",
+    "DOC2_A6",
+    "DOC2_A1",
+    "DOC2_A9",
+    "DOC2_A8"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A4",
+      "score": 53.391,
+      "reasons": [
+        "query_overlap=7",
+        "instruction_overlap=6",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=0.89",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 36.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 7.391,
+        "redundancy_penalty": 0.0,
+        "total": 53.391
+      },
+      "summary": "Describes the prompt design for zero-shot listwise reranking and the training process of RankVicuna, including the use of RankGPT 3.5 as a teacher model and data augmentation te..."
+    },
+    {
+      "anchor_id": "DOC2_A3",
+      "score": 51.714,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=5",
+        "section_prior=4",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=1.11",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 9.714,
+        "redundancy_penalty": 0.0,
+        "total": 51.714
+      },
+      "summary": "Provides background on text retrieval, reranking, and the use of large language models in reranking. Discusses related work on reranking with transformers and the indirect use o..."
+    },
+    {
+      "anchor_id": "DOC2_A5",
+      "score": 51.308,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=5",
+        "section_prior=4",
+        "anchor_type_prior=12",
+        "citation_cue",
+        "position_bonus=0.71",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 9.308,
+        "redundancy_penalty": 0.0,
+        "total": 51.308
+      },
+      "summary": "Details the experimental setup comparing RankVicuna with other reranking methods using TREC 2019 and 2020 Deep Learning Tracks datasets, including the evaluation metrics and rer..."
+    },
+    {
+      "anchor_id": "DOC2_A2",
+      "score": 49.901,
+      "reasons": [
+        "query_overlap=6",
+        "instruction_overlap=5",
+        "section_prior=4",
+        "anchor_type_prior=6",
+        "citation_cue",
+        "position_bonus=1.40",
+        "citation_format_cue",
+        "novel_anchor",
+        "anchor_role_hits=['citation_direction']"
+      ],
+      "utility_score": 3.0,
+      "utility_hits": [
+        "citation_format_cue"
+      ],
+      "relation_score": 5.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "citation_direction"
+      ],
+      "score_breakdown": {
+        "local_relevance": 32.0,
+        "answer_utility": 3.0,
+        "coverage": 2.0,
+        "relation": 5.0,
+        "weak_priors": 7.901,
+        "redundancy_penalty": 0.0,
+        "total": 49.901
+      },
+      "summary": "Discusses the application of large language models in zero-shot listwise reranking, highlights the reproducibility issues with proprietary models, and presents RankVicuna as a s..."
+    }
+  ],
+  "utility_hits": {
+    "DOC2_A4": [
+      "citation_format_cue"
+    ],
+    "DOC2_A3": [
+      "citation_format_cue"
+    ],
+    "DOC2_A5": [
+      "citation_format_cue"
+    ],
+    "DOC2_A2": [
+      "citation_format_cue"
+    ]
+  },
+  "utility_score": {
+    "DOC2_A4": 3.0,
+    "DOC2_A3": 3.0,
+    "DOC2_A5": 3.0,
+    "DOC2_A2": 3.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC2_A4": 5.0,
+    "DOC2_A3": 5.0,
+    "DOC2_A5": 5.0,
+    "DOC2_A2": 5.0
+  },
+  "anchor_role_hits": {
+    "DOC2_A4": [
+      "citation_direction"
+    ],
+    "DOC2_A3": [
+      "citation_direction"
+    ],
+    "DOC2_A5": [
+      "citation_direction"
+    ],
+    "DOC2_A2": [
+      "citation_direction"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "ordered relations or decision/result mappings",
+      "citation/reference evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC2_A4": {
+      "local_relevance": 36.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 7.391,
+      "redundancy_penalty": 0.0,
+      "total": 53.391
+    },
+    "DOC2_A3": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 9.714,
+      "redundancy_penalty": 0.0,
+      "total": 51.714
+    },
+    "DOC2_A5": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 9.308,
+      "redundancy_penalty": 0.0,
+      "total": 51.308
+    },
+    "DOC2_A2": {
+      "local_relevance": 32.0,
+      "answer_utility": 3.0,
+      "coverage": 2.0,
+      "relation": 5.0,
+      "weak_priors": 7.901,
+      "redundancy_penalty": 0.0,
+      "total": 49.901
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models. First coordinate candidate is DOC2_A10.",
+  "raw_plan_text": "<think>The current query is focused on identifying citation chains among the provided papers. To find relevant information, I should look at the references section of the document, as it will contain citations to other works. The most promising coordinate to inspect next is DOC2_A10, which contains the references listed in the paper.</think>\n<search>{\"current_query\":\"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\",\"must_find\":[\"citation/reference evidence\"],\"next_anchor_id\":\"DOC2_A10\",\"candidate_anchor_ids\":[\"DOC2_A1\",\"DOC2_A2\",\"DOC2_A3\",\"DOC2_A4\",\"DOC2_A5\",\"DOC2_A6\",\"DOC2_A7\",\"DOC2_A8\",\"DOC2_A9\",\"DOC2_A10\"]}</search>",
+  "tagged_trace": "<think>The current query is focused on identifying citation chains among the provided papers. To find relevant information, I should look at the references section of the document, as it will contain citations to other works. The most promising coordinate to inspect next is DOC2_A10, which contains the references listed in the paper.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"citation/reference evidence\"], \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"next_anchor_id\": \"DOC2_A10\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC2_A4\": 5.0, \"DOC2_A3\": 5.0, \"DOC2_A5\": 5.0, \"DOC2_A2\": 5.0}, \"anchor_role_hits\": {\"DOC2_A4\": [\"citation_direction\"], \"DOC2_A3\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A2\": [\"citation_direction\"]}}</search>"
+}

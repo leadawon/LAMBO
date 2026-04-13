@@ -1,0 +1,1336 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Query2doc: Query Expansion with Large Language Models",
+  "selected_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A10",
+    "DOC2_A2"
+  ],
+  "final_current_query": "Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A1",
+        "candidate_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4"
+        ],
+        "utility_hits": {
+          "DOC2_A7": [
+            "citation_format_cue"
+          ],
+          "DOC2_A10": [
+            "citation_format_cue"
+          ],
+          "DOC2_A5": [
+            "citation_format_cue"
+          ],
+          "DOC2_A2": [
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A7": 3.0,
+          "DOC2_A10": 3.0,
+          "DOC2_A5": 3.0,
+          "DOC2_A2": 3.0
+        },
+        "score_breakdown": {
+          "DOC2_A7": {
+            "local_relevance": 36.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 6.921,
+            "redundancy_penalty": 0.0,
+            "total": 52.921
+          },
+          "DOC2_A10": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 12.202,
+            "redundancy_penalty": 0.0,
+            "total": 50.202
+          },
+          "DOC2_A5": {
+            "local_relevance": 32.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.208,
+            "redundancy_penalty": 0.0,
+            "total": 49.208
+          },
+          "DOC2_A2": {
+            "local_relevance": 28.0,
+            "answer_utility": 3.0,
+            "coverage": 2.0,
+            "relation": 5.0,
+            "weak_priors": 7.901,
+            "redundancy_penalty": 0.0,
+            "total": 45.901
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC2_A1",
+      "plan_think": "The abstract (DOC2_A1) often contains key information about the paper's contributions and may reference other works that could help establish a citation chain. It's a good starting point to look for citations or references to other papers.",
+      "info": {
+        "anchor_id": "DOC2_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "Query2doc: Query Expansion with Large Language Models > Abstract",
+        "summary": "Expanded same-section read window around DOC2_A1: Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental r...",
+        "text": "[DOC2_A1 | Query2doc: Query Expansion with Large Language Models > Abstract]\n#### Abstract\n\nThis paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can aid in query disambiguation and guide the retrievers. Experimental results demonstrate that query2doc boosts the performance of BM25 by $3 \\%$ to $15 \\%$ on ad-hoc IR datasets, such as MSMARCO and TREC DL, without any model fine-tuning. Furthermore, our method also benefits state-of-the-art dense retrievers in terms of both in-domain and out-of-domain results.\n\n[DOC2_A7 | Query2doc: Query Expansion with Large Language Models > 5 Related Work]\n## 5 Related Work\n\nQuery Expansion and Document Expansion are two classical techniques to improve retrieval quality, particularly for sparse retrieval systems. Both techniques aim to minimize the lexical gap between the query and the documents. Query expansion typically involves rewriting the query based on relevance feedback (Lavrenko and Croft, 2001; Rocchio, 1971) or lexical resources such as WordNet (Miller, 1992). In cases where labels are not available, the top-k retrieved documents can serve as pseudo-relevance feedback signals (Lv and Zhai, 2009). Liu et al. fine-tunes an encoder-decoder model to generate contextual clues.\n\nIn contrast, document expansion enriches the document representation by appending additional relevant terms. Doc2query (Nogueira et al., 2019) trains a seq2seq model to predict pseudo-queries based on documents and then adds generated pseudo-queries to the document index. Learned sparse retrieval models such as SPLADE (Formal et al., 2021) and uniCOIL (Lin and Ma, 2021) also learn document term weighting in an end-to-end fashion. However, most state-of-the-art dense retrievers (Ren et al., 2021; Wang et al., 2023) do not adopt any expansion techniques. Our paper demonstrates that strong dense retrievers also benefit from query expansion using LLMs.\n\nLarge Language Models (LLMs) such as GPT-3 (Brown et al., 2020), PaLM (Chowdhery et al., 2022), and LLaMA (Touvron et al., 2023) are trained on trillions of tokens with billions of param- eters, exhibiting unparalleled generalization ability across various tasks. LLMs can follow instructions in a zero-shot manner or conduct in-context learning through few-shot prompting. Labeling a few high-quality examples only requires minimal human effort. In this paper, we employ few-shot prompting to generate pseudo-documents from a given query. A closely related recent work HyDE (Gao et al., 2022) instead focuses on the zeroshot setting and uses embeddings of the pseudodocuments for similarity search. HyDE implicitly assumes that the groundtruth document and pseudodocuments express the same semantics in different words, which may not hold for some queries. In the field of question answering, RECITE (Sun et al., 2022) and GENREAD (Yu et al., 2022) demonstrate that LLMs are powerful context generators and can encode abundant factual knowledge. However, as our analysis shows, LLMs can sometimes generate false claims, hindering their practical application in critical areas.\n\n[DOC2_A8 | Query2doc: Query Expansion with Large Language Models > 6 Conclusion]\n## 6 Conclusion\n\nThis paper presents a simple method query $2 d o c$ to leverage LLMs for query expansion. It first prompts LLMs with few-shot examples to generate pseudo-documents and then integrates with existing sparse or dense retrievers by augmenting queries with generated pseudo-documents. The underlying motivation is to distill the LLMs through prompting. Despite its simplicity, empirical evaluations demonstrate consistent improvements across various retrieval models and datasets.\n\n[DOC2_A9 | Query2doc: Query Expansion with Large Language Models > Limitations]\n## Limitations\n\n|  | LLM call | Index search |\n| :---: | :---: | :---: |\n| BM25 | - | $16 \\mathrm{~ms}$ |\n| + query2doc | $>2000 \\mathrm{~ms}$ | $177 \\mathrm{~ms}$ |\n\nTable 6: Latency analysis for retrieval systems with our proposed query2doc. We retrieve the top 100 results for MS-MARCO dev queries with a single thread and then average over all the queries. The latency for LLM API calls depends on server load and is difficult to precisely measure.\n\nAn apparent limitation is the efficiency of retrieval. Our method requires running inference with LLMs which can be considerably slower due to the token-by-token autoregressive decoding. Moreover, with query2doc, searching the inverted index also becomes slower as the number of query terms increases after expansion. This is supported by the benchmarking results in Table 6. Real-world deployment of our method should take these factors into consideration.",
+        "source_window_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9"
+        ],
+        "primary_anchor_id": "DOC2_A1",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Query2doc:",
+          "Query",
+          "Expansion",
+          "with",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_targets": [
+          "Query2doc:",
+          "Query",
+          "Expansion",
+          "with",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "3%",
+          "15%",
+          "25",
+          "3",
+          "15"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 9,
+            "same_target_paper": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The abstract (DOC2_A1) does not provide explicit citation information that would help establish a citation chain. It mainly describes the paper's contributions and methodology. To find the citation chain, we need to look for specific citations or references to other papers mentioned in the document.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A10"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A10",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A10",
+        "candidate_anchor_ids": [
+          "DOC2_A10",
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A1"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2",
+            "DOC2_A10"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A10",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC2_A1"
+        ],
+        "utility_hits": {
+          "DOC2_A10": [
+            "target_doc_for_reference",
+            "reference_section",
+            "target_reference_section",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC2_A2": [
+            "target_doc_for_reference",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC2_A5": [
+            "target_doc_for_reference",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC2_A7": [
+            "target_doc_for_reference",
+            "target_mentioned",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A10": 30.0,
+          "DOC2_A2": 18.0,
+          "DOC2_A5": 18.0,
+          "DOC2_A7": 18.0
+        },
+        "relation_hits": {
+          "DOC2_A10": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A1"
+          ],
+          "DOC2_A2": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A1"
+          ],
+          "DOC2_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A1"
+          ],
+          "DOC2_A7": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A1"
+          ]
+        },
+        "relation_score": {
+          "DOC2_A10": 13.56,
+          "DOC2_A2": 13.56,
+          "DOC2_A5": 13.56,
+          "DOC2_A7": 13.56
+        },
+        "anchor_role_hits": {
+          "DOC2_A10": [
+            "citation_direction"
+          ],
+          "DOC2_A2": [
+            "citation_direction"
+          ],
+          "DOC2_A5": [
+            "citation_direction"
+          ],
+          "DOC2_A7": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC2_A10": {
+            "local_relevance": 55.0,
+            "answer_utility": 30.0,
+            "coverage": 4.0,
+            "relation": 13.56,
+            "weak_priors": 12.202,
+            "redundancy_penalty": 0.0,
+            "total": 114.762
+          },
+          "DOC2_A2": {
+            "local_relevance": 55.0,
+            "answer_utility": 18.0,
+            "coverage": 4.0,
+            "relation": 13.56,
+            "weak_priors": 7.901,
+            "redundancy_penalty": 0.0,
+            "total": 98.461
+          },
+          "DOC2_A5": {
+            "local_relevance": 55.0,
+            "answer_utility": 18.0,
+            "coverage": 4.0,
+            "relation": 13.56,
+            "weak_priors": 7.208,
+            "redundancy_penalty": 0.0,
+            "total": 97.768
+          },
+          "DOC2_A7": {
+            "local_relevance": 55.0,
+            "answer_utility": 18.0,
+            "coverage": 4.0,
+            "relation": 13.56,
+            "weak_priors": 6.921,
+            "redundancy_penalty": 0.0,
+            "total": 97.481
+          }
+        }
+      },
+      "anchor_id": "DOC2_A10",
+      "plan_think": "The \"References\" section (DOC2_A10) is likely to contain citations to other papers, which can help us identify the citation chain. I will inspect this section next.",
+      "info": {
+        "anchor_id": "DOC2_A10",
+        "anchor_type": "attribution_region",
+        "section_path": "Query2doc: Query Expansion with Large Language Models > References",
+        "summary": "Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research.",
+        "text": "## References\n\nAlexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer.\n\nVera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. In European Conference on Information Retrieval, pages $716-722$. Springer.\n\nTom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language models are few-shot learners. In Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020, virtual.\n\nDaniel Fernando Campos, Tri Nguyen, Mir Rosenberg, Xia Song, Jianfeng Gao, Saurabh Tiwary, Rangan Majumder, Li Deng, and Bhaskar Mitra. 2016. Ms marco: A human generated machine reading comprehension dataset. ArXiv preprint, abs/1611.09268.\n\nAakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam M. Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Benton C. Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier García, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Díaz, Orhan Firat, Michele Catasta, Jason Wei, Kathleen S. Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022. Palm: Scaling language modeling with pathways. ArXiv preprint, abs/2204.02311.\n\nNick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Campos, and Ellen M Voorhees. 2020a. Overview of the trec 2019 deep learning track. ArXiv preprint, abs/2003.07820.\n\nNick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Fernando Campos, and Ellen M. Voorhees. 2020b. Overview of the trec 2020 deep learning track. ArXiv preprint, abs/2003.07820.\n\nThibault Formal, Benjamin Piwowarski, and Stéphane Clinchant. 2021. Splade: Sparse lexical and expansion model for first stage ranking. Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.\n\nLuyu Gao and Jamie Callan. 2021. Condenser: a pretraining architecture for dense retrieval. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 981-993, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.\n\nLuyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. 2022. Precise zero-shot dense retrieval without relevance labels. ArXiv preprint, abs/2212.10496.\n\nFaegheh Hasibi, Fedor Nikolaev, Chenyan Xiong, Krisztian Balog, Svein Erik Bratsberg, Alexander Kotov, and Jamie Callan. 2017. Dbpedia-entity v2: A test collection for entity search. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval, Shinjuku, Tokyo, Japan, August 7-11, 2017, pages $1265-1268$. ACM.\n\nVladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, and\n\nWen-tau Yih. 2020. Dense passage retrieval for opendomain question answering. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 6769-6781, Online. Association for Computational Linguistics.\n\nVictor Lavrenko and W. Bruce Croft. 2001. Relevancebased language models. ACM SIGIR Forum, 51:260 -267 .\n\nJimmy J. Lin and Xueguang Ma. 2021. A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques. ArXiv preprint, abs/2106.14807.\n\nJimmy J. Lin, Xueguang Ma, Sheng-Chieh Lin, JhengHong Yang, Ronak Pradeep, Rodrigo Nogueira, and David R. Cheriton. 2021. Pyserini: A python toolkit for reproducible information retrieval research with sparse and dense representations. Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.\n\nLinqing Liu, Minghan Li, Jimmy Lin, Sebastian Riedel, and Pontus Stenetorp. 2022. Query expansion using contextual clue sampling with language models. ArXiv preprint, abs/2210.07093.\n\nYuanhua Lv and ChengXiang Zhai. 2009. A comparative study of methods for estimating query language models with pseudo feedback. Proceedings of the 18th ACM conference on Information and knowledge management.\n\nGeorge A. Miller. 1992. WordNet: A lexical database for English. In Speech and Natural Language: Proceedings of a Workshop Held at Harriman, New York, February 23-26, 1992.\n\nRodrigo Nogueira and Jimmy Lin. From doc2query to docttttquery.\n\nRodrigo Nogueira, Wei Yang, Jimmy J. Lin, and Kyunghyun Cho. 2019. Document expansion by query prediction. ArXiv preprint, abs/1904.08375.\n\nOpenAI. 2023. Gpt-4 technical report. ArXiv, abs/2303.08774.\n\nOfir Press, Muru Zhang, Sewon Min, Ludwig Schmidt, Noah A Smith, and Mike Lewis. 2022. Measuring and narrowing the compositionality gap in language models. arXiv preprint arXiv:2210.03350.\n\nYingqi Qu, Yuchen Ding, Jing Liu, Kai Liu, Ruiyang Ren, Wayne Xin Zhao, Daxiang Dong, Hua Wu, and Haifeng Wang. 2021. RocketQA: An optimized training approach to dense passage retrieval for opendomain question answering. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pages 5835-5847, Online. Association for Computational Linguistics.\nRuiyang Ren, Yingqi Qu, Jing Liu, Wayne Xin Zhao, QiaoQiao She, Hua Wu, Haifeng Wang, and Ji-Rong Wen. 2021. RocketQAv2: A joint training method for dense passage retrieval and passage re-ranking. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 2825-2835, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.\n\nJ. J. Rocchio. 1971. Relevance feedback in information retrieval.\n\nZhiqing Sun, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. Recitation-augmented language models. ArXiv preprint, abs/2210.01296.\n\nNandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, and Iryna Gurevych. 2021. Beir: A heterogeneous benchmark for zero-shot evaluation of information retrieval models. In Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2).\n\nHugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aur'elien Rodriguez, Armand Joulin, Edouard Grave, and Guillaume Lample. 2023. Llama: Open and efficient foundation language models. ArXiv preprint, abs/2302.13971.\n\nEllen Voorhees, Tasmeer Alam, Steven Bedrick, Dina Demner-Fushman, William R Hersh, Kyle Lo, Kirk Roberts, Ian Soboroff, and Lucy Lu Wang. 2021. Trec-covid: constructing a pandemic information retrieval test collection. In ACM SIGIR Forum, volume 54, pages 1-12. ACM New York, NY, USA.\n\nDavid Wadden, Shanchuan Lin, Kyle Lo, Lucy Lu Wang, Madeleine van Zuylen, Arman Cohan, and Hannaneh Hajishirzi. 2020. Fact or fiction: Verifying scientific claims. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 7534-7550, Online. Association for Computational Linguistics.\n\nLiang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, and Furu Wei. 2022. Text embeddings by weaklysupervised contrastive pre-training. ArXiv preprint, $\\mathrm{abs} / 2212.03533$.\n\nLiang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, and Furu Wei. 2023. SimLM: Pre-training with representation bottleneck for dense passage retrieval. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 2244-2258, Toronto, Canada. Association for Computational Linguistics.\n\nLee Xiong, Chenyan Xiong, Ye Li, Kwok-Fung Tang, Jialin Liu, Paul N. Bennett, Junaid Ahmed, and Arnold Overwijk. 2021. Approximate nearest neighbor negative contrastive learning for dense text retrieval. In 9th International Conference on Learning\n\nRepresentations, ICLR 2021, Virtual Event, Austria, May 3-7, 2021. OpenReview.net.\n\nW. Yu, Dan Iter, Shuohang Wang, Yichong Xu, Mingxuan Ju, Soumya Sanyal, Chenguang Zhu, Michael Zeng, and Meng Jiang. 2022. Generate rather than retrieve: Large language models are strong context generators. ArXiv preprint, abs/2209.10063.\n\nHang Zhang, Yeyun Gong, Yelong Shen, Jiancheng Lv, Nan Duan, and Weizhu Chen. 2022. Adversarial retriever-ranker for dense text retrieval. In The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022. OpenReview.net.",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Query2doc:",
+          "Query",
+          "Expansion",
+          "with",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_targets": [
+          "Query2doc:",
+          "Query",
+          "Expansion",
+          "with",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "2022",
+          "311",
+          "-336",
+          "2016",
+          "716",
+          "-722",
+          "2020"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 9,
+            "same_target_paper": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The \"References\" section (DOC2_A10) provides a list of papers cited by the current paper, \"Query2doc: Query Expansion with Large Language Models\". These citations can help establish a citation chain if they correspond to other papers within the provided documents. However, without knowing the titles of the other provided papers, it is impossible to determine if there is a direct citation chain among them. Therefore, we need to extract the cited papers and check if they match any of the provided documents.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A10"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...",
+            "Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.",
+        "must_find": [
+          "ordered relations or decision/result mappings",
+          "citation/reference evidence"
+        ],
+        "next_anchor_id": "DOC2_A2",
+        "candidate_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A5",
+          "DOC2_A7",
+          "DOC2_A3"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "low_confidence_keys": [],
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A10"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...",
+            "Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3",
+            "DOC2_A2"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A2",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A10"
+        ],
+        "utility_hits": {
+          "DOC2_A2": [
+            "target_doc_for_reference",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC2_A5": [
+            "target_doc_for_reference",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC2_A7": [
+            "target_doc_for_reference",
+            "target_mentioned",
+            "citation_format_cue"
+          ],
+          "DOC2_A3": [
+            "target_doc_for_reference",
+            "target_mentioned",
+            "citation_format_cue"
+          ]
+        },
+        "utility_score": {
+          "DOC2_A2": 18.0,
+          "DOC2_A5": 18.0,
+          "DOC2_A7": 18.0,
+          "DOC2_A3": 18.0
+        },
+        "relation_hits": {
+          "DOC2_A2": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A10",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A10",
+            "same_target_paper_selected=DOC2_A1"
+          ],
+          "DOC2_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A10",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A10",
+            "same_target_paper_selected=DOC2_A1"
+          ],
+          "DOC2_A7": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A10",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A10",
+            "same_target_paper_selected=DOC2_A1"
+          ],
+          "DOC2_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC2_A10",
+            "supports_selected=DOC2_A1",
+            "same_target_paper_selected=DOC2_A10",
+            "same_target_paper_selected=DOC2_A1"
+          ]
+        },
+        "relation_score": {
+          "DOC2_A2": 19.12,
+          "DOC2_A5": 19.12,
+          "DOC2_A7": 19.12,
+          "DOC2_A3": 14.12
+        },
+        "anchor_role_hits": {
+          "DOC2_A2": [
+            "citation_direction"
+          ],
+          "DOC2_A5": [
+            "citation_direction"
+          ],
+          "DOC2_A7": [
+            "citation_direction"
+          ]
+        },
+        "score_breakdown": {
+          "DOC2_A2": {
+            "local_relevance": 55.0,
+            "answer_utility": 18.0,
+            "coverage": 4.0,
+            "relation": 19.12,
+            "weak_priors": 7.901,
+            "redundancy_penalty": 0.0,
+            "total": 104.021
+          },
+          "DOC2_A5": {
+            "local_relevance": 55.0,
+            "answer_utility": 18.0,
+            "coverage": 4.0,
+            "relation": 19.12,
+            "weak_priors": 7.208,
+            "redundancy_penalty": 0.0,
+            "total": 103.328
+          },
+          "DOC2_A7": {
+            "local_relevance": 55.0,
+            "answer_utility": 18.0,
+            "coverage": 4.0,
+            "relation": 19.12,
+            "weak_priors": 6.921,
+            "redundancy_penalty": 0.0,
+            "total": 103.041
+          },
+          "DOC2_A3": {
+            "local_relevance": 59.0,
+            "answer_utility": 18.0,
+            "coverage": 4.0,
+            "relation": 14.12,
+            "weak_priors": 7.614,
+            "redundancy_penalty": 0.0,
+            "total": 102.734
+          }
+        }
+      },
+      "anchor_id": "DOC2_A2",
+      "plan_think": "The \"Related Work\" section (DOC2_A7) often discusses and cites other relevant papers that might be part of the citation chain. Since we have not found a clear citation chain yet, inspecting this section could provide additional insights into the relationships between the papers.",
+      "info": {
+        "anchor_id": "DOC2_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "Query2doc: Query Expansion with Large Language Models > 1 Introduction",
+        "summary": "Expanded same-section read window around DOC2_A2: Discusses the role of information retrieval (IR) and query expansion techniques. Highlights the effectiveness of LLMs in generating pseudo-documents for query expansion, demonst...",
+        "text": "[DOC2_A2 | Query2doc: Query Expansion with Large Language Models > 1 Introduction]\n## 1 Introduction\n\nInformation retrieval (IR) aims to locate relevant documents from a large corpus given a user issued query. It is a core component in modern search engines and researchers have invested for decades in this field. There are two mainstream paradigms for IR: lexical-based sparse retrieval, such as BM25, and embedding-based dense retrieval (Xiong et al., 2021; Qu et al., 2021). Although dense retrievers perform better when large amounts of labeled data are available (Karpukhin et al., 2020), BM25 remains competitive on out-ofdomain datasets (Thakur et al., 2021).\n\nQuery expansion (Rocchio, 1971; Lavrenko and Croft, 2001) is a long-standing technique that rewrites the query based on pseudo-relevance feedback or external knowledge sources such as WordNet. For sparse retrieval, it can help bridge the lexical gap between the query and the documents. However, query expansion methods like RM3 (Lavrenko and Croft, 2001; Lv and Zhai, 2009) have only shown limited success on popular datasets (Campos et al., 2016), and most state-ofthe-art dense retrievers do not adopt this technique. In the meantime, document expansion methods like doc2query (Nogueira et al., 2019) have proven to be effective for sparse retrieval.\n\nIn this paper, we demonstrate the effectiveness of LLMs (Brown et al., 2020) as query expansion models by generating pseudo-documents conditioned on few-shot prompts. Given that search queries are often short, ambiguous, or lack necessary background information, LLMs can provide relevant information to guide retrieval systems, as they memorize an enormous amount of knowledge and language patterns by pre-training on trillions of tokens.\n\nOur proposed method, called query $2 d o c$, generates pseudo-documents by few-shot prompting LLMs and concatenates them with the original query to form a new query. This method is simple to implement and does not require any changes in training pipelines or model architectures, making it orthogonal to the progress in the field of LLMs and information retrieval. Future methods can easily build upon our query expansion framework.\n\nFor in-domain evaluation, we adopt the MSMARCO passage ranking (Campos et al., 2016), TREC DL 2019 and 2020 datasets. Pseudodocuments are generated by prompting an improved version of GPT-3 text-davinci-003 from OpenAI (Brown et al., 2020). Results show that query $2 d o c$ substantially improves the off-theshelf BM25 algorithm without fine-tuning any model, particularly for hard queries from the TREC DL track. Strong dense retrievers, including DPR (Karpukhin et al., 2020), SimLM (Wang et al., 2023), and E5 (Wang et al., 2022) also benefit from query $2 d o c$, although the gains tend to be diminishing when distilling from a strong cross-encoder based re-ranker. Experiments in zero-shot OOD settings demonstrate that our method outperforms strong baselines on most\ndatasets. Further analysis also reveals the importance of model scales: query2doc works best when combined with the most capable LLMs while small language models only provide marginal improvements over baselines. To aid reproduction, we release all the generations from text-davinci003 at https://huggingface.co/datasets/ intfloat/query2doc_msmarco.\n\n[DOC2_A8 | Query2doc: Query Expansion with Large Language Models > 6 Conclusion]\n## 6 Conclusion\n\nThis paper presents a simple method query $2 d o c$ to leverage LLMs for query expansion. It first prompts LLMs with few-shot examples to generate pseudo-documents and then integrates with existing sparse or dense retrievers by augmenting queries with generated pseudo-documents. The underlying motivation is to distill the LLMs through prompting. Despite its simplicity, empirical evaluations demonstrate consistent improvements across various retrieval models and datasets.\n\n[DOC2_A9 | Query2doc: Query Expansion with Large Language Models > Limitations]\n## Limitations\n\n|  | LLM call | Index search |\n| :---: | :---: | :---: |\n| BM25 | - | $16 \\mathrm{~ms}$ |\n| + query2doc | $>2000 \\mathrm{~ms}$ | $177 \\mathrm{~ms}$ |\n\nTable 6: Latency analysis for retrieval systems with our proposed query2doc. We retrieve the top 100 results for MS-MARCO dev queries with a single thread and then average over all the queries. The latency for LLM API calls depends on server load and is difficult to precisely measure.\n\nAn apparent limitation is the efficiency of retrieval. Our method requires running inference with LLMs which can be considerably slower due to the token-by-token autoregressive decoding. Moreover, with query2doc, searching the inverted index also becomes slower as the number of query terms increases after expansion. This is supported by the benchmarking results in Table 6. Real-world deployment of our method should take these factors into consideration.",
+        "source_window_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A8",
+          "DOC2_A9"
+        ],
+        "primary_anchor_id": "DOC2_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "citation_direction",
+          "entity_binding"
+        ],
+        "anchor_entities": [
+          "Query2doc:",
+          "Query",
+          "Expansion",
+          "with",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_targets": [
+          "Query2doc:",
+          "Query",
+          "Expansion",
+          "with",
+          "Large",
+          "Language",
+          "Models"
+        ],
+        "anchor_value_hints": [
+          "2",
+          "1",
+          "25,",
+          "2021",
+          "2020",
+          "25",
+          "1971",
+          "2001"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "citation_marker"
+          ],
+          "record_type": "paper"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 9,
+            "same_target_paper": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC2_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The introduction section (DOC2_A2) mentions several papers that are relevant to the topic of query expansion and information retrieval. These include references to Rocchio (1971), Lavrenko and Croft (2001), Xiong et al. (2021), Qu et al. (2021), Karpukhin et al. (2020), Thakur et al. (2021), Campos et al. (2016), Nogueira et al. (2019), Brown et al. (2020), and Wang et al. (2022, 2023). These references can potentially help establish a citation chain if they correspond to other papers within the provided documents. However, without knowing the titles of the other provided papers, it is impossible to determine if there is a direct citation chain among them. Therefore, we need to extract the cited papers and check if they match any of the provided documents.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.",
+        "coverage_hints": {
+          "answer_topology": "list",
+          "answer_schema_hint": "Extract ordered local relations or edge facts that can help build the final chain.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A10",
+            "DOC2_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "missing_must_find": [
+            "ordered relations or decision/result mappings",
+            "citation/reference evidence"
+          ],
+          "visited_anchor_texts": [
+            "Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...",
+            "Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I...",
+            "Query2doc: Query Expansion with Large Language Models > 1 Introduction Discusses the role of information retrieval (IR) and query expansion techniques. Highlights the effectiveness of LLMs in generating pseudo-documents for query expansion, demonstrating substantial improvements in both sparse and dense retrieval systems. ## 1 Introduction Information retrieval (IR) aims to locate relevant documents from a large corpus given a user issued query. It is a core component in modern search engines and researchers have invested for decades in this field. There are two mainstream paradigms for IR: lexical-based sparse retrieval, such as BM25, and embedding-based dense retrieval (Xiong et al., 2021; Qu et al., 2021). Although dense retrievers perform better when large amounts of labeled data are available (Karpukhin e..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC2_A9",
+            "DOC2_A8",
+            "DOC2_A7",
+            "DOC2_A6",
+            "DOC2_A5",
+            "DOC2_A4",
+            "DOC2_A3"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A9",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A8",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A7",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A6",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            },
+            {
+              "source_anchor_id": "DOC2_A1",
+              "target_anchor_id": "DOC2_A5",
+              "relation_type": "same_target_paper",
+              "weight": 2.8,
+              "reason": "shared paper target ['Query2doc:', 'Query']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The abstract (DOC2_A1) often contains key information about the paper's contributions and may reference other works that could help establish a citation chain. It's a good starting point to look for citations or references to other papers.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"utility_hits\": {\"DOC2_A7\": [\"citation_format_cue\"], \"DOC2_A10\": [\"citation_format_cue\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A2\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A7\": 3.0, \"DOC2_A10\": 3.0, \"DOC2_A5\": 3.0, \"DOC2_A2\": 3.0}, \"score_breakdown\": {\"DOC2_A7\": {\"local_relevance\": 36.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.921, \"redundancy_penalty\": 0.0, \"total\": 52.921}, \"DOC2_A10\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 12.202, \"redundancy_penalty\": 0.0, \"total\": 50.202}, \"DOC2_A5\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.208, \"redundancy_penalty\": 0.0, \"total\": 49.208}, \"DOC2_A2\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 45.901}}, \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Query2doc: Query Expansion with Large Language Models > Abstract\", \"summary\": \"Expanded same-section read window around DOC2_A1: Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental r...\", \"text\": \"[DOC2_A1 | Query2doc: Query Expansion with Large Language Models > Abstract]\\n#### Abstract\\n\\nThis paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can aid in query disambiguation and guide the retrievers. Experimental results demonstrate that query2doc boosts the performance of BM25 by $3 \\\\%$ to $15 \\\\%$ on ad-hoc IR datasets, such as MSMARCO and TREC DL, without any model fine-tuning. Furthermore, our method also benefits state-of-the-art dense retrievers in terms of both in-domain and out-of-domain results.\\n\\n[DOC2_A7 | Query2doc: Query Expansion with Large Language Models > 5 Related Work]\\n## 5 Related Work\\n\\nQuery Expansion and Document Expansion are two classical techniques to improve retrieval quality, particularly for sparse retrieval systems. Both techniques aim to minimize the lexical gap between the query and the documents. Query expansion typically involves rewriting the query based on relevance feedback (Lavrenko and Croft, 2001; Rocchio, 1971) or lexical resources such as WordNet (Miller, 1992). In cases where labels are not available, the top-k retrieved documents can serve as pseudo-relevance feedback signals (Lv and Zhai, 2009). Liu et al. fine-tunes an encoder-decoder model to generate contextual clues.\\n\\nIn contrast, document expansion enriches the document representation by appending additional relevant terms. Doc2query (Nogueira et al., 2019) trains a seq2seq model to predict pseudo-queries based on documents and then adds generated pseudo-queries to the document index. Learned sparse retrieval models such as SPLADE (Formal et al., 2021) and uniCOIL (Lin and Ma, 2021) also learn document term weighting in an end-to-end fashion. However, most state-of-the-art dense retrievers (Ren et al., 2021; Wang et al., 2023) do not adopt any expansion techniques. Our paper demonstrates that strong dense retrievers also benefit from query expansion using LLMs.\\n\\nLarge Language Models (LLMs) such as GPT-3 (Brown et al., 2020), PaLM (Chowdhery et al., 2022), and LLaMA (Touvron et al., 2023) are trained on trillions of tokens with billions of param- eters, exhibiting unparalleled generalization ability across various tasks. LLMs can follow instructions in a zero-shot manner or conduct in-context learning through few-shot prompting. Labeling a few high-quality examples only requires minimal human effort. In this paper, we employ few-shot prompting to generate pseudo-documents from a given query. A closely related recent work HyDE (Gao et al., 2022) instead focuses on the zeroshot setting and uses embeddings of the pseudodocuments for similarity search. HyDE implicitly assumes that the groundtruth document and pseudodocuments express the same semantics in different words, which may not hold for some queries. In the field of question answering, RECITE (Sun et al., 2022) and GENREAD (Yu et al., 2022) demonstrate that LLMs are powerful context generators and can encode abundant factual knowledge. However, as our analysis shows, LLMs can sometimes generate false claims, hindering their practical application in critical areas.\\n\\n[DOC2_A8 | Query2doc: Query Expansion with Large Language Models > 6 Conclusion]\\n## 6 Conclusion\\n\\nThis paper presents a simple method query $2 d o c$ to leverage LLMs for query expansion. It first prompts LLMs with few-shot examples to generate pseudo-documents and then integrates with existing sparse or dense retrievers by augmenting queries with generated pseudo-documents. The underlying motivation is to distill the LLMs through prompting. Despite its simplicity, empirical evaluations demonstrate consistent improvements across various retrieval models and datasets.\\n\\n[DOC2_A9 | Query2doc: Query Expansion with Large Language Models > Limitations]\\n## Limitations\\n\\n|  | LLM call | Index search |\\n| :---: | :---: | :---: |\\n| BM25 | - | $16 \\\\mathrm{~ms}$ |\\n| + query2doc | $>2000 \\\\mathrm{~ms}$ | $177 \\\\mathrm{~ms}$ |\\n\\nTable 6: Latency analysis for retrieval systems with our proposed query2doc. We retrieve the top 100 results for MS-MARCO dev queries with a single thread and then average over all the queries. The latency for LLM API calls depends on server load and is difficult to precisely measure.\\n\\nAn apparent limitation is the efficiency of retrieval. Our method requires running inference with LLMs which can be considerably slower due to the token-by-token autoregressive decoding. Moreover, with query2doc, searching the inverted index also becomes slower as the number of query terms increases after expansion. This is supported by the benchmarking results in Table 6. Real-world deployment of our method should take these factors into consideration.\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A7\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"entity_binding\"], \"anchor_entities\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_targets\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"3%\", \"15%\", \"25\", \"3\", \"15\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The abstract (DOC2_A1) does not provide explicit citation information that would help establish a citation chain. It mainly describes the paper's contributions and methodology. To find the citation chain, we need to look for specific citations or references to other papers mentioned in the document.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}}</retrieve>\n<think>The \"References\" section (DOC2_A10) is likely to contain citations to other papers, which can help us identify the citation chain. I will inspect this section next.</think>\n<search>{\"current_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A10\", \"candidate_anchor_ids\": [\"DOC2_A10\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A1\"], \"utility_hits\": {\"DOC2_A10\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A2\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A5\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A7\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A10\": 30.0, \"DOC2_A2\": 18.0, \"DOC2_A5\": 18.0, \"DOC2_A7\": 18.0}, \"relation_hits\": {\"DOC2_A10\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"]}, \"relation_score\": {\"DOC2_A10\": 13.56, \"DOC2_A2\": 13.56, \"DOC2_A5\": 13.56, \"DOC2_A7\": 13.56}, \"anchor_role_hits\": {\"DOC2_A10\": [\"citation_direction\"], \"DOC2_A2\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A7\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A10\": {\"local_relevance\": 55.0, \"answer_utility\": 30.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 12.202, \"redundancy_penalty\": 0.0, \"total\": 114.762}, \"DOC2_A2\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 98.461}, \"DOC2_A5\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.208, \"redundancy_penalty\": 0.0, \"total\": 97.768}, \"DOC2_A7\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 6.921, \"redundancy_penalty\": 0.0, \"total\": 97.481}}}</search>\n<info>{\"anchor_id\": \"DOC2_A10\", \"anchor_type\": \"attribution_region\", \"section_path\": \"Query2doc: Query Expansion with Large Language Models > References\", \"summary\": \"Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research.\", \"text\": \"## References\\n\\nAlexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer.\\n\\nVera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. In European Conference on Information Retrieval, pages $716-722$. Springer.\\n\\nTom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language models are few-shot learners. In Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020, virtual.\\n\\nDaniel Fernando Campos, Tri Nguyen, Mir Rosenberg, Xia Song, Jianfeng Gao, Saurabh Tiwary, Rangan Majumder, Li Deng, and Bhaskar Mitra. 2016. Ms marco: A human generated machine reading comprehension dataset. ArXiv preprint, abs/1611.09268.\\n\\nAakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam M. Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Benton C. Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier García, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Díaz, Orhan Firat, Michele Catasta, Jason Wei, Kathleen S. Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022. Palm: Scaling language modeling with pathways. ArXiv preprint, abs/2204.02311.\\n\\nNick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Campos, and Ellen M Voorhees. 2020a. Overview of the trec 2019 deep learning track. ArXiv preprint, abs/2003.07820.\\n\\nNick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Fernando Campos, and Ellen M. Voorhees. 2020b. Overview of the trec 2020 deep learning track. ArXiv preprint, abs/2003.07820.\\n\\nThibault Formal, Benjamin Piwowarski, and Stéphane Clinchant. 2021. Splade: Sparse lexical and expansion model for first stage ranking. Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.\\n\\nLuyu Gao and Jamie Callan. 2021. Condenser: a pretraining architecture for dense retrieval. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 981-993, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.\\n\\nLuyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. 2022. Precise zero-shot dense retrieval without relevance labels. ArXiv preprint, abs/2212.10496.\\n\\nFaegheh Hasibi, Fedor Nikolaev, Chenyan Xiong, Krisztian Balog, Svein Erik Bratsberg, Alexander Kotov, and Jamie Callan. 2017. Dbpedia-entity v2: A test collection for entity search. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval, Shinjuku, Tokyo, Japan, August 7-11, 2017, pages $1265-1268$. ACM.\\n\\nVladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, and\\n\\nWen-tau Yih. 2020. Dense passage retrieval for opendomain question answering. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 6769-6781, Online. Association for Computational Linguistics.\\n\\nVictor Lavrenko and W. Bruce Croft. 2001. Relevancebased language models. ACM SIGIR Forum, 51:260 -267 .\\n\\nJimmy J. Lin and Xueguang Ma. 2021. A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques. ArXiv preprint, abs/2106.14807.\\n\\nJimmy J. Lin, Xueguang Ma, Sheng-Chieh Lin, JhengHong Yang, Ronak Pradeep, Rodrigo Nogueira, and David R. Cheriton. 2021. Pyserini: A python toolkit for reproducible information retrieval research with sparse and dense representations. Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.\\n\\nLinqing Liu, Minghan Li, Jimmy Lin, Sebastian Riedel, and Pontus Stenetorp. 2022. Query expansion using contextual clue sampling with language models. ArXiv preprint, abs/2210.07093.\\n\\nYuanhua Lv and ChengXiang Zhai. 2009. A comparative study of methods for estimating query language models with pseudo feedback. Proceedings of the 18th ACM conference on Information and knowledge management.\\n\\nGeorge A. Miller. 1992. WordNet: A lexical database for English. In Speech and Natural Language: Proceedings of a Workshop Held at Harriman, New York, February 23-26, 1992.\\n\\nRodrigo Nogueira and Jimmy Lin. From doc2query to docttttquery.\\n\\nRodrigo Nogueira, Wei Yang, Jimmy J. Lin, and Kyunghyun Cho. 2019. Document expansion by query prediction. ArXiv preprint, abs/1904.08375.\\n\\nOpenAI. 2023. Gpt-4 technical report. ArXiv, abs/2303.08774.\\n\\nOfir Press, Muru Zhang, Sewon Min, Ludwig Schmidt, Noah A Smith, and Mike Lewis. 2022. Measuring and narrowing the compositionality gap in language models. arXiv preprint arXiv:2210.03350.\\n\\nYingqi Qu, Yuchen Ding, Jing Liu, Kai Liu, Ruiyang Ren, Wayne Xin Zhao, Daxiang Dong, Hua Wu, and Haifeng Wang. 2021. RocketQA: An optimized training approach to dense passage retrieval for opendomain question answering. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pages 5835-5847, Online. Association for Computational Linguistics.\\nRuiyang Ren, Yingqi Qu, Jing Liu, Wayne Xin Zhao, QiaoQiao She, Hua Wu, Haifeng Wang, and Ji-Rong Wen. 2021. RocketQAv2: A joint training method for dense passage retrieval and passage re-ranking. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 2825-2835, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.\\n\\nJ. J. Rocchio. 1971. Relevance feedback in information retrieval.\\n\\nZhiqing Sun, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. Recitation-augmented language models. ArXiv preprint, abs/2210.01296.\\n\\nNandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, and Iryna Gurevych. 2021. Beir: A heterogeneous benchmark for zero-shot evaluation of information retrieval models. In Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2).\\n\\nHugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aur'elien Rodriguez, Armand Joulin, Edouard Grave, and Guillaume Lample. 2023. Llama: Open and efficient foundation language models. ArXiv preprint, abs/2302.13971.\\n\\nEllen Voorhees, Tasmeer Alam, Steven Bedrick, Dina Demner-Fushman, William R Hersh, Kyle Lo, Kirk Roberts, Ian Soboroff, and Lucy Lu Wang. 2021. Trec-covid: constructing a pandemic information retrieval test collection. In ACM SIGIR Forum, volume 54, pages 1-12. ACM New York, NY, USA.\\n\\nDavid Wadden, Shanchuan Lin, Kyle Lo, Lucy Lu Wang, Madeleine van Zuylen, Arman Cohan, and Hannaneh Hajishirzi. 2020. Fact or fiction: Verifying scientific claims. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 7534-7550, Online. Association for Computational Linguistics.\\n\\nLiang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, and Furu Wei. 2022. Text embeddings by weaklysupervised contrastive pre-training. ArXiv preprint, $\\\\mathrm{abs} / 2212.03533$.\\n\\nLiang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, and Furu Wei. 2023. SimLM: Pre-training with representation bottleneck for dense passage retrieval. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 2244-2258, Toronto, Canada. Association for Computational Linguistics.\\n\\nLee Xiong, Chenyan Xiong, Ye Li, Kwok-Fung Tang, Jialin Liu, Paul N. Bennett, Junaid Ahmed, and Arnold Overwijk. 2021. Approximate nearest neighbor negative contrastive learning for dense text retrieval. In 9th International Conference on Learning\\n\\nRepresentations, ICLR 2021, Virtual Event, Austria, May 3-7, 2021. OpenReview.net.\\n\\nW. Yu, Dan Iter, Shuohang Wang, Yichong Xu, Mingxuan Ju, Soumya Sanyal, Chenguang Zhu, Michael Zeng, and Meng Jiang. 2022. Generate rather than retrieve: Large language models are strong context generators. ArXiv preprint, abs/2209.10063.\\n\\nHang Zhang, Yeyun Gong, Yelong Shen, Jiancheng Lv, Nan Duan, and Weizhu Chen. 2022. Adversarial retriever-ranker for dense text retrieval. In The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022. OpenReview.net.\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_targets\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"2022\", \"311\", \"-336\", \"2016\", \"716\", \"-722\", \"2020\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The \"References\" section (DOC2_A10) provides a list of papers cited by the current paper, \"Query2doc: Query Expansion with Large Language Models\". These citations can help establish a citation chain if they correspond to other papers within the provided documents. However, without knowing the titles of the other provided papers, it is impossible to determine if there is a direct citation chain among them. Therefore, we need to extract the cited papers and check if they match any of the provided documents.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\", \"Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}}</retrieve>\n<think>The \"Related Work\" section (DOC2_A7) often discusses and cites other relevant papers that might be part of the citation chain. Since we have not found a clear citation chain yet, inspecting this section could provide additional insights into the relationships between the papers.</think>\n<search>{\"current_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A5\", \"DOC2_A7\", \"DOC2_A3\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\", \"Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\"], \"utility_hits\": {\"DOC2_A2\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A5\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A7\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A3\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A2\": 18.0, \"DOC2_A5\": 18.0, \"DOC2_A7\": 18.0, \"DOC2_A3\": 18.0}, \"relation_hits\": {\"DOC2_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"]}, \"relation_score\": {\"DOC2_A2\": 19.12, \"DOC2_A5\": 19.12, \"DOC2_A7\": 19.12, \"DOC2_A3\": 14.12}, \"anchor_role_hits\": {\"DOC2_A2\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A7\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A2\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 104.021}, \"DOC2_A5\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 7.208, \"redundancy_penalty\": 0.0, \"total\": 103.328}, \"DOC2_A7\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 6.921, \"redundancy_penalty\": 0.0, \"total\": 103.041}, \"DOC2_A3\": {\"local_relevance\": 59.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 14.12, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 102.734}}}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Query2doc: Query Expansion with Large Language Models > 1 Introduction\", \"summary\": \"Expanded same-section read window around DOC2_A2: Discusses the role of information retrieval (IR) and query expansion techniques. Highlights the effectiveness of LLMs in generating pseudo-documents for query expansion, demonst...\", \"text\": \"[DOC2_A2 | Query2doc: Query Expansion with Large Language Models > 1 Introduction]\\n## 1 Introduction\\n\\nInformation retrieval (IR) aims to locate relevant documents from a large corpus given a user issued query. It is a core component in modern search engines and researchers have invested for decades in this field. There are two mainstream paradigms for IR: lexical-based sparse retrieval, such as BM25, and embedding-based dense retrieval (Xiong et al., 2021; Qu et al., 2021). Although dense retrievers perform better when large amounts of labeled data are available (Karpukhin et al., 2020), BM25 remains competitive on out-ofdomain datasets (Thakur et al., 2021).\\n\\nQuery expansion (Rocchio, 1971; Lavrenko and Croft, 2001) is a long-standing technique that rewrites the query based on pseudo-relevance feedback or external knowledge sources such as WordNet. For sparse retrieval, it can help bridge the lexical gap between the query and the documents. However, query expansion methods like RM3 (Lavrenko and Croft, 2001; Lv and Zhai, 2009) have only shown limited success on popular datasets (Campos et al., 2016), and most state-ofthe-art dense retrievers do not adopt this technique. In the meantime, document expansion methods like doc2query (Nogueira et al., 2019) have proven to be effective for sparse retrieval.\\n\\nIn this paper, we demonstrate the effectiveness of LLMs (Brown et al., 2020) as query expansion models by generating pseudo-documents conditioned on few-shot prompts. Given that search queries are often short, ambiguous, or lack necessary background information, LLMs can provide relevant information to guide retrieval systems, as they memorize an enormous amount of knowledge and language patterns by pre-training on trillions of tokens.\\n\\nOur proposed method, called query $2 d o c$, generates pseudo-documents by few-shot prompting LLMs and concatenates them with the original query to form a new query. This method is simple to implement and does not require any changes in training pipelines or model architectures, making it orthogonal to the progress in the field of LLMs and information retrieval. Future methods can easily build upon our query expansion framework.\\n\\nFor in-domain evaluation, we adopt the MSMARCO passage ranking (Campos et al., 2016), TREC DL 2019 and 2020 datasets. Pseudodocuments are generated by prompting an improved version of GPT-3 text-davinci-003 from OpenAI (Brown et al., 2020). Results show that query $2 d o c$ substantially improves the off-theshelf BM25 algorithm without fine-tuning any model, particularly for hard queries from the TREC DL track. Strong dense retrievers, including DPR (Karpukhin et al., 2020), SimLM (Wang et al., 2023), and E5 (Wang et al., 2022) also benefit from query $2 d o c$, although the gains tend to be diminishing when distilling from a strong cross-encoder based re-ranker. Experiments in zero-shot OOD settings demonstrate that our method outperforms strong baselines on most\\ndatasets. Further analysis also reveals the importance of model scales: query2doc works best when combined with the most capable LLMs while small language models only provide marginal improvements over baselines. To aid reproduction, we release all the generations from text-davinci003 at https://huggingface.co/datasets/ intfloat/query2doc_msmarco.\\n\\n[DOC2_A8 | Query2doc: Query Expansion with Large Language Models > 6 Conclusion]\\n## 6 Conclusion\\n\\nThis paper presents a simple method query $2 d o c$ to leverage LLMs for query expansion. It first prompts LLMs with few-shot examples to generate pseudo-documents and then integrates with existing sparse or dense retrievers by augmenting queries with generated pseudo-documents. The underlying motivation is to distill the LLMs through prompting. Despite its simplicity, empirical evaluations demonstrate consistent improvements across various retrieval models and datasets.\\n\\n[DOC2_A9 | Query2doc: Query Expansion with Large Language Models > Limitations]\\n## Limitations\\n\\n|  | LLM call | Index search |\\n| :---: | :---: | :---: |\\n| BM25 | - | $16 \\\\mathrm{~ms}$ |\\n| + query2doc | $>2000 \\\\mathrm{~ms}$ | $177 \\\\mathrm{~ms}$ |\\n\\nTable 6: Latency analysis for retrieval systems with our proposed query2doc. We retrieve the top 100 results for MS-MARCO dev queries with a single thread and then average over all the queries. The latency for LLM API calls depends on server load and is difficult to precisely measure.\\n\\nAn apparent limitation is the efficiency of retrieval. Our method requires running inference with LLMs which can be considerably slower due to the token-by-token autoregressive decoding. Moreover, with query2doc, searching the inverted index also becomes slower as the number of query terms increases after expansion. This is supported by the benchmarking results in Table 6. Real-world deployment of our method should take these factors into consideration.\", \"source_window_anchor_ids\": [\"DOC2_A2\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_targets\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"1\", \"25,\", \"2021\", \"2020\", \"25\", \"1971\", \"2001\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The introduction section (DOC2_A2) mentions several papers that are relevant to the topic of query expansion and information retrieval. These include references to Rocchio (1971), Lavrenko and Croft (2001), Xiong et al. (2021), Qu et al. (2021), Karpukhin et al. (2020), Thakur et al. (2021), Campos et al. (2016), Nogueira et al. (2019), Brown et al. (2020), and Wang et al. (2022, 2023). These references can potentially help establish a citation chain if they correspond to other papers within the provided documents. However, without knowing the titles of the other provided papers, it is impossible to determine if there is a direct citation chain among them. Therefore, we need to extract the cited papers and check if they match any of the provided documents.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\", \"DOC2_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\", \"Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I...\", \"Query2doc: Query Expansion with Large Language Models > 1 Introduction Discusses the role of information retrieval (IR) and query expansion techniques. Highlights the effectiveness of LLMs in generating pseudo-documents for query expansion, demonstrating substantial improvements in both sparse and dense retrieval systems. ## 1 Introduction Information retrieval (IR) aims to locate relevant documents from a large corpus given a user issued query. It is a core component in modern search engines and researchers have invested for decades in this field. There are two mainstream paradigms for IR: lexical-based sparse retrieval, such as BM25, and embedding-based dense retrieval (Xiong et al., 2021; Qu et al., 2021). Although dense retrievers perform better when large amounts of labeled data are available (Karpukhin e...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The abstract (DOC2_A1) often contains key information about the paper's contributions and may reference other works that could help establish a citation chain. It's a good starting point to look for citations or references to other papers.</think>\n<search>{\"current_query\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A1\", \"candidate_anchor_ids\": [\"DOC2_A1\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"utility_hits\": {\"DOC2_A7\": [\"citation_format_cue\"], \"DOC2_A10\": [\"citation_format_cue\"], \"DOC2_A5\": [\"citation_format_cue\"], \"DOC2_A2\": [\"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A7\": 3.0, \"DOC2_A10\": 3.0, \"DOC2_A5\": 3.0, \"DOC2_A2\": 3.0}, \"score_breakdown\": {\"DOC2_A7\": {\"local_relevance\": 36.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 6.921, \"redundancy_penalty\": 0.0, \"total\": 52.921}, \"DOC2_A10\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 12.202, \"redundancy_penalty\": 0.0, \"total\": 50.202}, \"DOC2_A5\": {\"local_relevance\": 32.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.208, \"redundancy_penalty\": 0.0, \"total\": 49.208}, \"DOC2_A2\": {\"local_relevance\": 28.0, \"answer_utility\": 3.0, \"coverage\": 2.0, \"relation\": 5.0, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 45.901}}, \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Query2doc: Query Expansion with Large Language Models > Abstract\", \"summary\": \"Expanded same-section read window around DOC2_A1: Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental r...\", \"text\": \"[DOC2_A1 | Query2doc: Query Expansion with Large Language Models > Abstract]\\n#### Abstract\\n\\nThis paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can aid in query disambiguation and guide the retrievers. Experimental results demonstrate that query2doc boosts the performance of BM25 by $3 \\\\%$ to $15 \\\\%$ on ad-hoc IR datasets, such as MSMARCO and TREC DL, without any model fine-tuning. Furthermore, our method also benefits state-of-the-art dense retrievers in terms of both in-domain and out-of-domain results.\\n\\n[DOC2_A7 | Query2doc: Query Expansion with Large Language Models > 5 Related Work]\\n## 5 Related Work\\n\\nQuery Expansion and Document Expansion are two classical techniques to improve retrieval quality, particularly for sparse retrieval systems. Both techniques aim to minimize the lexical gap between the query and the documents. Query expansion typically involves rewriting the query based on relevance feedback (Lavrenko and Croft, 2001; Rocchio, 1971) or lexical resources such as WordNet (Miller, 1992). In cases where labels are not available, the top-k retrieved documents can serve as pseudo-relevance feedback signals (Lv and Zhai, 2009). Liu et al. fine-tunes an encoder-decoder model to generate contextual clues.\\n\\nIn contrast, document expansion enriches the document representation by appending additional relevant terms. Doc2query (Nogueira et al., 2019) trains a seq2seq model to predict pseudo-queries based on documents and then adds generated pseudo-queries to the document index. Learned sparse retrieval models such as SPLADE (Formal et al., 2021) and uniCOIL (Lin and Ma, 2021) also learn document term weighting in an end-to-end fashion. However, most state-of-the-art dense retrievers (Ren et al., 2021; Wang et al., 2023) do not adopt any expansion techniques. Our paper demonstrates that strong dense retrievers also benefit from query expansion using LLMs.\\n\\nLarge Language Models (LLMs) such as GPT-3 (Brown et al., 2020), PaLM (Chowdhery et al., 2022), and LLaMA (Touvron et al., 2023) are trained on trillions of tokens with billions of param- eters, exhibiting unparalleled generalization ability across various tasks. LLMs can follow instructions in a zero-shot manner or conduct in-context learning through few-shot prompting. Labeling a few high-quality examples only requires minimal human effort. In this paper, we employ few-shot prompting to generate pseudo-documents from a given query. A closely related recent work HyDE (Gao et al., 2022) instead focuses on the zeroshot setting and uses embeddings of the pseudodocuments for similarity search. HyDE implicitly assumes that the groundtruth document and pseudodocuments express the same semantics in different words, which may not hold for some queries. In the field of question answering, RECITE (Sun et al., 2022) and GENREAD (Yu et al., 2022) demonstrate that LLMs are powerful context generators and can encode abundant factual knowledge. However, as our analysis shows, LLMs can sometimes generate false claims, hindering their practical application in critical areas.\\n\\n[DOC2_A8 | Query2doc: Query Expansion with Large Language Models > 6 Conclusion]\\n## 6 Conclusion\\n\\nThis paper presents a simple method query $2 d o c$ to leverage LLMs for query expansion. It first prompts LLMs with few-shot examples to generate pseudo-documents and then integrates with existing sparse or dense retrievers by augmenting queries with generated pseudo-documents. The underlying motivation is to distill the LLMs through prompting. Despite its simplicity, empirical evaluations demonstrate consistent improvements across various retrieval models and datasets.\\n\\n[DOC2_A9 | Query2doc: Query Expansion with Large Language Models > Limitations]\\n## Limitations\\n\\n|  | LLM call | Index search |\\n| :---: | :---: | :---: |\\n| BM25 | - | $16 \\\\mathrm{~ms}$ |\\n| + query2doc | $>2000 \\\\mathrm{~ms}$ | $177 \\\\mathrm{~ms}$ |\\n\\nTable 6: Latency analysis for retrieval systems with our proposed query2doc. We retrieve the top 100 results for MS-MARCO dev queries with a single thread and then average over all the queries. The latency for LLM API calls depends on server load and is difficult to precisely measure.\\n\\nAn apparent limitation is the efficiency of retrieval. Our method requires running inference with LLMs which can be considerably slower due to the token-by-token autoregressive decoding. Moreover, with query2doc, searching the inverted index also becomes slower as the number of query terms increases after expansion. This is supported by the benchmarking results in Table 6. Real-world deployment of our method should take these factors into consideration.\", \"source_window_anchor_ids\": [\"DOC2_A1\", \"DOC2_A7\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A1\", \"anchor_role_candidates\": [\"value_evidence\", \"entity_binding\"], \"anchor_entities\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_targets\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"3%\", \"15%\", \"25\", \"3\", \"15\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The abstract (DOC2_A1) does not provide explicit citation information that would help establish a citation chain. It mainly describes the paper's contributions and methodology. To find the citation chain, we need to look for specific citations or references to other papers mentioned in the document.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}}</retrieve>\n<think>The \"References\" section (DOC2_A10) is likely to contain citations to other papers, which can help us identify the citation chain. I will inspect this section next.</think>\n<search>{\"current_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A10\", \"candidate_anchor_ids\": [\"DOC2_A10\", \"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A10\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A1\"], \"utility_hits\": {\"DOC2_A10\": [\"target_doc_for_reference\", \"reference_section\", \"target_reference_section\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A2\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A5\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A7\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A10\": 30.0, \"DOC2_A2\": 18.0, \"DOC2_A5\": 18.0, \"DOC2_A7\": 18.0}, \"relation_hits\": {\"DOC2_A10\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A1\"]}, \"relation_score\": {\"DOC2_A10\": 13.56, \"DOC2_A2\": 13.56, \"DOC2_A5\": 13.56, \"DOC2_A7\": 13.56}, \"anchor_role_hits\": {\"DOC2_A10\": [\"citation_direction\"], \"DOC2_A2\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A7\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A10\": {\"local_relevance\": 55.0, \"answer_utility\": 30.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 12.202, \"redundancy_penalty\": 0.0, \"total\": 114.762}, \"DOC2_A2\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 98.461}, \"DOC2_A5\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 7.208, \"redundancy_penalty\": 0.0, \"total\": 97.768}, \"DOC2_A7\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 13.56, \"weak_priors\": 6.921, \"redundancy_penalty\": 0.0, \"total\": 97.481}}}</search>\n<info>{\"anchor_id\": \"DOC2_A10\", \"anchor_type\": \"attribution_region\", \"section_path\": \"Query2doc: Query Expansion with Large Language Models > References\", \"summary\": \"Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research.\", \"text\": \"## References\\n\\nAlexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer.\\n\\nVera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. In European Conference on Information Retrieval, pages $716-722$. Springer.\\n\\nTom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language models are few-shot learners. In Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6-12, 2020, virtual.\\n\\nDaniel Fernando Campos, Tri Nguyen, Mir Rosenberg, Xia Song, Jianfeng Gao, Saurabh Tiwary, Rangan Majumder, Li Deng, and Bhaskar Mitra. 2016. Ms marco: A human generated machine reading comprehension dataset. ArXiv preprint, abs/1611.09268.\\n\\nAakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam M. Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Benton C. Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier García, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Díaz, Orhan Firat, Michele Catasta, Jason Wei, Kathleen S. Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022. Palm: Scaling language modeling with pathways. ArXiv preprint, abs/2204.02311.\\n\\nNick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Campos, and Ellen M Voorhees. 2020a. Overview of the trec 2019 deep learning track. ArXiv preprint, abs/2003.07820.\\n\\nNick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Fernando Campos, and Ellen M. Voorhees. 2020b. Overview of the trec 2020 deep learning track. ArXiv preprint, abs/2003.07820.\\n\\nThibault Formal, Benjamin Piwowarski, and Stéphane Clinchant. 2021. Splade: Sparse lexical and expansion model for first stage ranking. Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.\\n\\nLuyu Gao and Jamie Callan. 2021. Condenser: a pretraining architecture for dense retrieval. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 981-993, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.\\n\\nLuyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan. 2022. Precise zero-shot dense retrieval without relevance labels. ArXiv preprint, abs/2212.10496.\\n\\nFaegheh Hasibi, Fedor Nikolaev, Chenyan Xiong, Krisztian Balog, Svein Erik Bratsberg, Alexander Kotov, and Jamie Callan. 2017. Dbpedia-entity v2: A test collection for entity search. In Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval, Shinjuku, Tokyo, Japan, August 7-11, 2017, pages $1265-1268$. ACM.\\n\\nVladimir Karpukhin, Barlas Oguz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, and\\n\\nWen-tau Yih. 2020. Dense passage retrieval for opendomain question answering. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 6769-6781, Online. Association for Computational Linguistics.\\n\\nVictor Lavrenko and W. Bruce Croft. 2001. Relevancebased language models. ACM SIGIR Forum, 51:260 -267 .\\n\\nJimmy J. Lin and Xueguang Ma. 2021. A few brief notes on deepimpact, coil, and a conceptual framework for information retrieval techniques. ArXiv preprint, abs/2106.14807.\\n\\nJimmy J. Lin, Xueguang Ma, Sheng-Chieh Lin, JhengHong Yang, Ronak Pradeep, Rodrigo Nogueira, and David R. Cheriton. 2021. Pyserini: A python toolkit for reproducible information retrieval research with sparse and dense representations. Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.\\n\\nLinqing Liu, Minghan Li, Jimmy Lin, Sebastian Riedel, and Pontus Stenetorp. 2022. Query expansion using contextual clue sampling with language models. ArXiv preprint, abs/2210.07093.\\n\\nYuanhua Lv and ChengXiang Zhai. 2009. A comparative study of methods for estimating query language models with pseudo feedback. Proceedings of the 18th ACM conference on Information and knowledge management.\\n\\nGeorge A. Miller. 1992. WordNet: A lexical database for English. In Speech and Natural Language: Proceedings of a Workshop Held at Harriman, New York, February 23-26, 1992.\\n\\nRodrigo Nogueira and Jimmy Lin. From doc2query to docttttquery.\\n\\nRodrigo Nogueira, Wei Yang, Jimmy J. Lin, and Kyunghyun Cho. 2019. Document expansion by query prediction. ArXiv preprint, abs/1904.08375.\\n\\nOpenAI. 2023. Gpt-4 technical report. ArXiv, abs/2303.08774.\\n\\nOfir Press, Muru Zhang, Sewon Min, Ludwig Schmidt, Noah A Smith, and Mike Lewis. 2022. Measuring and narrowing the compositionality gap in language models. arXiv preprint arXiv:2210.03350.\\n\\nYingqi Qu, Yuchen Ding, Jing Liu, Kai Liu, Ruiyang Ren, Wayne Xin Zhao, Daxiang Dong, Hua Wu, and Haifeng Wang. 2021. RocketQA: An optimized training approach to dense passage retrieval for opendomain question answering. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pages 5835-5847, Online. Association for Computational Linguistics.\\nRuiyang Ren, Yingqi Qu, Jing Liu, Wayne Xin Zhao, QiaoQiao She, Hua Wu, Haifeng Wang, and Ji-Rong Wen. 2021. RocketQAv2: A joint training method for dense passage retrieval and passage re-ranking. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 2825-2835, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.\\n\\nJ. J. Rocchio. 1971. Relevance feedback in information retrieval.\\n\\nZhiqing Sun, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. Recitation-augmented language models. ArXiv preprint, abs/2210.01296.\\n\\nNandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, and Iryna Gurevych. 2021. Beir: A heterogeneous benchmark for zero-shot evaluation of information retrieval models. In Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2).\\n\\nHugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aur'elien Rodriguez, Armand Joulin, Edouard Grave, and Guillaume Lample. 2023. Llama: Open and efficient foundation language models. ArXiv preprint, abs/2302.13971.\\n\\nEllen Voorhees, Tasmeer Alam, Steven Bedrick, Dina Demner-Fushman, William R Hersh, Kyle Lo, Kirk Roberts, Ian Soboroff, and Lucy Lu Wang. 2021. Trec-covid: constructing a pandemic information retrieval test collection. In ACM SIGIR Forum, volume 54, pages 1-12. ACM New York, NY, USA.\\n\\nDavid Wadden, Shanchuan Lin, Kyle Lo, Lucy Lu Wang, Madeleine van Zuylen, Arman Cohan, and Hannaneh Hajishirzi. 2020. Fact or fiction: Verifying scientific claims. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pages 7534-7550, Online. Association for Computational Linguistics.\\n\\nLiang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, and Furu Wei. 2022. Text embeddings by weaklysupervised contrastive pre-training. ArXiv preprint, $\\\\mathrm{abs} / 2212.03533$.\\n\\nLiang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, and Furu Wei. 2023. SimLM: Pre-training with representation bottleneck for dense passage retrieval. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 2244-2258, Toronto, Canada. Association for Computational Linguistics.\\n\\nLee Xiong, Chenyan Xiong, Ye Li, Kwok-Fung Tang, Jialin Liu, Paul N. Bennett, Junaid Ahmed, and Arnold Overwijk. 2021. Approximate nearest neighbor negative contrastive learning for dense text retrieval. In 9th International Conference on Learning\\n\\nRepresentations, ICLR 2021, Virtual Event, Austria, May 3-7, 2021. OpenReview.net.\\n\\nW. Yu, Dan Iter, Shuohang Wang, Yichong Xu, Mingxuan Ju, Soumya Sanyal, Chenguang Zhu, Michael Zeng, and Meng Jiang. 2022. Generate rather than retrieve: Large language models are strong context generators. ArXiv preprint, abs/2209.10063.\\n\\nHang Zhang, Yeyun Gong, Yelong Shen, Jiancheng Lv, Nan Duan, and Weizhu Chen. 2022. Adversarial retriever-ranker for dense text retrieval. In The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022. OpenReview.net.\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_targets\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"2022\", \"311\", \"-336\", \"2016\", \"716\", \"-722\", \"2020\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The \"References\" section (DOC2_A10) provides a list of papers cited by the current paper, \"Query2doc: Query Expansion with Large Language Models\". These citations can help establish a citation chain if they correspond to other papers within the provided documents. However, without knowing the titles of the other provided papers, it is impossible to determine if there is a direct citation chain among them. Therefore, we need to extract the cited papers and check if they match any of the provided documents.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\", \"Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}}</retrieve>\n<think>The \"Related Work\" section (DOC2_A7) often discusses and cites other relevant papers that might be part of the citation chain. Since we have not found a clear citation chain yet, inspecting this section could provide additional insights into the relationships between the papers.</think>\n<search>{\"current_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A5\", \"DOC2_A7\", \"DOC2_A3\"], \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\", \"Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A2\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}, \"avoid_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\"], \"utility_hits\": {\"DOC2_A2\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A5\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A7\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"], \"DOC2_A3\": [\"target_doc_for_reference\", \"target_mentioned\", \"citation_format_cue\"]}, \"utility_score\": {\"DOC2_A2\": 18.0, \"DOC2_A5\": 18.0, \"DOC2_A7\": 18.0, \"DOC2_A3\": 18.0}, \"relation_hits\": {\"DOC2_A2\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A7\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"], \"DOC2_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC2_A10\", \"supports_selected=DOC2_A1\", \"same_target_paper_selected=DOC2_A10\", \"same_target_paper_selected=DOC2_A1\"]}, \"relation_score\": {\"DOC2_A2\": 19.12, \"DOC2_A5\": 19.12, \"DOC2_A7\": 19.12, \"DOC2_A3\": 14.12}, \"anchor_role_hits\": {\"DOC2_A2\": [\"citation_direction\"], \"DOC2_A5\": [\"citation_direction\"], \"DOC2_A7\": [\"citation_direction\"]}, \"score_breakdown\": {\"DOC2_A2\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 7.901, \"redundancy_penalty\": 0.0, \"total\": 104.021}, \"DOC2_A5\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 7.208, \"redundancy_penalty\": 0.0, \"total\": 103.328}, \"DOC2_A7\": {\"local_relevance\": 55.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 19.12, \"weak_priors\": 6.921, \"redundancy_penalty\": 0.0, \"total\": 103.041}, \"DOC2_A3\": {\"local_relevance\": 59.0, \"answer_utility\": 18.0, \"coverage\": 4.0, \"relation\": 14.12, \"weak_priors\": 7.614, \"redundancy_penalty\": 0.0, \"total\": 102.734}}}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"Query2doc: Query Expansion with Large Language Models > 1 Introduction\", \"summary\": \"Expanded same-section read window around DOC2_A2: Discusses the role of information retrieval (IR) and query expansion techniques. Highlights the effectiveness of LLMs in generating pseudo-documents for query expansion, demonst...\", \"text\": \"[DOC2_A2 | Query2doc: Query Expansion with Large Language Models > 1 Introduction]\\n## 1 Introduction\\n\\nInformation retrieval (IR) aims to locate relevant documents from a large corpus given a user issued query. It is a core component in modern search engines and researchers have invested for decades in this field. There are two mainstream paradigms for IR: lexical-based sparse retrieval, such as BM25, and embedding-based dense retrieval (Xiong et al., 2021; Qu et al., 2021). Although dense retrievers perform better when large amounts of labeled data are available (Karpukhin et al., 2020), BM25 remains competitive on out-ofdomain datasets (Thakur et al., 2021).\\n\\nQuery expansion (Rocchio, 1971; Lavrenko and Croft, 2001) is a long-standing technique that rewrites the query based on pseudo-relevance feedback or external knowledge sources such as WordNet. For sparse retrieval, it can help bridge the lexical gap between the query and the documents. However, query expansion methods like RM3 (Lavrenko and Croft, 2001; Lv and Zhai, 2009) have only shown limited success on popular datasets (Campos et al., 2016), and most state-ofthe-art dense retrievers do not adopt this technique. In the meantime, document expansion methods like doc2query (Nogueira et al., 2019) have proven to be effective for sparse retrieval.\\n\\nIn this paper, we demonstrate the effectiveness of LLMs (Brown et al., 2020) as query expansion models by generating pseudo-documents conditioned on few-shot prompts. Given that search queries are often short, ambiguous, or lack necessary background information, LLMs can provide relevant information to guide retrieval systems, as they memorize an enormous amount of knowledge and language patterns by pre-training on trillions of tokens.\\n\\nOur proposed method, called query $2 d o c$, generates pseudo-documents by few-shot prompting LLMs and concatenates them with the original query to form a new query. This method is simple to implement and does not require any changes in training pipelines or model architectures, making it orthogonal to the progress in the field of LLMs and information retrieval. Future methods can easily build upon our query expansion framework.\\n\\nFor in-domain evaluation, we adopt the MSMARCO passage ranking (Campos et al., 2016), TREC DL 2019 and 2020 datasets. Pseudodocuments are generated by prompting an improved version of GPT-3 text-davinci-003 from OpenAI (Brown et al., 2020). Results show that query $2 d o c$ substantially improves the off-theshelf BM25 algorithm without fine-tuning any model, particularly for hard queries from the TREC DL track. Strong dense retrievers, including DPR (Karpukhin et al., 2020), SimLM (Wang et al., 2023), and E5 (Wang et al., 2022) also benefit from query $2 d o c$, although the gains tend to be diminishing when distilling from a strong cross-encoder based re-ranker. Experiments in zero-shot OOD settings demonstrate that our method outperforms strong baselines on most\\ndatasets. Further analysis also reveals the importance of model scales: query2doc works best when combined with the most capable LLMs while small language models only provide marginal improvements over baselines. To aid reproduction, we release all the generations from text-davinci003 at https://huggingface.co/datasets/ intfloat/query2doc_msmarco.\\n\\n[DOC2_A8 | Query2doc: Query Expansion with Large Language Models > 6 Conclusion]\\n## 6 Conclusion\\n\\nThis paper presents a simple method query $2 d o c$ to leverage LLMs for query expansion. It first prompts LLMs with few-shot examples to generate pseudo-documents and then integrates with existing sparse or dense retrievers by augmenting queries with generated pseudo-documents. The underlying motivation is to distill the LLMs through prompting. Despite its simplicity, empirical evaluations demonstrate consistent improvements across various retrieval models and datasets.\\n\\n[DOC2_A9 | Query2doc: Query Expansion with Large Language Models > Limitations]\\n## Limitations\\n\\n|  | LLM call | Index search |\\n| :---: | :---: | :---: |\\n| BM25 | - | $16 \\\\mathrm{~ms}$ |\\n| + query2doc | $>2000 \\\\mathrm{~ms}$ | $177 \\\\mathrm{~ms}$ |\\n\\nTable 6: Latency analysis for retrieval systems with our proposed query2doc. We retrieve the top 100 results for MS-MARCO dev queries with a single thread and then average over all the queries. The latency for LLM API calls depends on server load and is difficult to precisely measure.\\n\\nAn apparent limitation is the efficiency of retrieval. Our method requires running inference with LLMs which can be considerably slower due to the token-by-token autoregressive decoding. Moreover, with query2doc, searching the inverted index also becomes slower as the number of query terms increases after expansion. This is supported by the benchmarking results in Table 6. Real-world deployment of our method should take these factors into consideration.\", \"source_window_anchor_ids\": [\"DOC2_A2\", \"DOC2_A8\", \"DOC2_A9\"], \"primary_anchor_id\": \"DOC2_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"citation_direction\", \"entity_binding\"], \"anchor_entities\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_targets\": [\"Query2doc:\", \"Query\", \"Expansion\", \"with\", \"Large\", \"Language\", \"Models\"], \"anchor_value_hints\": [\"2\", \"1\", \"25,\", \"2021\", \"2020\", \"25\", \"1971\", \"2001\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"citation_marker\"], \"record_type\": \"paper\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_target_paper\": 9}, \"top_related_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The introduction section (DOC2_A2) mentions several papers that are relevant to the topic of query expansion and information retrieval. These include references to Rocchio (1971), Lavrenko and Croft (2001), Xiong et al. (2021), Qu et al. (2021), Karpukhin et al. (2020), Thakur et al. (2021), Campos et al. (2016), Nogueira et al. (2019), Brown et al. (2020), and Wang et al. (2022, 2023). These references can potentially help establish a citation chain if they correspond to other papers within the provided documents. However, without knowing the titles of the other provided papers, it is impossible to determine if there is a direct citation chain among them. Therefore, we need to extract the cited papers and check if they match any of the provided documents.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Find citations or references to other papers within the document 'Query2doc: Query Expansion with Large Language Models'.\", \"coverage_hints\": {\"answer_topology\": \"list\", \"answer_schema_hint\": \"Extract ordered local relations or edge facts that can help build the final chain.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC2_A1\", \"DOC2_A10\", \"DOC2_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"missing_must_find\": [\"ordered relations or decision/result mappings\", \"citation/reference evidence\"], \"visited_anchor_texts\": [\"Query2doc: Query Expansion with Large Language Models > Abstract Introduces query2doc, a query expansion method using large language models (LLMs) to generate pseudo-documents, improving both sparse and dense retrieval systems. Experimental results show a 3% to 15% performance boost for BM25 on datasets like MSMARCO and TREC DL. #### Abstract This paper introduces a simple yet effective query expansion approach, denoted as query $2 d o c$, to improve both sparse and dense retrieval systems. The proposed method first generates pseudo-documents by few-shot prompting large language models (LLMs), and then expands the query with generated pseudodocuments. LLMs are trained on web-scale text corpora and are adept at knowledge memorization. The pseudo-documents from LLMs often contain highly relevant information that can ai...\", \"Query2doc: Query Expansion with Large Language Models > References Lists references cited in the paper, covering a range of topics from information retrieval techniques to large language models and related research. ## References Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, et al. 2022. Overview of touché 2022: argument retrieval. In International Conference of the Cross-Language Evaluation Forum for European Languages, pages 311-336. Springer. Vera Boteva, Demian Gholipour, Artem Sokolov, and Stefan Riezler. 2016. A full-text learning to rank dataset for medical information retrieval. I...\", \"Query2doc: Query Expansion with Large Language Models > 1 Introduction Discusses the role of information retrieval (IR) and query expansion techniques. Highlights the effectiveness of LLMs in generating pseudo-documents for query expansion, demonstrating substantial improvements in both sparse and dense retrieval systems. ## 1 Introduction Information retrieval (IR) aims to locate relevant documents from a large corpus given a user issued query. It is a core component in modern search engines and researchers have invested for decades in this field. There are two mainstream paradigms for IR: lexical-based sparse retrieval, such as BM25, and embedding-based dense retrieval (Xiong et al., 2021; Qu et al., 2021). Although dense retrievers perform better when large amounts of labeled data are available (Karpukhin e...\"], \"selected_relation_anchor_ids\": [\"DOC2_A9\", \"DOC2_A8\", \"DOC2_A7\", \"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A9\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A8\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A7\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A6\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}, {\"source_anchor_id\": \"DOC2_A1\", \"target_anchor_id\": \"DOC2_A5\", \"relation_type\": \"same_target_paper\", \"weight\": 2.8, \"reason\": \"shared paper target ['Query2doc:', 'Query']\"}]}}</retrieve>"
+}

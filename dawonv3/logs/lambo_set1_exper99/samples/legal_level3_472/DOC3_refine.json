@@ -1,0 +1,456 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A2"
+  ],
+  "final_current_query": "分类判决文书",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A2",
+          "DOC3_A8",
+          "DOC3_A10",
+          "DOC3_A11"
+        ],
+        "utility_hits": {
+          "DOC3_A8": [
+            "legal_label_hit=['不动产登记纠纷', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A2": [
+            "legal_label_hit=['不动产登记纠纷', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A3": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC3_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC3_A8": 16.0,
+          "DOC3_A2": 16.0,
+          "DOC3_A3": 11.0,
+          "DOC3_A4": 11.0
+        },
+        "score_breakdown": {
+          "DOC3_A8": {
+            "local_relevance": 12.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.103,
+            "redundancy_penalty": 0.0,
+            "total": 41.103
+          },
+          "DOC3_A2": {
+            "local_relevance": 12.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 39.201
+          },
+          "DOC3_A3": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 24.914
+          },
+          "DOC3_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 24.691
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The document title indicates that this is a judgment document related to a legal case. The chunk summaries suggest that the case involves a dispute over real estate registration between a property company and an agricultural supplies company. Therefore, it seems likely that this document falls under the category of '不动产登记纠纷'. I will inspect the anchor coordinate that provides more details on the nature of the dispute and the court's decision.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "Expanded same-section read window around DOC3_A2: 某某农资公司因与某某房产公司、某某肥业公司之间的不动产登记纠纷，不服一审判决，提起上诉。",
+        "text": "[DOC3_A1 | 当事人信息]\n上诉人（原审原告）：某某农资公司，住所地新疆维吾尔自治区乌鲁木齐市。\n\n法定代表人：余某，该公司总经理。\n\n委托诉讼代理人：宋某，女，该公司法务。\n\n委托诉讼代理人：朱明亮，新疆四维律师事务所律师。\n\n被上诉人（原审被告）：某某房产公司，住所地新疆维吾尔自治区拜城县。\n\n负责人：李某，该分公司经理。\n\n委托诉讼代理人：梁苏红，新疆瑞诚律师事务所律师。\n\n原审第三人：某某肥业公司，住所地新疆维吾尔自治区库车市。\n\n法定代表人：张某，该公司执行董事。\n\n[DOC3_A2 | 案件背景]\n上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。\n\n[DOC3_A3 | 上诉请求]\n某某农资公司上诉请求：请求撤销一审判决第二项，改判支持某某农资公司的一审诉讼请求，即判令某某房产公司支付违约金5,335,414.34元（26,621,610×3.7％÷12×65=5,335,414.34元，2017年12月8日签订商品房买卖合同当日起90日后，从2017年3月8日至2022年8月8日止共计65个月，违约金按照LPR一年期报价利率3.7％计算）。事实和理由：原审判决认定事实不清，适用法律错误。首先，一审法院已查明截至一审庭审结束，某某房产公司未办理某某小区的“大证”，从而导致某某农资公司无法对案涉XX套房屋办理不动产权证书，且某某农资公司与某某房产公司签订的XX份《商品房买卖合同》中均未约定违约金。根据《最高人民法院关于审理商品房买卖合同纠纷案件适用法律若干问题的解释》第十四条的规定，某某农资公司要求某某房产公司支付逾期办证的违约金且该违约金的计算方式是有明确的法律依据的，一审判决驳回某某农资公司有关逾期办证违约金的诉讼请求，明显不公，请求二审法院维护某某农资公司的合法权益。\n\n[DOC3_A4 | 被上诉人答辩]\n某某房产公司辩称，一审判决认定事实清楚，判决结果正确。一、某某房产公司与某某农资公司之间不存在商品房买卖合同关系。根据《最高人民法院关于建设工程价款优先受偿权问题的批复》第二条、《最高人民法院关于办理执行异议和复议案件若干问题的规定》第二十九条的规定，消费性购房者应是以生活居住为目的的购房人，某某农资公司是营利法人公司，且XX套房屋显然不属于消费者居住这一特性。某某农资公司、某某肥业公司和某某房产公司均认可案涉XX套房屋是某某农资公司以以物抵债的方式取得，抵债行为并未改变原法律关系债权的性质，并未创设新的债权债务关系。某某房产公司虽与某某农资公司形式上签订了商品房买卖合同，但该签订合同行为是为履行与某某肥业公司的原债务目的，某某农资公司仅是以物抵债中某某肥业公司指定的名义合同人，因此，某某农资公司不属于《最高人民法院关于审理商品房买卖合同纠纷案件适用法律若干问题的解释》第一条规定的适用主体，无权以该解释第十四条作为依据来主张权益。二、2018年12月的以物抵债协议书中双方对办理不动产权证的时间已进行约定，不适用90天的期限。三、双方商品房买卖合同中，对于某某农资公司不能在约定期限取得房地产权属证书的约定为，买受人不退房，选择同意出卖人不支付违约金，买受人同意自行承担所有费用，根据上述约定某某房产公司仅承担协助备案义务，并非如某某农资公司上诉状中陈述双方对此没有进行约定。四、双方以物抵债协议书明确约定某某房产公司要按照某某农资公司的指令办理房产证，某某农资公司未举证证明系由于某某房产公司原因导致某某农资公司未取得不动产权属证书。五、至今某某农资公司未向某某房产公司提交办理不动产权证所需的某某农资公司的相关资料，如商品房买卖合同原件、契税等，某某农资公司至今也未交纳房屋契税、专项维修基金等办证前期费用，某某农资公司对于不动产权证未能办理自身也存在过错。六、案涉XX套房屋在签订以物抵债协议书时就已全部交付某某农资公司，某某农资公司出具《房屋交付证明》，上述房屋自2017年12月6日起由某某农资公司占有、使用，某某农资公司并不存在实际损失。综上，某某农资公司的上诉请求没有事实及法律依据，请求驳回上诉，维持原判。\n\n[DOC3_A5 | 原审第三人情况]\n原审第三人某某肥业公司经本院传票依法传唤无正当理由未到庭，亦未提交书面答辩状。\n\n[DOC3_A6 | 一审诉求]\n某某农资公司向一审法院起诉请求：1．判令某某房产公司协助办理案涉XX套住宅及商铺不动产权证书；2．判令某某房产公司支付违约金5,335,414.34元（26,621,610×3.7％÷12×65=5,335,414.34元，2017年12月8日签订商品房买卖合同当日起90日后，从2017年3月8日至2022年8月8日止共计65个月，违约金按照LPR一年期报价利率3.7％计算）。\n\n[DOC3_A7 | 一审认定事实]\n一审法院认定事实：2017年12月6日，某某农资公司（丙方）与某某房产公司（乙方）及某某肥业公司（甲方）共同签订一份《以房抵债协议》，约定：甲方某某肥业公司在兵团十二师中级人民法院要求某某房产公司及某某今盛公司偿还资金一案。某某房产公司提出以自己开发，位于某某县某某大队以北，某某局以南，某某路以东某某小区一期X、X、X、X号住宅楼XX套房地产，以及一期XX套商铺商业房地产，合计建筑面积XXXX平方米的房产，抵偿对应的资金。经法院主持协商，某某肥业公司、某某房产公司双方共同选定委托，由某某土地评估公司在现场勘验和收集资料的基础上，经分析和测算，于2017年7月7日出具新某房估字（XXXX）第XX号《房地产评估报告》，确认以上房地产评估值为26,621,610元。经某某肥业公司、某某房产公司双方协商，并征得某某农资公司同意，达成如下以房抵款协议：1．双方同意，某某房产公司以上述XX套住宅、XX套商铺房产（具体情况以新某房估字（XXXX）第XX号《房地产评估报告》确认的房地产信息为准），按26,621,610元的价值抵偿应偿付某某肥业公司对应的资金。2．以上房地产资产全部落户至丙方“兵团某某公司”名下。并办理房屋不动产权证。3．三方共同办理房屋交接手续。房屋交接日之前，上述房屋应支付的所有费用由某某房产公司承担并结清。房屋交接时，出租使用的商铺租赁关系移交某某农资公司，已收取的移交之后的租金一并移交。4．上述房地产资产如出现其他争议或变故导致某某肥业公司的房屋权益不能实现的，减损部分某某房产公司应照价补足差额，并按差额的10％向某某肥业公司支付违约金。5．本协议一式五份，甲方丙方各持两份，某某房产公司持一份，自签字盖章后生效。签订上述协议当日，某某房产公司向某某肥业公司交付了案涉房屋。目前，案涉XX套房屋由某某肥业公司的实际控制人即某某农资公司实际占有，并就部分房屋对外出租收取租金。2017年12月8日，某某农资公司、某某房产公司双方就案涉XX套房屋签订了《商品房买卖合同》，并于当日在拜城县房地产管理所登记备案。某某土地评估公司出具的“新某房估字（XXXX）第XX号”房地产评估报告对案涉某某小区XX套住宅房屋及XX套商铺的评估值为26,621,610元，具体房号：X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室。商铺房号：X层X号、X层X号、X层X号、X层X号、负X层X号。另查明，兵团某某公司与某某农资公司系同一公司。某某农资公司持有某某肥业公司80％股权，为某某肥业公司的实际控制股东。又查明，某某农资公司与某某房产公司及某某肥业公司达成的《以房抵债协议》系新疆生产建设兵团第十二师中级人民法院在审理（2016）兵11民初7号案件期间，某某农资公司与某某房产公司及某某肥业公司达成的协议，案涉房屋评估价值26,621,610元已从该案中扣除。截至一审庭审结束，某某房产公司未办理案涉某某小区的“大证”，导致某某农资公司无法对案涉XX套房屋办理不动产权证书。\n\n[DOC3_A8 | 一审判决]\n一审法院认为，本争议焦点为1．某某房产公司是否应向某某农资公司办理案涉房屋不动产权证书；2．某某房产公司是否应向某某农资公司支付违约金5,335,414.34元。关于争议焦点一。某某农资公司、某某房产公司及某某肥业公司于2017年签订的《以房抵款协议》及某某农资公司与某某房产公司签订的案涉XX套房屋《商品房买卖合同》，系各方当事人的真实意思表示，该协议及合同有效，各方当事人应依照协议的约定，全面履行各自义务。上述《以房抵款协议》第二条明确约定：“以上房地产资产全部落户至丙方“新疆生产建设兵团某某供应公司”名下。并办理房屋不动产权证。”案涉XX份《商品房买卖合同》均在某某县房地产管理所登记备案。综上，某某农资公司已依约履行了义务，某某房产公司应依约协助某某农资公司办理案涉XX套房屋的不动产权证书。关于争议焦点二。某某农资公司与某某房产公司签订的XX份《商品房买卖合同》中第十五条关于产权登记的约定：“出卖人应当在商品房交付使用后90日内，将办理权属登记需由出卖人提供的资料报产权登记机关备案。如因出卖人的责任，买受人不能在规定期限内取得房地产权属证书的，双方同意按下列第三项处理，即：办理产权证的相关费用由买受人自行承担。”根据上述约定，明确某某房产公司不承担违约责任，故某某农资公司主张某某房产公司承担违约金5,335,414.34元的诉讼请求，无事实和法律依据，一审法院不予支持。本案系不动产登记纠纷，某某农资公司主张某某房产公司办理不动产权证书具有极强的物权属性，物权不适用诉讼时效，故一审法院对某某房产公司辩称某某农资公司向其主张权利已过诉讼时效的抗辩事由，不予采纳。综上所述，依照《中华人民共和国合同法》第四十条、第六十条、第一百零七条，《中华人民共和国民事诉讼法》第六十七条第一款规定，《最高人民法院关于适用〈中华人民共和国民法典〉时间效力的若干规定》第一条第二款规定，一审法院判决：一、某某房产公司协助某某农资公司办理某某小区X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室。商铺房号：X层X号、X层X号、X层X号、X层X号、负X层X号的不动产权证书，于判决生效之日起九十日内履行完毕。二、驳回某某农资公司的其他诉讼请求。\n\n[DOC3_A9 | 二审情况]\n本院二审中，当事人没有提交新证据。\n\n本院对一审法院审理查明的事实依法予以确认。\n\n[DOC3_A11 | 二审判决]\n综上所述，某某农资公司的上诉请求不能成立，应予驳回；一审判决认定事实清楚，适用法律正确，应予维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项规定，判决如下：\n\n驳回上诉，维持原判。\n\n二审案件受理费49,147.9元，由上诉人某某农资公司负担。\n\n本判决为终审判决。",
+        "source_window_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4",
+          "DOC3_A5",
+          "DOC3_A6",
+          "DOC3_A7",
+          "DOC3_A8",
+          "DOC3_A9",
+          "DOC3_A11"
+        ],
+        "primary_anchor_id": "DOC3_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书3"
+        ],
+        "anchor_targets": [
+          "不动产登记纠纷",
+          "判决文书3"
+        ],
+        "anchor_value_hints": [
+          "3",
+          "2023",
+          "2926",
+          "347",
+          "11",
+          "7"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 9,
+            "same_case": 9
+          },
+          "top_related_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A4",
+            "DOC3_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A9",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A8",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A7",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A6",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC3_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          }
+        ]
+      },
+      "extract_think": "The anchor chunk clearly identifies the case as a '不动产登记纠纷' (dispute over real estate registration) involving the plaintiff (某某农资公司), defendant (某某房产公司), and third party (某某肥业公司). It also mentions the appeal against the first-instance judgment. This information is sufficient to classify the document under the correct category.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "不动产登记纠纷",
+            "value": "['《判决文书3》']",
+            "normalized_value": "['判决文书3']",
+            "evidence_text": "上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A9",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A8",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A7",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A6",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC3_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "不动产登记纠纷"
+          ],
+          "known_value_signatures": [
+            "['判决文书3']"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC3_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景 某某农资公司因与某某房产公司、某某肥业公司之间的不动产登记纠纷，不服一审判决，提起上诉。 上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC3_A9",
+            "DOC3_A8",
+            "DOC3_A7",
+            "DOC3_A6",
+            "DOC3_A4",
+            "DOC3_A3",
+            "DOC3_A11",
+            "DOC3_A10",
+            "DOC3_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A6",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A11",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A10",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A9",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A8",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            },
+            {
+              "source_anchor_id": "DOC3_A2",
+              "target_anchor_id": "DOC3_A7",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书3']"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "不动产登记纠纷",
+      "value": "['《判决文书3》']",
+      "normalized_value": "['判决文书3']",
+      "evidence_text": "上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A9",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A8",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC3_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document title indicates that this is a judgment document related to a legal case. The chunk summaries suggest that the case involves a dispute over real estate registration between a property company and an agricultural supplies company. Therefore, it seems likely that this document falls under the category of '不动产登记纠纷'. I will inspect the anchor coordinate that provides more details on the nature of the dispute and the court's decision.</think>\n<search>{\"current_query\": \"分类判决文书\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\", \"DOC3_A8\", \"DOC3_A10\", \"DOC3_A11\"], \"utility_hits\": {\"DOC3_A8\": [\"legal_label_hit=['不动产登记纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC3_A2\": [\"legal_label_hit=['不动产登记纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A8\": 16.0, \"DOC3_A2\": 16.0, \"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.103, \"redundancy_penalty\": 0.0, \"total\": 41.103}, \"DOC3_A2\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 39.201}, \"DOC3_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 24.914}, \"DOC3_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 24.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC3_A2: 某某农资公司因与某某房产公司、某某肥业公司之间的不动产登记纠纷，不服一审判决，提起上诉。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n上诉人（原审原告）：某某农资公司，住所地新疆维吾尔自治区乌鲁木齐市。\\n\\n法定代表人：余某，该公司总经理。\\n\\n委托诉讼代理人：宋某，女，该公司法务。\\n\\n委托诉讼代理人：朱明亮，新疆四维律师事务所律师。\\n\\n被上诉人（原审被告）：某某房产公司，住所地新疆维吾尔自治区拜城县。\\n\\n负责人：李某，该分公司经理。\\n\\n委托诉讼代理人：梁苏红，新疆瑞诚律师事务所律师。\\n\\n原审第三人：某某肥业公司，住所地新疆维吾尔自治区库车市。\\n\\n法定代表人：张某，该公司执行董事。\\n\\n[DOC3_A2 | 案件背景]\\n上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。\\n\\n[DOC3_A3 | 上诉请求]\\n某某农资公司上诉请求：请求撤销一审判决第二项，改判支持某某农资公司的一审诉讼请求，即判令某某房产公司支付违约金5,335,414.34元（26,621,610×3.7％÷12×65=5,335,414.34元，2017年12月8日签订商品房买卖合同当日起90日后，从2017年3月8日至2022年8月8日止共计65个月，违约金按照LPR一年期报价利率3.7％计算）。事实和理由：原审判决认定事实不清，适用法律错误。首先，一审法院已查明截至一审庭审结束，某某房产公司未办理某某小区的“大证”，从而导致某某农资公司无法对案涉XX套房屋办理不动产权证书，且某某农资公司与某某房产公司签订的XX份《商品房买卖合同》中均未约定违约金。根据《最高人民法院关于审理商品房买卖合同纠纷案件适用法律若干问题的解释》第十四条的规定，某某农资公司要求某某房产公司支付逾期办证的违约金且该违约金的计算方式是有明确的法律依据的，一审判决驳回某某农资公司有关逾期办证违约金的诉讼请求，明显不公，请求二审法院维护某某农资公司的合法权益。\\n\\n[DOC3_A4 | 被上诉人答辩]\\n某某房产公司辩称，一审判决认定事实清楚，判决结果正确。一、某某房产公司与某某农资公司之间不存在商品房买卖合同关系。根据《最高人民法院关于建设工程价款优先受偿权问题的批复》第二条、《最高人民法院关于办理执行异议和复议案件若干问题的规定》第二十九条的规定，消费性购房者应是以生活居住为目的的购房人，某某农资公司是营利法人公司，且XX套房屋显然不属于消费者居住这一特性。某某农资公司、某某肥业公司和某某房产公司均认可案涉XX套房屋是某某农资公司以以物抵债的方式取得，抵债行为并未改变原法律关系债权的性质，并未创设新的债权债务关系。某某房产公司虽与某某农资公司形式上签订了商品房买卖合同，但该签订合同行为是为履行与某某肥业公司的原债务目的，某某农资公司仅是以物抵债中某某肥业公司指定的名义合同人，因此，某某农资公司不属于《最高人民法院关于审理商品房买卖合同纠纷案件适用法律若干问题的解释》第一条规定的适用主体，无权以该解释第十四条作为依据来主张权益。二、2018年12月的以物抵债协议书中双方对办理不动产权证的时间已进行约定，不适用90天的期限。三、双方商品房买卖合同中，对于某某农资公司不能在约定期限取得房地产权属证书的约定为，买受人不退房，选择同意出卖人不支付违约金，买受人同意自行承担所有费用，根据上述约定某某房产公司仅承担协助备案义务，并非如某某农资公司上诉状中陈述双方对此没有进行约定。四、双方以物抵债协议书明确约定某某房产公司要按照某某农资公司的指令办理房产证，某某农资公司未举证证明系由于某某房产公司原因导致某某农资公司未取得不动产权属证书。五、至今某某农资公司未向某某房产公司提交办理不动产权证所需的某某农资公司的相关资料，如商品房买卖合同原件、契税等，某某农资公司至今也未交纳房屋契税、专项维修基金等办证前期费用，某某农资公司对于不动产权证未能办理自身也存在过错。六、案涉XX套房屋在签订以物抵债协议书时就已全部交付某某农资公司，某某农资公司出具《房屋交付证明》，上述房屋自2017年12月6日起由某某农资公司占有、使用，某某农资公司并不存在实际损失。综上，某某农资公司的上诉请求没有事实及法律依据，请求驳回上诉，维持原判。\\n\\n[DOC3_A5 | 原审第三人情况]\\n原审第三人某某肥业公司经本院传票依法传唤无正当理由未到庭，亦未提交书面答辩状。\\n\\n[DOC3_A6 | 一审诉求]\\n某某农资公司向一审法院起诉请求：1．判令某某房产公司协助办理案涉XX套住宅及商铺不动产权证书；2．判令某某房产公司支付违约金5,335,414.34元（26,621,610×3.7％÷12×65=5,335,414.34元，2017年12月8日签订商品房买卖合同当日起90日后，从2017年3月8日至2022年8月8日止共计65个月，违约金按照LPR一年期报价利率3.7％计算）。\\n\\n[DOC3_A7 | 一审认定事实]\\n一审法院认定事实：2017年12月6日，某某农资公司（丙方）与某某房产公司（乙方）及某某肥业公司（甲方）共同签订一份《以房抵债协议》，约定：甲方某某肥业公司在兵团十二师中级人民法院要求某某房产公司及某某今盛公司偿还资金一案。某某房产公司提出以自己开发，位于某某县某某大队以北，某某局以南，某某路以东某某小区一期X、X、X、X号住宅楼XX套房地产，以及一期XX套商铺商业房地产，合计建筑面积XXXX平方米的房产，抵偿对应的资金。经法院主持协商，某某肥业公司、某某房产公司双方共同选定委托，由某某土地评估公司在现场勘验和收集资料的基础上，经分析和测算，于2017年7月7日出具新某房估字（XXXX）第XX号《房地产评估报告》，确认以上房地产评估值为26,621,610元。经某某肥业公司、某某房产公司双方协商，并征得某某农资公司同意，达成如下以房抵款协议：1．双方同意，某某房产公司以上述XX套住宅、XX套商铺房产（具体情况以新某房估字（XXXX）第XX号《房地产评估报告》确认的房地产信息为准），按26,621,610元的价值抵偿应偿付某某肥业公司对应的资金。2．以上房地产资产全部落户至丙方“兵团某某公司”名下。并办理房屋不动产权证。3．三方共同办理房屋交接手续。房屋交接日之前，上述房屋应支付的所有费用由某某房产公司承担并结清。房屋交接时，出租使用的商铺租赁关系移交某某农资公司，已收取的移交之后的租金一并移交。4．上述房地产资产如出现其他争议或变故导致某某肥业公司的房屋权益不能实现的，减损部分某某房产公司应照价补足差额，并按差额的10％向某某肥业公司支付违约金。5．本协议一式五份，甲方丙方各持两份，某某房产公司持一份，自签字盖章后生效。签订上述协议当日，某某房产公司向某某肥业公司交付了案涉房屋。目前，案涉XX套房屋由某某肥业公司的实际控制人即某某农资公司实际占有，并就部分房屋对外出租收取租金。2017年12月8日，某某农资公司、某某房产公司双方就案涉XX套房屋签订了《商品房买卖合同》，并于当日在拜城县房地产管理所登记备案。某某土地评估公司出具的“新某房估字（XXXX）第XX号”房地产评估报告对案涉某某小区XX套住宅房屋及XX套商铺的评估值为26,621,610元，具体房号：X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室。商铺房号：X层X号、X层X号、X层X号、X层X号、负X层X号。另查明，兵团某某公司与某某农资公司系同一公司。某某农资公司持有某某肥业公司80％股权，为某某肥业公司的实际控制股东。又查明，某某农资公司与某某房产公司及某某肥业公司达成的《以房抵债协议》系新疆生产建设兵团第十二师中级人民法院在审理（2016）兵11民初7号案件期间，某某农资公司与某某房产公司及某某肥业公司达成的协议，案涉房屋评估价值26,621,610元已从该案中扣除。截至一审庭审结束，某某房产公司未办理案涉某某小区的“大证”，导致某某农资公司无法对案涉XX套房屋办理不动产权证书。\\n\\n[DOC3_A8 | 一审判决]\\n一审法院认为，本争议焦点为1．某某房产公司是否应向某某农资公司办理案涉房屋不动产权证书；2．某某房产公司是否应向某某农资公司支付违约金5,335,414.34元。关于争议焦点一。某某农资公司、某某房产公司及某某肥业公司于2017年签订的《以房抵款协议》及某某农资公司与某某房产公司签订的案涉XX套房屋《商品房买卖合同》，系各方当事人的真实意思表示，该协议及合同有效，各方当事人应依照协议的约定，全面履行各自义务。上述《以房抵款协议》第二条明确约定：“以上房地产资产全部落户至丙方“新疆生产建设兵团某某供应公司”名下。并办理房屋不动产权证。”案涉XX份《商品房买卖合同》均在某某县房地产管理所登记备案。综上，某某农资公司已依约履行了义务，某某房产公司应依约协助某某农资公司办理案涉XX套房屋的不动产权证书。关于争议焦点二。某某农资公司与某某房产公司签订的XX份《商品房买卖合同》中第十五条关于产权登记的约定：“出卖人应当在商品房交付使用后90日内，将办理权属登记需由出卖人提供的资料报产权登记机关备案。如因出卖人的责任，买受人不能在规定期限内取得房地产权属证书的，双方同意按下列第三项处理，即：办理产权证的相关费用由买受人自行承担。”根据上述约定，明确某某房产公司不承担违约责任，故某某农资公司主张某某房产公司承担违约金5,335,414.34元的诉讼请求，无事实和法律依据，一审法院不予支持。本案系不动产登记纠纷，某某农资公司主张某某房产公司办理不动产权证书具有极强的物权属性，物权不适用诉讼时效，故一审法院对某某房产公司辩称某某农资公司向其主张权利已过诉讼时效的抗辩事由，不予采纳。综上所述，依照《中华人民共和国合同法》第四十条、第六十条、第一百零七条，《中华人民共和国民事诉讼法》第六十七条第一款规定，《最高人民法院关于适用〈中华人民共和国民法典〉时间效力的若干规定》第一条第二款规定，一审法院判决：一、某某房产公司协助某某农资公司办理某某小区X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室。商铺房号：X层X号、X层X号、X层X号、X层X号、负X层X号的不动产权证书，于判决生效之日起九十日内履行完毕。二、驳回某某农资公司的其他诉讼请求。\\n\\n[DOC3_A9 | 二审情况]\\n本院二审中，当事人没有提交新证据。\\n\\n本院对一审法院审理查明的事实依法予以确认。\\n\\n[DOC3_A11 | 二审判决]\\n综上所述，某某农资公司的上诉请求不能成立，应予驳回；一审判决认定事实清楚，适用法律正确，应予维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项规定，判决如下：\\n\\n驳回上诉，维持原判。\\n\\n二审案件受理费49,147.9元，由上诉人某某农资公司负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A7\", \"DOC3_A8\", \"DOC3_A9\", \"DOC3_A11\"], \"primary_anchor_id\": \"DOC3_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"不动产登记纠纷\", \"判决文书3\"], \"anchor_value_hints\": [\"3\", \"2023\", \"2926\", \"347\", \"11\", \"7\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_case\": 9}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The anchor chunk clearly identifies the case as a '不动产登记纠纷' (dispute over real estate registration) involving the plaintiff (某某农资公司), defendant (某某房产公司), and third party (某某肥业公司). It also mentions the appeal against the first-instance judgment. This information is sufficient to classify the document under the correct category.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"不动产登记纠纷\", \"value\": \"['《判决文书3》']\", \"normalized_value\": \"['判决文书3']\", \"evidence_text\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"不动产登记纠纷\"], \"known_value_signatures\": [\"['判决文书3']\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某农资公司因与某某房产公司、某某肥业公司之间的不动产登记纠纷，不服一审判决，提起上诉。 上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A11\", \"DOC3_A10\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A11\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title indicates that this is a judgment document related to a legal case. The chunk summaries suggest that the case involves a dispute over real estate registration between a property company and an agricultural supplies company. Therefore, it seems likely that this document falls under the category of '不动产登记纠纷'. I will inspect the anchor coordinate that provides more details on the nature of the dispute and the court's decision.</think>\n<search>{\"current_query\": \"分类判决文书\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A2\", \"DOC3_A8\", \"DOC3_A10\", \"DOC3_A11\"], \"utility_hits\": {\"DOC3_A8\": [\"legal_label_hit=['不动产登记纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC3_A2\": [\"legal_label_hit=['不动产登记纠纷', '判决文书']\", \"legal_decision_context\"], \"DOC3_A3\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC3_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC3_A8\": 16.0, \"DOC3_A2\": 16.0, \"DOC3_A3\": 11.0, \"DOC3_A4\": 11.0}, \"score_breakdown\": {\"DOC3_A8\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.103, \"redundancy_penalty\": 0.0, \"total\": 41.103}, \"DOC3_A2\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 39.201}, \"DOC3_A3\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 24.914}, \"DOC3_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 24.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"Expanded same-section read window around DOC3_A2: 某某农资公司因与某某房产公司、某某肥业公司之间的不动产登记纠纷，不服一审判决，提起上诉。\", \"text\": \"[DOC3_A1 | 当事人信息]\\n上诉人（原审原告）：某某农资公司，住所地新疆维吾尔自治区乌鲁木齐市。\\n\\n法定代表人：余某，该公司总经理。\\n\\n委托诉讼代理人：宋某，女，该公司法务。\\n\\n委托诉讼代理人：朱明亮，新疆四维律师事务所律师。\\n\\n被上诉人（原审被告）：某某房产公司，住所地新疆维吾尔自治区拜城县。\\n\\n负责人：李某，该分公司经理。\\n\\n委托诉讼代理人：梁苏红，新疆瑞诚律师事务所律师。\\n\\n原审第三人：某某肥业公司，住所地新疆维吾尔自治区库车市。\\n\\n法定代表人：张某，该公司执行董事。\\n\\n[DOC3_A2 | 案件背景]\\n上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。\\n\\n[DOC3_A3 | 上诉请求]\\n某某农资公司上诉请求：请求撤销一审判决第二项，改判支持某某农资公司的一审诉讼请求，即判令某某房产公司支付违约金5,335,414.34元（26,621,610×3.7％÷12×65=5,335,414.34元，2017年12月8日签订商品房买卖合同当日起90日后，从2017年3月8日至2022年8月8日止共计65个月，违约金按照LPR一年期报价利率3.7％计算）。事实和理由：原审判决认定事实不清，适用法律错误。首先，一审法院已查明截至一审庭审结束，某某房产公司未办理某某小区的“大证”，从而导致某某农资公司无法对案涉XX套房屋办理不动产权证书，且某某农资公司与某某房产公司签订的XX份《商品房买卖合同》中均未约定违约金。根据《最高人民法院关于审理商品房买卖合同纠纷案件适用法律若干问题的解释》第十四条的规定，某某农资公司要求某某房产公司支付逾期办证的违约金且该违约金的计算方式是有明确的法律依据的，一审判决驳回某某农资公司有关逾期办证违约金的诉讼请求，明显不公，请求二审法院维护某某农资公司的合法权益。\\n\\n[DOC3_A4 | 被上诉人答辩]\\n某某房产公司辩称，一审判决认定事实清楚，判决结果正确。一、某某房产公司与某某农资公司之间不存在商品房买卖合同关系。根据《最高人民法院关于建设工程价款优先受偿权问题的批复》第二条、《最高人民法院关于办理执行异议和复议案件若干问题的规定》第二十九条的规定，消费性购房者应是以生活居住为目的的购房人，某某农资公司是营利法人公司，且XX套房屋显然不属于消费者居住这一特性。某某农资公司、某某肥业公司和某某房产公司均认可案涉XX套房屋是某某农资公司以以物抵债的方式取得，抵债行为并未改变原法律关系债权的性质，并未创设新的债权债务关系。某某房产公司虽与某某农资公司形式上签订了商品房买卖合同，但该签订合同行为是为履行与某某肥业公司的原债务目的，某某农资公司仅是以物抵债中某某肥业公司指定的名义合同人，因此，某某农资公司不属于《最高人民法院关于审理商品房买卖合同纠纷案件适用法律若干问题的解释》第一条规定的适用主体，无权以该解释第十四条作为依据来主张权益。二、2018年12月的以物抵债协议书中双方对办理不动产权证的时间已进行约定，不适用90天的期限。三、双方商品房买卖合同中，对于某某农资公司不能在约定期限取得房地产权属证书的约定为，买受人不退房，选择同意出卖人不支付违约金，买受人同意自行承担所有费用，根据上述约定某某房产公司仅承担协助备案义务，并非如某某农资公司上诉状中陈述双方对此没有进行约定。四、双方以物抵债协议书明确约定某某房产公司要按照某某农资公司的指令办理房产证，某某农资公司未举证证明系由于某某房产公司原因导致某某农资公司未取得不动产权属证书。五、至今某某农资公司未向某某房产公司提交办理不动产权证所需的某某农资公司的相关资料，如商品房买卖合同原件、契税等，某某农资公司至今也未交纳房屋契税、专项维修基金等办证前期费用，某某农资公司对于不动产权证未能办理自身也存在过错。六、案涉XX套房屋在签订以物抵债协议书时就已全部交付某某农资公司，某某农资公司出具《房屋交付证明》，上述房屋自2017年12月6日起由某某农资公司占有、使用，某某农资公司并不存在实际损失。综上，某某农资公司的上诉请求没有事实及法律依据，请求驳回上诉，维持原判。\\n\\n[DOC3_A5 | 原审第三人情况]\\n原审第三人某某肥业公司经本院传票依法传唤无正当理由未到庭，亦未提交书面答辩状。\\n\\n[DOC3_A6 | 一审诉求]\\n某某农资公司向一审法院起诉请求：1．判令某某房产公司协助办理案涉XX套住宅及商铺不动产权证书；2．判令某某房产公司支付违约金5,335,414.34元（26,621,610×3.7％÷12×65=5,335,414.34元，2017年12月8日签订商品房买卖合同当日起90日后，从2017年3月8日至2022年8月8日止共计65个月，违约金按照LPR一年期报价利率3.7％计算）。\\n\\n[DOC3_A7 | 一审认定事实]\\n一审法院认定事实：2017年12月6日，某某农资公司（丙方）与某某房产公司（乙方）及某某肥业公司（甲方）共同签订一份《以房抵债协议》，约定：甲方某某肥业公司在兵团十二师中级人民法院要求某某房产公司及某某今盛公司偿还资金一案。某某房产公司提出以自己开发，位于某某县某某大队以北，某某局以南，某某路以东某某小区一期X、X、X、X号住宅楼XX套房地产，以及一期XX套商铺商业房地产，合计建筑面积XXXX平方米的房产，抵偿对应的资金。经法院主持协商，某某肥业公司、某某房产公司双方共同选定委托，由某某土地评估公司在现场勘验和收集资料的基础上，经分析和测算，于2017年7月7日出具新某房估字（XXXX）第XX号《房地产评估报告》，确认以上房地产评估值为26,621,610元。经某某肥业公司、某某房产公司双方协商，并征得某某农资公司同意，达成如下以房抵款协议：1．双方同意，某某房产公司以上述XX套住宅、XX套商铺房产（具体情况以新某房估字（XXXX）第XX号《房地产评估报告》确认的房地产信息为准），按26,621,610元的价值抵偿应偿付某某肥业公司对应的资金。2．以上房地产资产全部落户至丙方“兵团某某公司”名下。并办理房屋不动产权证。3．三方共同办理房屋交接手续。房屋交接日之前，上述房屋应支付的所有费用由某某房产公司承担并结清。房屋交接时，出租使用的商铺租赁关系移交某某农资公司，已收取的移交之后的租金一并移交。4．上述房地产资产如出现其他争议或变故导致某某肥业公司的房屋权益不能实现的，减损部分某某房产公司应照价补足差额，并按差额的10％向某某肥业公司支付违约金。5．本协议一式五份，甲方丙方各持两份，某某房产公司持一份，自签字盖章后生效。签订上述协议当日，某某房产公司向某某肥业公司交付了案涉房屋。目前，案涉XX套房屋由某某肥业公司的实际控制人即某某农资公司实际占有，并就部分房屋对外出租收取租金。2017年12月8日，某某农资公司、某某房产公司双方就案涉XX套房屋签订了《商品房买卖合同》，并于当日在拜城县房地产管理所登记备案。某某土地评估公司出具的“新某房估字（XXXX）第XX号”房地产评估报告对案涉某某小区XX套住宅房屋及XX套商铺的评估值为26,621,610元，具体房号：X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室。商铺房号：X层X号、X层X号、X层X号、X层X号、负X层X号。另查明，兵团某某公司与某某农资公司系同一公司。某某农资公司持有某某肥业公司80％股权，为某某肥业公司的实际控制股东。又查明，某某农资公司与某某房产公司及某某肥业公司达成的《以房抵债协议》系新疆生产建设兵团第十二师中级人民法院在审理（2016）兵11民初7号案件期间，某某农资公司与某某房产公司及某某肥业公司达成的协议，案涉房屋评估价值26,621,610元已从该案中扣除。截至一审庭审结束，某某房产公司未办理案涉某某小区的“大证”，导致某某农资公司无法对案涉XX套房屋办理不动产权证书。\\n\\n[DOC3_A8 | 一审判决]\\n一审法院认为，本争议焦点为1．某某房产公司是否应向某某农资公司办理案涉房屋不动产权证书；2．某某房产公司是否应向某某农资公司支付违约金5,335,414.34元。关于争议焦点一。某某农资公司、某某房产公司及某某肥业公司于2017年签订的《以房抵款协议》及某某农资公司与某某房产公司签订的案涉XX套房屋《商品房买卖合同》，系各方当事人的真实意思表示，该协议及合同有效，各方当事人应依照协议的约定，全面履行各自义务。上述《以房抵款协议》第二条明确约定：“以上房地产资产全部落户至丙方“新疆生产建设兵团某某供应公司”名下。并办理房屋不动产权证。”案涉XX份《商品房买卖合同》均在某某县房地产管理所登记备案。综上，某某农资公司已依约履行了义务，某某房产公司应依约协助某某农资公司办理案涉XX套房屋的不动产权证书。关于争议焦点二。某某农资公司与某某房产公司签订的XX份《商品房买卖合同》中第十五条关于产权登记的约定：“出卖人应当在商品房交付使用后90日内，将办理权属登记需由出卖人提供的资料报产权登记机关备案。如因出卖人的责任，买受人不能在规定期限内取得房地产权属证书的，双方同意按下列第三项处理，即：办理产权证的相关费用由买受人自行承担。”根据上述约定，明确某某房产公司不承担违约责任，故某某农资公司主张某某房产公司承担违约金5,335,414.34元的诉讼请求，无事实和法律依据，一审法院不予支持。本案系不动产登记纠纷，某某农资公司主张某某房产公司办理不动产权证书具有极强的物权属性，物权不适用诉讼时效，故一审法院对某某房产公司辩称某某农资公司向其主张权利已过诉讼时效的抗辩事由，不予采纳。综上所述，依照《中华人民共和国合同法》第四十条、第六十条、第一百零七条，《中华人民共和国民事诉讼法》第六十七条第一款规定，《最高人民法院关于适用〈中华人民共和国民法典〉时间效力的若干规定》第一条第二款规定，一审法院判决：一、某某房产公司协助某某农资公司办理某某小区X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室，X号楼：X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室、X单元X室。商铺房号：X层X号、X层X号、X层X号、X层X号、负X层X号的不动产权证书，于判决生效之日起九十日内履行完毕。二、驳回某某农资公司的其他诉讼请求。\\n\\n[DOC3_A9 | 二审情况]\\n本院二审中，当事人没有提交新证据。\\n\\n本院对一审法院审理查明的事实依法予以确认。\\n\\n[DOC3_A11 | 二审判决]\\n综上所述，某某农资公司的上诉请求不能成立，应予驳回；一审判决认定事实清楚，适用法律正确，应予维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项规定，判决如下：\\n\\n驳回上诉，维持原判。\\n\\n二审案件受理费49,147.9元，由上诉人某某农资公司负担。\\n\\n本判决为终审判决。\", \"source_window_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\", \"DOC3_A5\", \"DOC3_A6\", \"DOC3_A7\", \"DOC3_A8\", \"DOC3_A9\", \"DOC3_A11\"], \"primary_anchor_id\": \"DOC3_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书3\"], \"anchor_targets\": [\"不动产登记纠纷\", \"判决文书3\"], \"anchor_value_hints\": [\"3\", \"2023\", \"2926\", \"347\", \"11\", \"7\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 9, \"same_case\": 9}, \"top_related_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A4\", \"DOC3_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}</info>\n<think>The anchor chunk clearly identifies the case as a '不动产登记纠纷' (dispute over real estate registration) involving the plaintiff (某某农资公司), defendant (某某房产公司), and third party (某某肥业公司). It also mentions the appeal against the first-instance judgment. This information is sufficient to classify the document under the correct category.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"不动产登记纠纷\", \"value\": \"['《判决文书3》']\", \"normalized_value\": \"['判决文书3']\", \"evidence_text\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC3_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"不动产登记纠纷\"], \"known_value_signatures\": [\"['判决文书3']\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC3_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景 某某农资公司因与某某房产公司、某某肥业公司之间的不动产登记纠纷，不服一审判决，提起上诉。 上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。\"], \"selected_relation_anchor_ids\": [\"DOC3_A9\", \"DOC3_A8\", \"DOC3_A7\", \"DOC3_A6\", \"DOC3_A4\", \"DOC3_A3\", \"DOC3_A11\", \"DOC3_A10\", \"DOC3_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A6\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A11\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A10\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A9\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A8\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}, {\"source_anchor_id\": \"DOC3_A2\", \"target_anchor_id\": \"DOC3_A7\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书3']\"}]}}</retrieve>"
+}

@@ -1,0 +1,181 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1"
+        ],
+        "utility_hits": {
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A1": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 29.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "根据已有的摘要信息，可以初步判断《判决文书1》属于刑事案件类别。但是为了确保准确性，需要进一步检查文档中是否有其他相关信息来确认案件类型。",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "申诉内容与法院回应",
+        "summary": "张殿波因危险驾驶一案对刑事判决和裁定提出申诉，认为原审法院认定事实不清、程序违法，并请求从轻处罚。法院审查后认为原判事实清楚，证据确凿，程序合法，驳回其申诉。",
+        "text": "张殿波：\n\n你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定，以“原审法院认定事实不清，我在案发后没有逃跑，且被撞车辆存在违停情形，不应判定我负全部责任；原审程序违法，剥夺了我的质证及辩护权，二审法官未亲自对我进行讯问；此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且我没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对我从轻处罚等”为主要理由，向本院提出申诉。\n\n本院经审查认为，原判认定你危险驾驶的犯罪事实，有吕某、李某、王某等人的证言，驾驶人信息查询单、机动车信息查询结果单、驾驶证复印件、行驶路线图、协议书等书证，呼吸检测单、血样提取登记表、血液样本图片、血液样本封装图片、现场照片，交通事故认定书、酒精司法鉴定意见书，你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对起诉书指控的犯罪事实及证据无异议，当庭表示自愿认罪认罚。你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车，原判认定你构成危险驾驶罪并无不当。你所称原审法院认定事实不清，你在案发后没有逃跑，且被撞车辆存在违停情形，不应判定你负全部责任；原审程序违法，剥夺了你的质证及辩护权，二审法官未亲自对你进行讯问的理由，与查明事实及证据不符，本院不予支持。所称此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且你没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对你从轻处罚的理由，经查，原审法院根据你的具体犯罪事实、性质、情节以及对社会的危害程度，在法定刑幅度内所处刑罚并无不当，且原判已充分考虑了对你的从轻处罚情节。\n\n综上，原判认定事实清楚，证据确实、充分，定罪准确，量刑适当，审判程序合法。你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\n\n特此通知。",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence",
+          "background_context"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2023",
+          "0102",
+          "454",
+          "01",
+          "419"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 0,
+          "relation_type_counts": {},
+          "top_related_anchor_ids": []
+        }
+      },
+      "extract_think": "该段落明确提到这是一个涉及刑事判决和裁定的案件，因此可以确定《判决文书1》属于刑事案件类别。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "刑事案件",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A1",
+            "confidence": 1.0,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "刑事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "申诉内容与法院回应 张殿波因危险驾驶一案对刑事判决和裁定提出申诉，认为原审法院认定事实不清、程序违法，并请求从轻处罚。法院审查后认为原判事实清楚，证据确凿，程序合法，驳回其申诉。 张殿波： 你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定，以“原审法院认定事实不清，我在案发后没有逃跑，且被撞车辆存在违停情形，不应判定我负全部责任；原审程序违法，剥夺了我的质证及辩护权，二审法官未亲自对我进行讯问；此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且我没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对我从轻处罚等”为主要理由，向本院提出申诉。 本院经审查认为，原判认定你危险驾驶的犯罪事实，有吕某、李某、王某等人的证言，驾驶人信息查询单、机动车信息查询结果单、驾驶证复印件、行驶路线图、协议书等书证，呼吸检测单、血样提取登记表、血液样本图片、血液样本封装图片、现场照片，交通事故认定书、酒精司法鉴定意见书，你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对起诉书指控的犯罪事实及证据无异议，当庭表示自愿认罪认罚。你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车..."
+          ],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "刑事案件",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "confidence": 1.0,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>根据已有的摘要信息，可以初步判断《判决文书1》属于刑事案件类别。但是为了确保准确性，需要进一步检查文档中是否有其他相关信息来确认案件类型。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A1\": 11.0}, \"score_breakdown\": {\"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉内容与法院回应\", \"summary\": \"张殿波因危险驾驶一案对刑事判决和裁定提出申诉，认为原审法院认定事实不清、程序违法，并请求从轻处罚。法院审查后认为原判事实清楚，证据确凿，程序合法，驳回其申诉。\", \"text\": \"张殿波：\\n\\n你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定，以“原审法院认定事实不清，我在案发后没有逃跑，且被撞车辆存在违停情形，不应判定我负全部责任；原审程序违法，剥夺了我的质证及辩护权，二审法官未亲自对我进行讯问；此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且我没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对我从轻处罚等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，原判认定你危险驾驶的犯罪事实，有吕某、李某、王某等人的证言，驾驶人信息查询单、机动车信息查询结果单、驾驶证复印件、行驶路线图、协议书等书证，呼吸检测单、血样提取登记表、血液样本图片、血液样本封装图片、现场照片，交通事故认定书、酒精司法鉴定意见书，你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对起诉书指控的犯罪事实及证据无异议，当庭表示自愿认罪认罚。你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车，原判认定你构成危险驾驶罪并无不当。你所称原审法院认定事实不清，你在案发后没有逃跑，且被撞车辆存在违停情形，不应判定你负全部责任；原审程序违法，剥夺了你的质证及辩护权，二审法官未亲自对你进行讯问的理由，与查明事实及证据不符，本院不予支持。所称此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且你没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对你从轻处罚的理由，经查，原审法院根据你的具体犯罪事实、性质、情节以及对社会的危害程度，在法定刑幅度内所处刑罚并无不当，且原判已充分考虑了对你的从轻处罚情节。\\n\\n综上，原判认定事实清楚，证据确实、充分，定罪准确，量刑适当，审判程序合法。你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"0102\", \"454\", \"01\", \"419\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>该段落明确提到这是一个涉及刑事判决和裁定的案件，因此可以确定《判决文书1》属于刑事案件类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"刑事案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉内容与法院回应 张殿波因危险驾驶一案对刑事判决和裁定提出申诉，认为原审法院认定事实不清、程序违法，并请求从轻处罚。法院审查后认为原判事实清楚，证据确凿，程序合法，驳回其申诉。 张殿波： 你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定，以“原审法院认定事实不清，我在案发后没有逃跑，且被撞车辆存在违停情形，不应判定我负全部责任；原审程序违法，剥夺了我的质证及辩护权，二审法官未亲自对我进行讯问；此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且我没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对我从轻处罚等”为主要理由，向本院提出申诉。 本院经审查认为，原判认定你危险驾驶的犯罪事实，有吕某、李某、王某等人的证言，驾驶人信息查询单、机动车信息查询结果单、驾驶证复印件、行驶路线图、协议书等书证，呼吸检测单、血样提取登记表、血液样本图片、血液样本封装图片、现场照片，交通事故认定书、酒精司法鉴定意见书，你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对起诉书指控的犯罪事实及证据无异议，当庭表示自愿认罪认罚。你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车...\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+  },
+  "tagged_trace": "<think>根据已有的摘要信息，可以初步判断《判决文书1》属于刑事案件类别。但是为了确保准确性，需要进一步检查文档中是否有其他相关信息来确认案件类型。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '执行案件' '行政案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '执行案件': ['《判决文书a》', '《判决文书b》'], '行政案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\"], \"utility_hits\": {\"DOC1_A1\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A1\": 11.0}, \"score_breakdown\": {\"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 29.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"申诉内容与法院回应\", \"summary\": \"张殿波因危险驾驶一案对刑事判决和裁定提出申诉，认为原审法院认定事实不清、程序违法，并请求从轻处罚。法院审查后认为原判事实清楚，证据确凿，程序合法，驳回其申诉。\", \"text\": \"张殿波：\\n\\n你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定，以“原审法院认定事实不清，我在案发后没有逃跑，且被撞车辆存在违停情形，不应判定我负全部责任；原审程序违法，剥夺了我的质证及辩护权，二审法官未亲自对我进行讯问；此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且我没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对我从轻处罚等”为主要理由，向本院提出申诉。\\n\\n本院经审查认为，原判认定你危险驾驶的犯罪事实，有吕某、李某、王某等人的证言，驾驶人信息查询单、机动车信息查询结果单、驾驶证复印件、行驶路线图、协议书等书证，呼吸检测单、血样提取登记表、血液样本图片、血液样本封装图片、现场照片，交通事故认定书、酒精司法鉴定意见书，你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对起诉书指控的犯罪事实及证据无异议，当庭表示自愿认罪认罚。你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车，原判认定你构成危险驾驶罪并无不当。你所称原审法院认定事实不清，你在案发后没有逃跑，且被撞车辆存在违停情形，不应判定你负全部责任；原审程序违法，剥夺了你的质证及辩护权，二审法官未亲自对你进行讯问的理由，与查明事实及证据不符，本院不予支持。所称此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且你没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对你从轻处罚的理由，经查，原审法院根据你的具体犯罪事实、性质、情节以及对社会的危害程度，在法定刑幅度内所处刑罚并无不当，且原判已充分考虑了对你的从轻处罚情节。\\n\\n综上，原判认定事实清楚，证据确实、充分，定罪准确，量刑适当，审判程序合法。你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\\n\\n特此通知。\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2023\", \"0102\", \"454\", \"01\", \"419\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 0, \"relation_type_counts\": {}, \"top_related_anchor_ids\": []}}</info>\n<think>该段落明确提到这是一个涉及刑事判决和裁定的案件，因此可以确定《判决文书1》属于刑事案件类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"刑事案件\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"confidence\": 1.0, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"刑事案件\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"申诉内容与法院回应 张殿波因危险驾驶一案对刑事判决和裁定提出申诉，认为原审法院认定事实不清、程序违法，并请求从轻处罚。法院审查后认为原判事实清楚，证据确凿，程序合法，驳回其申诉。 张殿波： 你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定，以“原审法院认定事实不清，我在案发后没有逃跑，且被撞车辆存在违停情形，不应判定我负全部责任；原审程序违法，剥夺了我的质证及辩护权，二审法官未亲自对我进行讯问；此次酒后驾驶具有一定的偶发性，是酒后无意识状态下开别人的车，且我没有违法犯罪记录，也在事后进行了积极赔偿，与对方达成了谅解，应当对我从轻处罚等”为主要理由，向本院提出申诉。 本院经审查认为，原判认定你危险驾驶的犯罪事实，有吕某、李某、王某等人的证言，驾驶人信息查询单、机动车信息查询结果单、驾驶证复印件、行驶路线图、协议书等书证，呼吸检测单、血样提取登记表、血液样本图片、血液样本封装图片、现场照片，交通事故认定书、酒精司法鉴定意见书，你的供述与辩解等证据在卷证明，以上证据均系侦查机关依法定程序获取并经庭审质证，证据间能够相互印证，足以认定，且一审庭审时你对起诉书指控的犯罪事实及证据无异议，当庭表示自愿认罪认罚。你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车...\"], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</retrieve>"
+}

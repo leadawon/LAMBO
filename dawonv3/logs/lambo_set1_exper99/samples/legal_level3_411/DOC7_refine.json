@@ -1,0 +1,1002 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "selected_anchor_ids": [
+    "DOC7_A2",
+    "DOC7_A3"
+  ],
+  "final_current_query": "请提供更多关于其他判决文书的信息，以便进一步分类。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC7_A2",
+        "candidate_anchor_ids": [
+          "DOC7_A1",
+          "DOC7_A2",
+          "DOC7_A3",
+          "DOC7_A4"
+        ],
+        "utility_hits": {
+          "DOC7_A3": [
+            "legal_label_hit=['民事案件', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC7_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC7_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC7_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC7_A3": 16.0,
+          "DOC7_A4": 11.0,
+          "DOC7_A2": 11.0,
+          "DOC7_A1": 5.0
+        },
+        "score_breakdown": {
+          "DOC7_A3": {
+            "local_relevance": 20.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 49.914
+          },
+          "DOC7_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 28.691
+          },
+          "DOC7_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 26.201
+          },
+          "DOC7_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 0.0,
+            "total": 20.3
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC7_A2",
+      "plan_think": "考虑到必须找到案件类别和文档到类别的分配，以及案件的原因、处置或裁决证据，我应该首先检查包含案件概述的部分，因为它可能提供关于案件类型的线索。",
+      "info": {
+        "anchor_id": "DOC7_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件概述",
+        "summary": "Expanded same-section read window around DOC7_A2: 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。",
+        "text": "[DOC7_A1 | 当事人信息]\n上诉人（原审被告）：山东博某生物产业有限公司，住所地山东省济南市。\n\n被上诉人（原审原告）：广州埃某森生物科技有限公司，住所地广东省广州。\n\n原审被告：山东博某贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：枣庄博某滕进出口贸易有限公司，住所地山东省枣庄市。\n\n原审被告：博某（济南）国际贸易股份有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：山东总某进出口贸易有限公司，住所地山东省济南市高新区。\n\n原审被告：章丘美某进出口贸易有限公司，住所地山东省济南市章丘区。\n\n原审被告：济南连某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：济南阚某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：济南彪某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：济南青某生物技术有限公司，住所地山东省济南市。\n\n原审被告：济南博某国际贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n[DOC7_A2 | 案件概述]\n原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。\n\n上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。\n\n博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省济南市中级人民法院管辖。\n\n[DOC7_A3 | 法院意见]\n本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\n\n[DOC7_A4 | 裁定结果]\n依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\n\n驳回上诉，维持原裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC7_A1",
+          "DOC7_A2",
+          "DOC7_A3",
+          "DOC7_A4"
+        ],
+        "primary_anchor_id": "DOC7_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书7"
+        ],
+        "anchor_targets": [
+          "判决文书7"
+        ],
+        "anchor_value_hints": [
+          "7",
+          "2023",
+          "01",
+          "2425"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 17,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prev_next": 2,
+            "nearby_window": 3
+          },
+          "top_related_anchor_ids": [
+            "DOC7_A4",
+            "DOC7_A3",
+            "DOC7_A1",
+            "DOC7_A4",
+            "DOC7_A3",
+            "DOC7_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC7_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC7_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC7_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC7_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书7']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC7_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书7']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC7_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书7']"
+          }
+        ]
+      },
+      "extract_think": "此段落提供了关于案件类型的线索，表明这是一个涉及侵害计算机软件著作权的民事案件。因此，可以提取出该判决文书属于“民事案件”的证据。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案件",
+            "value": "判决文书7",
+            "normalized_value": "判决文书7",
+            "evidence_text": "上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A2",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC7_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC7_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC7_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC7_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书7']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC7_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书7']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC7_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书7']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "请提供更多关于其他判决文书的信息，以便进一步分类。",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书7"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC7_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC7_A4",
+            "DOC7_A3",
+            "DOC7_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请提供更多关于其他判决文书的信息，以便进一步分类。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC7_A3",
+        "candidate_anchor_ids": [
+          "DOC7_A1",
+          "DOC7_A2",
+          "DOC7_A3",
+          "DOC7_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "民事案件"
+          ],
+          "known_value_signatures": [
+            "判决文书7"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC7_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省..."
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC7_A4",
+            "DOC7_A3",
+            "DOC7_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC7_A2"
+        ],
+        "utility_hits": {
+          "DOC7_A3": [
+            "legal_label_hit=['民事案件', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC7_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC7_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC7_A3": 16.0,
+          "DOC7_A4": 11.0,
+          "DOC7_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC7_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC7_A2",
+            "same_case_selected=DOC7_A2",
+            "disambiguates_selected=DOC7_A2",
+            "likely_same_entity_selected=DOC7_A2",
+            "prerequisite_of_selected=DOC7_A2"
+          ],
+          "DOC7_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC7_A2",
+            "same_case_selected=DOC7_A2",
+            "disambiguates_selected=DOC7_A2",
+            "likely_same_entity_selected=DOC7_A2",
+            "prerequisite_of_selected=DOC7_A2",
+            "nearby_window_selected=DOC7_A2"
+          ],
+          "DOC7_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC7_A2",
+            "same_case_selected=DOC7_A2",
+            "disambiguates_selected=DOC7_A2",
+            "likely_same_entity_selected=DOC7_A2",
+            "nearby_window_selected=DOC7_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC7_A3": 22.95,
+          "DOC7_A4": 24.2,
+          "DOC7_A1": 17.98
+        },
+        "anchor_role_hits": {
+          "DOC7_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC7_A4": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC7_A1": [
+            "case_identity"
+          ]
+        },
+        "score_breakdown": {
+          "DOC7_A3": {
+            "local_relevance": 12.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 22.95,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 55.864
+          },
+          "DOC7_A4": {
+            "local_relevance": 0.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 24.2,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 39.891
+          },
+          "DOC7_A1": {
+            "local_relevance": 0.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 17.98,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 28.28
+          }
+        }
+      },
+      "anchor_id": "DOC7_A3",
+      "plan_think": "已确认《判决文书7》属于民事案件。接下来需要检查是否有更多关于管辖权的详细信息，以确保我们全面理解案件的分类依据。因此，下一步应该查看包含法院意见的部分。",
+      "info": {
+        "anchor_id": "DOC7_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院意见",
+        "summary": "Expanded same-section read window around DOC7_A3: 法院认为，本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。",
+        "text": "[DOC7_A1 | 当事人信息]\n上诉人（原审被告）：山东博某生物产业有限公司，住所地山东省济南市。\n\n被上诉人（原审原告）：广州埃某森生物科技有限公司，住所地广东省广州。\n\n原审被告：山东博某贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：枣庄博某滕进出口贸易有限公司，住所地山东省枣庄市。\n\n原审被告：博某（济南）国际贸易股份有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：山东总某进出口贸易有限公司，住所地山东省济南市高新区。\n\n原审被告：章丘美某进出口贸易有限公司，住所地山东省济南市章丘区。\n\n原审被告：济南连某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：济南阚某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：济南彪某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n原审被告：济南青某生物技术有限公司，住所地山东省济南市。\n\n原审被告：济南博某国际贸易有限公司，住所地中国（山东）自由贸易试验区。\n\n[DOC7_A2 | 案件概述]\n原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。\n\n上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。\n\n博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省济南市中级人民法院管辖。\n\n[DOC7_A3 | 法院意见]\n本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\n\n[DOC7_A4 | 裁定结果]\n依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\n\n驳回上诉，维持原裁定。\n\n本裁定为终审裁定。",
+        "source_window_anchor_ids": [
+          "DOC7_A1",
+          "DOC7_A2",
+          "DOC7_A3",
+          "DOC7_A4"
+        ],
+        "primary_anchor_id": "DOC7_A3",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity",
+          "decision_evidence",
+          "background_context"
+        ],
+        "anchor_entities": [
+          "判决文书7"
+        ],
+        "anchor_targets": [
+          "民事案件",
+          "判决文书7"
+        ],
+        "anchor_value_hints": [
+          "7",
+          "-3100"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue",
+            "decision_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 3,
+            "disambiguates": 3,
+            "likely_same_entity": 3,
+            "prerequisite_of": 3,
+            "prev_next": 2,
+            "nearby_window": 1
+          },
+          "top_related_anchor_ids": [
+            "DOC7_A4",
+            "DOC7_A2",
+            "DOC7_A1",
+            "DOC7_A4",
+            "DOC7_A2",
+            "DOC7_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC7_A4",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC7_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC7_A1",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC7_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书7']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC7_A2",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书7']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC7_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书7']"
+          }
+        ]
+      },
+      "extract_think": "此段落提供了关于管辖权的详细信息，表明本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。这些信息有助于进一步确认《判决文书7》属于民事案件，并且提供了关于管辖权的证据。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "管辖案件",
+            "value": "判决文书7",
+            "normalized_value": "判决文书7",
+            "evidence_text": "本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A3",
+            "confidence": 0.9,
+            "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC7_A4",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC7_A2",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC7_A1",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC7_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书7']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC7_A2",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书7']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC7_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书7']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "民事案件",
+            "管辖案件"
+          ],
+          "known_value_signatures": [
+            "判决文书7"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC7_A2",
+            "DOC7_A3"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省...",
+            "法院意见 法院认为，本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。 本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC7_A4",
+            "DOC7_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书7']"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC7_A2",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            },
+            {
+              "source_anchor_id": "DOC7_A3",
+              "target_anchor_id": "DOC7_A4",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC7_A3",
+              "target_anchor_id": "DOC7_A1",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案件",
+      "value": "判决文书7",
+      "normalized_value": "判决文书7",
+      "evidence_text": "上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A2",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "answer_key": "管辖案件",
+      "value": "判决文书7",
+      "normalized_value": "判决文书7",
+      "evidence_text": "本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A3",
+      "confidence": 0.9,
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>考虑到必须找到案件类别和文档到类别的分配，以及案件的原因、处置或裁决证据，我应该首先检查包含案件概述的部分，因为它可能提供关于案件类型的线索。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A2\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"utility_hits\": {\"DOC7_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC7_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC7_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC7_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC7_A3\": 16.0, \"DOC7_A4\": 11.0, \"DOC7_A2\": 11.0, \"DOC7_A1\": 5.0}, \"score_breakdown\": {\"DOC7_A3\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 49.914}, \"DOC7_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC7_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}, \"DOC7_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC7_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件概述\", \"summary\": \"Expanded same-section read window around DOC7_A2: 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。\", \"text\": \"[DOC7_A1 | 当事人信息]\\n上诉人（原审被告）：山东博某生物产业有限公司，住所地山东省济南市。\\n\\n被上诉人（原审原告）：广州埃某森生物科技有限公司，住所地广东省广州。\\n\\n原审被告：山东博某贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：枣庄博某滕进出口贸易有限公司，住所地山东省枣庄市。\\n\\n原审被告：博某（济南）国际贸易股份有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：山东总某进出口贸易有限公司，住所地山东省济南市高新区。\\n\\n原审被告：章丘美某进出口贸易有限公司，住所地山东省济南市章丘区。\\n\\n原审被告：济南连某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南阚某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南彪某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南青某生物技术有限公司，住所地山东省济南市。\\n\\n原审被告：济南博某国际贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n[DOC7_A2 | 案件概述]\\n原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。\\n\\n上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。\\n\\n博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省济南市中级人民法院管辖。\\n\\n[DOC7_A3 | 法院意见]\\n本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\\n\\n[DOC7_A4 | 裁定结果]\\n依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"primary_anchor_id\": \"DOC7_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书7\"], \"anchor_targets\": [\"判决文书7\"], \"anchor_value_hints\": [\"7\", \"2023\", \"01\", \"2425\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\", \"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}]}</info>\n<think>此段落提供了关于案件类型的线索，表明这是一个涉及侵害计算机软件著作权的民事案件。因此，可以提取出该判决文书属于“民事案件”的证据。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"判决文书7\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供更多关于其他判决文书的信息，以便进一步分类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书7\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省...\"], \"selected_relation_anchor_ids\": [\"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}]}}</retrieve>\n<think>已确认《判决文书7》属于民事案件。接下来需要检查是否有更多关于管辖权的详细信息，以确保我们全面理解案件的分类依据。因此，下一步应该查看包含法院意见的部分。</think>\n<search>{\"current_query\": \"请提供更多关于其他判决文书的信息，以便进一步分类。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A3\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书7\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省...\"], \"selected_relation_anchor_ids\": [\"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}]}, \"avoid_anchor_ids\": [\"DOC7_A2\"], \"utility_hits\": {\"DOC7_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC7_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC7_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC7_A3\": 16.0, \"DOC7_A4\": 11.0, \"DOC7_A1\": 5.0}, \"relation_hits\": {\"DOC7_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC7_A2\", \"same_case_selected=DOC7_A2\", \"disambiguates_selected=DOC7_A2\", \"likely_same_entity_selected=DOC7_A2\", \"prerequisite_of_selected=DOC7_A2\"], \"DOC7_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC7_A2\", \"same_case_selected=DOC7_A2\", \"disambiguates_selected=DOC7_A2\", \"likely_same_entity_selected=DOC7_A2\", \"prerequisite_of_selected=DOC7_A2\", \"nearby_window_selected=DOC7_A2\"], \"DOC7_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC7_A2\", \"same_case_selected=DOC7_A2\", \"disambiguates_selected=DOC7_A2\", \"likely_same_entity_selected=DOC7_A2\", \"nearby_window_selected=DOC7_A2\"]}, \"relation_score\": {\"DOC7_A3\": 22.95, \"DOC7_A4\": 24.2, \"DOC7_A1\": 17.98}, \"anchor_role_hits\": {\"DOC7_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC7_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC7_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC7_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 22.95, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 55.864}, \"DOC7_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 24.2, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 39.891}, \"DOC7_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 17.98, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 28.28}}}</search>\n<info>{\"anchor_id\": \"DOC7_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"Expanded same-section read window around DOC7_A3: 法院认为，本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。\", \"text\": \"[DOC7_A1 | 当事人信息]\\n上诉人（原审被告）：山东博某生物产业有限公司，住所地山东省济南市。\\n\\n被上诉人（原审原告）：广州埃某森生物科技有限公司，住所地广东省广州。\\n\\n原审被告：山东博某贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：枣庄博某滕进出口贸易有限公司，住所地山东省枣庄市。\\n\\n原审被告：博某（济南）国际贸易股份有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：山东总某进出口贸易有限公司，住所地山东省济南市高新区。\\n\\n原审被告：章丘美某进出口贸易有限公司，住所地山东省济南市章丘区。\\n\\n原审被告：济南连某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南阚某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南彪某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南青某生物技术有限公司，住所地山东省济南市。\\n\\n原审被告：济南博某国际贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n[DOC7_A2 | 案件概述]\\n原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。\\n\\n上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。\\n\\n博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省济南市中级人民法院管辖。\\n\\n[DOC7_A3 | 法院意见]\\n本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\\n\\n[DOC7_A4 | 裁定结果]\\n依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"primary_anchor_id\": \"DOC7_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书7\"], \"anchor_targets\": [\"民事案件\", \"判决文书7\"], \"anchor_value_hints\": [\"7\", \"-3100\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prerequisite_of\": 3, \"prev_next\": 2, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC7_A4\", \"DOC7_A2\", \"DOC7_A1\", \"DOC7_A4\", \"DOC7_A2\", \"DOC7_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}]}</info>\n<think>此段落提供了关于管辖权的详细信息，表明本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。这些信息有助于进一步确认《判决文书7》属于民事案件，并且提供了关于管辖权的证据。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"管辖案件\", \"value\": \"判决文书7\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A3\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书7\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A2\", \"DOC7_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省...\", \"法院意见 法院认为，本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。 本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\"], \"selected_relation_anchor_ids\": [\"DOC7_A4\", \"DOC7_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC7_A3\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A3\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>考虑到必须找到案件类别和文档到类别的分配，以及案件的原因、处置或裁决证据，我应该首先检查包含案件概述的部分，因为它可能提供关于案件类型的线索。</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'刑事案件' '民事案件' '管辖案件'这3种案件类型对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'刑事案件': ['《判决文书a》', '《判决文书b》'], '民事案件': ['《判决文书a》', '《判决文书b》'], '管辖案件': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A2\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"utility_hits\": {\"DOC7_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC7_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC7_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC7_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC7_A3\": 16.0, \"DOC7_A4\": 11.0, \"DOC7_A2\": 11.0, \"DOC7_A1\": 5.0}, \"score_breakdown\": {\"DOC7_A3\": {\"local_relevance\": 20.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 49.914}, \"DOC7_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 28.691}, \"DOC7_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}, \"DOC7_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.3, \"redundancy_penalty\": 0.0, \"total\": 20.3}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC7_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件概述\", \"summary\": \"Expanded same-section read window around DOC7_A2: 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。\", \"text\": \"[DOC7_A1 | 当事人信息]\\n上诉人（原审被告）：山东博某生物产业有限公司，住所地山东省济南市。\\n\\n被上诉人（原审原告）：广州埃某森生物科技有限公司，住所地广东省广州。\\n\\n原审被告：山东博某贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：枣庄博某滕进出口贸易有限公司，住所地山东省枣庄市。\\n\\n原审被告：博某（济南）国际贸易股份有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：山东总某进出口贸易有限公司，住所地山东省济南市高新区。\\n\\n原审被告：章丘美某进出口贸易有限公司，住所地山东省济南市章丘区。\\n\\n原审被告：济南连某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南阚某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南彪某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南青某生物技术有限公司，住所地山东省济南市。\\n\\n原审被告：济南博某国际贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n[DOC7_A2 | 案件概述]\\n原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。\\n\\n上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。\\n\\n博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省济南市中级人民法院管辖。\\n\\n[DOC7_A3 | 法院意见]\\n本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\\n\\n[DOC7_A4 | 裁定结果]\\n依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"primary_anchor_id\": \"DOC7_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书7\"], \"anchor_targets\": [\"判决文书7\"], \"anchor_value_hints\": [\"7\", \"2023\", \"01\", \"2425\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 17, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prev_next\": 2, \"nearby_window\": 3}, \"top_related_anchor_ids\": [\"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\", \"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}]}</info>\n<think>此段落提供了关于案件类型的线索，表明这是一个涉及侵害计算机软件著作权的民事案件。因此，可以提取出该判决文书属于“民事案件”的证据。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案件\", \"value\": \"判决文书7\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A2\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"请提供更多关于其他判决文书的信息，以便进一步分类。\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书7\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省...\"], \"selected_relation_anchor_ids\": [\"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}]}}</retrieve>\n<think>已确认《判决文书7》属于民事案件。接下来需要检查是否有更多关于管辖权的详细信息，以确保我们全面理解案件的分类依据。因此，下一步应该查看包含法院意见的部分。</think>\n<search>{\"current_query\": \"请提供更多关于其他判决文书的信息，以便进一步分类。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A3\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"民事案件\"], \"known_value_signatures\": [\"判决文书7\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省...\"], \"selected_relation_anchor_ids\": [\"DOC7_A4\", \"DOC7_A3\", \"DOC7_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}]}, \"avoid_anchor_ids\": [\"DOC7_A2\"], \"utility_hits\": {\"DOC7_A3\": [\"legal_label_hit=['民事案件', '判决文书']\", \"legal_decision_context\"], \"DOC7_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC7_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC7_A3\": 16.0, \"DOC7_A4\": 11.0, \"DOC7_A1\": 5.0}, \"relation_hits\": {\"DOC7_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC7_A2\", \"same_case_selected=DOC7_A2\", \"disambiguates_selected=DOC7_A2\", \"likely_same_entity_selected=DOC7_A2\", \"prerequisite_of_selected=DOC7_A2\"], \"DOC7_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC7_A2\", \"same_case_selected=DOC7_A2\", \"disambiguates_selected=DOC7_A2\", \"likely_same_entity_selected=DOC7_A2\", \"prerequisite_of_selected=DOC7_A2\", \"nearby_window_selected=DOC7_A2\"], \"DOC7_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC7_A2\", \"same_case_selected=DOC7_A2\", \"disambiguates_selected=DOC7_A2\", \"likely_same_entity_selected=DOC7_A2\", \"nearby_window_selected=DOC7_A2\"]}, \"relation_score\": {\"DOC7_A3\": 22.95, \"DOC7_A4\": 24.2, \"DOC7_A1\": 17.98}, \"anchor_role_hits\": {\"DOC7_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC7_A4\": [\"case_identity\", \"decision_evidence\"], \"DOC7_A1\": [\"case_identity\"]}, \"score_breakdown\": {\"DOC7_A3\": {\"local_relevance\": 12.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 22.95, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 55.864}, \"DOC7_A4\": {\"local_relevance\": 0.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 24.2, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 39.891}, \"DOC7_A1\": {\"local_relevance\": 0.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 17.98, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 28.28}}}</search>\n<info>{\"anchor_id\": \"DOC7_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"Expanded same-section read window around DOC7_A3: 法院认为，本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。\", \"text\": \"[DOC7_A1 | 当事人信息]\\n上诉人（原审被告）：山东博某生物产业有限公司，住所地山东省济南市。\\n\\n被上诉人（原审原告）：广州埃某森生物科技有限公司，住所地广东省广州。\\n\\n原审被告：山东博某贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：枣庄博某滕进出口贸易有限公司，住所地山东省枣庄市。\\n\\n原审被告：博某（济南）国际贸易股份有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：山东总某进出口贸易有限公司，住所地山东省济南市高新区。\\n\\n原审被告：章丘美某进出口贸易有限公司，住所地山东省济南市章丘区。\\n\\n原审被告：济南连某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南阚某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南彪某进出口贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n原审被告：济南青某生物技术有限公司，住所地山东省济南市。\\n\\n原审被告：济南博某国际贸易有限公司，住所地中国（山东）自由贸易试验区。\\n\\n[DOC7_A2 | 案件概述]\\n原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。\\n\\n上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。\\n\\n博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省济南市中级人民法院管辖。\\n\\n[DOC7_A3 | 法院意见]\\n本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\\n\\n[DOC7_A4 | 裁定结果]\\n依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项、第一百七十八条规定，裁定如下：\\n\\n驳回上诉，维持原裁定。\\n\\n本裁定为终审裁定。\", \"source_window_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"], \"primary_anchor_id\": \"DOC7_A3\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\", \"decision_evidence\", \"background_context\"], \"anchor_entities\": [\"判决文书7\"], \"anchor_targets\": [\"民事案件\", \"判决文书7\"], \"anchor_value_hints\": [\"7\", \"-3100\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\", \"decision_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 3, \"disambiguates\": 3, \"likely_same_entity\": 3, \"prerequisite_of\": 3, \"prev_next\": 2, \"nearby_window\": 1}, \"top_related_anchor_ids\": [\"DOC7_A4\", \"DOC7_A2\", \"DOC7_A1\", \"DOC7_A4\", \"DOC7_A2\", \"DOC7_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}]}</info>\n<think>此段落提供了关于管辖权的详细信息，表明本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。这些信息有助于进一步确认《判决文书7》属于民事案件，并且提供了关于管辖权的证据。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"管辖案件\", \"value\": \"判决文书7\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A3\", \"confidence\": 0.9, \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"民事案件\", \"管辖案件\"], \"known_value_signatures\": [\"判决文书7\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC7_A2\", \"DOC7_A3\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件概述 上诉人山东博某生物产业有限公司因与被上诉人广州埃某森生物科技有限公司及其他原审被告之间的侵害计算机软件著作权纠纷，不服浙江省杭州市中级人民法院的民事裁定，提出上诉。 原审被告：杭州阿某广告有限公司，住所地浙江省杭州市。 上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出口贸易有限公司、博某（济南）国际贸易股份有限公司、山东总某进出口贸易有限公司、章丘美某进出口贸易有限公司、济南连某进出口贸易有限公司、济南阚某进出口贸易有限公司、济南彪某进出口贸易有限公司、济南青某生物技术有限公司、济南博某国际贸易有限公司、杭州阿某广告有限公司（以下简称阿某公司）侵害计算机软件著作权纠纷一案，不服浙江省杭州市中级人民法院（2023）浙01民初2425号民事裁定，向本院提起上诉。本院依法组成合议庭审理了本案。 博某公司上诉称，一、原裁定认定事实不清，埃某森公司所提供证据无法证明博某公司及其他被告通过阿里巴巴平台实施了销售搭载有被诉侵权软件的产品的行为。阿某公司没有实施侵犯计算机软件著作权的行为，并非本案适格的被告，不应当成为本案管辖的连接点。二、本案系侵害计算机软件著作权纠纷，应当由被告即博某公司住所地山东省济南市中级人民法院管辖。请求将本案依法移送至山东省...\", \"法院意见 法院认为，本案属于侵害计算机软件著作权纠纷，应由侵权行为地或被告住所地法院管辖。阿某公司作为被告之一，其住所地在浙江省杭州市，因此原审法院对本案有管辖权。 本院认为，本案系侵害计算机软件著作权纠纷，根据民事诉讼法的相关规定，应当由侵权行为地或者被告住所地人民法院管辖。同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权。埃某森公司指控各被告在阿里巴巴网络平台上许诺销售、销售搭载有被诉侵权软件的全自动三分类血液分析仪（型号：BK-3100），对阿某公司等各被告提出了明确的诉讼请求，并提供了公证书等初步证据，故阿某公司系本案适格被告之一。因阿某公司住所地在浙江省杭州市区域内，原审法院作为被告住所地具有第一审知识产权民事案件管辖权的法院，依法对本案享有管辖权。至于阿某公司是否构成侵权有待实体审理，不影响管辖权的确定。综上，博某公司的上诉理由不能成立，其上诉请求应予驳回。\"], \"selected_relation_anchor_ids\": [\"DOC7_A4\", \"DOC7_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC7_A2\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}, {\"source_anchor_id\": \"DOC7_A3\", \"target_anchor_id\": \"DOC7_A4\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC7_A3\", \"target_anchor_id\": \"DOC7_A1\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}]}}</retrieve>"
+}

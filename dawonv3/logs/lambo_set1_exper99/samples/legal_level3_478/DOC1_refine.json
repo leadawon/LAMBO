@@ -1,0 +1,927 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A2",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "utility_hits": {
+          "DOC1_A3": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A5": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A2": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A3": 16.0,
+          "DOC1_A5": 16.0,
+          "DOC1_A2": 11.0,
+          "DOC1_A4": 11.0
+        },
+        "score_breakdown": {
+          "DOC1_A3": {
+            "local_relevance": 8.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 0.0,
+            "total": 37.914
+          },
+          "DOC1_A5": {
+            "local_relevance": 8.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 6.0,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 0.0,
+            "total": 37.508
+          },
+          "DOC1_A2": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 6.201,
+            "redundancy_penalty": 0.0,
+            "total": 26.201
+          },
+          "DOC1_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 3.0,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 0.0,
+            "total": 25.691
+          }
+        },
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [],
+          "known_value_signatures": [],
+          "missing_answer_keys": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "selected_anchor_ids": [],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": true,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "visited_anchor_texts": [],
+          "selected_relation_anchor_ids": [],
+          "selected_relation_context": []
+        }
+      },
+      "anchor_id": "DOC1_A2",
+      "plan_think": "The current document seems to be related to a dispute over the validity of a debt transfer agreement, which does not directly match any of the five case categories provided. However, it appears to be a civil execution case since it involves a change in the applicant's status due to a debt transfer. I will inspect the section that provides more details on the case background and the application to determine if it can be categorized as '执行案由-民事'.",
+      "info": {
+        "anchor_id": "DOC1_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景及申请",
+        "summary": "Expanded same-section read window around DOC1_A2: 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\n\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\n\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\n\n法定代表人：杨某，该公司总经理。\n\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\n\n[DOC1_A2 | 案件背景及申请]\n复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\n\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\n\n[DOC1_A3 | 法院查明事实]\n沈阳中院审查查明，申请执行人沈阳某文化传播有限公司与被执行人纪某雯服务合同纠纷一案，沈阳中院依据成都仲裁委员会（2020）成仲案字第2268号裁决书立案执行，执行案号为（2022）辽01执650号。\n\n2022年7月3日，申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，约定：双方协商一致，沈阳某文化传播有限公司将成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权转让给宋某华。并确认宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。以在中华工商时报上发布债权转让公告的方式通知债务人。\n\n沈阳中院认为，在执行程序中，追加、变更当事人应该遵循法定原则，严格依据法律、司法解释的规定。根据《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条的规定，申请执行人将生效法律文书确定的债权依法转让给第三人，且书面认可第三人取得该债权，该第三人申请变更、追加其为申请执行人的，人民法院应予支持。本案中，虽申请人以债权转让的事由申请变更其为本案申请执行人，但其提供的债权转让确认书中不具备法律规定的债权转让要件，并非司法解释规定的债权转让，故申请人的申请不符合上述规定，沈阳中院不予支持。依照《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第二十八条第二款、第三十条的规定，裁定：驳回申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请。\n\n[DOC1_A4 | 复议申请]\n复议申请人宋某华不服沈阳中院作出的变更裁定，向本院申请复议。请求：撤销变更裁定。理由：复议申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。上述债权转让不违反法律规定，沈阳中院变更裁定驳回变更申请理由不成立。\n\n[DOC1_A5 | 高级法院意见]\n本院对沈阳中院查明的事实予以确认。\n\n本院认为，在执行程序中，追加、变更当事人应该严格遵循法定原则。本案中，虽然复议申请人与申请执行人签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权，但对该债权转让缺少单独书面确认复议申请人取得债权的材料，该债权转让确认书中缺少必要的法律规定的债权转让要件，并非严格意义上的司法解释规定的债权转让，沈阳中院变更裁定驳回复议申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请，符合法律规定，结果应予维持。综上，《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第三十一条、最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项的规定，裁定如下：\n\n驳回复议申请人宋某华的复议申请，维持沈阳市中级人民法院（2022）辽01执异923号执行裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5"
+        ],
+        "primary_anchor_id": "DOC1_A2",
+        "anchor_role_candidates": [
+          "value_evidence",
+          "case_identity"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "2022",
+          "01",
+          "923",
+          "2020",
+          "2268",
+          "650",
+          "6"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value",
+            "case_identity_cue"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 18,
+          "relation_type_counts": {
+            "supports": 2,
+            "same_case": 4,
+            "disambiguates": 4,
+            "likely_same_entity": 4,
+            "prev_next": 2,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A3",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3",
+            "DOC1_A1"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A1",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "此段落提供了关于宋某华申请变更其为申请执行人的背景信息，涉及一个服务合同纠纷案件。根据内容，这个案件属于“执行案由-民事”类别。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案由-民事",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A2",
+            "confidence": 0.8,
+            "source_anchor_role": "value_evidence,case_identity",
+            "source_relation_context": [
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "supports",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 3.4,
+                "reason": "evidence supports binding/identity anchor"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A5",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A4",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A3",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              },
+              {
+                "relation_type": "same_case",
+                "target_anchor_id": "DOC1_A1",
+                "weight": 2.8,
+                "reason": "shared case cue ['判决文书1']"
+              }
+            ],
+            "provenance_strength": "strong",
+            "disambiguation_needed": false
+          }
+        ],
+        "enough": false,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案由-民事"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A3",
+            "DOC1_A4",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A1",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ],
+        "coverage_hints": {
+          "known_answer_keys": [
+            "执行案由-民事"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "low_confidence_keys": [],
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2"
+          ],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A3",
+            "DOC1_A4",
+            "DOC1_A1"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A1",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            }
+          ]
+        },
+        "avoid_anchor_ids": [
+          "DOC1_A2"
+        ],
+        "utility_hits": {
+          "DOC1_A5": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A3": [
+            "legal_label_hit=['民事', '判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A4": [
+            "legal_label_hit=['判决文书']",
+            "legal_decision_context"
+          ],
+          "DOC1_A1": [
+            "legal_label_hit=['判决文书']"
+          ]
+        },
+        "utility_score": {
+          "DOC1_A5": 16.0,
+          "DOC1_A3": 16.0,
+          "DOC1_A4": 11.0,
+          "DOC1_A1": 5.0
+        },
+        "relation_hits": {
+          "DOC1_A5": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A2",
+            "prerequisite_of_selected=DOC1_A2"
+          ],
+          "DOC1_A3": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "disambiguates_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A2"
+          ],
+          "DOC1_A4": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A2",
+            "nearby_window_selected=DOC1_A2"
+          ],
+          "DOC1_A1": [
+            "candidate_in_selected_relation_frontier",
+            "supports_selected=DOC1_A2",
+            "same_case_selected=DOC1_A2",
+            "likely_same_entity_selected=DOC1_A2",
+            "nearby_window_selected=DOC1_A2"
+          ]
+        },
+        "relation_score": {
+          "DOC1_A5": 22.95,
+          "DOC1_A3": 19.73,
+          "DOC1_A4": 14.36,
+          "DOC1_A1": 11.36
+        },
+        "anchor_role_hits": {
+          "DOC1_A5": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A3": [
+            "case_identity",
+            "decision_evidence"
+          ],
+          "DOC1_A4": [
+            "decision_evidence"
+          ]
+        },
+        "score_breakdown": {
+          "DOC1_A5": {
+            "local_relevance": 8.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 22.95,
+            "weak_priors": 5.508,
+            "redundancy_penalty": 3.0,
+            "total": 51.458
+          },
+          "DOC1_A3": {
+            "local_relevance": 8.0,
+            "answer_utility": 16.0,
+            "coverage": 2.0,
+            "relation": 19.73,
+            "weak_priors": 5.914,
+            "redundancy_penalty": 3.0,
+            "total": 48.644
+          },
+          "DOC1_A4": {
+            "local_relevance": 4.0,
+            "answer_utility": 11.0,
+            "coverage": 2.0,
+            "relation": 14.36,
+            "weak_priors": 5.691,
+            "redundancy_penalty": 3.0,
+            "total": 34.051
+          },
+          "DOC1_A1": {
+            "local_relevance": 4.0,
+            "answer_utility": 5.0,
+            "coverage": 2.0,
+            "relation": 11.36,
+            "weak_priors": 6.3,
+            "redundancy_penalty": 3.0,
+            "total": 25.66
+          }
+        }
+      },
+      "anchor_id": "DOC1_A1",
+      "plan_think": "The current document has been categorized under '执行案由-民事'. Since we have identified the category for this document, there is no need to inspect further sections within this document. We can now move on to the next document if available.",
+      "info": {
+        "anchor_id": "DOC1_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "Expanded same-section read window around DOC1_A1: 复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。",
+        "text": "[DOC1_A1 | 当事人信息]\n复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\n\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\n\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\n\n法定代表人：杨某，该公司总经理。\n\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\n\n[DOC1_A2 | 案件背景及申请]\n复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\n\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\n\n[DOC1_A3 | 法院查明事实]\n沈阳中院审查查明，申请执行人沈阳某文化传播有限公司与被执行人纪某雯服务合同纠纷一案，沈阳中院依据成都仲裁委员会（2020）成仲案字第2268号裁决书立案执行，执行案号为（2022）辽01执650号。\n\n2022年7月3日，申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，约定：双方协商一致，沈阳某文化传播有限公司将成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权转让给宋某华。并确认宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。以在中华工商时报上发布债权转让公告的方式通知债务人。\n\n沈阳中院认为，在执行程序中，追加、变更当事人应该遵循法定原则，严格依据法律、司法解释的规定。根据《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条的规定，申请执行人将生效法律文书确定的债权依法转让给第三人，且书面认可第三人取得该债权，该第三人申请变更、追加其为申请执行人的，人民法院应予支持。本案中，虽申请人以债权转让的事由申请变更其为本案申请执行人，但其提供的债权转让确认书中不具备法律规定的债权转让要件，并非司法解释规定的债权转让，故申请人的申请不符合上述规定，沈阳中院不予支持。依照《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第二十八条第二款、第三十条的规定，裁定：驳回申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请。\n\n[DOC1_A4 | 复议申请]\n复议申请人宋某华不服沈阳中院作出的变更裁定，向本院申请复议。请求：撤销变更裁定。理由：复议申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。上述债权转让不违反法律规定，沈阳中院变更裁定驳回变更申请理由不成立。\n\n[DOC1_A5 | 高级法院意见]\n本院对沈阳中院查明的事实予以确认。\n\n本院认为，在执行程序中，追加、变更当事人应该严格遵循法定原则。本案中，虽然复议申请人与申请执行人签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权，但对该债权转让缺少单独书面确认复议申请人取得债权的材料，该债权转让确认书中缺少必要的法律规定的债权转让要件，并非严格意义上的司法解释规定的债权转让，沈阳中院变更裁定驳回复议申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请，符合法律规定，结果应予维持。综上，《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第三十一条、最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项的规定，裁定如下：\n\n驳回复议申请人宋某华的复议申请，维持沈阳市中级人民法院（2022）辽01执异923号执行裁定。",
+        "source_window_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4",
+          "DOC1_A5"
+        ],
+        "primary_anchor_id": "DOC1_A1",
+        "anchor_role_candidates": [
+          "value_evidence"
+        ],
+        "anchor_entities": [
+          "判决文书1"
+        ],
+        "anchor_targets": [
+          "判决文书1"
+        ],
+        "anchor_value_hints": [
+          "1",
+          "1986",
+          "2",
+          "20",
+          "17",
+          "-2",
+          "3614",
+          "2002"
+        ],
+        "provenance_hints": {
+          "strength": "strong",
+          "signals": [
+            "numeric_value"
+          ],
+          "record_type": "legal"
+        },
+        "relation_summary": {
+          "relation_count": 14,
+          "relation_type_counts": {
+            "supports": 3,
+            "same_case": 4,
+            "likely_same_entity": 4,
+            "prev_next": 1,
+            "nearby_window": 2
+          },
+          "top_related_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A3",
+            "DOC1_A2",
+            "DOC1_A5",
+            "DOC1_A4",
+            "DOC1_A3"
+          ]
+        },
+        "source_relation_context": [
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "supports",
+            "target_anchor_id": "DOC1_A2",
+            "weight": 3.4,
+            "reason": "evidence supports binding/identity anchor"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A5",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A4",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          },
+          {
+            "relation_type": "same_case",
+            "target_anchor_id": "DOC1_A3",
+            "weight": 2.8,
+            "reason": "shared case cue ['判决文书1']"
+          }
+        ]
+      },
+      "extract_think": "此段落提供了当事人的基本信息，包括复议申请人宋某华、申请执行人沈阳某文化传播有限公司以及被执行人纪某雯。这些信息有助于理解案件背景，但不足以提供额外的分类证据。我们已经从之前的段落中确定了该判决文书属于'执行案由-民事'类别，因此无需进一步提取证据。",
+      "retrieve": {
+        "items": [],
+        "enough": true,
+        "followup_query": "",
+        "coverage_hints": {
+          "answer_topology": "dict",
+          "answer_schema_hint": "Extract category-to-document assignments supported by this document.",
+          "known_answer_keys": [
+            "执行案由-民事"
+          ],
+          "known_value_signatures": [
+            "判决文书1"
+          ],
+          "missing_answer_keys": [],
+          "selected_anchor_ids": [
+            "DOC1_A2",
+            "DOC1_A1"
+          ],
+          "low_confidence_keys": [],
+          "generic_item_count": 0,
+          "doc_placeholder_values": [],
+          "needs_non_doc_placeholder": false,
+          "needs_more_evidence": false,
+          "must_find": [
+            "category labels and document-to-category assignments",
+            "case cause, disposition, or verdict evidence"
+          ],
+          "missing_must_find": [],
+          "visited_anchor_texts": [
+            "案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。",
+            "当事人信息 复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。 复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。 委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。 申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。 法定代表人：杨某，该公司总经理。 被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。"
+          ],
+          "selected_relation_anchor_ids": [
+            "DOC1_A5",
+            "DOC1_A3",
+            "DOC1_A4"
+          ],
+          "selected_relation_context": [
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "supports",
+              "weight": 3.4,
+              "reason": "evidence supports binding/identity anchor"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "same_case",
+              "weight": 2.8,
+              "reason": "shared case cue ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "disambiguates",
+              "weight": 2.8,
+              "reason": "binding anchor disambiguates evidence"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A5",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A3",
+              "relation_type": "likely_same_entity",
+              "weight": 2.2,
+              "reason": "shared entity ['判决文书1']"
+            },
+            {
+              "source_anchor_id": "DOC1_A2",
+              "target_anchor_id": "DOC1_A4",
+              "relation_type": "nearby_window",
+              "weight": 1.0,
+              "reason": "within local read window"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "执行案由-民事",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "confidence": 0.8,
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document seems to be related to a dispute over the validity of a debt transfer agreement, which does not directly match any of the five case categories provided. However, it appears to be a civil execution case since it involves a change in the applicant's status due to a debt transfer. I will inspect the section that provides more details on the case background and the application to determine if it can be categorized as '执行案由-民事'.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A3\": 16.0, \"DOC1_A5\": 16.0, \"DOC1_A2\": 11.0, \"DOC1_A4\": 11.0}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 37.914}, \"DOC1_A5\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 37.508}, \"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 25.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景及申请\", \"summary\": \"Expanded same-section read window around DOC1_A2: 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\\n\\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\\n\\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\\n\\n法定代表人：杨某，该公司总经理。\\n\\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\\n\\n[DOC1_A2 | 案件背景及申请]\\n复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\\n\\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\\n\\n[DOC1_A3 | 法院查明事实]\\n沈阳中院审查查明，申请执行人沈阳某文化传播有限公司与被执行人纪某雯服务合同纠纷一案，沈阳中院依据成都仲裁委员会（2020）成仲案字第2268号裁决书立案执行，执行案号为（2022）辽01执650号。\\n\\n2022年7月3日，申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，约定：双方协商一致，沈阳某文化传播有限公司将成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权转让给宋某华。并确认宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。以在中华工商时报上发布债权转让公告的方式通知债务人。\\n\\n沈阳中院认为，在执行程序中，追加、变更当事人应该遵循法定原则，严格依据法律、司法解释的规定。根据《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条的规定，申请执行人将生效法律文书确定的债权依法转让给第三人，且书面认可第三人取得该债权，该第三人申请变更、追加其为申请执行人的，人民法院应予支持。本案中，虽申请人以债权转让的事由申请变更其为本案申请执行人，但其提供的债权转让确认书中不具备法律规定的债权转让要件，并非司法解释规定的债权转让，故申请人的申请不符合上述规定，沈阳中院不予支持。依照《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第二十八条第二款、第三十条的规定，裁定：驳回申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人宋某华不服沈阳中院作出的变更裁定，向本院申请复议。请求：撤销变更裁定。理由：复议申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。上述债权转让不违反法律规定，沈阳中院变更裁定驳回变更申请理由不成立。\\n\\n[DOC1_A5 | 高级法院意见]\\n本院对沈阳中院查明的事实予以确认。\\n\\n本院认为，在执行程序中，追加、变更当事人应该严格遵循法定原则。本案中，虽然复议申请人与申请执行人签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权，但对该债权转让缺少单独书面确认复议申请人取得债权的材料，该债权转让确认书中缺少必要的法律规定的债权转让要件，并非严格意义上的司法解释规定的债权转让，沈阳中院变更裁定驳回复议申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请，符合法律规定，结果应予维持。综上，《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第三十一条、最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项的规定，裁定如下：\\n\\n驳回复议申请人宋某华的复议申请，维持沈阳市中级人民法院（2022）辽01执异923号执行裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2022\", \"01\", \"923\", \"2020\", \"2268\", \"650\", \"6\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 2, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>此段落提供了关于宋某华申请变更其为申请执行人的背景信息，涉及一个服务合同纠纷案件。根据内容，这个案件属于“执行案由-民事”类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-民事\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案由-民事\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}}</retrieve>\n<think>The current document has been categorized under '执行案由-民事'. Since we have identified the category for this document, there is no need to inspect further sections within this document. We can now move on to the next document if available.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案由-民事\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A2\"], \"utility_hits\": {\"DOC1_A5\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A5\": 16.0, \"DOC1_A3\": 16.0, \"DOC1_A4\": 11.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"prerequisite_of_selected=DOC1_A2\"], \"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"]}, \"relation_score\": {\"DOC1_A5\": 22.95, \"DOC1_A3\": 19.73, \"DOC1_A4\": 14.36, \"DOC1_A1\": 11.36}, \"anchor_role_hits\": {\"DOC1_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A5\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 22.95, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 51.458}, \"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 48.644}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.36, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 34.051}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 11.36, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 25.66}}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC1_A1: 复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\\n\\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\\n\\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\\n\\n法定代表人：杨某，该公司总经理。\\n\\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\\n\\n[DOC1_A2 | 案件背景及申请]\\n复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\\n\\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\\n\\n[DOC1_A3 | 法院查明事实]\\n沈阳中院审查查明，申请执行人沈阳某文化传播有限公司与被执行人纪某雯服务合同纠纷一案，沈阳中院依据成都仲裁委员会（2020）成仲案字第2268号裁决书立案执行，执行案号为（2022）辽01执650号。\\n\\n2022年7月3日，申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，约定：双方协商一致，沈阳某文化传播有限公司将成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权转让给宋某华。并确认宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。以在中华工商时报上发布债权转让公告的方式通知债务人。\\n\\n沈阳中院认为，在执行程序中，追加、变更当事人应该遵循法定原则，严格依据法律、司法解释的规定。根据《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条的规定，申请执行人将生效法律文书确定的债权依法转让给第三人，且书面认可第三人取得该债权，该第三人申请变更、追加其为申请执行人的，人民法院应予支持。本案中，虽申请人以债权转让的事由申请变更其为本案申请执行人，但其提供的债权转让确认书中不具备法律规定的债权转让要件，并非司法解释规定的债权转让，故申请人的申请不符合上述规定，沈阳中院不予支持。依照《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第二十八条第二款、第三十条的规定，裁定：驳回申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人宋某华不服沈阳中院作出的变更裁定，向本院申请复议。请求：撤销变更裁定。理由：复议申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。上述债权转让不违反法律规定，沈阳中院变更裁定驳回变更申请理由不成立。\\n\\n[DOC1_A5 | 高级法院意见]\\n本院对沈阳中院查明的事实予以确认。\\n\\n本院认为，在执行程序中，追加、变更当事人应该严格遵循法定原则。本案中，虽然复议申请人与申请执行人签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权，但对该债权转让缺少单独书面确认复议申请人取得债权的材料，该债权转让确认书中缺少必要的法律规定的债权转让要件，并非严格意义上的司法解释规定的债权转让，沈阳中院变更裁定驳回复议申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请，符合法律规定，结果应予维持。综上，《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第三十一条、最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项的规定，裁定如下：\\n\\n驳回复议申请人宋某华的复议申请，维持沈阳市中级人民法院（2022）辽01执异923号执行裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"1986\", \"2\", \"20\", \"17\", \"-2\", \"3614\", \"2002\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 14, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>此段落提供了当事人的基本信息，包括复议申请人宋某华、申请执行人沈阳某文化传播有限公司以及被执行人纪某雯。这些信息有助于理解案件背景，但不足以提供额外的分类证据。我们已经从之前的段落中确定了该判决文书属于'执行案由-民事'类别，因此无需进一步提取证据。</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案由-民事\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\", \"当事人信息 复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。 复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。 委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。 申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。 法定代表人：杨某，该公司总经理。 被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document seems to be related to a dispute over the validity of a debt transfer agreement, which does not directly match any of the five case categories provided. However, it appears to be a civil execution case since it involves a change in the applicant's status due to a debt transfer. I will inspect the section that provides more details on the case background and the application to determine if it can be categorized as '执行案由-民事'.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"utility_hits\": {\"DOC1_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A5\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A2\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"]}, \"utility_score\": {\"DOC1_A3\": 16.0, \"DOC1_A5\": 16.0, \"DOC1_A2\": 11.0, \"DOC1_A4\": 11.0}, \"score_breakdown\": {\"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.914, \"redundancy_penalty\": 0.0, \"total\": 37.914}, \"DOC1_A5\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 6.0, \"weak_priors\": 5.508, \"redundancy_penalty\": 0.0, \"total\": 37.508}, \"DOC1_A2\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 6.201, \"redundancy_penalty\": 0.0, \"total\": 26.201}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 3.0, \"weak_priors\": 5.691, \"redundancy_penalty\": 0.0, \"total\": 25.691}}, \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [], \"known_value_signatures\": [], \"missing_answer_keys\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"selected_anchor_ids\": [], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": true, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"visited_anchor_texts\": [], \"selected_relation_anchor_ids\": [], \"selected_relation_context\": []}}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景及申请\", \"summary\": \"Expanded same-section read window around DOC1_A2: 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\\n\\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\\n\\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\\n\\n法定代表人：杨某，该公司总经理。\\n\\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\\n\\n[DOC1_A2 | 案件背景及申请]\\n复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\\n\\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\\n\\n[DOC1_A3 | 法院查明事实]\\n沈阳中院审查查明，申请执行人沈阳某文化传播有限公司与被执行人纪某雯服务合同纠纷一案，沈阳中院依据成都仲裁委员会（2020）成仲案字第2268号裁决书立案执行，执行案号为（2022）辽01执650号。\\n\\n2022年7月3日，申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，约定：双方协商一致，沈阳某文化传播有限公司将成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权转让给宋某华。并确认宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。以在中华工商时报上发布债权转让公告的方式通知债务人。\\n\\n沈阳中院认为，在执行程序中，追加、变更当事人应该遵循法定原则，严格依据法律、司法解释的规定。根据《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条的规定，申请执行人将生效法律文书确定的债权依法转让给第三人，且书面认可第三人取得该债权，该第三人申请变更、追加其为申请执行人的，人民法院应予支持。本案中，虽申请人以债权转让的事由申请变更其为本案申请执行人，但其提供的债权转让确认书中不具备法律规定的债权转让要件，并非司法解释规定的债权转让，故申请人的申请不符合上述规定，沈阳中院不予支持。依照《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第二十八条第二款、第三十条的规定，裁定：驳回申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人宋某华不服沈阳中院作出的变更裁定，向本院申请复议。请求：撤销变更裁定。理由：复议申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。上述债权转让不违反法律规定，沈阳中院变更裁定驳回变更申请理由不成立。\\n\\n[DOC1_A5 | 高级法院意见]\\n本院对沈阳中院查明的事实予以确认。\\n\\n本院认为，在执行程序中，追加、变更当事人应该严格遵循法定原则。本案中，虽然复议申请人与申请执行人签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权，但对该债权转让缺少单独书面确认复议申请人取得债权的材料，该债权转让确认书中缺少必要的法律规定的债权转让要件，并非严格意义上的司法解释规定的债权转让，沈阳中院变更裁定驳回复议申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请，符合法律规定，结果应予维持。综上，《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第三十一条、最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项的规定，裁定如下：\\n\\n驳回复议申请人宋某华的复议申请，维持沈阳市中级人民法院（2022）辽01执异923号执行裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A2\", \"anchor_role_candidates\": [\"value_evidence\", \"case_identity\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"2022\", \"01\", \"923\", \"2020\", \"2268\", \"650\", \"6\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\", \"case_identity_cue\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 18, \"relation_type_counts\": {\"supports\": 2, \"same_case\": 4, \"disambiguates\": 4, \"likely_same_entity\": 4, \"prev_next\": 2, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>此段落提供了关于宋某华申请变更其为申请执行人的背景信息，涉及一个服务合同纠纷案件。根据内容，这个案件属于“执行案由-民事”类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-民事\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.8, \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}], \"enough\": false, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案由-民事\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}}</retrieve>\n<think>The current document has been categorized under '执行案由-民事'. Since we have identified the category for this document, there is no need to inspect further sections within this document. We can now move on to the next document if available.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'继承纠纷' '执行案由-民事' '民间借贷纠纷' '行政行为-行政处罚' '行政行为-其他行政行为'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'继承纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-民事': ['《判决文书a》', '《判决文书b》'], '民间借贷纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '行政行为-其他行政行为': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A1\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"], \"coverage_hints\": {\"known_answer_keys\": [\"执行案由-民事\"], \"known_value_signatures\": [\"判决文书1\"], \"low_confidence_keys\": [], \"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\"], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A1\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A1\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}]}, \"avoid_anchor_ids\": [\"DOC1_A2\"], \"utility_hits\": {\"DOC1_A5\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A3\": [\"legal_label_hit=['民事', '判决文书']\", \"legal_decision_context\"], \"DOC1_A4\": [\"legal_label_hit=['判决文书']\", \"legal_decision_context\"], \"DOC1_A1\": [\"legal_label_hit=['判决文书']\"]}, \"utility_score\": {\"DOC1_A5\": 16.0, \"DOC1_A3\": 16.0, \"DOC1_A4\": 11.0, \"DOC1_A1\": 5.0}, \"relation_hits\": {\"DOC1_A5\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"prerequisite_of_selected=DOC1_A2\"], \"DOC1_A3\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"disambiguates_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\"], \"DOC1_A4\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"], \"DOC1_A1\": [\"candidate_in_selected_relation_frontier\", \"supports_selected=DOC1_A2\", \"same_case_selected=DOC1_A2\", \"likely_same_entity_selected=DOC1_A2\", \"nearby_window_selected=DOC1_A2\"]}, \"relation_score\": {\"DOC1_A5\": 22.95, \"DOC1_A3\": 19.73, \"DOC1_A4\": 14.36, \"DOC1_A1\": 11.36}, \"anchor_role_hits\": {\"DOC1_A5\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A3\": [\"case_identity\", \"decision_evidence\"], \"DOC1_A4\": [\"decision_evidence\"]}, \"score_breakdown\": {\"DOC1_A5\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 22.95, \"weak_priors\": 5.508, \"redundancy_penalty\": 3.0, \"total\": 51.458}, \"DOC1_A3\": {\"local_relevance\": 8.0, \"answer_utility\": 16.0, \"coverage\": 2.0, \"relation\": 19.73, \"weak_priors\": 5.914, \"redundancy_penalty\": 3.0, \"total\": 48.644}, \"DOC1_A4\": {\"local_relevance\": 4.0, \"answer_utility\": 11.0, \"coverage\": 2.0, \"relation\": 14.36, \"weak_priors\": 5.691, \"redundancy_penalty\": 3.0, \"total\": 34.051}, \"DOC1_A1\": {\"local_relevance\": 4.0, \"answer_utility\": 5.0, \"coverage\": 2.0, \"relation\": 11.36, \"weak_priors\": 6.3, \"redundancy_penalty\": 3.0, \"total\": 25.66}}}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"Expanded same-section read window around DOC1_A1: 复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。\", \"text\": \"[DOC1_A1 | 当事人信息]\\n复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。\\n\\n委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。\\n\\n申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。\\n\\n法定代表人：杨某，该公司总经理。\\n\\n被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\\n\\n[DOC1_A2 | 案件背景及申请]\\n复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。\\n\\n宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\\n\\n[DOC1_A3 | 法院查明事实]\\n沈阳中院审查查明，申请执行人沈阳某文化传播有限公司与被执行人纪某雯服务合同纠纷一案，沈阳中院依据成都仲裁委员会（2020）成仲案字第2268号裁决书立案执行，执行案号为（2022）辽01执650号。\\n\\n2022年7月3日，申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，约定：双方协商一致，沈阳某文化传播有限公司将成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权转让给宋某华。并确认宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。以在中华工商时报上发布债权转让公告的方式通知债务人。\\n\\n沈阳中院认为，在执行程序中，追加、变更当事人应该遵循法定原则，严格依据法律、司法解释的规定。根据《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条的规定，申请执行人将生效法律文书确定的债权依法转让给第三人，且书面认可第三人取得该债权，该第三人申请变更、追加其为申请执行人的，人民法院应予支持。本案中，虽申请人以债权转让的事由申请变更其为本案申请执行人，但其提供的债权转让确认书中不具备法律规定的债权转让要件，并非司法解释规定的债权转让，故申请人的申请不符合上述规定，沈阳中院不予支持。依照《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第二十八条第二款、第三十条的规定，裁定：驳回申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请。\\n\\n[DOC1_A4 | 复议申请]\\n复议申请人宋某华不服沈阳中院作出的变更裁定，向本院申请复议。请求：撤销变更裁定。理由：复议申请人宋某华与申请执行人沈阳某文化传播有限公司签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权。上述债权转让不违反法律规定，沈阳中院变更裁定驳回变更申请理由不成立。\\n\\n[DOC1_A5 | 高级法院意见]\\n本院对沈阳中院查明的事实予以确认。\\n\\n本院认为，在执行程序中，追加、变更当事人应该严格遵循法定原则。本案中，虽然复议申请人与申请执行人签订债权转让确认书，确认复议申请人宋某华取得成都仲裁委员会（2020）成仲案字第2268号裁决书所确定的全部债权，但对该债权转让缺少单独书面确认复议申请人取得债权的材料，该债权转让确认书中缺少必要的法律规定的债权转让要件，并非严格意义上的司法解释规定的债权转让，沈阳中院变更裁定驳回复议申请人宋某华申请变更其为（2022）辽01执650号案件申请执行人的申请，符合法律规定，结果应予维持。综上，《最高人民法院关于民事执行中变更、追加当事人若干问题的规定》第九条、第三十一条、最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款（一）项的规定，裁定如下：\\n\\n驳回复议申请人宋某华的复议申请，维持沈阳市中级人民法院（2022）辽01执异923号执行裁定。\", \"source_window_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\", \"DOC1_A5\"], \"primary_anchor_id\": \"DOC1_A1\", \"anchor_role_candidates\": [\"value_evidence\"], \"anchor_entities\": [\"判决文书1\"], \"anchor_targets\": [\"判决文书1\"], \"anchor_value_hints\": [\"1\", \"1986\", \"2\", \"20\", \"17\", \"-2\", \"3614\", \"2002\"], \"provenance_hints\": {\"strength\": \"strong\", \"signals\": [\"numeric_value\"], \"record_type\": \"legal\"}, \"relation_summary\": {\"relation_count\": 14, \"relation_type_counts\": {\"supports\": 3, \"same_case\": 4, \"likely_same_entity\": 4, \"prev_next\": 1, \"nearby_window\": 2}, \"top_related_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A2\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\"]}, \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}]}</info>\n<think>此段落提供了当事人的基本信息，包括复议申请人宋某华、申请执行人沈阳某文化传播有限公司以及被执行人纪某雯。这些信息有助于理解案件背景，但不足以提供额外的分类证据。我们已经从之前的段落中确定了该判决文书属于'执行案由-民事'类别，因此无需进一步提取证据。</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\", \"coverage_hints\": {\"answer_topology\": \"dict\", \"answer_schema_hint\": \"Extract category-to-document assignments supported by this document.\", \"known_answer_keys\": [\"执行案由-民事\"], \"known_value_signatures\": [\"判决文书1\"], \"missing_answer_keys\": [], \"selected_anchor_ids\": [\"DOC1_A2\", \"DOC1_A1\"], \"low_confidence_keys\": [], \"generic_item_count\": 0, \"doc_placeholder_values\": [], \"needs_non_doc_placeholder\": false, \"needs_more_evidence\": false, \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"missing_must_find\": [], \"visited_anchor_texts\": [\"案件背景及申请 宋某华因不服沈阳中院作出的变更裁定，申请复议。宋某华申请变更其为申请执行人，理由是与沈阳某文化传播有限公司协商一致，将债权转让给宋某华。 复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽01执异923号执行裁定（以下简称变更裁定），向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。 上列当事人服务合同纠纷一案，依据成都仲裁委员会（2020）成仲案字第2268号裁决书，立案执行，执行案号为（2022）辽01执650号。在执行中，宋某华申请变更其为本案的申请执行人。 宋某华称，2022年6月13日贵院受理沈阳某文化传播有限公司诉纪某雯国内非涉外仲裁裁决一案，受理案号为（2022）辽01执650号。2022年7月3日经原申请执行人与本人协商一致，将享受的上述债权转让给本人所有。请求：变更宋某华为（2022）辽01执650号执行案件的申请执行人。\", \"当事人信息 复议申请人宋某华及其委托诉讼代理人林华溢，申请执行人沈阳某文化传播有限公司及其法定代表人杨某，被执行人纪某雯的基本信息。 复议申请人（第三人）：宋某华，女，汉族，1986年2月20日出生，住址：四川省蒲江县。 委托诉讼代理人：林华溢，四川秉鉴律师事务所律师。 申请执行人：沈阳某文化传播有限公司，住所地:沈阳市东陵区营盘西街17-2号3614室。 法定代表人：杨某，该公司总经理。 被执行人：纪某雯，女，2002年11月21日出生，住址：沈阳市沈北新区。\"], \"selected_relation_anchor_ids\": [\"DOC1_A5\", \"DOC1_A3\", \"DOC1_A4\"], \"selected_relation_context\": [{\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"supports\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"same_case\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"disambiguates\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A5\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A3\", \"relation_type\": \"likely_same_entity\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"source_anchor_id\": \"DOC1_A2\", \"target_anchor_id\": \"DOC1_A4\", \"relation_type\": \"nearby_window\", \"weight\": 1.0, \"reason\": \"within local read window\"}]}}</retrieve>"
+}

@@ -1,0 +1,100 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "task_mode": "clustering",
+  "think": "Since the document title and the chunk summary indicate that the case involves a criminal appeal by Deng Wenxia against Zhao Tianqi for intentional injury, it seems likely that this document falls under the category of '刑事案件'. I will confirm this by inspecting the first anchor coordinate.",
+  "current_query": "刑事案件分类",
+  "must_find": [
+    "刑事案件"
+  ],
+  "next_anchor_id": "DOC6_A1",
+  "candidate_anchor_ids": [
+    "DOC6_A1"
+  ],
+  "ranked_anchor_ids": [
+    "DOC6_A1"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC6_A1"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC6_A1",
+      "score": 28.8,
+      "reasons": [
+        "section_prior=10",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81",
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context",
+        "novel_anchor",
+        "anchor_role_hits=['case_identity', 'decision_evidence']"
+      ],
+      "utility_score": 11.0,
+      "utility_hits": [
+        "legal_label_hit=['判决文书']",
+        "legal_decision_context"
+      ],
+      "relation_score": 6.0,
+      "relation_hits": [],
+      "anchor_role_hits": [
+        "case_identity",
+        "decision_evidence"
+      ],
+      "score_breakdown": {
+        "local_relevance": 0.0,
+        "answer_utility": 11.0,
+        "coverage": 2.0,
+        "relation": 6.0,
+        "weak_priors": 9.8,
+        "redundancy_penalty": 0.0,
+        "total": 28.8
+      },
+      "summary": "邓文霞因起诉赵天齐故意伤害一案，对新疆维吾尔自治区哈密市伊州区人民法院和哈密市中级人民法院的刑事裁定不服，提出申诉。法院审查后认为，邓文霞撤诉后又以同一事实起诉，一审法院裁定不予受理，二审法院维持原裁定，程序合法，申诉理由不成立。"
+    }
+  ],
+  "utility_hits": {
+    "DOC6_A1": [
+      "legal_label_hit=['判决文书']",
+      "legal_decision_context"
+    ]
+  },
+  "utility_score": {
+    "DOC6_A1": 11.0
+  },
+  "relation_hits": {},
+  "relation_score": {
+    "DOC6_A1": 6.0
+  },
+  "anchor_role_hits": {
+    "DOC6_A1": [
+      "case_identity",
+      "decision_evidence"
+    ]
+  },
+  "coverage_hints": {
+    "known_answer_keys": [],
+    "known_value_signatures": [],
+    "low_confidence_keys": [],
+    "must_find": [
+      "category labels and document-to-category assignments",
+      "case cause, disposition, or verdict evidence"
+    ]
+  },
+  "avoid_anchor_ids": [],
+  "score_breakdown": {
+    "DOC6_A1": {
+      "local_relevance": 0.0,
+      "answer_utility": 11.0,
+      "coverage": 2.0,
+      "relation": 6.0,
+      "weak_priors": 9.8,
+      "redundancy_penalty": 0.0,
+      "total": 28.8
+    }
+  },
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书6》. First coordinate candidate is DOC6_A1.",
+  "raw_plan_text": "<think>Since the document title and the chunk summary indicate that the case involves a criminal appeal by Deng Wenxia against Zhao Tianqi for intentional injury, it seems likely that this document falls under the category of '刑事案件'. I will confirm this by inspecting the first anchor coordinate.</think>\n<search>{\"current_query\":\"刑事案件分类\",\"must_find\":[\"刑事案件\"], \"next_anchor_id\":\"DOC6_A1\",\"candidate_anchor_ids\":[\"DOC6_A1\"]}</search>",
+  "tagged_trace": "<think>Since the document title and the chunk summary indicate that the case involves a criminal appeal by Deng Wenxia against Zhao Tianqi for intentional injury, it seems likely that this document falls under the category of '刑事案件'. I will confirm this by inspecting the first anchor coordinate.</think>\n<search>{\"current_query\": \"刑事案件分类\", \"must_find\": [\"刑事案件\"], \"candidate_anchor_ids\": [\"DOC6_A1\"], \"next_anchor_id\": \"DOC6_A1\", \"coverage_hints\": {\"known_answer_keys\": [], \"known_value_signatures\": [], \"low_confidence_keys\": [], \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"]}, \"avoid_anchor_ids\": [], \"relation_hits\": {}, \"relation_score\": {\"DOC6_A1\": 6.0}, \"anchor_role_hits\": {\"DOC6_A1\": [\"case_identity\", \"decision_evidence\"]}}</search>"
+}
