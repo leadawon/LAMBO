@@ -1,4 +1,4 @@
-"""Run the LAMBO v2 pipeline on set-1 Loong samples.
+"""Run the LAMBO v2 pipeline on Loong samples.
 
 Pipeline: AnchorAgent → DocRefineAgent (per-doc) → GlobalComposer → Generator
 Evaluation: structured_eval (EM, F1) + LLM judge (1-100)
@@ -20,8 +20,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from lambo.agents.anchor_agent import AnchorAgent
 from lambo.agents.doc_refine_agent import DocRefineAgent
-from lambo.agents.global_composer import GlobalComposer
 from lambo.agents.generator import Generator
+from lambo.agents.global_composer import GlobalComposer
 from lambo.backend import get_default_client
 from lambo.common import (
     current_query_from_record,
@@ -32,9 +32,15 @@ from lambo.common import (
     write_json,
     write_jsonl,
 )
-from lambo.eval.structured_eval import evaluate_predictions
 from lambo.eval.llm_judge import run_llm_judge
-from lambo.manifest import build_set1_manifest, load_records, save_manifest
+from lambo.eval.structured_eval import evaluate_predictions
+from lambo.manifest import (
+    build_input_order_manifest,
+    build_manifest_for_indices,
+    build_set1_manifest,
+    load_records,
+    save_manifest,
+)
 
 
 DEFAULT_INPUT_PATH = PROJECT_ROOT / "reference" / "Loong" / "data" / "loong_process.jsonl"
@@ -42,18 +48,38 @@ DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "logs" / "lambo_v2_set1_10"
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run LAMBO v2 AutoRefine pipeline on set1 samples.")
+    parser = argparse.ArgumentParser(description="Run LAMBO v2 AutoRefine pipeline on selected Loong samples.")
     parser.add_argument("--input_path", type=str, default=str(DEFAULT_INPUT_PATH))
     parser.add_argument("--output_dir", type=str, default=None)
+    parser.add_argument(
+        "--manifest_mode",
+        type=str,
+        default="set1_10",
+        choices=["set1_10", "selected_indices", "input_order"],
+        help="Manifest construction mode.",
+    )
+    parser.add_argument(
+        "--selected_indices",
+        type=str,
+        default="",
+        help="Comma/space-separated original record indices when using manifest_mode=selected_indices.",
+    )
+    parser.add_argument(
+        "--selected_indices_path",
+        type=str,
+        default="",
+        help="Path to a JSON or text file containing original record indices when using manifest_mode=selected_indices.",
+    )
     parser.add_argument("--max_items", type=int, default=None)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--max_refine_rounds", type=int, default=6)
+    parser.add_argument("--max_search_rounds", type=int, default=None, help="Alias for --max_refine_rounds.")
     parser.add_argument(
         "--backend",
         type=str,
         default="local",
         choices=["local", "gemini"],
-        help="LLM backend: 'local' for Qwen2.5-32B local, 'gemini' for Google Gemini API",
+        help="LLM backend: 'local' for Hugging Face Qwen via Transformers, 'gemini' for Google Gemini API.",
     )
     return parser.parse_args()
 
@@ -69,22 +95,65 @@ def ensure_layout(output_dir: Path) -> Dict[str, Path]:
     return layout
 
 
+def _parse_selected_indices_from_args(args: argparse.Namespace) -> List[int]:
+    tokens: List[str] = []
+    if args.selected_indices:
+        normalized = args.selected_indices.replace(",", " ")
+        tokens.extend(part for part in normalized.split() if part.strip())
+    if args.selected_indices_path:
+        path = Path(args.selected_indices_path)
+        raw = path.read_text(encoding="utf-8").strip()
+        if raw:
+            try:
+                payload = json.loads(raw)
+            except json.JSONDecodeError:
+                payload = None
+            if isinstance(payload, list):
+                tokens.extend(str(item).strip() for item in payload)
+            else:
+                tokens.extend(part for part in raw.replace(",", " ").split() if part.strip())
+    indices: List[int] = []
+    for token in tokens:
+        try:
+            indices.append(int(token))
+        except ValueError as exc:
+            raise ValueError(f"Invalid selected index: {token!r}") from exc
+    deduped: List[int] = []
+    for index in indices:
+        if index not in deduped:
+            deduped.append(index)
+    return deduped
+
+
+def _build_manifest(records: List[Dict[str, Any]], args: argparse.Namespace):
+    if args.manifest_mode == "set1_10":
+        return build_set1_manifest(records)
+    if args.manifest_mode == "input_order":
+        return build_input_order_manifest(records)
+    indices = _parse_selected_indices_from_args(args)
+    if not indices:
+        raise ValueError("manifest_mode=selected_indices requires --selected_indices or --selected_indices_path")
+    return build_manifest_for_indices(records, indices)
+
+
 def main() -> None:
     args = parse_args()
     input_path = Path(args.input_path)
+    if args.max_search_rounds is not None:
+        args.max_refine_rounds = args.max_search_rounds
 
-    # Default output_dir depends on backend
     if args.output_dir is not None:
         output_dir = Path(args.output_dir)
     elif args.backend == "gemini":
-        output_dir = PROJECT_ROOT / "logs" / "lambo_v2_set1_10_gemini"
-    else:
+        output_dir = PROJECT_ROOT / ("logs" / ("lambo_v2_selected_subset_gemini" if args.manifest_mode != "set1_10" else "lambo_v2_set1_10_gemini"))
+    elif args.manifest_mode == "set1_10":
         output_dir = DEFAULT_OUTPUT_DIR
+    else:
+        output_dir = PROJECT_ROOT / "logs" / "lambo_v2_selected_subset"
 
     layout = ensure_layout(output_dir)
-
     records = load_records(input_path)
-    manifest = build_set1_manifest(records)
+    manifest = _build_manifest(records, args)
     if args.max_items is not None:
         manifest = manifest[: args.max_items]
     save_manifest(manifest, layout["root"] / "manifest.json")
@@ -93,10 +162,7 @@ def main() -> None:
     llm = get_default_client(backend=args.backend)
 
     anchor_agent = AnchorAgent(llm=llm)
-    doc_refine_agent = DocRefineAgent(
-        llm=llm,
-        max_rounds=args.max_refine_rounds,
-    )
+    doc_refine_agent = DocRefineAgent(llm=llm, max_rounds=args.max_refine_rounds)
     composer = GlobalComposer(llm=llm)
     generator = Generator(llm=llm)
 
@@ -114,28 +180,17 @@ def main() -> None:
                 str(record.get("question", "")).strip(),
                 str(record.get("instruction", "")).strip(),
             )
-            instruction = instruction_from_record(
-                str(record.get("instruction", "")).strip(),
-            )
+            instruction = instruction_from_record(str(record.get("instruction", "")).strip())
 
-            # Stage 1: Anchor Agent
-            anchor_payload = anchor_agent.run(
-                record=record, sample_dir=sample_dir, force=args.force,
-            )
+            anchor_payload = anchor_agent.run(record=record, sample_dir=sample_dir, force=args.force)
 
-            # Stage 2: DocRefineAgent per document
             doc_sheets: List[Dict[str, Any]] = []
             for doc_payload in anchor_payload["docs"]:
                 print(
-                    f"  doc {doc_payload['doc_id']} '{doc_payload['doc_title'][:40]}' "
-                    f"anchors={doc_payload['anchor_count']}",
+                    f"  doc {doc_payload['doc_id']} '{doc_payload['doc_title'][:40]}' anchors={doc_payload['anchor_count']}",
                     flush=True,
                 )
-                # Dynamic max_rounds: no more rounds than anchors, capped by user arg
-                doc_refine_agent.max_rounds = min(
-                    args.max_refine_rounds,
-                    max(1, doc_payload["anchor_count"]),
-                )
+                doc_refine_agent.max_rounds = min(args.max_refine_rounds, max(1, doc_payload["anchor_count"]))
                 sheet = doc_refine_agent.run(
                     question=question,
                     instruction=instruction,
@@ -147,13 +202,10 @@ def main() -> None:
                 doc_sheets.append(sheet)
                 evidence_preview = sheet.get("evidence", "")[:80]
                 print(
-                    f"    -> {sheet['scan_result']} "
-                    f"| rounds={sheet.get('rounds_used',0)} "
-                    f"| evidence={evidence_preview!r}",
+                    f"    -> {sheet['scan_result']} | rounds={sheet.get('rounds_used', 0)} | evidence={evidence_preview!r}",
                     flush=True,
                 )
 
-            # Stage 3: Global Composer
             composed = composer.run(
                 question=question,
                 instruction=instruction,
@@ -162,12 +214,10 @@ def main() -> None:
                 force=args.force,
             )
             print(
-                f"  composer -> projection_map keys={list(composed.get('projection_map',{}).keys())} "
-                f"| records={len(composed.get('records',[]))}",
+                f"  composer -> projection_map keys={list(composed.get('projection_map', {}).keys())} | records={len(composed.get('records', []))}",
                 flush=True,
             )
 
-            # Stage 4: Generator
             gen_out = generator.run(
                 question=question,
                 instruction=instruction,
@@ -181,10 +231,7 @@ def main() -> None:
             pred_row = {k: record.get(k) for k in keep if k in record}
             pred_row["selected_index"] = item.selected_index
             pred_row["sample_id"] = item.sample_id
-            if isinstance(final_answer, (dict, list)):
-                pred_row["generate_response"] = json.dumps(final_answer, ensure_ascii=False)
-            else:
-                pred_row["generate_response"] = str(final_answer)
+            pred_row["generate_response"] = json.dumps(final_answer, ensure_ascii=False) if isinstance(final_answer, (dict, list)) else str(final_answer)
             pred_row["lambo_trace_dir"] = str(sample_dir)
             prediction_rows.append(pred_row)
             print(f"  -> answer: {str(final_answer)[:200]}", flush=True)
@@ -197,7 +244,6 @@ def main() -> None:
 
     prediction_path = write_jsonl(layout["root"] / "lambo_predictions.jsonl", prediction_rows)
 
-    # Structured evaluation
     try:
         structured_summary = evaluate_predictions(
             [
@@ -205,8 +251,7 @@ def main() -> None:
                     **row,
                     "generate_response": (
                         json.loads(row["generate_response"])
-                        if isinstance(row["generate_response"], str)
-                        and row["generate_response"].startswith(("{", "["))
+                        if isinstance(row["generate_response"], str) and row["generate_response"].startswith(("{", "["))
                         else row["generate_response"]
                     ),
                 }
@@ -218,7 +263,6 @@ def main() -> None:
     write_json(layout["reports"] / "structured_eval.json", structured_summary)
     write_json(layout["reports"] / "errors.json", {"count": len(errors), "errors": errors})
 
-    # LLM judge
     try:
         judge_out = run_llm_judge(llm=llm, prediction_rows=prediction_rows)
     except Exception as exc:  # noqa: BLE001
@@ -229,11 +273,7 @@ def main() -> None:
         json_dumps_pretty(
             {
                 "prediction_path": str(prediction_path),
-                "structured_summary": {
-                    k: v
-                    for k, v in (structured_summary or {}).items()
-                    if k != "per_sample"
-                },
+                "structured_summary": {k: v for k, v in (structured_summary or {}).items() if k != "per_sample"},
                 "llm_judge_summary": judge_out.get("summary", {}),
                 "num_errors": len(errors),
             }

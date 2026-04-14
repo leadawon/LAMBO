@@ -29,23 +29,33 @@ def load_records(path: Path) -> List[Dict[str, Any]]:
     return read_jsonl(path)
 
 
+def _record_to_manifest_item(record: Dict[str, Any], index: int) -> ManifestItem:
+    return ManifestItem(
+        selected_index=index,
+        record_id=str(record.get("id", "unknown")),
+        set_id=int(record.get("set", 0) or 0),
+        record_type=str(record.get("type", "unknown")),
+        level=int(record.get("level", 0) or 0),
+        language=str(record.get("language", "unknown")),
+        question=str(record.get("question", "")).strip(),
+        sample_id=f"{record.get('type', 'unknown')}_level{record.get('level', 0)}_{index}",
+    )
+
+
 def build_set1_manifest(records: Sequence[Dict[str, Any]]) -> List[ManifestItem]:
+    return build_manifest_for_indices(records, SELECTED_SET1_INDICES)
+
+
+def build_manifest_for_indices(records: Sequence[Dict[str, Any]], indices: Sequence[int]) -> List[ManifestItem]:
     manifest: List[ManifestItem] = []
-    for index in SELECTED_SET1_INDICES:
+    for index in indices:
         record = records[index]
-        manifest.append(
-            ManifestItem(
-                selected_index=index,
-                record_id=str(record.get("id", "unknown")),
-                set_id=int(record.get("set", 0) or 0),
-                record_type=str(record.get("type", "unknown")),
-                level=int(record.get("level", 0) or 0),
-                language=str(record.get("language", "unknown")),
-                question=str(record.get("question", "")).strip(),
-                sample_id=f"{record.get('type', 'unknown')}_level{record.get('level', 0)}_{index}",
-            )
-        )
+        manifest.append(_record_to_manifest_item(record, index))
     return manifest
+
+
+def build_input_order_manifest(records: Sequence[Dict[str, Any]]) -> List[ManifestItem]:
+    return [_record_to_manifest_item(record, idx) for idx, record in enumerate(records)]
 
 
 def save_manifest(items: Sequence[ManifestItem], path: Path) -> Path:
