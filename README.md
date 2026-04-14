@@ -41,7 +41,7 @@ AutoRefine-style agentic RAG pipeline for the [Loong benchmark](https://github.c
 | Heuristic Scoring | `lambo/scoring/heuristic.py` | Domain-aware anchor ranking (no LLM) |
 | LLM Judge | `lambo/eval/llm_judge.py` | Loong-style 1-100 scoring |
 | Structured Eval | `lambo/eval/structured_eval.py` | Exact match + pair-F1 metrics |
-| Backend | `lambo/backend.py` | Qwen2.5-32B-Instruct local inference |
+| Backend | `lambo/backend.py` | Hugging Face Qwen Transformers backend (default: `Qwen/Qwen2.5-7B-Instruct`) |
 
 ## Directory Structure
 
@@ -184,13 +184,51 @@ docker exec junyoungRAG bash -lc '
 |----------|---------|-------------|
 | `--input_path` | `reference/Loong/data/loong_process.jsonl` | Input dataset path |
 | `--output_dir` | `logs/lambo_v2_set1_10` | Output directory |
-| `--max_items` | `None` (all 10) | Limit number of samples to process |
+| `--manifest_mode` | `set1_10` | `set1_10`, `selected_indices`, or `input_order` |
+| `--selected_indices` | `` | Comma/space-separated original record indices |
+| `--selected_indices_path` | `` | JSON/text file containing selected original record indices |
+| `--max_items` | `None` | Limit number of samples after manifest selection |
 | `--force` | `False` | Bypass cache and recompute all stages |
-| `--max_refine_rounds` | `6` | Max iterative refinement rounds per document |
+| `--max_search_rounds` | `5` | Max search rounds per document |
+
+### Running 10 vs 99 Samples
+
+Fixed 10-sample set1 run:
+
+```bash
+cd /workspace/rag/LAMBO
+PYTHONPATH=/workspace/rag/LAMBO \
+LAMBO_MODEL_ID=Qwen/Qwen2.5-7B-Instruct \
+python script/anchor/run_lambo_set1.py \
+  --input_path /workspace/rag/LAMBO_before/Loong/data/loong_process.jsonl \
+  --manifest_mode set1_10 \
+  --output_dir /workspace/rag/LAMBO/logs/lambo_agentic_set1_10_multiturn
+```
+
+Balanced 99-sample run using a saved indices file:
+
+```bash
+cd /workspace/rag/LAMBO
+PYTHONPATH=/workspace/rag/LAMBO \
+LAMBO_MODEL_ID=Qwen/Qwen2.5-7B-Instruct \
+python script/anchor/run_lambo_set1.py \
+  --input_path /workspace/rag/LAMBO_before/Loong/data/loong_process.jsonl \
+  --manifest_mode selected_indices \
+  --selected_indices_path /workspace/rag/LAMBO/dawonv5/data/loong_set1_balanced99_indices.json \
+  --output_dir /workspace/rag/LAMBO/logs/lambo_agentic_set1_99_multiturn
+```
+
+You can also pass indices directly:
+
+```bash
+python script/anchor/run_lambo_set1.py \
+  --manifest_mode selected_indices \
+  --selected_indices 914,725,1065
+```
 
 ## Environment
 
-- **Model**: Qwen2.5-32B-Instruct (local, float16)
+- **Model**: `Qwen/Qwen2.5-7B-Instruct` via Hugging Face Transformers by default (optional local path override with `LAMBO_MODEL_DIR`)
 - **GPU**: 4x NVIDIA RTX 3090 (24GB each)
 - **Container**: `junyoungRAG` Docker container
 - **Python env**: `/workspace/StructRAG/venv`
@@ -202,4 +240,8 @@ docker exec junyoungRAG bash -lc '
 - **Heuristic pre-ranking**: Anchors are scored by domain priors (section type, query overlap, quoted terms) before LLM selection — the LLM only sees the top-ranked shortlist.
 - **Typed evidence**: Each evidence item has an `item_type` (direct_answer, comparison_value, classification_feature, relation_edge, negative_evidence) and `owner_entity` for downstream entity resolution.
 - **No cheating**: `type`, `level`, `task_mode` are used only in heuristic scoring internals, never passed to LLM prompts.
+- **Legacy `script/anchor` multi-turn search**: The migrated `script/anchor/search_agent.py` now runs as a stateful multi-turn searcher rather than a one-shot anchor selector. It reranks anchors across rounds, can continue locally around the current anchor, and can rewrite the working query when the current evidence is insufficient.
+- **`SearchState` as agent memory**: In the legacy `script/anchor` pipeline, `SearchState` acts as the agent's memory for one document. Its main fields are `current_query`, `must_find`, `seen_anchor_ids`, `known_items`, `missing_slots`, `last_action`, and local/global frontier anchor ids. This lets the agent remember which anchors it already opened, what evidence it has already extracted, what information is still missing, and whether the next move should stay local or jump elsewhere in the document.
+- **Summary is routing, not evidence**: Anchor summaries in the legacy `script/anchor` pipeline are now explicitly treated as navigation hints only. Search may use them to choose which anchor to open next, but downstream extraction must verify evidence against the opened anchor's raw text instead of trusting the summary.
+- **Raw-text evidence validation**: The migrated `script/anchor/search_agent.py` drops extracted items unless their `evidence_span` is actually present in the opened anchor text. This is meant to stop the model from filling evidence directly from anchor summaries or from the Search Agent note.
 - **Negative evidence**: Documents with no relevant evidence are explicitly tracked (`scan_result="no_evidence"`), not silently dropped.

@@ -28,7 +28,7 @@ from script.anchor.common import (
 )
 from script.anchor.evaluate_structured import evaluate_predictions
 from script.anchor.llm_judge import run_llm_judge
-from script.anchor.manifest import build_set1_manifest, load_records, save_manifest
+from script.anchor.manifest import build_manifest_for_indices, build_set1_manifest, load_records, save_manifest
 from script.anchor.relation_refiner import RelationRefiner
 from script.anchor.search_agent import ExtractAgent, SearchAgent
 
@@ -38,14 +38,56 @@ DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "logs" / "lambo_agentic_set1_10"
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run redesigned agentic LAMBO pipeline on 10 set1 samples.")
+    parser = argparse.ArgumentParser(description="Run redesigned agentic LAMBO pipeline on set1 or selected Loong samples.")
     parser.add_argument("--input_path", type=str, default=str(DEFAULT_INPUT_PATH))
     parser.add_argument("--output_dir", type=str, default=str(DEFAULT_OUTPUT_DIR))
     parser.add_argument("--max_items", type=int, default=None)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--max_search_rounds", type=int, default=5)
+    parser.add_argument(
+        "--manifest_mode",
+        type=str,
+        default="set1_10",
+        choices=("set1_10", "selected_indices", "input_order"),
+        help="set1_10: fixed 10-sample set1 manifest; selected_indices: use --selected_indices/--selected_indices_path; input_order: take records from input file order.",
+    )
+    parser.add_argument("--selected_indices", type=str, default="")
+    parser.add_argument("--selected_indices_path", type=str, default="")
     return parser.parse_args()
 
+
+
+def parse_index_tokens(text: str) -> List[int]:
+    return [int(token) for token in text.replace(",", " ").split()]
+
+
+def load_selected_indices(args: argparse.Namespace) -> List[int] | None:
+    indices: List[int] = []
+    if args.selected_indices_path:
+        path = Path(args.selected_indices_path)
+        text = path.read_text(encoding="utf-8").strip()
+        if text:
+            try:
+                payload = json.loads(text)
+            except json.JSONDecodeError:
+                indices.extend(parse_index_tokens(text))
+            else:
+                if isinstance(payload, dict):
+                    payload = payload.get("indices", [])
+                if not isinstance(payload, list):
+                    raise ValueError(f"selected_indices_path must contain a JSON list or dict.indices: {path}")
+                indices.extend(int(value) for value in payload)
+
+    if args.selected_indices:
+        indices.extend(parse_index_tokens(args.selected_indices))
+
+    if not indices:
+        return None
+    return indices
+
+
+def build_input_order_manifest(records: List[Dict[str, Any]]) -> List[Any]:
+    return build_manifest_for_indices(records, range(len(records)))
 
 def ensure_layout(output_dir: Path) -> Dict[str, Path]:
     layout = {
@@ -65,7 +107,16 @@ def main() -> None:
     layout = ensure_layout(output_dir)
 
     records = load_records(input_path)
-    manifest = build_set1_manifest(records)
+    if args.manifest_mode == "set1_10":
+        manifest = build_set1_manifest(records)
+    elif args.manifest_mode == "selected_indices":
+        selected_indices = load_selected_indices(args)
+        if selected_indices is None:
+            raise ValueError("manifest_mode=selected_indices requires --selected_indices or --selected_indices_path")
+        manifest = build_manifest_for_indices(records, selected_indices)
+    else:
+        manifest = build_input_order_manifest(records)
+
     if args.max_items is not None:
         manifest = manifest[: args.max_items]
     save_manifest(manifest, layout["root"] / "manifest.json")

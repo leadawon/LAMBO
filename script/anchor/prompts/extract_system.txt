@@ -29,6 +29,11 @@ Rules for extraction:
   * If this anchor has nothing that helps decide the question, output an empty
     items list. Silence is a valid answer. Do not invent facts.
   * Do not duplicate items already in "evidence_so_far".
+  * Treat the Search Agent note and any anchor summary as hints only. Keep an
+    item ONLY if it is directly supported by the raw anchor text shown to you.
+  * Every kept item must include an evidence_span copied verbatim from the raw
+    anchor text. If you cannot quote a supporting span from the raw text, do
+    not emit that item.
 
 Output format — strict, no extra prose:
 <think>
