@@ -1,0 +1,90 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及吕某与赵毅、夏华俊、赵海涛民间借贷纠纷，德州中院执行赔偿，属于赔偿案件。 - DOC2: 明确提到是刑事案件。 - DOC3: 明确提到是民事案件，且进入执行阶段。 - DOC4: 明确提到是行政案件。 - DOC5: 明确提到是执行案件。 - DOC6: 涉及国家赔偿，明确提到是刑事赔偿案件。 - DOC7: 涉及国家赔偿，明确提到是国家赔偿案件。 - DOC8: 明确提到是行政案件。 - DOC9: 涉及刑事附带民事诉讼案件。 - DOC10: 涉及民事诉讼法，属于民事案件。 Stage 2 structure selection and mapping: - 结构选择：mapping - 关键词：民事案件、赔偿案件、行政案件、执行案件、刑事案件 - 记录：每个关键词对应一个列表，包含相应的判决文书标题。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "民事案件",
+        "赔偿案件",
+        "行政案件",
+        "执行案件",
+        "刑事案件"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "民事案件",
+          "value": [
+            "《判决文书3》",
+            "《判决文书10》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A4",
+          "DOC10:DOC10_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "赔偿案件",
+          "value": [
+            "《判决文书1》",
+            "《判决文书6》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC6:DOC6_A2",
+          "DOC7:DOC7_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政案件",
+          "value": [
+            "《判决文书4》",
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A2",
+          "DOC8:DOC8_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案件",
+          "value": [
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事案件",
+          "value": [
+            "《判决文书2》",
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A1",
+          "DOC9:DOC9_A2"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及吕某与赵毅、夏华俊、赵海涛民间借贷纠纷，德州中院执行赔偿，属于赔偿案件。\n  - DOC2: 明确提到是刑事案件。\n  - DOC3: 明确提到是民事案件，且进入执行阶段。\n  - DOC4: 明确提到是行政案件。\n  - DOC5: 明确提到是执行案件。\n  - DOC6: 涉及国家赔偿，明确提到是刑事赔偿案件。\n  - DOC7: 涉及国家赔偿，明确提到是国家赔偿案件。\n  - DOC8: 明确提到是行政案件。\n  - DOC9: 涉及刑事附带民事诉讼案件。\n  - DOC10: 涉及民事诉讼法，属于民事案件。\n\n  Stage 2 structure selection and mapping:\n  - 结构选择：mapping\n  - 关键词：民事案件、赔偿案件、行政案件、执行案件、刑事案件\n  - 记录：每个关键词对应一个列表，包含相应的判决文书标题。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"民事案件\", \"赔偿案件\", \"行政案件\", \"执行案件\", \"刑事案件\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"民事案件\",\n        \"value\": [\"《判决文书3》\", \"《判决文书10》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A4\", \"DOC10:DOC10_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"赔偿案件\",\n        \"value\": [\"《判决文书1》\", \"《判决文书6》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC6:DOC6_A2\", \"DOC7:DOC7_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政案件\",\n        \"value\": [\"《判决文书4》\", \"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A2\", \"DOC8:DOC8_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案件\",\n        \"value\": [\"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事案件\",\n        \"value\": [\"《判决文书2》\", \"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A1\", \"DOC9:DOC9_A2\"]\n    }\n  ]\n}\n</relations>"
+}

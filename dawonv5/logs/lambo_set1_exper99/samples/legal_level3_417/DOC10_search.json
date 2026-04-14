@@ -1,0 +1,105 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "opened_anchor_ids": [
+    "DOC10_A4"
+  ],
+  "items": [
+    {
+      "fact": "周某、黄某某的再审申请不符合《中华人民共和国民事诉讼法》第二百一十一条规定的再审情形。",
+      "entities": [
+        "周某",
+        "黄某某",
+        "《中华人民共和国民事诉讼法》"
+      ],
+      "evidence_span": "周某、黄某某的再审申请不符合《中华人民共和国民事诉讼法》第二百一十一条规定的再审情形。",
+      "relevance": "民事案件",
+      "source_doc_id": "DOC10",
+      "source_anchor_id": "DOC10_A4",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC10_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC10_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书10']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC10_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书10']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC10_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书10']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定该判决文书属于哪种案件类型，我需要查看具体的案件内容和法院的裁定结果。从已有的摘要来看，这个案件涉及公司解散纠纷，股东会机制失灵等问题，看起来像是一个民事案件。我将首先打开DOC10_A4，查看裁定结果，以确认案件类型。",
+        "action": "open",
+        "anchor_id": "DOC10_A4",
+        "need": "裁定结果",
+        "reason": "确定案件类型",
+        "raw_text": "<think>\n为了确定该判决文书属于哪种案件类型，我需要查看具体的案件内容和法院的裁定结果。从已有的摘要来看，这个案件涉及公司解散纠纷，股东会机制失灵等问题，看起来像是一个民事案件。我将首先打开DOC10_A4，查看裁定结果，以确认案件类型。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC10_A4\",\"need\":\"裁定结果\",\"reason\":\"确定案件类型\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC10_A4",
+      "info": {
+        "anchor_title": "裁定结果",
+        "char_count": 136
+      },
+      "extract": {
+        "think": "我在寻找能够帮助确定案件类型的证据。从这段文本中，我找到了一些与民事诉讼相关的法律条文，这表明这是一个民事案件。因此，记录这个案件为民事案件是有用的。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经知道这是一个民事案件，因为提到了《中华人民共和国民事诉讼法》。接下来需要确认是否还有其他类型的案件信息，但是从现有的锚点摘要来看，没有提到赔偿案件、行政案件、执行案件或刑事案件的相关信息。因此，我们可以停止搜索并给出答案。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定该判决文书属于民事案件，其余锚点未提供其他案件类型的相关信息",
+        "raw_text": "<think>\n目前我们已经知道这是一个民事案件，因为提到了《中华人民共和国民事诉讼法》。接下来需要确认是否还有其他类型的案件信息，但是从现有的锚点摘要来看，没有提到赔偿案件、行政案件、执行案件或刑事案件的相关信息。因此，我们可以停止搜索并给出答案。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定该判决文书属于民事案件，其余锚点未提供其他案件类型的相关信息\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC10_A3",
+          "DOC10_A2",
+          "DOC10_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定该判决文书属于哪种案件类型，我需要查看具体的案件内容和法院的裁定结果。从已有的摘要来看，这个案件涉及公司解散纠纷，股东会机制失灵等问题，看起来像是一个民事案件。我将首先打开DOC10_A4，查看裁定结果，以确认案件类型。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC10_A4\", \"need\": \"裁定结果\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC10_A4\", \"anchor_title\": \"裁定结果\"}</info>\n<think>我在寻找能够帮助确定案件类型的证据。从这段文本中，我找到了一些与民事诉讼相关的法律条文，这表明这是一个民事案件。因此，记录这个案件为民事案件是有用的。</think>\n<extracted>{\"items\": [{\"fact\": \"周某、黄某某的再审申请不符合《中华人民共和国民事诉讼法》第二百一十一条规定的再审情形。\", \"entities\": [\"周某\", \"黄某某\", \"《中华人民共和国民事诉讼法》\"], \"evidence_span\": \"周某、黄某某的再审申请不符合《中华人民共和国民事诉讼法》第二百一十一条规定的再审情形。\", \"relevance\": \"民事案件\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A4\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC10_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书10']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道这是一个民事案件，因为提到了《中华人民共和国民事诉讼法》。接下来需要确认是否还有其他类型的案件信息，但是从现有的锚点摘要来看，没有提到赔偿案件、行政案件、执行案件或刑事案件的相关信息。因此，我们可以停止搜索并给出答案。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定该判决文书属于民事案件，其余锚点未提供其他案件类型的相关信息\"}</search>"
+}

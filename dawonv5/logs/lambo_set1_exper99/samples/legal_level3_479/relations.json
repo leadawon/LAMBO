@@ -1,0 +1,64 @@
+{
+  "think": "Stage 1 — feature sheet: - DOC1: '执行案由-行政' - DOC2: 行政赔偿相关的案件，但没有明确提到具体的案由类型。 - DOC3: 海上货运代理合同纠纷，但不属于'海事海商纠纷'。 - DOC4: 没有相关事实。 - DOC5: 涉及王某殴打席某，可能属于'妨碍社会管理秩序罪'。 - DOC6: 涉及行政行为和信息公开，但没有明确提到具体的案由类型。 - DOC7: 涉嫌帮助信息网络犯罪活动罪，但不属于'妨碍社会管理秩序罪'。 Stage 2 — 结构选择和映射： 根据问题和指令，需要将判决文书按照给定的案由分类。结构应为'mapping'，其中键为案由，值为对应的判决文书列表。由于没有足够的证据将某些文档归类到特定案由，这些文档将不会出现在结果中。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "属于"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-行政",
+          "value": [
+            "《判决文书1》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "妨碍社会管理秩序罪",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政强制",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政补偿",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "海事海商纠纷",
+          "value": []
+        },
+        "sources": []
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 — feature sheet:\n  - DOC1: '执行案由-行政'\n  - DOC2: 行政赔偿相关的案件，但没有明确提到具体的案由类型。\n  - DOC3: 海上货运代理合同纠纷，但不属于'海事海商纠纷'。\n  - DOC4: 没有相关事实。\n  - DOC5: 涉及王某殴打席某，可能属于'妨碍社会管理秩序罪'。\n  - DOC6: 涉及行政行为和信息公开，但没有明确提到具体的案由类型。\n  - DOC7: 涉嫌帮助信息网络犯罪活动罪，但不属于'妨碍社会管理秩序罪'。\n\n  Stage 2 — 结构选择和映射：\n  根据问题和指令，需要将判决文书按照给定的案由分类。结构应为'mapping'，其中键为案由，值为对应的判决文书列表。由于没有足够的证据将某些文档归类到特定案由，这些文档将不会出现在结果中。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"属于\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-行政\",\n        \"value\": [\"《判决文书1》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"妨碍社会管理秩序罪\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政强制\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政补偿\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"海事海商纠纷\",\n        \"value\": []\n      },\n      \"sources\": []\n    }\n  ]\n}\n</relations>"
+}

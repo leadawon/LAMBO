@@ -1,0 +1,186 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "opened_anchor_ids": [
+    "DOC7_A1",
+    "DOC7_A2",
+    "DOC7_A3"
+  ],
+  "items": [
+    {
+      "fact": "申诉人认为沈阳市中级人民法院的行为构成了犯罪",
+      "entities": [
+        "沈阳市中级人民法院",
+        "犯罪"
+      ],
+      "evidence_span": "沈阳市中级人民法院构成犯罪",
+      "relevance": "渎职罪",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A1",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC7_A2",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "fact": "申诉人的告诉不属于人民法院直接受理的自诉案件范围",
+      "entities": [
+        "申诉人",
+        "沈阳市中级人民法院"
+      ],
+      "evidence_span": "因你的告诉不属于人民法院直接受理的自诉案件范围",
+      "relevance": "行政行为-其他行政行为",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A2",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC7_A3",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了决定该判决文书是否属于给定的六种案由之一，我需要查看具体的案情描述和涉及的法律条文。从锚点摘要来看，DOC7_A1提到了“滥用职权罪”，这可能与“渎职罪”有关。因此，我将首先打开DOC7_A1来确认这一点。",
+        "action": "open",
+        "anchor_id": "DOC7_A1",
+        "need": "确认是否涉及渎职罪",
+        "reason": "摘要中提到滥用职权罪，可能与渎职罪相关",
+        "raw_text": "<think>\n为了决定该判决文书是否属于给定的六种案由之一，我需要查看具体的案情描述和涉及的法律条文。从锚点摘要来看，DOC7_A1提到了“滥用职权罪”，这可能与“渎职罪”有关。因此，我将首先打开DOC7_A1来确认这一点。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC7_A1\",\"need\":\"确认是否涉及渎职罪\",\"reason\":\"摘要中提到滥用职权罪，可能与渎职罪相关\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC7_A1",
+      "info": {
+        "anchor_title": "申诉理由",
+        "char_count": 168
+      },
+      "extract": {
+        "think": "我在寻找与渎职罪相关的证据。从申诉理由中，提到了“滥用职权罪”，并且申诉人认为沈阳市中级人民法院的行为构成了犯罪。这些信息表明该案件可能涉及渎职罪。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经知道该判决文书涉及到沈阳市中级人民法院的行为是否构成犯罪的问题。为了完成分类任务，我们需要进一步确定该判决文书是否涉及“渎职罪”。从现有的锚点摘要来看，DOC7_A2提到了法院审查意见，可能包含关于案件性质的信息，因此可以打开这个锚点来确认是否存在“渎职罪”的相关信息。",
+        "action": "open",
+        "anchor_id": "DOC7_A2",
+        "need": "确认是否存在'渎职罪'的相关信息",
+        "reason": "DOC7_A2的摘要提到法院审查意见，可能包含关于案件性质的信息",
+        "raw_text": "<think>\n目前我们已经知道该判决文书涉及到沈阳市中级人民法院的行为是否构成犯罪的问题。为了完成分类任务，我们需要进一步确定该判决文书是否涉及“渎职罪”。从现有的锚点摘要来看，DOC7_A2提到了法院审查意见，可能包含关于案件性质的信息，因此可以打开这个锚点来确认是否存在“渎职罪”的相关信息。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC7_A2\",\"need\":\"确认是否存在'渎职罪'的相关信息\",\"reason\":\"DOC7_A2的摘要提到法院审查意见，可能包含关于案件性质的信息\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC7_A3",
+          "DOC7_A2"
+        ]
+      },
+      "anchor_id": "DOC7_A2",
+      "info": {
+        "anchor_title": "法院审查意见",
+        "char_count": 209
+      },
+      "extract": {
+        "think": "我在寻找与'渎职罪'相关的证据。从这段文本中，我找到了一个相关事实，即申诉人的告诉不属于人民法院直接受理的自诉案件范围，因此原审法院裁定不予受理。这个事实表明了法院对于申诉案件的处理方式，但并没有直接提到'渎职罪'。因此，这个事实可以作为判断是否涉及'渎职罪'的一个特征。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "目前我们已经了解到该案件涉及申诉人和沈阳市中级人民法院，并且申诉人的告诉不属于人民法院直接受理的自诉案件范围。但是，我们还没有足够的信息来确定该案件是否属于“知识产权与竞争”、“行政主体-民政行政管理（民政）”、“行政行为-行政受理”、“行政行为-其他行政行为”、“渎职罪”或“产品责任纠纷”中的任何一种。我们需要进一步查看通知的内容，以了解是否有相关信息可以帮助我们进行分类。",
+        "action": "open",
+        "anchor_id": "DOC7_A3",
+        "need": "案件性质",
+        "reason": "需要更多信息来判断案件是否属于给定的案由之一",
+        "raw_text": "<think>\n目前我们已经了解到该案件涉及申诉人和沈阳市中级人民法院，并且申诉人的告诉不属于人民法院直接受理的自诉案件范围。但是，我们还没有足够的信息来确定该案件是否属于“知识产权与竞争”、“行政主体-民政行政管理（民政）”、“行政行为-行政受理”、“行政行为-其他行政行为”、“渎职罪”或“产品责任纠纷”中的任何一种。我们需要进一步查看通知的内容，以了解是否有相关信息可以帮助我们进行分类。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC7_A3\",\"need\":\"案件性质\",\"reason\":\"需要更多信息来判断案件是否属于给定的案由之一\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC7_A3"
+        ]
+      },
+      "anchor_id": "DOC7_A3",
+      "info": {
+        "anchor_title": "通知",
+        "char_count": 5
+      },
+      "extract": {
+        "think": "在这段文本中，我寻找了与案件性质相关的线索。然而，“特此通知”这句话并没有提供任何有助于分类的信息。因此，没有新的事实可以添加到已收集的证据中。",
+        "item_count": 0
+      }
+    }
+  ],
+  "tagged_trace": "<think>为了决定该判决文书是否属于给定的六种案由之一，我需要查看具体的案情描述和涉及的法律条文。从锚点摘要来看，DOC7_A1提到了“滥用职权罪”，这可能与“渎职罪”有关。因此，我将首先打开DOC7_A1来确认这一点。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC7_A1\", \"need\": \"确认是否涉及渎职罪\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC7_A1\", \"anchor_title\": \"申诉理由\"}</info>\n<think>我在寻找与渎职罪相关的证据。从申诉理由中，提到了“滥用职权罪”，并且申诉人认为沈阳市中级人民法院的行为构成了犯罪。这些信息表明该案件可能涉及渎职罪。</think>\n<extracted>{\"items\": [{\"fact\": \"申诉人认为沈阳市中级人民法院的行为构成了犯罪\", \"entities\": [\"沈阳市中级人民法院\", \"犯罪\"], \"evidence_span\": \"沈阳市中级人民法院构成犯罪\", \"relevance\": \"渎职罪\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC7_A2\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道该判决文书涉及到沈阳市中级人民法院的行为是否构成犯罪的问题。为了完成分类任务，我们需要进一步确定该判决文书是否涉及“渎职罪”。从现有的锚点摘要来看，DOC7_A2提到了法院审查意见，可能包含关于案件性质的信息，因此可以打开这个锚点来确认是否存在“渎职罪”的相关信息。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC7_A2\", \"need\": \"确认是否存在'渎职罪'的相关信息\", \"relation_frontier_ids\": [\"DOC7_A3\", \"DOC7_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A2\", \"anchor_title\": \"法院审查意见\"}</info>\n<think>我在寻找与'渎职罪'相关的证据。从这段文本中，我找到了一个相关事实，即申诉人的告诉不属于人民法院直接受理的自诉案件范围，因此原审法院裁定不予受理。这个事实表明了法院对于申诉案件的处理方式，但并没有直接提到'渎职罪'。因此，这个事实可以作为判断是否涉及'渎职罪'的一个特征。</think>\n<extracted>{\"items\": [{\"fact\": \"申诉人的告诉不属于人民法院直接受理的自诉案件范围\", \"entities\": [\"申诉人\", \"沈阳市中级人民法院\"], \"evidence_span\": \"因你的告诉不属于人民法院直接受理的自诉案件范围\", \"relevance\": \"行政行为-其他行政行为\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A2\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC7_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经了解到该案件涉及申诉人和沈阳市中级人民法院，并且申诉人的告诉不属于人民法院直接受理的自诉案件范围。但是，我们还没有足够的信息来确定该案件是否属于“知识产权与竞争”、“行政主体-民政行政管理（民政）”、“行政行为-行政受理”、“行政行为-其他行政行为”、“渎职罪”或“产品责任纠纷”中的任何一种。我们需要进一步查看通知的内容，以了解是否有相关信息可以帮助我们进行分类。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC7_A3\", \"need\": \"案件性质\", \"relation_frontier_ids\": [\"DOC7_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A3\", \"anchor_title\": \"通知\"}</info>\n<think>在这段文本中，我寻找了与案件性质相关的线索。然而，“特此通知”这句话并没有提供任何有助于分类的信息。因此，没有新的事实可以添加到已收集的证据中。</think>\n<extracted>{\"items\": []}</extracted>"
+}

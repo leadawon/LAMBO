@@ -1,0 +1,89 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及劳务合同纠纷 - DOC2: 涉及房屋征收决定，属于行政行为-行政征收 - DOC3: 涉及所有权确认纠纷和侵权行为 - DOC4: 涉及《保障农民工工资支付条例》和行政处理决定，属于行政主体-劳动和社会保障行政管理（劳动，社会保障） - DOC5: 涉及劳务合同纠纷 - DOC6: 无相关信息 - DOC7: 涉及财产损害赔偿纠纷 - DOC8: 涉及安全注意义务和安全提示义务，属于侵权责任纠纷 - DOC9: 涉及工伤保险资格或待遇认定，属于行政主体-劳动和社会保障行政管理（劳动，社会保障） Stage 2 structure selection and mapping: - 结构类型为“mapping”，因为问题是要求将判决文书按特定案由分类。 - 每个案由作为一个键，对应的值是一个包含相关判决文书标题的列表。 - 根据收集到的特征，将每个判决文书归类到相应的案由下。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "分类"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "物权保护纠纷",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "合同，无因管理，不当得利纠纷",
+          "value": [
+            "《判决文书1》",
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A4",
+          "DOC5:DOC5_A2",
+          "DOC5:DOC5_A3",
+          "DOC5:DOC5_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "侵权责任纠纷",
+          "value": [
+            "《判决文书3》",
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A2",
+          "DOC3:DOC3_A6",
+          "DOC8:DOC8_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+          "value": [
+            "《判决文书4》",
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A1",
+          "DOC4:DOC4_A2",
+          "DOC9:DOC9_A2",
+          "DOC9:DOC9_A5",
+          "DOC9:DOC9_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政征收",
+          "value": [
+            "《判决文书2》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC2:DOC2_A4"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及劳务合同纠纷\n  - DOC2: 涉及房屋征收决定，属于行政行为-行政征收\n  - DOC3: 涉及所有权确认纠纷和侵权行为\n  - DOC4: 涉及《保障农民工工资支付条例》和行政处理决定，属于行政主体-劳动和社会保障行政管理（劳动，社会保障）\n  - DOC5: 涉及劳务合同纠纷\n  - DOC6: 无相关信息\n  - DOC7: 涉及财产损害赔偿纠纷\n  - DOC8: 涉及安全注意义务和安全提示义务，属于侵权责任纠纷\n  - DOC9: 涉及工伤保险资格或待遇认定，属于行政主体-劳动和社会保障行政管理（劳动，社会保障）\n\n  Stage 2 structure selection and mapping:\n  - 结构类型为“mapping”，因为问题是要求将判决文书按特定案由分类。\n  - 每个案由作为一个键，对应的值是一个包含相关判决文书标题的列表。\n  - 根据收集到的特征，将每个判决文书归类到相应的案由下。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"分类\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"物权保护纠纷\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"合同，无因管理，不当得利纠纷\",\n        \"value\": [\"《判决文书1》\", \"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A4\", \"DOC5:DOC5_A2\", \"DOC5:DOC5_A3\", \"DOC5:DOC5_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"侵权责任纠纷\",\n        \"value\": [\"《判决文书3》\", \"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A2\", \"DOC3:DOC3_A6\", \"DOC8:DOC8_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\",\n        \"value\": [\"《判决文书4》\", \"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A1\", \"DOC4:DOC4_A2\", \"DOC9:DOC9_A2\", \"DOC9:DOC9_A5\", \"DOC9:DOC9_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政征收\",\n        \"value\": [\"《判决文书2》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC2:DOC2_A4\"]\n    }\n  ]\n}\n</relations>"
+}

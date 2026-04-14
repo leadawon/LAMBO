@@ -1,0 +1,87 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 民事裁定, 广播电视播放合同纠纷 - DOC2: 职务侵占罪, 合同诈骗罪, 刑事案件 - DOC3: 民事案件 - DOC4: 执行案件 - DOC5: 故意伤害罪, 刑事判决, 刑事裁定 - DOC6: 故意伤害罪, 刑事裁定 - DOC7: 无明确案件类型 - DOC8: 财产损害赔偿纠纷, 民事案件 - DOC9: 侵害信息网络传播权及不正当竞争纠纷, 民事裁定 - DOC10: 侵害作品信息网络传播权纠纷, 网络不正当竞争纠纷, 管辖权争议 - DOC11: 保证合同纠纷, 中级人民法院管辖, 成渝金融法院管辖 - DOC12: 产品责任纠纷, 山东省青岛市黄岛区人民法院管辖 - DOC13: 执行案件 Stage 2 structure selection and mapping: - The question asks for a classification of the documents into four specific categories: '民事案件', '执行案件', '管辖案件', '刑事案件'. - We will use a \"mapping\" structure to categorize each document title based on the features identified. - Each document will be classified into one of the specified categories or left unclassified if no clear match is found.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "民事案件",
+        "执行案件",
+        "管辖案件",
+        "刑事案件"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "民事案件",
+          "value": [
+            "《判决文书1》",
+            "《判决文书3》",
+            "《判决文书8》",
+            "《判决文书9》",
+            "《判决文书11》",
+            "《判决文书12》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC3:DOC3_A2",
+          "DOC8:DOC8_A2",
+          "DOC9:DOC9_A2",
+          "DOC11:DOC11_A3",
+          "DOC12:DOC12_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案件",
+          "value": [
+            "《判决文书4》",
+            "《判决文书13》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A3",
+          "DOC13:DOC13_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "管辖案件",
+          "value": [
+            "《判决文书10》",
+            "《判决文书11》",
+            "《判决文书12》"
+          ]
+        },
+        "sources": [
+          "DOC10:DOC10_A4",
+          "DOC11:DOC11_A3",
+          "DOC12:DOC12_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事案件",
+          "value": [
+            "《判决文书2》",
+            "《判决文书5》",
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A1",
+          "DOC5:DOC5_A2",
+          "DOC6:DOC6_A1"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 民事裁定, 广播电视播放合同纠纷\n  - DOC2: 职务侵占罪, 合同诈骗罪, 刑事案件\n  - DOC3: 民事案件\n  - DOC4: 执行案件\n  - DOC5: 故意伤害罪, 刑事判决, 刑事裁定\n  - DOC6: 故意伤害罪, 刑事裁定\n  - DOC7: 无明确案件类型\n  - DOC8: 财产损害赔偿纠纷, 民事案件\n  - DOC9: 侵害信息网络传播权及不正当竞争纠纷, 民事裁定\n  - DOC10: 侵害作品信息网络传播权纠纷, 网络不正当竞争纠纷, 管辖权争议\n  - DOC11: 保证合同纠纷, 中级人民法院管辖, 成渝金融法院管辖\n  - DOC12: 产品责任纠纷, 山东省青岛市黄岛区人民法院管辖\n  - DOC13: 执行案件\n\n  Stage 2 structure selection and mapping:\n  - The question asks for a classification of the documents into four specific categories: '民事案件', '执行案件', '管辖案件', '刑事案件'.\n  - We will use a \"mapping\" structure to categorize each document title based on the features identified.\n  - Each document will be classified into one of the specified categories or left unclassified if no clear match is found.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"民事案件\", \"执行案件\", \"管辖案件\", \"刑事案件\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"民事案件\",\n        \"value\": [\"《判决文书1》\", \"《判决文书3》\", \"《判决文书8》\", \"《判决文书9》\", \"《判决文书11》\", \"《判决文书12》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC3:DOC3_A2\", \"DOC8:DOC8_A2\", \"DOC9:DOC9_A2\", \"DOC11:DOC11_A3\", \"DOC12:DOC12_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案件\",\n        \"value\": [\"《判决文书4》\", \"《判决文书13》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A3\", \"DOC13:DOC13_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"管辖案件\",\n        \"value\": [\"《判决文书10》\", \"《判决文书11》\", \"《判决文书12》\"]\n      },\n      \"sources\": [\"DOC10:DOC10_A4\", \"DOC11:DOC11_A3\", \"DOC12:DOC12_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事案件\",\n        \"value\": [\"《判决文书2》\", \"《判决文书5》\", \"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A1\", \"DOC5:DOC5_A2\", \"DOC6:DOC6_A1\"]\n    }\n  ]\n}\n</relations>"
+}

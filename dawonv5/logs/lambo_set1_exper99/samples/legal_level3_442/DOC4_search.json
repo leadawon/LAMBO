@@ -1,0 +1,191 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "opened_anchor_ids": [
+    "DOC4_A2",
+    "DOC4_A8"
+  ],
+  "items": [
+    {
+      "fact": "原告陈某文与被告赵某等民间借贷纠纷一案",
+      "entities": [
+        "陈某文",
+        "赵某",
+        "民间借贷纠纷"
+      ],
+      "evidence_span": "原告陈某文与被告赵某等民间借贷纠纷一案",
+      "relevance": "民间借贷纠纷",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A2",
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A9",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A8",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "fact": "本案系民间借贷纠纷",
+      "entities": [
+        "民间借贷纠纷"
+      ],
+      "evidence_span": "本案系民间借贷纠纷。",
+      "relevance": "案件性质",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A8",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A9",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了对判决文书进行分类，我需要找到该判决文书涉及的具体案由。从文档摘要中可以看到，这个案件涉及到“民间借贷纠纷”。因此，我需要打开包含案件立案信息的锚点，以确认具体的案由。",
+        "action": "open",
+        "anchor_id": "DOC4_A2",
+        "need": "确认案件的具体案由",
+        "reason": "该锚点包含了案件立案的信息，可以确认案件属于哪种案由",
+        "raw_text": "<think>\n为了对判决文书进行分类，我需要找到该判决文书涉及的具体案由。从文档摘要中可以看到，这个案件涉及到“民间借贷纠纷”。因此，我需要打开包含案件立案信息的锚点，以确认具体的案由。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC4_A2\",\"need\":\"确认案件的具体案由\",\"reason\":\"该锚点包含了案件立案的信息，可以确认案件属于哪种案由\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC4_A2",
+      "info": {
+        "anchor_title": "案件立案",
+        "char_count": 43
+      },
+      "extract": {
+        "think": "我在寻找案件的具体案由。从这段文字中，我找到了“原告陈某文与被告赵某等民间借贷纠纷一案”，这表明该案件属于“民间借贷纠纷”。这个信息有助于将该判决文书归类到正确的案由类别中。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经知道这是一个关于民间借贷纠纷的案件。为了进一步确认案件的具体类型，我们需要查看更多关于案件性质的信息。接下来应该查看最高人民法院的意见，因为那里可能会有关于案件性质的详细说明。",
+        "action": "open",
+        "anchor_id": "DOC4_A8",
+        "need": "案件性质的详细说明",
+        "reason": "最高人民法院的意见通常会包含详细的法律依据和案件性质说明",
+        "raw_text": "<think>\n目前我们已经知道这是一个关于民间借贷纠纷的案件。为了进一步确认案件的具体类型，我们需要查看更多关于案件性质的信息。接下来应该查看最高人民法院的意见，因为那里可能会有关于案件性质的详细说明。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC4_A8\",\"need\":\"案件性质的详细说明\",\"reason\":\"最高人民法院的意见通常会包含详细的法律依据和案件性质说明\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC4_A9",
+          "DOC4_A8",
+          "DOC4_A7",
+          "DOC4_A6",
+          "DOC4_A5",
+          "DOC4_A4",
+          "DOC4_A3",
+          "DOC4_A1"
+        ]
+      },
+      "anchor_id": "DOC4_A8",
+      "info": {
+        "anchor_title": "最高人民法院意见",
+        "char_count": 889
+      },
+      "extract": {
+        "think": "我在寻找与案件性质相关的描述。在这一段落中，明确提到“本案系民间借贷纠纷”，这与之前收集到的信息一致。因此，记录该事实有助于后续对判决文书进行分类。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "目前我们已经知道这是一个民间借贷纠纷案件。为了完成分类任务，我们需要确认是否还有其他案由涉及。从文档地图来看，没有提到其他案由如“适用特殊程序案件案由”、“侵权责任纠纷”、“行政行为-行政监督”、“渎职罪”或“行政主体-房屋拆迁管理（拆迁）”。因此，我们可以停止搜索并给出答案。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定该判决文书属于'民间借贷纠纷'，且没有证据表明涉及其他案由",
+        "raw_text": "<think>\n目前我们已经知道这是一个民间借贷纠纷案件。为了完成分类任务，我们需要确认是否还有其他案由涉及。从文档地图来看，没有提到其他案由如“适用特殊程序案件案由”、“侵权责任纠纷”、“行政行为-行政监督”、“渎职罪”或“行政主体-房屋拆迁管理（拆迁）”。因此，我们可以停止搜索并给出答案。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定该判决文书属于'民间借贷纠纷'，且没有证据表明涉及其他案由\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC4_A9",
+          "DOC4_A7",
+          "DOC4_A6",
+          "DOC4_A5",
+          "DOC4_A4",
+          "DOC4_A3",
+          "DOC4_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了对判决文书进行分类，我需要找到该判决文书涉及的具体案由。从文档摘要中可以看到，这个案件涉及到“民间借贷纠纷”。因此，我需要打开包含案件立案信息的锚点，以确认具体的案由。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC4_A2\", \"need\": \"确认案件的具体案由\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_title\": \"案件立案\"}</info>\n<think>我在寻找案件的具体案由。从这段文字中，我找到了“原告陈某文与被告赵某等民间借贷纠纷一案”，这表明该案件属于“民间借贷纠纷”。这个信息有助于将该判决文书归类到正确的案由类别中。</think>\n<extracted>{\"items\": [{\"fact\": \"原告陈某文与被告赵某等民间借贷纠纷一案\", \"entities\": [\"陈某文\", \"赵某\", \"民间借贷纠纷\"], \"evidence_span\": \"原告陈某文与被告赵某等民间借贷纠纷一案\", \"relevance\": \"民间借贷纠纷\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A8\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道这是一个关于民间借贷纠纷的案件。为了进一步确认案件的具体类型，我们需要查看更多关于案件性质的信息。接下来应该查看最高人民法院的意见，因为那里可能会有关于案件性质的详细说明。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC4_A8\", \"need\": \"案件性质的详细说明\", \"relation_frontier_ids\": [\"DOC4_A9\", \"DOC4_A8\", \"DOC4_A7\", \"DOC4_A6\", \"DOC4_A5\", \"DOC4_A4\", \"DOC4_A3\", \"DOC4_A1\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A8\", \"anchor_title\": \"最高人民法院意见\"}</info>\n<think>我在寻找与案件性质相关的描述。在这一段落中，明确提到“本案系民间借贷纠纷”，这与之前收集到的信息一致。因此，记录该事实有助于后续对判决文书进行分类。</think>\n<extracted>{\"items\": [{\"fact\": \"本案系民间借贷纠纷\", \"entities\": [\"民间借贷纠纷\"], \"evidence_span\": \"本案系民间借贷纠纷。\", \"relevance\": \"案件性质\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A8\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A9\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道这是一个民间借贷纠纷案件。为了完成分类任务，我们需要确认是否还有其他案由涉及。从文档地图来看，没有提到其他案由如“适用特殊程序案件案由”、“侵权责任纠纷”、“行政行为-行政监督”、“渎职罪”或“行政主体-房屋拆迁管理（拆迁）”。因此，我们可以停止搜索并给出答案。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定该判决文书属于'民间借贷纠纷'，且没有证据表明涉及其他案由\"}</search>"
+}

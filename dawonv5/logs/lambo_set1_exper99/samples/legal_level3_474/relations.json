@@ -1,0 +1,101 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及农民工工资支付问题，属于劳动和社会保障行政管理。 - DOC2: 无相关事实。 - DOC3: 涉及刑事判决并移送立案执行，属于执行案由-刑事。 - DOC4: 涉及行政处罚决定和行政裁定书，属于执行案由-行政非诉执行。 - DOC5: 涉及知识产权服务公司和网站之间的纠纷，属于知识产权与竞争。 - DOC6: 涉及行政处罚决定和行政非诉执行，属于执行案由-行政非诉执行。 - DOC7: 涉及侵害发明专利权纠纷，属于知识产权与竞争。 - DOC8: 涉及工伤保险资格认定，属于行政主体-劳动和社会保障行政管理（劳动，社会保障）。 - DOC9: 涉及航次租船合同纠纷，属于海事海商纠纷。 Stage 2 reasoning about structure and mapping: - 结构类型应为“mapping”，因为需要将每个判决文书归类到指定的案由类别中。 - 每个类别下的判决文书标题应作为列表项列出。 - 确保每个文档只出现在一个类别下，如果某个文档没有匹配的类别，则不包含在结果中。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "分类"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-刑事",
+          "value": [
+            "《判决文书3》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A4",
+          "DOC3:DOC3_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-行政非诉执行",
+          "value": [
+            "《判决文书4》",
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A2",
+          "DOC4:DOC4_A3",
+          "DOC4:DOC4_A4",
+          "DOC4:DOC4_A5",
+          "DOC4:DOC4_A6",
+          "DOC6:DOC6_A3",
+          "DOC6:DOC6_A2",
+          "DOC6:DOC6_A5",
+          "DOC6:DOC6_A1",
+          "DOC6:DOC6_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "海事海商纠纷",
+          "value": [
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC9:DOC9_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "知识产权与竞争",
+          "value": [
+            "《判决文书5》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A1",
+          "DOC5:DOC5_A3",
+          "DOC7:DOC7_A2",
+          "DOC7:DOC7_A4",
+          "DOC7:DOC7_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+          "value": [
+            "《判决文书1》",
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A4",
+          "DOC8:DOC8_A1",
+          "DOC8:DOC8_A2",
+          "DOC8:DOC8_A3",
+          "DOC8:DOC8_A4"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及农民工工资支付问题，属于劳动和社会保障行政管理。\n  - DOC2: 无相关事实。\n  - DOC3: 涉及刑事判决并移送立案执行，属于执行案由-刑事。\n  - DOC4: 涉及行政处罚决定和行政裁定书，属于执行案由-行政非诉执行。\n  - DOC5: 涉及知识产权服务公司和网站之间的纠纷，属于知识产权与竞争。\n  - DOC6: 涉及行政处罚决定和行政非诉执行，属于执行案由-行政非诉执行。\n  - DOC7: 涉及侵害发明专利权纠纷，属于知识产权与竞争。\n  - DOC8: 涉及工伤保险资格认定，属于行政主体-劳动和社会保障行政管理（劳动，社会保障）。\n  - DOC9: 涉及航次租船合同纠纷，属于海事海商纠纷。\n\n  Stage 2 reasoning about structure and mapping:\n  - 结构类型应为“mapping”，因为需要将每个判决文书归类到指定的案由类别中。\n  - 每个类别下的判决文书标题应作为列表项列出。\n  - 确保每个文档只出现在一个类别下，如果某个文档没有匹配的类别，则不包含在结果中。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"分类\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-刑事\",\n        \"value\": [\"《判决文书3》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A4\", \"DOC3:DOC3_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-行政非诉执行\",\n        \"value\": [\"《判决文书4》\", \"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A2\", \"DOC4:DOC4_A3\", \"DOC4:DOC4_A4\", \"DOC4:DOC4_A5\", \"DOC4:DOC4_A6\", \"DOC6:DOC6_A3\", \"DOC6:DOC6_A2\", \"DOC6:DOC6_A5\", \"DOC6:DOC6_A1\", \"DOC6:DOC6_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"海事海商纠纷\",\n        \"value\": [\"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC9:DOC9_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"知识产权与竞争\",\n        \"value\": [\"《判决文书5》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A1\", \"DOC5:DOC5_A3\", \"DOC7:DOC7_A2\", \"DOC7:DOC7_A4\", \"DOC7:DOC7_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\",\n        \"value\": [\"《判决文书1》\", \"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A4\", \"DOC8:DOC8_A1\", \"DOC8:DOC8_A2\", \"DOC8:DOC8_A3\", \"DOC8:DOC8_A4\"]\n    }\n  ]\n}\n</relations>"
+}

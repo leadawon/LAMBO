@@ -1,0 +1,104 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "opened_anchor_ids": [
+    "DOC4_A2"
+  ],
+  "items": [
+    {
+      "fact": "本案为行政案件",
+      "entities": [
+        "河南省某某建筑防水工程有限公司松原市开发区分公司",
+        "乌鲁木齐市人力资源和社会保障局",
+        "王某某"
+      ],
+      "evidence_span": "不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A2",
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC4_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书4']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书4']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC4_A3",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC4_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定该判决文书属于哪种案件类型，我需要查看具体的案件内容和涉及的法律领域。从已有的摘要来看，这个案件涉及到工伤保险资格认定，因此它可能是一个行政案件。接下来我将打开DOC4_A2，因为它提到了工伤保险资格认定案的具体情况。",
+        "action": "open",
+        "anchor_id": "DOC4_A2",
+        "need": "确认案件类型",
+        "reason": "该锚点提到工伤保险资格认定案的具体情况，有助于判断案件类型",
+        "raw_text": "<think>\n为了确定该判决文书属于哪种案件类型，我需要查看具体的案件内容和涉及的法律领域。从已有的摘要来看，这个案件涉及到工伤保险资格认定，因此它可能是一个行政案件。接下来我将打开DOC4_A2，因为它提到了工伤保险资格认定案的具体情况。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC4_A2\",\"need\":\"确认案件类型\",\"reason\":\"该锚点提到工伤保险资格认定案的具体情况，有助于判断案件类型\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC4_A2",
+      "info": {
+        "anchor_title": "撤回再审申请",
+        "char_count": 166
+      },
+      "extract": {
+        "think": "我在寻找能够确定案件类型的证据。从这段文本中，可以明确看出这是一起涉及工伤保险资格认定的案件，并且提到了“行政判决”，因此可以判断这是一个行政案件。这个信息对于分类判决文书非常有用。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "已经确定了《判决文书4》属于行政案件。现在需要收集的信息已经足够来决定该判决文书的类别。不需要打开更多的锚点。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定判决文书4属于行政案件，无需进一步搜索",
+        "raw_text": "<think>\n已经确定了《判决文书4》属于行政案件。现在需要收集的信息已经足够来决定该判决文书的类别。不需要打开更多的锚点。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定判决文书4属于行政案件，无需进一步搜索\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC4_A3",
+          "DOC4_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定该判决文书属于哪种案件类型，我需要查看具体的案件内容和涉及的法律领域。从已有的摘要来看，这个案件涉及到工伤保险资格认定，因此它可能是一个行政案件。接下来我将打开DOC4_A2，因为它提到了工伤保险资格认定案的具体情况。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC4_A2\", \"need\": \"确认案件类型\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_title\": \"撤回再审申请\"}</info>\n<think>我在寻找能够确定案件类型的证据。从这段文本中，可以明确看出这是一起涉及工伤保险资格认定的案件，并且提到了“行政判决”，因此可以判断这是一个行政案件。这个信息对于分类判决文书非常有用。</think>\n<extracted>{\"items\": [{\"fact\": \"本案为行政案件\", \"entities\": [\"河南省某某建筑防水工程有限公司松原市开发区分公司\", \"乌鲁木齐市人力资源和社会保障局\", \"王某某\"], \"evidence_span\": \"不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书4']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC4_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC4_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>已经确定了《判决文书4》属于行政案件。现在需要收集的信息已经足够来决定该判决文书的类别。不需要打开更多的锚点。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定判决文书4属于行政案件，无需进一步搜索\"}</search>"
+}

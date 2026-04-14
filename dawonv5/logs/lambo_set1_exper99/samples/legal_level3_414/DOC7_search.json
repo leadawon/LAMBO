@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "opened_anchor_ids": [
+    "DOC7_A2"
+  ],
+  "items": [
+    {
+      "fact": "本案由重庆市万州区人民法院审理。",
+      "entities": [
+        "重庆市万州区人民法院"
+      ],
+      "evidence_span": "本案由重庆市万州区人民法院审理。",
+      "relevance": "管辖案件",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A2",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书7']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "likely_same_entity",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.2,
+          "reason": "shared entity ['判决文书7']"
+        },
+        {
+          "relation_type": "same_section",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 2.0,
+          "reason": "same section_path"
+        },
+        {
+          "relation_type": "prev_next",
+          "target_anchor_id": "DOC7_A1",
+          "weight": 1.4,
+          "reason": "previous anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定《判决文书7》属于哪种类型的案件，我需要查看具体的案件内容。从文档地图中，DOC7_A1提供了当事人信息，但没有明确指出案件类型。而DOC7_A2提到了“指定管辖裁定”，并且涉及了《中华人民共和国民事诉讼法》，这可能意味着这是一个民事案件。因此，我将首先打开DOC7_A2来确认这一点。",
+        "action": "open",
+        "anchor_id": "DOC7_A2",
+        "need": "确认案件类型",
+        "reason": "提到指定管辖裁定和民事诉讼法，可能是民事案件",
+        "raw_text": "<think>\n为了确定《判决文书7》属于哪种类型的案件，我需要查看具体的案件内容。从文档地图中，DOC7_A1提供了当事人信息，但没有明确指出案件类型。而DOC7_A2提到了“指定管辖裁定”，并且涉及了《中华人民共和国民事诉讼法》，这可能意味着这是一个民事案件。因此，我将首先打开DOC7_A2来确认这一点。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC7_A2\",\"need\":\"确认案件类型\",\"reason\":\"提到指定管辖裁定和民事诉讼法，可能是民事案件\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC7_A2",
+      "info": {
+        "anchor_title": "指定管辖裁定",
+        "char_count": 140
+      },
+      "extract": {
+        "think": "我寻找了能够确定案件类型的证据。从提供的文本中，可以明确这是关于指定管辖的裁定，因此属于“管辖案件”。这个信息有助于将该判决文书归类到正确的案件类型中。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经知道该判决文书是由重庆市万州区人民法院审理的，但是我们还不清楚这个案件属于哪种类型的案件（民事案件、执行案件、管辖案件或刑事案件）。我们需要找到关于案件类型的更多信息。从现有的锚点信息来看，DOC7_A1提到了当事人信息，但没有明确提到案件类型。因此，我们需要进一步查看其他可能包含案件类型信息的锚点。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "当前已有的信息不足以确定案件类型，且剩余的锚点似乎不包含案件类型的相关信息",
+        "raw_text": "<think>\n目前我们已经知道该判决文书是由重庆市万州区人民法院审理的，但是我们还不清楚这个案件属于哪种类型的案件（民事案件、执行案件、管辖案件或刑事案件）。我们需要找到关于案件类型的更多信息。从现有的锚点信息来看，DOC7_A1提到了当事人信息，但没有明确提到案件类型。因此，我们需要进一步查看其他可能包含案件类型信息的锚点。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"当前已有的信息不足以确定案件类型，且剩余的锚点似乎不包含案件类型的相关信息\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC7_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定《判决文书7》属于哪种类型的案件，我需要查看具体的案件内容。从文档地图中，DOC7_A1提供了当事人信息，但没有明确指出案件类型。而DOC7_A2提到了“指定管辖裁定”，并且涉及了《中华人民共和国民事诉讼法》，这可能意味着这是一个民事案件。因此，我将首先打开DOC7_A2来确认这一点。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC7_A2\", \"need\": \"确认案件类型\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC7_A2\", \"anchor_title\": \"指定管辖裁定\"}</info>\n<think>我寻找了能够确定案件类型的证据。从提供的文本中，可以明确这是关于指定管辖的裁定，因此属于“管辖案件”。这个信息有助于将该判决文书归类到正确的案件类型中。</think>\n<extracted>{\"items\": [{\"fact\": \"本案由重庆市万州区人民法院审理。\", \"entities\": [\"重庆市万州区人民法院\"], \"evidence_span\": \"本案由重庆市万州区人民法院审理。\", \"relevance\": \"管辖案件\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A2\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书7']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书7']\"}, {\"relation_type\": \"same_section\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 2.0, \"reason\": \"same section_path\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC7_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道该判决文书是由重庆市万州区人民法院审理的，但是我们还不清楚这个案件属于哪种类型的案件（民事案件、执行案件、管辖案件或刑事案件）。我们需要找到关于案件类型的更多信息。从现有的锚点信息来看，DOC7_A1提到了当事人信息，但没有明确提到案件类型。因此，我们需要进一步查看其他可能包含案件类型信息的锚点。</think>\n<search>{\"action\": \"stop\", \"reason\": \"当前已有的信息不足以确定案件类型，且剩余的锚点似乎不包含案件类型的相关信息\"}</search>"
+}

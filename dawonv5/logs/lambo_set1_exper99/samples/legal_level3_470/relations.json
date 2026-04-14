@@ -1,0 +1,88 @@
+{
+  "think": "Stage 1 — feature sheet: - DOC2: 涉及行政行为，特别是行政强制措施，如罚款、公告、提出司法建议等。 - DOC3: 涉及行政行为，特别是行政给付，如工伤保险待遇的支付。 - DOC5: 明确提到不动产登记纠纷。 - DOC6: 涉及行政执行，具体是撤销房屋补偿安置决定并要求重新作出行政行为。 - DOC7: 涉及执行案由，具体是行政投诉回复的执行。 - DOC8: 明确提到产品责任纠纷。 Stage 2 — 结构选择和映射： 根据问题的要求，需要将每个判决文书归类到指定的案由类别中。因此，结构应为“mapping”，其中键是案由类别，值是属于该类别的判决文书列表。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "属于"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政强制",
+          "value": [
+            "《判决文书2》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC2:DOC2_A3",
+          "DOC2:DOC2_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政给付",
+          "value": [
+            "《判决文书3》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A2",
+          "DOC3:DOC3_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "不动产登记纠纷",
+          "value": [
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-行政",
+          "value": [
+            "《判决文书6》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC6:DOC6_A3",
+          "DOC6:DOC6_A4",
+          "DOC7:DOC7_A2",
+          "DOC7:DOC7_A4",
+          "DOC7:DOC7_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "产品责任纠纷",
+          "value": [
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC8:DOC8_A3"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 — feature sheet:\n  - DOC2: 涉及行政行为，特别是行政强制措施，如罚款、公告、提出司法建议等。\n  - DOC3: 涉及行政行为，特别是行政给付，如工伤保险待遇的支付。\n  - DOC5: 明确提到不动产登记纠纷。\n  - DOC6: 涉及行政执行，具体是撤销房屋补偿安置决定并要求重新作出行政行为。\n  - DOC7: 涉及执行案由，具体是行政投诉回复的执行。\n  - DOC8: 明确提到产品责任纠纷。\n\n  Stage 2 — 结构选择和映射：\n  根据问题的要求，需要将每个判决文书归类到指定的案由类别中。因此，结构应为“mapping”，其中键是案由类别，值是属于该类别的判决文书列表。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"属于\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政强制\",\n        \"value\": [\"《判决文书2》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC2:DOC2_A3\", \"DOC2:DOC2_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政给付\",\n        \"value\": [\"《判决文书3》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A2\", \"DOC3:DOC3_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"不动产登记纠纷\",\n        \"value\": [\"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-行政\",\n        \"value\": [\"《判决文书6》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC6:DOC6_A3\", \"DOC6:DOC6_A4\", \"DOC7:DOC7_A2\", \"DOC7:DOC7_A4\", \"DOC7:DOC7_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"产品责任纠纷\",\n        \"value\": [\"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC8:DOC8_A3\"]\n    }\n  ]\n}\n</relations>"
+}

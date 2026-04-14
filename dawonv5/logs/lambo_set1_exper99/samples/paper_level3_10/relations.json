@@ -1,0 +1,107 @@
+{
+  "think": "Stage 1 — Feature Sheet: - DOC1 (EasyTool): References: OpenAI, 2023; Touvron et al., 2023a,b; Team and Google, 2023; Shen et al., 2023a; Gravitas, 2023; Schick et al., 2023; Qin et al., 2023; Li et al., 2023; Patil et al., 2023; Hao et al., 2023; Song et al., 2023; Zhuang et al., 2024; Zhang et al., 2023; Hsieh et al., 2023; Xu et al., 2023; Mu et al., 2023; Jiang et al., 2023b. - DOC2 (Don't Fine-Tune, Decode): References: Mialon et al. 2023; Shen et al. 2023; Gupta & Kembhavi 2022; Schick et al. 2023; Qin et al. 2023; Song et al. 2023; Chen et al. 2022; Gao et al. 2023; Jiang et al. 2023; Hao et al. 2023. - DOC3 (Smurfs): References: Zhao et al. (2023); Hao et al. (2024); Guu et al. (2020); Qin et al. (2024); Dorri et al. (2018); Van der Hoek and Wooldridge (2008); Patil et al. (2023); Jiang et al. (2023); Yao et al. (2022). Stage 2 — Structure Selection and Mapping: - The structure should be \"mapping\" because we need to map each paper to its references and citations. - We will create a mapping where each paper title is a key, and the values are lists of references and citations. - Since the question does not provide a fixed set of candidate labels, we will use the paper titles as they appear in the facts.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "DOC1",
+        "DOC2",
+        "DOC3"
+      ],
+      "attributes": [
+        "Reference",
+        "Citation"
+      ],
+      "relation_types": [
+        "reference",
+        "citation"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction",
+          "value": {
+            "Reference": [
+              "OpenAI, 2023",
+              "Touvron et al., 2023a,b",
+              "Team and Google, 2023",
+              "Shen et al., 2023a",
+              "Gravitas, 2023",
+              "Schick et al., 2023",
+              "Qin et al., 2023",
+              "Li et al., 2023",
+              "Patil et al., 2023",
+              "Hao et al., 2023",
+              "Song et al., 2023",
+              "Zhuang et al., 2024",
+              "Zhang et al., 2023",
+              "Hsieh et al., 2023",
+              "Xu et al., 2023",
+              "Mu et al., 2023",
+              "Jiang et al., 2023b"
+            ],
+            "Citation": []
+          }
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC1:DOC1_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding",
+          "value": {
+            "Reference": [
+              "Mialon et al. 2023",
+              "Shen et al. 2023",
+              "Gupta & Kembhavi 2022",
+              "Schick et al. 2023",
+              "Qin et al. 2023",
+              "Song et al. 2023",
+              "Chen et al. 2022",
+              "Gao et al. 2023",
+              "Jiang et al. 2023",
+              "Hao et al. 2023"
+            ],
+            "Citation": []
+          }
+        },
+        "sources": [
+          "DOC2:DOC2_A3",
+          "DOC2:DOC2_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "Smurfs: Leveraging Multiple Proficiency Agents with Context-Efficiency for Tool Planning",
+          "value": {
+            "Reference": [
+              "Zhao et al. (2023)",
+              "Hao et al. (2024)",
+              "Guu et al. (2020)",
+              "Qin et al. (2024)",
+              "Dorri et al. (2018)",
+              "Van der Hoek and Wooldridge (2008)",
+              "Patil et al. (2023)",
+              "Jiang et al. (2023)",
+              "Yao et al. (2022)"
+            ],
+            "Citation": []
+          }
+        },
+        "sources": [
+          "DOC3:DOC3_A1",
+          "DOC3:DOC3_A7",
+          "DOC3:DOC3_A3",
+          "DOC3:DOC3_A5"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 — Feature Sheet:\n  - DOC1 (EasyTool): References: OpenAI, 2023; Touvron et al., 2023a,b; Team and Google, 2023; Shen et al., 2023a; Gravitas, 2023; Schick et al., 2023; Qin et al., 2023; Li et al., 2023; Patil et al., 2023; Hao et al., 2023; Song et al., 2023; Zhuang et al., 2024; Zhang et al., 2023; Hsieh et al., 2023; Xu et al., 2023; Mu et al., 2023; Jiang et al., 2023b.\n  - DOC2 (Don't Fine-Tune, Decode): References: Mialon et al. 2023; Shen et al. 2023; Gupta & Kembhavi 2022; Schick et al. 2023; Qin et al. 2023; Song et al. 2023; Chen et al. 2022; Gao et al. 2023; Jiang et al. 2023; Hao et al. 2023.\n  - DOC3 (Smurfs): References: Zhao et al. (2023); Hao et al. (2024); Guu et al. (2020); Qin et al. (2024); Dorri et al. (2018); Van der Hoek and Wooldridge (2008); Patil et al. (2023); Jiang et al. (2023); Yao et al. (2022).\n\n  Stage 2 — Structure Selection and Mapping:\n  - The structure should be \"mapping\" because we need to map each paper to its references and citations.\n  - We will create a mapping where each paper title is a key, and the values are lists of references and citations.\n  - Since the question does not provide a fixed set of candidate labels, we will use the paper titles as they appear in the facts.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"DOC1\", \"DOC2\", \"DOC3\"],\n    \"attributes\": [\"Reference\", \"Citation\"],\n    \"relation_types\": [\"reference\", \"citation\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction\",\n        \"value\": {\n          \"Reference\": [\n            \"OpenAI, 2023\",\n            \"Touvron et al., 2023a,b\",\n            \"Team and Google, 2023\",\n            \"Shen et al., 2023a\",\n            \"Gravitas, 2023\",\n            \"Schick et al., 2023\",\n            \"Qin et al., 2023\",\n            \"Li et al., 2023\",\n            \"Patil et al., 2023\",\n            \"Hao et al., 2023\",\n            \"Song et al., 2023\",\n            \"Zhuang et al., 2024\",\n            \"Zhang et al., 2023\",\n            \"Hsieh et al., 2023\",\n            \"Xu et al., 2023\",\n            \"Mu et al., 2023\",\n            \"Jiang et al., 2023b\"\n          ],\n          \"Citation\": []\n        }\n      },\n      \"sources\": [\n        \"DOC1:DOC1_A2\",\n        \"DOC1:DOC1_A4\"\n      ]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding\",\n        \"value\": {\n          \"Reference\": [\n            \"Mialon et al. 2023\",\n            \"Shen et al. 2023\",\n            \"Gupta & Kembhavi 2022\",\n            \"Schick et al. 2023\",\n            \"Qin et al. 2023\",\n            \"Song et al. 2023\",\n            \"Chen et al. 2022\",\n            \"Gao et al. 2023\",\n            \"Jiang et al. 2023\",\n            \"Hao et al. 2023\"\n          ],\n          \"Citation\": []\n        }\n      },\n      \"sources\": [\n        \"DOC2:DOC2_A3\",\n        \"DOC2:DOC2_A6\"\n      ]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"Smurfs: Leveraging Multiple Proficiency Agents with Context-Efficiency for Tool Planning\",\n        \"value\": {\n          \"Reference\": [\n            \"Zhao et al. (2023)\",\n            \"Hao et al. (2024)\",\n            \"Guu et al. (2020)\",\n            \"Qin et al. (2024)\",\n            \"Dorri et al. (2018)\",\n            \"Van der Hoek and Wooldridge (2008)\",\n            \"Patil et al. (2023)\",\n            \"Jiang et al. (2023)\",\n            \"Yao et al. (2022)\"\n          ],\n          \"Citation\": []\n        }\n      },\n      \"sources\": [\n        \"DOC3:DOC3_A1\",\n        \"DOC3:DOC3_A7\",\n        \"DOC3:DOC3_A3\",\n        \"DOC3:DOC3_A5\"\n      ]\n    }\n  ]\n}\n</relations>"
+}

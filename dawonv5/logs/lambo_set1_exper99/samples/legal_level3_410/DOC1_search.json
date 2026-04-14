@@ -1,0 +1,60 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "items": [
+    {
+      "fact": "本案为危险驾驶罪",
+      "entities": [
+        "张殿波",
+        "危险驾驶罪"
+      ],
+      "evidence_span": "你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车，原判认定你构成危险驾驶罪并无不当。",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "fact": "引用《中华人民共和国刑事诉讼法》",
+      "entities": [
+        "《中华人民共和国刑事诉讼法》"
+      ],
+      "evidence_span": "你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了决定该判决文书属于哪种案件类型，我需要查看文档内容来确定它是否涉及刑事、执行或行政案件。从锚点DOC1_A1的摘要来看，这个案件涉及到张殿波的危险驾驶案申诉，这显然是一个刑事案件。因此，我可以停止搜索并归类这个判决文书。",
+        "action": "stop",
+        "anchor_id": "DOC1_A1",
+        "need": "fallback: inspect next unopened anchor",
+        "reason": "已确定该判决文书为刑事案件",
+        "raw_text": "<think>\n为了决定该判决文书属于哪种案件类型，我需要查看文档内容来确定它是否涉及刑事、执行或行政案件。从锚点DOC1_A1的摘要来看，这个案件涉及到张殿波的危险驾驶案申诉，这显然是一个刑事案件。因此，我可以停止搜索并归类这个判决文书。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定该判决文书为刑事案件\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A1",
+      "info": {
+        "anchor_title": "张殿波危险驾驶案申诉",
+        "char_count": 851
+      },
+      "extract": {
+        "think": "我寻找了关于案件类型的描述，发现这是一个刑事案件，因为文中提到“危险驾驶罪”和引用了《中华人民共和国刑事诉讼法》。这些信息表明该案件属于刑事案件类别。",
+        "item_count": 2
+      }
+    }
+  ],
+  "tagged_trace": "<think>为了决定该判决文书属于哪种案件类型，我需要查看文档内容来确定它是否涉及刑事、执行或行政案件。从锚点DOC1_A1的摘要来看，这个案件涉及到张殿波的危险驾驶案申诉，这显然是一个刑事案件。因此，我可以停止搜索并归类这个判决文书。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A1\", \"need\": \"fallback: inspect next unopened anchor\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_title\": \"张殿波危险驾驶案申诉\"}</info>\n<think>我寻找了关于案件类型的描述，发现这是一个刑事案件，因为文中提到“危险驾驶罪”和引用了《中华人民共和国刑事诉讼法》。这些信息表明该案件属于刑事案件类别。</think>\n<extracted>{\"items\": [{\"fact\": \"本案为危险驾驶罪\", \"entities\": [\"张殿波\", \"危险驾驶罪\"], \"evidence_span\": \"你身为机动车驾驶人员，违反法律规定，醉酒后在道路上驾驶机动车，原判认定你构成危险驾驶罪并无不当。\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"fact\": \"引用《中华人民共和国刑事诉讼法》\", \"entities\": [\"《中华人民共和国刑事诉讼法》\"], \"evidence_span\": \"你的申诉不符合《中华人民共和国刑事诉讼法》第二百五十三条规定的再审条件，本院予以驳回。\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>"
+}

@@ -1,0 +1,102 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1 (TinyLlama): References Llama 2, FlashAttention, Hoffmann et al., Touvron et al., Thaddé, SlimPajama, Starcoderdata, Vaswani et al., RoPE, RMSNorm, SwiGLU, AdamW optimizer. - DOC2 (Lory): References Dai et al. (OpenMoE), LLaMA, SwiGLU, Shi et al., Izacard et al. - DOC3 (OpenMoE): References LLaMA tokenizer, TriviaQA, HumanEval, WMT16-En-Ro, BigBench-Lite, lm-evaluation-harness collection, 5-shot MMLU, TinyLLaMA-1.1B, OpenLLaMA-3B, GPT-3, Big-G, Big-G-Sparse. Stage 2 reasoning about structure and mapping: - The question asks for citation and reference relationships between the provided papers. - The structure should be a mapping with keys \"Reference\" and \"Citation\". - Each key should map to a list of titles of the referenced or citing papers. - Since the question does not provide a fixed set of candidate labels, we will use the titles of the provided papers as they appear in the facts.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "DOC1",
+        "DOC2",
+        "DOC3"
+      ],
+      "attributes": [
+        "Reference",
+        "Citation"
+      ],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC1",
+          "value": {
+            "Reference": [
+              "Llama 2",
+              "FlashAttention",
+              "Hoffmann et al.",
+              "Touvron et al.",
+              "Thaddé",
+              "SlimPajama",
+              "Starcoderdata",
+              "Vaswani et al.",
+              "RoPE",
+              "RMSNorm",
+              "SwiGLU",
+              "AdamW optimizer"
+            ],
+            "Citation": []
+          }
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC1:DOC1_A3",
+          "DOC1:DOC1_A4",
+          "DOC1:DOC1_A5",
+          "DOC1:DOC1_A7"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC2",
+          "value": {
+            "Reference": [
+              "Dai et al. (OpenMoE)",
+              "LLaMA",
+              "SwiGLU",
+              "Shi et al.",
+              "Izacard et al."
+            ],
+            "Citation": [
+              "DOC1"
+            ]
+          }
+        },
+        "sources": [
+          "DOC2:DOC2_A8",
+          "DOC2:DOC2_A5",
+          "DOC2:DOC2_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC3",
+          "value": {
+            "Reference": [
+              "LLaMA tokenizer",
+              "TriviaQA",
+              "HumanEval",
+              "WMT16-En-Ro",
+              "BigBench-Lite",
+              "lm-evaluation-harness collection",
+              "5-shot MMLU",
+              "TinyLLaMA-1.1B",
+              "OpenLLaMA-3B",
+              "GPT-3",
+              "Big-G",
+              "Big-G-Sparse"
+            ],
+            "Citation": [
+              "DOC2"
+            ]
+          }
+        },
+        "sources": [
+          "DOC3:DOC3_A3"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1 (TinyLlama): References Llama 2, FlashAttention, Hoffmann et al., Touvron et al., Thaddé, SlimPajama, Starcoderdata, Vaswani et al., RoPE, RMSNorm, SwiGLU, AdamW optimizer.\n  - DOC2 (Lory): References Dai et al. (OpenMoE), LLaMA, SwiGLU, Shi et al., Izacard et al.\n  - DOC3 (OpenMoE): References LLaMA tokenizer, TriviaQA, HumanEval, WMT16-En-Ro, BigBench-Lite, lm-evaluation-harness collection, 5-shot MMLU, TinyLLaMA-1.1B, OpenLLaMA-3B, GPT-3, Big-G, Big-G-Sparse.\n\n  Stage 2 reasoning about structure and mapping:\n  - The question asks for citation and reference relationships between the provided papers.\n  - The structure should be a mapping with keys \"Reference\" and \"Citation\".\n  - Each key should map to a list of titles of the referenced or citing papers.\n  - Since the question does not provide a fixed set of candidate labels, we will use the titles of the provided papers as they appear in the facts.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"DOC1\", \"DOC2\", \"DOC3\"],\n    \"attributes\": [\"Reference\", \"Citation\"],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC1\",\n        \"value\": {\n          \"Reference\": [\"Llama 2\", \"FlashAttention\", \"Hoffmann et al.\", \"Touvron et al.\", \"Thaddé\", \"SlimPajama\", \"Starcoderdata\", \"Vaswani et al.\", \"RoPE\", \"RMSNorm\", \"SwiGLU\", \"AdamW optimizer\"],\n          \"Citation\": []\n        }\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC1:DOC1_A3\", \"DOC1:DOC1_A4\", \"DOC1:DOC1_A5\", \"DOC1:DOC1_A7\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC2\",\n        \"value\": {\n          \"Reference\": [\"Dai et al. (OpenMoE)\", \"LLaMA\", \"SwiGLU\", \"Shi et al.\", \"Izacard et al.\"],\n          \"Citation\": [\"DOC1\"]\n        }\n      },\n      \"sources\": [\"DOC2:DOC2_A8\", \"DOC2:DOC2_A5\", \"DOC2:DOC2_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC3\",\n        \"value\": {\n          \"Reference\": [\"LLaMA tokenizer\", \"TriviaQA\", \"HumanEval\", \"WMT16-En-Ro\", \"BigBench-Lite\", \"lm-evaluation-harness collection\", \"5-shot MMLU\", \"TinyLLaMA-1.1B\", \"OpenLLaMA-3B\", \"GPT-3\", \"Big-G\", \"Big-G-Sparse\"],\n          \"Citation\": [\"DOC2\"]\n        }\n      },\n      \"sources\": [\"DOC3:DOC3_A3\"]\n    }\n  ]\n}\n</relations>"
+}

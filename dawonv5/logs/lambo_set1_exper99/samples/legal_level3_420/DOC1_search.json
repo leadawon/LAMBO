@@ -1,0 +1,105 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A2"
+  ],
+  "items": [
+    {
+      "fact": "本案为执行案件",
+      "entities": [
+        "执行裁定"
+      ],
+      "evidence_span": "不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定该判决文书属于哪种案件类型，我需要查看具体的案件背景和法院处理的内容。从文档摘要来看，该案件涉及执行异议和复议申请，因此可能是执行案件。我将首先打开“复议申请情况”锚点，以确认案件的具体类型。",
+        "action": "open",
+        "anchor_id": "DOC1_A2",
+        "need": "确认案件类型",
+        "reason": "该锚点描述了复议申请的情况，有助于判断案件是否为执行案件",
+        "raw_text": "<think>\n为了确定该判决文书属于哪种案件类型，我需要查看具体的案件背景和法院处理的内容。从文档摘要来看，该案件涉及执行异议和复议申请，因此可能是执行案件。我将首先打开“复议申请情况”锚点，以确认案件的具体类型。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A2\",\"need\":\"确认案件类型\",\"reason\":\"该锚点描述了复议申请的情况，有助于判断案件是否为执行案件\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A2",
+      "info": {
+        "anchor_title": "复议申请情况",
+        "char_count": 116
+      },
+      "extract": {
+        "think": "我在寻找能够确定案件类型的句子或短语。从提供的文本中，我找到了“执行裁定”这一关键信息，表明这是一个执行案件。因此，记录该事实有助于后续判断此判决文书属于执行案件类别。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "已知该判决文书属于执行案件。现在需要确定该判决文书是否还涉及其他类型的案件，如行政案件、民事案件、赔偿案件或刑事案件。从现有的锚点摘要来看，DOC1_A1 提供了当事人信息，可能有助于确认案件类型；DOC1_A3 提供了执行异议详情，进一步支持了执行案件的性质；DOC1_A4 提供了法院查明的事实，也可能包含案件类型的信息；DOC1_A5 提供了法院裁决的理由，其中引用了法律条款，可能有助于判断案件类型；DOC1_A6 提供了最终裁定，也有可能包含案件类型的信息。但是，这些锚点似乎主要集中在执行案件上，不太可能涉及其他类型的案件。因此，我将停止搜索，因为已经确定了该判决文书的类型。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定该判决文书属于执行案件，无需进一步打开其他锚点",
+        "raw_text": "<think>\n已知该判决文书属于执行案件。现在需要确定该判决文书是否还涉及其他类型的案件，如行政案件、民事案件、赔偿案件或刑事案件。从现有的锚点摘要来看，DOC1_A1 提供了当事人信息，可能有助于确认案件类型；DOC1_A3 提供了执行异议详情，进一步支持了执行案件的性质；DOC1_A4 提供了法院查明的事实，也可能包含案件类型的信息；DOC1_A5 提供了法院裁决的理由，其中引用了法律条款，可能有助于判断案件类型；DOC1_A6 提供了最终裁定，也有可能包含案件类型的信息。但是，这些锚点似乎主要集中在执行案件上，不太可能涉及其他类型的案件。因此，我将停止搜索，因为已经确定了该判决文书的类型。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定该判决文书属于执行案件，无需进一步打开其他锚点\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A6",
+          "DOC1_A5",
+          "DOC1_A4",
+          "DOC1_A3",
+          "DOC1_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定该判决文书属于哪种案件类型，我需要查看具体的案件背景和法院处理的内容。从文档摘要来看，该案件涉及执行异议和复议申请，因此可能是执行案件。我将首先打开“复议申请情况”锚点，以确认案件的具体类型。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A2\", \"need\": \"确认案件类型\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_title\": \"复议申请情况\"}</info>\n<think>我在寻找能够确定案件类型的句子或短语。从提供的文本中，我找到了“执行裁定”这一关键信息，表明这是一个执行案件。因此，记录该事实有助于后续判断此判决文书属于执行案件类别。</think>\n<extracted>{\"items\": [{\"fact\": \"本案为执行案件\", \"entities\": [\"执行裁定\"], \"evidence_span\": \"不服大连海事法院于2023年11月28日作出的（2023）辽72执异108号执行裁定\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>已知该判决文书属于执行案件。现在需要确定该判决文书是否还涉及其他类型的案件，如行政案件、民事案件、赔偿案件或刑事案件。从现有的锚点摘要来看，DOC1_A1 提供了当事人信息，可能有助于确认案件类型；DOC1_A3 提供了执行异议详情，进一步支持了执行案件的性质；DOC1_A4 提供了法院查明的事实，也可能包含案件类型的信息；DOC1_A5 提供了法院裁决的理由，其中引用了法律条款，可能有助于判断案件类型；DOC1_A6 提供了最终裁定，也有可能包含案件类型的信息。但是，这些锚点似乎主要集中在执行案件上，不太可能涉及其他类型的案件。因此，我将停止搜索，因为已经确定了该判决文书的类型。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定该判决文书属于执行案件，无需进一步打开其他锚点\"}</search>"
+}

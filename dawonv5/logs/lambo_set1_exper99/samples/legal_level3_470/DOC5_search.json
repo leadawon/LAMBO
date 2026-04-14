@@ -1,0 +1,158 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "opened_anchor_ids": [
+    "DOC5_A2",
+    "DOC5_A1",
+    "DOC5_A3"
+  ],
+  "items": [
+    {
+      "fact": "本案为不动产登记纠纷",
+      "entities": [
+        "不动产登记纠纷"
+      ],
+      "evidence_span": "上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案",
+      "relevance": "案由分类",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A6",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定《判决文书5》属于哪种案由，我需要查看具体的案件背景和争议焦点。从文档地图中可以看到，DOC5_A2锚点包含了案件背景的信息，其中提到了“不动产登记纠纷”，这可能直接指向了该判决文书的案由。因此，我应该首先打开这个锚点来获取更多关于案件性质的信息。",
+        "action": "open",
+        "anchor_id": "DOC5_A2",
+        "need": "案件背景及具体案由",
+        "reason": "通过案件背景可以明确该判决文书属于哪种案由",
+        "raw_text": "<think>\n为了确定《判决文书5》属于哪种案由，我需要查看具体的案件背景和争议焦点。从文档地图中可以看到，DOC5_A2锚点包含了案件背景的信息，其中提到了“不动产登记纠纷”，这可能直接指向了该判决文书的案由。因此，我应该首先打开这个锚点来获取更多关于案件性质的信息。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC5_A2\",\"need\":\"案件背景及具体案由\",\"reason\":\"通过案件背景可以明确该判决文书属于哪种案由\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC5_A2",
+      "info": {
+        "anchor_title": "案件背景",
+        "char_count": 215
+      },
+      "extract": {
+        "think": "我在寻找具体的案由信息。从这段文本中，我找到了“不动产登记纠纷”这一案由，这是分类判决文书的关键特征。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经知道这是一个不动产登记纠纷案件。为了完成分类任务，我们需要进一步确认该判决文书是否涉及其他案由，如行政行为-行政强制、行政行为-行政给付、产品责任纠纷和执行案由-行政。接下来应该查看更多锚点来获取这些信息。",
+        "action": "open",
+        "anchor_id": "DOC5_A1",
+        "need": "确认是否有其他案由",
+        "reason": "需要了解案件是否涉及其他类型的纠纷",
+        "raw_text": "<think>\n目前我们已经知道这是一个不动产登记纠纷案件。为了完成分类任务，我们需要进一步确认该判决文书是否涉及其他案由，如行政行为-行政强制、行政行为-行政给付、产品责任纠纷和执行案由-行政。接下来应该查看更多锚点来获取这些信息。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC5_A1\",\"need\":\"确认是否有其他案由\",\"reason\":\"需要了解案件是否涉及其他类型的纠纷\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC5_A6",
+          "DOC5_A5",
+          "DOC5_A4",
+          "DOC5_A3",
+          "DOC5_A1"
+        ]
+      },
+      "anchor_id": "DOC5_A1",
+      "info": {
+        "anchor_title": "当事人信息",
+        "char_count": 218
+      },
+      "extract": {
+        "think": "在这段当事人信息中，没有发现与案件类型相关的具体信息。因此，这段文本对于决定案件的分类没有提供新的有用特征或证据。",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "已经确定了这是一个不动产登记纠纷案件。接下来需要查看其他部分以确认是否涉及其他类型的纠纷或行政行为。特别是需要检查上诉请求、一审诉求、一审认定事实和二审意见部分，看是否有提到行政行为-行政强制、行政行为-行政给付、产品责任纠纷或执行案由-行政的内容。",
+        "action": "open",
+        "anchor_id": "DOC5_A3",
+        "need": "确认是否涉及行政行为-行政强制或其他类型纠纷",
+        "reason": "上诉请求部分可能包含有关行政行为的信息",
+        "raw_text": "<think>\n已经确定了这是一个不动产登记纠纷案件。接下来需要查看其他部分以确认是否涉及其他类型的纠纷或行政行为。特别是需要检查上诉请求、一审诉求、一审认定事实和二审意见部分，看是否有提到行政行为-行政强制、行政行为-行政给付、产品责任纠纷或执行案由-行政的内容。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC5_A3\",\"need\":\"确认是否涉及行政行为-行政强制或其他类型纠纷\",\"reason\":\"上诉请求部分可能包含有关行政行为的信息\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC5_A6",
+          "DOC5_A5",
+          "DOC5_A4",
+          "DOC5_A3"
+        ]
+      },
+      "anchor_id": "DOC5_A3",
+      "info": {
+        "anchor_title": "上诉请求",
+        "char_count": 1412
+      },
+      "extract": {
+        "think": "在上诉请求部分，主要讨论了某某农资公司与某某房产公司之间的商品房买卖合同纠纷，以及因未能办理不动产权证书而产生的违约金争议。这些内容进一步确认了本案属于不动产登记纠纷，但没有提到其他类型的纠纷或行政行为。因此，不需要添加新的证据项。",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 4,
+      "plan": {
+        "think": "已经确定了《判决文书5》属于“不动产登记纠纷”。现在需要检查其他可能相关的案由，但是从现有的锚点摘要和关键实体来看，没有提到其他四种案由（行政行为-行政强制、行政行为-行政给付、产品责任纠纷、执行案由-行政）。因此，不需要再打开其他锚点来寻找这些信息。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定该判决文书属于'不动产登记纠纷'，其余案由未在现有锚点中提及",
+        "raw_text": "<think>\n已经确定了《判决文书5》属于“不动产登记纠纷”。现在需要检查其他可能相关的案由，但是从现有的锚点摘要和关键实体来看，没有提到其他四种案由（行政行为-行政强制、行政行为-行政给付、产品责任纠纷、执行案由-行政）。因此，不需要再打开其他锚点来寻找这些信息。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定该判决文书属于'不动产登记纠纷'，其余案由未在现有锚点中提及\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC5_A6",
+          "DOC5_A5",
+          "DOC5_A4"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定《判决文书5》属于哪种案由，我需要查看具体的案件背景和争议焦点。从文档地图中可以看到，DOC5_A2锚点包含了案件背景的信息，其中提到了“不动产登记纠纷”，这可能直接指向了该判决文书的案由。因此，我应该首先打开这个锚点来获取更多关于案件性质的信息。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC5_A2\", \"need\": \"案件背景及具体案由\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_title\": \"案件背景\"}</info>\n<think>我在寻找具体的案由信息。从这段文本中，我找到了“不动产登记纠纷”这一案由，这是分类判决文书的关键特征。</think>\n<extracted>{\"items\": [{\"fact\": \"本案为不动产登记纠纷\", \"entities\": [\"不动产登记纠纷\"], \"evidence_span\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案\", \"relevance\": \"案由分类\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道这是一个不动产登记纠纷案件。为了完成分类任务，我们需要进一步确认该判决文书是否涉及其他案由，如行政行为-行政强制、行政行为-行政给付、产品责任纠纷和执行案由-行政。接下来应该查看更多锚点来获取这些信息。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC5_A1\", \"need\": \"确认是否有其他案由\", \"relation_frontier_ids\": [\"DOC5_A6\", \"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\", \"DOC5_A1\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A1\", \"anchor_title\": \"当事人信息\"}</info>\n<think>在这段当事人信息中，没有发现与案件类型相关的具体信息。因此，这段文本对于决定案件的分类没有提供新的有用特征或证据。</think>\n<extracted>{\"items\": []}</extracted>\n<think>已经确定了这是一个不动产登记纠纷案件。接下来需要查看其他部分以确认是否涉及其他类型的纠纷或行政行为。特别是需要检查上诉请求、一审诉求、一审认定事实和二审意见部分，看是否有提到行政行为-行政强制、行政行为-行政给付、产品责任纠纷或执行案由-行政的内容。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC5_A3\", \"need\": \"确认是否涉及行政行为-行政强制或其他类型纠纷\", \"relation_frontier_ids\": [\"DOC5_A6\", \"DOC5_A5\", \"DOC5_A4\", \"DOC5_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A3\", \"anchor_title\": \"上诉请求\"}</info>\n<think>在上诉请求部分，主要讨论了某某农资公司与某某房产公司之间的商品房买卖合同纠纷，以及因未能办理不动产权证书而产生的违约金争议。这些内容进一步确认了本案属于不动产登记纠纷，但没有提到其他类型的纠纷或行政行为。因此，不需要添加新的证据项。</think>\n<extracted>{\"items\": []}</extracted>\n<think>已经确定了《判决文书5》属于“不动产登记纠纷”。现在需要检查其他可能相关的案由，但是从现有的锚点摘要和关键实体来看，没有提到其他四种案由（行政行为-行政强制、行政行为-行政给付、产品责任纠纷、执行案由-行政）。因此，不需要再打开其他锚点来寻找这些信息。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定该判决文书属于'不动产登记纠纷'，其余案由未在现有锚点中提及\"}</search>"
+}

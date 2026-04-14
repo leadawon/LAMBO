@@ -1,0 +1,103 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及复议申请人杨某不服四川省成都市中级人民法院的执行裁定并向本院申请复议，属于“执行案由-对下级法院执行异议裁定的复议”。 - DOC2: 涉及不动产登记纠纷，明确标注为“不动产登记纠纷”。 - DOC3: 涉及拆迁裁决不予受理决定，属于“行政行为-行政受理”。 - DOC4: 涉及不动产登记纠纷，明确标注为“不动产登记纠纷”。 - DOC5: 涉及不动产登记纠纷，明确标注为“不动产登记纠纷”。 - DOC6: 涉及侵害实用新型专利权纠纷，属于“知识产权与竞争”。 - DOC7: 涉及行政复议申请决定，属于“行政行为-行政受理”。 - DOC8: 涉及产品责任纠纷，明确标注为“产品责任纠纷”。 Stage 2 structure selection and mapping: - 结构选择：根据问题要求，需要将每个判决文书按指定的案由分类，因此结构应为“mapping”，其中键为案由，值为该案由下的判决文书列表。 - 映射：将每个文档映射到对应的案由类别。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书1",
+        "判决文书2",
+        "判决文书3",
+        "判决文书4",
+        "判决文书5",
+        "判决文书6",
+        "判决文书7",
+        "判决文书8"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "属于"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-对下级法院执行异议裁定的复议",
+          "value": [
+            "《判决文书1》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A1",
+          "DOC1:DOC1_A3",
+          "DOC1:DOC1_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "产品责任纠纷",
+          "value": [
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC8:DOC8_A1",
+          "DOC8:DOC8_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政受理",
+          "value": [
+            "《判决文书3》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A1",
+          "DOC7:DOC7_A2",
+          "DOC7:DOC7_A3",
+          "DOC7:DOC7_A4",
+          "DOC7:DOC7_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "知识产权与竞争",
+          "value": [
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC6:DOC6_A2",
+          "DOC6:DOC6_A3",
+          "DOC6:DOC6_A5",
+          "DOC6:DOC6_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "不动产登记纠纷",
+          "value": [
+            "《判决文书2》",
+            "《判决文书4》",
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC4:DOC4_A2",
+          "DOC4:DOC4_A5",
+          "DOC5:DOC5_A2"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及复议申请人杨某不服四川省成都市中级人民法院的执行裁定并向本院申请复议，属于“执行案由-对下级法院执行异议裁定的复议”。\n  - DOC2: 涉及不动产登记纠纷，明确标注为“不动产登记纠纷”。\n  - DOC3: 涉及拆迁裁决不予受理决定，属于“行政行为-行政受理”。\n  - DOC4: 涉及不动产登记纠纷，明确标注为“不动产登记纠纷”。\n  - DOC5: 涉及不动产登记纠纷，明确标注为“不动产登记纠纷”。\n  - DOC6: 涉及侵害实用新型专利权纠纷，属于“知识产权与竞争”。\n  - DOC7: 涉及行政复议申请决定，属于“行政行为-行政受理”。\n  - DOC8: 涉及产品责任纠纷，明确标注为“产品责任纠纷”。\n\n  Stage 2 structure selection and mapping:\n  - 结构选择：根据问题要求，需要将每个判决文书按指定的案由分类，因此结构应为“mapping”，其中键为案由，值为该案由下的判决文书列表。\n  - 映射：将每个文档映射到对应的案由类别。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书1\", \"判决文书2\", \"判决文书3\", \"判决文书4\", \"判决文书5\", \"判决文书6\", \"判决文书7\", \"判决文书8\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"属于\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-对下级法院执行异议裁定的复议\",\n        \"value\": [\"《判决文书1》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A1\", \"DOC1:DOC1_A3\", \"DOC1:DOC1_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"产品责任纠纷\",\n        \"value\": [\"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC8:DOC8_A1\", \"DOC8:DOC8_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政受理\",\n        \"value\": [\"《判决文书3》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A1\", \"DOC7:DOC7_A2\", \"DOC7:DOC7_A3\", \"DOC7:DOC7_A4\", \"DOC7:DOC7_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"知识产权与竞争\",\n        \"value\": [\"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC6:DOC6_A2\", \"DOC6:DOC6_A3\", \"DOC6:DOC6_A5\", \"DOC6:DOC6_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"不动产登记纠纷\",\n        \"value\": [\"《判决文书2》\", \"《判决文书4》\", \"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC4:DOC4_A2\", \"DOC4:DOC4_A5\", \"DOC5:DOC5_A2\"]\n    }\n  ]\n}\n</relations>"
+}

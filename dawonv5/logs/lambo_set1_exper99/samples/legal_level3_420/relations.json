@@ -1,0 +1,84 @@
+{
+  "think": "Stage 1 — feature sheet: - DOC1: 《判决文书1》: 执行案件 - DOC2: 《判决文书2》: 民事案件 - DOC3: 《判决文书3》: 相邻关系纠纷案件 - DOC4: 《判决文书4》: 行政案件 - DOC5: 《判决文书5》: 涉及执行案件、赔偿案件、多个民事案件 - DOC6: 《判决文书6》: 刑事案件 - DOC7: 《判决文书7》: 继承纠纷案件 Stage 2 — structure selection and mapping: - The question asks us to classify the documents into five specific categories: 行政案件, 民事案件, 执行案件, 赔偿案件, 刑事案件. - We need to map the features we collected to these categories. - The structure should be a \"mapping\" where the keys are the categories and the values are lists of document titles. Mapping: - 行政案件: ['《判决文书4》'] - 民事案件: ['《判决文书2》', '《判决文书7》'] - 执行案件: ['《判决文书1》', '《判决文书5》'] - 赔偿案件: ['《判决文书5》'] - 刑事案件: ['《判决文书6》']",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "行政案件",
+        "民事案件",
+        "执行案件",
+        "赔偿案件",
+        "刑事案件"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政案件",
+          "value": [
+            "《判决文书4》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "民事案件",
+          "value": [
+            "《判决文书2》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC7:DOC7_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案件",
+          "value": [
+            "《判决文书1》",
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC5:DOC5_A1"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "赔偿案件",
+          "value": [
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A10"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事案件",
+          "value": [
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC6:DOC6_A1"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 — feature sheet:\n  - DOC1: 《判决文书1》: 执行案件\n  - DOC2: 《判决文书2》: 民事案件\n  - DOC3: 《判决文书3》: 相邻关系纠纷案件\n  - DOC4: 《判决文书4》: 行政案件\n  - DOC5: 《判决文书5》: 涉及执行案件、赔偿案件、多个民事案件\n  - DOC6: 《判决文书6》: 刑事案件\n  - DOC7: 《判决文书7》: 继承纠纷案件\n\n  Stage 2 — structure selection and mapping:\n  - The question asks us to classify the documents into five specific categories: 行政案件, 民事案件, 执行案件, 赔偿案件, 刑事案件.\n  - We need to map the features we collected to these categories.\n  - The structure should be a \"mapping\" where the keys are the categories and the values are lists of document titles.\n\n  Mapping:\n  - 行政案件: ['《判决文书4》']\n  - 民事案件: ['《判决文书2》', '《判决文书7》']\n  - 执行案件: ['《判决文书1》', '《判决文书5》']\n  - 赔偿案件: ['《判决文书5》']\n  - 刑事案件: ['《判决文书6》']\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"行政案件\", \"民事案件\", \"执行案件\", \"赔偿案件\", \"刑事案件\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政案件\",\n        \"value\": [\"《判决文书4》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"民事案件\",\n        \"value\": [\"《判决文书2》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC7:DOC7_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案件\",\n        \"value\": [\"《判决文书1》\", \"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC5:DOC5_A1\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"赔偿案件\",\n        \"value\": [\"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A10\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事案件\",\n        \"value\": [\"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC6:DOC6_A1\"]\n    }\n  ]\n}\n</relations>"
+}

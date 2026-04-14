@@ -1,0 +1,60 @@
+{
+  "think": "Stage 1 — feature sheet: - DOC1: 涉及危险驾驶罪，引用《中华人民共和国刑事诉讼法》，属于刑事案件。 - DOC2: 涉及行政拘留及罚款，明确指出是行政案件。 - DOC3: 涉及执行裁定，明确指出是执行案件。 - DOC4: 涉及行政处罚，明确指出是行政诉讼案件。 - DOC5: 涉及刑事判决，明确指出是刑事案件。 - DOC6: 涉及执行刑事判决中的财产部分，明确指出是执行案件。 Stage 2 — structure selection and mapping: - 结构选择：根据问题要求，需要将判决文书按照'刑事案件' '执行案件' '行政案件'三种类型进行分类，因此结构应该选择\"mapping\"。 - 映射：将每个文档映射到对应的案件类型中。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "刑事案件",
+        "执行案件",
+        "行政案件"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事案件",
+          "value": [
+            "《判决文书1》",
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A1",
+          "DOC5:DOC5_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案件",
+          "value": [
+            "《判决文书3》",
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A2",
+          "DOC6:DOC6_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政案件",
+          "value": [
+            "《判决文书2》",
+            "《判决文书4》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A5",
+          "DOC4:DOC4_A3"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 — feature sheet:\n  - DOC1: 涉及危险驾驶罪，引用《中华人民共和国刑事诉讼法》，属于刑事案件。\n  - DOC2: 涉及行政拘留及罚款，明确指出是行政案件。\n  - DOC3: 涉及执行裁定，明确指出是执行案件。\n  - DOC4: 涉及行政处罚，明确指出是行政诉讼案件。\n  - DOC5: 涉及刑事判决，明确指出是刑事案件。\n  - DOC6: 涉及执行刑事判决中的财产部分，明确指出是执行案件。\n\n  Stage 2 — structure selection and mapping:\n  - 结构选择：根据问题要求，需要将判决文书按照'刑事案件' '执行案件' '行政案件'三种类型进行分类，因此结构应该选择\"mapping\"。\n  - 映射：将每个文档映射到对应的案件类型中。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"刑事案件\", \"执行案件\", \"行政案件\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事案件\",\n        \"value\": [\"《判决文书1》\", \"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A1\", \"DOC5:DOC5_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案件\",\n        \"value\": [\"《判决文书3》\", \"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A2\", \"DOC6:DOC6_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政案件\",\n        \"value\": [\"《判决文书2》\", \"《判决文书4》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A5\", \"DOC4:DOC4_A3\"]\n    }\n  ]\n}\n</relations>"
+}

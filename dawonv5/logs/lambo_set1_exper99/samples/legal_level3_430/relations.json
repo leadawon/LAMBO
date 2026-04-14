@@ -1,0 +1,63 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1 (《判决文书1》): 涉及执行裁定和执行复议 - DOC2 (《判决文书2》): 涉及行政案件 - DOC3 (《判决文书3》): 涉及执行案件 - DOC4 (《判决文书4》): 涉及执行案件 - DOC5 (《判决文书5》): 涉及刑事案件 - DOC6 (《判决文书6》): 涉及刑事案件 Stage 2 structure selection and mapping: - The question asks to classify the documents into three categories: 行政案件, 执行案件, 刑事案件. - We will use a \"mapping\" structure where the keys are the case types and the values are lists of document titles.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "行政案件",
+        "执行案件",
+        "刑事案件"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政案件",
+          "value": [
+            "《判决文书2》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案件",
+          "value": [
+            "《判决文书1》",
+            "《判决文书3》",
+            "《判决文书4》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC1:DOC1_A4",
+          "DOC1:DOC1_A9",
+          "DOC1:DOC1_A5",
+          "DOC3:DOC3_A2",
+          "DOC4:DOC4_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事案件",
+          "value": [
+            "《判决文书5》",
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A1",
+          "DOC6:DOC6_A1"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1 (《判决文书1》): 涉及执行裁定和执行复议\n  - DOC2 (《判决文书2》): 涉及行政案件\n  - DOC3 (《判决文书3》): 涉及执行案件\n  - DOC4 (《判决文书4》): 涉及执行案件\n  - DOC5 (《判决文书5》): 涉及刑事案件\n  - DOC6 (《判决文书6》): 涉及刑事案件\n\n  Stage 2 structure selection and mapping:\n  - The question asks to classify the documents into three categories: 行政案件, 执行案件, 刑事案件.\n  - We will use a \"mapping\" structure where the keys are the case types and the values are lists of document titles.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"行政案件\", \"执行案件\", \"刑事案件\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政案件\",\n        \"value\": [\"《判决文书2》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案件\",\n        \"value\": [\"《判决文书1》\", \"《判决文书3》\", \"《判决文书4》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC1:DOC1_A4\", \"DOC1:DOC1_A9\", \"DOC1:DOC1_A5\", \"DOC3:DOC3_A2\", \"DOC4:DOC4_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事案件\",\n        \"value\": [\"《判决文书5》\", \"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A1\", \"DOC6:DOC6_A1\"]\n    }\n  ]\n}\n</relations>"
+}

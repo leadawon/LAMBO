@@ -1,0 +1,105 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A4"
+  ],
+  "items": [
+    {
+      "fact": "案件涉及农民工工资支付问题",
+      "entities": [
+        "农民工工资支付",
+        "劳动和社会保障行政管理"
+      ],
+      "evidence_span": "《保障农民工工资支付条例》第三十条规定，分包单位对所招用农民工的实名制管理和工资支付负直接责任。",
+      "relevance": "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A4",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence,background_context",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了对判决文书进行分类，我需要了解该判决文书涉及的具体案由。从文档摘要来看，该案件涉及到石家庄某某集团有限公司与唐山市路南区人力资源和社会保障局之间的争议，因此可能属于“行政主体-劳动和社会保障行政管理（劳动，社会保障）”类别。接下来，我将打开一个锚点来确认这一点。",
+        "action": "open",
+        "anchor_id": "DOC1_A4",
+        "need": "确认案件具体案由",
+        "reason": "通过查看法院审查意见，可以确定案件是否属于'行政主体-劳动和社会保障行政管理（劳动，社会保障）'",
+        "raw_text": "<think>\n为了对判决文书进行分类，我需要了解该判决文书涉及的具体案由。从文档摘要来看，该案件涉及到石家庄某某集团有限公司与唐山市路南区人力资源和社会保障局之间的争议，因此可能属于“行政主体-劳动和社会保障行政管理（劳动，社会保障）”类别。接下来，我将打开一个锚点来确认这一点。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A4\",\"need\":\"确认案件具体案由\",\"reason\":\"通过查看法院审查意见，可以确定案件是否属于'行政主体-劳动和社会保障行政管理（劳动，社会保障）'\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A4",
+      "info": {
+        "anchor_title": "法院审查意见",
+        "char_count": 407
+      },
+      "extract": {
+        "think": "我在寻找能够确定案件具体案由的信息。从这段文本来看，案件涉及的是关于农民工工资支付的问题，涉及到《保障农民工工资支付条例》，并且提到了施工总承包单位和分包单位之间的责任关系。这些信息表明这是一个与劳动和社会保障相关的行政管理案件。因此，我记录了这个关键点作为证据。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "从已有的证据来看，这个案件涉及到劳动和社会保障行政管理中的农民工工资支付问题。因此，这个判决文书应该归类为“行政主体-劳动和社会保障行政管理（劳动，社会保障）”。接下来需要确认是否还有其他相关信息可以帮助进一步确定分类，但目前看来已经足够明确。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已有足够的信息将该判决文书归类为'行政主体-劳动和社会保障行政管理（劳动，社会保障）'",
+        "raw_text": "<think>\n从已有的证据来看，这个案件涉及到劳动和社会保障行政管理中的农民工工资支付问题。因此，这个判决文书应该归类为“行政主体-劳动和社会保障行政管理（劳动，社会保障）”。接下来需要确认是否还有其他相关信息可以帮助进一步确定分类，但目前看来已经足够明确。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已有足够的信息将该判决文书归类为'行政主体-劳动和社会保障行政管理（劳动，社会保障）'\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A5",
+          "DOC1_A3",
+          "DOC1_A2",
+          "DOC1_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了对判决文书进行分类，我需要了解该判决文书涉及的具体案由。从文档摘要来看，该案件涉及到石家庄某某集团有限公司与唐山市路南区人力资源和社会保障局之间的争议，因此可能属于“行政主体-劳动和社会保障行政管理（劳动，社会保障）”类别。接下来，我将打开一个锚点来确认这一点。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A4\", \"need\": \"确认案件具体案由\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A4\", \"anchor_title\": \"法院审查意见\"}</info>\n<think>我在寻找能够确定案件具体案由的信息。从这段文本来看，案件涉及的是关于农民工工资支付的问题，涉及到《保障农民工工资支付条例》，并且提到了施工总承包单位和分包单位之间的责任关系。这些信息表明这是一个与劳动和社会保障相关的行政管理案件。因此，我记录了这个关键点作为证据。</think>\n<extracted>{\"items\": [{\"fact\": \"案件涉及农民工工资支付问题\", \"entities\": [\"农民工工资支付\", \"劳动和社会保障行政管理\"], \"evidence_span\": \"《保障农民工工资支付条例》第三十条规定，分包单位对所招用农民工的实名制管理和工资支付负直接责任。\", \"relevance\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A4\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence,background_context\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>从已有的证据来看，这个案件涉及到劳动和社会保障行政管理中的农民工工资支付问题。因此，这个判决文书应该归类为“行政主体-劳动和社会保障行政管理（劳动，社会保障）”。接下来需要确认是否还有其他相关信息可以帮助进一步确定分类，但目前看来已经足够明确。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已有足够的信息将该判决文书归类为'行政主体-劳动和社会保障行政管理（劳动，社会保障）'\"}</search>"
+}

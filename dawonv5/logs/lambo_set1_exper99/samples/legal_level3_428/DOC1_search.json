@@ -1,0 +1,108 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A2"
+  ],
+  "items": [
+    {
+      "fact": "本案为行政案件",
+      "entities": [
+        "封某",
+        "巴音郭楞蒙古自治州人力资源和社会保障局",
+        "和静县某建筑安装有限公司"
+      ],
+      "evidence_span": "不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院作出的（2023）新28行终46号行政判决",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A7",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定该判决文书属于哪种类型的案件，需要查看案件的具体背景和法院的观点。从文档地图来看，DOC1_A2提供了案件背景，提到这是关于工伤保险资格认定的案件，并且提到了行政判决，这表明这是一个行政案件。接下来，我将打开DOC1_A2来确认这一点。",
+        "action": "open",
+        "anchor_id": "DOC1_A2",
+        "need": "确认案件类型",
+        "reason": "通过案件背景了解案件性质",
+        "raw_text": "<think>\n为了确定该判决文书属于哪种类型的案件，需要查看案件的具体背景和法院的观点。从文档地图来看，DOC1_A2提供了案件背景，提到这是关于工伤保险资格认定的案件，并且提到了行政判决，这表明这是一个行政案件。接下来，我将打开DOC1_A2来确认这一点。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A2\",\"need\":\"确认案件类型\",\"reason\":\"通过案件背景了解案件性质\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A2",
+      "info": {
+        "anchor_title": "案件背景",
+        "char_count": 158
+      },
+      "extract": {
+        "think": "我在寻找能够确定案件类型的句子。从提供的文本中，可以明确看出这是一个行政案件，因为提到了“行政判决”和涉及工伤保险资格认定的行政机关。这些信息对于分类案件类型非常有用。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "已知该判决文书为行政案件。现在需要确定该判决文书的标题，并将其归类到'行政案件'类别中。无需进一步打开其他锚点，因为已经确定了案件类型和标题。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定该判决文书为行政案件，无需进一步打开其他锚点",
+        "raw_text": "<think>\n已知该判决文书为行政案件。现在需要确定该判决文书的标题，并将其归类到'行政案件'类别中。无需进一步打开其他锚点，因为已经确定了案件类型和标题。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定该判决文书为行政案件，无需进一步打开其他锚点\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A7",
+          "DOC1_A6",
+          "DOC1_A5",
+          "DOC1_A4",
+          "DOC1_A3",
+          "DOC1_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定该判决文书属于哪种类型的案件，需要查看案件的具体背景和法院的观点。从文档地图来看，DOC1_A2提供了案件背景，提到这是关于工伤保险资格认定的案件，并且提到了行政判决，这表明这是一个行政案件。接下来，我将打开DOC1_A2来确认这一点。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A2\", \"need\": \"确认案件类型\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_title\": \"案件背景\"}</info>\n<think>我在寻找能够确定案件类型的句子。从提供的文本中，可以明确看出这是一个行政案件，因为提到了“行政判决”和涉及工伤保险资格认定的行政机关。这些信息对于分类案件类型非常有用。</think>\n<extracted>{\"items\": [{\"fact\": \"本案为行政案件\", \"entities\": [\"封某\", \"巴音郭楞蒙古自治州人力资源和社会保障局\", \"和静县某建筑安装有限公司\"], \"evidence_span\": \"不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院作出的（2023）新28行终46号行政判决\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A7\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>已知该判决文书为行政案件。现在需要确定该判决文书的标题，并将其归类到'行政案件'类别中。无需进一步打开其他锚点，因为已经确定了案件类型和标题。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定该判决文书为行政案件，无需进一步打开其他锚点\"}</search>"
+}

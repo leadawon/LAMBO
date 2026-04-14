@@ -1,0 +1,116 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 行政行为-行政裁决 - DOC2: 刑事赔偿 - DOC3: 行政行为-行政登记 - DOC4: 执行案由-对下级法院执行异议裁定的复议 - DOC5: 执行案由-其他案由 - DOC6: 执行案由-对下级法院执行异议裁定的复议 - DOC7: 行政行为-行政裁决 - DOC8: 与公司，证券，保险，票据等有关的民事纠纷 - DOC9: 执行案由-对下级法院执行异议裁定的复议 - DOC10: 执行案由-先予执行 - DOC11: 与公司，证券，保险，票据等有关的民事纠纷 - DOC12: 执行案由-对下级法院执行异议裁定的复议 - DOC13: 行政行为-行政登记 Stage 2 reasoning about structure and mapping: - The question asks for a classification of the documents based on a fixed set of case types. - We will use the \"mapping\" structure, where the keys are the case types and the values are lists of document titles. - Each document title will be placed under the appropriate case type based on the features collected.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "分类"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政登记",
+          "value": [
+            "《判决文书3》",
+            "《判决文书13》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A2",
+          "DOC13:DOC13_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "与公司，证券，保险，票据等有关的民事纠纷",
+          "value": [
+            "《判决文书8》",
+            "《判决文书11》"
+          ]
+        },
+        "sources": [
+          "DOC8:DOC8_A2",
+          "DOC11:DOC11_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-先予执行",
+          "value": [
+            "《判决文书10》"
+          ]
+        },
+        "sources": [
+          "DOC10:DOC10_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-对下级法院执行异议裁定的复议",
+          "value": [
+            "《判决文书4》",
+            "《判决文书6》",
+            "《判决文书9》",
+            "《判决文书12》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A2",
+          "DOC6:DOC6_A2",
+          "DOC9:DOC9_A2",
+          "DOC12:DOC12_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政裁决",
+          "value": [
+            "《判决文书1》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A4",
+          "DOC7:DOC7_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事赔偿",
+          "value": [
+            "《判决文书2》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-其他案由",
+          "value": [
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A2"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 行政行为-行政裁决\n  - DOC2: 刑事赔偿\n  - DOC3: 行政行为-行政登记\n  - DOC4: 执行案由-对下级法院执行异议裁定的复议\n  - DOC5: 执行案由-其他案由\n  - DOC6: 执行案由-对下级法院执行异议裁定的复议\n  - DOC7: 行政行为-行政裁决\n  - DOC8: 与公司，证券，保险，票据等有关的民事纠纷\n  - DOC9: 执行案由-对下级法院执行异议裁定的复议\n  - DOC10: 执行案由-先予执行\n  - DOC11: 与公司，证券，保险，票据等有关的民事纠纷\n  - DOC12: 执行案由-对下级法院执行异议裁定的复议\n  - DOC13: 行政行为-行政登记\n\n  Stage 2 reasoning about structure and mapping:\n  - The question asks for a classification of the documents based on a fixed set of case types.\n  - We will use the \"mapping\" structure, where the keys are the case types and the values are lists of document titles.\n  - Each document title will be placed under the appropriate case type based on the features collected.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"分类\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政登记\",\n        \"value\": [\"《判决文书3》\", \"《判决文书13》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A2\", \"DOC13:DOC13_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"与公司，证券，保险，票据等有关的民事纠纷\",\n        \"value\": [\"《判决文书8》\", \"《判决文书11》\"]\n      },\n      \"sources\": [\"DOC8:DOC8_A2\", \"DOC11:DOC11_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-先予执行\",\n        \"value\": [\"《判决文书10》\"]\n      },\n      \"sources\": [\"DOC10:DOC10_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-对下级法院执行异议裁定的复议\",\n        \"value\": [\"《判决文书4》\", \"《判决文书6》\", \"《判决文书9》\", \"《判决文书12》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A2\", \"DOC6:DOC6_A2\", \"DOC9:DOC9_A2\", \"DOC12:DOC12_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政裁决\",\n        \"value\": [\"《判决文书1》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A4\", \"DOC7:DOC7_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事赔偿\",\n        \"value\": [\"《判决文书2》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-其他案由\",\n        \"value\": [\"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A2\"]\n    }\n  ]\n}\n</relations>"
+}

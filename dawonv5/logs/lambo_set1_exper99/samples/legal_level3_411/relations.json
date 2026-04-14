@@ -1,0 +1,78 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 刑事案件 (王建华受贿案) - DOC2: 刑事案件 (诈骗罪和非法持有枪支罪) - DOC3: 民事案件 (广播电视播放合同纠纷) - DOC4: 民事案件 (郑某1、郑某2的股权纠纷) - DOC5: 管辖案件 (侵害外观设计专利权纠纷) - DOC6: 民事案件 (民事裁定) - DOC7: 民事案件 (侵害计算机软件著作权纠纷) - DOC8: 民事案件 (劳动关系解除、工资支付及经济补偿金) - DOC9: 管辖案件 (产品责任纠纷) Stage 2 structure selection and mapping: - The question asks for a classification of the documents into three categories: '刑事案件', '民事案件', and '管辖案件'. - We will use a \"mapping\" structure where the keys are the case types and the values are lists of document titles. - Each document title will be included in the appropriate category based on the features collected.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "刑事案件",
+        "民事案件",
+        "管辖案件"
+      ],
+      "attributes": [
+        "document_titles"
+      ],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事案件",
+          "value": [
+            "《判决文书1》",
+            "《判决文书2》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A1",
+          "DOC2:DOC2_A1",
+          "DOC2:DOC2_A2",
+          "DOC2:DOC2_A3",
+          "DOC2:DOC2_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "民事案件",
+          "value": [
+            "《判决文书3》",
+            "《判决文书4》",
+            "《判决文书6》",
+            "《判决文书7》",
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A2",
+          "DOC3:DOC3_A3",
+          "DOC4:DOC4_A4",
+          "DOC6:DOC6_A2",
+          "DOC7:DOC7_A2",
+          "DOC7:DOC7_A4",
+          "DOC8:DOC8_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "管辖案件",
+          "value": [
+            "《判决文书5》",
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A3",
+          "DOC5:DOC5_A4",
+          "DOC9:DOC9_A1",
+          "DOC9:DOC9_A2",
+          "DOC9:DOC9_A3",
+          "DOC9:DOC9_A4",
+          "DOC9:DOC9_A5"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 刑事案件 (王建华受贿案)\n  - DOC2: 刑事案件 (诈骗罪和非法持有枪支罪)\n  - DOC3: 民事案件 (广播电视播放合同纠纷)\n  - DOC4: 民事案件 (郑某1、郑某2的股权纠纷)\n  - DOC5: 管辖案件 (侵害外观设计专利权纠纷)\n  - DOC6: 民事案件 (民事裁定)\n  - DOC7: 民事案件 (侵害计算机软件著作权纠纷)\n  - DOC8: 民事案件 (劳动关系解除、工资支付及经济补偿金)\n  - DOC9: 管辖案件 (产品责任纠纷)\n\n  Stage 2 structure selection and mapping:\n  - The question asks for a classification of the documents into three categories: '刑事案件', '民事案件', and '管辖案件'.\n  - We will use a \"mapping\" structure where the keys are the case types and the values are lists of document titles.\n  - Each document title will be included in the appropriate category based on the features collected.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"刑事案件\", \"民事案件\", \"管辖案件\"],\n    \"attributes\": [\"document_titles\"],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事案件\",\n        \"value\": [\"《判决文书1》\", \"《判决文书2》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A1\", \"DOC2:DOC2_A1\", \"DOC2:DOC2_A2\", \"DOC2:DOC2_A3\", \"DOC2:DOC2_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"民事案件\",\n        \"value\": [\"《判决文书3》\", \"《判决文书4》\", \"《判决文书6》\", \"《判决文书7》\", \"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A2\", \"DOC3:DOC3_A3\", \"DOC4:DOC4_A4\", \"DOC6:DOC6_A2\", \"DOC7:DOC7_A2\", \"DOC7:DOC7_A4\", \"DOC8:DOC8_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"管辖案件\",\n        \"value\": [\"《判决文书5》\", \"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A3\", \"DOC5:DOC5_A4\", \"DOC9:DOC9_A1\", \"DOC9:DOC9_A2\", \"DOC9:DOC9_A3\", \"DOC9:DOC9_A4\", \"DOC9:DOC9_A5\"]\n    }\n  ]\n}\n</relations>"
+}

@@ -1,0 +1,104 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "opened_anchor_ids": [
+    "DOC5_A2"
+  ],
+  "items": [
+    {
+      "fact": "尚某与新疆某某洗涤服务有限公司之间的争议明确被描述为劳动争议",
+      "entities": [
+        "尚某",
+        "新疆某某洗涤服务有限公司"
+      ],
+      "evidence_span": "再审申请人尚某因与被申请人新疆某某洗涤服务有限公司（以下简称某某洗涤公司）劳动争议一案",
+      "relevance": "劳动争议，人事争议",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC5_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书5']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC5_A4",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定该判决文书属于哪种案由，我需要查看文书的具体内容，特别是关于案件性质的信息。从文档地图来看，DOC5_A2锚点提到了“劳动争议”，因此我应该首先打开这个锚点来确认是否涉及劳动争议。",
+        "action": "open",
+        "anchor_id": "DOC5_A2",
+        "need": "确认案件是否涉及劳动争议",
+        "reason": "DOC5_A2锚点提到劳动争议的相关信息",
+        "raw_text": "<think>\n为了确定该判决文书属于哪种案由，我需要查看文书的具体内容，特别是关于案件性质的信息。从文档地图来看，DOC5_A2锚点提到了“劳动争议”，因此我应该首先打开这个锚点来确认是否涉及劳动争议。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC5_A2\",\"need\":\"确认案件是否涉及劳动争议\",\"reason\":\"DOC5_A2锚点提到劳动争议的相关信息\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC5_A2",
+      "info": {
+        "anchor_title": "再审申请背景",
+        "char_count": 605
+      },
+      "extract": {
+        "think": "我寻找了与劳动争议相关的证据。从文本中可以确定该案件涉及劳动争议，因为再审申请人尚某与被申请人新疆某某洗涤服务有限公司之间的争议明确被描述为劳动争议。因此，记录这一事实有助于将该判决文书归类到'劳动争议，人事争议'类别中。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经知道这是一个劳动争议案件，因为DOC5_A2中明确提到尚某与新疆某某洗涤服务有限公司之间的争议是劳动争议。因此，我们可以将这个判决文书归类到'劳动争议，人事争议'类别下。接下来不需要打开更多的锚点，因为我们已经有了足够的证据来确定这个判决文书的类别。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已有足够的证据确定该判决文书属于'劳动争议，人事争议'类别",
+        "raw_text": "<think>\n目前我们已经知道这是一个劳动争议案件，因为DOC5_A2中明确提到尚某与新疆某某洗涤服务有限公司之间的争议是劳动争议。因此，我们可以将这个判决文书归类到'劳动争议，人事争议'类别下。接下来不需要打开更多的锚点，因为我们已经有了足够的证据来确定这个判决文书的类别。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已有足够的证据确定该判决文书属于'劳动争议，人事争议'类别\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC5_A3",
+          "DOC5_A1",
+          "DOC5_A4"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定该判决文书属于哪种案由，我需要查看文书的具体内容，特别是关于案件性质的信息。从文档地图来看，DOC5_A2锚点提到了“劳动争议”，因此我应该首先打开这个锚点来确认是否涉及劳动争议。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC5_A2\", \"need\": \"确认案件是否涉及劳动争议\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_title\": \"再审申请背景\"}</info>\n<think>我寻找了与劳动争议相关的证据。从文本中可以确定该案件涉及劳动争议，因为再审申请人尚某与被申请人新疆某某洗涤服务有限公司之间的争议明确被描述为劳动争议。因此，记录这一事实有助于将该判决文书归类到'劳动争议，人事争议'类别中。</think>\n<extracted>{\"items\": [{\"fact\": \"尚某与新疆某某洗涤服务有限公司之间的争议明确被描述为劳动争议\", \"entities\": [\"尚某\", \"新疆某某洗涤服务有限公司\"], \"evidence_span\": \"再审申请人尚某因与被申请人新疆某某洗涤服务有限公司（以下简称某某洗涤公司）劳动争议一案\", \"relevance\": \"劳动争议，人事争议\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC5_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书5']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC5_A4\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道这是一个劳动争议案件，因为DOC5_A2中明确提到尚某与新疆某某洗涤服务有限公司之间的争议是劳动争议。因此，我们可以将这个判决文书归类到'劳动争议，人事争议'类别下。接下来不需要打开更多的锚点，因为我们已经有了足够的证据来确定这个判决文书的类别。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已有足够的证据确定该判决文书属于'劳动争议，人事争议'类别\"}</search>"
+}

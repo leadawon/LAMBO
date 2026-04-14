@@ -1,0 +1,88 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 行政处理决定及行政复议 - DOC2: 贪污罪 - DOC3: 劳动和社会保障行政管理 - DOC4: 涉及国家金融监督管理总局山东监管局 - DOC5: 侵害集体经济组织成员权益纠纷 - DOC6: 律师协会纪律处分决定及复查决定 - DOC7: 劳动关系的认定 - DOC8: 行政行为-行政裁决 - DOC9: 受贿罪 - DOC10: 工伤保险资格或者待遇认定 Stage 2 structure selection and mapping: - The question asks for a classification of the documents based on specific case types. - We need to map the features to the provided case types. - The structure should be a mapping with the case types as keys and lists of document titles as values.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "贪污受贿罪",
+        "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+        "执行案由-行政",
+        "所有权纠纷",
+        "行政行为-行政裁决"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "贪污受贿罪",
+          "value": [
+            "《判决文书2》",
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC2:DOC2_A3",
+          "DOC9:DOC9_A1"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+          "value": [
+            "《判决文书3》",
+            "《判决文书7》",
+            "《判决文书10》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A1",
+          "DOC7:DOC7_A1",
+          "DOC7:DOC7_A2",
+          "DOC10:DOC10_A2",
+          "DOC10:DOC10_A3",
+          "DOC10:DOC10_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-行政",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "所有权纠纷",
+          "value": [
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政裁决",
+          "value": [
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC8:DOC8_A6",
+          "DOC8:DOC8_A18",
+          "DOC8:DOC8_A19"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 行政处理决定及行政复议\n  - DOC2: 贪污罪\n  - DOC3: 劳动和社会保障行政管理\n  - DOC4: 涉及国家金融监督管理总局山东监管局\n  - DOC5: 侵害集体经济组织成员权益纠纷\n  - DOC6: 律师协会纪律处分决定及复查决定\n  - DOC7: 劳动关系的认定\n  - DOC8: 行政行为-行政裁决\n  - DOC9: 受贿罪\n  - DOC10: 工伤保险资格或者待遇认定\n\n  Stage 2 structure selection and mapping:\n  - The question asks for a classification of the documents based on specific case types.\n  - We need to map the features to the provided case types.\n  - The structure should be a mapping with the case types as keys and lists of document titles as values.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"贪污受贿罪\", \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\", \"执行案由-行政\", \"所有权纠纷\", \"行政行为-行政裁决\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"贪污受贿罪\",\n        \"value\": [\"《判决文书2》\", \"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC2:DOC2_A3\", \"DOC9:DOC9_A1\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\",\n        \"value\": [\"《判决文书3》\", \"《判决文书7》\", \"《判决文书10》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A1\", \"DOC7:DOC7_A1\", \"DOC7:DOC7_A2\", \"DOC10:DOC10_A2\", \"DOC10:DOC10_A3\", \"DOC10:DOC10_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-行政\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"所有权纠纷\",\n        \"value\": [\"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政裁决\",\n        \"value\": [\"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC8:DOC8_A6\", \"DOC8:DOC8_A18\", \"DOC8:DOC8_A19\"]\n    }\n  ]\n}\n</relations>"
+}

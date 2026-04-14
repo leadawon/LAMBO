@@ -1,0 +1,161 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4"
+  ],
+  "items": [
+    {
+      "fact": "再审申请人刘某某因政府信息公开及行政复议一案",
+      "entities": [
+        "刘某某",
+        "政府信息公开",
+        "行政复议"
+      ],
+      "evidence_span": "再审申请人刘某某因政府信息公开及行政复议一案",
+      "relevance": "行政行为-行政监督",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了对判决文书进行分类，我需要了解该判决文书是否涉及行政行为-行政监督、执行案由-对下级法院执行异议裁定的复议、行政行为-行政合同、行政主体-民政行政管理（民政）、与公司，证券，保险，票据等有关的民事纠纷。目前的文档摘要中没有直接提到这些案由，但可以先查看当事人信息部分，看看是否有涉及相关机构或行为的线索。",
+        "action": "open",
+        "anchor_id": "DOC1_A1",
+        "need": "确认是否存在涉及行政监督、行政合同、民政行政管理等行为的线索",
+        "reason": "通过查看当事人信息来判断该判决文书是否涉及特定类型的行政行为或主体",
+        "raw_text": "<think>\n为了对判决文书进行分类，我需要了解该判决文书是否涉及行政行为-行政监督、执行案由-对下级法院执行异议裁定的复议、行政行为-行政合同、行政主体-民政行政管理（民政）、与公司，证券，保险，票据等有关的民事纠纷。目前的文档摘要中没有直接提到这些案由，但可以先查看当事人信息部分，看看是否有涉及相关机构或行为的线索。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A1\",\"need\":\"确认是否存在涉及行政监督、行政合同、民政行政管理等行为的线索\",\"reason\":\"通过查看当事人信息来判断该判决文书是否涉及特定类型的行政行为或主体\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A1",
+      "info": {
+        "anchor_title": "当事人信息",
+        "char_count": 89
+      },
+      "extract": {
+        "think": "在这段当事人信息中，我寻找了与行政监督、行政合同、民政行政管理相关的线索。然而，这段文本只提供了当事人的基本信息，并没有提供足够的信息来判断案件的具体类型或案由。因此，没有提取任何有用的信息。",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "为了对判决文书进行分类，我需要找到与“行政行为-行政监督”、“执行案由-对下级法院执行异议裁定的复议”、“行政行为-行政合同”、“行政主体-民政行政管理（民政）”以及“与公司，证券，保险，票据等有关的民事纠纷”相关的特征。目前还没有打开任何锚点，因此我需要先打开一个锚点来获取相关信息。从文档地图来看，DOC1_A2锚点提到了政府信息公开和行政复议，这可能与“行政行为-行政监督”相关。我将首先打开这个锚点以获取更多信息。",
+        "action": "open",
+        "anchor_id": "DOC1_A2",
+        "need": "了解案件是否涉及行政行为-行政监督",
+        "reason": "该锚点提到政府信息公开和行政复议，这些信息可能有助于确定案件是否属于行政行为-行政监督",
+        "raw_text": "<think>\n为了对判决文书进行分类，我需要找到与“行政行为-行政监督”、“执行案由-对下级法院执行异议裁定的复议”、“行政行为-行政合同”、“行政主体-民政行政管理（民政）”以及“与公司，证券，保险，票据等有关的民事纠纷”相关的特征。目前还没有打开任何锚点，因此我需要先打开一个锚点来获取相关信息。从文档地图来看，DOC1_A2锚点提到了政府信息公开和行政复议，这可能与“行政行为-行政监督”相关。我将首先打开这个锚点以获取更多信息。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A2\",\"need\":\"了解案件是否涉及行政行为-行政监督\",\"reason\":\"该锚点提到政府信息公开和行政复议，这些信息可能有助于确定案件是否属于行政行为-行政监督\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A4",
+          "DOC1_A3",
+          "DOC1_A2"
+        ]
+      },
+      "anchor_id": "DOC1_A2",
+      "info": {
+        "anchor_title": "再审申请理由",
+        "char_count": 130
+      },
+      "extract": {
+        "think": "我在寻找与“行政行为-行政监督”相关的证据。从这段文本中，我找到了关于政府信息公开和行政复议的信息，这可能涉及到行政行为-行政监督。因此，记录了这一事实。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "目前我们已经知道这是一个关于政府信息公开和行政复议的案件，涉及再审申请人刘某某。我们需要进一步确定这个案件是否属于“行政行为-行政监督”、“执行案由-对下级法院执行异议裁定的复议”、“行政行为-行政合同”、“行政主体-民政行政管理（民政）”或“与公司，证券，保险，票据等有关的民事纠纷”。接下来需要查看法院的观点和裁定结果来判断具体案由。",
+        "action": "open",
+        "anchor_id": "DOC1_A3",
+        "need": "确认案件的具体案由",
+        "reason": "通过法院的观点可以了解案件的具体情况，从而判断其所属的案由",
+        "raw_text": "<think>\n目前我们已经知道这是一个关于政府信息公开和行政复议的案件，涉及再审申请人刘某某。我们需要进一步确定这个案件是否属于“行政行为-行政监督”、“执行案由-对下级法院执行异议裁定的复议”、“行政行为-行政合同”、“行政主体-民政行政管理（民政）”或“与公司，证券，保险，票据等有关的民事纠纷”。接下来需要查看法院的观点和裁定结果来判断具体案由。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A3\",\"need\":\"确认案件的具体案由\",\"reason\":\"通过法院的观点可以了解案件的具体情况，从而判断其所属的案由\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A4",
+          "DOC1_A3"
+        ]
+      },
+      "anchor_id": "DOC1_A3",
+      "info": {
+        "anchor_title": "法院观点",
+        "char_count": 168
+      },
+      "extract": {
+        "think": "我寻找了具体的案由信息，但这段文本主要描述了法院对于政府信息公开申请的处理过程和合法性审查，没有直接提到具体的案由分类。因此，这段文本中没有可以直接用于分类的信息。",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 4,
+      "plan": {
+        "think": "目前我们已经知道这是一个关于政府信息公开和行政复议的案件。我们需要确定这个案件是否属于'行政行为-行政监督'、'执行案由-对下级法院执行异议裁定的复议'、'行政行为-行政合同'、'行政主体-民政行政管理（民政）'或'与公司，证券，保险，票据等有关的民事纠纷'中的某一种。从已有的信息来看，这个案件似乎更接近于'行政行为-行政监督'，因为它涉及政府信息公开和行政复议。但是，为了确保准确性，我们需要查看裁定结果部分，以确认是否有其他相关信息。",
+        "action": "open",
+        "anchor_id": "DOC1_A4",
+        "need": "确认案件是否属于'行政行为-行政监督'",
+        "reason": "裁定结果可能包含更多关于案件性质的信息",
+        "raw_text": "<think>\n目前我们已经知道这是一个关于政府信息公开和行政复议的案件。我们需要确定这个案件是否属于'行政行为-行政监督'、'执行案由-对下级法院执行异议裁定的复议'、'行政行为-行政合同'、'行政主体-民政行政管理（民政）'或'与公司，证券，保险，票据等有关的民事纠纷'中的某一种。从已有的信息来看，这个案件似乎更接近于'行政行为-行政监督'，因为它涉及政府信息公开和行政复议。但是，为了确保准确性，我们需要查看裁定结果部分，以确认是否有其他相关信息。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A4\",\"need\":\"确认案件是否属于'行政行为-行政监督'\",\"reason\":\"裁定结果可能包含更多关于案件性质的信息\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A4"
+        ]
+      },
+      "anchor_id": "DOC1_A4",
+      "info": {
+        "anchor_title": "裁定结果",
+        "char_count": 124
+      },
+      "extract": {
+        "think": "我在寻找与'行政行为-行政监督'相关的证据。从锚文本中，我找到了关于刘某某的再审申请被驳回的信息，但没有直接提到'行政行为-行政监督'。因此，没有新的信息可以添加到已收集的证据中。",
+        "item_count": 0
+      }
+    }
+  ],
+  "tagged_trace": "<think>为了对判决文书进行分类，我需要了解该判决文书是否涉及行政行为-行政监督、执行案由-对下级法院执行异议裁定的复议、行政行为-行政合同、行政主体-民政行政管理（民政）、与公司，证券，保险，票据等有关的民事纠纷。目前的文档摘要中没有直接提到这些案由，但可以先查看当事人信息部分，看看是否有涉及相关机构或行为的线索。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A1\", \"need\": \"确认是否存在涉及行政监督、行政合同、民政行政管理等行为的线索\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_title\": \"当事人信息\"}</info>\n<think>在这段当事人信息中，我寻找了与行政监督、行政合同、民政行政管理相关的线索。然而，这段文本只提供了当事人的基本信息，并没有提供足够的信息来判断案件的具体类型或案由。因此，没有提取任何有用的信息。</think>\n<extracted>{\"items\": []}</extracted>\n<think>为了对判决文书进行分类，我需要找到与“行政行为-行政监督”、“执行案由-对下级法院执行异议裁定的复议”、“行政行为-行政合同”、“行政主体-民政行政管理（民政）”以及“与公司，证券，保险，票据等有关的民事纠纷”相关的特征。目前还没有打开任何锚点，因此我需要先打开一个锚点来获取相关信息。从文档地图来看，DOC1_A2锚点提到了政府信息公开和行政复议，这可能与“行政行为-行政监督”相关。我将首先打开这个锚点以获取更多信息。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A2\", \"need\": \"了解案件是否涉及行政行为-行政监督\", \"relation_frontier_ids\": [\"DOC1_A4\", \"DOC1_A3\", \"DOC1_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_title\": \"再审申请理由\"}</info>\n<think>我在寻找与“行政行为-行政监督”相关的证据。从这段文本中，我找到了关于政府信息公开和行政复议的信息，这可能涉及到行政行为-行政监督。因此，记录了这一事实。</think>\n<extracted>{\"items\": [{\"fact\": \"再审申请人刘某某因政府信息公开及行政复议一案\", \"entities\": [\"刘某某\", \"政府信息公开\", \"行政复议\"], \"evidence_span\": \"再审申请人刘某某因政府信息公开及行政复议一案\", \"relevance\": \"行政行为-行政监督\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道这是一个关于政府信息公开和行政复议的案件，涉及再审申请人刘某某。我们需要进一步确定这个案件是否属于“行政行为-行政监督”、“执行案由-对下级法院执行异议裁定的复议”、“行政行为-行政合同”、“行政主体-民政行政管理（民政）”或“与公司，证券，保险，票据等有关的民事纠纷”。接下来需要查看法院的观点和裁定结果来判断具体案由。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A3\", \"need\": \"确认案件的具体案由\", \"relation_frontier_ids\": [\"DOC1_A4\", \"DOC1_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_title\": \"法院观点\"}</info>\n<think>我寻找了具体的案由信息，但这段文本主要描述了法院对于政府信息公开申请的处理过程和合法性审查，没有直接提到具体的案由分类。因此，这段文本中没有可以直接用于分类的信息。</think>\n<extracted>{\"items\": []}</extracted>\n<think>目前我们已经知道这是一个关于政府信息公开和行政复议的案件。我们需要确定这个案件是否属于'行政行为-行政监督'、'执行案由-对下级法院执行异议裁定的复议'、'行政行为-行政合同'、'行政主体-民政行政管理（民政）'或'与公司，证券，保险，票据等有关的民事纠纷'中的某一种。从已有的信息来看，这个案件似乎更接近于'行政行为-行政监督'，因为它涉及政府信息公开和行政复议。但是，为了确保准确性，我们需要查看裁定结果部分，以确认是否有其他相关信息。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A4\", \"need\": \"确认案件是否属于'行政行为-行政监督'\", \"relation_frontier_ids\": [\"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A4\", \"anchor_title\": \"裁定结果\"}</info>\n<think>我在寻找与'行政行为-行政监督'相关的证据。从锚文本中，我找到了关于刘某某的再审申请被驳回的信息，但没有直接提到'行政行为-行政监督'。因此，没有新的信息可以添加到已收集的证据中。</think>\n<extracted>{\"items\": []}</extracted>"
+}

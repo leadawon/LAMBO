@@ -1,0 +1,103 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "opened_anchor_ids": [
+    "DOC2_A2"
+  ],
+  "items": [
+    {
+      "fact": "本案为行政案件",
+      "entities": [
+        "行政案件"
+      ],
+      "evidence_span": "不服本院（2022）苏行终25号行政判决",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC2_A4",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书2']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC2_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书2']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC2_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书2']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定该判决文书属于哪种案件类型，我需要查看具体的案件背景和法院审查意见，以了解案件的具体性质。从锚点摘要来看，DOC2_A2和DOC2_A4可能包含这些信息。首先，我将打开DOC2_A2，因为它提供了关于案件背景的信息，可能会提到案件的类型。",
+        "action": "open",
+        "anchor_id": "DOC2_A2",
+        "need": "案件类型",
+        "reason": "案件背景部分可能包含案件类型的描述",
+        "raw_text": "<think>\n为了确定该判决文书属于哪种案件类型，我需要查看具体的案件背景和法院审查意见，以了解案件的具体性质。从锚点摘要来看，DOC2_A2和DOC2_A4可能包含这些信息。首先，我将打开DOC2_A2，因为它提供了关于案件背景的信息，可能会提到案件的类型。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A2\",\"need\":\"案件类型\",\"reason\":\"案件背景部分可能包含案件类型的描述\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC2_A2",
+      "info": {
+        "anchor_title": "案件背景",
+        "char_count": 350
+      },
+      "extract": {
+        "think": "我在寻找案件类型的相关信息。从提供的文本中可以看出，这是一个关于房屋征收决定的案件，并且提到了行政判决，因此可以确定这是一个行政案件。这个信息有助于对判决文书进行分类。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "已知该判决文书属于行政案件。现在需要确定是否还有其他类型的案件（如执行案件或刑事案件）涉及。从现有的锚点摘要来看，没有提到执行案件或刑事案件的相关信息。因此，不需要进一步打开其他锚点来获取这些信息。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已经确定该判决文书属于行政案件，无需进一步搜索其他类型的案件",
+        "raw_text": "<think>\n已知该判决文书属于行政案件。现在需要确定是否还有其他类型的案件（如执行案件或刑事案件）涉及。从现有的锚点摘要来看，没有提到执行案件或刑事案件的相关信息。因此，不需要进一步打开其他锚点来获取这些信息。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已经确定该判决文书属于行政案件，无需进一步搜索其他类型的案件\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC2_A4",
+          "DOC2_A3",
+          "DOC2_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定该判决文书属于哪种案件类型，我需要查看具体的案件背景和法院审查意见，以了解案件的具体性质。从锚点摘要来看，DOC2_A2和DOC2_A4可能包含这些信息。首先，我将打开DOC2_A2，因为它提供了关于案件背景的信息，可能会提到案件的类型。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A2\", \"need\": \"案件类型\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_title\": \"案件背景\"}</info>\n<think>我在寻找案件类型的相关信息。从提供的文本中可以看出，这是一个关于房屋征收决定的案件，并且提到了行政判决，因此可以确定这是一个行政案件。这个信息有助于对判决文书进行分类。</think>\n<extracted>{\"items\": [{\"fact\": \"本案为行政案件\", \"entities\": [\"行政案件\"], \"evidence_span\": \"不服本院（2022）苏行终25号行政判决\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书2']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>已知该判决文书属于行政案件。现在需要确定是否还有其他类型的案件（如执行案件或刑事案件）涉及。从现有的锚点摘要来看，没有提到执行案件或刑事案件的相关信息。因此，不需要进一步打开其他锚点来获取这些信息。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已经确定该判决文书属于行政案件，无需进一步搜索其他类型的案件\"}</search>"
+}

@@ -1,0 +1,109 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A1"
+  ],
+  "items": [
+    {
+      "fact": "《判决文书1》属于'执行案由-行政'",
+      "entities": [
+        "《判决文书1》",
+        "执行案由-行政"
+      ],
+      "evidence_span": "北京四中院在执行某有限公司与北京某控股公司、某集团公司、周某认可和执行香港特别行政区仲裁裁决一案",
+      "relevance": "确认该判决文书属于'执行案由-行政'类别",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "likely_same_entity",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.2,
+          "reason": "shared entity ['判决文书1']"
+        },
+        {
+          "relation_type": "same_section",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.0,
+          "reason": "same section_path"
+        },
+        {
+          "relation_type": "prev_next",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 1.4,
+          "reason": "previous anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了对判决文书进行分类，我需要找到与“执行案由-行政”相关的证据。从文档地图来看，DOC1_A2锚点提到了“执行案由-行政”，并且包含了具体的案件信息和法院的决定。因此，我应该打开这个锚点来获取相关信息。",
+        "action": "open",
+        "anchor_id": "DOC1_A2",
+        "need": "确认该判决文书是否属于'执行案由-行政'类别",
+        "reason": "该锚点包含关于'执行案由-行政'的具体信息",
+        "raw_text": "<think>\n为了对判决文书进行分类，我需要找到与“执行案由-行政”相关的证据。从文档地图来看，DOC1_A2锚点提到了“执行案由-行政”，并且包含了具体的案件信息和法院的决定。因此，我应该打开这个锚点来获取相关信息。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A2\",\"need\":\"确认该判决文书是否属于'执行案由-行政'类别\",\"reason\":\"该锚点包含关于'执行案由-行政'的具体信息\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A2",
+      "info": {
+        "anchor_title": "执行案由-行政",
+        "char_count": 4208
+      },
+      "extract": {
+        "think": "我寻找的是该判决文书是否属于'执行案由-行政'类别。从文本内容来看，该判决文书涉及执行过程中的具体细节，包括财产查封、限制出境等措施，符合'执行案由-行政'的特征。因此，记录该判决文书属于'执行案由-行政'类别。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经确定了《判决文书1》属于'执行案由-行政'。接下来需要确认该判决文书是否涉及其他案由，如'行政行为-行政强制'、'妨碍社会管理秩序罪'、'行政行为-行政补偿'、'海事海商纠纷'。从已有的信息来看，DOC1_A1提到了复议申请人和被执行人，但没有明确提到这些案由。因此，我们需要进一步查看DOC1_A1来确认是否存在其他案由。",
+        "action": "open",
+        "anchor_id": "DOC1_A1",
+        "need": "确认是否存在其他案由",
+        "reason": "DOC1_A1提到了复议申请人和被执行人，可能包含其他案由的相关信息",
+        "raw_text": "<think>\n目前我们已经确定了《判决文书1》属于'执行案由-行政'。接下来需要确认该判决文书是否涉及其他案由，如'行政行为-行政强制'、'妨碍社会管理秩序罪'、'行政行为-行政补偿'、'海事海商纠纷'。从已有的信息来看，DOC1_A1提到了复议申请人和被执行人，但没有明确提到这些案由。因此，我们需要进一步查看DOC1_A1来确认是否存在其他案由。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A1\",\"need\":\"确认是否存在其他案由\",\"reason\":\"DOC1_A1提到了复议申请人和被执行人，可能包含其他案由的相关信息\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A1"
+        ]
+      },
+      "anchor_id": "DOC1_A1",
+      "info": {
+        "anchor_title": "复议申请人与被执行人",
+        "char_count": 174
+      },
+      "extract": {
+        "think": "我在寻找与案件类型相关的线索。从这段文本中，我找到了复议申请人和被执行人的信息，但没有发现新的案由信息。由于之前已经确定了《判决文书1》属于'执行案由-行政'，这里没有新的案由出现，因此不需要添加新的证据项。",
+        "item_count": 0
+      }
+    }
+  ],
+  "tagged_trace": "<think>为了对判决文书进行分类，我需要找到与“执行案由-行政”相关的证据。从文档地图来看，DOC1_A2锚点提到了“执行案由-行政”，并且包含了具体的案件信息和法院的决定。因此，我应该打开这个锚点来获取相关信息。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A2\", \"need\": \"确认该判决文书是否属于'执行案由-行政'类别\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_title\": \"执行案由-行政\"}</info>\n<think>我寻找的是该判决文书是否属于'执行案由-行政'类别。从文本内容来看，该判决文书涉及执行过程中的具体细节，包括财产查封、限制出境等措施，符合'执行案由-行政'的特征。因此，记录该判决文书属于'执行案由-行政'类别。</think>\n<extracted>{\"items\": [{\"fact\": \"《判决文书1》属于'执行案由-行政'\", \"entities\": [\"《判决文书1》\", \"执行案由-行政\"], \"evidence_span\": \"北京四中院在执行某有限公司与北京某控股公司、某集团公司、周某认可和执行香港特别行政区仲裁裁决一案\", \"relevance\": \"确认该判决文书属于'执行案由-行政'类别\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书1']\"}, {\"relation_type\": \"same_section\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.0, \"reason\": \"same section_path\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经确定了《判决文书1》属于'执行案由-行政'。接下来需要确认该判决文书是否涉及其他案由，如'行政行为-行政强制'、'妨碍社会管理秩序罪'、'行政行为-行政补偿'、'海事海商纠纷'。从已有的信息来看，DOC1_A1提到了复议申请人和被执行人，但没有明确提到这些案由。因此，我们需要进一步查看DOC1_A1来确认是否存在其他案由。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A1\", \"need\": \"确认是否存在其他案由\", \"relation_frontier_ids\": [\"DOC1_A1\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_title\": \"复议申请人与被执行人\"}</info>\n<think>我在寻找与案件类型相关的线索。从这段文本中，我找到了复议申请人和被执行人的信息，但没有发现新的案由信息。由于之前已经确定了《判决文书1》属于'执行案由-行政'，这里没有新的案由出现，因此不需要添加新的证据项。</think>\n<extracted>{\"items\": []}</extracted>"
+}

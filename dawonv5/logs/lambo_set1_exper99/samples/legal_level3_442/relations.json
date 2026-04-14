@@ -1,0 +1,97 @@
+{
+  "think": "Stage 1 feature sheet: - DOC2: 涉及提供劳务者受害责任纠纷，属于侵权责任纠纷。 - DOC4: 涉及民间借贷纠纷。 - DOC5: 涉及拆迁安置协议，属于行政行为-行政监督。 - DOC7: 涉及政府信息公开，属于行政行为-行政监督。 - DOC8: 涉及强制拆除房屋及行政赔偿，属于行政行为-行政监督。 - DOC10: 涉及拆迁安置争议，属于行政主体-房屋拆迁管理（拆迁）。 - DOC13: 涉及强制拆除设施，属于行政行为-行政监督。 - DOC15: 涉及强制拆除房屋，属于行政行为-行政监督。 - DOC18: 涉及侵权责任纠纷。 Stage 2 structure selection and mapping: - 结构选择为“mapping”，因为题目要求将判决文书按特定案由分类。 - 每个案由作为键，对应的判决文书标题列表作为值。 - 如果某个案由没有匹配到任何判决文书，则该键对应的值为空列表。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "适用特殊程序案件案由",
+        "侵权责任纠纷",
+        "民间借贷纠纷",
+        "行政行为-行政监督",
+        "渎职罪",
+        "行政主体-房屋拆迁管理（拆迁）"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "适用特殊程序案件案由",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "侵权责任纠纷",
+          "value": [
+            "《判决文书2》",
+            "《判决文书18》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC18:DOC18_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "民间借贷纠纷",
+          "value": [
+            "《判决文书4》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A2",
+          "DOC4:DOC4_A8"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政监督",
+          "value": [
+            "《判决文书5》",
+            "《判决文书7》",
+            "《判决文书8》",
+            "《判决文书13》",
+            "《判决文书15》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A1",
+          "DOC7:DOC7_A2",
+          "DOC8:DOC8_A4",
+          "DOC13:DOC13_A4",
+          "DOC15:DOC15_A1"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "渎职罪",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-房屋拆迁管理（拆迁）",
+          "value": [
+            "《判决文书10》"
+          ]
+        },
+        "sources": [
+          "DOC10:DOC10_A3",
+          "DOC10:DOC10_A4"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC2: 涉及提供劳务者受害责任纠纷，属于侵权责任纠纷。\n  - DOC4: 涉及民间借贷纠纷。\n  - DOC5: 涉及拆迁安置协议，属于行政行为-行政监督。\n  - DOC7: 涉及政府信息公开，属于行政行为-行政监督。\n  - DOC8: 涉及强制拆除房屋及行政赔偿，属于行政行为-行政监督。\n  - DOC10: 涉及拆迁安置争议，属于行政主体-房屋拆迁管理（拆迁）。\n  - DOC13: 涉及强制拆除设施，属于行政行为-行政监督。\n  - DOC15: 涉及强制拆除房屋，属于行政行为-行政监督。\n  - DOC18: 涉及侵权责任纠纷。\n\n  Stage 2 structure selection and mapping:\n  - 结构选择为“mapping”，因为题目要求将判决文书按特定案由分类。\n  - 每个案由作为键，对应的判决文书标题列表作为值。\n  - 如果某个案由没有匹配到任何判决文书，则该键对应的值为空列表。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"适用特殊程序案件案由\", \"侵权责任纠纷\", \"民间借贷纠纷\", \"行政行为-行政监督\", \"渎职罪\", \"行政主体-房屋拆迁管理（拆迁）\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"适用特殊程序案件案由\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"侵权责任纠纷\",\n        \"value\": [\"《判决文书2》\", \"《判决文书18》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC18:DOC18_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"民间借贷纠纷\",\n        \"value\": [\"《判决文书4》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A2\", \"DOC4:DOC4_A8\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政监督\",\n        \"value\": [\"《判决文书5》\", \"《判决文书7》\", \"《判决文书8》\", \"《判决文书13》\", \"《判决文书15》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A1\", \"DOC7:DOC7_A2\", \"DOC8:DOC8_A4\", \"DOC13:DOC13_A4\", \"DOC15:DOC15_A1\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"渎职罪\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-房屋拆迁管理（拆迁）\",\n        \"value\": [\"《判决文书10》\"]\n      },\n      \"sources\": [\"DOC10:DOC10_A3\", \"DOC10:DOC10_A4\"]\n    }\n  ]\n}\n</relations>"
+}

@@ -1,0 +1,183 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A3"
+  ],
+  "items": [
+    {
+      "fact": "案件涉及建设工程施工合同纠纷",
+      "entities": [
+        "建设工程施工合同纠纷"
+      ],
+      "evidence_span": "某乙公司与某甲公司建设工程施工合同纠纷一案",
+      "relevance": "民事案由-合同，无因管理，不当得利纠纷",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "source_anchor_role": "value_evidence,metric_binding,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "fact": "本案的争议焦点是本案是否应支付迟延履行期间的利息。",
+      "entities": [
+        "迟延履行期间的利息"
+      ],
+      "evidence_span": "本案的争议焦点是本案是否应支付迟延履行期间的利息。",
+      "relevance": "民事案由-合同，无因管理，不当得利纠纷",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A3",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A6",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A5",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了决定该判决文书属于哪种案由，我需要了解案件的具体类型。从文档摘要来看，这个案件涉及建设工程施工合同纠纷，因此可能属于“民事案由-合同，无因管理，不当得利纠纷”。我将打开“案件背景”锚点以确认这一点。",
+        "action": "open",
+        "anchor_id": "DOC1_A2",
+        "need": "确认案件是否属于民事案由-合同，无因管理，不当得利纠纷",
+        "reason": "案件背景锚点包含了案件类型的信息",
+        "raw_text": "<think>\n为了决定该判决文书属于哪种案由，我需要了解案件的具体类型。从文档摘要来看，这个案件涉及建设工程施工合同纠纷，因此可能属于“民事案由-合同，无因管理，不当得利纠纷”。我将打开“案件背景”锚点以确认这一点。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A2\",\"need\":\"确认案件是否属于民事案由-合同，无因管理，不当得利纠纷\",\"reason\":\"案件背景锚点包含了案件类型的信息\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A2",
+      "info": {
+        "anchor_title": "案件背景",
+        "char_count": 806
+      },
+      "extract": {
+        "think": "我寻找了关于案件是否属于“民事案由-合同，无因管理，不当得利纠纷”的信息。从文本中可以看出，案件涉及的是建设工程施工合同纠纷，这符合“民事案由-合同，无因管理，不当得利纠纷”这一类别。因此，记录该案件属于此类别。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "当前证据表明该判决文书涉及建设工程施工合同纠纷，这属于“民事案由-合同，无因管理，不当得利纠纷”类别。为了确认这一点，我需要进一步查看其他锚点以获取更多相关信息，特别是与合同纠纷相关的细节。",
+        "action": "open",
+        "anchor_id": "DOC1_A3",
+        "need": "更多关于合同纠纷的信息",
+        "reason": "确认案件是否属于民事案由-合同，无因管理，不当得利纠纷",
+        "raw_text": "<think>\n当前证据表明该判决文书涉及建设工程施工合同纠纷，这属于“民事案由-合同，无因管理，不当得利纠纷”类别。为了确认这一点，我需要进一步查看其他锚点以获取更多相关信息，特别是与合同纠纷相关的细节。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A3\",\"need\":\"更多关于合同纠纷的信息\",\"reason\":\"确认案件是否属于民事案由-合同，无因管理，不当得利纠纷\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A6",
+          "DOC1_A5",
+          "DOC1_A4",
+          "DOC1_A3",
+          "DOC1_A1"
+        ]
+      },
+      "anchor_id": "DOC1_A3",
+      "info": {
+        "anchor_title": "迟延履行利息争议",
+        "char_count": 891
+      },
+      "extract": {
+        "think": "我寻找了与合同纠纷相关的更多信息。在这一段中，提到了一个具体的争议焦点，即是否应该支付迟延履行期间的利息。这个争议属于合同纠纷的一部分，因此可以归类为“民事案由-合同，无因管理，不当得利纠纷”。之前的证据已经表明这是一个建设工程施工合同纠纷，所以这里进一步确认了这一点。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "当前证据表明该判决文书涉及建设工程施工合同纠纷，并且争议焦点在于是否应支付迟延履行期间的利息。因此，该判决文书属于“民事案由-合同，无因管理，不当得利纠纷”。接下来不需要再打开其他锚点，因为已经确定了该判决文书的案由分类。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定该判决文书属于民事案由-合同，无因管理，不当得利纠纷",
+        "raw_text": "<think>\n当前证据表明该判决文书涉及建设工程施工合同纠纷，并且争议焦点在于是否应支付迟延履行期间的利息。因此，该判决文书属于“民事案由-合同，无因管理，不当得利纠纷”。接下来不需要再打开其他锚点，因为已经确定了该判决文书的案由分类。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"已确定该判决文书属于民事案由-合同，无因管理，不当得利纠纷\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A6",
+          "DOC1_A5",
+          "DOC1_A4",
+          "DOC1_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了决定该判决文书属于哪种案由，我需要了解案件的具体类型。从文档摘要来看，这个案件涉及建设工程施工合同纠纷，因此可能属于“民事案由-合同，无因管理，不当得利纠纷”。我将打开“案件背景”锚点以确认这一点。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A2\", \"need\": \"确认案件是否属于民事案由-合同，无因管理，不当得利纠纷\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_title\": \"案件背景\"}</info>\n<think>我寻找了关于案件是否属于“民事案由-合同，无因管理，不当得利纠纷”的信息。从文本中可以看出，案件涉及的是建设工程施工合同纠纷，这符合“民事案由-合同，无因管理，不当得利纠纷”这一类别。因此，记录该案件属于此类别。</think>\n<extracted>{\"items\": [{\"fact\": \"案件涉及建设工程施工合同纠纷\", \"entities\": [\"建设工程施工合同纠纷\"], \"evidence_span\": \"某乙公司与某甲公司建设工程施工合同纠纷一案\", \"relevance\": \"民事案由-合同，无因管理，不当得利纠纷\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"source_anchor_role\": \"value_evidence,metric_binding,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>当前证据表明该判决文书涉及建设工程施工合同纠纷，这属于“民事案由-合同，无因管理，不当得利纠纷”类别。为了确认这一点，我需要进一步查看其他锚点以获取更多相关信息，特别是与合同纠纷相关的细节。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A3\", \"need\": \"更多关于合同纠纷的信息\", \"relation_frontier_ids\": [\"DOC1_A6\", \"DOC1_A5\", \"DOC1_A4\", \"DOC1_A3\", \"DOC1_A1\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_title\": \"迟延履行利息争议\"}</info>\n<think>我寻找了与合同纠纷相关的更多信息。在这一段中，提到了一个具体的争议焦点，即是否应该支付迟延履行期间的利息。这个争议属于合同纠纷的一部分，因此可以归类为“民事案由-合同，无因管理，不当得利纠纷”。之前的证据已经表明这是一个建设工程施工合同纠纷，所以这里进一步确认了这一点。</think>\n<extracted>{\"items\": [{\"fact\": \"本案的争议焦点是本案是否应支付迟延履行期间的利息。\", \"entities\": [\"迟延履行期间的利息\"], \"evidence_span\": \"本案的争议焦点是本案是否应支付迟延履行期间的利息。\", \"relevance\": \"民事案由-合同，无因管理，不当得利纠纷\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A3\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A6\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A5\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>当前证据表明该判决文书涉及建设工程施工合同纠纷，并且争议焦点在于是否应支付迟延履行期间的利息。因此，该判决文书属于“民事案由-合同，无因管理，不当得利纠纷”。接下来不需要再打开其他锚点，因为已经确定了该判决文书的案由分类。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定该判决文书属于民事案由-合同，无因管理，不当得利纠纷\"}</search>"
+}

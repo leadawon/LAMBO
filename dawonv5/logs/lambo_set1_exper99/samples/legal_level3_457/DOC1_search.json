@@ -1,0 +1,178 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A1"
+  ],
+  "items": [
+    {
+      "fact": "上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案",
+      "entities": [
+        "于某某",
+        "乌鲁木齐市新市区人民政府"
+      ],
+      "evidence_span": "上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案",
+      "relevance": "行政行为-行政征收",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "fact": "《判决文书1》涉及行政行为-行政征收",
+      "entities": [
+        "《判决文书1》"
+      ],
+      "evidence_span": "上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案",
+      "relevance": "行政行为-行政征收",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "source_anchor_role": "value_evidence,case_identity",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书1']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A3",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC1_A2",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了对判决文书进行分类，我需要找到与案件相关的具体案由。从现有的文档概览来看，DOC1_A2锚点提到了“房屋征收决定”和“撤诉”，这可能涉及到“行政行为-行政征收”。因此，我将首先打开这个锚点来确认是否涉及该类案由。",
+        "action": "open",
+        "anchor_id": "DOC1_A2",
+        "need": "确认是否涉及行政行为-行政征收",
+        "reason": "该锚点提到房屋征收决定和撤诉，可能涉及此类案由",
+        "raw_text": "<think>\n为了对判决文书进行分类，我需要找到与案件相关的具体案由。从现有的文档概览来看，DOC1_A2锚点提到了“房屋征收决定”和“撤诉”，这可能涉及到“行政行为-行政征收”。因此，我将首先打开这个锚点来确认是否涉及该类案由。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A2\",\"need\":\"确认是否涉及行政行为-行政征收\",\"reason\":\"该锚点提到房屋征收决定和撤诉，可能涉及此类案由\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A2",
+      "info": {
+        "anchor_title": "案件背景及撤诉情况",
+        "char_count": 390
+      },
+      "extract": {
+        "think": "我寻找了与行政行为-行政征收相关的证据。从文本中得知，该案涉及上诉人因房屋征收决定提起诉讼，并最终撤诉的情况。因此，记录了该案由“行政行为-行政征收”的相关信息。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "目前我们已经知道这个案件涉及到了上诉人于某某和被上诉人乌鲁木齐市新市区人民政府之间的房屋征收决定争议。我们需要进一步确定这个案件是否属于'行政行为-行政征收'类别。为了确认这一点，我们需要查看当事人信息部分，以了解案件的具体背景和细节。",
+        "action": "open",
+        "anchor_id": "DOC1_A1",
+        "need": "确认案件是否属于'行政行为-行政征收'类别",
+        "reason": "需要了解案件的具体背景和细节",
+        "raw_text": "<think>\n目前我们已经知道这个案件涉及到了上诉人于某某和被上诉人乌鲁木齐市新市区人民政府之间的房屋征收决定争议。我们需要进一步确定这个案件是否属于'行政行为-行政征收'类别。为了确认这一点，我们需要查看当事人信息部分，以了解案件的具体背景和细节。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A1\",\"need\":\"确认案件是否属于'行政行为-行政征收'类别\",\"reason\":\"需要了解案件的具体背景和细节\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A3",
+          "DOC1_A1"
+        ]
+      },
+      "anchor_id": "DOC1_A1",
+      "info": {
+        "anchor_title": "当事人信息",
+        "char_count": 234
+      },
+      "extract": {
+        "think": "我寻找了与'行政行为-行政征收'相关的证据。从当事人信息中，我找到了上诉人和被上诉人的基本信息，但这些信息本身不足以确定案件的具体案由。然而，结合之前收集到的信息，可以确认此案件涉及行政行为-行政征收。因此，记录这个案件的标题作为证据。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "目前我们已经知道《判决文书1》涉及的是\"行政行为-行政征收\"。接下来需要确认是否还有其他案由涉及到这个判决文书。但是从已有的锚点信息来看，似乎没有更多的相关信息了。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "没有更多锚点可以提供关于其他案由的信息",
+        "raw_text": "<think>\n目前我们已经知道《判决文书1》涉及的是\"行政行为-行政征收\"。接下来需要确认是否还有其他案由涉及到这个判决文书。但是从已有的锚点信息来看，似乎没有更多的相关信息了。\n</think>\n<search>\n{\"action\":\"stop\",\"reason\":\"没有更多锚点可以提供关于其他案由的信息\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC1_A3"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了对判决文书进行分类，我需要找到与案件相关的具体案由。从现有的文档概览来看，DOC1_A2锚点提到了“房屋征收决定”和“撤诉”，这可能涉及到“行政行为-行政征收”。因此，我将首先打开这个锚点来确认是否涉及该类案由。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A2\", \"need\": \"确认是否涉及行政行为-行政征收\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_title\": \"案件背景及撤诉情况\"}</info>\n<think>我寻找了与行政行为-行政征收相关的证据。从文本中得知，该案涉及上诉人因房屋征收决定提起诉讼，并最终撤诉的情况。因此，记录了该案由“行政行为-行政征收”的相关信息。</think>\n<extracted>{\"items\": [{\"fact\": \"上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案\", \"entities\": [\"于某某\", \"乌鲁木齐市新市区人民政府\"], \"evidence_span\": \"上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案\", \"relevance\": \"行政行为-行政征收\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道这个案件涉及到了上诉人于某某和被上诉人乌鲁木齐市新市区人民政府之间的房屋征收决定争议。我们需要进一步确定这个案件是否属于'行政行为-行政征收'类别。为了确认这一点，我们需要查看当事人信息部分，以了解案件的具体背景和细节。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A1\", \"need\": \"确认案件是否属于'行政行为-行政征收'类别\", \"relation_frontier_ids\": [\"DOC1_A3\", \"DOC1_A1\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_title\": \"当事人信息\"}</info>\n<think>我寻找了与'行政行为-行政征收'相关的证据。从当事人信息中，我找到了上诉人和被上诉人的基本信息，但这些信息本身不足以确定案件的具体案由。然而，结合之前收集到的信息，可以确认此案件涉及行政行为-行政征收。因此，记录这个案件的标题作为证据。</think>\n<extracted>{\"items\": [{\"fact\": \"《判决文书1》涉及行政行为-行政征收\", \"entities\": [\"《判决文书1》\"], \"evidence_span\": \"上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案\", \"relevance\": \"行政行为-行政征收\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"source_anchor_role\": \"value_evidence,case_identity\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书1']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A3\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC1_A2\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>目前我们已经知道《判决文书1》涉及的是\"行政行为-行政征收\"。接下来需要确认是否还有其他案由涉及到这个判决文书。但是从已有的锚点信息来看，似乎没有更多的相关信息了。</think>\n<search>{\"action\": \"stop\", \"reason\": \"没有更多锚点可以提供关于其他案由的信息\"}</search>"
+}

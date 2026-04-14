@@ -1,0 +1,94 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及行政行为-行政征收 - DOC3: 涉及房屋征收补偿协议的有效性和合法性，但未明确指出具体案由 - DOC6: 产品责任纠纷 - DOC8: 涉及罚款，可能属于行政行为-行政处罚 - DOC9: 案外人执行异议之诉，可能属于执行案由-先予执行 Stage 2 structure selection and mapping: - 结构选择为\"mapping\"，因为需要将每个文档映射到给定的案由类别中。 - 根据特征表，只有部分文档可以明确归类，其他文档则为空。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "属于"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-先予执行",
+          "value": [
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC9:DOC9_A1",
+          "DOC9:DOC9_A4",
+          "DOC9:DOC9_A6",
+          "DOC9:DOC9_A7"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "适用特殊程序案件案由",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政征收",
+          "value": [
+            "《判决文书1》",
+            "《判决文书3》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A1",
+          "DOC3:DOC3_A2",
+          "DOC3:DOC3_A4",
+          "DOC3:DOC3_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "产品责任纠纷",
+          "value": [
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC6:DOC6_A1",
+          "DOC6:DOC6_A2",
+          "DOC6:DOC6_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政处罚",
+          "value": [
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC8:DOC8_A1",
+          "DOC8:DOC8_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "人格权纠纷",
+          "value": []
+        },
+        "sources": []
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及行政行为-行政征收\n  - DOC3: 涉及房屋征收补偿协议的有效性和合法性，但未明确指出具体案由\n  - DOC6: 产品责任纠纷\n  - DOC8: 涉及罚款，可能属于行政行为-行政处罚\n  - DOC9: 案外人执行异议之诉，可能属于执行案由-先予执行\n\n  Stage 2 structure selection and mapping:\n  - 结构选择为\"mapping\"，因为需要将每个文档映射到给定的案由类别中。\n  - 根据特征表，只有部分文档可以明确归类，其他文档则为空。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"属于\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-先予执行\",\n        \"value\": [\"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC9:DOC9_A1\", \"DOC9:DOC9_A4\", \"DOC9:DOC9_A6\", \"DOC9:DOC9_A7\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"适用特殊程序案件案由\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政征收\",\n        \"value\": [\"《判决文书1》\", \"《判决文书3》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A1\", \"DOC3:DOC3_A2\", \"DOC3:DOC3_A4\", \"DOC3:DOC3_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"产品责任纠纷\",\n        \"value\": [\"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC6:DOC6_A1\", \"DOC6:DOC6_A2\", \"DOC6:DOC6_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政处罚\",\n        \"value\": [\"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC8:DOC8_A1\", \"DOC8:DOC8_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"人格权纠纷\",\n        \"value\": []\n      },\n      \"sources\": []\n    }\n  ]\n}\n</relations>"
+}

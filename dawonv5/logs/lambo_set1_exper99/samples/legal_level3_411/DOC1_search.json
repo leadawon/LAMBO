@@ -1,0 +1,47 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "opened_anchor_ids": [
+    "DOC1_A1"
+  ],
+  "items": [
+    {
+      "fact": "王建华受贿案是一起刑事案件",
+      "entities": [
+        "王建华受贿案",
+        "刑事案件"
+      ],
+      "evidence_span": "你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A1",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了决定该判决文书属于哪种案件类型，我需要查看文档内容来确定它是否涉及刑事、民事或管辖案件。从锚点DOC1_A1的摘要来看，这个案件涉及到王建华的受贿案申诉，因此它很可能是一个刑事案件。我将打开这个锚点以确认这一点。",
+        "action": "open",
+        "anchor_id": "DOC1_A1",
+        "need": "案件类型",
+        "reason": "确定该判决文书是否为刑事案件",
+        "raw_text": "<think>\n为了决定该判决文书属于哪种案件类型，我需要查看文档内容来确定它是否涉及刑事、民事或管辖案件。从锚点DOC1_A1的摘要来看，这个案件涉及到王建华的受贿案申诉，因此它很可能是一个刑事案件。我将打开这个锚点以确认这一点。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC1_A1\",\"need\":\"案件类型\",\"reason\":\"确定该判决文书是否为刑事案件\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC1_A1",
+      "info": {
+        "anchor_title": "王建华受贿案申诉",
+        "char_count": 971
+      },
+      "extract": {
+        "think": "我寻找了关于案件类型的描述。从文本中可以确定这是一个刑事案件，因为申诉的内容涉及受贿罪的刑事判决。因此，记录该案件属于刑事案件。",
+        "item_count": 1
+      }
+    }
+  ],
+  "tagged_trace": "<think>为了决定该判决文书属于哪种案件类型，我需要查看文档内容来确定它是否涉及刑事、民事或管辖案件。从锚点DOC1_A1的摘要来看，这个案件涉及到王建华的受贿案申诉，因此它很可能是一个刑事案件。我将打开这个锚点以确认这一点。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC1_A1\", \"need\": \"案件类型\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC1_A1\", \"anchor_title\": \"王建华受贿案申诉\"}</info>\n<think>我寻找了关于案件类型的描述。从文本中可以确定这是一个刑事案件，因为申诉的内容涉及受贿罪的刑事判决。因此，记录该案件属于刑事案件。</think>\n<extracted>{\"items\": [{\"fact\": \"王建华受贿案是一起刑事案件\", \"entities\": [\"王建华受贿案\", \"刑事案件\"], \"evidence_span\": \"你因受贿一案，不服抚顺市望花区人民法院（2019）辽0404刑初216号刑事判决\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A1\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>"
+}

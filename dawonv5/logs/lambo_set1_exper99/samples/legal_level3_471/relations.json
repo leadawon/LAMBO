@@ -1,0 +1,106 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及拆迁安置协议纠纷，属于'行政主体-房屋拆迁管理（拆迁）' - DOC2: 涉及航次租船合同纠纷，属于'海事海商纠纷' - DOC3: 涉及行政非诉执行案件，属于'执行案由-行政非诉执行' - DOC4: 涉及强制拆除房屋，属于'行政主体-房屋拆迁管理（拆迁）' - DOC5: 涉及定期租船合同纠纷，属于'海事海商纠纷' - DOC6: 涉及拆迁安置，属于'行政主体-房屋拆迁管理（拆迁）' - DOC7: 涉及监狱管理局怠于履行监管职责致死赔偿，属于'刑事赔偿' - DOC8: 涉及不履行法定职责，属于'行政主体-劳动和社会保障行政管理（劳动，社会保障）' - DOC9: 无事实信息 - DOC10: 涉及刑事赔偿 Stage 2 structure selection and mapping: - 结构类型应为'mapping'，因为需要将每个判决文书归类到指定的案由类别中。 - 每个案由类别作为键，对应的判决文书标题列表作为值。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书1",
+        "判决文书2",
+        "判决文书3",
+        "判决文书4",
+        "判决文书5",
+        "判决文书6",
+        "判决文书7",
+        "判决文书8",
+        "判决文书10"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "海事海商纠纷",
+          "value": [
+            "《判决文书2》",
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC5:DOC5_A2",
+          "DOC5:DOC5_A3",
+          "DOC5:DOC5_A4",
+          "DOC5:DOC5_A5",
+          "DOC5:DOC5_A8"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-行政非诉执行",
+          "value": [
+            "《判决文书3》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A2",
+          "DOC3:DOC3_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-房屋拆迁管理（拆迁）",
+          "value": [
+            "《判决文书1》",
+            "《判决文书4》",
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A1",
+          "DOC4:DOC4_A2",
+          "DOC4:DOC4_A3",
+          "DOC4:DOC4_A4",
+          "DOC4:DOC4_A6",
+          "DOC6:DOC6_A3",
+          "DOC6:DOC6_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "刑事赔偿",
+          "value": [
+            "《判决文书7》",
+            "《判决文书10》"
+          ]
+        },
+        "sources": [
+          "DOC7:DOC7_A2",
+          "DOC7:DOC7_A7",
+          "DOC10:DOC10_A2",
+          "DOC10:DOC10_A5",
+          "DOC10:DOC10_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+          "value": [
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC8:DOC8_A1"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及拆迁安置协议纠纷，属于'行政主体-房屋拆迁管理（拆迁）'\n  - DOC2: 涉及航次租船合同纠纷，属于'海事海商纠纷'\n  - DOC3: 涉及行政非诉执行案件，属于'执行案由-行政非诉执行'\n  - DOC4: 涉及强制拆除房屋，属于'行政主体-房屋拆迁管理（拆迁）'\n  - DOC5: 涉及定期租船合同纠纷，属于'海事海商纠纷'\n  - DOC6: 涉及拆迁安置，属于'行政主体-房屋拆迁管理（拆迁）'\n  - DOC7: 涉及监狱管理局怠于履行监管职责致死赔偿，属于'刑事赔偿'\n  - DOC8: 涉及不履行法定职责，属于'行政主体-劳动和社会保障行政管理（劳动，社会保障）'\n  - DOC9: 无事实信息\n  - DOC10: 涉及刑事赔偿\n\n  Stage 2 structure selection and mapping:\n  - 结构类型应为'mapping'，因为需要将每个判决文书归类到指定的案由类别中。\n  - 每个案由类别作为键，对应的判决文书标题列表作为值。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书1\", \"判决文书2\", \"判决文书3\", \"判决文书4\", \"判决文书5\", \"判决文书6\", \"判决文书7\", \"判决文书8\", \"判决文书10\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"海事海商纠纷\",\n        \"value\": [\"《判决文书2》\", \"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC5:DOC5_A2\", \"DOC5:DOC5_A3\", \"DOC5:DOC5_A4\", \"DOC5:DOC5_A5\", \"DOC5:DOC5_A8\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-行政非诉执行\",\n        \"value\": [\"《判决文书3》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A2\", \"DOC3:DOC3_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-房屋拆迁管理（拆迁）\",\n        \"value\": [\"《判决文书1》\", \"《判决文书4》\", \"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A1\", \"DOC4:DOC4_A2\", \"DOC4:DOC4_A3\", \"DOC4:DOC4_A4\", \"DOC4:DOC4_A6\", \"DOC6:DOC6_A3\", \"DOC6:DOC6_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"刑事赔偿\",\n        \"value\": [\"《判决文书7》\", \"《判决文书10》\"]\n      },\n      \"sources\": [\"DOC7:DOC7_A2\", \"DOC7:DOC7_A7\", \"DOC10:DOC10_A2\", \"DOC10:DOC10_A5\", \"DOC10:DOC10_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\",\n        \"value\": [\"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC8:DOC8_A1\"]\n    }\n  ]\n}\n</relations>"
+}

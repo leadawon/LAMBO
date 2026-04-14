@@ -1,0 +1,95 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及建设工程施工合同纠纷 - DOC2: 涉嫌犯交通肇事罪 - DOC3: 构成交通肇事罪 - DOC4: 涉嫌犯以危险方法危害公共安全罪 - DOC5: 明确被描述为劳动争议 - DOC6: 涉及合资、合作开发房地产合同纠纷 - DOC7: 属于一般合同纠纷 - DOC8: 涉及工程款和回购款的合同纠纷 - DOC9: 涉及借款合同纠纷和房屋买卖合同纠纷 Stage 2 structure selection and mapping: - The question asks to classify the documents based on specific case types. - We need to map the features to the provided case types. - The structure should be a mapping with the case types as keys and lists of document titles as values. - The case types are: '劳动争议，人事争议', '危害公共安全罪', '民事案由-合同，无因管理，不当得利纠纷', '适用特殊程序案件案由', '用益物权纠纷'. - We will create a mapping for each case type and include the relevant document titles.",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书1",
+        "判决文书2",
+        "判决文书3",
+        "判决文书4",
+        "判决文书5",
+        "判决文书6",
+        "判决文书7",
+        "判决文书8",
+        "判决文书9"
+      ],
+      "attributes": [
+        "case_type"
+      ],
+      "relation_types": [
+        "classified_as"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "劳动争议，人事争议",
+          "value": [
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "危害公共安全罪",
+          "value": [
+            "《判决文书4》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A1",
+          "DOC4:DOC4_A2",
+          "DOC4:DOC4_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "民事案由-合同，无因管理，不当得利纠纷",
+          "value": [
+            "《判决文书1》",
+            "《判决文书6》",
+            "《判决文书7》",
+            "《判决文书8》",
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC6:DOC6_A2",
+          "DOC6:DOC6_A3",
+          "DOC7:DOC7_A1",
+          "DOC7:DOC7_A2",
+          "DOC8:DOC8_A3",
+          "DOC8:DOC8_A5",
+          "DOC9:DOC9_A4",
+          "DOC9:DOC9_A5",
+          "DOC9:DOC9_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "适用特殊程序案件案由",
+          "value": []
+        },
+        "sources": []
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "用益物权纠纷",
+          "value": []
+        },
+        "sources": []
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及建设工程施工合同纠纷\n  - DOC2: 涉嫌犯交通肇事罪\n  - DOC3: 构成交通肇事罪\n  - DOC4: 涉嫌犯以危险方法危害公共安全罪\n  - DOC5: 明确被描述为劳动争议\n  - DOC6: 涉及合资、合作开发房地产合同纠纷\n  - DOC7: 属于一般合同纠纷\n  - DOC8: 涉及工程款和回购款的合同纠纷\n  - DOC9: 涉及借款合同纠纷和房屋买卖合同纠纷\n\n  Stage 2 structure selection and mapping:\n  - The question asks to classify the documents based on specific case types.\n  - We need to map the features to the provided case types.\n  - The structure should be a mapping with the case types as keys and lists of document titles as values.\n  - The case types are: '劳动争议，人事争议', '危害公共安全罪', '民事案由-合同，无因管理，不当得利纠纷', '适用特殊程序案件案由', '用益物权纠纷'.\n  - We will create a mapping for each case type and include the relevant document titles.\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书1\", \"判决文书2\", \"判决文书3\", \"判决文书4\", \"判决文书5\", \"判决文书6\", \"判决文书7\", \"判决文书8\", \"判决文书9\"],\n    \"attributes\": [\"case_type\"],\n    \"relation_types\": [\"classified_as\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"劳动争议，人事争议\",\n        \"value\": [\"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"危害公共安全罪\",\n        \"value\": [\"《判决文书4》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A1\", \"DOC4:DOC4_A2\", \"DOC4:DOC4_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"民事案由-合同，无因管理，不当得利纠纷\",\n        \"value\": [\"《判决文书1》\", \"《判决文书6》\", \"《判决文书7》\", \"《判决文书8》\", \"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC6:DOC6_A2\", \"DOC6:DOC6_A3\", \"DOC7:DOC7_A1\", \"DOC7:DOC7_A2\", \"DOC8:DOC8_A3\", \"DOC8:DOC8_A5\", \"DOC9:DOC9_A4\", \"DOC9:DOC9_A5\", \"DOC9:DOC9_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"适用特殊程序案件案由\",\n        \"value\": []\n      },\n      \"sources\": []\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"用益物权纠纷\",\n        \"value\": []\n      },\n      \"sources\": []\n    }\n  ]\n}\n</relations>"
+}

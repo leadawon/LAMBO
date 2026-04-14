@@ -1,0 +1,91 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及受贿罪和国有公司人员失职导致国有资产损失。 - DOC2: 涉及行政赔偿案件，特别是利息损失的再审申请。 - DOC3: 涉及贵州高院错误执行赔偿申请。 - DOC4: 涉及安徽省人民政府行政复议案件。 - DOC5: 涉及贪污罪和受贿罪。 - DOC6: 涉及一审法院错误理解审理与审查。 - DOC7: 涉及不予先行支付工伤保险待遇案件。 - DOC8: 涉及政府信息公开案件，对《工作规范（试行）》的合法性审查。 Stage 2 structure selection and mapping: - 结构类型应为“mapping”，因为需要将每个判决文书归类到指定的案由类别中。 - 根据特征，可以将DOC1归类为“贪污受贿罪”，DOC2归类为“非刑事赔偿-错误执行赔偿”，DOC3归类为“非刑事赔偿-错误执行赔偿”，DOC4归类为“行政行为-行政监督”，DOC5归类为“贪污受贿罪”，DOC6归类为“行政行为-行政监督”，DOC7归类为“行政主体-劳动和社会保障行政管理（劳动，社会保障）”，DOC8归类为“行政主体-行政检查（监察）”。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-行政检查（监察）",
+          "value": [
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC8:DOC8_A1",
+          "DOC8:DOC8_A4",
+          "DOC8:DOC8_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+          "value": [
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC7:DOC7_A2",
+          "DOC7:DOC7_A3",
+          "DOC7:DOC7_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政监督",
+          "value": [
+            "《判决文书4》",
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A1",
+          "DOC6:DOC6_A5"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "非刑事赔偿-错误执行赔偿",
+          "value": [
+            "《判决文书2》",
+            "《判决文书3》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC3:DOC3_A2",
+          "DOC3:DOC3_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "贪污受贿罪",
+          "value": [
+            "《判决文书1》",
+            "《判决文书5》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A3",
+          "DOC1:DOC1_A9",
+          "DOC5:DOC5_A1",
+          "DOC5:DOC5_A2"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及受贿罪和国有公司人员失职导致国有资产损失。\n  - DOC2: 涉及行政赔偿案件，特别是利息损失的再审申请。\n  - DOC3: 涉及贵州高院错误执行赔偿申请。\n  - DOC4: 涉及安徽省人民政府行政复议案件。\n  - DOC5: 涉及贪污罪和受贿罪。\n  - DOC6: 涉及一审法院错误理解审理与审查。\n  - DOC7: 涉及不予先行支付工伤保险待遇案件。\n  - DOC8: 涉及政府信息公开案件，对《工作规范（试行）》的合法性审查。\n\n  Stage 2 structure selection and mapping:\n  - 结构类型应为“mapping”，因为需要将每个判决文书归类到指定的案由类别中。\n  - 根据特征，可以将DOC1归类为“贪污受贿罪”，DOC2归类为“非刑事赔偿-错误执行赔偿”，DOC3归类为“非刑事赔偿-错误执行赔偿”，DOC4归类为“行政行为-行政监督”，DOC5归类为“贪污受贿罪”，DOC6归类为“行政行为-行政监督”，DOC7归类为“行政主体-劳动和社会保障行政管理（劳动，社会保障）”，DOC8归类为“行政主体-行政检查（监察）”。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-行政检查（监察）\",\n        \"value\": [\"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC8:DOC8_A1\", \"DOC8:DOC8_A4\", \"DOC8:DOC8_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\",\n        \"value\": [\"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC7:DOC7_A2\", \"DOC7:DOC7_A3\", \"DOC7:DOC7_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政监督\",\n        \"value\": [\"《判决文书4》\", \"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A1\", \"DOC6:DOC6_A5\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"非刑事赔偿-错误执行赔偿\",\n        \"value\": [\"《判决文书2》\", \"《判决文书3》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC3:DOC3_A2\", \"DOC3:DOC3_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"贪污受贿罪\",\n        \"value\": [\"《判决文书1》\", \"《判决文书5》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A3\", \"DOC1:DOC1_A9\", \"DOC5:DOC5_A1\", \"DOC5:DOC5_A2\"]\n    }\n  ]\n}\n</relations>"
+}

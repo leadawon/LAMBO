@@ -1,0 +1,101 @@
+{
+  "think": "Stage 1 — feature sheet: - DOC1: Extending Llama-3's Context Ten-Fold Overnight References: [4, 14, 5, 8, 9, 16, 2], [13], [6], [7], [1], [3], [17], [10] Citations: None - DOC2: Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon References: [29], [30], [16], [6], [5], [28], [20], [32], [18] Citations: None - DOC3: PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING References: [Su et al., 2021], [Chen et al., 2023a], [kaiokendev, 2023], [Peng & Quesnelle, 2023], [Peng et al., 2023], [Dao, 2023] Citations: None Stage 2 — structure selection and mapping: - Structure: \"mapping\" - Schema: - entities: [\"DOC1\", \"DOC2\", \"DOC3\"] - attributes: [\"Reference\", \"Citation\"] - relation_types: [\"reference\", \"citation\"] - Records: - DOC1: {\"Reference\": [\"[4]\", \"[14]\", \"[5]\", \"[8]\", \"[9]\", \"[16]\", \"[2]\", \"[13]\", \"[6]\", \"[7]\", \"[1]\", \"[3]\", \"[17]\", \"[10]\"], \"Citation\": []} - DOC2: {\"Reference\": [\"[29]\", \"[30]\", \"[16]\", \"[6]\", \"[5]\", \"[28]\", \"[20]\", \"[32]\", \"[18]\"], \"Citation\": []} - DOC3: {\"Reference\": [\"[Su et al., 2021]\", \"[Chen et al., 2023a]\", \"[kaiokendev, 2023]\", \"[Peng & Quesnelle, 2023]\", \"[Peng et al., 2023]\", \"[Dao, 2023]\"], \"Citation\": []}",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "DOC1",
+        "DOC2",
+        "DOC3"
+      ],
+      "attributes": [
+        "Reference",
+        "Citation"
+      ],
+      "relation_types": [
+        "reference",
+        "citation"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC1",
+          "value": {
+            "Reference": [
+              "[4]",
+              "[14]",
+              "[5]",
+              "[8]",
+              "[9]",
+              "[16]",
+              "[2]",
+              "[13]",
+              "[6]",
+              "[7]",
+              "[1]",
+              "[3]",
+              "[17]",
+              "[10]"
+            ],
+            "Citation": []
+          }
+        },
+        "sources": [
+          "DOC1:DOC1_A3",
+          "DOC1:DOC1_A4",
+          "DOC1:DOC1_A5",
+          "DOC1:DOC1_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC2",
+          "value": {
+            "Reference": [
+              "[29]",
+              "[30]",
+              "[16]",
+              "[6]",
+              "[5]",
+              "[28]",
+              "[20]",
+              "[32]",
+              "[18]"
+            ],
+            "Citation": []
+          }
+        },
+        "sources": [
+          "DOC2:DOC2_A3",
+          "DOC2:DOC2_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC3",
+          "value": {
+            "Reference": [
+              "[Su et al., 2021]",
+              "[Chen et al., 2023a]",
+              "[kaiokendev, 2023]",
+              "[Peng & Quesnelle, 2023]",
+              "[Peng et al., 2023]",
+              "[Dao, 2023]"
+            ],
+            "Citation": []
+          }
+        },
+        "sources": [
+          "DOC3:DOC3_A3",
+          "DOC3:DOC3_A4",
+          "DOC3:DOC3_A5"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 — feature sheet:\n  - DOC1: Extending Llama-3's Context Ten-Fold Overnight\n    References: [4, 14, 5, 8, 9, 16, 2], [13], [6], [7], [1], [3], [17], [10]\n    Citations: None\n  - DOC2: Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\n    References: [29], [30], [16], [6], [5], [28], [20], [32], [18]\n    Citations: None\n  - DOC3: PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\n    References: [Su et al., 2021], [Chen et al., 2023a], [kaiokendev, 2023], [Peng & Quesnelle, 2023], [Peng et al., 2023], [Dao, 2023]\n    Citations: None\n  \n  Stage 2 — structure selection and mapping:\n  - Structure: \"mapping\"\n  - Schema: \n    - entities: [\"DOC1\", \"DOC2\", \"DOC3\"]\n    - attributes: [\"Reference\", \"Citation\"]\n    - relation_types: [\"reference\", \"citation\"]\n  - Records:\n    - DOC1: {\"Reference\": [\"[4]\", \"[14]\", \"[5]\", \"[8]\", \"[9]\", \"[16]\", \"[2]\", \"[13]\", \"[6]\", \"[7]\", \"[1]\", \"[3]\", \"[17]\", \"[10]\"], \"Citation\": []}\n    - DOC2: {\"Reference\": [\"[29]\", \"[30]\", \"[16]\", \"[6]\", \"[5]\", \"[28]\", \"[20]\", \"[32]\", \"[18]\"], \"Citation\": []}\n    - DOC3: {\"Reference\": [\"[Su et al., 2021]\", \"[Chen et al., 2023a]\", \"[kaiokendev, 2023]\", \"[Peng & Quesnelle, 2023]\", \"[Peng et al., 2023]\", \"[Dao, 2023]\"], \"Citation\": []}\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"DOC1\", \"DOC2\", \"DOC3\"],\n    \"attributes\": [\"Reference\", \"Citation\"],\n    \"relation_types\": [\"reference\", \"citation\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC1\",\n        \"value\": {\n          \"Reference\": [\"[4]\", \"[14]\", \"[5]\", \"[8]\", \"[9]\", \"[16]\", \"[2]\", \"[13]\", \"[6]\", \"[7]\", \"[1]\", \"[3]\", \"[17]\", \"[10]\"],\n          \"Citation\": []\n        }\n      },\n      \"sources\": [\"DOC1:DOC1_A3\", \"DOC1:DOC1_A4\", \"DOC1:DOC1_A5\", \"DOC1:DOC1_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC2\",\n        \"value\": {\n          \"Reference\": [\"[29]\", \"[30]\", \"[16]\", \"[6]\", \"[5]\", \"[28]\", \"[20]\", \"[32]\", \"[18]\"],\n          \"Citation\": []\n        }\n      },\n      \"sources\": [\"DOC2:DOC2_A3\", \"DOC2:DOC2_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC3\",\n        \"value\": {\n          \"Reference\": [\"[Su et al., 2021]\", \"[Chen et al., 2023a]\", \"[kaiokendev, 2023]\", \"[Peng & Quesnelle, 2023]\", \"[Peng et al., 2023]\", \"[Dao, 2023]\"],\n          \"Citation\": []\n        }\n      },\n      \"sources\": [\"DOC3:DOC3_A3\", \"DOC3:DOC3_A4\", \"DOC3:DOC3_A5\"]\n    }\n  ]\n}\n</relations>"
+}

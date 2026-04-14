@@ -1,0 +1,118 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 涉及行政撤销 - DOC2: 涉及行政撤销 - DOC3: 涉及劳动和社会保障行政管理 - DOC4: 涉及行政强制和行政处罚 - DOC5: 涉及劳动和社会保障行政管理 - DOC6: 涉及贪污受贿罪 - DOC7: 涉及行政处罚 - DOC8: 涉及行政撤销 - DOC9: 涉及房屋拆迁管理 - DOC10: 涉及劳动和社会保障行政管理 - DOC11: 涉及房屋拆迁管理 - DOC12: 涉及房屋拆迁管理 - DOC13: 无明显特征 - DOC14: 涉及行政强制 - DOC15: 涉及劳动和社会保障行政管理 - DOC16: 无明显特征 Stage 2 structure selection and mapping: - 结构类型为\"mapping\"，因为需要将每个判决文书映射到特定的案由类别。 - 根据提供的案由类别，构建映射关系。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "判决文书"
+      ],
+      "attributes": [
+        "案由"
+      ],
+      "relation_types": [
+        "属于"
+      ]
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-房屋拆迁管理（拆迁）",
+          "value": [
+            "《判决文书9》",
+            "《判决文书11》",
+            "《判决文书12》"
+          ]
+        },
+        "sources": [
+          "DOC9:DOC9_A2",
+          "DOC11:DOC11_A2",
+          "DOC12:DOC12_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政强制",
+          "value": [
+            "《判决文书4》",
+            "《判决文书14》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A2",
+          "DOC14:DOC14_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+          "value": [
+            "《判决文书3》",
+            "《判决文书5》",
+            "《判决文书10》",
+            "《判决文书15》"
+          ]
+        },
+        "sources": [
+          "DOC3:DOC3_A1",
+          "DOC5:DOC5_A1",
+          "DOC10:DOC10_A2",
+          "DOC15:DOC15_A1"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "贪污受贿罪",
+          "value": [
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC6:DOC6_A1"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政撤销",
+          "value": [
+            "《判决文书1》",
+            "《判决文书2》",
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC2:DOC2_A2",
+          "DOC8:DOC8_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政处罚",
+          "value": [
+            "《判决文书4》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A5",
+          "DOC7:DOC7_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政征收",
+          "value": []
+        },
+        "sources": []
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 涉及行政撤销\n  - DOC2: 涉及行政撤销\n  - DOC3: 涉及劳动和社会保障行政管理\n  - DOC4: 涉及行政强制和行政处罚\n  - DOC5: 涉及劳动和社会保障行政管理\n  - DOC6: 涉及贪污受贿罪\n  - DOC7: 涉及行政处罚\n  - DOC8: 涉及行政撤销\n  - DOC9: 涉及房屋拆迁管理\n  - DOC10: 涉及劳动和社会保障行政管理\n  - DOC11: 涉及房屋拆迁管理\n  - DOC12: 涉及房屋拆迁管理\n  - DOC13: 无明显特征\n  - DOC14: 涉及行政强制\n  - DOC15: 涉及劳动和社会保障行政管理\n  - DOC16: 无明显特征\n\n  Stage 2 structure selection and mapping:\n  - 结构类型为\"mapping\"，因为需要将每个判决文书映射到特定的案由类别。\n  - 根据提供的案由类别，构建映射关系。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"判决文书\"],\n    \"attributes\": [\"案由\"],\n    \"relation_types\": [\"属于\"]\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-房屋拆迁管理（拆迁）\",\n        \"value\": [\"《判决文书9》\", \"《判决文书11》\", \"《判决文书12》\"]\n      },\n      \"sources\": [\"DOC9:DOC9_A2\", \"DOC11:DOC11_A2\", \"DOC12:DOC12_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政强制\",\n        \"value\": [\"《判决文书4》\", \"《判决文书14》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A2\", \"DOC14:DOC14_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\",\n        \"value\": [\"《判决文书3》\", \"《判决文书5》\", \"《判决文书10》\", \"《判决文书15》\"]\n      },\n      \"sources\": [\"DOC3:DOC3_A1\", \"DOC5:DOC5_A1\", \"DOC10:DOC10_A2\", \"DOC15:DOC15_A1\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"贪污受贿罪\",\n        \"value\": [\"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC6:DOC6_A1\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政撤销\",\n        \"value\": [\"《判决文书1》\", \"《判决文书2》\", \"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC2:DOC2_A2\", \"DOC8:DOC8_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政处罚\",\n        \"value\": [\"《判决文书4》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A5\", \"DOC7:DOC7_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政征收\",\n        \"value\": []\n      },\n      \"sources\": []\n    }\n  ]\n}\n</relations>"
+}

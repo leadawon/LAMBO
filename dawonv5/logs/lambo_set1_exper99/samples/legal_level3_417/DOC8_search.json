@@ -1,0 +1,102 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "opened_anchor_ids": [
+    "DOC8_A2"
+  ],
+  "items": [
+    {
+      "fact": "本案为行政案件",
+      "entities": [
+        "新疆某旅游开发有限公司",
+        "昌吉市应急管理局"
+      ],
+      "evidence_span": "不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决",
+      "relevance": "案件类型",
+      "source_doc_id": "DOC8",
+      "source_anchor_id": "DOC8_A2",
+      "source_anchor_role": "value_evidence,case_identity,decision_evidence",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC8_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_case",
+          "target_anchor_id": "DOC8_A1",
+          "weight": 2.8,
+          "reason": "shared case cue ['判决文书8']"
+        },
+        {
+          "relation_type": "disambiguates",
+          "target_anchor_id": "DOC8_A1",
+          "weight": 2.8,
+          "reason": "binding anchor disambiguates evidence"
+        },
+        {
+          "relation_type": "likely_same_entity",
+          "target_anchor_id": "DOC8_A1",
+          "weight": 2.2,
+          "reason": "shared entity ['判决文书8']"
+        },
+        {
+          "relation_type": "same_section",
+          "target_anchor_id": "DOC8_A1",
+          "weight": 2.0,
+          "reason": "same section_path"
+        },
+        {
+          "relation_type": "prev_next",
+          "target_anchor_id": "DOC8_A1",
+          "weight": 1.4,
+          "reason": "previous anchor"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "为了确定《判决文书8》属于哪种类型的案件，我需要查看案件的具体情况。从锚点DOC8_A2的摘要中可以看到，该案件涉及罚款纠纷，并且昌吉市应急管理局作为一方当事人，这表明它可能是一个行政案件。因此，我需要打开锚点DOC8_A2来确认这一点。",
+        "action": "open",
+        "anchor_id": "DOC8_A2",
+        "need": "案件类型",
+        "reason": "通过查看案件具体情况来判断案件类型",
+        "raw_text": "<think>\n为了确定《判决文书8》属于哪种类型的案件，我需要查看案件的具体情况。从锚点DOC8_A2的摘要中可以看到，该案件涉及罚款纠纷，并且昌吉市应急管理局作为一方当事人，这表明它可能是一个行政案件。因此，我需要打开锚点DOC8_A2来确认这一点。\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC8_A2\",\"need\":\"案件类型\",\"reason\":\"通过查看案件具体情况来判断案件类型\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC8_A2",
+      "info": {
+        "anchor_title": "案件情况",
+        "char_count": 275
+      },
+      "extract": {
+        "think": "我寻找了案件类型的描述。从文本中可以看出，这是涉及罚款的案件，并且提到了行政判决，因此可以判断这是一个行政案件。这个信息有助于确定该判决文书属于哪种案件类型。",
+        "item_count": 1
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "已经确定了《判决文书8》属于行政案件。现在需要收集证据来确认该判决文书是否涉及其他类型的案件，如民事案件、赔偿案件、执行案件或刑事案件。但是，从已有的锚点摘要来看，并没有提到这些案件类型的信息。因此，可以认为该判决文书只是一份行政案件。",
+        "action": "stop",
+        "anchor_id": "",
+        "need": "",
+        "reason": "已确定《判决文书8》为行政案件，且现有信息不足以证明其涉及其他案件类型。",
+        "raw_text": "<think>已经确定了《判决文书8》属于行政案件。现在需要收集证据来确认该判决文书是否涉及其他类型的案件，如民事案件、赔偿案件、执行案件或刑事案件。但是，从已有的锚点摘要来看，并没有提到这些案件类型的信息。因此，可以认为该判决文书只是一份行政案件。</think>\n<search>{\"action\":\"stop\",\"reason\":\"已确定《判决文书8》为行政案件，且现有信息不足以证明其涉及其他案件类型。\"}</search>",
+        "relation_frontier_ids": [
+          "DOC8_A1"
+        ]
+      },
+      "anchor_id": "",
+      "info": null,
+      "extract": null
+    }
+  ],
+  "tagged_trace": "<think>为了确定《判决文书8》属于哪种类型的案件，我需要查看案件的具体情况。从锚点DOC8_A2的摘要中可以看到，该案件涉及罚款纠纷，并且昌吉市应急管理局作为一方当事人，这表明它可能是一个行政案件。因此，我需要打开锚点DOC8_A2来确认这一点。</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC8_A2\", \"need\": \"案件类型\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_title\": \"案件情况\"}</info>\n<think>我寻找了案件类型的描述。从文本中可以看出，这是涉及罚款的案件，并且提到了行政判决，因此可以判断这是一个行政案件。这个信息有助于确定该判决文书属于哪种案件类型。</think>\n<extracted>{\"items\": [{\"fact\": \"本案为行政案件\", \"entities\": [\"新疆某旅游开发有限公司\", \"昌吉市应急管理局\"], \"evidence_span\": \"不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决\", \"relevance\": \"案件类型\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"source_anchor_role\": \"value_evidence,case_identity,decision_evidence\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC8_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_case\", \"target_anchor_id\": \"DOC8_A1\", \"weight\": 2.8, \"reason\": \"shared case cue ['判决文书8']\"}, {\"relation_type\": \"disambiguates\", \"target_anchor_id\": \"DOC8_A1\", \"weight\": 2.8, \"reason\": \"binding anchor disambiguates evidence\"}, {\"relation_type\": \"likely_same_entity\", \"target_anchor_id\": \"DOC8_A1\", \"weight\": 2.2, \"reason\": \"shared entity ['判决文书8']\"}, {\"relation_type\": \"same_section\", \"target_anchor_id\": \"DOC8_A1\", \"weight\": 2.0, \"reason\": \"same section_path\"}, {\"relation_type\": \"prev_next\", \"target_anchor_id\": \"DOC8_A1\", \"weight\": 1.4, \"reason\": \"previous anchor\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>已经确定了《判决文书8》属于行政案件。现在需要收集证据来确认该判决文书是否涉及其他类型的案件，如民事案件、赔偿案件、执行案件或刑事案件。但是，从已有的锚点摘要来看，并没有提到这些案件类型的信息。因此，可以认为该判决文书只是一份行政案件。</think>\n<search>{\"action\": \"stop\", \"reason\": \"已确定《判决文书8》为行政案件，且现有信息不足以证明其涉及其他案件类型。\"}</search>"
+}
