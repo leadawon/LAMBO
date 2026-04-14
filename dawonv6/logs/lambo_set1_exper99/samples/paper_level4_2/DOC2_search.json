@@ -1,0 +1,296 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR",
+  "opened_anchor_ids": [
+    "DOC2_A7",
+    "DOC2_A1",
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4",
+    "DOC2_A5",
+    "DOC2_A6"
+  ],
+  "items": [
+    {
+      "fact": "Contrastive loss has been utilized extensively in self-supervised computer vision and speech applications.",
+      "entities": [
+        "contrastive loss",
+        "[1, 2, 3, 4]"
+      ],
+      "evidence_span": "The contrastive loss, which has been utilized extensively in selfsupervised computer vision and speech applications [1, 2, 3, 4],",
+      "relevance": "citation",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_target_paper",
+          "target_anchor_id": "DOC2_A7",
+          "weight": 2.8,
+          "reason": "shared paper target ['CONTRASTIVE', 'SEMI-SUPERVISED']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    },
+    {
+      "fact": "Supervised learning of visual objects has utilized contrastive loss.",
+      "entities": [
+        "supervised learning of visual objects",
+        "[5]"
+      ],
+      "evidence_span": "It has also been utilized for supervised learning of visual objects [5].",
+      "relevance": "citation",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "source_anchor_role": "value_evidence,citation_direction,entity_binding",
+      "source_relation_context": [
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A6",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A5",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A4",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A3",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "supports",
+          "target_anchor_id": "DOC2_A1",
+          "weight": 3.4,
+          "reason": "evidence supports binding/identity anchor"
+        },
+        {
+          "relation_type": "same_target_paper",
+          "target_anchor_id": "DOC2_A7",
+          "weight": 2.8,
+          "reason": "shared paper target ['CONTRASTIVE', 'SEMI-SUPERVISED']"
+        }
+      ],
+      "provenance_strength": "strong",
+      "disambiguation_needed": false
+    }
+  ],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "To construct a citation chain, I need to identify citations within the document that point to other papers in the collection. I will start with the \"References\" section (DOC2_A7) since it is likely to contain citations to other papers.",
+        "action": "open",
+        "anchor_id": "DOC2_A7",
+        "need": "citations to other papers",
+        "reason": "The references section typically contains citations to other relevant papers.",
+        "raw_text": "<think>\nTo construct a citation chain, I need to identify citations within the document that point to other papers in the collection. I will start with the \"References\" section (DOC2_A7) since it is likely to contain citations to other papers.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A7\",\"need\":\"citations to other papers\",\"reason\":\"The references section typically contains citations to other relevant papers.\"}\n</search>",
+        "relation_frontier_ids": []
+      },
+      "anchor_id": "DOC2_A7",
+      "info": {
+        "anchor_title": "References",
+        "char_count": 5639
+      },
+      "extract": {
+        "think": "The anchor contains a list of references cited in the current paper. Each reference is a potential link in a citation chain. Since the task requires identifying the longest citation chain among the provided papers, each citation is recorded as a potential starting point or continuation of a chain. The relevance of each item is that it could be part of a citation chain, helping to establish the sequence of citations.",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "To construct a citation chain, I need to identify citations between the papers. I will start with the abstract since it often contains references to foundational work. The abstract might also provide clues about which papers cite this one.",
+        "action": "open",
+        "anchor_id": "DOC2_A1",
+        "need": "citation information",
+        "reason": "The abstract often contains references to foundational work and can provide clues about which papers cite this one.",
+        "raw_text": "<think>\nTo construct a citation chain, I need to identify citations between the papers. I will start with the abstract since it often contains references to foundational work. The abstract might also provide clues about which papers cite this one.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A1\",\"need\":\"citation information\",\"reason\":\"The abstract often contains references to foundational work and can provide clues about which papers cite this one.\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC2_A6",
+          "DOC2_A5",
+          "DOC2_A4",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A1"
+        ]
+      },
+      "anchor_id": "DOC2_A1",
+      "info": {
+        "anchor_title": "Abstract",
+        "char_count": 1301
+      },
+      "extract": {
+        "think": "The abstract does not contain any explicit citation information or references to other papers, so there are no items to record for constructing a citation chain.",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "To construct a citation chain, I need to identify citations within the document that link to other papers. So far, I haven't found any citations in the opened anchors. I will start by examining the Introduction section, as it often contains citations to foundational work.",
+        "action": "open",
+        "anchor_id": "DOC2_A2",
+        "need": "citations to other papers",
+        "reason": "The introduction typically cites foundational work that could be part of the citation chain.",
+        "raw_text": "<think>\nTo construct a citation chain, I need to identify citations within the document that link to other papers. So far, I haven't found any citations in the opened anchors. I will start by examining the Introduction section, as it often contains citations to foundational work.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A2\",\"need\":\"citations to other papers\",\"reason\":\"The introduction typically cites foundational work that could be part of the citation chain.\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC2_A6",
+          "DOC2_A5",
+          "DOC2_A4",
+          "DOC2_A3",
+          "DOC2_A2"
+        ]
+      },
+      "anchor_id": "DOC2_A2",
+      "info": {
+        "anchor_title": "Introduction",
+        "char_count": 4579
+      },
+      "extract": {
+        "think": "I looked for citations to other papers within the introduction section of the document. I found multiple citations listed, such as [1, 2, 3, 4] for contrastive loss usage and [5] for supervised learning of visual objects. These citations are relevant as they may contribute to identifying the citation chain among the provided papers.",
+        "item_count": 2
+      }
+    },
+    {
+      "round_index": 4,
+      "plan": {
+        "think": "The current evidence does not provide any information about the citation relationships between the papers. To construct a citation chain, I need to find citations within the document that reference other papers in the collection. I will start by examining the Method section (DOC2_A3) since it often contains references to foundational methods and techniques used in the paper, which could include citations to other papers in the collection.",
+        "action": "open",
+        "anchor_id": "DOC2_A3",
+        "need": "citation relationships",
+        "reason": "The Method section often contains references to foundational methods and techniques used in the paper, which could include citations to other papers in the collection.",
+        "raw_text": "<think>\nThe current evidence does not provide any information about the citation relationships between the papers. To construct a citation chain, I need to find citations within the document that reference other papers in the collection. I will start by examining the Method section (DOC2_A3) since it often contains references to foundational methods and techniques used in the paper, which could include citations to other papers in the collection.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A3\",\"need\":\"citation relationships\",\"reason\":\"The Method section often contains references to foundational methods and techniques used in the paper, which could include citations to other papers in the collection.\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC2_A6",
+          "DOC2_A5",
+          "DOC2_A4",
+          "DOC2_A3"
+        ]
+      },
+      "anchor_id": "DOC2_A3",
+      "info": {
+        "anchor_title": "Method",
+        "char_count": 7562
+      },
+      "extract": {
+        "think": "I looked for citation relationships within the provided text. The text mentions several citations, such as [2], [24], and [25]. However, none of these citations directly contribute to forming a citation chain among the provided papers. Therefore, there are no items worth recording for the citation chain task.",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 5,
+      "plan": {
+        "think": "The current evidence does not provide any information about the citation chain among the papers. I need to find citations within the document that link to other papers in the collection. The anchor DOC2_A4 might contain some citations since it discusses the experimental setup and data used, which could include references to other papers. I will open this anchor to look for citations.",
+        "action": "open",
+        "anchor_id": "DOC2_A4",
+        "need": "citation links to other papers",
+        "reason": "to identify the citation chain among the provided papers",
+        "raw_text": "<think>\nThe current evidence does not provide any information about the citation chain among the papers. I need to find citations within the document that link to other papers in the collection. The anchor DOC2_A4 might contain some citations since it discusses the experimental setup and data used, which could include references to other papers. I will open this anchor to look for citations.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A4\",\"need\":\"citation links to other papers\",\"reason\":\"to identify the citation chain among the provided papers\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC2_A6",
+          "DOC2_A5",
+          "DOC2_A4"
+        ]
+      },
+      "anchor_id": "DOC2_A4",
+      "info": {
+        "anchor_title": "Data and Experiments",
+        "char_count": 4883
+      },
+      "extract": {
+        "think": "The anchor primarily discusses the data, model details, and training procedures used in the study. It mentions several citations ([27], [28], [24], [29], [30], [31]), but none of these citations directly link to other papers in the provided collection. Therefore, there are no new items to add to the citation chain based on the content of this anchor.",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 6,
+      "plan": {
+        "think": "The current evidence does not provide a clear citation chain among the papers. I need to find citations between the papers mentioned in the document to establish a citation chain. The anchor \"Results and Discussion\" might contain information about citations to other papers in the document, which could help me build the citation chain.",
+        "action": "open",
+        "anchor_id": "DOC2_A5",
+        "need": "citation relationships",
+        "reason": "to identify the citation chain among the papers",
+        "raw_text": "<think>\nThe current evidence does not provide a clear citation chain among the papers. I need to find citations between the papers mentioned in the document to establish a citation chain. The anchor \"Results and Discussion\" might contain information about citations to other papers in the document, which could help me build the citation chain.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A5\",\"need\":\"citation relationships\",\"reason\":\"to identify the citation chain among the papers\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC2_A6",
+          "DOC2_A5"
+        ]
+      },
+      "anchor_id": "DOC2_A5",
+      "info": {
+        "anchor_title": "Results and Discussion",
+        "char_count": 6339
+      },
+      "extract": {
+        "think": "I looked for citation relationships within the provided text. The text primarily discusses experimental results and methodologies related to contrastive semi-supervised learning for ASR. While there are citations to other works ([5], [4.2], [9], [15], [32], [12]), none of these citations directly establish a linear citation chain among the provided papers. Therefore, no items were recorded as they do not contribute to constructing the requested citation chain.",
+        "item_count": 0
+      }
+    },
+    {
+      "round_index": 7,
+      "plan": {
+        "think": "The current evidence does not provide a clear citation chain among the papers. The information gathered so far is about the use of contrastive loss in different contexts but does not establish a citation relationship between the papers. To identify a citation chain, I need to find explicit citations between the papers listed in the document map. Since all the anchors except DOC2_A6 have already been opened, I will check DOC2_A6 to see if it provides any citation information that could help establish a chain.",
+        "action": "open",
+        "anchor_id": "DOC2_A6",
+        "need": "citation information",
+        "reason": "to identify the citation chain among the papers",
+        "raw_text": "<think>\nThe current evidence does not provide a clear citation chain among the papers. The information gathered so far is about the use of contrastive loss in different contexts but does not establish a citation relationship between the papers. To identify a citation chain, I need to find explicit citations between the papers listed in the document map. Since all the anchors except DOC2_A6 have already been opened, I will check DOC2_A6 to see if it provides any citation information that could help establish a chain.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A6\",\"need\":\"citation information\",\"reason\":\"to identify the citation chain among the papers\"}\n</search>",
+        "relation_frontier_ids": [
+          "DOC2_A6"
+        ]
+      },
+      "anchor_id": "DOC2_A6",
+      "info": {
+        "anchor_title": "Conclusion",
+        "char_count": 645
+      },
+      "extract": {
+        "think": "The anchor text primarily discusses the performance and application of Contrastive Semi-supervised Learning (CSL) in ASR pre-training. It does not contain any explicit citation information that could contribute to the citation chain. Therefore, there are no items worth recording for the given task.",
+        "item_count": 0
+      }
+    }
+  ],
+  "tagged_trace": "<think>To construct a citation chain, I need to identify citations within the document that point to other papers in the collection. I will start with the \"References\" section (DOC2_A7) since it is likely to contain citations to other papers.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A7\", \"need\": \"citations to other papers\", \"relation_frontier_ids\": []}</search>\n<info>{\"anchor_id\": \"DOC2_A7\", \"anchor_title\": \"References\"}</info>\n<think>The anchor contains a list of references cited in the current paper. Each reference is a potential link in a citation chain. Since the task requires identifying the longest citation chain among the provided papers, each citation is recorded as a potential starting point or continuation of a chain. The relevance of each item is that it could be part of a citation chain, helping to establish the sequence of citations.</think>\n<extracted>{\"items\": []}</extracted>\n<think>To construct a citation chain, I need to identify citations between the papers. I will start with the abstract since it often contains references to foundational work. The abstract might also provide clues about which papers cite this one.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A1\", \"need\": \"citation information\", \"relation_frontier_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\", \"DOC2_A1\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_title\": \"Abstract\"}</info>\n<think>The abstract does not contain any explicit citation information or references to other papers, so there are no items to record for constructing a citation chain.</think>\n<extracted>{\"items\": []}</extracted>\n<think>To construct a citation chain, I need to identify citations within the document that link to other papers. So far, I haven't found any citations in the opened anchors. I will start by examining the Introduction section, as it often contains citations to foundational work.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A2\", \"need\": \"citations to other papers\", \"relation_frontier_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\", \"DOC2_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_title\": \"Introduction\"}</info>\n<think>I looked for citations to other papers within the introduction section of the document. I found multiple citations listed, such as [1, 2, 3, 4] for contrastive loss usage and [5] for supervised learning of visual objects. These citations are relevant as they may contribute to identifying the citation chain among the provided papers.</think>\n<extracted>{\"items\": [{\"fact\": \"Contrastive loss has been utilized extensively in self-supervised computer vision and speech applications.\", \"entities\": [\"contrastive loss\", \"[1, 2, 3, 4]\"], \"evidence_span\": \"The contrastive loss, which has been utilized extensively in selfsupervised computer vision and speech applications [1, 2, 3, 4],\", \"relevance\": \"citation\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 2.8, \"reason\": \"shared paper target ['CONTRASTIVE', 'SEMI-SUPERVISED']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}, {\"fact\": \"Supervised learning of visual objects has utilized contrastive loss.\", \"entities\": [\"supervised learning of visual objects\", \"[5]\"], \"evidence_span\": \"It has also been utilized for supervised learning of visual objects [5].\", \"relevance\": \"citation\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"source_anchor_role\": \"value_evidence,citation_direction,entity_binding\", \"source_relation_context\": [{\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A6\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A5\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A4\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A3\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"supports\", \"target_anchor_id\": \"DOC2_A1\", \"weight\": 3.4, \"reason\": \"evidence supports binding/identity anchor\"}, {\"relation_type\": \"same_target_paper\", \"target_anchor_id\": \"DOC2_A7\", \"weight\": 2.8, \"reason\": \"shared paper target ['CONTRASTIVE', 'SEMI-SUPERVISED']\"}], \"provenance_strength\": \"strong\", \"disambiguation_needed\": false}]}</extracted>\n<think>The current evidence does not provide any information about the citation relationships between the papers. To construct a citation chain, I need to find citations within the document that reference other papers in the collection. I will start by examining the Method section (DOC2_A3) since it often contains references to foundational methods and techniques used in the paper, which could include citations to other papers in the collection.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A3\", \"need\": \"citation relationships\", \"relation_frontier_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\", \"DOC2_A3\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A3\", \"anchor_title\": \"Method\"}</info>\n<think>I looked for citation relationships within the provided text. The text mentions several citations, such as [2], [24], and [25]. However, none of these citations directly contribute to forming a citation chain among the provided papers. Therefore, there are no items worth recording for the citation chain task.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current evidence does not provide any information about the citation chain among the papers. I need to find citations within the document that link to other papers in the collection. The anchor DOC2_A4 might contain some citations since it discusses the experimental setup and data used, which could include references to other papers. I will open this anchor to look for citations.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A4\", \"need\": \"citation links to other papers\", \"relation_frontier_ids\": [\"DOC2_A6\", \"DOC2_A5\", \"DOC2_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A4\", \"anchor_title\": \"Data and Experiments\"}</info>\n<think>The anchor primarily discusses the data, model details, and training procedures used in the study. It mentions several citations ([27], [28], [24], [29], [30], [31]), but none of these citations directly link to other papers in the provided collection. Therefore, there are no new items to add to the citation chain based on the content of this anchor.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current evidence does not provide a clear citation chain among the papers. I need to find citations between the papers mentioned in the document to establish a citation chain. The anchor \"Results and Discussion\" might contain information about citations to other papers in the document, which could help me build the citation chain.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A5\", \"need\": \"citation relationships\", \"relation_frontier_ids\": [\"DOC2_A6\", \"DOC2_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A5\", \"anchor_title\": \"Results and Discussion\"}</info>\n<think>I looked for citation relationships within the provided text. The text primarily discusses experimental results and methodologies related to contrastive semi-supervised learning for ASR. While there are citations to other works ([5], [4.2], [9], [15], [32], [12]), none of these citations directly establish a linear citation chain among the provided papers. Therefore, no items were recorded as they do not contribute to constructing the requested citation chain.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current evidence does not provide a clear citation chain among the papers. The information gathered so far is about the use of contrastive loss in different contexts but does not establish a citation relationship between the papers. To identify a citation chain, I need to find explicit citations between the papers listed in the document map. Since all the anchors except DOC2_A6 have already been opened, I will check DOC2_A6 to see if it provides any citation information that could help establish a chain.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A6\", \"need\": \"citation information\", \"relation_frontier_ids\": [\"DOC2_A6\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A6\", \"anchor_title\": \"Conclusion\"}</info>\n<think>The anchor text primarily discusses the performance and application of Contrastive Semi-supervised Learning (CSL) in ASR pre-training. It does not contain any explicit citation information that could contribute to the citation chain. Therefore, there are no items worth recording for the given task.</think>\n<extracted>{\"items\": []}</extracted>"
+}
