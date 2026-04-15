@@ -1,0 +1,132 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "selected_anchor_ids": [
+    "DOC2_A2",
+    "DOC2_A3",
+    "DOC2_A4"
+  ],
+  "final_current_query": "是否有其他案由涉及此判决文书？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到给定的案由类别中",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A2",
+        "candidate_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5"
+        ]
+      },
+      "anchor_id": "DOC2_A2",
+      "plan_think": "The current document seems to involve a dispute over liability between a company and an individual, suggesting it might fall under '侵权责任纠纷'. I will inspect the next anchor to confirm this and look for more specific details that could help categorize the document.",
+      "info": {
+        "anchor_id": "DOC2_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "再审申请人某某万科分店因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向本院申请再审。",
+        "text": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。"
+      },
+      "extract_think": "该段文字描述了再审申请人某某万科分店与被申请人梁某及原审被告李某之间的提供劳务者受害责任纠纷案件，表明该案属于“侵权责任纠纷”。没有足够的信息来确定是否还有其他案由。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "侵权责任纠纷",
+            "value": "《判决文书2》",
+            "normalized_value": "判决文书2",
+            "evidence_text": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否有其他案由涉及此判决文书？"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "是否有其他案由涉及此判决文书？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A3",
+        "candidate_anchor_ids": [
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5"
+        ]
+      },
+      "anchor_id": "DOC2_A3",
+      "plan_think": "已确认《判决文书2》属于“侵权责任纠纷”，但需进一步检查文档以确保没有其他相关案由。",
+      "info": {
+        "anchor_id": "DOC2_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "再审申请理由",
+        "summary": "某某万科分店认为原审判决认定的基本事实缺乏证据证明，包括划分过错比例错误以及认定其义务缺乏证据证明。",
+        "text": "某某万科分店申请再审称，原审判决认定的基本事实缺乏证据证明。1．划分过错比例错误。梁某是专门从事保洁服务的人员，理应自备劳务工具和劳保用具，并正确操作使用。如需某某万科分店提供特殊工具，应当事先提出，若某某万科分店无法提供劳务工具和劳动保障，可以拒绝提供保洁服务。梁某未自备劳务工具，因过于自信及心存侥幸造成损害，应当承担主要责任。某某万科分店系未成立的非自然人，仅是未及时清理装修遗留物品及未禁止梁某使用，承担80％责任过重。2．原审判决认定某某万科分店的义务缺乏证据证明。梁某是长期从事保洁工作的熟练工作者，知晓劳务内容及相关风险，可以使用长手柄工具或安全带吊装完成保洁工作，而非必须使用梯子，且梁某意识到无法安全提供保洁服务时未拒绝提供服务，原审判决认定某某万科分店应当进行必要的安全生产培训、安全提醒等管理义务及提供安全生产条件等保障义务，有失公允。综上，某某万科分店依据《中华人民共和国民事诉讼法》第二百一十一条第一项、第二项、第六项规定申请再审。"
+      },
+      "extract_think": "该段文字详细描述了再审申请的理由，但并未提及除“侵权责任纠纷”之外的其他案由。因此，目前没有足够的信息来确定是否存在其他案由。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否有其他案由涉及此判决文书？"
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "是否有其他案由涉及此判决文书？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A4",
+        "candidate_anchor_ids": [
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6"
+        ]
+      },
+      "anchor_id": "DOC2_A4",
+      "plan_think": "考虑到当前文档已经确认为“侵权责任纠纷”，并且在之前的检索中没有发现其他案由的证据，我将检查剩余的部分以确保没有遗漏任何可能涉及其他案由的信息。",
+      "info": {
+        "anchor_id": "DOC2_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "被申请人答辩",
+        "summary": "梁某辩称原审判决认定事实清楚，适用法律正确，应当驳回某某万科分店的再审申请。",
+        "text": "梁某辩称，原审判决认定事实清楚，适用法律正确，应当驳回某某万科分店的再审申请。"
+      },
+      "extract_think": "该段文字是被申请人梁某的答辩意见，强调原审判决的事实认定和法律适用均无误，并要求驳回再审申请。这段文字并没有提到其他案由，因此不足以提供更多关于分类的信息。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "是否有其他案由涉及此判决文书？"
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "侵权责任纠纷",
+      "value": "《判决文书2》",
+      "normalized_value": "判决文书2",
+      "evidence_text": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The current document seems to involve a dispute over liability between a company and an individual, suggesting it might fall under '侵权责任纠纷'. I will inspect the next anchor to confirm this and look for more specific details that could help categorize the document.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人某某万科分店因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段文字描述了再审申请人某某万科分店与被申请人梁某及原审被告李某之间的提供劳务者受害责任纠纷案件，表明该案属于“侵权责任纠纷”。没有足够的信息来确定是否还有其他案由。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"侵权责任纠纷\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"是否有其他案由涉及此判决文书？\"}</retrieve>\n<think>已确认《判决文书2》属于“侵权责任纠纷”，但需进一步检查文档以确保没有其他相关案由。</think>\n<search>{\"current_query\": \"是否有其他案由涉及此判决文书？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A3\", \"candidate_anchor_ids\": [\"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"再审申请理由\", \"summary\": \"某某万科分店认为原审判决认定的基本事实缺乏证据证明，包括划分过错比例错误以及认定其义务缺乏证据证明。\", \"text\": \"某某万科分店申请再审称，原审判决认定的基本事实缺乏证据证明。1．划分过错比例错误。梁某是专门从事保洁服务的人员，理应自备劳务工具和劳保用具，并正确操作使用。如需某某万科分店提供特殊工具，应当事先提出，若某某万科分店无法提供劳务工具和劳动保障，可以拒绝提供保洁服务。梁某未自备劳务工具，因过于自信及心存侥幸造成损害，应当承担主要责任。某某万科分店系未成立的非自然人，仅是未及时清理装修遗留物品及未禁止梁某使用，承担80％责任过重。2．原审判决认定某某万科分店的义务缺乏证据证明。梁某是长期从事保洁工作的熟练工作者，知晓劳务内容及相关风险，可以使用长手柄工具或安全带吊装完成保洁工作，而非必须使用梯子，且梁某意识到无法安全提供保洁服务时未拒绝提供服务，原审判决认定某某万科分店应当进行必要的安全生产培训、安全提醒等管理义务及提供安全生产条件等保障义务，有失公允。综上，某某万科分店依据《中华人民共和国民事诉讼法》第二百一十一条第一项、第二项、第六项规定申请再审。\"}</info>\n<think>该段文字详细描述了再审申请的理由，但并未提及除“侵权责任纠纷”之外的其他案由。因此，目前没有足够的信息来确定是否存在其他案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由涉及此判决文书？\"}</retrieve>\n<think>考虑到当前文档已经确认为“侵权责任纠纷”，并且在之前的检索中没有发现其他案由的证据，我将检查剩余的部分以确保没有遗漏任何可能涉及其他案由的信息。</think>\n<search>{\"current_query\": \"是否有其他案由涉及此判决文书？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A4\", \"candidate_anchor_ids\": [\"DOC2_A4\", \"DOC2_A5\", \"DOC2_A6\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"被申请人答辩\", \"summary\": \"梁某辩称原审判决认定事实清楚，适用法律正确，应当驳回某某万科分店的再审申请。\", \"text\": \"梁某辩称，原审判决认定事实清楚，适用法律正确，应当驳回某某万科分店的再审申请。\"}</info>\n<think>该段文字是被申请人梁某的答辩意见，强调原审判决的事实认定和法律适用均无误，并要求驳回再审申请。这段文字并没有提到其他案由，因此不足以提供更多关于分类的信息。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由涉及此判决文书？\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document seems to involve a dispute over liability between a company and an individual, suggesting it might fall under '侵权责任纠纷'. I will inspect the next anchor to confirm this and look for more specific details that could help categorize the document.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\", \"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人某某万科分店因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\"}</info>\n<think>该段文字描述了再审申请人某某万科分店与被申请人梁某及原审被告李某之间的提供劳务者受害责任纠纷案件，表明该案属于“侵权责任纠纷”。没有足够的信息来确定是否还有其他案由。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"侵权责任纠纷\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0}], \"enough\": false, \"followup_query\": \"是否有其他案由涉及此判决文书？\"}</retrieve>\n<think>已确认《判决文书2》属于“侵权责任纠纷”，但需进一步检查文档以确保没有其他相关案由。</think>\n<search>{\"current_query\": \"是否有其他案由涉及此判决文书？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A3\", \"candidate_anchor_ids\": [\"DOC2_A3\", \"DOC2_A4\", \"DOC2_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"再审申请理由\", \"summary\": \"某某万科分店认为原审判决认定的基本事实缺乏证据证明，包括划分过错比例错误以及认定其义务缺乏证据证明。\", \"text\": \"某某万科分店申请再审称，原审判决认定的基本事实缺乏证据证明。1．划分过错比例错误。梁某是专门从事保洁服务的人员，理应自备劳务工具和劳保用具，并正确操作使用。如需某某万科分店提供特殊工具，应当事先提出，若某某万科分店无法提供劳务工具和劳动保障，可以拒绝提供保洁服务。梁某未自备劳务工具，因过于自信及心存侥幸造成损害，应当承担主要责任。某某万科分店系未成立的非自然人，仅是未及时清理装修遗留物品及未禁止梁某使用，承担80％责任过重。2．原审判决认定某某万科分店的义务缺乏证据证明。梁某是长期从事保洁工作的熟练工作者，知晓劳务内容及相关风险，可以使用长手柄工具或安全带吊装完成保洁工作，而非必须使用梯子，且梁某意识到无法安全提供保洁服务时未拒绝提供服务，原审判决认定某某万科分店应当进行必要的安全生产培训、安全提醒等管理义务及提供安全生产条件等保障义务，有失公允。综上，某某万科分店依据《中华人民共和国民事诉讼法》第二百一十一条第一项、第二项、第六项规定申请再审。\"}</info>\n<think>该段文字详细描述了再审申请的理由，但并未提及除“侵权责任纠纷”之外的其他案由。因此，目前没有足够的信息来确定是否存在其他案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由涉及此判决文书？\"}</retrieve>\n<think>考虑到当前文档已经确认为“侵权责任纠纷”，并且在之前的检索中没有发现其他案由的证据，我将检查剩余的部分以确保没有遗漏任何可能涉及其他案由的信息。</think>\n<search>{\"current_query\": \"是否有其他案由涉及此判决文书？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A4\", \"candidate_anchor_ids\": [\"DOC2_A4\", \"DOC2_A5\", \"DOC2_A6\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"被申请人答辩\", \"summary\": \"梁某辩称原审判决认定事实清楚，适用法律正确，应当驳回某某万科分店的再审申请。\", \"text\": \"梁某辩称，原审判决认定事实清楚，适用法律正确，应当驳回某某万科分店的再审申请。\"}</info>\n<think>该段文字是被申请人梁某的答辩意见，强调原审判决的事实认定和法律适用均无误，并要求驳回再审申请。这段文字并没有提到其他案由，因此不足以提供更多关于分类的信息。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"是否有其他案由涉及此判决文书？\"}</retrieve>"
+}

@@ -1,0 +1,65 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "selected_anchor_ids": [
+    "DOC2_A2"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC2_A2",
+        "candidate_anchor_ids": [
+          "DOC2_A2"
+        ]
+      },
+      "anchor_id": "DOC2_A2",
+      "plan_think": "The document title indicates that it is a judgment document, and the chunk summaries suggest that the case involves a dispute over real estate registration between the appellant (a certain agricultural supplies company) and the respondent (a certain real estate company). The case falls under the category of '不动产登记纠纷' (disputes over real estate registration). I will select the anchor coordinate that contains information about the case background to confirm the category.",
+      "info": {
+        "anchor_id": "DOC2_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院的民事判决，提起上诉。",
+        "text": "上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。"
+      },
+      "extract_think": "该段落明确指出案件涉及不动产登记纠纷，因此可以将《判决文书2》归类为“不动产登记纠纷”。没有其他案由的信息。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "不动产登记纠纷",
+            "value": "《判决文书2》",
+            "normalized_value": "判决文书2",
+            "evidence_text": "上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院的民事判决，提起上诉。",
+            "source_doc_id": "DOC2",
+            "source_anchor_id": "DOC2_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "不动产登记纠纷",
+      "value": "《判决文书2》",
+      "normalized_value": "判决文书2",
+      "evidence_text": "上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院的民事判决，提起上诉。",
+      "source_doc_id": "DOC2",
+      "source_anchor_id": "DOC2_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document title indicates that it is a judgment document, and the chunk summaries suggest that the case involves a dispute over real estate registration between the appellant (a certain agricultural supplies company) and the respondent (a certain real estate company). The case falls under the category of '不动产登记纠纷' (disputes over real estate registration). I will select the anchor coordinate that contains information about the case background to confirm the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院的民事判决，提起上诉。\", \"text\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。\"}</info>\n<think>该段落明确指出案件涉及不动产登记纠纷，因此可以将《判决文书2》归类为“不动产登记纠纷”。没有其他案由的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"不动产登记纠纷\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院的民事判决，提起上诉。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title indicates that it is a judgment document, and the chunk summaries suggest that the case involves a dispute over real estate registration between the appellant (a certain agricultural supplies company) and the respondent (a certain real estate company). The case falls under the category of '不动产登记纠纷' (disputes over real estate registration). I will select the anchor coordinate that contains information about the case background to confirm the category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'执行案由-对下级法院执行异议裁定的复议' '产品责任纠纷' '行政行为-行政受理' '知识产权与竞争' '不动产登记纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC2_A2\", \"candidate_anchor_ids\": [\"DOC2_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC2_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院的民事判决，提起上诉。\", \"text\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院（2023）新2926民初347号民事判决，向本院提起上诉。本院于2023年11月7日立案后，依法组成合议庭，公开开庭进行了审理。上诉人某某农资公司的委托诉讼代理人朱明亮、宋某、被上诉人某某房产公司的委托诉讼代理人梁苏红到庭参加诉讼。某某肥业公司经本院传票依法传唤，无正当理由未到庭参加诉讼。本案现已审理终结。\"}</info>\n<think>该段落明确指出案件涉及不动产登记纠纷，因此可以将《判决文书2》归类为“不动产登记纠纷”。没有其他案由的信息。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"不动产登记纠纷\", \"value\": \"《判决文书2》\", \"normalized_value\": \"判决文书2\", \"evidence_text\": \"上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案，不服新疆维吾尔自治区拜城县人民法院的民事判决，提起上诉。\", \"source_doc_id\": \"DOC2\", \"source_anchor_id\": \"DOC2_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+  "scan_result": "found",
+  "evidence": "[DOC1_C011] (score=0.2952)\nTask Definition Given a query $Q$ and a corpus $C=\\left\\{D_{1}, D_{2}, \\ldots, D_{n}\\right\\}$ consisting of $n$ documents, the goal of text retrieval is to find the $k$ documents that are most relevant to the query $Q$, with $k \\ll n$. In a multi-stage retrieval pipeline composed by a retriever and a reranker, the retriever's task is to efficiently generate the top- $k$ candidates that are relevant to the query based on the similarity metric $\\operatorname{Sim}(Q, D) \\in \\mathbb{R}$. The reranker's task is to reorder these $k$ candidate documents further to improve the relevance order using a more effective, but typically more computationally expensive reranking model. Note that \"document\" in this context can refer to an arbitrary information snippet, including sentences, passages, or full documents. While a multi-stage pipeline can contain multiple rerankers, in this paper we focus on a single reranker.\n\n[DOC1_C035] (score=0.3014)\nIn-Domain Evaluation Table 1 presents the effectiveness of RepLLaMA and RankLLaMA on the MS MARCO passage corpus in comparison to existing methods.[^2]\n\n[DOC1_C049] (score=0.3486)\nTable 3: The effectiveness of RepLLaMA and RankLLaMA on the MS MARCO document corpus compared to existing methods.\n\n[DOC1_C053] (score=0.3003)\nResults Table 3 reports the effectiveness of our RepLLaMA-RankLLaMA pipeline for fulldocument retrieval on the MS MARCO document corpus. We see that both our retriever and reranker outperform existing methods. RepLLaMA achieves an MRR@100 score that is approximately 3 points higher than CoCondenser-MaxP, while RankLLaMA exceeds (to our knowledge) the current state-of-the-art document reranker, MORES+ (Gao and Callan, 2022a), by 1 point in MRR@ 100.\n\n[DOC1_C099] (score=0.3170)\nXueguang Ma, Xinyu Crystina Zhang, Ronak Pradeep, and Jimmy Lin. 2023. Zero-shot listwise document reranking with a large language model. arXiv:2305.02156.\n\n[DOC1_C112] (score=0.3008)\nRonak Pradeep, Sahel Sharifymoghaddam, and Jimmy Lin. 2023. RankVicuna: Zero-shot listwise document reranking with open-source large language models. arXiv:2309.15088.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C011",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.29523545503616333,
+      "preview": "Task Definition Given a query $Q$ and a corpus $C=\\left\\{D_{1}, D_{2}, \\ldots, D_{n}\\right\\}$ consisting of $n$ documents, the goal of text retrieval is to find the $k$ documents that are most relevant to the query $Q..."
+    },
+    {
+      "anchor_id": "DOC1_C035",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.3014336824417114,
+      "preview": "In-Domain Evaluation Table 1 presents the effectiveness of RepLLaMA and RankLLaMA on the MS MARCO passage corpus in comparison to existing methods.[^2]"
+    },
+    {
+      "anchor_id": "DOC1_C049",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.3486475348472595,
+      "preview": "Table 3: The effectiveness of RepLLaMA and RankLLaMA on the MS MARCO document corpus compared to existing methods."
+    },
+    {
+      "anchor_id": "DOC1_C053",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.3003268241882324,
+      "preview": "Results Table 3 reports the effectiveness of our RepLLaMA-RankLLaMA pipeline for fulldocument retrieval on the MS MARCO document corpus. We see that both our retriever and reranker outperform existing methods. RepLLaM..."
+    },
+    {
+      "anchor_id": "DOC1_C099",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.3170141577720642,
+      "preview": "Xueguang Ma, Xinyu Crystina Zhang, Ronak Pradeep, and Jimmy Lin. 2023. Zero-shot listwise document reranking with a large language model. arXiv:2305.02156."
+    },
+    {
+      "anchor_id": "DOC1_C112",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.300804078578949,
+      "preview": "Ronak Pradeep, Sahel Sharifymoghaddam, and Jimmy Lin. 2023. RankVicuna: Zero-shot listwise document reranking with open-source large language models. arXiv:2309.15088."
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "selected_anchor_ids": [
+    "DOC10_A1",
+    "DOC10_A2",
+    "DOC10_A3"
+  ],
+  "final_current_query": "Continue to the next chunk of the current document to ensure completeness.",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "reading the above judgment documents, please classify all the judgment documents according to the following 6 causes of action: 'Administrative Subject - House Demolition Management (Demolition)', 'Criminal Compensation', 'Real Estate Registration Dispute', 'Intellectual Property and Competition', 'Product Liability Dispute', 'Administrative Act - Administrative Payment'. Only output the title of each judgment document. Please answer in the following format, with titles based on the actual provided judgment documents: {'Administrative Subject - House Demolition Management (Demolition)': ['Judgment Document A', 'Judgment Document B'], 'Criminal Compensation': ['Judgment Document A', 'Judgment Document B'], 'Real Estate Registration Dispute': ['Judgment Document A', 'Judgment Document B'], 'Intellectual Property and Competition': ['Judgment Document A', 'Judgment Document B'], 'Product Liability Dispute': ['Judgment Document A', 'Judgment Document B'], 'Administrative Act - Administrative Payment': ['Judgment Document A', 'Judgment Document B']}. Your answer is:",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A1",
+        "candidate_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC10_A1",
+      "plan_think": "The document seems to involve a case related to basic old-age insurance qualification determination by the Beijing Xicheng Human Resources and Social Security Bureau. This case does not seem to fit into any of the provided categories directly, but it might fall under '行政行为-行政给付' (administrative act - administrative payment) since it involves a government agency's decision on a benefit. I will inspect the first chunk to confirm if this is indeed the case.",
+      "info": {
+        "anchor_id": "DOC10_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息及案件背景",
+        "summary": "再审申请人王某某因诉北京市西城区人力资源和社会保障局基本养老保险资格认定一案，不服北京市西城区人民法院及北京市第二中级人民法院的判决，向本院申请再审。",
+        "text": "再审申请人（一审原告、二审上诉人）王某某。\n\n被申请人（一审被告、二审被上诉人）北京市西城区人力资源和社会保障局。\n\n再审申请人王某某因诉北京市西城区人力资源和社会保障局（以下简称西城人社局）基本养老保险资格认定一案，不服北京市西城区人民法院（以下简称一审法院）所作（2022）京0102行初436号行政判决（以下简称一审判决）以及北京市第二中级人民法院（以下简称二审法院）(2023)京02行终134号行政判决（以下简称二审判决），向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。"
+      },
+      "extract_think": "The selected chunk provides information about a case involving the basic old-age insurance qualification determination by the Beijing Xicheng Human Resources and Social Security Bureau. The case does not directly mention any of the specific categories listed in the question, but it can be inferred that it falls under '行政行为-行政给付' (administrative act - administrative payment). No other documents have been inspected yet, so we cannot determine if there are more relevant cases in other documents.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政给付",
+            "value": "《判决文书10》",
+            "normalized_value": "判决文书10",
+            "evidence_text": "再审申请人王某某因诉北京市西城区人力资源和社会保障局基本养老保险资格认定一案，不服北京市西城区人民法院及北京市第二中级人民法院的判决，向本院申请再审。",
+            "source_doc_id": "DOC10",
+            "source_anchor_id": "DOC10_A1",
+            "confidence": 0.8
+          }
+        ],
+        "enough": false,
+        "followup_query": "Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'?"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'?",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A2",
+        "candidate_anchor_ids": [
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC10_A2",
+      "plan_think": "The current document has been partially reviewed, and it appears to fit under '行政行为-行政给付'. However, no other documents have been inspected yet. To ensure completeness, I should inspect another document to check for any cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'. If no other documents are available, I will inspect the remaining chunks of the current document.",
+      "info": {
+        "anchor_id": "DOC10_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "再审申请理由",
+        "summary": "王某某认为一、二审法院未能查清西城人社局适用法律错误，认定事实错误，请求撤销一、二审判决，支持其一审诉讼请求。",
+        "text": "王某某申请再审称，一、二审法院未能依法查清西城人社局适用法律错误，认定事实错误的事实，故请求依法撤销一、二审判决，支持其一审诉讼请求。"
+      },
+      "extract_think": "The selected chunk provides additional context regarding the applicant's reasons for seeking a retrial, emphasizing issues with the application of law and factual determinations by the lower courts. However, it does not provide new information that would categorize the case differently from what was previously identified as '行政行为-行政给付'. No new categories are mentioned here.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'? If not, continue to the next chunk of the current document."
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'? If not, continue to the next chunk of the current document.",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC10_A3",
+        "candidate_anchor_ids": [
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC10_A3",
+      "plan_think": "The current document has been partially reviewed, and it has been categorized under '行政行为-行政给付'. Since no other documents have been inspected yet, and the current document does not contain any information related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷', I will inspect the next chunk of the current document to ensure completeness.",
+      "info": {
+        "anchor_id": "DOC10_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院观点",
+        "summary": "法院认为，根据相关规定，王某某达到退休年龄时为外埠户籍且社保账户类别为临时账户，西城人社局认定其不符合在北京办理退休条件并无不当，驳回王某某的再审申请。",
+        "text": "本院认为，《人力资源和社会保障部关于印发城镇企业职工基本养老保险关系转移接续若干具体问题意见的通知》（人社部发[2010]70号）第四点中规定，男性年满50周岁和女性年满40周岁的人员，首次参保地为非户籍所在地的，参保地应为其建立临时基本养老保险缴费账户。参保人员在建立临时基本养老保险缴费账户期间达到待遇领取条件时，原保留基本养老保险关系所在地负责将其临时基本养老保险缴费账户进行归集归并。其中，只有临时基本养老保险缴费账户的，由户籍所在地负责归集归并，并在办理转入手续的同时进行参保信息登记。该通知第五点中规定，参保人员达到待遇领取条件、尚未办理待遇领取手续期间，户籍发生变动的，在确定户籍所在地时，以其达到待遇领取条件的年龄时点为准。本案中，王某某达到退休年龄时为外埠户籍，其社保账户类别为临时账户。西城人社局经过调查认定，告知王某某不符合在北京办理退休条件，作出《北京市基本养老保险退休待遇资格核准告知书》并无不当。一审法院判决驳回王某某诉讼请求、二审法院判决驳回王某某的上诉正确。王某某申请再审缺乏事实根据和法律依据，本院不予支持。"
+      },
+      "extract_think": "The selected chunk provides further details on the court's viewpoint regarding the case, confirming that the case pertains to the determination of retirement benefits eligibility by the Beijing Xicheng Human Resources and Social Security Bureau. It does not introduce any new categories or cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'. Therefore, the case remains categorized under '行政行为-行政给付'.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Continue to the next chunk of the current document to ensure completeness."
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政给付",
+      "value": "《判决文书10》",
+      "normalized_value": "判决文书10",
+      "evidence_text": "再审申请人王某某因诉北京市西城区人力资源和社会保障局基本养老保险资格认定一案，不服北京市西城区人民法院及北京市第二中级人民法院的判决，向本院申请再审。",
+      "source_doc_id": "DOC10",
+      "source_anchor_id": "DOC10_A1",
+      "confidence": 0.8
+    }
+  ],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The document seems to involve a case related to basic old-age insurance qualification determination by the Beijing Xicheng Human Resources and Social Security Bureau. This case does not seem to fit into any of the provided categories directly, but it might fall under '行政行为-行政给付' (administrative act - administrative payment) since it involves a government agency's decision on a benefit. I will inspect the first chunk to confirm if this is indeed the case.</think>\n<search>{\"current_query\": \"reading the above judgment documents, please classify all the judgment documents according to the following 6 causes of action: 'Administrative Subject - House Demolition Management (Demolition)', 'Criminal Compensation', 'Real Estate Registration Dispute', 'Intellectual Property and Competition', 'Product Liability Dispute', 'Administrative Act - Administrative Payment'. Only output the title of each judgment document. Please answer in the following format, with titles based on the actual provided judgment documents: {'Administrative Subject - House Demolition Management (Demolition)': ['Judgment Document A', 'Judgment Document B'], 'Criminal Compensation': ['Judgment Document A', 'Judgment Document B'], 'Real Estate Registration Dispute': ['Judgment Document A', 'Judgment Document B'], 'Intellectual Property and Competition': ['Judgment Document A', 'Judgment Document B'], 'Product Liability Dispute': ['Judgment Document A', 'Judgment Document B'], 'Administrative Act - Administrative Payment': ['Judgment Document A', 'Judgment Document B']}. Your answer is:\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"再审申请人王某某因诉北京市西城区人力资源和社会保障局基本养老保险资格认定一案，不服北京市西城区人民法院及北京市第二中级人民法院的判决，向本院申请再审。\", \"text\": \"再审申请人（一审原告、二审上诉人）王某某。\\n\\n被申请人（一审被告、二审被上诉人）北京市西城区人力资源和社会保障局。\\n\\n再审申请人王某某因诉北京市西城区人力资源和社会保障局（以下简称西城人社局）基本养老保险资格认定一案，不服北京市西城区人民法院（以下简称一审法院）所作（2022）京0102行初436号行政判决（以下简称一审判决）以及北京市第二中级人民法院（以下简称二审法院）(2023)京02行终134号行政判决（以下简称二审判决），向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>The selected chunk provides information about a case involving the basic old-age insurance qualification determination by the Beijing Xicheng Human Resources and Social Security Bureau. The case does not directly mention any of the specific categories listed in the question, but it can be inferred that it falls under '行政行为-行政给付' (administrative act - administrative payment). No other documents have been inspected yet, so we cannot determine if there are more relevant cases in other documents.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政给付\", \"value\": \"《判决文书10》\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"再审申请人王某某因诉北京市西城区人力资源和社会保障局基本养老保险资格认定一案，不服北京市西城区人民法院及北京市第二中级人民法院的判决，向本院申请再审。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A1\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'?\"}</retrieve>\n<think>The current document has been partially reviewed, and it appears to fit under '行政行为-行政给付'. However, no other documents have been inspected yet. To ensure completeness, I should inspect another document to check for any cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'. If no other documents are available, I will inspect the remaining chunks of the current document.</think>\n<search>{\"current_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'?\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"再审申请理由\", \"summary\": \"王某某认为一、二审法院未能查清西城人社局适用法律错误，认定事实错误，请求撤销一、二审判决，支持其一审诉讼请求。\", \"text\": \"王某某申请再审称，一、二审法院未能依法查清西城人社局适用法律错误，认定事实错误的事实，故请求依法撤销一、二审判决，支持其一审诉讼请求。\"}</info>\n<think>The selected chunk provides additional context regarding the applicant's reasons for seeking a retrial, emphasizing issues with the application of law and factual determinations by the lower courts. However, it does not provide new information that would categorize the case differently from what was previously identified as '行政行为-行政给付'. No new categories are mentioned here.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'? If not, continue to the next chunk of the current document.\"}</retrieve>\n<think>The current document has been partially reviewed, and it has been categorized under '行政行为-行政给付'. Since no other documents have been inspected yet, and the current document does not contain any information related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷', I will inspect the next chunk of the current document to ensure completeness.</think>\n<search>{\"current_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'? If not, continue to the next chunk of the current document.\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A3\", \"candidate_anchor_ids\": [\"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院观点\", \"summary\": \"法院认为，根据相关规定，王某某达到退休年龄时为外埠户籍且社保账户类别为临时账户，西城人社局认定其不符合在北京办理退休条件并无不当，驳回王某某的再审申请。\", \"text\": \"本院认为，《人力资源和社会保障部关于印发城镇企业职工基本养老保险关系转移接续若干具体问题意见的通知》（人社部发[2010]70号）第四点中规定，男性年满50周岁和女性年满40周岁的人员，首次参保地为非户籍所在地的，参保地应为其建立临时基本养老保险缴费账户。参保人员在建立临时基本养老保险缴费账户期间达到待遇领取条件时，原保留基本养老保险关系所在地负责将其临时基本养老保险缴费账户进行归集归并。其中，只有临时基本养老保险缴费账户的，由户籍所在地负责归集归并，并在办理转入手续的同时进行参保信息登记。该通知第五点中规定，参保人员达到待遇领取条件、尚未办理待遇领取手续期间，户籍发生变动的，在确定户籍所在地时，以其达到待遇领取条件的年龄时点为准。本案中，王某某达到退休年龄时为外埠户籍，其社保账户类别为临时账户。西城人社局经过调查认定，告知王某某不符合在北京办理退休条件，作出《北京市基本养老保险退休待遇资格核准告知书》并无不当。一审法院判决驳回王某某诉讼请求、二审法院判决驳回王某某的上诉正确。王某某申请再审缺乏事实根据和法律依据，本院不予支持。\"}</info>\n<think>The selected chunk provides further details on the court's viewpoint regarding the case, confirming that the case pertains to the determination of retirement benefits eligibility by the Beijing Xicheng Human Resources and Social Security Bureau. It does not introduce any new categories or cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'. Therefore, the case remains categorized under '行政行为-行政给付'.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Continue to the next chunk of the current document to ensure completeness.\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a case related to basic old-age insurance qualification determination by the Beijing Xicheng Human Resources and Social Security Bureau. This case does not seem to fit into any of the provided categories directly, but it might fall under '行政行为-行政给付' (administrative act - administrative payment) since it involves a government agency's decision on a benefit. I will inspect the first chunk to confirm if this is indeed the case.</think>\n<search>{\"current_query\": \"reading the above judgment documents, please classify all the judgment documents according to the following 6 causes of action: 'Administrative Subject - House Demolition Management (Demolition)', 'Criminal Compensation', 'Real Estate Registration Dispute', 'Intellectual Property and Competition', 'Product Liability Dispute', 'Administrative Act - Administrative Payment'. Only output the title of each judgment document. Please answer in the following format, with titles based on the actual provided judgment documents: {'Administrative Subject - House Demolition Management (Demolition)': ['Judgment Document A', 'Judgment Document B'], 'Criminal Compensation': ['Judgment Document A', 'Judgment Document B'], 'Real Estate Registration Dispute': ['Judgment Document A', 'Judgment Document B'], 'Intellectual Property and Competition': ['Judgment Document A', 'Judgment Document B'], 'Product Liability Dispute': ['Judgment Document A', 'Judgment Document B'], 'Administrative Act - Administrative Payment': ['Judgment Document A', 'Judgment Document B']}. Your answer is:\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"再审申请人王某某因诉北京市西城区人力资源和社会保障局基本养老保险资格认定一案，不服北京市西城区人民法院及北京市第二中级人民法院的判决，向本院申请再审。\", \"text\": \"再审申请人（一审原告、二审上诉人）王某某。\\n\\n被申请人（一审被告、二审被上诉人）北京市西城区人力资源和社会保障局。\\n\\n再审申请人王某某因诉北京市西城区人力资源和社会保障局（以下简称西城人社局）基本养老保险资格认定一案，不服北京市西城区人民法院（以下简称一审法院）所作（2022）京0102行初436号行政判决（以下简称一审判决）以及北京市第二中级人民法院（以下简称二审法院）(2023)京02行终134号行政判决（以下简称二审判决），向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\"}</info>\n<think>The selected chunk provides information about a case involving the basic old-age insurance qualification determination by the Beijing Xicheng Human Resources and Social Security Bureau. The case does not directly mention any of the specific categories listed in the question, but it can be inferred that it falls under '行政行为-行政给付' (administrative act - administrative payment). No other documents have been inspected yet, so we cannot determine if there are more relevant cases in other documents.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政给付\", \"value\": \"《判决文书10》\", \"normalized_value\": \"判决文书10\", \"evidence_text\": \"再审申请人王某某因诉北京市西城区人力资源和社会保障局基本养老保险资格认定一案，不服北京市西城区人民法院及北京市第二中级人民法院的判决，向本院申请再审。\", \"source_doc_id\": \"DOC10\", \"source_anchor_id\": \"DOC10_A1\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'?\"}</retrieve>\n<think>The current document has been partially reviewed, and it appears to fit under '行政行为-行政给付'. However, no other documents have been inspected yet. To ensure completeness, I should inspect another document to check for any cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'. If no other documents are available, I will inspect the remaining chunks of the current document.</think>\n<search>{\"current_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'?\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A2\", \"candidate_anchor_ids\": [\"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"再审申请理由\", \"summary\": \"王某某认为一、二审法院未能查清西城人社局适用法律错误，认定事实错误，请求撤销一、二审判决，支持其一审诉讼请求。\", \"text\": \"王某某申请再审称，一、二审法院未能依法查清西城人社局适用法律错误，认定事实错误的事实，故请求依法撤销一、二审判决，支持其一审诉讼请求。\"}</info>\n<think>The selected chunk provides additional context regarding the applicant's reasons for seeking a retrial, emphasizing issues with the application of law and factual determinations by the lower courts. However, it does not provide new information that would categorize the case differently from what was previously identified as '行政行为-行政给付'. No new categories are mentioned here.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'? If not, continue to the next chunk of the current document.\"}</retrieve>\n<think>The current document has been partially reviewed, and it has been categorized under '行政行为-行政给付'. Since no other documents have been inspected yet, and the current document does not contain any information related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷', I will inspect the next chunk of the current document to ensure completeness.</think>\n<search>{\"current_query\": \"Is there any other document that mentions cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'? If not, continue to the next chunk of the current document.\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC10_A3\", \"candidate_anchor_ids\": [\"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC10_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院观点\", \"summary\": \"法院认为，根据相关规定，王某某达到退休年龄时为外埠户籍且社保账户类别为临时账户，西城人社局认定其不符合在北京办理退休条件并无不当，驳回王某某的再审申请。\", \"text\": \"本院认为，《人力资源和社会保障部关于印发城镇企业职工基本养老保险关系转移接续若干具体问题意见的通知》（人社部发[2010]70号）第四点中规定，男性年满50周岁和女性年满40周岁的人员，首次参保地为非户籍所在地的，参保地应为其建立临时基本养老保险缴费账户。参保人员在建立临时基本养老保险缴费账户期间达到待遇领取条件时，原保留基本养老保险关系所在地负责将其临时基本养老保险缴费账户进行归集归并。其中，只有临时基本养老保险缴费账户的，由户籍所在地负责归集归并，并在办理转入手续的同时进行参保信息登记。该通知第五点中规定，参保人员达到待遇领取条件、尚未办理待遇领取手续期间，户籍发生变动的，在确定户籍所在地时，以其达到待遇领取条件的年龄时点为准。本案中，王某某达到退休年龄时为外埠户籍，其社保账户类别为临时账户。西城人社局经过调查认定，告知王某某不符合在北京办理退休条件，作出《北京市基本养老保险退休待遇资格核准告知书》并无不当。一审法院判决驳回王某某诉讼请求、二审法院判决驳回王某某的上诉正确。王某某申请再审缺乏事实根据和法律依据，本院不予支持。\"}</info>\n<think>The selected chunk provides further details on the court's viewpoint regarding the case, confirming that the case pertains to the determination of retirement benefits eligibility by the Beijing Xicheng Human Resources and Social Security Bureau. It does not introduce any new categories or cases related to '行政主体-房屋拆迁管理（拆迁）', '刑事赔偿', '不动产登记纠纷', '知识产权与竞争', or '产品责任纠纷'. Therefore, the case remains categorized under '行政行为-行政给付'.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Continue to the next chunk of the current document to ensure completeness.\"}</retrieve>"
+}

@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "selected_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2"
+  ],
+  "final_current_query": "请提供有关案件性质或争议焦点的信息。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'海事海商纠纷' '不动产登记纠纷' '行政行为-行政补偿' '所有权纠纷' '民事案由-合同，无因管理，不当得利纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '所有权纠纷': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC8_A1",
+        "candidate_anchor_ids": [
+          "DOC8_A1",
+          "DOC8_A2",
+          "DOC8_A3",
+          "DOC8_A4"
+        ]
+      },
+      "anchor_id": "DOC8_A1",
+      "plan_think": "The document seems to be related to a dispute over the execution of a judgment involving a construction contract. The case involves multiple legal obligations that conflict with each other, specifically regarding the payment of debts and the enforcement of court orders from different jurisdictions. This appears to fall under the category of '民事案由-合同，无因管理，不当得利纠纷' (Civil Case Reason - Contract, Gratuitous Management, Unjust Enrichment Dispute). I will inspect the first chunk to confirm the details of the case and its classification.",
+      "info": {
+        "anchor_id": "DOC8_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "复议申请人（被执行人）为特克斯某甲房地产开发有限公司，法定代表人为康某某，委托诉讼代理人为胡某某和王某某。申请执行人为中国某乙建设有限责任公司，法定代表人为童某某。",
+        "text": "复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\n\n法定代表人：康某某，系该公司执行董事兼总经理。\n\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\n\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\n\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\n\n法定代表人：童某某，该公司董事长。"
+      },
+      "extract_think": "The selected chunk provides information about the parties involved in the case but does not specify the type of legal dispute. It mentions a real estate development company and a construction company, which might suggest a contractual relationship, but there is no explicit mention of the case's category. To accurately classify the document, we need more context about the nature of the dispute.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "请提供有关案件性质或争议焦点的信息。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "请提供有关案件性质或争议焦点的信息。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC8_A2",
+        "candidate_anchor_ids": [
+          "DOC8_A2",
+          "DOC8_A3",
+          "DOC8_A4",
+          "DOC8_A5"
+        ]
+      },
+      "anchor_id": "DOC8_A2",
+      "plan_think": "The previous inspection did not provide enough information to categorize the document. The current focus should be on understanding the nature of the dispute between the parties, which seems to revolve around a construction contract and the execution of a judgment. The next chunk to inspect should contain details about the case background and the specific issues at hand, which could help determine if it falls under '民事案由-合同，无因管理，不当得利纠纷'. I will inspect DOC8_A2 next as it provides the case background.",
+      "info": {
+        "anchor_id": "DOC8_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "某乙公司与某甲公司因建设工程施工合同纠纷，某乙公司申请强制执行，伊犁州分院扣划了某甲公司账户金额1348676.21元，其中包括工程款、诉讼费和迟延履行期间的利息。特克斯县人民法院也扣留了某乙公司在伊犁州分院的执行案款。",
+        "text": "新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。"
+      },
+      "extract_think": "The selected chunk provides clear evidence that the case involves a '建设工程施工合同纠纷' (Construction Engineering Contract Dispute), which falls under the broader category of '民事案由-合同，无因管理，不当得利纠纷' (Civil Case Reason - Contract, Gratuitous Management, Unjust Enrichment Dispute). The text describes a dispute between two companies over a construction contract, including the enforcement of a judgment and the payment of various sums. This information is sufficient to classify the document.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+            "value": "《判决文书8》",
+            "normalized_value": "判决文书8",
+            "evidence_text": "某乙公司与某甲公司建设工程施工合同纠纷，某乙公司申请强制执行，伊犁州分院扣划了某甲公司账户金额1348676.21元，其中包括工程款、诉讼费和迟延履行期间的利息。",
+            "source_doc_id": "DOC8",
+            "source_anchor_id": "DOC8_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+      "value": "《判决文书8》",
+      "normalized_value": "判决文书8",
+      "evidence_text": "某乙公司与某甲公司建设工程施工合同纠纷，某乙公司申请强制执行，伊犁州分院扣划了某甲公司账户金额1348676.21元，其中包括工程款、诉讼费和迟延履行期间的利息。",
+      "source_doc_id": "DOC8",
+      "source_anchor_id": "DOC8_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to be related to a dispute over the execution of a judgment involving a construction contract. The case involves multiple legal obligations that conflict with each other, specifically regarding the payment of debts and the enforcement of court orders from different jurisdictions. This appears to fall under the category of '民事案由-合同，无因管理，不当得利纠纷' (Civil Case Reason - Contract, Gratuitous Management, Unjust Enrichment Dispute). I will inspect the first chunk to confirm the details of the case and its classification.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '不动产登记纠纷' '行政行为-行政补偿' '所有权纠纷' '民事案由-合同，无因管理，不当得利纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '所有权纠纷': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A1\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人（被执行人）为特克斯某甲房地产开发有限公司，法定代表人为康某某，委托诉讼代理人为胡某某和王某某。申请执行人为中国某乙建设有限责任公司，法定代表人为童某某。\", \"text\": \"复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\\n\\n法定代表人：康某某，系该公司执行董事兼总经理。\\n\\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\\n\\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\\n\\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\\n\\n法定代表人：童某某，该公司董事长。\"}</info>\n<think>The selected chunk provides information about the parties involved in the case but does not specify the type of legal dispute. It mentions a real estate development company and a construction company, which might suggest a contractual relationship, but there is no explicit mention of the case's category. To accurately classify the document, we need more context about the nature of the dispute.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供有关案件性质或争议焦点的信息。\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the document. The current focus should be on understanding the nature of the dispute between the parties, which seems to revolve around a construction contract and the execution of a judgment. The next chunk to inspect should contain details about the case background and the specific issues at hand, which could help determine if it falls under '民事案由-合同，无因管理，不当得利纠纷'. I will inspect DOC8_A2 next as it provides the case background.</think>\n<search>{\"current_query\": \"请提供有关案件性质或争议焦点的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\", \"DOC8_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"某乙公司与某甲公司因建设工程施工合同纠纷，某乙公司申请强制执行，伊犁州分院扣划了某甲公司账户金额1348676.21元，其中包括工程款、诉讼费和迟延履行期间的利息。特克斯县人民法院也扣留了某乙公司在伊犁州分院的执行案款。\", \"text\": \"新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\"}</info>\n<think>The selected chunk provides clear evidence that the case involves a '建设工程施工合同纠纷' (Construction Engineering Contract Dispute), which falls under the broader category of '民事案由-合同，无因管理，不当得利纠纷' (Civil Case Reason - Contract, Gratuitous Management, Unjust Enrichment Dispute). The text describes a dispute between two companies over a construction contract, including the enforcement of a judgment and the payment of various sums. This information is sufficient to classify the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"某乙公司与某甲公司建设工程施工合同纠纷，某乙公司申请强制执行，伊犁州分院扣划了某甲公司账户金额1348676.21元，其中包括工程款、诉讼费和迟延履行期间的利息。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to be related to a dispute over the execution of a judgment involving a construction contract. The case involves multiple legal obligations that conflict with each other, specifically regarding the payment of debts and the enforcement of court orders from different jurisdictions. This appears to fall under the category of '民事案由-合同，无因管理，不当得利纠纷' (Civil Case Reason - Contract, Gratuitous Management, Unjust Enrichment Dispute). I will inspect the first chunk to confirm the details of the case and its classification.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '不动产登记纠纷' '行政行为-行政补偿' '所有权纠纷' '民事案由-合同，无因管理，不当得利纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '不动产登记纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政补偿': ['《判决文书a》', '《判决文书b》'], '所有权纠纷': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A1\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人（被执行人）为特克斯某甲房地产开发有限公司，法定代表人为康某某，委托诉讼代理人为胡某某和王某某。申请执行人为中国某乙建设有限责任公司，法定代表人为童某某。\", \"text\": \"复议申请人（被执行人）：特克斯某甲房地产开发有限公司，住所地新疆维吾尔自治区伊犁哈萨克自治州特克斯县。\\n\\n法定代表人：康某某，系该公司执行董事兼总经理。\\n\\n委托诉讼代理人：胡某某，新疆柏坤亚宣律师事务所律师。\\n\\n委托诉讼代理人：王某某，新疆柏坤亚宣律师事务所律师。\\n\\n申请执行人：中国某乙建设有限责任公司，住所地江西省贵溪市。\\n\\n法定代表人：童某某，该公司董事长。\"}</info>\n<think>The selected chunk provides information about the parties involved in the case but does not specify the type of legal dispute. It mentions a real estate development company and a construction company, which might suggest a contractual relationship, but there is no explicit mention of the case's category. To accurately classify the document, we need more context about the nature of the dispute.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"请提供有关案件性质或争议焦点的信息。\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the document. The current focus should be on understanding the nature of the dispute between the parties, which seems to revolve around a construction contract and the execution of a judgment. The next chunk to inspect should contain details about the case background and the specific issues at hand, which could help determine if it falls under '民事案由-合同，无因管理，不当得利纠纷'. I will inspect DOC8_A2 next as it provides the case background.</think>\n<search>{\"current_query\": \"请提供有关案件性质或争议焦点的信息。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A2\", \"DOC8_A3\", \"DOC8_A4\", \"DOC8_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"某乙公司与某甲公司因建设工程施工合同纠纷，某乙公司申请强制执行，伊犁州分院扣划了某甲公司账户金额1348676.21元，其中包括工程款、诉讼费和迟延履行期间的利息。特克斯县人民法院也扣留了某乙公司在伊犁州分院的执行案款。\", \"text\": \"新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院（以下简称伊犁州分院）在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中，某甲公司对伊犁州分院扣划的迟延履行期间的利息提出书面异议，伊犁州分院于2023年12月7日作出（2023）新40执异64号执行裁定书，裁定：驳回某甲公司的异议请求。某甲公司不服，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n伊犁州分院查明，某乙公司与某甲公司建设工程施工合同纠纷一案，伊犁州分院作出（2020）新40民初30号民事判决，宣判后，双方不服均提出上诉，新疆维吾尔自治区高级人民法院作出（2021）新民终字244号民事判决，判决生效后，某甲公司未履行生效判决确定的义务，某乙公司于2023年7月7日向伊犁州分院申请强制执行，伊犁州分院立（2023）新40执284号案件执行。该院于2023年8月2日作出（2023）新40执284号执行裁定，裁定：一、查询、冻结、划拨、扣留、提取被执行人某甲公司在有关单位的存款1217369.31元（包含本案的执行费14428元）及利息；二、查封、扣押、拍卖、变卖被执行人应当履行义务部分的财产。执行过程中伊犁州分院经司法网络查控、扣划被执行人某甲公司账户金额为1348676.21元（工程款1202940.31元、诉讼费1322.92元，迟延履行期间的利息144412.98元）。新疆维吾尔自治区特克斯县人民法院（以下简称特克斯县人民法院）于2022年7月22日向伊犁州分院送达（2019）新4027执262号协助执行通知书，协助事项为：扣留、提取被执行人某乙公司在伊犁州分院（2023）新40执284号执行案款1348676.21元至特克斯县人民法院。特克斯县人民法院于2023年11月2日领取了案款1348676.21元。\"}</info>\n<think>The selected chunk provides clear evidence that the case involves a '建设工程施工合同纠纷' (Construction Engineering Contract Dispute), which falls under the broader category of '民事案由-合同，无因管理，不当得利纠纷' (Civil Case Reason - Contract, Gratuitous Management, Unjust Enrichment Dispute). The text describes a dispute between two companies over a construction contract, including the enforcement of a judgment and the payment of various sums. This information is sufficient to classify the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"某乙公司与某甲公司建设工程施工合同纠纷，某乙公司申请强制执行，伊犁州分院扣划了某甲公司账户金额1348676.21元，其中包括工程款、诉讼费和迟延履行期间的利息。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

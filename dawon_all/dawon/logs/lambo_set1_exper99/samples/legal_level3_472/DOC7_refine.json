@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "selected_anchor_ids": [
+    "DOC7_A4"
+  ],
+  "final_current_query": "分类判决文书到指定的案由类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到指定的案由类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC7_A4",
+        "candidate_anchor_ids": [
+          "DOC7_A1",
+          "DOC7_A2",
+          "DOC7_A3",
+          "DOC7_A4"
+        ]
+      },
+      "anchor_id": "DOC7_A4",
+      "plan_think": "The current document does not seem to contain information that directly matches any of the five specified case categories. However, it mentions a patent infringement dispute, which could potentially fall under '民事案由-合同，无因管理，不当得利纠纷'. I will inspect DOC7_A4 next as it contains the court's review opinion, which may provide more context on the nature of the case.",
+      "info": {
+        "anchor_id": "DOC7_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院审查意见",
+        "summary": "法院认为本案系侵害实用新型专利权纠纷，根据法律规定，一审法院对本案具有管辖权，因为某某公司3的住所地位于上海市。上诉人某某公司1对本案管辖权提出的上诉理由不能成立。",
+        "text": "本院经审查认为，本案系侵害实用新型专利权纠纷。根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉。又根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条的规定，知识产权法院管辖所在市辖区内的第一审专利民事案件。本案中，某某公司2以某某公司1、某某公司3为被告提起诉讼，主张某某公司1、某某公司3未经许可，以生产经营为目的，生产、销售、许诺销售、使用被诉侵权产品，共同侵犯涉案专利权，并为此提供了初步证据。鉴于某某公司3住所地位于上海市，故一审法院据此确认其对本案具有管辖权并无不当。上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。"
+      },
+      "extract_think": "The selected chunk indicates that the case involves a dispute over the infringement of a utility model patent right, which can be categorized under '民事案由-合同，无因管理，不当得利纠纷'. This chunk provides enough information to classify the document into one of the specified categories.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+            "value": "《判决文书7》",
+            "normalized_value": "判决文书7",
+            "evidence_text": "本院经审查认为，本案系侵害实用新型专利权纠纷。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A4",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+      "value": "《判决文书7》",
+      "normalized_value": "判决文书7",
+      "evidence_text": "本院经审查认为，本案系侵害实用新型专利权纠纷。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A4",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the five specified case categories. However, it mentions a patent infringement dispute, which could potentially fall under '民事案由-合同，无因管理，不当得利纠纷'. I will inspect DOC7_A4 next as it contains the court's review opinion, which may provide more context on the nature of the case.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A4\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院审查意见\", \"summary\": \"法院认为本案系侵害实用新型专利权纠纷，根据法律规定，一审法院对本案具有管辖权，因为某某公司3的住所地位于上海市。上诉人某某公司1对本案管辖权提出的上诉理由不能成立。\", \"text\": \"本院经审查认为，本案系侵害实用新型专利权纠纷。根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉。又根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条的规定，知识产权法院管辖所在市辖区内的第一审专利民事案件。本案中，某某公司2以某某公司1、某某公司3为被告提起诉讼，主张某某公司1、某某公司3未经许可，以生产经营为目的，生产、销售、许诺销售、使用被诉侵权产品，共同侵犯涉案专利权，并为此提供了初步证据。鉴于某某公司3住所地位于上海市，故一审法院据此确认其对本案具有管辖权并无不当。上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。\"}</info>\n<think>The selected chunk indicates that the case involves a dispute over the infringement of a utility model patent right, which can be categorized under '民事案由-合同，无因管理，不当得利纠纷'. This chunk provides enough information to classify the document into one of the specified categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"本院经审查认为，本案系侵害实用新型专利权纠纷。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A4\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the five specified case categories. However, it mentions a patent infringement dispute, which could potentially fall under '民事案由-合同，无因管理，不当得利纠纷'. I will inspect DOC7_A4 next as it contains the court's review opinion, which may provide more context on the nature of the case.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A4\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院审查意见\", \"summary\": \"法院认为本案系侵害实用新型专利权纠纷，根据法律规定，一审法院对本案具有管辖权，因为某某公司3的住所地位于上海市。上诉人某某公司1对本案管辖权提出的上诉理由不能成立。\", \"text\": \"本院经审查认为，本案系侵害实用新型专利权纠纷。根据《中华人民共和国民事诉讼法》第二十九条规定，因侵权行为提起的诉讼，由侵权行为地或者被告住所地人民法院管辖；第二十二条第三款规定，同一诉讼的几个被告住所地、经常居住地在两个以上人民法院辖区的，各该人民法院都有管辖权；第三十六条规定，两个以上人民法院都有管辖权的诉讼，原告可以向其中一个人民法院起诉。又根据《最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定》第一条的规定，知识产权法院管辖所在市辖区内的第一审专利民事案件。本案中，某某公司2以某某公司1、某某公司3为被告提起诉讼，主张某某公司1、某某公司3未经许可，以生产经营为目的，生产、销售、许诺销售、使用被诉侵权产品，共同侵犯涉案专利权，并为此提供了初步证据。鉴于某某公司3住所地位于上海市，故一审法院据此确认其对本案具有管辖权并无不当。上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。\"}</info>\n<think>The selected chunk indicates that the case involves a dispute over the infringement of a utility model patent right, which can be categorized under '民事案由-合同，无因管理，不当得利纠纷'. This chunk provides enough information to classify the document into one of the specified categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"本院经审查认为，本案系侵害实用新型专利权纠纷。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A4\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

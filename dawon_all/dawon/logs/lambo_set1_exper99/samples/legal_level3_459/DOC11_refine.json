@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC11",
+  "doc_title": "《判决文书11》",
+  "selected_anchor_ids": [
+    "DOC11_A4"
+  ],
+  "final_current_query": "分类判决文书到给定的案由类别中",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到给定的案由类别中",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC11_A4",
+        "candidate_anchor_ids": [
+          "DOC11_A1",
+          "DOC11_A2",
+          "DOC11_A3",
+          "DOC11_A4"
+        ]
+      },
+      "anchor_id": "DOC11_A4",
+      "plan_think": "The document seems to involve a case where there's a dispute over an execution ruling and a subsequent administrative reconsideration (复议). The case involves an administrative penalty decision and its execution, which points towards '行政行为-行政复议' as a potential category. I will inspect DOC11_A4 since it contains information about the reconsideration application, which is directly related to administrative reconsideration.",
+      "info": {
+        "anchor_id": "DOC11_A4",
+        "anchor_type": "paragraph_region",
+        "section_path": "复议申请",
+        "summary": "永新县麦点广告有限公司申请复议，法院认为其提出的行政处罚决定错误的事由不属于执行程序审查的范围，维持原裁定。",
+        "text": "永新县麦点广告有限公司向本院申请复议称，请求撤销永新县人民法院（2023）赣0830执异2号执行裁定。事实和理由与异议申请一致。\n\n永新县人民法院审查查明的事实，本院予以确认。\n\n本院认为，本案争议的焦点为永新县人民法院的执行行为是否违反法律规定。《中华人民共和国民事诉讼法》第二百三十二条规定“当事人、利害关系人认为执行行为违反法律规定的，可以向负责执行的人民法院提出书面异议。当事人、利害关系人提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定撤销或者改正；理由不成立的，裁定驳回。当事人、利害关系人对裁定不服的，可以自裁定送达之日起十日内向上一级人民法院申请复议”。本案复议申请人永新县麦点广告有限公司不履行申请执行人永新县市场监督管理局作出的行政决定，申请执行人依法向永新县人民法院申请强制执行且裁定准予执行，永新县人民法院裁定冻结复议申请人的银行存款，符合法律规定。复议申请人提出行政处罚决定的事实不清、程序违法的异议事由，系认为申请执行人作出的行政处罚决定错误，应另行处理，不属于执行程序审查的范围，本院不予审查。综上，永新县人民法院认定事实清楚，结果应予维持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第（一）项之规定，裁定如下：\n\n驳回永新县麦点广告有限公司的复议申请，维持永新县人民法院（2023）赣0830执异2号执行裁定。"
+      },
+      "extract_think": "该段落涉及永新县麦点广告有限公司的复议申请，法院最终维持了原裁定。这表明该案件属于'行政行为-行政复议'类别。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政复议",
+            "value": "《判决文书11》",
+            "normalized_value": "判决文书11",
+            "evidence_text": "永新县麦点广告有限公司向本院申请复议称，请求撤销永新县人民法院（2023）赣0830执异2号执行裁定。事实和理由与异议申请一致。",
+            "source_doc_id": "DOC11",
+            "source_anchor_id": "DOC11_A4",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政复议",
+      "value": "《判决文书11》",
+      "normalized_value": "判决文书11",
+      "evidence_text": "永新县麦点广告有限公司向本院申请复议称，请求撤销永新县人民法院（2023）赣0830执异2号执行裁定。事实和理由与异议申请一致。",
+      "source_doc_id": "DOC11",
+      "source_anchor_id": "DOC11_A4",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The document seems to involve a case where there's a dispute over an execution ruling and a subsequent administrative reconsideration (复议). The case involves an administrative penalty decision and its execution, which points towards '行政行为-行政复议' as a potential category. I will inspect DOC11_A4 since it contains information about the reconsideration application, which is directly related to administrative reconsideration.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC11_A4\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\", \"DOC11_A3\", \"DOC11_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"复议申请\", \"summary\": \"永新县麦点广告有限公司申请复议，法院认为其提出的行政处罚决定错误的事由不属于执行程序审查的范围，维持原裁定。\", \"text\": \"永新县麦点广告有限公司向本院申请复议称，请求撤销永新县人民法院（2023）赣0830执异2号执行裁定。事实和理由与异议申请一致。\\n\\n永新县人民法院审查查明的事实，本院予以确认。\\n\\n本院认为，本案争议的焦点为永新县人民法院的执行行为是否违反法律规定。《中华人民共和国民事诉讼法》第二百三十二条规定“当事人、利害关系人认为执行行为违反法律规定的，可以向负责执行的人民法院提出书面异议。当事人、利害关系人提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定撤销或者改正；理由不成立的，裁定驳回。当事人、利害关系人对裁定不服的，可以自裁定送达之日起十日内向上一级人民法院申请复议”。本案复议申请人永新县麦点广告有限公司不履行申请执行人永新县市场监督管理局作出的行政决定，申请执行人依法向永新县人民法院申请强制执行且裁定准予执行，永新县人民法院裁定冻结复议申请人的银行存款，符合法律规定。复议申请人提出行政处罚决定的事实不清、程序违法的异议事由，系认为申请执行人作出的行政处罚决定错误，应另行处理，不属于执行程序审查的范围，本院不予审查。综上，永新县人民法院认定事实清楚，结果应予维持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第（一）项之规定，裁定如下：\\n\\n驳回永新县麦点广告有限公司的复议申请，维持永新县人民法院（2023）赣0830执异2号执行裁定。\"}</info>\n<think>该段落涉及永新县麦点广告有限公司的复议申请，法院最终维持了原裁定。这表明该案件属于'行政行为-行政复议'类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"永新县麦点广告有限公司向本院申请复议称，请求撤销永新县人民法院（2023）赣0830执异2号执行裁定。事实和理由与异议申请一致。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A4\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a case where there's a dispute over an execution ruling and a subsequent administrative reconsideration (复议). The case involves an administrative penalty decision and its execution, which points towards '行政行为-行政复议' as a potential category. I will inspect DOC11_A4 since it contains information about the reconsideration application, which is directly related to administrative reconsideration.</think>\n<search>{\"current_query\": \"分类判决文书到给定的案由类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC11_A4\", \"candidate_anchor_ids\": [\"DOC11_A1\", \"DOC11_A2\", \"DOC11_A3\", \"DOC11_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC11_A4\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"复议申请\", \"summary\": \"永新县麦点广告有限公司申请复议，法院认为其提出的行政处罚决定错误的事由不属于执行程序审查的范围，维持原裁定。\", \"text\": \"永新县麦点广告有限公司向本院申请复议称，请求撤销永新县人民法院（2023）赣0830执异2号执行裁定。事实和理由与异议申请一致。\\n\\n永新县人民法院审查查明的事实，本院予以确认。\\n\\n本院认为，本案争议的焦点为永新县人民法院的执行行为是否违反法律规定。《中华人民共和国民事诉讼法》第二百三十二条规定“当事人、利害关系人认为执行行为违反法律规定的，可以向负责执行的人民法院提出书面异议。当事人、利害关系人提出书面异议的，人民法院应当自收到书面异议之日起十五日内审查，理由成立的，裁定撤销或者改正；理由不成立的，裁定驳回。当事人、利害关系人对裁定不服的，可以自裁定送达之日起十日内向上一级人民法院申请复议”。本案复议申请人永新县麦点广告有限公司不履行申请执行人永新县市场监督管理局作出的行政决定，申请执行人依法向永新县人民法院申请强制执行且裁定准予执行，永新县人民法院裁定冻结复议申请人的银行存款，符合法律规定。复议申请人提出行政处罚决定的事实不清、程序违法的异议事由，系认为申请执行人作出的行政处罚决定错误，应另行处理，不属于执行程序审查的范围，本院不予审查。综上，永新县人民法院认定事实清楚，结果应予维持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第二十三条第一款第（一）项之规定，裁定如下：\\n\\n驳回永新县麦点广告有限公司的复议申请，维持永新县人民法院（2023）赣0830执异2号执行裁定。\"}</info>\n<think>该段落涉及永新县麦点广告有限公司的复议申请，法院最终维持了原裁定。这表明该案件属于'行政行为-行政复议'类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政复议\", \"value\": \"《判决文书11》\", \"normalized_value\": \"判决文书11\", \"evidence_text\": \"永新县麦点广告有限公司向本院申请复议称，请求撤销永新县人民法院（2023）赣0830执异2号执行裁定。事实和理由与异议申请一致。\", \"source_doc_id\": \"DOC11\", \"source_anchor_id\": \"DOC11_A4\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "selected_anchor_ids": [
+    "DOC5_A2",
+    "DOC5_A5"
+  ],
+  "final_current_query": "案件类型",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "案件背景",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A2",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ]
+      },
+      "anchor_id": "DOC5_A2",
+      "plan_think": "The current document does not seem to contain information that directly matches any of the six case categories specified in the question. However, it's important to inspect DOC5_A2 to understand the nature of the case and potentially identify a category.",
+      "info": {
+        "anchor_id": "DOC5_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "马某某因与上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院的民事判决，向本院申请再审。",
+        "text": "再审申请人马某某因与被申请人上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院（2023）浙04民终1056号民事判决，向本院申请再审。本院于2024年1月2日立案后，依法组成合议庭进行了审查。本案现已审查终结。"
+      },
+      "extract_think": "The selected chunk provides information about a case involving a third-party objection to execution, which falls under the category of '执行案由-先予执行'. The chunk does not provide enough information to categorize the document into other specified categories, so further inspection is needed.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案由-先予执行",
+            "value": "《判决文书5》",
+            "normalized_value": "判决文书5",
+            "evidence_text": "再审申请人马某某因与被申请人上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院（2023）浙04民终1056号民事判决，向本院申请再审。",
+            "source_doc_id": "DOC5",
+            "source_anchor_id": "DOC5_A2",
+            "confidence": 0.8
+          }
+        ],
+        "enough": false,
+        "followup_query": "案件类型"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "案件类型",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC5_A5",
+        "candidate_anchor_ids": [
+          "DOC5_A1",
+          "DOC5_A2",
+          "DOC5_A3",
+          "DOC5_A4"
+        ]
+      },
+      "anchor_id": "DOC5_A5",
+      "plan_think": "The current evidence suggests that the case involves '执行案由-先予执行'. However, to ensure completeness and rule out other potential categories, it would be prudent to inspect DOC5_A5, which discusses the争议焦点 (controversial points) of the case. This may provide additional context on whether the case fits into another category.",
+      "info": {
+        "anchor_id": "DOC5_A5",
+        "anchor_type": "paragraph_region",
+        "section_path": "争议焦点",
+        "summary": "争议焦点包括：原判决是否遗漏诉讼请求，马某某对案涉款项是否享有排除强制执行的民事权益。二审判决不存在遗漏诉讼请求的情形，马某某的诉讼请求与生效裁判认定冲突。",
+        "text": "本院经审查认为，马某某依据《中华人民共和国民事诉讼法》（2021年修正）第二百零七条第十一项之规定申请再审，单就此而言，本案只需审查该再审事由是否成立；但考虑到马某某实际上还主张原审判决适用法律确有错误，其作为案涉款项的真实权利人，享有排除强制执行的民事权益，为避免程序空转，本院亦对后一事由进行分析。故本案的争议焦点有二：（一）原判决是否遗漏诉讼请求；（二）马某某对案涉款项是否享有排除强制执行的民事权益。\n\n（一）二审判决是否遗漏诉讼请求\n\n根据《最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释》第三百零五条之规定，案外人提起执行异议之诉，应当有明确的排除对执行标的执行的诉讼请求，且诉讼请求与原判决、裁定无关。《全国法院民商事审判工作会议纪要》第119条规定，人民法院对执行异议之诉的审理，一般应当就案外人对执行标的物是否享有权利、享有什么样的权利、权利是否足以排除强制执行进行判断。至于是否作出具体的确权判项，视案外人的诉讼请求而定。案外人未提出确权或者给付诉讼请求的，不作出确权判项，仅在裁判理由中进行分析判断并作出是否排除执行的判项即可。具体到本案，马某某一审请求确认案涉款项为工程回购款是请求确认款项性质，并非确认权属，亦没有包含向其给付的内容，不属于案外人提出确权或者给付诉讼请求的情形。一审判决已经对此作了阐述，并驳回马某某的全部诉讼请求，二审判决认可一审法院观点，并对马某某对案涉款项是否享有排除强制执行的民事权益进行了论理，最终判决驳回上诉，维持原判，并不存在遗漏诉讼请求的情形。\n\n何况，马某某的该诉讼请求与生效裁判认定冲突，与马某某的其余主张矛盾。本案马某某依据案涉《BT协议》请求确认案涉款项为回购款，但是119号民事判决认定案涉《BT协议》实质是建设工程施工合同。同时，马某某申请再审还主张“高某公司的应收工程款属于马某某所有”，并主张对案涉《BT协议》约定的回购款适用合同法第二百八十六条，实际上还是主张案涉款项为工程款，而非回购款。"
+      },
+      "extract_think": "The selected chunk provides detailed information about the争议焦点 (controversial points) of the case, including the issue of whether the original judgment omitted litigation requests and whether Ma Moumou has civil rights to exclude forced execution over the disputed funds. This reinforces the earlier categorization of the case under '执行案由-先予执行'. No new categories are suggested by this chunk, and it does not provide evidence for the other specified categories.",
+      "retrieve": {
+        "items": [],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "执行案由-先予执行",
+      "value": "《判决文书5》",
+      "normalized_value": "判决文书5",
+      "evidence_text": "再审申请人马某某因与被申请人上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院（2023）浙04民终1056号民事判决，向本院申请再审。",
+      "source_doc_id": "DOC5",
+      "source_anchor_id": "DOC5_A2",
+      "confidence": 0.8
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the six case categories specified in the question. However, it's important to inspect DOC5_A2 to understand the nature of the case and potentially identify a category.</think>\n<search>{\"current_query\": \"案件背景\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"马某某因与上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人马某某因与被申请人上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院（2023）浙04民终1056号民事判决，向本院申请再审。本院于2024年1月2日立案后，依法组成合议庭进行了审查。本案现已审查终结。\"}</info>\n<think>The selected chunk provides information about a case involving a third-party objection to execution, which falls under the category of '执行案由-先予执行'. The chunk does not provide enough information to categorize the document into other specified categories, so further inspection is needed.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-先予执行\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"再审申请人马某某因与被申请人上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院（2023）浙04民终1056号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"案件类型\"}</retrieve>\n<think>The current evidence suggests that the case involves '执行案由-先予执行'. However, to ensure completeness and rule out other potential categories, it would be prudent to inspect DOC5_A5, which discusses the争议焦点 (controversial points) of the case. This may provide additional context on whether the case fits into another category.</think>\n<search>{\"current_query\": \"案件类型\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A5\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"争议焦点\", \"summary\": \"争议焦点包括：原判决是否遗漏诉讼请求，马某某对案涉款项是否享有排除强制执行的民事权益。二审判决不存在遗漏诉讼请求的情形，马某某的诉讼请求与生效裁判认定冲突。\", \"text\": \"本院经审查认为，马某某依据《中华人民共和国民事诉讼法》（2021年修正）第二百零七条第十一项之规定申请再审，单就此而言，本案只需审查该再审事由是否成立；但考虑到马某某实际上还主张原审判决适用法律确有错误，其作为案涉款项的真实权利人，享有排除强制执行的民事权益，为避免程序空转，本院亦对后一事由进行分析。故本案的争议焦点有二：（一）原判决是否遗漏诉讼请求；（二）马某某对案涉款项是否享有排除强制执行的民事权益。\\n\\n（一）二审判决是否遗漏诉讼请求\\n\\n根据《最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释》第三百零五条之规定，案外人提起执行异议之诉，应当有明确的排除对执行标的执行的诉讼请求，且诉讼请求与原判决、裁定无关。《全国法院民商事审判工作会议纪要》第119条规定，人民法院对执行异议之诉的审理，一般应当就案外人对执行标的物是否享有权利、享有什么样的权利、权利是否足以排除强制执行进行判断。至于是否作出具体的确权判项，视案外人的诉讼请求而定。案外人未提出确权或者给付诉讼请求的，不作出确权判项，仅在裁判理由中进行分析判断并作出是否排除执行的判项即可。具体到本案，马某某一审请求确认案涉款项为工程回购款是请求确认款项性质，并非确认权属，亦没有包含向其给付的内容，不属于案外人提出确权或者给付诉讼请求的情形。一审判决已经对此作了阐述，并驳回马某某的全部诉讼请求，二审判决认可一审法院观点，并对马某某对案涉款项是否享有排除强制执行的民事权益进行了论理，最终判决驳回上诉，维持原判，并不存在遗漏诉讼请求的情形。\\n\\n何况，马某某的该诉讼请求与生效裁判认定冲突，与马某某的其余主张矛盾。本案马某某依据案涉《BT协议》请求确认案涉款项为回购款，但是119号民事判决认定案涉《BT协议》实质是建设工程施工合同。同时，马某某申请再审还主张“高某公司的应收工程款属于马某某所有”，并主张对案涉《BT协议》约定的回购款适用合同法第二百八十六条，实际上还是主张案涉款项为工程款，而非回购款。\"}</info>\n<think>The selected chunk provides detailed information about the争议焦点 (controversial points) of the case, including the issue of whether the original judgment omitted litigation requests and whether Ma Moumou has civil rights to exclude forced execution over the disputed funds. This reinforces the earlier categorization of the case under '执行案由-先予执行'. No new categories are suggested by this chunk, and it does not provide evidence for the other specified categories.</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the six case categories specified in the question. However, it's important to inspect DOC5_A2 to understand the nature of the case and potentially identify a category.</think>\n<search>{\"current_query\": \"案件背景\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A2\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"马某某因与上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院的民事判决，向本院申请再审。\", \"text\": \"再审申请人马某某因与被申请人上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院（2023）浙04民终1056号民事判决，向本院申请再审。本院于2024年1月2日立案后，依法组成合议庭进行了审查。本案现已审查终结。\"}</info>\n<think>The selected chunk provides information about a case involving a third-party objection to execution, which falls under the category of '执行案由-先予执行'. The chunk does not provide enough information to categorize the document into other specified categories, so further inspection is needed.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-先予执行\", \"value\": \"《判决文书5》\", \"normalized_value\": \"判决文书5\", \"evidence_text\": \"再审申请人马某某因与被申请人上海某银行、庆某公司、高某公司案外人执行异议之诉一案，不服浙江省嘉兴市中级人民法院（2023）浙04民终1056号民事判决，向本院申请再审。\", \"source_doc_id\": \"DOC5\", \"source_anchor_id\": \"DOC5_A2\", \"confidence\": 0.8}], \"enough\": false, \"followup_query\": \"案件类型\"}</retrieve>\n<think>The current evidence suggests that the case involves '执行案由-先予执行'. However, to ensure completeness and rule out other potential categories, it would be prudent to inspect DOC5_A5, which discusses the争议焦点 (controversial points) of the case. This may provide additional context on whether the case fits into another category.</think>\n<search>{\"current_query\": \"案件类型\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC5_A5\", \"candidate_anchor_ids\": [\"DOC5_A1\", \"DOC5_A2\", \"DOC5_A3\", \"DOC5_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC5_A5\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"争议焦点\", \"summary\": \"争议焦点包括：原判决是否遗漏诉讼请求，马某某对案涉款项是否享有排除强制执行的民事权益。二审判决不存在遗漏诉讼请求的情形，马某某的诉讼请求与生效裁判认定冲突。\", \"text\": \"本院经审查认为，马某某依据《中华人民共和国民事诉讼法》（2021年修正）第二百零七条第十一项之规定申请再审，单就此而言，本案只需审查该再审事由是否成立；但考虑到马某某实际上还主张原审判决适用法律确有错误，其作为案涉款项的真实权利人，享有排除强制执行的民事权益，为避免程序空转，本院亦对后一事由进行分析。故本案的争议焦点有二：（一）原判决是否遗漏诉讼请求；（二）马某某对案涉款项是否享有排除强制执行的民事权益。\\n\\n（一）二审判决是否遗漏诉讼请求\\n\\n根据《最高人民法院关于适用〈中华人民共和国民事诉讼法〉的解释》第三百零五条之规定，案外人提起执行异议之诉，应当有明确的排除对执行标的执行的诉讼请求，且诉讼请求与原判决、裁定无关。《全国法院民商事审判工作会议纪要》第119条规定，人民法院对执行异议之诉的审理，一般应当就案外人对执行标的物是否享有权利、享有什么样的权利、权利是否足以排除强制执行进行判断。至于是否作出具体的确权判项，视案外人的诉讼请求而定。案外人未提出确权或者给付诉讼请求的，不作出确权判项，仅在裁判理由中进行分析判断并作出是否排除执行的判项即可。具体到本案，马某某一审请求确认案涉款项为工程回购款是请求确认款项性质，并非确认权属，亦没有包含向其给付的内容，不属于案外人提出确权或者给付诉讼请求的情形。一审判决已经对此作了阐述，并驳回马某某的全部诉讼请求，二审判决认可一审法院观点，并对马某某对案涉款项是否享有排除强制执行的民事权益进行了论理，最终判决驳回上诉，维持原判，并不存在遗漏诉讼请求的情形。\\n\\n何况，马某某的该诉讼请求与生效裁判认定冲突，与马某某的其余主张矛盾。本案马某某依据案涉《BT协议》请求确认案涉款项为回购款，但是119号民事判决认定案涉《BT协议》实质是建设工程施工合同。同时，马某某申请再审还主张“高某公司的应收工程款属于马某某所有”，并主张对案涉《BT协议》约定的回购款适用合同法第二百八十六条，实际上还是主张案涉款项为工程款，而非回购款。\"}</info>\n<think>The selected chunk provides detailed information about the争议焦点 (controversial points) of the case, including the issue of whether the original judgment omitted litigation requests and whether Ma Moumou has civil rights to exclude forced execution over the disputed funds. This reinforces the earlier categorization of the case under '执行案由-先予执行'. No new categories are suggested by this chunk, and it does not provide evidence for the other specified categories.</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

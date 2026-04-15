@@ -1,0 +1,97 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "selected_anchor_ids": [
+    "DOC8_A1",
+    "DOC8_A2"
+  ],
+  "final_current_query": "查找判决书中涉及的具体案由或争议焦点，以便确定该判决文书属于哪种案由类别。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC8_A1",
+        "candidate_anchor_ids": [
+          "DOC8_A1",
+          "DOC8_A2"
+        ]
+      },
+      "anchor_id": "DOC8_A1",
+      "plan_think": "The document title provided is '《判决文书8》'. The current query asks for categorization of judgment documents based on specific case causes. Since we have not yet inspected any chunks within this document, I will start with DOC8_A1 to understand the parties involved and potentially identify the nature of the dispute.",
+      "info": {
+        "anchor_id": "DOC8_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "提供了再审申请人彰武县某合作社及其法定代表人和委托诉讼代理人的信息，以及被申请人彰武县东六家子镇人民政府和彰武县人民政府及其法定代表人和委托诉讼代理人的信息。",
+        "text": "再审申请人（一审原告、二审上诉人）：彰武县某合作社，住所地辽宁省彰武县。\n\n法定代表人：孙某某，该合作社社长。\n\n委托诉讼代理人：李娅，北京在明律师事务所律师。\n\n被申请人（一审被告、二审被上诉人）：彰武县东六家子镇人民政府，住所地辽宁省彰武县东六家子镇本街69号。\n\n法定代表人：朱某，该镇政府镇长。\n\n委托诉讼代理人：杨某某，该镇政府工作人员。\n\n被申请人（一审被告、二审被上诉人）：彰武县人民政府，住所地辽宁省彰武县人民大街65号。\n\n法定代表人：赵某某，该县政府县长。\n\n委托诉讼代理人：赵某某，该县司法局工作人员。。"
+      },
+      "extract_think": "当前锚点块提供了当事人的基本信息，包括再审申请人彰武县某合作社及其法定代表人和委托诉讼代理人的信息，以及被申请人彰武县东六家子镇人民政府和彰武县人民政府及其法定代表人和委托诉讼代理人的信息。然而，这些信息不足以确定案件的具体案由。需要进一步查找文档中的其他部分来确定具体的案由。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "查找判决书中涉及的具体案由或争议焦点，以便确定该判决文书属于哪种案由类别。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "查找判决书中涉及的具体案由或争议焦点，以便确定该判决文书属于哪种案由类别。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC8_A2",
+        "candidate_anchor_ids": [
+          "DOC8_A1",
+          "DOC8_A2"
+        ]
+      },
+      "anchor_id": "DOC8_A2",
+      "plan_think": "为了确定案件的具体案由，下一步应该查看包含案件详情与裁定结果的部分，即DOC8_A2，因为这部分内容可能直接提到案件的性质和最终的法律裁定，有助于我们判断该判决文书应归类于哪个案由类别。",
+      "info": {
+        "anchor_id": "DOC8_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件详情与裁定结果",
+        "summary": "再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，申请再审后自愿撤回再审申请，法院裁定准许撤回再审申请。",
+        "text": "再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，不服辽宁省阜新市中级人民法院（2023）辽09行终67号行政判决，向本院申请再审。在本院依法组成合议庭对本案进行审查的过程中，再审申请人彰武县某合作社于2024年4月18日自愿向本院提出撤回再审申请。\n\n本院认为，再审申请人彰武县某合作社撤回再审申请的请求，不违反法律规定，本院予以准许。依照《中华人民共和国行政诉讼法》第六十二条、《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款的规定，裁定如下：\n\n准许再审申请人彰武县某合作社撤回再审申请。"
+      },
+      "extract_think": "该锚点块提供了案件的详细情况和裁定结果，明确指出再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府的行政决定及行政复议一案。因此，可以将此判决文书归类为“行政行为-行政裁决”。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政裁决",
+            "value": "《判决文书8》",
+            "normalized_value": "判决文书8",
+            "evidence_text": "再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，不服辽宁省阜新市中级人民法院（2023）辽09行终67号行政判决，向本院申请再审。",
+            "source_doc_id": "DOC8",
+            "source_anchor_id": "DOC8_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政裁决",
+      "value": "《判决文书8》",
+      "normalized_value": "判决文书8",
+      "evidence_text": "再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，不服辽宁省阜新市中级人民法院（2023）辽09行终67号行政判决，向本院申请再审。",
+      "source_doc_id": "DOC8",
+      "source_anchor_id": "DOC8_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document title provided is '《判决文书8》'. The current query asks for categorization of judgment documents based on specific case causes. Since we have not yet inspected any chunks within this document, I will start with DOC8_A1 to understand the parties involved and potentially identify the nature of the dispute.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A1\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"提供了再审申请人彰武县某合作社及其法定代表人和委托诉讼代理人的信息，以及被申请人彰武县东六家子镇人民政府和彰武县人民政府及其法定代表人和委托诉讼代理人的信息。\", \"text\": \"再审申请人（一审原告、二审上诉人）：彰武县某合作社，住所地辽宁省彰武县。\\n\\n法定代表人：孙某某，该合作社社长。\\n\\n委托诉讼代理人：李娅，北京在明律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：彰武县东六家子镇人民政府，住所地辽宁省彰武县东六家子镇本街69号。\\n\\n法定代表人：朱某，该镇政府镇长。\\n\\n委托诉讼代理人：杨某某，该镇政府工作人员。\\n\\n被申请人（一审被告、二审被上诉人）：彰武县人民政府，住所地辽宁省彰武县人民大街65号。\\n\\n法定代表人：赵某某，该县政府县长。\\n\\n委托诉讼代理人：赵某某，该县司法局工作人员。。\"}</info>\n<think>当前锚点块提供了当事人的基本信息，包括再审申请人彰武县某合作社及其法定代表人和委托诉讼代理人的信息，以及被申请人彰武县东六家子镇人民政府和彰武县人民政府及其法定代表人和委托诉讼代理人的信息。然而，这些信息不足以确定案件的具体案由。需要进一步查找文档中的其他部分来确定具体的案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找判决书中涉及的具体案由或争议焦点，以便确定该判决文书属于哪种案由类别。\"}</retrieve>\n<think>为了确定案件的具体案由，下一步应该查看包含案件详情与裁定结果的部分，即DOC8_A2，因为这部分内容可能直接提到案件的性质和最终的法律裁定，有助于我们判断该判决文书应归类于哪个案由类别。</think>\n<search>{\"current_query\": \"查找判决书中涉及的具体案由或争议焦点，以便确定该判决文书属于哪种案由类别。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情与裁定结果\", \"summary\": \"再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，申请再审后自愿撤回再审申请，法院裁定准许撤回再审申请。\", \"text\": \"再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，不服辽宁省阜新市中级人民法院（2023）辽09行终67号行政判决，向本院申请再审。在本院依法组成合议庭对本案进行审查的过程中，再审申请人彰武县某合作社于2024年4月18日自愿向本院提出撤回再审申请。\\n\\n本院认为，再审申请人彰武县某合作社撤回再审申请的请求，不违反法律规定，本院予以准许。依照《中华人民共和国行政诉讼法》第六十二条、《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款的规定，裁定如下：\\n\\n准许再审申请人彰武县某合作社撤回再审申请。\"}</info>\n<think>该锚点块提供了案件的详细情况和裁定结果，明确指出再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府的行政决定及行政复议一案。因此，可以将此判决文书归类为“行政行为-行政裁决”。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，不服辽宁省阜新市中级人民法院（2023）辽09行终67号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document title provided is '《判决文书8》'. The current query asks for categorization of judgment documents based on specific case causes. Since we have not yet inspected any chunks within this document, I will start with DOC8_A1 to understand the parties involved and potentially identify the nature of the dispute.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政行为-行政裁决' '执行案由-先予执行' '海事海商纠纷' '行政行为-行政强制' '物权保护纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政行为-行政裁决': ['《判决文书a》', '《判决文书b》'], '执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政强制': ['《判决文书a》', '《判决文书b》'], '物权保护纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A1\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"提供了再审申请人彰武县某合作社及其法定代表人和委托诉讼代理人的信息，以及被申请人彰武县东六家子镇人民政府和彰武县人民政府及其法定代表人和委托诉讼代理人的信息。\", \"text\": \"再审申请人（一审原告、二审上诉人）：彰武县某合作社，住所地辽宁省彰武县。\\n\\n法定代表人：孙某某，该合作社社长。\\n\\n委托诉讼代理人：李娅，北京在明律师事务所律师。\\n\\n被申请人（一审被告、二审被上诉人）：彰武县东六家子镇人民政府，住所地辽宁省彰武县东六家子镇本街69号。\\n\\n法定代表人：朱某，该镇政府镇长。\\n\\n委托诉讼代理人：杨某某，该镇政府工作人员。\\n\\n被申请人（一审被告、二审被上诉人）：彰武县人民政府，住所地辽宁省彰武县人民大街65号。\\n\\n法定代表人：赵某某，该县政府县长。\\n\\n委托诉讼代理人：赵某某，该县司法局工作人员。。\"}</info>\n<think>当前锚点块提供了当事人的基本信息，包括再审申请人彰武县某合作社及其法定代表人和委托诉讼代理人的信息，以及被申请人彰武县东六家子镇人民政府和彰武县人民政府及其法定代表人和委托诉讼代理人的信息。然而，这些信息不足以确定案件的具体案由。需要进一步查找文档中的其他部分来确定具体的案由。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找判决书中涉及的具体案由或争议焦点，以便确定该判决文书属于哪种案由类别。\"}</retrieve>\n<think>为了确定案件的具体案由，下一步应该查看包含案件详情与裁定结果的部分，即DOC8_A2，因为这部分内容可能直接提到案件的性质和最终的法律裁定，有助于我们判断该判决文书应归类于哪个案由类别。</think>\n<search>{\"current_query\": \"查找判决书中涉及的具体案由或争议焦点，以便确定该判决文书属于哪种案由类别。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC8_A2\", \"candidate_anchor_ids\": [\"DOC8_A1\", \"DOC8_A2\"]}</search>\n<info>{\"anchor_id\": \"DOC8_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件详情与裁定结果\", \"summary\": \"再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，申请再审后自愿撤回再审申请，法院裁定准许撤回再审申请。\", \"text\": \"再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，不服辽宁省阜新市中级人民法院（2023）辽09行终67号行政判决，向本院申请再审。在本院依法组成合议庭对本案进行审查的过程中，再审申请人彰武县某合作社于2024年4月18日自愿向本院提出撤回再审申请。\\n\\n本院认为，再审申请人彰武县某合作社撤回再审申请的请求，不违反法律规定，本院予以准许。依照《中华人民共和国行政诉讼法》第六十二条、《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十五条第二款的规定，裁定如下：\\n\\n准许再审申请人彰武县某合作社撤回再审申请。\"}</info>\n<think>该锚点块提供了案件的详细情况和裁定结果，明确指出再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府的行政决定及行政复议一案。因此，可以将此判决文书归类为“行政行为-行政裁决”。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": \"《判决文书8》\", \"normalized_value\": \"判决文书8\", \"evidence_text\": \"再审申请人彰武县某合作社因诉被申请人彰武县东六家子镇人民政府、彰武县人民政府行政决定及行政复议一案，不服辽宁省阜新市中级人民法院（2023）辽09行终67号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC8\", \"source_anchor_id\": \"DOC8_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

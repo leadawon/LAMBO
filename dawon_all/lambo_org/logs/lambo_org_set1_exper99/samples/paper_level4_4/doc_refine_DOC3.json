@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation",
+  "scan_result": "found",
+  "evidence": "[DOC3_C018] (score=0.1850)\nEvaluation Benchmarks. Following Li et al. [3], we conduct experiments on three benchmarks from different domains, including (i) articles from Wikinews ${ }^{1}$ in the news domain; (ii) Wikitext-103 dataset [5] from the Wikipedia domain; (iii) and BookCorpus [13] from the story domain.\n\n[DOC3_C019] (score=0.1539)\nSame as in Li et al. [3], the generation of LM is conditioned on the test prompts with a fixed length of 32. And the generation of the text ends upon reaching an end-of-document token or a maximum length of 256 tokens. To ensure our experiments are aligned with Li et al. [3], we directly use the data provided in the authors' released repository ${ }^{2}$.\n\n[DOC3_C021] (score=0.1783)\nIn addition to $\\mathrm{CD}$ and $\\mathrm{CS}$, in the experiments, we also report the results of other baseline methods, including (i) greedy search; (ii) top- $k$ sampling $(k=50)$ [1]; (iii) nucleus sampling $(p=0.95)$ [2]; and (iv) typical sampling $(\\tau=0.95)[4]$.\n\n[DOC3_C022] (score=0.1621)\nNote that, for a fair comparison with Li et al. [3], we report the performance of the baseline methods (i.e. greedy search, top- $k$ sampling, nucleus sampling, typical sampling, and contrastive decoding (CD)) using the generated texts provided in the authors' released repository ${ }^{3}$. However, for contrastive search (CS), the reported numbers in Li et al. [3] are different from our reproduced numbers. Therefore, we re-implement the results of CS using the same benchmark data provided by Li et al. [3] in their official repository ${ }^{4}$.\n### 3.1 Automatic Evaluation\n\n[DOC3_C029] (score=0.1795)\n| Method | Wikinews |  |  | Wikitext |  |  | Story |  |  |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n|  | div.(\\%) | MAUVE(\\%) | coh. | $\\operatorname{div} .(\\%)$ | MAUVE(\\%) | coh. | div.(\\%) | $\\operatorname{MAUVE}(\\%)$ | coh. |\n| Greedy Search ${ }^{*}$ | 3.55 | 13.96 | -0.47 | 1.77 | 4.91 | -0.41 | 0.86 | 2.65 | -0.34 |\n| Top- $k$ Sampling ${ }^{*}$ | 91.56 | 89.86 | -2.22 | 87.49 | 81.00 | -2.37 | 91.22 | 87.49 | -2.45 |\n| Nucleus Sampling* | 93.54 | 89.45 | -2.61 | 92.16 | 86.54 | -3.03 | 94.50 | 91.47 | -3.02 |\n| Typical Sampling* | 95.37 | 90.97 | -3.26 | 94.82 | 86.07 | -3.71 | 96.29 | 88.58 | -3.68 |\n| Contrastive Decoding ${ }^{*}$ | 91.57 | 92.20 | -2.16 | 88.02 | 91.46 | -2.19 | 86.41 | 93.17 | -2.09 |\n| Contrastive Search | 93.72 | 84.14 | -1.39 | 89.35 | 77.97 | -1.56 | 93.06 | 84.74 | -1.61 |\n\n[DOC3_C030] (score=0.1558)\nTable 1: Automatic evaluation results, where div. and coh. denote diversity and coherence. The numbers marked with * are obtained using the generated texts originally released by Li et al. [3].",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC3_C018",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.1849667727947235,
+      "preview": "Evaluation Benchmarks. Following Li et al. [3], we conduct experiments on three benchmarks from different domains, including (i) articles from Wikinews ${ }^{1}$ in the news domain; (ii) Wikitext-103 dataset [5] from..."
+    },
+    {
+      "anchor_id": "DOC3_C019",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.153868168592453,
+      "preview": "Same as in Li et al. [3], the generation of LM is conditioned on the test prompts with a fixed length of 32. And the generation of the text ends upon reaching an end-of-document token or a maximum length of 256 tokens..."
+    },
+    {
+      "anchor_id": "DOC3_C021",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.17833545804023743,
+      "preview": "In addition to $\\mathrm{CD}$ and $\\mathrm{CS}$, in the experiments, we also report the results of other baseline methods, including (i) greedy search; (ii) top- $k$ sampling $(k=50)$ [1]; (iii) nucleus sampling $(p=0...."
+    },
+    {
+      "anchor_id": "DOC3_C022",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.16207090020179749,
+      "preview": "Note that, for a fair comparison with Li et al. [3], we report the performance of the baseline methods (i.e. greedy search, top- $k$ sampling, nucleus sampling, typical sampling, and contrastive decoding (CD)) using t..."
+    },
+    {
+      "anchor_id": "DOC3_C029",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.17945343255996704,
+      "preview": "| Method | Wikinews | | | Wikitext | | | Story | | | | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | | | div.(\\%) | MAUVE(\\%) | coh. | $\\operatorname{div} .(\\%)$ | MAUVE(\\%) | coh. |..."
+    },
+    {
+      "anchor_id": "DOC3_C030",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.15582671761512756,
+      "preview": "Table 1: Automatic evaluation results, where div. and coh. denote diversity and coherence. The numbers marked with * are obtained using the generated texts originally released by Li et al. [3]."
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "selected_anchor_ids": [
+    "DOC1_A2",
+    "DOC1_A3"
+  ],
+  "final_current_query": "进一步查找有关行政赔偿案件的具体细节，确认是否涉及其他类别",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到给定的五个类别中",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A2",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ]
+      },
+      "anchor_id": "DOC1_A2",
+      "plan_think": "The current document does not seem to contain explicit information that matches any of the five case categories mentioned in the question. However, since DOC1_A2 mentions an administrative compensation case involving a street office under the municipal government, it might provide some clues about the type of administrative action involved. Therefore, I will inspect DOC1_A2 next.",
+      "info": {
+        "anchor_id": "DOC1_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。张某军以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。",
+        "text": "再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n张某军以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。"
+      },
+      "extract_think": "该段落提到的是关于行政赔偿的案件，涉及平度市人民政府凤台街道办事处。这可能与“行政行为-行政裁决”相关，因为行政赔偿通常涉及到行政机关的行为是否合法以及相应的赔偿决定。然而，没有直接证据表明它属于其他四个类别。",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政裁决",
+            "value": "《判决文书1》",
+            "normalized_value": "判决文书1",
+            "evidence_text": "再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。",
+            "source_doc_id": "DOC1",
+            "source_anchor_id": "DOC1_A2",
+            "confidence": 0.7
+          }
+        ],
+        "enough": false,
+        "followup_query": "进一步查找有关行政赔偿案件的具体细节，确认是否涉及其他类别"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "进一步查找有关行政赔偿案件的具体细节，确认是否涉及其他类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC1_A3",
+        "candidate_anchor_ids": [
+          "DOC1_A1",
+          "DOC1_A2",
+          "DOC1_A3",
+          "DOC1_A4"
+        ]
+      },
+      "anchor_id": "DOC1_A3",
+      "plan_think": "尽管我们已经将《判决文书1》归类为“行政行为-行政裁决”，但为了确保没有遗漏其他可能相关的类别，我们需要继续检查剩余的部分。特别是，DOC1_A3提到了法院的意见和具体的赔偿细节，可能会提供更多关于案件性质的信息。",
+      "info": {
+        "anchor_id": "DOC1_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院意见",
+        "summary": "法院认为，申请人张某军不能举证证明案涉房屋的合法性，原审法院对其赔偿房屋损失的主张不予支持。对于可再利用的建筑材料及室内物品的损失赔偿，原审酌定6000元。申请人主张的租房费、看护费、维权费等各种费用，无法律依据，原审法院不予支持。张某军的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。",
+        "text": "本院认为，《中华人民共和国国家赔偿法》第二条第一款规定，国家机关和国家机关工作人员行使职权，有本法规定的侵犯公民、法人和其他组织合法权益的情形，造成损害的，受害人有依照本法取得国家赔偿的权利。即获得国家赔偿的前提是公民、法人和其他组织的合法权益受到侵害造成损失。本案中，申请人张某军不能举证证明案涉房屋的合法性，原审法院对其赔偿房屋损失的主张不予支持，并无不当。对于可再利用的建筑材料及室内物品的损失赔偿，原审酌定6000元，亦无不当。申请人主张的租房费、看护费、维权费等各种费用，无法律依据，原审法院不予支持，本院予以认可。\n\n综上，张某军的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下："
+      },
+      "extract_think": "该段落详细描述了法院对行政赔偿案件的处理意见，包括对房屋合法性、建筑材料及室内物品损失赔偿的评估，以及对其他费用请求的驳回。这些信息进一步支持了该案件属于“行政行为-行政裁决”的分类，但没有提供足够的证据将其归类于其他四个类别。",
+      "retrieve": {
+        "items": [],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政裁决",
+      "value": "《判决文书1》",
+      "normalized_value": "判决文书1",
+      "evidence_text": "再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。",
+      "source_doc_id": "DOC1",
+      "source_anchor_id": "DOC1_A2",
+      "confidence": 0.7
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document does not seem to contain explicit information that matches any of the five case categories mentioned in the question. However, since DOC1_A2 mentions an administrative compensation case involving a street office under the municipal government, it might provide some clues about the type of administrative action involved. Therefore, I will inspect DOC1_A2 next.</think>\n<search>{\"current_query\": \"分类判决文书到给定的五个类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。张某军以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\", \"text\": \"再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n张某军以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\"}</info>\n<think>该段落提到的是关于行政赔偿的案件，涉及平度市人民政府凤台街道办事处。这可能与“行政行为-行政裁决”相关，因为行政赔偿通常涉及到行政机关的行为是否合法以及相应的赔偿决定。然而，没有直接证据表明它属于其他四个类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.7}], \"enough\": false, \"followup_query\": \"进一步查找有关行政赔偿案件的具体细节，确认是否涉及其他类别\"}</retrieve>\n<think>尽管我们已经将《判决文书1》归类为“行政行为-行政裁决”，但为了确保没有遗漏其他可能相关的类别，我们需要继续检查剩余的部分。特别是，DOC1_A3提到了法院的意见和具体的赔偿细节，可能会提供更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"进一步查找有关行政赔偿案件的具体细节，确认是否涉及其他类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为，申请人张某军不能举证证明案涉房屋的合法性，原审法院对其赔偿房屋损失的主张不予支持。对于可再利用的建筑材料及室内物品的损失赔偿，原审酌定6000元。申请人主张的租房费、看护费、维权费等各种费用，无法律依据，原审法院不予支持。张某军的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。\", \"text\": \"本院认为，《中华人民共和国国家赔偿法》第二条第一款规定，国家机关和国家机关工作人员行使职权，有本法规定的侵犯公民、法人和其他组织合法权益的情形，造成损害的，受害人有依照本法取得国家赔偿的权利。即获得国家赔偿的前提是公民、法人和其他组织的合法权益受到侵害造成损失。本案中，申请人张某军不能举证证明案涉房屋的合法性，原审法院对其赔偿房屋损失的主张不予支持，并无不当。对于可再利用的建筑材料及室内物品的损失赔偿，原审酌定6000元，亦无不当。申请人主张的租房费、看护费、维权费等各种费用，无法律依据，原审法院不予支持，本院予以认可。\\n\\n综上，张某军的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\"}</info>\n<think>该段落详细描述了法院对行政赔偿案件的处理意见，包括对房屋合法性、建筑材料及室内物品损失赔偿的评估，以及对其他费用请求的驳回。这些信息进一步支持了该案件属于“行政行为-行政裁决”的分类，但没有提供足够的证据将其归类于其他四个类别。</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document does not seem to contain explicit information that matches any of the five case categories mentioned in the question. However, since DOC1_A2 mentions an administrative compensation case involving a street office under the municipal government, it might provide some clues about the type of administrative action involved. Therefore, I will inspect DOC1_A2 next.</think>\n<search>{\"current_query\": \"分类判决文书到给定的五个类别中\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A2\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。张某军以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\", \"text\": \"再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\\n\\n张某军以其申请再审事由符合《中华人民共和国行政诉讼法》第九十一条第三、四项之规定为由，向本院申请再审。\"}</info>\n<think>该段落提到的是关于行政赔偿的案件，涉及平度市人民政府凤台街道办事处。这可能与“行政行为-行政裁决”相关，因为行政赔偿通常涉及到行政机关的行为是否合法以及相应的赔偿决定。然而，没有直接证据表明它属于其他四个类别。</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政裁决\", \"value\": \"《判决文书1》\", \"normalized_value\": \"判决文书1\", \"evidence_text\": \"再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案，不服青岛市中级人民法院(2023)鲁02行终262号行政判决，向本院申请再审。\", \"source_doc_id\": \"DOC1\", \"source_anchor_id\": \"DOC1_A2\", \"confidence\": 0.7}], \"enough\": false, \"followup_query\": \"进一步查找有关行政赔偿案件的具体细节，确认是否涉及其他类别\"}</retrieve>\n<think>尽管我们已经将《判决文书1》归类为“行政行为-行政裁决”，但为了确保没有遗漏其他可能相关的类别，我们需要继续检查剩余的部分。特别是，DOC1_A3提到了法院的意见和具体的赔偿细节，可能会提供更多关于案件性质的信息。</think>\n<search>{\"current_query\": \"进一步查找有关行政赔偿案件的具体细节，确认是否涉及其他类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC1_A3\", \"candidate_anchor_ids\": [\"DOC1_A1\", \"DOC1_A2\", \"DOC1_A3\", \"DOC1_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC1_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院意见\", \"summary\": \"法院认为，申请人张某军不能举证证明案涉房屋的合法性，原审法院对其赔偿房屋损失的主张不予支持。对于可再利用的建筑材料及室内物品的损失赔偿，原审酌定6000元。申请人主张的租房费、看护费、维权费等各种费用，无法律依据，原审法院不予支持。张某军的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。\", \"text\": \"本院认为，《中华人民共和国国家赔偿法》第二条第一款规定，国家机关和国家机关工作人员行使职权，有本法规定的侵犯公民、法人和其他组织合法权益的情形，造成损害的，受害人有依照本法取得国家赔偿的权利。即获得国家赔偿的前提是公民、法人和其他组织的合法权益受到侵害造成损失。本案中，申请人张某军不能举证证明案涉房屋的合法性，原审法院对其赔偿房屋损失的主张不予支持，并无不当。对于可再利用的建筑材料及室内物品的损失赔偿，原审酌定6000元，亦无不当。申请人主张的租房费、看护费、维权费等各种费用，无法律依据，原审法院不予支持，本院予以认可。\\n\\n综上，张某军的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用〈中华人民共和国行政诉讼法〉的解释》第一百一十六条第二款的规定，裁定如下：\"}</info>\n<think>该段落详细描述了法院对行政赔偿案件的处理意见，包括对房屋合法性、建筑材料及室内物品损失赔偿的评估，以及对其他费用请求的驳回。这些信息进一步支持了该案件属于“行政行为-行政裁决”的分类，但没有提供足够的证据将其归类于其他四个类别。</think>\n<retrieve>{\"items\": [], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

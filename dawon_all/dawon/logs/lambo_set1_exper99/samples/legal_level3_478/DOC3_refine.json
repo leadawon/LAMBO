@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "selected_anchor_ids": [
+    "DOC3_A1",
+    "DOC3_A2"
+  ],
+  "final_current_query": "Does the case involve disputes over administrative actions or other types of legal issues?",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "reading the above judgment documents, please classify all the above judgment documents according to the following 5 causes of action: 'inheritance dispute', 'civil execution cause', 'private lending dispute', 'administrative act - administrative penalty', 'administrative act - other administrative acts'",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A1",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ]
+      },
+      "anchor_id": "DOC3_A1",
+      "plan_think": "The current document title is '《判决文书3》'. The summaries suggest that this case involves a dispute over compensation duties between a government body and a company, which seems to fall under '行政行为-其他行政行为'. I will inspect the first anchor coordinate to confirm if it contains information about the case's category.",
+      "info": {
+        "anchor_id": "DOC3_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "提供了再审申请人、被申请人以及原审第三人的基本信息，包括名称、地址、法定代表人及委托诉讼代理人等。",
+        "text": "再审申请人（一审被告、二审被上诉人）：沈阳市沈河区人民政府，住所地辽宁省沈阳市沈河区盛京路25号。\n\n法定代表人：石某某，该区政府区长。\n\n委托诉讼代理人：陈国兴，辽宁观策律师事务所律师。\n\n委托诉讼代理人：张舒，辽宁观策律师事务所律师。\n\n被申请人（一审原告、二审上诉人）：沈阳某公司，住所地辽宁省沈阳市沈河区。\n\n法定代表人：刘某某，该公司经理。\n\n委托诉讼代理人：欧阳朝霞，北京浩天（沈阳）律师事务所律师。\n\n委托诉讼代理人：白凌云，北京大成（沈阳）律师事务所律师。\n\n原审第三人：沈阳市沈河区城市更新局，住所地辽宁省沈阳市沈河区北通天街29号。\n\n法定代表人：吴某，该局局长。\n\n委托诉讼代理人：温澄，辽宁鑫成律师事务所律师。\n\n原审第三人：沈阳某百货公司，住所地辽宁省沈阳市沈河区。\n\n法定代表人：徐某某，该公司经理。\n\n委托诉讼代理人：于某某，该公司股东。\n\n委托诉讼代理人：徐羽佳，辽宁申胜律师事务所律师。"
+      },
+      "extract_think": "The selected chunk provides information about the parties involved in the case but does not specify the cause of action. It mentions governmental bodies and companies, which might suggest an administrative case, but more specific details are needed to confirm the exact category.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "Does the case involve disputes over administrative actions or other types of legal issues?"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "Does the case involve disputes over administrative actions or other types of legal issues?",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC3_A2",
+        "candidate_anchor_ids": [
+          "DOC3_A1",
+          "DOC3_A2",
+          "DOC3_A3",
+          "DOC3_A4"
+        ]
+      },
+      "anchor_id": "DOC3_A2",
+      "plan_think": "The previous inspection did not provide enough information to categorize the case. The next logical step is to inspect DOC3_A2, which summarizes the background of the case and may contain information about the nature of the dispute, helping to determine if it falls under '行政行为-其他行政行为' or another category.",
+      "info": {
+        "anchor_id": "DOC3_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "沈阳某公司诉沈阳市沈河区人民政府、沈阳市沈河区城市更新局、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已作出终审判决，现再审申请人沈河区政府提出再审申请。",
+        "text": "沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已于2023年7月28日作出（2023）辽01行终311号行政判决，该判决已经发生法律效力。再审申请人沈河区政府向本院提出再审申请，本院依法组成合议庭对本案进行审查，现已审查终结。"
+      },
+      "extract_think": "The selected chunk indicates that the case involves a dispute over the fulfillment of compensation responsibilities between a company and a government body, which aligns with the category '行政行为-其他行政行为'. This chunk provides clear evidence to support the classification of the document.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-其他行政行为",
+            "value": "《判决文书3》",
+            "normalized_value": "判决文书3",
+            "evidence_text": "沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已于2023年7月28日作出（2023）辽01行终311号行政判决，该判决已经发生法律效力。再审申请人沈河区政府向本院提出再审申请，本院依法组成合议庭对本案进行审查，现已审查终结。",
+            "source_doc_id": "DOC3",
+            "source_anchor_id": "DOC3_A2",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-其他行政行为",
+      "value": "《判决文书3》",
+      "normalized_value": "判决文书3",
+      "evidence_text": "沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已于2023年7月28日作出（2023）辽01行终311号行政判决，该判决已经发生法律效力。再审申请人沈河区政府向本院提出再审申请，本院依法组成合议庭对本案进行审查，现已审查终结。",
+      "source_doc_id": "DOC3",
+      "source_anchor_id": "DOC3_A2",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document title is '《判决文书3》'. The summaries suggest that this case involves a dispute over compensation duties between a government body and a company, which seems to fall under '行政行为-其他行政行为'. I will inspect the first anchor coordinate to confirm if it contains information about the case's category.</think>\n<search>{\"current_query\": \"reading the above judgment documents, please classify all the above judgment documents according to the following 5 causes of action: 'inheritance dispute', 'civil execution cause', 'private lending dispute', 'administrative act - administrative penalty', 'administrative act - other administrative acts'\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"提供了再审申请人、被申请人以及原审第三人的基本信息，包括名称、地址、法定代表人及委托诉讼代理人等。\", \"text\": \"再审申请人（一审被告、二审被上诉人）：沈阳市沈河区人民政府，住所地辽宁省沈阳市沈河区盛京路25号。\\n\\n法定代表人：石某某，该区政府区长。\\n\\n委托诉讼代理人：陈国兴，辽宁观策律师事务所律师。\\n\\n委托诉讼代理人：张舒，辽宁观策律师事务所律师。\\n\\n被申请人（一审原告、二审上诉人）：沈阳某公司，住所地辽宁省沈阳市沈河区。\\n\\n法定代表人：刘某某，该公司经理。\\n\\n委托诉讼代理人：欧阳朝霞，北京浩天（沈阳）律师事务所律师。\\n\\n委托诉讼代理人：白凌云，北京大成（沈阳）律师事务所律师。\\n\\n原审第三人：沈阳市沈河区城市更新局，住所地辽宁省沈阳市沈河区北通天街29号。\\n\\n法定代表人：吴某，该局局长。\\n\\n委托诉讼代理人：温澄，辽宁鑫成律师事务所律师。\\n\\n原审第三人：沈阳某百货公司，住所地辽宁省沈阳市沈河区。\\n\\n法定代表人：徐某某，该公司经理。\\n\\n委托诉讼代理人：于某某，该公司股东。\\n\\n委托诉讼代理人：徐羽佳，辽宁申胜律师事务所律师。\"}</info>\n<think>The selected chunk provides information about the parties involved in the case but does not specify the cause of action. It mentions governmental bodies and companies, which might suggest an administrative case, but more specific details are needed to confirm the exact category.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Does the case involve disputes over administrative actions or other types of legal issues?\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the case. The next logical step is to inspect DOC3_A2, which summarizes the background of the case and may contain information about the nature of the dispute, helping to determine if it falls under '行政行为-其他行政行为' or another category.</think>\n<search>{\"current_query\": \"Does the case involve disputes over administrative actions or other types of legal issues?\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"沈阳某公司诉沈阳市沈河区人民政府、沈阳市沈河区城市更新局、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已作出终审判决，现再审申请人沈河区政府提出再审申请。\", \"text\": \"沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已于2023年7月28日作出（2023）辽01行终311号行政判决，该判决已经发生法律效力。再审申请人沈河区政府向本院提出再审申请，本院依法组成合议庭对本案进行审查，现已审查终结。\"}</info>\n<think>The selected chunk indicates that the case involves a dispute over the fulfillment of compensation responsibilities between a company and a government body, which aligns with the category '行政行为-其他行政行为'. This chunk provides clear evidence to support the classification of the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-其他行政行为\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已于2023年7月28日作出（2023）辽01行终311号行政判决，该判决已经发生法律效力。再审申请人沈河区政府向本院提出再审申请，本院依法组成合议庭对本案进行审查，现已审查终结。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document title is '《判决文书3》'. The summaries suggest that this case involves a dispute over compensation duties between a government body and a company, which seems to fall under '行政行为-其他行政行为'. I will inspect the first anchor coordinate to confirm if it contains information about the case's category.</think>\n<search>{\"current_query\": \"reading the above judgment documents, please classify all the above judgment documents according to the following 5 causes of action: 'inheritance dispute', 'civil execution cause', 'private lending dispute', 'administrative act - administrative penalty', 'administrative act - other administrative acts'\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A1\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"提供了再审申请人、被申请人以及原审第三人的基本信息，包括名称、地址、法定代表人及委托诉讼代理人等。\", \"text\": \"再审申请人（一审被告、二审被上诉人）：沈阳市沈河区人民政府，住所地辽宁省沈阳市沈河区盛京路25号。\\n\\n法定代表人：石某某，该区政府区长。\\n\\n委托诉讼代理人：陈国兴，辽宁观策律师事务所律师。\\n\\n委托诉讼代理人：张舒，辽宁观策律师事务所律师。\\n\\n被申请人（一审原告、二审上诉人）：沈阳某公司，住所地辽宁省沈阳市沈河区。\\n\\n法定代表人：刘某某，该公司经理。\\n\\n委托诉讼代理人：欧阳朝霞，北京浩天（沈阳）律师事务所律师。\\n\\n委托诉讼代理人：白凌云，北京大成（沈阳）律师事务所律师。\\n\\n原审第三人：沈阳市沈河区城市更新局，住所地辽宁省沈阳市沈河区北通天街29号。\\n\\n法定代表人：吴某，该局局长。\\n\\n委托诉讼代理人：温澄，辽宁鑫成律师事务所律师。\\n\\n原审第三人：沈阳某百货公司，住所地辽宁省沈阳市沈河区。\\n\\n法定代表人：徐某某，该公司经理。\\n\\n委托诉讼代理人：于某某，该公司股东。\\n\\n委托诉讼代理人：徐羽佳，辽宁申胜律师事务所律师。\"}</info>\n<think>The selected chunk provides information about the parties involved in the case but does not specify the cause of action. It mentions governmental bodies and companies, which might suggest an administrative case, but more specific details are needed to confirm the exact category.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"Does the case involve disputes over administrative actions or other types of legal issues?\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the case. The next logical step is to inspect DOC3_A2, which summarizes the background of the case and may contain information about the nature of the dispute, helping to determine if it falls under '行政行为-其他行政行为' or another category.</think>\n<search>{\"current_query\": \"Does the case involve disputes over administrative actions or other types of legal issues?\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC3_A2\", \"candidate_anchor_ids\": [\"DOC3_A1\", \"DOC3_A2\", \"DOC3_A3\", \"DOC3_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC3_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"沈阳某公司诉沈阳市沈河区人民政府、沈阳市沈河区城市更新局、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已作出终审判决，现再审申请人沈河区政府提出再审申请。\", \"text\": \"沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已于2023年7月28日作出（2023）辽01行终311号行政判决，该判决已经发生法律效力。再审申请人沈河区政府向本院提出再审申请，本院依法组成合议庭对本案进行审查，现已审查终结。\"}</info>\n<think>The selected chunk indicates that the case involves a dispute over the fulfillment of compensation responsibilities between a company and a government body, which aligns with the category '行政行为-其他行政行为'. This chunk provides clear evidence to support the classification of the document.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-其他行政行为\", \"value\": \"《判决文书3》\", \"normalized_value\": \"判决文书3\", \"evidence_text\": \"沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级人民法院已于2023年7月28日作出（2023）辽01行终311号行政判决，该判决已经发生法律效力。再审申请人沈河区政府向本院提出再审申请，本院依法组成合议庭对本案进行审查，现已审查终结。\", \"source_doc_id\": \"DOC3\", \"source_anchor_id\": \"DOC3_A2\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

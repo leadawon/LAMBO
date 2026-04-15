@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training",
+  "scan_result": "found",
+  "evidence": "[DOC2_C008] (score=0.2999)\nFigure 1: We propose (Cory, a fully differentiable MoE architecture designed for autoregressive language models based on expert merging (Section 2.2). We introduce two key techniques to train Lory: First, we propose the causal segment routing strategy, which conducts expert merging at the segment level and preserves the autoregressive property of language models. Second, we use the similarity-based data batching method to construct training instances, which steers the experts toward specializing in specific domains or topics.\n\n[DOC2_C010] (score=0.2969)\nLory is based on two key techniques (Figure 1). We first propose causal segment routing. For a sequence of input tokens, we split them into multiple segments with a fixed length, and use the previous segment to determine the router's weights and calculate the merged expert for the subsequent segment. During inference, we can simply use the prompt to make a single routing decision throughout the generation. This segment-level routing strategy preserves the autoregressive nature of language models, while keeping the merging operations efficient. However, since the text data for pre-training language models usually concatenates random sets of documents, we find that such routing can lead to scenarios in which experts are not sufficiently specialized. Hence, we propose our second techniquesimilarity-based data batching for MoE training, which groups semantically similar documents to form consecutive segments. This idea has been recently proposed to train LMs to better reason across document boundaries (Shi et al., 2024), while we find that it leads to more effective training of expert routing.\n\n[DOC2_C026] (score=0.3079)\nThe standard practice of pre-training LMs is to randomly concatenate documents to construct training instances with a fixed length. This could lead to under-specialized experts, because tokens within adjacent segments may come from very different and irrelevant documents. To mitigate this issue, we employ a similarity-based data batching technique inspired by Shi et al. (2024), which sequentially concatenates similar documents to construct training instances. This encourages high similarity between adjacent segments, enabling the experts to specialize in different domains or topics. We measure document similarity using Contriever (Izacard et al., 2022) and concatenate similar documents based on a greedy[^1]search algorithm (see Appendix C). Although we employ a data batching technique similar to Shi et al. (2024), our motivation differs from theirs. While their work aims to improve language models' reasoning across document boundaries, we find this technique effective in encouraging expert specialization in training MoE models.\n## 4 Experiments\n\n[DOC2_C061] (score=0.3211)\nMikel Artetxe, Shruti Bhosale, Naman Goyal, Todor Mihaylov, Myle Ott, Sam Shleifer, Xi Victoria Lin, Jingfei Du, Srinivasan Iyer, Ramakanth Pasunuru, et al. Efficient large scale language modeling with mixtures of experts. arXiv preprint arXiv:2112.10684, 2021.\n\n[DOC2_C099] (score=0.3039)\nGuillaume Wenzek, Marie-Anne Lachaux, Alexis Conneau, Vishrav Chaudhary, Francisco Guzmán, Armand Joulin, and Edouard Grave. Ccnet: Extracting high quality monolingual datasets from web crawl data. In International Conference on Language Resources and Evaluation (LREC), 2019.\n\n[DOC2_C101] (score=0.4182)\nFuzhao Xue, Zian Zheng, Yao Fu, Jinjie Ni, Zangwei Zheng, Wangchunshu Zhou, and Yang You. OpenMoE: An early effort on open mixture-of-experts language models. arXiv preprint arXiv:2402.01739, 2024.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C008",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.299929678440094,
+      "preview": "Figure 1: We propose (Cory, a fully differentiable MoE architecture designed for autoregressive language models based on expert merging (Section 2.2). We introduce two key techniques to train Lory: First, we propose t..."
+    },
+    {
+      "anchor_id": "DOC2_C010",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.2969399094581604,
+      "preview": "Lory is based on two key techniques (Figure 1). We first propose causal segment routing. For a sequence of input tokens, we split them into multiple segments with a fixed length, and use the previous segment to determ..."
+    },
+    {
+      "anchor_id": "DOC2_C026",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.3078744411468506,
+      "preview": "The standard practice of pre-training LMs is to randomly concatenate documents to construct training instances with a fixed length. This could lead to under-specialized experts, because tokens within adjacent segments..."
+    },
+    {
+      "anchor_id": "DOC2_C061",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.32113558053970337,
+      "preview": "Mikel Artetxe, Shruti Bhosale, Naman Goyal, Todor Mihaylov, Myle Ott, Sam Shleifer, Xi Victoria Lin, Jingfei Du, Srinivasan Iyer, Ramakanth Pasunuru, et al. Efficient large scale language modeling with mixtures of exp..."
+    },
+    {
+      "anchor_id": "DOC2_C099",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.30386343598365784,
+      "preview": "Guillaume Wenzek, Marie-Anne Lachaux, Alexis Conneau, Vishrav Chaudhary, Francisco Guzmán, Armand Joulin, and Edouard Grave. Ccnet: Extracting high quality monolingual datasets from web crawl data. In International Co..."
+    },
+    {
+      "anchor_id": "DOC2_C101",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.4181978702545166,
+      "preview": "Fuzhao Xue, Zian Zheng, Yao Fu, Jinjie Ni, Zangwei Zheng, Wangchunshu Zhou, and Yang You. OpenMoE: An early effort on open mixture-of-experts language models. arXiv preprint arXiv:2402.01739, 2024."
+    }
+  ]
+}

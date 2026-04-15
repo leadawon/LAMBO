@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "selected_anchor_ids": [
+    "DOC4_A1",
+    "DOC4_A3"
+  ],
+  "final_current_query": "查找更多关于此案件的信息，特别是涉及的具体行政行为类型。",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'行政主体-行政检查（监察）' '行政主体-劳动和社会保障行政管理（劳动，社会保障）' '行政行为-行政监督' '非刑事赔偿-错误执行赔偿' '贪污受贿罪'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政主体-行政检查（监察）': ['《判决文书a》', '《判决文书b》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》'], '贪污受贿罪': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A1",
+        "candidate_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4"
+        ]
+      },
+      "anchor_id": "DOC4_A1",
+      "plan_think": "The current document does not seem to contain information that directly matches any of the five case categories specified in the question. However, DOC4_A1 provides some context about the case involving administrative reconsideration related to land requisition compensation. I will inspect DOC4_A1 to determine if there's any indication of the case category.",
+      "info": {
+        "anchor_id": "DOC4_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息及案件背景",
+        "summary": "再审申请人李某某起诉安徽省人民政府行政复议一案，不服本院（2022）皖行终441号行政判决，向本院申请再审。",
+        "text": "再审申请人（一审原告、二审上诉人）李某某，女，1933年7月10日出生，汉族，住安徽省颍上县。\n\n被申请人（一审被告、二审被上诉人）安徽省人民政府，住所地安徽省合肥市包河区中山路1号。\n\n法定代表人王清宪，省长。\n\n再审申请人因诉安徽省人民政府行政复议一案，不服本院（2022）皖行终441号行政判决，向本院申请再审。本院依法另行组成合议庭进行审查，现已审查终结。"
+      },
+      "extract_think": "The selected chunk provides information about a case where the applicant is appealing an administrative reconsideration decision made by the Anhui Provincial Government. The chunk does not specify which of the five case categories the document falls under, but it suggests that the case involves administrative reconsideration, which could potentially fall under '行政行为-行政监督'. More context from other chunks would be needed to make a definitive classification.",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "查找更多关于此案件的信息，特别是涉及的具体行政行为类型。"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "查找更多关于此案件的信息，特别是涉及的具体行政行为类型。",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A3",
+        "candidate_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4"
+        ]
+      },
+      "anchor_id": "DOC4_A3",
+      "plan_think": "The previous inspection did not provide enough information to categorize the case definitively. Since the case involves administrative reconsideration, I will inspect DOC4_A3 next, as it contains the court's review opinion, which may provide more specific details about the type of administrative action involved.",
+      "info": {
+        "anchor_id": "DOC4_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "法院审查意见",
+        "summary": "法院认为李某某户最迟于2016年11月即应当知道征收土地决定，其于2021年7月申请行政复议已超过法定期限，安徽省人民政府驳回其复议申请并无不当。",
+        "text": "本院经审查认为，根据《中华人民共和国行政复议法实施条例》第二十八条第四项的规定，行政复议申请在法定期限内提出，是复议机关受理复议申请的法定条件之一。根据原审查明的事实，李某某之子李某甲于2016年11月15日出具《情况说明》，申请预支拆迁补偿款60万元，同日，其在《往来借（还）款书》中描述的借款事由为“预借房屋补偿款”。颍上县某区改造建设项目指挥部经研究后同意并于2016年11月16日向李某甲账户转账60万元，原审据此认定李某某户最迟于2016年11月即应当知道征收土地决定，李某某于2021年7月向安徽省人民政府申请行政复议，已经超过法定申请期限，安徽省人民政府驳回其复议申请并无不当，符合法律规定。李某某称二审判决认定60万元款项性质为补偿款并以此为由认定再审申请人行政复议申请超过期限缺乏事实依据，因与原审查明的事实不符，故本院不予采纳。李某某称被申请人在确定再审申请人是否超过复议期限之前，应当对案涉批文形式上的合法性进行审查，因缺乏法律依据，本院亦不予采纳。对李某某其他申请再审理由因与其申请复议的期限无关联，因而不属本案审查范围，本院对此不予审查。李某某申请再审的理由不能成立。"
+      },
+      "extract_think": "The selected chunk provides detailed information about the court's review of the administrative reconsideration case involving land requisition compensation. It indicates that the case involves administrative reconsideration, which aligns with the category '行政行为-行政监督'. This chunk does not provide direct evidence for the other categories mentioned in the question. However, it is sufficient to classify this document under '行政行为-行政监督' based on the information provided.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "行政行为-行政监督",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "本院经审查认为，根据《中华人民共和国行政复议法实施条例》第二十八条第四项的规定，行政复议申请在法定期限内提出，是复议机关受理复议申请的法定条件之一。根据原审查明的事实，李某某之子李某甲于2016年11月15日出具《情况说明》，申请预支拆迁补偿款60万元，同日，其在《往来借（还）款书》中描述的借款事由为“预借房屋补偿款”。颍上县某区改造建设项目指挥部经研究后同意并于2016年11月16日向李某甲账户转账60万元，原审据此认定李某某户最迟于2016年11月即应当知道征收土地决定，李某某于2021年7月向安徽省人民政府申请行政复议，已经超过法定申请期限，安徽省人民政府驳回其复议申请并无不当，符合法律规定。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A3",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "行政行为-行政监督",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "本院经审查认为，根据《中华人民共和国行政复议法实施条例》第二十八条第四项的规定，行政复议申请在法定期限内提出，是复议机关受理复议申请的法定条件之一。根据原审查明的事实，李某某之子李某甲于2016年11月15日出具《情况说明》，申请预支拆迁补偿款60万元，同日，其在《往来借（还）款书》中描述的借款事由为“预借房屋补偿款”。颍上县某区改造建设项目指挥部经研究后同意并于2016年11月16日向李某甲账户转账60万元，原审据此认定李某某户最迟于2016年11月即应当知道征收土地决定，李某某于2021年7月向安徽省人民政府申请行政复议，已经超过法定申请期限，安徽省人民政府驳回其复议申请并无不当，符合法律规定。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A3",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the five case categories specified in the question. However, DOC4_A1 provides some context about the case involving administrative reconsideration related to land requisition compensation. I will inspect DOC4_A1 to determine if there's any indication of the case category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政主体-行政检查（监察）' '行政主体-劳动和社会保障行政管理（劳动，社会保障）' '行政行为-行政监督' '非刑事赔偿-错误执行赔偿' '贪污受贿罪'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政主体-行政检查（监察）': ['《判决文书a》', '《判决文书b》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》'], '贪污受贿罪': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A1\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"再审申请人李某某起诉安徽省人民政府行政复议一案，不服本院（2022）皖行终441号行政判决，向本院申请再审。\", \"text\": \"再审申请人（一审原告、二审上诉人）李某某，女，1933年7月10日出生，汉族，住安徽省颍上县。\\n\\n被申请人（一审被告、二审被上诉人）安徽省人民政府，住所地安徽省合肥市包河区中山路1号。\\n\\n法定代表人王清宪，省长。\\n\\n再审申请人因诉安徽省人民政府行政复议一案，不服本院（2022）皖行终441号行政判决，向本院申请再审。本院依法另行组成合议庭进行审查，现已审查终结。\"}</info>\n<think>The selected chunk provides information about a case where the applicant is appealing an administrative reconsideration decision made by the Anhui Provincial Government. The chunk does not specify which of the five case categories the document falls under, but it suggests that the case involves administrative reconsideration, which could potentially fall under '行政行为-行政监督'. More context from other chunks would be needed to make a definitive classification.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找更多关于此案件的信息，特别是涉及的具体行政行为类型。\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the case definitively. Since the case involves administrative reconsideration, I will inspect DOC4_A3 next, as it contains the court's review opinion, which may provide more specific details about the type of administrative action involved.</think>\n<search>{\"current_query\": \"查找更多关于此案件的信息，特别是涉及的具体行政行为类型。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A3\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院审查意见\", \"summary\": \"法院认为李某某户最迟于2016年11月即应当知道征收土地决定，其于2021年7月申请行政复议已超过法定期限，安徽省人民政府驳回其复议申请并无不当。\", \"text\": \"本院经审查认为，根据《中华人民共和国行政复议法实施条例》第二十八条第四项的规定，行政复议申请在法定期限内提出，是复议机关受理复议申请的法定条件之一。根据原审查明的事实，李某某之子李某甲于2016年11月15日出具《情况说明》，申请预支拆迁补偿款60万元，同日，其在《往来借（还）款书》中描述的借款事由为“预借房屋补偿款”。颍上县某区改造建设项目指挥部经研究后同意并于2016年11月16日向李某甲账户转账60万元，原审据此认定李某某户最迟于2016年11月即应当知道征收土地决定，李某某于2021年7月向安徽省人民政府申请行政复议，已经超过法定申请期限，安徽省人民政府驳回其复议申请并无不当，符合法律规定。李某某称二审判决认定60万元款项性质为补偿款并以此为由认定再审申请人行政复议申请超过期限缺乏事实依据，因与原审查明的事实不符，故本院不予采纳。李某某称被申请人在确定再审申请人是否超过复议期限之前，应当对案涉批文形式上的合法性进行审查，因缺乏法律依据，本院亦不予采纳。对李某某其他申请再审理由因与其申请复议的期限无关联，因而不属本案审查范围，本院对此不予审查。李某某申请再审的理由不能成立。\"}</info>\n<think>The selected chunk provides detailed information about the court's review of the administrative reconsideration case involving land requisition compensation. It indicates that the case involves administrative reconsideration, which aligns with the category '行政行为-行政监督'. This chunk does not provide direct evidence for the other categories mentioned in the question. However, it is sufficient to classify this document under '行政行为-行政监督' based on the information provided.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政监督\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"本院经审查认为，根据《中华人民共和国行政复议法实施条例》第二十八条第四项的规定，行政复议申请在法定期限内提出，是复议机关受理复议申请的法定条件之一。根据原审查明的事实，李某某之子李某甲于2016年11月15日出具《情况说明》，申请预支拆迁补偿款60万元，同日，其在《往来借（还）款书》中描述的借款事由为“预借房屋补偿款”。颍上县某区改造建设项目指挥部经研究后同意并于2016年11月16日向李某甲账户转账60万元，原审据此认定李某某户最迟于2016年11月即应当知道征收土地决定，李某某于2021年7月向安徽省人民政府申请行政复议，已经超过法定申请期限，安徽省人民政府驳回其复议申请并无不当，符合法律规定。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A3\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the five case categories specified in the question. However, DOC4_A1 provides some context about the case involving administrative reconsideration related to land requisition compensation. I will inspect DOC4_A1 to determine if there's any indication of the case category.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'行政主体-行政检查（监察）' '行政主体-劳动和社会保障行政管理（劳动，社会保障）' '行政行为-行政监督' '非刑事赔偿-错误执行赔偿' '贪污受贿罪'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'行政主体-行政检查（监察）': ['《判决文书a》', '《判决文书b》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书a》', '《判决文书b》'], '行政行为-行政监督': ['《判决文书a》', '《判决文书b》'], '非刑事赔偿-错误执行赔偿': ['《判决文书a》', '《判决文书b》'], '贪污受贿罪': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A1\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"再审申请人李某某起诉安徽省人民政府行政复议一案，不服本院（2022）皖行终441号行政判决，向本院申请再审。\", \"text\": \"再审申请人（一审原告、二审上诉人）李某某，女，1933年7月10日出生，汉族，住安徽省颍上县。\\n\\n被申请人（一审被告、二审被上诉人）安徽省人民政府，住所地安徽省合肥市包河区中山路1号。\\n\\n法定代表人王清宪，省长。\\n\\n再审申请人因诉安徽省人民政府行政复议一案，不服本院（2022）皖行终441号行政判决，向本院申请再审。本院依法另行组成合议庭进行审查，现已审查终结。\"}</info>\n<think>The selected chunk provides information about a case where the applicant is appealing an administrative reconsideration decision made by the Anhui Provincial Government. The chunk does not specify which of the five case categories the document falls under, but it suggests that the case involves administrative reconsideration, which could potentially fall under '行政行为-行政监督'. More context from other chunks would be needed to make a definitive classification.</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找更多关于此案件的信息，特别是涉及的具体行政行为类型。\"}</retrieve>\n<think>The previous inspection did not provide enough information to categorize the case definitively. Since the case involves administrative reconsideration, I will inspect DOC4_A3 next, as it contains the court's review opinion, which may provide more specific details about the type of administrative action involved.</think>\n<search>{\"current_query\": \"查找更多关于此案件的信息，特别是涉及的具体行政行为类型。\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A3\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"法院审查意见\", \"summary\": \"法院认为李某某户最迟于2016年11月即应当知道征收土地决定，其于2021年7月申请行政复议已超过法定期限，安徽省人民政府驳回其复议申请并无不当。\", \"text\": \"本院经审查认为，根据《中华人民共和国行政复议法实施条例》第二十八条第四项的规定，行政复议申请在法定期限内提出，是复议机关受理复议申请的法定条件之一。根据原审查明的事实，李某某之子李某甲于2016年11月15日出具《情况说明》，申请预支拆迁补偿款60万元，同日，其在《往来借（还）款书》中描述的借款事由为“预借房屋补偿款”。颍上县某区改造建设项目指挥部经研究后同意并于2016年11月16日向李某甲账户转账60万元，原审据此认定李某某户最迟于2016年11月即应当知道征收土地决定，李某某于2021年7月向安徽省人民政府申请行政复议，已经超过法定申请期限，安徽省人民政府驳回其复议申请并无不当，符合法律规定。李某某称二审判决认定60万元款项性质为补偿款并以此为由认定再审申请人行政复议申请超过期限缺乏事实依据，因与原审查明的事实不符，故本院不予采纳。李某某称被申请人在确定再审申请人是否超过复议期限之前，应当对案涉批文形式上的合法性进行审查，因缺乏法律依据，本院亦不予采纳。对李某某其他申请再审理由因与其申请复议的期限无关联，因而不属本案审查范围，本院对此不予审查。李某某申请再审的理由不能成立。\"}</info>\n<think>The selected chunk provides detailed information about the court's review of the administrative reconsideration case involving land requisition compensation. It indicates that the case involves administrative reconsideration, which aligns with the category '行政行为-行政监督'. This chunk does not provide direct evidence for the other categories mentioned in the question. However, it is sufficient to classify this document under '行政行为-行政监督' based on the information provided.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"行政行为-行政监督\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"本院经审查认为，根据《中华人民共和国行政复议法实施条例》第二十八条第四项的规定，行政复议申请在法定期限内提出，是复议机关受理复议申请的法定条件之一。根据原审查明的事实，李某某之子李某甲于2016年11月15日出具《情况说明》，申请预支拆迁补偿款60万元，同日，其在《往来借（还）款书》中描述的借款事由为“预借房屋补偿款”。颍上县某区改造建设项目指挥部经研究后同意并于2016年11月16日向李某甲账户转账60万元，原审据此认定李某某户最迟于2016年11月即应当知道征收土地决定，李某某于2021年7月向安徽省人民政府申请行政复议，已经超过法定申请期限，安徽省人民政府驳回其复议申请并无不当，符合法律规定。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A3\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

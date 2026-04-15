@@ -1,0 +1,316 @@
+# LAMBO Set1-10 Report
+
+## Manifest
+- idx=0 | paper | level=3 | sample_id=paper_level3_0
+- idx=1 | paper | level=3 | sample_id=paper_level3_1
+- idx=2 | paper | level=4 | sample_id=paper_level4_2
+- idx=3 | paper | level=4 | sample_id=paper_level4_3
+- idx=4 | paper | level=4 | sample_id=paper_level4_4
+- idx=5 | paper | level=4 | sample_id=paper_level4_5
+- idx=6 | paper | level=4 | sample_id=paper_level4_6
+- idx=7 | paper | level=3 | sample_id=paper_level3_7
+- idx=8 | paper | level=4 | sample_id=paper_level4_8
+- idx=9 | paper | level=4 | sample_id=paper_level4_9
+- idx=10 | paper | level=3 | sample_id=paper_level3_10
+- idx=11 | paper | level=4 | sample_id=paper_level4_11
+- idx=12 | paper | level=4 | sample_id=paper_level4_12
+- idx=13 | paper | level=4 | sample_id=paper_level4_13
+- idx=14 | paper | level=3 | sample_id=paper_level3_14
+- idx=15 | paper | level=3 | sample_id=paper_level3_15
+- idx=16 | paper | level=3 | sample_id=paper_level3_16
+- idx=17 | paper | level=4 | sample_id=paper_level4_17
+- idx=18 | paper | level=4 | sample_id=paper_level4_18
+- idx=19 | paper | level=4 | sample_id=paper_level4_19
+- idx=20 | paper | level=3 | sample_id=paper_level3_20
+- idx=21 | paper | level=4 | sample_id=paper_level4_21
+- idx=22 | paper | level=3 | sample_id=paper_level3_22
+- idx=23 | paper | level=4 | sample_id=paper_level4_23
+- idx=24 | paper | level=3 | sample_id=paper_level3_24
+- idx=25 | paper | level=3 | sample_id=paper_level3_25
+- idx=26 | paper | level=4 | sample_id=paper_level4_26
+- idx=27 | paper | level=3 | sample_id=paper_level3_27
+- idx=28 | paper | level=3 | sample_id=paper_level3_28
+- idx=29 | paper | level=4 | sample_id=paper_level4_29
+- idx=30 | paper | level=4 | sample_id=paper_level4_30
+- idx=31 | paper | level=4 | sample_id=paper_level4_31
+- idx=32 | paper | level=4 | sample_id=paper_level4_32
+- idx=409 | legal | level=3 | sample_id=legal_level3_409
+- idx=410 | legal | level=3 | sample_id=legal_level3_410
+- idx=411 | legal | level=3 | sample_id=legal_level3_411
+- idx=412 | legal | level=3 | sample_id=legal_level3_412
+- idx=414 | legal | level=3 | sample_id=legal_level3_414
+- idx=417 | legal | level=3 | sample_id=legal_level3_417
+- idx=420 | legal | level=3 | sample_id=legal_level3_420
+- idx=422 | legal | level=3 | sample_id=legal_level3_422
+- idx=428 | legal | level=3 | sample_id=legal_level3_428
+- idx=429 | legal | level=3 | sample_id=legal_level3_429
+- idx=430 | legal | level=3 | sample_id=legal_level3_430
+- idx=431 | legal | level=3 | sample_id=legal_level3_431
+- idx=442 | legal | level=3 | sample_id=legal_level3_442
+- idx=447 | legal | level=3 | sample_id=legal_level3_447
+- idx=451 | legal | level=3 | sample_id=legal_level3_451
+- idx=455 | legal | level=3 | sample_id=legal_level3_455
+- idx=457 | legal | level=3 | sample_id=legal_level3_457
+- idx=459 | legal | level=3 | sample_id=legal_level3_459
+- idx=461 | legal | level=3 | sample_id=legal_level3_461
+- idx=463 | legal | level=3 | sample_id=legal_level3_463
+- idx=464 | legal | level=3 | sample_id=legal_level3_464
+- idx=465 | legal | level=3 | sample_id=legal_level3_465
+- idx=469 | legal | level=3 | sample_id=legal_level3_469
+- idx=470 | legal | level=3 | sample_id=legal_level3_470
+- idx=471 | legal | level=3 | sample_id=legal_level3_471
+- idx=472 | legal | level=3 | sample_id=legal_level3_472
+- idx=473 | legal | level=3 | sample_id=legal_level3_473
+- idx=474 | legal | level=3 | sample_id=legal_level3_474
+- idx=477 | legal | level=3 | sample_id=legal_level3_477
+- idx=478 | legal | level=3 | sample_id=legal_level3_478
+- idx=479 | legal | level=3 | sample_id=legal_level3_479
+- idx=481 | legal | level=3 | sample_id=legal_level3_481
+- idx=482 | legal | level=3 | sample_id=legal_level3_482
+- idx=900 | financial | level=1 | sample_id=financial_level1_900
+- idx=901 | financial | level=1 | sample_id=financial_level1_901
+- idx=902 | financial | level=1 | sample_id=financial_level1_902
+- idx=903 | financial | level=1 | sample_id=financial_level1_903
+- idx=904 | financial | level=1 | sample_id=financial_level1_904
+- idx=905 | financial | level=1 | sample_id=financial_level1_905
+- idx=906 | financial | level=1 | sample_id=financial_level1_906
+- idx=907 | financial | level=1 | sample_id=financial_level1_907
+- idx=908 | financial | level=1 | sample_id=financial_level1_908
+- idx=909 | financial | level=1 | sample_id=financial_level1_909
+- idx=910 | financial | level=1 | sample_id=financial_level1_910
+- idx=911 | financial | level=1 | sample_id=financial_level1_911
+- idx=912 | financial | level=1 | sample_id=financial_level1_912
+- idx=913 | financial | level=1 | sample_id=financial_level1_913
+- idx=914 | financial | level=1 | sample_id=financial_level1_914
+- idx=915 | financial | level=1 | sample_id=financial_level1_915
+- idx=916 | financial | level=1 | sample_id=financial_level1_916
+- idx=917 | financial | level=1 | sample_id=financial_level1_917
+- idx=918 | financial | level=1 | sample_id=financial_level1_918
+- idx=919 | financial | level=1 | sample_id=financial_level1_919
+- idx=920 | financial | level=1 | sample_id=financial_level1_920
+- idx=921 | financial | level=1 | sample_id=financial_level1_921
+- idx=922 | financial | level=1 | sample_id=financial_level1_922
+- idx=1050 | financial | level=2 | sample_id=financial_level2_1050
+- idx=1051 | financial | level=2 | sample_id=financial_level2_1051
+- idx=1052 | financial | level=2 | sample_id=financial_level2_1052
+- idx=1053 | financial | level=2 | sample_id=financial_level2_1053
+- idx=1054 | financial | level=2 | sample_id=financial_level2_1054
+- idx=1055 | financial | level=2 | sample_id=financial_level2_1055
+- idx=1056 | financial | level=2 | sample_id=financial_level2_1056
+- idx=1057 | financial | level=2 | sample_id=financial_level2_1057
+- idx=1058 | financial | level=2 | sample_id=financial_level2_1058
+- idx=1059 | financial | level=2 | sample_id=financial_level2_1059
+
+## Structured Metrics
+- sample_count: 99
+- exact_match_rate: 0.2323
+- avg_pair_f1: 0.5672368377804701
+
+## Structured Per Sample
+- idx=0 | exact_match=False | pair_f1=0.2 | missing=[('Reference', 'TinyLlama: An Open-Source Small Language Model')] | extra=[('Reference', 'Fedus et al.'), ('Reference', 'GLaM'), ('Reference', 'MTBench'), ('Reference', 'OpenLLaMA-3B'), ('Reference', 'Riquelme et al.'), ('Reference', 'ST-MoE'), ('Reference', 'TinyLLaMA-1.1B')]
+- idx=1 | exact_match=False | pair_f1=0.0 | missing=[('Citation', 'From Role-Play to Drama-Interaction: An LLM Solution'), ('Reference', 'A Survey of Hallucination in "Large" Foundation Models')] | extra=[('Reference', 'Charactereval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation')]
+- idx=2 | exact_match=False | pair_f1=0.0 | missing=['CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR', 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units', 'SUPERB: Speech processing Universal PERformance Benchmark'] | extra=[]
+- idx=3 | exact_match=False | pair_f1=0.0 | missing=['A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data', 'Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems'] | extra=[]
+- idx=4 | exact_match=False | pair_f1=0.8 | missing=['On the performativity of SDG classifications in large bibliometric databases'] | extra=[]
+- idx=5 | exact_match=False | pair_f1=0.4 | missing=['An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention', 'Churn analysis using deep convolutional neural networks and autoencoders', 'MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING'] | extra=[]
+- idx=6 | exact_match=False | pair_f1=None | missing=[['# Lightweight compression with encryption based on Asymmetric Numeral Systems ', '# A tutorial on the range variant of asymmetric numeral systems ', '# ATC: an Advanced Tucker Compression library for multidimensional data ']] | extra=['meet error']
+- idx=7 | exact_match=False | pair_f1=0.2 | missing=[('Citation', 'When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively')] | extra=[('Reference', 'Fidlight: Efficient and effective retrieval-augmented text generation'), ('Reference', 'GPT-4 Technical Report'), ('Reference', 'GPTCache: An Open-Source Semantic Cache for LLM Applications Enabling Faster Answers and Cost Savings'), ('Reference', 'Large language models for information retrieval: A survey'), ('Reference', 'Leveraging passage retrieval with generative models for open domain question answering'), ('Reference', 'Retrieval-augmented generation for knowledge-intensive nlp tasks'), ('Reference', 'Retrieval-based prompt selection for code-related few-shot learning')]
+- idx=8 | exact_match=False | pair_f1=0.0 | missing=['Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System', 'Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines', 'Massively scalable stencil algorithm'] | extra=[]
+- idx=9 | exact_match=False | pair_f1=0.5 | missing=['InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation', 'LATENT IMAGE ANIMATOR: <br> LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION'] | extra=[]
+- idx=10 | exact_match=False | pair_f1=0.5 | missing=[('Reference', "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding")] | extra=[('Citation', "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding")]
+- idx=11 | exact_match=False | pair_f1=0.8 | missing=['Improving Text Embeddings with Large Language Models'] | extra=[]
+- idx=12 | exact_match=False | pair_f1=0.6666666666666666 | missing=['Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances', 'Scaling Advantage in Approximate Optimization with Quantum Annealing'] | extra=[]
+- idx=13 | exact_match=False | pair_f1=0.8 | missing=['Query Expansion by Prompting Large Language Models'] | extra=[]
+- idx=14 | exact_match=False | pair_f1=None | missing=[{'Reference': ['# The Pitfalls of Defining Hallucination '], 'Citation': ['# An ASSESSMENT OF MODEL-ON-MODEL DECEPTION ']}] | extra=['meet error']
+- idx=15 | exact_match=False | pair_f1=0.0 | missing=[('Citation', 'InstructionCP: A fast approach to transfer Large Language Models into target language'), ('Citation', 'LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language')] | extra=[('Reference', 'InstructionCP: A fast approach to transfer Large Language Models into target language'), ('Reference', 'LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language')]
+- idx=16 | exact_match=False | pair_f1=0.16666666666666669 | missing=[('Reference', 'Mistral 7B')] | extra=[('Reference', 'Additive Quantization (AQ) (Babenko \\& Lempitsky, 2014; Martinez et al., 2016)'), ('Reference', 'BLOOM (Scao et al., 2022)'), ('Reference', 'Falcon (TII UAE, 2023)'), ('Reference', 'Llama 1 and 2 (Touvron et al., 2023)'), ('Reference', 'Mixtral model (Jiang et al., 2024)'), ('Reference', 'MultiCodebook Quantization (MCQ) techniques (Chen et al., 2010; Jegou et al., 2010; Ge et al., 2013; Zhang et al., 2014; Babenko \\& Lempitsky, 2014; Martinez et al., 2016; 2018)'), ('Reference', 'NeoX/Pythia (Biderman et al., 2023)'), ('Reference', 'OPT (Zhang et al., 2022)'), ('Reference', 'inference and fine-tuning on compressed LLMs (Dettmers et al., 2022; Frantar et al., 2022a; Dettmers \\& Zettlemoyer, 2022; Lin et al., 2023; Dettmers et al., 2023a)')]
+- idx=17 | exact_match=False | pair_f1=0.5 | missing=['Influence of Neighborhood on the Preference of an Item in eCommerce Search'] | extra=['Neural Ranking Models with Weak Supervision']
+- idx=18 | exact_match=False | pair_f1=0.0 | missing=['Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*', 'Churn analysis using deep convolutional neural networks and autoencoders'] | extra=[]
+- idx=19 | exact_match=False | pair_f1=0.0 | missing=['Massively scalable stencil algorithm', 'Minimod: A Finite Difference solver for Seismic Modeling'] | extra=[]
+- idx=20 | exact_match=False | pair_f1=0.0 | missing=[('Citation', 'Ensembling Prioritized Hybrid Policies for Multi-agent Pathfinding'), ('Reference', 'LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics')] | extra=[]
+- idx=21 | exact_match=False | pair_f1=0.0 | missing=['An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention', 'Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*', 'Churn analysis using deep convolutional neural networks and autoencoders', 'MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING'] | extra=[]
+- idx=22 | exact_match=False | pair_f1=0.0 | missing=[('Reference', 'Can Large Language Models Really Improve by Self-critiquing Their Own Plans?'), ('Reference', 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET')] | extra=[]
+- idx=23 | exact_match=False | pair_f1=0.8 | missing=['Understanding the Difficulty of Training Transformers'] | extra=[]
+- idx=24 | exact_match=False | pair_f1=0.5 | missing=[('Citation', 'LoRA-Switch: Boosting the Efficiency of Dynamic LLM Adapters via System-Algorithm Co-design')] | extra=[('Reference', 'LoRA-Switch: Boosting the Efficiency of Dynamic LLM Adapters via System-Algorithm Co-design')]
+- idx=25 | exact_match=False | pair_f1=0.6666666666666666 | missing=[('Reference', 'Data Filtering Networks')] | extra=[]
+- idx=26 | exact_match=False | pair_f1=None | missing=[['# Speck: A Smart event-based Vision Sensor with a low latency 327K Neuron Convolutional Neuronal Network Processing Pipeline ', '# DYNAP-SE2: a scalable multi-core dynamic neuromorphic asynchronous spiking neural network processor ']] | extra=['meet error']
+- idx=27 | exact_match=False | pair_f1=0.6666666666666666 | missing=[('Reference', 'Purple Llama CYBERSECEvAL: A Secure Coding Benchmark for Language Models')] | extra=[]
+- idx=28 | exact_match=False | pair_f1=0.3333333333333333 | missing=[('Reference', 'PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING')] | extra=[('Reference', 'LongLlama'), ('Reference', 'NTK-Aware Scaled RoPE'), ('Reference', 'Position Interpolation')]
+- idx=29 | exact_match=False | pair_f1=0.8 | missing=['![](https://cdn.mathpix.com/cropped/2024_06_04_791d7ec1c70f2f7bcd44g-01.jpg?height=135&width=174&top_left_y=320&top_left_x=260)'] | extra=[]
+- idx=30 | exact_match=False | pair_f1=0.0 | missing=['ANGLE-OPTIMIZED TEXT EMBEDDINGS', 'PromptMind Team at EHRSQL-2024: Improving Reliability of SQL Generation using Ensemble LLMs', 'Scaling Sentence Embeddings with Large Language Models'] | extra=['commonsense_reasoning', 'diffcse', 'gpt_3', 'in_context_learning', 'llama', 'llms', 'math_problems', 'multitask_language_understanding', 'opt', 'promptbert', 'sentencet5_st5', 'simcse', 'st5', 'sts_b', 't5', 'tst21']
+- idx=31 | exact_match=False | pair_f1=None | missing=[['## Water is a radiation protection agent for ionised pyrrole', '# The unreasonable effectiveness of optimal transport in economics ']] | extra=['meet error']
+- idx=32 | exact_match=False | pair_f1=0.0 | missing=['A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data', 'BEYOND TRADITIONAL MAGNETIC RESONANCE PROCESSING WITH ARTIFICIAL INTELLIGENCE *', 'Deep Learning using Rectified Linear Units (ReLU)', 'Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems'] | extra=[]
+- idx=409 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=410 | exact_match=False | pair_f1=0.8571428571428571 | missing=[] | extra=[('刑事案件', '《判决文书5》'), ('刑事案件', '《判决文书6》')]
+- idx=411 | exact_match=False | pair_f1=0.5555555555555556 | missing=[('管辖案件', '《判决文书3》'), ('管辖案件', '《判决文书5》'), ('管辖案件', '《判决文书7》'), ('管辖案件', '《判决文书9》')] | extra=[('民事案件', '《判决文书3》'), ('民事案件', '《判决文书5》'), ('民事案件', '《判决文书7》'), ('民事案件', '《判决文书9》')]
+- idx=412 | exact_match=False | pair_f1=None | missing=[{'执行案件': ['《判决文书7》', '《判决文书11》'], '刑事案件': ['《判决文书1》', '《判决文书2》', '《判决文书3》', '《判决文书6》', '《判决文书12》'], '管辖案件': ['《判决文书4》', '《判决文书5》', '《判决文书8》', '《判决文书9》', '《判决文书10》', '《判决文书13》']}] | extra=['meet error']
+- idx=414 | exact_match=False | pair_f1=0.7333333333333334 | missing=[('管辖案件', '《判决文书1》'), ('管辖案件', '《判决文书9》')] | extra=[('民事案件', '《判决文书10》'), ('民事案件', '《判决文书11》'), ('民事案件', '《判决文书12》'), ('民事案件', '《判决文书1》'), ('民事案件', '《判决文书7》'), ('民事案件', '《判决文书9》')]
+- idx=417 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=420 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=422 | exact_match=False | pair_f1=None | missing=[{'赔偿案件': ['《判决文书6》'], '刑事案件': ['《判决文书1》'], '民事案件': ['《判决文书2》', '《判决文书7》'], '行政案件': ['《判决文书4》', '《判决文书5》'], '管辖案件': ['《判决文书3》', '《判决文书8》']}] | extra=['meet error']
+- idx=428 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=429 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=430 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=431 | exact_match=False | pair_f1=None | missing=[{'执行案件': ['《判决文书3》', '《判决文书4》'], '刑事案件': ['《判决文书1》', '《判决文书2》'], '民事案件': ['《判决文书5》']}] | extra=['meet error']
+- idx=442 | exact_match=False | pair_f1=0.5714285714285715 | missing=[('侵权责任纠纷', '《判决文书11》'), ('侵权责任纠纷', '《判决文书16》'), ('侵权责任纠纷', '《判决文书2》'), ('渎职罪', '《判决文书19》'), ('渎职罪', '《判决文书9》'), ('适用特殊程序案件案由', '《判决文书12》'), ('适用特殊程序案件案由', '《判决文书1》'), ('适用特殊程序案件案由', '《判决文书20》'), ('适用特殊程序案件案由', '《判决文书3》'), ('适用特殊程序案件案由', '《判决文书6》')] | extra=[('侵权责任纠纷', '《判决文书6》'), ('民间借贷纠纷', '《判决文书16》'), ('民间借贷纠纷', '《判决文书6》'), ('行政行为-行政监督', '《判决文书13》'), ('行政行为-行政监督', '《判决文书8》')]
+- idx=447 | exact_match=False | pair_f1=0.7647058823529411 | missing=[('行政主体-房屋拆迁管理（拆迁）', '《判决文书14》'), ('行政行为-行政强制', '《判决文书8》'), ('行政行为-行政征收', '《判决文书12》')] | extra=[('行政主体-房屋拆迁管理（拆迁）', '《判决文书12》'), ('行政行为-行政强制', '《判决文书14》'), ('行政行为-行政撤销', '《判决文书1》'), ('行政行为-行政撤销', '《判决文书2》'), ('行政行为-行政撤销', '《判决文书8》')]
+- idx=451 | exact_match=False | pair_f1=0.6666666666666666 | missing=[('执行案由-先予执行', '《判决文书12》'), ('执行案由-先予执行', '《判决文书5》'), ('执行案由-其他案由', '《判决文书4》'), ('执行案由-其他案由', '《判决文书9》')] | extra=[('执行案由-对下级法院执行异议裁定的复议', '《判决文书10》'), ('执行案由-对下级法院执行异议裁定的复议', '《判决文书12》'), ('执行案由-对下级法院执行异议裁定的复议', '《判决文书4》'), ('执行案由-对下级法院执行异议裁定的复议', '《判决文书5》'), ('执行案由-对下级法院执行异议裁定的复议', '《判决文书9》')]
+- idx=455 | exact_match=False | pair_f1=0.8333333333333333 | missing=[('渎职罪', '《判决文书12》'), ('破坏社会主义市场经济秩序罪', '《判决文书11》'), ('行政主体-司法行政管理（司法行政）', '《判决文书13》')] | extra=[('行政行为-行政许可', '《判决文书13》')]
+- idx=457 | exact_match=False | pair_f1=0.6250000000000001 | missing=[('人格权纠纷', '《判决文书2》'), ('人格权纠纷', '《判决文书7》'), ('适用特殊程序案件案由', '《判决文书5》'), ('适用特殊程序案件案由', '《判决文书9》')] | extra=[('执行案由-先予执行', '《判决文书5》'), ('执行案由-先予执行', '《判决文书9》')]
+- idx=459 | exact_match=False | pair_f1=0.5333333333333333 | missing=[('侵权责任纠纷', '《判决文书10》'), ('刑事赔偿', '《判决文书9》'), ('执行案由-行政非诉执行', '《判决文书11》'), ('行政主体-司法行政管理（司法行政）', '《判决文书1》'), ('行政主体-司法行政管理（司法行政）', '《判决文书5》'), ('行政行为-行政强制', '《判决文书15》'), ('行政行为-行政强制', '《判决文书8》')] | extra=[('行政主体-司法行政管理（司法行政）', '《判决文书9》'), ('行政行为-行政复议', '《判决文书11》'), ('行政行为-行政复议', '《判决文书15》'), ('行政行为-行政复议', '《判决文书5》'), ('行政行为-行政复议', '《判决文书8》'), ('行政行为-行政强制', '《判决文书1》'), ('行政行为-行政强制', '《判决文书6》')]
+- idx=461 | exact_match=False | pair_f1=0.8888888888888888 | missing=[('行政行为-行政裁决', '《判决文书5》')] | extra=[('行政行为-行政复议', '《判决文书5》')]
+- idx=463 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=464 | exact_match=False | pair_f1=0.9473684210526316 | missing=[('知识产权与竞争', '《判决文书1》')] | extra=[]
+- idx=465 | exact_match=False | pair_f1=0.47058823529411764 | missing=[('行政主体-民政行政管理（民政）', '《判决文书1》'), ('行政主体-民政行政管理（民政）', '《判决文书4》'), ('行政主体-民政行政管理（民政）', '《判决文书5》'), ('行政行为-其他行政行为', '《判决文书8》'), ('行政行为-其他行政行为', '《判决文书9》')] | extra=[('行政行为-其他行政行为', '《判决文书1》'), ('行政行为-其他行政行为', '《判决文书4》'), ('行政行为-其他行政行为', '《判决文书5》'), ('行政行为-行政受理', '《判决文书8》')]
+- idx=469 | exact_match=False | pair_f1=0.8888888888888888 | missing=[('行政行为-行政强制', '《判决文书3》')] | extra=[('行政行为-行政裁决', '《判决文书3》')]
+- idx=470 | exact_match=False | pair_f1=0.625 | missing=[('执行案由-行政', '《判决文书6》'), ('执行案由-行政', '《判决文书7》'), ('行政行为-行政强制', '《判决文书1》')] | extra=[('行政行为-行政强制', '《判决文书7》'), ('行政行为-行政给付', '《判决文书1》'), ('行政行为-行政给付', '《判决文书6》')]
+- idx=471 | exact_match=False | pair_f1=0.9473684210526316 | missing=[('海事海商纠纷', '《判决文书9》')] | extra=[]
+- idx=472 | exact_match=False | pair_f1=0.7058823529411764 | missing=[('所有权纠纷', '《判决文书9》'), ('海事海商纠纷', '《判决文书1》'), ('海事海商纠纷', '《判决文书4》'), ('海事海商纠纷', '《判决文书7》')] | extra=[('民事案由-合同，无因管理，不当得利纠纷', '《判决文书4》')]
+- idx=473 | exact_match=False | pair_f1=0.5 | missing=[('行政主体-民政行政管理（民政）', '《判决文书1》'), ('行政主体-民政行政管理（民政）', '《判决文书6》'), ('行政主体-行政检查（监察）', '《判决文书5》'), ('行政行为-行政裁决', '《判决文书7》')] | extra=[('行政行为-行政复议', '《判决文书5》'), ('行政行为-行政裁决', '《判决文书1》')]
+- idx=474 | exact_match=False | pair_f1=0.9411764705882353 | missing=[('海事海商纠纷', '《判决文书2》')] | extra=[]
+- idx=477 | exact_match=False | pair_f1=0.6666666666666666 | missing=[('行政主体-行政检查（监察）', '《判决文书4》'), ('行政主体-行政检查（监察）', '《判决文书8》'), ('行政行为-行政监督', '《判决文书6》')] | extra=[('行政行为-行政监督', '《判决文书4》'), ('行政行为-行政监督', '《判决文书8》')]
+- idx=478 | exact_match=True | pair_f1=1.0 | missing=[] | extra=[]
+- idx=479 | exact_match=False | pair_f1=0.923076923076923 | missing=[('行政行为-行政强制', '《判决文书4》')] | extra=[]
+- idx=481 | exact_match=False | pair_f1=0.5882352941176471 | missing=[('危害公共安全罪', '《判决文书3》'), ('用益物权纠纷', '《判决文书7》'), ('适用特殊程序案件案由', '《判决文书8》'), ('适用特殊程序案件案由', '《判决文书9》')] | extra=[('民事案由-合同，无因管理，不当得利纠纷', '《判决文书7》'), ('民事案由-合同，无因管理，不当得利纠纷', '《判决文书8》'), ('民事案由-合同，无因管理，不当得利纠纷', '《判决文书9》')]
+- idx=482 | exact_match=False | pair_f1=0.9333333333333333 | missing=[('不动产登记纠纷', '《判决文书5》')] | extra=[]
+- idx=900 | exact_match=False | pair_f1=None | missing=['-$0.04'] | extra=['meet error']
+- idx=901 | exact_match=False | pair_f1=None | missing=['$(0.91)'] | extra=['meet error']
+- idx=902 | exact_match=False | pair_f1=None | missing=['$10,135 in thousands'] | extra=['meet error']
+- idx=903 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=904 | exact_match=False | pair_f1=None | missing=['1,193,403,254.39'] | extra=['1,193,403,254.39元']
+- idx=905 | exact_match=False | pair_f1=None | missing=['292,642,313.19'] | extra=['meet error']
+- idx=906 | exact_match=False | pair_f1=None | missing=['8,999,923,030.70'] | extra=['meet error']
+- idx=907 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=908 | exact_match=False | pair_f1=None | missing=['6,889,697.28'] | extra=['6,889,697.28元']
+- idx=909 | exact_match=False | pair_f1=None | missing=['1,492,000,000.00'] | extra=['meet error']
+- idx=910 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=911 | exact_match=False | pair_f1=None | missing=['435,022.00'] | extra=['2,914,389.00元 - 2,479,367.00元 = 435,022.00元']
+- idx=912 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=913 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=914 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=915 | exact_match=False | pair_f1=None | missing=['-131,189.00'] | extra=['meet error']
+- idx=916 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=917 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=918 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=919 | exact_match=False | pair_f1=None | missing=['80,000,000.00'] | extra=['meet error']
+- idx=920 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=921 | exact_match=False | pair_f1=None | missing=['28,690,254.22'] | extra=['meet error']
+- idx=922 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=1050 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=1051 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=1052 | exact_match=False | pair_f1=None | missing=['(倍加洁: 11,078,142.33), (迈克生物: 21,428,623.41), (盾安环境: 40,638,256.54)'] | extra=['7,264,982.65, 11,078,142.33, 21,428,623.41, 40,638,256.54']
+- idx=1053 | exact_match=False | pair_f1=None | missing=['全聚德'] | extra=['meet error']
+- idx=1054 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=1055 | exact_match=True | pair_f1=None | missing=[] | extra=[]
+- idx=1056 | exact_match=False | pair_f1=None | missing=['英力特: 5.04%, 科大讯飞: 26.27%, 百亚股份: 46.40%'] | extra=['5.04%, 26.27%, 46.40%']
+- idx=1057 | exact_match=False | pair_f1=None | missing=['蓝晓科技'] | extra=['meet error']
+- idx=1058 | exact_match=False | pair_f1=None | missing=[1] | extra=['meet error']
+- idx=1059 | exact_match=False | pair_f1=None | missing=['中粮科工'] | extra=['meet error']
+
+## Official Judge
+- sample_count: 99
+- scoring_success_rate: 1.0000
+- avg_score: 54.292929292929294
+- perfect_rate: 0.2929
+- idx=14 | score=0.0
+- idx=8 | score=0.0
+- idx=3 | score=85.0
+- idx=7 | score=20.0
+- idx=18 | score=0.0
+- idx=6 | score=0.0
+- idx=5 | score=20.0
+- idx=16 | score=50.0
+- idx=12 | score=20.0
+- idx=4 | score=100.0
+- idx=1 | score=0.0
+- idx=2 | score=0.0
+- idx=9 | score=20.0
+- idx=19 | score=0.0
+- idx=15 | score=20.0
+- idx=11 | score=20.0
+- idx=0 | score=50.0
+- idx=13 | score=0.0
+- idx=10 | score=60.0
+- idx=17 | score=20.0
+- idx=20 | score=0.0
+- idx=21 | score=0.0
+- idx=22 | score=20.0
+- idx=23 | score=20.0
+- idx=24 | score=85.0
+- idx=25 | score=75.0
+- idx=26 | score=0.0
+- idx=27 | score=80.0
+- idx=28 | score=75.0
+- idx=29 | score=100.0
+- idx=30 | score=0.0
+- idx=31 | score=0.0
+- idx=32 | score=100.0
+- idx=409 | score=100.0
+- idx=410 | score=80.0
+- idx=411 | score=60.0
+- idx=412 | score=0.0
+- idx=414 | score=70.0
+- idx=417 | score=100.0
+- idx=420 | score=100.0
+- idx=422 | score=0.0
+- idx=428 | score=100.0
+- idx=429 | score=100.0
+- idx=430 | score=100.0
+- idx=431 | score=0.0
+- idx=442 | score=40.0
+- idx=447 | score=70.0
+- idx=451 | score=60.0
+- idx=455 | score=70.0
+- idx=457 | score=70.0
+- idx=459 | score=60.0
+- idx=461 | score=80.0
+- idx=463 | score=100.0
+- idx=464 | score=85.0
+- idx=465 | score=70.0
+- idx=469 | score=80.0
+- idx=470 | score=70.0
+- idx=471 | score=90.0
+- idx=472 | score=70.0
+- idx=473 | score=70.0
+- idx=474 | score=80.0
+- idx=477 | score=80.0
+- idx=478 | score=100.0
+- idx=479 | score=80.0
+- idx=481 | score=60.0
+- idx=482 | score=90.0
+- idx=900 | score=0.0
+- idx=901 | score=0.0
+- idx=902 | score=0.0
+- idx=903 | score=100.0
+- idx=904 | score=100.0
+- idx=905 | score=0.0
+- idx=906 | score=0.0
+- idx=907 | score=100.0
+- idx=908 | score=100.0
+- idx=909 | score=0.0
+- idx=910 | score=100.0
+- idx=911 | score=100.0
+- idx=912 | score=100.0
+- idx=913 | score=100.0
+- idx=914 | score=100.0
+- idx=915 | score=0.0
+- idx=916 | score=100.0
+- idx=917 | score=100.0
+- idx=918 | score=100.0
+- idx=919 | score=0.0
+- idx=920 | score=100.0
+- idx=921 | score=0.0
+- idx=922 | score=100.0
+- idx=1050 | score=100.0
+- idx=1051 | score=100.0
+- idx=1052 | score=70.0
+- idx=1053 | score=0.0
+- idx=1054 | score=100.0
+- idx=1055 | score=100.0
+- idx=1056 | score=80.0
+- idx=1057 | score=0.0
+- idx=1058 | score=0.0
+- idx=1059 | score=0.0
+
+## Local Judge
+- local judge skipped or failed

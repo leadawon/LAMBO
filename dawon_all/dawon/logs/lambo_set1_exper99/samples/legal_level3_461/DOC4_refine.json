@@ -1,0 +1,120 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "selected_anchor_ids": [
+    "DOC4_A1",
+    "DOC4_A2"
+  ],
+  "final_current_query": "是否可以确认《判决文书4》属于'执行案由-对下级法院执行异议裁定的复议'类别？",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A1",
+        "candidate_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4"
+        ]
+      },
+      "anchor_id": "DOC4_A1",
+      "plan_think": "The document seems to involve a case where a village committee is disputing a court's decision to freeze and deduct funds, leading to a higher court's review of the lower court's ruling. This suggests that the case might fall under the category of '执行案由-对下级法院执行异议裁定的复议'. I will inspect the first anchor to confirm if it contains information that supports this categorization.",
+      "info": {
+        "anchor_id": "DOC4_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "复议申请人是大连长兴岛经济技术开发区交流岛街道西海头村民委员会，申请执行人是刘广东。",
+        "text": "复议申请人：（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道西海头村民委员会，住所地大连长兴岛经济技术开发区交流岛街道西海头村。\n\n法定代表人：段晓东，主任。\n\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。"
+      },
+      "extract_think": "The selected chunk provides information about the parties involved in the case, specifically mentioning a \"复议申请人\" (applicant for reconsideration) which is the 大连长兴岛经济技术开发区交流岛街道西海头村民委员会 (Dalian Changxing Island Economic Development Zone Jiaoliudao Street Xihaitou Village Committee). This suggests that the case involves a dispute that has been brought up for reconsideration, aligning with the category '执行案由-对下级法院执行异议裁定的复议'. However, the chunk does not provide explicit confirmation that this is the exact category of the case, so further inspection is needed to ensure accuracy.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案由-对下级法院执行异议裁定的复议",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "复议申请人：（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道西海头村民委员会，住所地大连长兴岛经济技术开发区交流岛街道西海头村。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A1",
+            "confidence": 0.75
+          }
+        ],
+        "enough": false,
+        "followup_query": "是否可以确认《判决文书4》属于'执行案由-对下级法院执行异议裁定的复议'类别？"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "是否可以确认《判决文书4》属于'执行案由-对下级法院执行异议裁定的复议'类别？",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC4_A2",
+        "candidate_anchor_ids": [
+          "DOC4_A1",
+          "DOC4_A2",
+          "DOC4_A3",
+          "DOC4_A4"
+        ]
+      },
+      "anchor_id": "DOC4_A2",
+      "plan_think": "The previous evidence indicates that the case involves a '复议申请人' (applicant for reconsideration), which aligns with the category '执行案由-对下级法院执行异议裁定的复议'. To further confirm this categorization, I should inspect the anchor that discusses the details of the case background and the reasons for the appeal. The anchor DOC4_A2 provides information on the case background, which may contain more specific details about the nature of the dispute and the reasons for the appeal.",
+      "info": {
+        "anchor_id": "DOC4_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "案件背景",
+        "summary": "西海头村委会对大连海事法院的冻结扣划行为不服，提出异议，认为被冻结的款项为专款专用的专项资金，但法院认为其未能提供足够的证据证明这些资金属于专款专用，因此驳回了异议请求。",
+        "text": "复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异105号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n大连海事法院在执行申请执行人刘广东与被执行人西海头村委会海上养殖损害责任纠纷一案中，西海头村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了西海头村委会集体账户（4119××××0301和2120××××3983），但其中的62395元为2021年度国家级公益林补助资金，35900元为厕所长效管护资金，均为专款专用的专项资金。\n\n刘广东答辩称，西海头村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\n\n大连海事法院查明，该院于2022年6月20日作出（2021）辽72执146号执行裁定，对西海头村委会在招商银行股份有限公司大连分行瓦房店支行4119××××0901银行账户存款98607.67元进行扣划。\n\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划西海头村委会的账户存款行为是否合法，西海头村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，西海头村委会未提供证据证明招商银行股份有限公司大连分行瓦房店支行4119××××0901银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，亦未提供证据证明案涉98607.67元系专款专用的专项资金。故西海头村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回西海头村委会的异议请求。"
+      },
+      "extract_think": "The selected chunk provides detailed information about the case background, including the fact that the 西海头村委会 (Xihaitou Village Committee) is appealing against the freezing and deduction actions taken by the 大连海事法院 (Dalian Maritime Court). The case involves a dispute over the execution of a court order, specifically regarding the freezing and deduction of funds from the village committee's account. This aligns with the category '执行案由-对下级法院执行异议裁定的复议' (Execution Cause - Review of Lower Court's Execution Objection Ruling). The chunk confirms that the case is indeed an appeal against the lower court's execution decision, providing strong evidence for the categorization.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "执行案由-对下级法院执行异议裁定的复议",
+            "value": "《判决文书4》",
+            "normalized_value": "判决文书4",
+            "evidence_text": "复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异105号执行裁定，向本院申请复议。",
+            "source_doc_id": "DOC4",
+            "source_anchor_id": "DOC4_A2",
+            "confidence": 0.95
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "执行案由-对下级法院执行异议裁定的复议",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "复议申请人：（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道西海头村民委员会，住所地大连长兴岛经济技术开发区交流岛街道西海头村。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A1",
+      "confidence": 0.75
+    },
+    {
+      "answer_key": "执行案由-对下级法院执行异议裁定的复议",
+      "value": "《判决文书4》",
+      "normalized_value": "判决文书4",
+      "evidence_text": "复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异105号执行裁定，向本院申请复议。",
+      "source_doc_id": "DOC4",
+      "source_anchor_id": "DOC4_A2",
+      "confidence": 0.95
+    }
+  ],
+  "trace": {
+    "round_count": 2,
+    "tagged_trace": "<think>The document seems to involve a case where a village committee is disputing a court's decision to freeze and deduct funds, leading to a higher court's review of the lower court's ruling. This suggests that the case might fall under the category of '执行案由-对下级法院执行异议裁定的复议'. I will inspect the first anchor to confirm if it contains information that supports this categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A1\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人是大连长兴岛经济技术开发区交流岛街道西海头村民委员会，申请执行人是刘广东。\", \"text\": \"复议申请人：（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道西海头村民委员会，住所地大连长兴岛经济技术开发区交流岛街道西海头村。\\n\\n法定代表人：段晓东，主任。\\n\\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\"}</info>\n<think>The selected chunk provides information about the parties involved in the case, specifically mentioning a \"复议申请人\" (applicant for reconsideration) which is the 大连长兴岛经济技术开发区交流岛街道西海头村民委员会 (Dalian Changxing Island Economic Development Zone Jiaoliudao Street Xihaitou Village Committee). This suggests that the case involves a dispute that has been brought up for reconsideration, aligning with the category '执行案由-对下级法院执行异议裁定的复议'. However, the chunk does not provide explicit confirmation that this is the exact category of the case, so further inspection is needed to ensure accuracy.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-对下级法院执行异议裁定的复议\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"复议申请人：（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道西海头村民委员会，住所地大连长兴岛经济技术开发区交流岛街道西海头村。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A1\", \"confidence\": 0.75}], \"enough\": false, \"followup_query\": \"是否可以确认《判决文书4》属于'执行案由-对下级法院执行异议裁定的复议'类别？\"}</retrieve>\n<think>The previous evidence indicates that the case involves a '复议申请人' (applicant for reconsideration), which aligns with the category '执行案由-对下级法院执行异议裁定的复议'. To further confirm this categorization, I should inspect the anchor that discusses the details of the case background and the reasons for the appeal. The anchor DOC4_A2 provides information on the case background, which may contain more specific details about the nature of the dispute and the reasons for the appeal.</think>\n<search>{\"current_query\": \"是否可以确认《判决文书4》属于'执行案由-对下级法院执行异议裁定的复议'类别？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"西海头村委会对大连海事法院的冻结扣划行为不服，提出异议，认为被冻结的款项为专款专用的专项资金，但法院认为其未能提供足够的证据证明这些资金属于专款专用，因此驳回了异议请求。\", \"text\": \"复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异105号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n大连海事法院在执行申请执行人刘广东与被执行人西海头村委会海上养殖损害责任纠纷一案中，西海头村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了西海头村委会集体账户（4119××××0301和2120××××3983），但其中的62395元为2021年度国家级公益林补助资金，35900元为厕所长效管护资金，均为专款专用的专项资金。\\n\\n刘广东答辩称，西海头村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\\n\\n大连海事法院查明，该院于2022年6月20日作出（2021）辽72执146号执行裁定，对西海头村委会在招商银行股份有限公司大连分行瓦房店支行4119××××0901银行账户存款98607.67元进行扣划。\\n\\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划西海头村委会的账户存款行为是否合法，西海头村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，西海头村委会未提供证据证明招商银行股份有限公司大连分行瓦房店支行4119××××0901银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，亦未提供证据证明案涉98607.67元系专款专用的专项资金。故西海头村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回西海头村委会的异议请求。\"}</info>\n<think>The selected chunk provides detailed information about the case background, including the fact that the 西海头村委会 (Xihaitou Village Committee) is appealing against the freezing and deduction actions taken by the 大连海事法院 (Dalian Maritime Court). The case involves a dispute over the execution of a court order, specifically regarding the freezing and deduction of funds from the village committee's account. This aligns with the category '执行案由-对下级法院执行异议裁定的复议' (Execution Cause - Review of Lower Court's Execution Objection Ruling). The chunk confirms that the case is indeed an appeal against the lower court's execution decision, providing strong evidence for the categorization.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-对下级法院执行异议裁定的复议\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异105号执行裁定，向本院申请复议。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 0.95}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The document seems to involve a case where a village committee is disputing a court's decision to freeze and deduct funds, leading to a higher court's review of the lower court's ruling. This suggests that the case might fall under the category of '执行案由-对下级法院执行异议裁定的复议'. I will inspect the first anchor to confirm if it contains information that supports this categorization.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'海事海商纠纷' '执行案由-对下级法院执行异议裁定的复议' '行政行为-行政复议' '渎职罪' '产品责任纠纷' '行政行为-行政裁决'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'海事海商纠纷': ['《判决文书a》', '《判决文书b》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书a》', '《判决文书b》'], '行政行为-行政复议': ['《判决文书a》', '《判决文书b》'], '渎职罪': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政裁决': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A1\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"复议申请人是大连长兴岛经济技术开发区交流岛街道西海头村民委员会，申请执行人是刘广东。\", \"text\": \"复议申请人：（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道西海头村民委员会，住所地大连长兴岛经济技术开发区交流岛街道西海头村。\\n\\n法定代表人：段晓东，主任。\\n\\n申请执行人：刘广东，男，汉族，住辽宁省瓦房店市。\"}</info>\n<think>The selected chunk provides information about the parties involved in the case, specifically mentioning a \"复议申请人\" (applicant for reconsideration) which is the 大连长兴岛经济技术开发区交流岛街道西海头村民委员会 (Dalian Changxing Island Economic Development Zone Jiaoliudao Street Xihaitou Village Committee). This suggests that the case involves a dispute that has been brought up for reconsideration, aligning with the category '执行案由-对下级法院执行异议裁定的复议'. However, the chunk does not provide explicit confirmation that this is the exact category of the case, so further inspection is needed to ensure accuracy.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-对下级法院执行异议裁定的复议\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"复议申请人：（异议人、被执行人）：大连长兴岛经济技术开发区交流岛街道西海头村民委员会，住所地大连长兴岛经济技术开发区交流岛街道西海头村。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A1\", \"confidence\": 0.75}], \"enough\": false, \"followup_query\": \"是否可以确认《判决文书4》属于'执行案由-对下级法院执行异议裁定的复议'类别？\"}</retrieve>\n<think>The previous evidence indicates that the case involves a '复议申请人' (applicant for reconsideration), which aligns with the category '执行案由-对下级法院执行异议裁定的复议'. To further confirm this categorization, I should inspect the anchor that discusses the details of the case background and the reasons for the appeal. The anchor DOC4_A2 provides information on the case background, which may contain more specific details about the nature of the dispute and the reasons for the appeal.</think>\n<search>{\"current_query\": \"是否可以确认《判决文书4》属于'执行案由-对下级法院执行异议裁定的复议'类别？\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC4_A2\", \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC4_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"案件背景\", \"summary\": \"西海头村委会对大连海事法院的冻结扣划行为不服，提出异议，认为被冻结的款项为专款专用的专项资金，但法院认为其未能提供足够的证据证明这些资金属于专款专用，因此驳回了异议请求。\", \"text\": \"复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异105号执行裁定，向本院申请复议。本院受理后，依法组成合议庭进行审查，现已审查终结。\\n\\n大连海事法院在执行申请执行人刘广东与被执行人西海头村委会海上养殖损害责任纠纷一案中，西海头村委会对执行中的冻结扣划行为不服，向该院提出书面异议，请求解除对专项和他人所有资金的冻结，并对已扣划的专项和他人所有资金执行回转。事实和理由：因（2018）辽72民初477号民事判决执行一案（见（2022）辽72执恢28号执行通知书），大连海事法院冻结了西海头村委会集体账户（4119××××0301和2120××××3983），但其中的62395元为2021年度国家级公益林补助资金，35900元为厕所长效管护资金，均为专款专用的专项资金。\\n\\n刘广东答辩称，西海头村委会对大连海事法院冻结扣划的资金为专项资金的异议，没有事实和法律依据，依法应予驳回。\\n\\n大连海事法院查明，该院于2022年6月20日作出（2021）辽72执146号执行裁定，对西海头村委会在招商银行股份有限公司大连分行瓦房店支行4119××××0901银行账户存款98607.67元进行扣划。\\n\\n大连海事法院认为，本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议。本案的焦点问题是该院冻结扣划西海头村委会的账户存款行为是否合法，西海头村委会的异议是否成立，能否排除执行。《最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定》第三条第八项规定，人民法院对被执行人下列的财产不得查封、扣押、冻结：（八）法律或者司法解释规定的其他不得查封、扣押、冻结的财产。本案中，西海头村委会未提供证据证明招商银行股份有限公司大连分行瓦房店支行4119××××0901银行账户为按照资金性质只能进行特定用途专项管理和支付且为法院不能冻结的专用存款账户，亦未提供证据证明案涉98607.67元系专款专用的专项资金。故西海头村委会提出的异议不成立，该院不予支持。依照《中华人民共和国民事诉讼法》第二百三十二条、《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第十七条第一项规定，裁定:驳回西海头村委会的异议请求。\"}</info>\n<think>The selected chunk provides detailed information about the case background, including the fact that the 西海头村委会 (Xihaitou Village Committee) is appealing against the freezing and deduction actions taken by the 大连海事法院 (Dalian Maritime Court). The case involves a dispute over the execution of a court order, specifically regarding the freezing and deduction of funds from the village committee's account. This aligns with the category '执行案由-对下级法院执行异议裁定的复议' (Execution Cause - Review of Lower Court's Execution Objection Ruling). The chunk confirms that the case is indeed an appeal against the lower court's execution decision, providing strong evidence for the categorization.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"执行案由-对下级法院执行异议裁定的复议\", \"value\": \"《判决文书4》\", \"normalized_value\": \"判决文书4\", \"evidence_text\": \"复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异105号执行裁定，向本院申请复议。\", \"source_doc_id\": \"DOC4\", \"source_anchor_id\": \"DOC4_A2\", \"confidence\": 0.95}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}

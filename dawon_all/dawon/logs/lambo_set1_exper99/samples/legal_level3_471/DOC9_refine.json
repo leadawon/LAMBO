@@ -1,0 +1,113 @@
+{
+  "doc_id": "DOC9",
+  "doc_title": "《判决文书9》",
+  "selected_anchor_ids": [
+    "DOC9_A1",
+    "DOC9_A2",
+    "DOC9_A3"
+  ],
+  "final_current_query": "查找与案件具体案由相关的更多信息",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "分类判决文书到指定的案由类别",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC9_A1",
+        "candidate_anchor_ids": [
+          "DOC10_A1",
+          "DOC10_A2",
+          "DOC10_A3",
+          "DOC10_A4"
+        ]
+      },
+      "anchor_id": "DOC9_A1",
+      "plan_think": "The current document does not seem to fit into any of the specified categories based on the initial chunks provided. The case appears to be related to a patent dispute rather than the listed categories such as '海事海商纠纷' (Maritime and Commercial Disputes), '执行案由-行政非诉执行' (Administrative Non-litigious Enforcement), '行政主体-房屋拆迁管理（拆迁）' (Administrative Body - House Demolition Management), '刑事赔偿' (Criminal Compensation), or '行政主体-劳动和社会保障行政管理（劳动，社会保障）' (Administrative Body - Labor and Social Security Administration). I will inspect the next document if available.",
+      "info": {
+        "anchor_id": "DOC9_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息",
+        "summary": "上诉人（原审被告）是某某公司1，法定代表人是谢某。被上诉人（原审原告）是某某公司2，法定代表人是毛某。原审被告是某某公司3，法定代表人是陈某。",
+        "text": "上诉人（原审被告）：某某公司1，住所地江苏省泰州市。\n\n法定代表人：谢某，执行董事。\n\n被上诉人（原审原告）：某某公司2，住所地上海市青浦区。\n\n法定代表人：毛某，执行董事兼总经理。\n\n原审被告：某某公司3，住所地上海市青浦区。\n\n法定代表人：陈某，职务不详。"
+      },
+      "extract_think": "该段落提供了案件当事人的基本信息，但没有提供关于案件具体案由的信息。因此，无法根据这段文字将判决文书归类到指定的案由类别中。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "查找与案件案由相关的段落"
+      }
+    },
+    {
+      "round_index": 2,
+      "search": {
+        "current_query": "查找与案件案由相关的段落",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC9_A2",
+        "candidate_anchor_ids": [
+          "DOC9_A2",
+          "DOC9_A3",
+          "DOC9_A4",
+          "DOC9_A5"
+        ]
+      },
+      "anchor_id": "DOC9_A2",
+      "plan_think": "考虑到当前文档尚未提供足够的信息来确定其所属的案由类别，我将继续检查其他段落以寻找更多关于案件性质的线索。下一个合理的步骤是查看DOC9_A1，因为这是文档的第一个部分，可能会包含案件的基本信息或案由概述。",
+      "info": {
+        "anchor_id": "DOC9_A2",
+        "anchor_type": "paragraph_region",
+        "section_path": "上诉理由",
+        "summary": "某某公司1上诉称，起诉状和证据材料中的图片地址显示不清，且未有任何证据指向某某公司3，因此以某某公司3住所地确定管辖是错误的。同时，起诉状未明确侵权地点，证据材料也不能反映某某公司2主张的侵权行为具体地点。",
+        "text": "上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2以及原审被告某某公司3（以下简称某某公司3）侵害实用新型专利权纠纷一案，不服上海知识产权法院（2023）沪73知民初669号之一民事裁定，向本院提起上诉。\n\n某某公司1上诉称：第一，从某某公司2的起诉状以及证据材料来看，部分图片地址显示不清，也未有任何证据指向某某公司3，证据所显示的地址也并非某某公司3住所地，故以某某公司3住所地确定管辖是错误的，是故意制造连接点。起诉状没有明确所谓的侵权地点在何处，本案无法确定“侵权行为地”。起诉状载明某某公司3的地址上，尚有同地址其他公司。因此，某某公司2未能提交任何证据证明本案与某某公司3有关。第二，经查询，“某某快递”相关企业14,609家，全国各地均有注册。某某公司3系某某快递股份有限公司的投资子公司，而某某快递股份有限公司上海分公司注册地址亦在上海市青浦区，证据图片显示地址与某某公司3无任何关联。第三，起诉状及现有证据材料均不能反映某某公司2主张哪一被告进行了“自行制造、销售、许诺销售被控产品”的行为以及行为实施的具体地点，仅明确指向了某某公司1。第四，根据民事诉讼管辖原告就被告的原则，本案移送某某公司1住所地有管辖权的法院审理更有利于查明事实、实质化解决纠纷、维护当事人合法权益。综上，某某公司1请求将本案移送至江苏省南京市中级人民法院审理。"
+      },
+      "extract_think": "该段落详细描述了某某公司1的上诉理由，主要集中在管辖权的问题上，并提到这是一个侵害实用新型专利权的纠纷。然而，这些信息并不足以将此判决文书归类到给定的案由类别中，因为它们都不涉及海事海商纠纷、行政非诉执行、房屋拆迁管理、刑事赔偿或劳动和社会保障行政管理。因此，需要继续查找更多相关信息。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "查找与案件具体案由相关的更多信息"
+      }
+    },
+    {
+      "round_index": 3,
+      "search": {
+        "current_query": "查找与案件具体案由相关的更多信息",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC9_A3",
+        "candidate_anchor_ids": [
+          "DOC9_A3",
+          "DOC9_A4",
+          "DOC9_A5"
+        ]
+      },
+      "anchor_id": "DOC9_A3",
+      "plan_think": "尽管已经检查了几部分内容，但还没有找到能够将此判决文书归类到指定案由类别的信息。接下来应该检查剩余的部分，特别是可能包含案件详细描述或案由说明的部分。DOC9_A3是下一个合理的检查点。",
+      "info": {
+        "anchor_id": "DOC9_A3",
+        "anchor_type": "paragraph_region",
+        "section_path": "答辩意见",
+        "summary": "被上诉人某某公司2未提交答辩意见，原审被告某某公司3未提交述称意见。",
+        "text": "被上诉人某某公司2未提交答辩意见。\n\n原审被告某某公司3未提交述称意见。"
+      },
+      "extract_think": "该段落仅表明被上诉人和原审被告未提交答辩意见或述称意见，没有提供关于案件具体案由的任何信息。因此，无法根据这段文字将判决文书归类到指定的案由类别中。",
+      "retrieve": {
+        "items": [],
+        "enough": false,
+        "followup_query": "查找与案件具体案由相关的更多信息"
+      }
+    }
+  ],
+  "items": [],
+  "trace": {
+    "round_count": 3,
+    "tagged_trace": "<think>The current document does not seem to fit into any of the specified categories based on the initial chunks provided. The case appears to be related to a patent dispute rather than the listed categories such as '海事海商纠纷' (Maritime and Commercial Disputes), '执行案由-行政非诉执行' (Administrative Non-litigious Enforcement), '行政主体-房屋拆迁管理（拆迁）' (Administrative Body - House Demolition Management), '刑事赔偿' (Criminal Compensation), or '行政主体-劳动和社会保障行政管理（劳动，社会保障）' (Administrative Body - Labor and Social Security Administration). I will inspect the next document if available.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人（原审被告）是某某公司1，法定代表人是谢某。被上诉人（原审原告）是某某公司2，法定代表人是毛某。原审被告是某某公司3，法定代表人是陈某。\", \"text\": \"上诉人（原审被告）：某某公司1，住所地江苏省泰州市。\\n\\n法定代表人：谢某，执行董事。\\n\\n被上诉人（原审原告）：某某公司2，住所地上海市青浦区。\\n\\n法定代表人：毛某，执行董事兼总经理。\\n\\n原审被告：某某公司3，住所地上海市青浦区。\\n\\n法定代表人：陈某，职务不详。\"}</info>\n<think>该段落提供了案件当事人的基本信息，但没有提供关于案件具体案由的信息。因此，无法根据这段文字将判决文书归类到指定的案由类别中。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与案件案由相关的段落\"}</retrieve>\n<think>考虑到当前文档尚未提供足够的信息来确定其所属的案由类别，我将继续检查其他段落以寻找更多关于案件性质的线索。下一个合理的步骤是查看DOC9_A1，因为这是文档的第一个部分，可能会包含案件的基本信息或案由概述。</think>\n<search>{\"current_query\": \"查找与案件案由相关的段落\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A2\", \"candidate_anchor_ids\": [\"DOC9_A2\", \"DOC9_A3\", \"DOC9_A4\", \"DOC9_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"上诉理由\", \"summary\": \"某某公司1上诉称，起诉状和证据材料中的图片地址显示不清，且未有任何证据指向某某公司3，因此以某某公司3住所地确定管辖是错误的。同时，起诉状未明确侵权地点，证据材料也不能反映某某公司2主张的侵权行为具体地点。\", \"text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2以及原审被告某某公司3（以下简称某某公司3）侵害实用新型专利权纠纷一案，不服上海知识产权法院（2023）沪73知民初669号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：第一，从某某公司2的起诉状以及证据材料来看，部分图片地址显示不清，也未有任何证据指向某某公司3，证据所显示的地址也并非某某公司3住所地，故以某某公司3住所地确定管辖是错误的，是故意制造连接点。起诉状没有明确所谓的侵权地点在何处，本案无法确定“侵权行为地”。起诉状载明某某公司3的地址上，尚有同地址其他公司。因此，某某公司2未能提交任何证据证明本案与某某公司3有关。第二，经查询，“某某快递”相关企业14,609家，全国各地均有注册。某某公司3系某某快递股份有限公司的投资子公司，而某某快递股份有限公司上海分公司注册地址亦在上海市青浦区，证据图片显示地址与某某公司3无任何关联。第三，起诉状及现有证据材料均不能反映某某公司2主张哪一被告进行了“自行制造、销售、许诺销售被控产品”的行为以及行为实施的具体地点，仅明确指向了某某公司1。第四，根据民事诉讼管辖原告就被告的原则，本案移送某某公司1住所地有管辖权的法院审理更有利于查明事实、实质化解决纠纷、维护当事人合法权益。综上，某某公司1请求将本案移送至江苏省南京市中级人民法院审理。\"}</info>\n<think>该段落详细描述了某某公司1的上诉理由，主要集中在管辖权的问题上，并提到这是一个侵害实用新型专利权的纠纷。然而，这些信息并不足以将此判决文书归类到给定的案由类别中，因为它们都不涉及海事海商纠纷、行政非诉执行、房屋拆迁管理、刑事赔偿或劳动和社会保障行政管理。因此，需要继续查找更多相关信息。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与案件具体案由相关的更多信息\"}</retrieve>\n<think>尽管已经检查了几部分内容，但还没有找到能够将此判决文书归类到指定案由类别的信息。接下来应该检查剩余的部分，特别是可能包含案件详细描述或案由说明的部分。DOC9_A3是下一个合理的检查点。</think>\n<search>{\"current_query\": \"查找与案件具体案由相关的更多信息\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A3\", \"candidate_anchor_ids\": [\"DOC9_A3\", \"DOC9_A4\", \"DOC9_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"答辩意见\", \"summary\": \"被上诉人某某公司2未提交答辩意见，原审被告某某公司3未提交述称意见。\", \"text\": \"被上诉人某某公司2未提交答辩意见。\\n\\n原审被告某某公司3未提交述称意见。\"}</info>\n<think>该段落仅表明被上诉人和原审被告未提交答辩意见或述称意见，没有提供关于案件具体案由的任何信息。因此，无法根据这段文字将判决文书归类到指定的案由类别中。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与案件具体案由相关的更多信息\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document does not seem to fit into any of the specified categories based on the initial chunks provided. The case appears to be related to a patent dispute rather than the listed categories such as '海事海商纠纷' (Maritime and Commercial Disputes), '执行案由-行政非诉执行' (Administrative Non-litigious Enforcement), '行政主体-房屋拆迁管理（拆迁）' (Administrative Body - House Demolition Management), '刑事赔偿' (Criminal Compensation), or '行政主体-劳动和社会保障行政管理（劳动，社会保障）' (Administrative Body - Labor and Social Security Administration). I will inspect the next document if available.</think>\n<search>{\"current_query\": \"分类判决文书到指定的案由类别\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A1\", \"candidate_anchor_ids\": [\"DOC10_A1\", \"DOC10_A2\", \"DOC10_A3\", \"DOC10_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息\", \"summary\": \"上诉人（原审被告）是某某公司1，法定代表人是谢某。被上诉人（原审原告）是某某公司2，法定代表人是毛某。原审被告是某某公司3，法定代表人是陈某。\", \"text\": \"上诉人（原审被告）：某某公司1，住所地江苏省泰州市。\\n\\n法定代表人：谢某，执行董事。\\n\\n被上诉人（原审原告）：某某公司2，住所地上海市青浦区。\\n\\n法定代表人：毛某，执行董事兼总经理。\\n\\n原审被告：某某公司3，住所地上海市青浦区。\\n\\n法定代表人：陈某，职务不详。\"}</info>\n<think>该段落提供了案件当事人的基本信息，但没有提供关于案件具体案由的信息。因此，无法根据这段文字将判决文书归类到指定的案由类别中。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与案件案由相关的段落\"}</retrieve>\n<think>考虑到当前文档尚未提供足够的信息来确定其所属的案由类别，我将继续检查其他段落以寻找更多关于案件性质的线索。下一个合理的步骤是查看DOC9_A1，因为这是文档的第一个部分，可能会包含案件的基本信息或案由概述。</think>\n<search>{\"current_query\": \"查找与案件案由相关的段落\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A2\", \"candidate_anchor_ids\": [\"DOC9_A2\", \"DOC9_A3\", \"DOC9_A4\", \"DOC9_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A2\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"上诉理由\", \"summary\": \"某某公司1上诉称，起诉状和证据材料中的图片地址显示不清，且未有任何证据指向某某公司3，因此以某某公司3住所地确定管辖是错误的。同时，起诉状未明确侵权地点，证据材料也不能反映某某公司2主张的侵权行为具体地点。\", \"text\": \"上诉人某某公司1（以下简称某某公司1）因与被上诉人某某公司2以及原审被告某某公司3（以下简称某某公司3）侵害实用新型专利权纠纷一案，不服上海知识产权法院（2023）沪73知民初669号之一民事裁定，向本院提起上诉。\\n\\n某某公司1上诉称：第一，从某某公司2的起诉状以及证据材料来看，部分图片地址显示不清，也未有任何证据指向某某公司3，证据所显示的地址也并非某某公司3住所地，故以某某公司3住所地确定管辖是错误的，是故意制造连接点。起诉状没有明确所谓的侵权地点在何处，本案无法确定“侵权行为地”。起诉状载明某某公司3的地址上，尚有同地址其他公司。因此，某某公司2未能提交任何证据证明本案与某某公司3有关。第二，经查询，“某某快递”相关企业14,609家，全国各地均有注册。某某公司3系某某快递股份有限公司的投资子公司，而某某快递股份有限公司上海分公司注册地址亦在上海市青浦区，证据图片显示地址与某某公司3无任何关联。第三，起诉状及现有证据材料均不能反映某某公司2主张哪一被告进行了“自行制造、销售、许诺销售被控产品”的行为以及行为实施的具体地点，仅明确指向了某某公司1。第四，根据民事诉讼管辖原告就被告的原则，本案移送某某公司1住所地有管辖权的法院审理更有利于查明事实、实质化解决纠纷、维护当事人合法权益。综上，某某公司1请求将本案移送至江苏省南京市中级人民法院审理。\"}</info>\n<think>该段落详细描述了某某公司1的上诉理由，主要集中在管辖权的问题上，并提到这是一个侵害实用新型专利权的纠纷。然而，这些信息并不足以将此判决文书归类到给定的案由类别中，因为它们都不涉及海事海商纠纷、行政非诉执行、房屋拆迁管理、刑事赔偿或劳动和社会保障行政管理。因此，需要继续查找更多相关信息。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与案件具体案由相关的更多信息\"}</retrieve>\n<think>尽管已经检查了几部分内容，但还没有找到能够将此判决文书归类到指定案由类别的信息。接下来应该检查剩余的部分，特别是可能包含案件详细描述或案由说明的部分。DOC9_A3是下一个合理的检查点。</think>\n<search>{\"current_query\": \"查找与案件具体案由相关的更多信息\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC9_A3\", \"candidate_anchor_ids\": [\"DOC9_A3\", \"DOC9_A4\", \"DOC9_A5\"]}</search>\n<info>{\"anchor_id\": \"DOC9_A3\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"答辩意见\", \"summary\": \"被上诉人某某公司2未提交答辩意见，原审被告某某公司3未提交述称意见。\", \"text\": \"被上诉人某某公司2未提交答辩意见。\\n\\n原审被告某某公司3未提交述称意见。\"}</info>\n<think>该段落仅表明被上诉人和原审被告未提交答辩意见或述称意见，没有提供关于案件具体案由的任何信息。因此，无法根据这段文字将判决文书归类到指定的案由类别中。</think>\n<retrieve>{\"items\": [], \"enough\": false, \"followup_query\": \"查找与案件具体案由相关的更多信息\"}</retrieve>"
+}

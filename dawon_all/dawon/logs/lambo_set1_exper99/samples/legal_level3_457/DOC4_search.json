@@ -1,0 +1,79 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "task_mode": "clustering",
+  "think": "The current document does not seem to contain information that directly matches any of the six case categories specified in the question. However, since we have only seen the titles and summaries of the chunks, I will inspect DOC4_A2 next because it provides background information on the case, which may include details about the type of case or the specific legal issues involved.",
+  "current_query": "阅读以上判决文书，请按照'执行案由-先予执行' '适用特殊程序案件案由' '行政行为-行政征收' '产品责任纠纷' '行政行为-行政处罚' '人格权纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '行政行为-行政征收': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '人格权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "must_find": [
+    "category labels and document-to-category assignments",
+    "case cause, disposition, or verdict evidence"
+  ],
+  "next_anchor_id": "DOC4_A2",
+  "candidate_anchor_ids": [
+    "DOC4_A1",
+    "DOC4_A2",
+    "DOC4_A3",
+    "DOC4_A4"
+  ],
+  "ranked_anchor_ids": [
+    "DOC4_A1",
+    "DOC4_A2",
+    "DOC4_A3",
+    "DOC4_A4"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC4_A1",
+    "DOC4_A2",
+    "DOC4_A3",
+    "DOC4_A4"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC4_A1",
+      "score": 23.807,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.81"
+      ],
+      "summary": "介绍了案外人陈久玲及其委托诉讼代理人，申请执行人华融创新投资有限责任公司及其委托诉讼代理人，以及被执行人的详细信息。"
+    },
+    {
+      "anchor_id": "DOC4_A2",
+      "score": 23.401,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.40"
+      ],
+      "summary": "描述了华融创新投资有限责任公司与多个被执行人之间的金融借款合同纠纷案件，以及案外人陈久玲提出的书面异议请求。"
+    },
+    {
+      "anchor_id": "DOC4_A3",
+      "score": 23.114,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=1.11"
+      ],
+      "summary": "提供了关于“龙福佳园”项目的预售许可信息，龙天公司的在建工程抵押情况，以及陈久玲与龙天公司签订的《商品房买卖合同》和《商铺委托经营管理合同》的细节。"
+    },
+    {
+      "anchor_id": "DOC4_A4",
+      "score": 22.891,
+      "reasons": [
+        "query_overlap=1",
+        "anchor_type_prior=8",
+        "legal_cue",
+        "position_bonus=0.89"
+      ],
+      "summary": "法院认为案外人陈久玲对案涉房屋不享有足以排除强制执行的民事权益，驳回了其异议请求，并告知了不服裁定的处理方式。"
+    }
+  ],
+  "why_these_anchors": "Prepared iterative anchor search for 《判决文书4》. First coordinate candidate is DOC4_A2.",
+  "raw_plan_text": "<think>The current document does not seem to contain information that directly matches any of the six case categories specified in the question. However, since we have only seen the titles and summaries of the chunks, I will inspect DOC4_A2 next because it provides background information on the case, which may include details about the type of case or the specific legal issues involved.</think>\n<search>{\"current_query\":\"阅读以上判决文书，请按照'执行案由-先予执行' '适用特殊程序案件案由' '行政行为-行政征收' '产品责任纠纷' '行政行为-行政处罚' '人格权纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '行政行为-行政征收': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '人格权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\",\"must_find\":[\"category labels and document-to-category assignments\",\"case cause, disposition, or verdict evidence\"],\"next_anchor_id\":\"DOC4_A2\",\"candidate_anchor_ids\":[\"DOC4_A1\",\"DOC4_A2\",\"DOC4_A3\",\"DOC4_A4\"]}</search>",
+  "tagged_trace": "<think>The current document does not seem to contain information that directly matches any of the six case categories specified in the question. However, since we have only seen the titles and summaries of the chunks, I will inspect DOC4_A2 next because it provides background information on the case, which may include details about the type of case or the specific legal issues involved.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'执行案由-先予执行' '适用特殊程序案件案由' '行政行为-行政征收' '产品责任纠纷' '行政行为-行政处罚' '人格权纠纷'这6种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'执行案由-先予执行': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '行政行为-行政征收': ['《判决文书a》', '《判决文书b》'], '产品责任纠纷': ['《判决文书a》', '《判决文书b》'], '行政行为-行政处罚': ['《判决文书a》', '《判决文书b》'], '人格权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"candidate_anchor_ids\": [\"DOC4_A1\", \"DOC4_A2\", \"DOC4_A3\", \"DOC4_A4\"], \"next_anchor_id\": \"DOC4_A2\"}</search>"
+}

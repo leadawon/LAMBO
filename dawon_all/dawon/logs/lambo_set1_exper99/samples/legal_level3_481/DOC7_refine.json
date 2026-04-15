@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "selected_anchor_ids": [
+    "DOC7_A1"
+  ],
+  "final_current_query": "阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+  "rounds": [
+    {
+      "round_index": 1,
+      "search": {
+        "current_query": "阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：",
+        "must_find": [
+          "category labels and document-to-category assignments",
+          "case cause, disposition, or verdict evidence"
+        ],
+        "next_anchor_id": "DOC7_A1",
+        "candidate_anchor_ids": [
+          "DOC7_A1",
+          "DOC7_A2",
+          "DOC7_A3",
+          "DOC7_A4"
+        ]
+      },
+      "anchor_id": "DOC7_A1",
+      "plan_think": "The current document title is '《判决文书7》'. The first chunk summary indicates that it is a case involving a contract dispute between a plaintiff and a construction company. This suggests that the case may fall under the category of '民事案由-合同，无因管理，不当得利纠纷'. I will inspect the first chunk (DOC7_A1) to confirm if this is indeed a contract dispute case.",
+      "info": {
+        "anchor_id": "DOC7_A1",
+        "anchor_type": "paragraph_region",
+        "section_path": "当事人信息及案件背景",
+        "summary": "原告吴某波与被告江西昌某某建设集团有限公司之间的承包经营合同纠纷案件，于2022年7月5日在江西省南昌县人民法院立案。",
+        "text": "原告：吴某波，男，1974年6月19日出生，汉族，住广东省揭东县。\n\n被告：江西昌某某建设集团有限公司。住所地：江西省南昌市南昌县。\n\n法定代表人：聂某金。\n\n原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案，江西省南昌县人民法院于2022年7月5日立案。"
+      },
+      "extract_think": "The anchor chunk provides information about a case involving a contract dispute between plaintiff Wu and defendant Jiangxi Chang Construction Group Co., Ltd. This clearly falls under the category of '民事案由-合同，无因管理，不当得利纠纷'. No other categories are mentioned or implied in this chunk. The chunk is sufficient to classify this document based on the given categories.",
+      "retrieve": {
+        "items": [
+          {
+            "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+            "value": "《判决文书7》",
+            "normalized_value": "判决文书7",
+            "evidence_text": "原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案，江西省南昌县人民法院于2022年7月5日立案。",
+            "source_doc_id": "DOC7",
+            "source_anchor_id": "DOC7_A1",
+            "confidence": 1.0
+          }
+        ],
+        "enough": true,
+        "followup_query": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "answer_key": "民事案由-合同，无因管理，不当得利纠纷",
+      "value": "《判决文书7》",
+      "normalized_value": "判决文书7",
+      "evidence_text": "原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案，江西省南昌县人民法院于2022年7月5日立案。",
+      "source_doc_id": "DOC7",
+      "source_anchor_id": "DOC7_A1",
+      "confidence": 1.0
+    }
+  ],
+  "trace": {
+    "round_count": 1,
+    "tagged_trace": "<think>The current document title is '《判决文书7》'. The first chunk summary indicates that it is a case involving a contract dispute between a plaintiff and a construction company. This suggests that the case may fall under the category of '民事案由-合同，无因管理，不当得利纠纷'. I will inspect the first chunk (DOC7_A1) to confirm if this is indeed a contract dispute case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A1\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"原告吴某波与被告江西昌某某建设集团有限公司之间的承包经营合同纠纷案件，于2022年7月5日在江西省南昌县人民法院立案。\", \"text\": \"原告：吴某波，男，1974年6月19日出生，汉族，住广东省揭东县。\\n\\n被告：江西昌某某建设集团有限公司。住所地：江西省南昌市南昌县。\\n\\n法定代表人：聂某金。\\n\\n原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案，江西省南昌县人民法院于2022年7月5日立案。\"}</info>\n<think>The anchor chunk provides information about a case involving a contract dispute between plaintiff Wu and defendant Jiangxi Chang Construction Group Co., Ltd. This clearly falls under the category of '民事案由-合同，无因管理，不当得利纠纷'. No other categories are mentioned or implied in this chunk. The chunk is sufficient to classify this document based on the given categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案，江西省南昌县人民法院于2022年7月5日立案。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+  },
+  "tagged_trace": "<think>The current document title is '《判决文书7》'. The first chunk summary indicates that it is a case involving a contract dispute between a plaintiff and a construction company. This suggests that the case may fall under the category of '民事案由-合同，无因管理，不当得利纠纷'. I will inspect the first chunk (DOC7_A1) to confirm if this is indeed a contract dispute case.</think>\n<search>{\"current_query\": \"阅读以上判决文书，请按照'劳动争议，人事争议' '危害公共安全罪' '民事案由-合同，无因管理，不当得利纠纷' '适用特殊程序案件案由' '用益物权纠纷'这5种案由对以上所有判决文书进行分类，只需输出每一篇判决文书的标题即可。请按照如下格式进行作答，标题以实际提供的判决文书为准： {'劳动争议，人事争议': ['《判决文书a》', '《判决文书b》'], '危害公共安全罪': ['《判决文书a》', '《判决文书b》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书a》', '《判决文书b》'], '适用特殊程序案件案由': ['《判决文书a》', '《判决文书b》'], '用益物权纠纷': ['《判决文书a》', '《判决文书b》']} 你的答案是：\", \"must_find\": [\"category labels and document-to-category assignments\", \"case cause, disposition, or verdict evidence\"], \"next_anchor_id\": \"DOC7_A1\", \"candidate_anchor_ids\": [\"DOC7_A1\", \"DOC7_A2\", \"DOC7_A3\", \"DOC7_A4\"]}</search>\n<info>{\"anchor_id\": \"DOC7_A1\", \"anchor_type\": \"paragraph_region\", \"section_path\": \"当事人信息及案件背景\", \"summary\": \"原告吴某波与被告江西昌某某建设集团有限公司之间的承包经营合同纠纷案件，于2022年7月5日在江西省南昌县人民法院立案。\", \"text\": \"原告：吴某波，男，1974年6月19日出生，汉族，住广东省揭东县。\\n\\n被告：江西昌某某建设集团有限公司。住所地：江西省南昌市南昌县。\\n\\n法定代表人：聂某金。\\n\\n原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案，江西省南昌县人民法院于2022年7月5日立案。\"}</info>\n<think>The anchor chunk provides information about a case involving a contract dispute between plaintiff Wu and defendant Jiangxi Chang Construction Group Co., Ltd. This clearly falls under the category of '民事案由-合同，无因管理，不当得利纠纷'. No other categories are mentioned or implied in this chunk. The chunk is sufficient to classify this document based on the given categories.</think>\n<retrieve>{\"items\": [{\"answer_key\": \"民事案由-合同，无因管理，不当得利纠纷\", \"value\": \"《判决文书7》\", \"normalized_value\": \"判决文书7\", \"evidence_text\": \"原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案，江西省南昌县人民法院于2022年7月5日立案。\", \"source_doc_id\": \"DOC7\", \"source_anchor_id\": \"DOC7_A1\", \"confidence\": 1.0}], \"enough\": true, \"followup_query\": \"\"}</retrieve>"
+}
