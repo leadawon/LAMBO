@@ -1,0 +1,35 @@
+{
+  "plan_id": "unknown",
+  "query_focus": "洋河股份的使用权资产是多少？",
+  "output_shape": "string",
+  "search_objective": "查找洋河股份在财务报表中关于使用权资产的具体数额。",
+  "answer_objective": "提供洋河股份的使用权资产的数额，确保信息来源于财务报表。",
+  "focus_aspects": [
+    "company",
+    "asset_type",
+    "value"
+  ],
+  "closed_set_labels": [],
+  "structure_hints": [
+    "mapping"
+  ],
+  "structure_views": [
+    {
+      "view_type": "mapping",
+      "title": "使用权资产",
+      "fields": [
+        "company",
+        "asset_type",
+        "value",
+        "supporting_evidence_ids"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "提取洋河股份的使用权资产数额时，确保保留相关的上下文信息，如单位和具体描述。"
+  ],
+  "stop_checks": [
+    "至少在每个文档中打开一个锚点，且文档标题与洋河股份相关。"
+  ],
+  "raw_text": "{\n  \"query_focus\": \"洋河股份的使用权资产是多少？\",\n  \"output_shape\": \"string\",\n  \"search_objective\": \"查找洋河股份在财务报表中关于使用权资产的具体数额。\",\n  \"answer_objective\": \"提供洋河股份的使用权资产的数额，确保信息来源于财务报表。\",\n  \"focus_aspects\": [\"company\", \"asset_type\", \"value\"],\n  \"closed_set_labels\": [],\n  \"structure_hints\": [\"mapping\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"mapping\",\n      \"title\": \"使用权资产\",\n      \"fields\": [\"company\", \"asset_type\", \"value\", \"supporting_evidence_ids\"]\n    }\n  ],\n  \"span_guidelines\": [\"提取洋河股份的使用权资产数额时，确保保留相关的上下文信息，如单位和具体描述。\"],\n  \"stop_checks\": [\"至少在每个文档中打开一个锚点，且文档标题与洋河股份相关。\"]\n}"
+}

@@ -1,0 +1,56 @@
+Backend: openai
+
+==== sample financial_level1_914 (idx=914) ====
+  query plan -> output_shape=string | views=['mapping']
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='使用权资产|74,341,718.39|82,464,551.16'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> insufficient_evidence | rounds=1 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=7
+    -> insufficient_evidence | rounds=2 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | artifacts=1
+  -> answer: 74,341,718.39元
+
+==== sample legal_level1_725 (idx=725) ====
+  query plan -> output_shape=list | views=['list']
+  doc DOC1 '《判决文书1》' anchors=5
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=4
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=8
+    -> irrelevant_document | rounds=2 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=4
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=7
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=5
+    -> irrelevant_document | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | artifacts=1
+  -> answer: []
+
+==== sample financial_level2_1065 (idx=1065) ====
+  query plan -> output_shape=string | views=['ranking']
+  doc DOC1 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=6 | evidence='支付给职工以及为职工支付的现金|525,578,977.13|534,001,474.19'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=6 | evidence='支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64'
+  doc DOC3 '《2024年一季度报告》' anchors=5
+    -> evidence_found | rounds=3 | evidence='支付给职工以及为职工支付的现金|26,699,811.03|31,323,875.70'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | artifacts=1
+  -> answer: 楚天科技股份有限公司
+{
+  "prediction_path": "logs/lambo_v3_gpt4omini_smoke/lambo_predictions.jsonl",
+  "structured_summary": {
+    "sample_count": 3,
+    "exact_match_rate": 0,
+    "avg_pair_f1": null
+  },
+  "llm_judge_summary": {
+    "total": 3,
+    "scoring_success_rate": 1.0,
+    "avg_score": 66.66666666666667,
+    "perfect_count": 2,
+    "perfect_rate": 0.6666666666666666
+  },
+  "num_errors": 0
+}

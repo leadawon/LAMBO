@@ -1,0 +1,35 @@
+{
+  "plan_id": "unknown",
+  "query_focus": "找出案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。",
+  "output_shape": "string",
+  "search_objective": "寻找包含案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+  "answer_objective": "提供一个标题，该标题对应的判决文书中的案由为'侵犯公民人身权利,民主权利罪'。",
+  "focus_aspects": [
+    "判决文书标题",
+    "案由"
+  ],
+  "closed_set_labels": [],
+  "structure_hints": [
+    "mapping"
+  ],
+  "structure_views": [
+    {
+      "view_type": "mapping",
+      "title": "判决文书与案由",
+      "fields": [
+        "判决文书标题",
+        "案由",
+        "supporting_evidence_ids"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "提取包含案由为'侵犯公民人身权利,民主权利罪'的具体句子或段落。",
+    "确保提取的内容明确指出案由和对应的判决文书标题。"
+  ],
+  "stop_checks": [
+    "至少打开每个文档中的一个锚点。",
+    "如果找到一个满足条件的判决文书，则可以停止搜索其他文档。"
+  ],
+  "raw_text": "{\n  \"query_focus\": \"找出案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。\",\n  \"output_shape\": \"string\",\n  \"search_objective\": \"寻找包含案由为'侵犯公民人身权利,民主权利罪'的判决文书。\",\n  \"answer_objective\": \"提供一个标题，该标题对应的判决文书中的案由为'侵犯公民人身权利,民主权利罪'。\",\n  \"focus_aspects\": [\"判决文书标题\", \"案由\"],\n  \"closed_set_labels\": [],\n  \"structure_hints\": [\"mapping\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"mapping\",\n      \"title\": \"判决文书与案由\",\n      \"fields\": [\"判决文书标题\", \"案由\", \"supporting_evidence_ids\"]\n    }\n  ],\n  \"span_guidelines\": [\n    \"提取包含案由为'侵犯公民人身权利,民主权利罪'的具体句子或段落。\",\n    \"确保提取的内容明确指出案由和对应的判决文书标题。\"\n  ],\n  \"stop_checks\": [\n    \"至少打开每个文档中的一个锚点。\",\n    \"如果找到一个满足条件的判决文书，则可以停止搜索其他文档。\"\n  ]\n}"
+}

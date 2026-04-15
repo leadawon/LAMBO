@@ -1,0 +1,54 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "All anchors have been inspected.",
+  "doc_hypothesis": "该文档尚未提供案由为'行政行为-行政强制'的判决文书标题。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "李某某",
+    "乌鲁木齐市沙依巴克区人民政府"
+  ],
+  "opened_anchors": [
+    "DOC3_A1",
+    "DOC3_A2",
+    "DOC3_A3"
+  ],
+  "rounds_used": 3,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尽管相关性较低，但必须先打开一个锚点以确认文档内容。",
+      "extraction_summary": "此锚点提供了当事人信息，但未提及任何判决文书的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R2",
+      "action": "open",
+      "anchor_id": "DOC3_A2",
+      "anchor_title": "撤回上诉申请",
+      "planner_reason": "下一个最有可能包含相关案由信息的锚点是撤回上诉申请部分。",
+      "extraction_summary": "此锚点提供了关于上诉人撤回上诉申请的信息，但未提及任何判决文书的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R3",
+      "action": "open",
+      "anchor_id": "DOC3_A3",
+      "anchor_title": "裁定结果",
+      "planner_reason": "这是文档中剩余的唯一未打开的锚点，尽管可能性较低，但仍需确认是否包含所需信息。",
+      "extraction_summary": "此锚点提供了裁定结果，但未提及任何判决文书的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A1 | relevance=low | reason=尽管相关性较低，但必须先打开一个锚点以确认文档内容。\nextractor: 此锚点提供了当事人信息，但未提及任何判决文书的案由。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC3_A2 | relevance=low | reason=下一个最有可能包含相关案由信息的锚点是撤回上诉申请部分。\nextractor: 此锚点提供了关于上诉人撤回上诉申请的信息，但未提及任何判决文书的案由。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC3_A3 | relevance=low | reason=这是文档中剩余的唯一未打开的锚点，尽管可能性较低，但仍需确认是否包含所需信息。\nextractor: 此锚点提供了裁定结果，但未提及任何判决文书的案由。\nnew_spans: 0"
+}

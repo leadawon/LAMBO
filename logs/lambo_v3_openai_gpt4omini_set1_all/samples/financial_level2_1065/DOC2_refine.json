@@ -1,0 +1,89 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "This document likely contributes the specific payment amount made to employees by the company.",
+  "evidence": "支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64",
+  "gold_spans": [
+    {
+      "span_id": "DOC2_S1",
+      "anchor_id": "DOC2_A7",
+      "quote": "支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64",
+      "rationale": "This span provides the exact figure for payments made to employees, which is necessary to determine the highest amount among companies.",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "metric_label": "支付给职工以及为职工支付的现金",
+        "value": "185,767,359.47",
+        "unit": "元"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC2_E1",
+      "doc_id": "DOC2",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC2_A7",
+      "anchor_title": "合并利润表",
+      "quote": "支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "metric_label": "支付给职工以及为职工支付的现金",
+        "value": "185,767,359.47",
+        "unit": "元"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        9736,
+        13798
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "史丹利农业集团股份有限公司"
+  ],
+  "opened_anchors": [
+    "DOC2_A4",
+    "DOC2_A3",
+    "DOC2_A7"
+  ],
+  "rounds_used": 3,
+  "step_records": [
+    {
+      "step_id": "DOC2_R1",
+      "action": "open",
+      "anchor_id": "DOC2_A4",
+      "anchor_title": "现金流量表",
+      "planner_reason": "The cash flow statement is likely to contain the specific cash payments made to employees, which is essential for answering the question.",
+      "extraction_summary": "This anchor provides a cash flow statement but does not include specific figures for payments made to employees or cash paid on behalf of employees, which is necessary to answer the question.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R2",
+      "action": "open",
+      "anchor_id": "DOC2_A3",
+      "anchor_title": "主要财务数据",
+      "planner_reason": "Opening the '主要财务数据' anchor may provide additional financial figures that could include payments to employees.",
+      "extraction_summary": "This anchor provides various financial figures but does not include any specific data regarding payments made to employees or cash paid on behalf of employees.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R3",
+      "action": "open",
+      "anchor_id": "DOC2_A7",
+      "anchor_title": "合并利润表",
+      "planner_reason": "The profit statement may contain relevant information about employee payments that have not yet been explored.",
+      "extraction_summary": "This anchor provides a cash flow statement that includes the specific figure for payments made to employees, which is relevant to the question about which company has the highest payments to employees.",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC2_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC2_A4 | relevance=medium | reason=The cash flow statement is likely to contain the specific cash payments made to employees, which is essential for answering the question.\nextractor: This anchor provides a cash flow statement but does not include specific figures for payments made to employees or cash paid on behalf of employees, which is necessary to answer the question.\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC2_A3 | relevance=medium | reason=Opening the '主要财务数据' anchor may provide additional financial figures that could include payments to employees.\nextractor: This anchor provides various financial figures but does not include any specific data regarding payments made to employees or cash paid on behalf of employees.\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC2_A7 | relevance=medium | reason=The profit statement may contain relevant information about employee payments that have not yet been explored.\nextractor: This anchor provides a cash flow statement that includes the specific figure for payments made to employees, which is relevant to the question about which company has the highest payments to employees.\nnew_spans: 1"
+}

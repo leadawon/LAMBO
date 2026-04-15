@@ -1,0 +1,123 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "",
+  "doc_hypothesis": "此文档可能包含有关支付给职工以及为职工支付的现金的信息，但需要进一步查找。",
+  "evidence": "支付给职工以及为职工支付的现金|26,699,811.03|31,323,875.70",
+  "gold_spans": [
+    {
+      "span_id": "DOC3_S1",
+      "anchor_id": "DOC3_A9",
+      "quote": "支付给职工以及为职工支付的现金|26,699,811.03|31,323,875.70",
+      "rationale": "此段落提供了西安晨曦航空科技股份有限公司支付给职工以及为职工支付的现金的具体数值。",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "西安晨曦航空科技股份有限公司",
+        "cash_paid_to_employees": "26,699,811.03元",
+        "period": "本期"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC3_E1",
+      "doc_id": "DOC3",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC3_A9",
+      "anchor_title": "财务报表",
+      "quote": "支付给职工以及为职工支付的现金|26,699,811.03|31,323,875.70",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "西安晨曦航空科技股份有限公司",
+        "cash_paid_to_employees": "26,699,811.03元",
+        "period": "本期"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        8080,
+        14194
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "西安晨曦航空科技股份有限公司",
+    "中国建设银行股份有限公司－国泰中证军工交易型开放式指数证券投资基金"
+  ],
+  "opened_anchors": [
+    "DOC3_A9",
+    "DOC3_A3",
+    "DOC3_A4",
+    "DOC3_A5",
+    "DOC3_A6",
+    "DOC3_A7"
+  ],
+  "rounds_used": 6,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A9",
+      "anchor_title": "财务报表",
+      "planner_reason": "财务报表锚点最有可能包含支付给职工以及为职工支付的现金的具体数值。",
+      "extraction_summary": "此锚点提供了西安晨曦航空科技股份有限公司的财务报表，包括资产负债表、利润表和现金流量表，但未直接提到支付给职工以及为职工支付的现金的具体数值。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC3_S1"
+      ]
+    },
+    {
+      "step_id": "DOC3_R2",
+      "action": "open",
+      "anchor_id": "DOC3_A3",
+      "anchor_title": "主要财务数据",
+      "planner_reason": "主要财务数据锚点可能包含支付给职工以及为职工支付的现金的具体数值。",
+      "extraction_summary": "此锚点提供了主要财务数据和财务指标变动的原因分析，但未直接提到支付给职工以及为职工支付的现金的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R3",
+      "action": "open",
+      "anchor_id": "DOC3_A4",
+      "anchor_title": "现金流量变动",
+      "planner_reason": "现金流量变动部分可能包含支付给职工以及为职工支付的现金的相关信息。",
+      "extraction_summary": "此锚点提供了现金流量变动的详细表格，但未直接提到支付给职工以及为职工支付的现金的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R4",
+      "action": "open",
+      "anchor_id": "DOC3_A5",
+      "anchor_title": "股东持股情况",
+      "planner_reason": "尽管股东持股情况可能不直接包含所需信息，但作为财务报告的一部分，仍需检查是否有间接提及或相关注释。",
+      "extraction_summary": "此锚点提供了股东持股情况的信息，但未直接提到支付给职工以及为职工支付的现金的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R5",
+      "action": "open",
+      "anchor_id": "DOC3_A6",
+      "anchor_title": "融资融券业务",
+      "planner_reason": "财务报表可能包含支付给职工以及为职工支付的现金的具体数值。",
+      "extraction_summary": "此锚点提供了关于融资融券业务和转融通业务出借股份情况的信息，但未直接提到支付给职工以及为职工支付的现金的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R6",
+      "action": "open",
+      "anchor_id": "DOC3_A7",
+      "anchor_title": "优先股股东情况",
+      "planner_reason": "财务报表锚点可能包含支付给职工以及为职工支付的现金的具体数值。",
+      "extraction_summary": "此锚点提供了其他重要事项的信息，但未直接提到支付给职工以及为职工支付的现金的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A9 | relevance=medium | reason=财务报表锚点最有可能包含支付给职工以及为职工支付的现金的具体数值。\nextractor: 此锚点提供了西安晨曦航空科技股份有限公司的财务报表，包括资产负债表、利润表和现金流量表，但未直接提到支付给职工以及为职工支付的现金的具体数值。\nnew_spans: 1\n--- Round 2 ---\nplanner: open DOC3_A3 | relevance=medium | reason=主要财务数据锚点可能包含支付给职工以及为职工支付的现金的具体数值。\nextractor: 此锚点提供了主要财务数据和财务指标变动的原因分析，但未直接提到支付给职工以及为职工支付的现金的具体数值。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC3_A4 | relevance=medium | reason=现金流量变动部分可能包含支付给职工以及为职工支付的现金的相关信息。\nextractor: 此锚点提供了现金流量变动的详细表格，但未直接提到支付给职工以及为职工支付的现金的具体数值。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC3_A5 | relevance=medium | reason=尽管股东持股情况可能不直接包含所需信息，但作为财务报告的一部分，仍需检查是否有间接提及或相关注释。\nextractor: 此锚点提供了股东持股情况的信息，但未直接提到支付给职工以及为职工支付的现金的具体数值。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC3_A6 | relevance=medium | reason=财务报表可能包含支付给职工以及为职工支付的现金的具体数值。\nextractor: 此锚点提供了关于融资融券业务和转融通业务出借股份情况的信息，但未直接提到支付给职工以及为职工支付的现金的具体数值。\nnew_spans: 0\n--- Round 6 ---\nplanner: open DOC3_A7 | relevance=medium | reason=财务报表锚点可能包含支付给职工以及为职工支付的现金的具体数值。\nextractor: 此锚点提供了其他重要事项的信息，但未直接提到支付给职工以及为职工支付的现金的具体数值。\nnew_spans: 0"
+}

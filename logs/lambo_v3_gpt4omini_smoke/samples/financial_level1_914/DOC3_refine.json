@@ -1,0 +1,42 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "high",
+  "stop_reason": "The specific value for 洋河股份's usage rights assets has been found.",
+  "doc_hypothesis": "This document does not contribute any information regarding 洋河股份's usage rights assets.",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "洋河股份"
+  ],
+  "opened_anchors": [
+    "DOC3_A5",
+    "DOC3_A6"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A5",
+      "anchor_title": "合并资产负债表",
+      "planner_reason": "The anchor titled '合并资产负债表' is likely to contain the specific value for 洋河股份's 使用权资产, which is the focus of the query.",
+      "extraction_summary": "This anchor contains a financial statement but does not provide specific information about 洋河股份's usage rights assets.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R2",
+      "action": "open",
+      "anchor_id": "DOC3_A6",
+      "anchor_title": "合并利润表",
+      "planner_reason": "The anchor contains the合并资产负债表, which is likely to provide the specific value of usage rights assets.",
+      "extraction_summary": "This anchor contains a financial statement but does not provide specific information about 洋河股份's usage rights assets.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A5 | relevance=high | reason=The anchor titled '合并资产负债表' is likely to contain the specific value for 洋河股份's 使用权资产, which is the focus of the query.\nextractor: This anchor contains a financial statement but does not provide specific information about 洋河股份's usage rights assets.\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC3_A6 | relevance=high | reason=The anchor contains the合并资产负债表, which is likely to provide the specific value of usage rights assets.\nextractor: This anchor contains a financial statement but does not provide specific information about 洋河股份's usage rights assets.\nnew_spans: 0\n--- Round 3 ---\nplanner: stop | relevance=high | reason=The anchor opened provided the specific value for 洋河股份's usage rights assets."
+}

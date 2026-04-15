@@ -1,0 +1,42 @@
+{
+  "plan_id": "200_000_000.00",
+  "query_focus": "对公司财报中的'预付款项'进行分类，分为高预付款、中预付款、低预付款和负预付款。",
+  "output_shape": "dict",
+  "search_objective": "查找每个文档中关于'预付款项'的具体数值。",
+  "answer_objective": "将每个文档中的'预付款项'数值归类到高预付款、中预付款、低预付款或负预付款类别中。",
+  "focus_aspects": [
+    "company_report",
+    "prepayment_amount",
+    "category"
+  ],
+  "closed_set_labels": [
+    "高预付款",
+    "中预付款",
+    "低预付款",
+    "负预付款"
+  ],
+  "structure_hints": [
+    "grouping"
+  ],
+  "structure_views": [
+    {
+      "view_type": "grouping",
+      "title": "预付款项分类",
+      "fields": [
+        "company_report",
+        "prepayment_amount",
+        "category",
+        "supporting_evidence_ids"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "提取每个文档中'预付款项'的具体数值，并确保数值的单位和方向正确。",
+    "确保提取的数值与文档中的上下文一致，以避免混淆。"
+  ],
+  "stop_checks": [
+    "在每个文档中至少打开一个锚点之前，不得停止。",
+    "如果已经找到所有文档中'预付款项'的具体数值，则可以停止进一步搜索。"
+  ],
+  "raw_text": "```json\n{\n  \"query_focus\": \"对公司财报中的'预付款项'进行分类，分为高预付款、中预付款、低预付款和负预付款。\",\n  \"output_shape\": \"dict\",\n  \"search_objective\": \"查找每个文档中关于'预付款项'的具体数值。\",\n  \"answer_objective\": \"将每个文档中的'预付款项'数值归类到高预付款、中预付款、低预付款或负预付款类别中。\",\n  \"focus_aspects\": [\"company_report\", \"prepayment_amount\", \"category\"],\n  \"closed_set_labels\": [\"高预付款\", \"中预付款\", \"低预付款\", \"负预付款\"],\n  \"structure_hints\": [\"grouping\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"grouping\",\n      \"title\": \"预付款项分类\",\n      \"fields\": [\"company_report\", \"prepayment_amount\", \"category\", \"supporting_evidence_ids\"]\n    }\n  ],\n  \"span_guidelines\": [\n    \"提取每个文档中'预付款项'的具体数值，并确保数值的单位和方向正确。\",\n    \"确保提取的数值与文档中的上下文一致，以避免混淆。\"\n  ],\n  \"stop_checks\": [\n    \"在每个文档中至少打开一个锚点之前，不得停止。\",\n    \"如果已经找到所有文档中'预付款项'的具体数值，则可以停止进一步搜索。\"\n  ]\n}\n```"
+}

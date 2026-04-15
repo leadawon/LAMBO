@@ -1,0 +1,115 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "已满足计划中的停止检查条件，即已打开多个锚点且未找到新的预付款项数值。",
+  "doc_hypothesis": "此文档可能包含其他锚点中的预付款项数值，需要继续检查其他锚点。",
+  "evidence": "|预付款项|62,606,303.29|50,971,870.03|",
+  "gold_spans": [
+    {
+      "span_id": "DOC1_S1",
+      "anchor_id": "DOC1_A4",
+      "quote": "|预付款项|62,606,303.29|50,971,870.03|",
+      "rationale": "该段落提供了预付款项的具体数值，可用于分类。",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company_report": "合并资产负债表",
+        "prepayment_amount": "62,606,303.29",
+        "category": "低预付款"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC1_E1",
+      "doc_id": "DOC1",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC1_A4",
+      "anchor_title": "合并资产负债表",
+      "quote": "|预付款项|62,606,303.29|50,971,870.03|",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company_report": "合并资产负债表",
+        "prepayment_amount": "62,606,303.29",
+        "category": "低预付款"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        5143,
+        7851
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "张联东",
+    "尹秋明",
+    "赵其科",
+    "洋河股份",
+    "江苏洋河酒厂股份有限公司"
+  ],
+  "opened_anchors": [
+    "DOC1_A4",
+    "DOC1_A5",
+    "DOC1_A2",
+    "DOC1_A1",
+    "DOC1_A6"
+  ],
+  "rounds_used": 5,
+  "step_records": [
+    {
+      "step_id": "DOC1_R1",
+      "action": "open",
+      "anchor_id": "DOC1_A4",
+      "anchor_title": "合并资产负债表",
+      "planner_reason": "合并资产负债表可能包含有关预付款项的具体数值。",
+      "extraction_summary": "该锚点提供了合并资产负债表中的财务数据，包括预付款项的具体数值。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC1_S1"
+      ]
+    },
+    {
+      "step_id": "DOC1_R2",
+      "action": "open",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "合并利润表",
+      "planner_reason": "合并利润表可能包含更多关于预付款项的细节或相关财务数据。",
+      "extraction_summary": "该锚点提供了合并利润表中的财务数据，但未包含预付款项的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R3",
+      "action": "open",
+      "anchor_id": "DOC1_A2",
+      "anchor_title": "主要财务数据变动",
+      "planner_reason": "此锚点可能包含预付款项的具体数值及其变动原因，有助于完成分类任务。",
+      "extraction_summary": "此锚点提供了主要财务数据变动情况及原因，但未提及预付款项的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R4",
+      "action": "open",
+      "anchor_id": "DOC1_A1",
+      "anchor_title": "披露声明",
+      "planner_reason": "尽管已找到预付款项的具体数值，但需要继续检查以确保没有遗漏相关信息。",
+      "extraction_summary": "此锚点提供了季度报告的重要财务数据，但未提及预付款项的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R5",
+      "action": "open",
+      "anchor_id": "DOC1_A6",
+      "anchor_title": "合并现金流量表",
+      "planner_reason": "剩余未打开的锚点中，合并现金流量表可能包含预付款项的相关信息。",
+      "extraction_summary": "该锚点提供了合并现金流量表中的财务数据，但未包含预付款项的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC1_A4 | relevance=medium | reason=合并资产负债表可能包含有关预付款项的具体数值。\nextractor: 该锚点提供了合并资产负债表中的财务数据，包括预付款项的具体数值。\nnew_spans: 1\n--- Round 2 ---\nplanner: open DOC1_A5 | relevance=high | reason=合并利润表可能包含更多关于预付款项的细节或相关财务数据。\nextractor: 该锚点提供了合并利润表中的财务数据，但未包含预付款项的具体数值。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC1_A2 | relevance=high | reason=此锚点可能包含预付款项的具体数值及其变动原因，有助于完成分类任务。\nextractor: 此锚点提供了主要财务数据变动情况及原因，但未提及预付款项的具体数值。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC1_A1 | relevance=high | reason=尽管已找到预付款项的具体数值，但需要继续检查以确保没有遗漏相关信息。\nextractor: 此锚点提供了季度报告的重要财务数据，但未提及预付款项的具体数值。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC1_A6 | relevance=medium | reason=剩余未打开的锚点中，合并现金流量表可能包含预付款项的相关信息。\nextractor: 该锚点提供了合并现金流量表中的财务数据，但未包含预付款项的具体数值。\nnew_spans: 0\n--- Round 6 ---\nplanner: stop | relevance=medium | reason=已检查多个相关锚点，但未发现预付款项的具体数值。"
+}

@@ -1,0 +1,69 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "high",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "This document likely contributes the value of the right-of-use assets for the company in question.",
+  "evidence": "使用权资产|249,120,154.43|255,853,131.59",
+  "gold_spans": [
+    {
+      "span_id": "DOC3_S1",
+      "anchor_id": "DOC3_A5",
+      "quote": "使用权资产|249,120,154.43|255,853,131.59",
+      "rationale": "This span directly states the value of the right-of-use assets for the company, which is the information requested in the question.",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "洋河股份",
+        "asset_type": "使用权资产",
+        "value": "249,120,154.43",
+        "unit": "元"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC3_E1",
+      "doc_id": "DOC3",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC3_A5",
+      "anchor_title": "资产负债表变动情况",
+      "quote": "使用权资产|249,120,154.43|255,853,131.59",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "洋河股份",
+        "asset_type": "使用权资产",
+        "value": "249,120,154.43",
+        "unit": "元"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        3460,
+        8200
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "洋河股份"
+  ],
+  "opened_anchors": [
+    "DOC3_A5"
+  ],
+  "rounds_used": 1,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A5",
+      "anchor_title": "资产负债表变动情况",
+      "planner_reason": "The anchor titled '资产负债表变动情况' specifically mentions '使用权资产', which is directly relevant to the question about 洋河股份's usage rights asset.",
+      "extraction_summary": "The anchor provides information about the financial statement of a company, specifically detailing the value of the right-of-use assets for a specific period.",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC3_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A5 | relevance=high | reason=The anchor titled '资产负债表变动情况' specifically mentions '使用权资产', which is directly relevant to the question about 洋河股份's usage rights asset.\nextractor: The anchor provides information about the financial statement of a company, specifically detailing the value of the right-of-use assets for a specific period.\nnew_spans: 1"
+}

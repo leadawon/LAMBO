@@ -1,0 +1,177 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "此判决文书涉及'执行案由-先予执行'类型的案件。",
+  "evidence": "2020年10月26日，王某1向新疆生产建设兵团伊宁垦区人民法院申请先予执行，要求先行给付后续医疗费用30万元。\n\n依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。\n\n本案中，一审法院作为执行案件的执行依据为（2020）兵0402民初433号先予执行的民事裁定书",
+  "gold_spans": [
+    {
+      "span_id": "DOC1_S1",
+      "anchor_id": "DOC1_A3",
+      "quote": "2020年10月26日，王某1向新疆生产建设兵团伊宁垦区人民法院申请先予执行，要求先行给付后续医疗费用30万元。",
+      "rationale": "这段文字明确提到了先予执行的申请。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "《（2020）兵0402民初433号民事裁定书》"
+      },
+      "confidence": 1.0
+    },
+    {
+      "span_id": "DOC1_S2",
+      "anchor_id": "DOC1_A4",
+      "quote": "依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。",
+      "rationale": "此句明确提到了先予执行的行为。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "复议申请内容"
+      },
+      "confidence": 1.0
+    },
+    {
+      "span_id": "DOC1_S3",
+      "anchor_id": "DOC1_A5",
+      "quote": "本案中，一审法院作为执行案件的执行依据为（2020）兵0402民初433号先予执行的民事裁定书",
+      "rationale": "这段文字提到了先予执行的民事裁定书，表明了案件的执行案由。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "法院复议意见"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC1_E1",
+      "doc_id": "DOC1",
+      "doc_title": "《判决文书1》",
+      "anchor_id": "DOC1_A3",
+      "anchor_title": "先予执行裁定情况",
+      "quote": "2020年10月26日，王某1向新疆生产建设兵团伊宁垦区人民法院申请先予执行，要求先行给付后续医疗费用30万元。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "《（2020）兵0402民初433号民事裁定书》"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        314,
+        1523
+      ]
+    },
+    {
+      "evidence_id": "DOC1_E2",
+      "doc_id": "DOC1",
+      "doc_title": "《判决文书1》",
+      "anchor_id": "DOC1_A4",
+      "anchor_title": "复议申请内容",
+      "quote": "依法裁定不予执行新疆生产建设兵团伊宁垦区人民法院（2020）兵0402执258号民事裁定所确定先予执行行为。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "复议申请内容"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        1524,
+        2258
+      ]
+    },
+    {
+      "evidence_id": "DOC1_E3",
+      "doc_id": "DOC1",
+      "doc_title": "《判决文书1》",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "法院复议意见",
+      "quote": "本案中，一审法院作为执行案件的执行依据为（2020）兵0402民初433号先予执行的民事裁定书",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "法院复议意见"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        2259,
+        3440
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "新疆生产建设兵团伊宁垦区人民法院",
+    "王某1",
+    "新疆生产建设兵团第四师广播电视台",
+    "胡秀",
+    "新疆生产建设兵团第四师融媒体中心"
+  ],
+  "opened_anchors": [
+    "DOC1_A3",
+    "DOC1_A2",
+    "DOC1_A4",
+    "DOC1_A1",
+    "DOC1_A5"
+  ],
+  "rounds_used": 5,
+  "step_records": [
+    {
+      "step_id": "DOC1_R1",
+      "action": "open",
+      "anchor_id": "DOC1_A3",
+      "anchor_title": "先予执行裁定情况",
+      "planner_reason": "此锚点标题和摘要表明它可能包含关于'执行案由-先予执行'的信息。",
+      "extraction_summary": "此段文字主要描述了一起涉及先予执行裁定的案件详情，其中包含了关于先予执行的具体信息。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC1_S1"
+      ]
+    },
+    {
+      "step_id": "DOC1_R2",
+      "action": "open",
+      "anchor_id": "DOC1_A2",
+      "anchor_title": "复议申请背景",
+      "planner_reason": "此锚点可能包含更多关于复议申请背景的信息，有助于确认是否存在其他案由类型。",
+      "extraction_summary": "此段文字主要描述了复议申请人的复议申请背景，未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R3",
+      "action": "open",
+      "anchor_id": "DOC1_A4",
+      "anchor_title": "复议申请内容",
+      "planner_reason": "复议申请内容可能包含更多关于案由的信息。",
+      "extraction_summary": "此段文字主要描述了复议申请人对多个裁定的异议，特别是针对先予执行裁定的程序合法性提出质疑。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC1_S2"
+      ]
+    },
+    {
+      "step_id": "DOC1_R4",
+      "action": "open",
+      "anchor_id": "DOC1_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尚未检查当事人的信息部分，可能存在其他案由类型的线索。",
+      "extraction_summary": "此段文字主要提供了当事人的基本信息，未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R5",
+      "action": "open",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "法院复议意见",
+      "planner_reason": "此段文字可能包含法院对案件的最终复议意见，有助于确认是否存在其他案由。",
+      "extraction_summary": "此段文字主要讨论了复议申请人对先予执行裁定和其他相关裁定的异议，以及法院对此的复议意见。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC1_S3"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC1_A3 | relevance=medium | reason=此锚点标题和摘要表明它可能包含关于'执行案由-先予执行'的信息。\nextractor: 此段文字主要描述了一起涉及先予执行裁定的案件详情，其中包含了关于先予执行的具体信息。\nnew_spans: 1\n--- Round 2 ---\nplanner: open DOC1_A2 | relevance=high | reason=此锚点可能包含更多关于复议申请背景的信息，有助于确认是否存在其他案由类型。\nextractor: 此段文字主要描述了复议申请人的复议申请背景，未提及具体的案由类型。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC1_A4 | relevance=high | reason=复议申请内容可能包含更多关于案由的信息。\nextractor: 此段文字主要描述了复议申请人对多个裁定的异议，特别是针对先予执行裁定的程序合法性提出质疑。\nnew_spans: 1\n--- Round 4 ---\nplanner: open DOC1_A1 | relevance=high | reason=尚未检查当事人的信息部分，可能存在其他案由类型的线索。\nextractor: 此段文字主要提供了当事人的基本信息，未提及具体的案由类型。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC1_A5 | relevance=medium | reason=此段文字可能包含法院对案件的最终复议意见，有助于确认是否存在其他案由。\nextractor: 此段文字主要讨论了复议申请人对先予执行裁定和其他相关裁定的异议，以及法院对此的复议意见。\nnew_spans: 1"
+}

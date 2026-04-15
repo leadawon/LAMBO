@@ -1,0 +1,46 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "该文档不符合搜索条件，无需继续搜索。",
+  "doc_hypothesis": "该文档未提供关于'行政行为-行政强制'案由的判决文书标题。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "大连银行股份有限公司北京分行",
+    "华融中盛资产管理有限公司",
+    "龙天公司",
+    "华融创新",
+    "陈久玲"
+  ],
+  "opened_anchors": [
+    "DOC2_A5",
+    "DOC2_A6"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC2_R1",
+      "action": "open",
+      "anchor_id": "DOC2_A5",
+      "anchor_title": "案件事实",
+      "planner_reason": "案件事实部分可能包含具体的案由信息，有助于判断是否符合要求。",
+      "extraction_summary": "此段文字描述了案件的事实经过，涉及贷款合同、债权转让、调解协议以及执行过程，但没有提到任何关于'行政行为-行政强制'的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R2",
+      "action": "open",
+      "anchor_id": "DOC2_A6",
+      "anchor_title": "法院裁定",
+      "planner_reason": "法院裁定部分可能包含具体的案由信息，需要进一步确认是否涉及'行政行为-行政强制'。",
+      "extraction_summary": "此段文字描述了法院对于案外人对被执行不动产主张权利的裁定，未提及'行政行为-行政强制'的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC2_A5 | relevance=medium | reason=案件事实部分可能包含具体的案由信息，有助于判断是否符合要求。\nextractor: 此段文字描述了案件的事实经过，涉及贷款合同、债权转让、调解协议以及执行过程，但没有提到任何关于'行政行为-行政强制'的案由。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC2_A6 | relevance=low | reason=法院裁定部分可能包含具体的案由信息，需要进一步确认是否涉及'行政行为-行政强制'。\nextractor: 此段文字描述了法院对于案外人对被执行不动产主张权利的裁定，未提及'行政行为-行政强制'的案由。\nnew_spans: 0\n--- Round 3 ---\nplanner: stop | relevance=low | reason=已打开多个锚点，未发现与'行政行为-行政强制'相关的案由。"
+}

@@ -1,0 +1,88 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "",
+  "doc_hypothesis": "此文档可能不包含关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题的信息。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "某某农资公司",
+    "某某房产公司",
+    "某某肥业公司"
+  ],
+  "opened_anchors": [
+    "DOC1_A1",
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4",
+    "DOC1_A5",
+    "DOC1_A6"
+  ],
+  "rounds_used": 6,
+  "step_records": [
+    {
+      "step_id": "DOC1_R1",
+      "action": "open",
+      "anchor_id": "DOC1_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尽管看起来不太相关，但仍需打开第一个锚点以确认文档内容。",
+      "extraction_summary": "此锚点提供了当事人信息，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R2",
+      "action": "open",
+      "anchor_id": "DOC1_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "尽管目前看来文档可能不相关，但仍需继续检查以确认是否包含所需的信息。",
+      "extraction_summary": "此锚点提供了案件背景信息，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R3",
+      "action": "open",
+      "anchor_id": "DOC1_A3",
+      "anchor_title": "上诉请求",
+      "planner_reason": "继续查找可能包含所需案由的判决文书标题的信息。",
+      "extraction_summary": "此锚点提供了上诉请求和事实理由，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。",
+      "status": "enough",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R4",
+      "action": "open",
+      "anchor_id": "DOC1_A4",
+      "anchor_title": "答辩意见",
+      "planner_reason": "继续查找可能包含相关案由的锚点。",
+      "extraction_summary": "此锚点提供了某某房产公司的答辩意见，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R5",
+      "action": "open",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "一审诉求",
+      "planner_reason": "继续查找可能包含所需案由的判决文书标题的信息。",
+      "extraction_summary": "此锚点提供了某某农资公司的一审诉求，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R6",
+      "action": "open",
+      "anchor_id": "DOC1_A6",
+      "anchor_title": "一审事实",
+      "planner_reason": "继续查找可能包含所需案由的相关信息。",
+      "extraction_summary": "此锚点提供了关于《以房抵债协议》的详细内容，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC1_A1 | relevance=low | reason=尽管看起来不太相关，但仍需打开第一个锚点以确认文档内容。\nextractor: 此锚点提供了当事人信息，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC1_A2 | relevance=low | reason=尽管目前看来文档可能不相关，但仍需继续检查以确认是否包含所需的信息。\nextractor: 此锚点提供了案件背景信息，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC1_A3 | relevance=low | reason=继续查找可能包含所需案由的判决文书标题的信息。\nextractor: 此锚点提供了上诉请求和事实理由，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC1_A4 | relevance=low | reason=继续查找可能包含相关案由的锚点。\nextractor: 此锚点提供了某某房产公司的答辩意见，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC1_A5 | relevance=low | reason=继续查找可能包含所需案由的判决文书标题的信息。\nextractor: 此锚点提供了某某农资公司的一审诉求，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。\nnew_spans: 0\n--- Round 6 ---\nplanner: open DOC1_A6 | relevance=low | reason=继续查找可能包含所需案由的相关信息。\nextractor: 此锚点提供了关于《以房抵债协议》的详细内容，但未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书标题。\nnew_spans: 0"
+}

@@ -1,0 +1,69 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "low",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "该文档提供了洋河股份的使用权资产金额，有助于回答问题。",
+  "evidence": "|使用权资产|2,298,773.64|2,783,395.84|",
+  "gold_spans": [
+    {
+      "span_id": "DOC2_S1",
+      "anchor_id": "DOC2_A4",
+      "quote": "|使用权资产|2,298,773.64|2,783,395.84|",
+      "rationale": "此行包含了洋河股份的使用权资产金额。",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "公司名称": "洋河股份",
+        "使用权资产": "2,298,773.64",
+        "金额": "2,298,773.64",
+        "unit": "元"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC2_E1",
+      "doc_id": "DOC2",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC2_A4",
+      "anchor_title": "财务报表",
+      "quote": "|使用权资产|2,298,773.64|2,783,395.84|",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "公司名称": "洋河股份",
+        "使用权资产": "2,298,773.64",
+        "金额": "2,298,773.64",
+        "unit": "元"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        6167,
+        8730
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "洋河股份"
+  ],
+  "opened_anchors": [
+    "DOC2_A4"
+  ],
+  "rounds_used": 1,
+  "step_records": [
+    {
+      "step_id": "DOC2_R1",
+      "action": "open",
+      "anchor_id": "DOC2_A4",
+      "anchor_title": "财务报表",
+      "planner_reason": "财务报表可能包含使用权资产的相关信息。",
+      "extraction_summary": "该财务报表包含了洋河股份的使用权资产金额。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC2_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC2_A4 | relevance=low | reason=财务报表可能包含使用权资产的相关信息。\nextractor: 该财务报表包含了洋河股份的使用权资产金额。\nnew_spans: 1"
+}

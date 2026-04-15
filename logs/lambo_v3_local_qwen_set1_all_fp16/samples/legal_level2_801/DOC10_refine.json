@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC10",
+  "doc_title": "《判决文书10》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "All anchors have been inspected.",
+  "doc_hypothesis": "该文档可能不包含案由为'行政行为-行政强制'的判决文书标题。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "谢某某",
+    "巴楚县农业农村局",
+    "巴楚县农村合作经济发展中心",
+    "新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会"
+  ],
+  "opened_anchors": [
+    "DOC10_A1",
+    "DOC10_A2"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC10_R1",
+      "action": "open",
+      "anchor_id": "DOC10_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尽管预览未显示相关信息，但必须打开一个锚点以确认文档是否包含所需证据。",
+      "extraction_summary": "此锚点提供了当事人信息，但未提及任何判决文书及其案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC10_R2",
+      "action": "open",
+      "anchor_id": "DOC10_A2",
+      "anchor_title": "撤回再审申请",
+      "planner_reason": "继续检查剩余的锚点以寻找可能包含案由为'行政行为-行政强制'的判决文书标题的信息。",
+      "extraction_summary": "此锚点提供了关于撤回再审申请的信息，但未提及任何判决文书及其案由。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC10_A1 | relevance=low | reason=尽管预览未显示相关信息，但必须打开一个锚点以确认文档是否包含所需证据。\nextractor: 此锚点提供了当事人信息，但未提及任何判决文书及其案由。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC10_A2 | relevance=low | reason=继续检查剩余的锚点以寻找可能包含案由为'行政行为-行政强制'的判决文书标题的信息。\nextractor: 此锚点提供了关于撤回再审申请的信息，但未提及任何判决文书及其案由。\nnew_spans: 0"
+}

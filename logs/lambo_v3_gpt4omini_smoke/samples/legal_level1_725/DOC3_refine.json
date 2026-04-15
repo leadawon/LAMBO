@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "irrelevant_document",
+  "doc_relevance": "irrelevant",
+  "stop_reason": "The document has been assessed as irrelevant after opening.",
+  "doc_hypothesis": "This document does not contribute to identifying any judgment related to the specified case.",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "温州市某房地产开发有限公司",
+    "浙江某置业有限公司",
+    "温州市某经贸有限公司",
+    "严某"
+  ],
+  "opened_anchors": [
+    "DOC3_A1",
+    "DOC3_A5"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A1",
+      "anchor_title": "案件基本信息",
+      "planner_reason": "Opening the basic case information may provide context to determine if this document relates to the specified case.",
+      "extraction_summary": "This anchor provides basic information about the parties involved in a case but does not mention any specific judgment related to the infringement of citizens' personal rights and democratic rights.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R2",
+      "action": "open",
+      "anchor_id": "DOC3_A5",
+      "anchor_title": "一审判决结果",
+      "planner_reason": "Opening the first instance judgment result may provide insights into the legal conclusions drawn in this case, which could relate to the question.",
+      "extraction_summary": "This anchor discusses a court's decision regarding a company's dissolution request but does not mention the case of 'infringement of citizens' personal rights and democratic rights'.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A1 | relevance=low | reason=Opening the basic case information may provide context to determine if this document relates to the specified case.\nextractor: This anchor provides basic information about the parties involved in a case but does not mention any specific judgment related to the infringement of citizens' personal rights and democratic rights.\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC3_A5 | relevance=low | reason=Opening the first instance judgment result may provide insights into the legal conclusions drawn in this case, which could relate to the question.\nextractor: This anchor discusses a court's decision regarding a company's dissolution request but does not mention the case of 'infringement of citizens' personal rights and democratic rights'.\nnew_spans: 0\n--- Round 3 ---\nplanner: stop | relevance=irrelevant | reason=No relevant information regarding the specified case was found in the document."
+}

@@ -1,0 +1,156 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "",
+  "doc_hypothesis": "此文档可能包含有关执行案由的信息，但需要进一步分析才能确定具体的案由类型。",
+  "evidence": "2013年10月30日，修武农商行某支行申请对借款人和包括担保人赵某某、崔某某在内的7个担保人进行强制执行，修武法院依法以（2013）修执字第635号为案号进行执行。\n\n2023年7月7日，修武法院依据（2023）豫0821执恢281号之一执行裁定书对赵某某、崔某某的账户采取强制执行措施，对此赵某某、崔某某向修武法院提起执行异议。",
+  "gold_spans": [
+    {
+      "span_id": "DOC4_S1",
+      "anchor_id": "DOC4_A3",
+      "quote": "2013年10月30日，修武农商行某支行申请对借款人和包括担保人赵某某、崔某某在内的7个担保人进行强制执行，修武法院依法以（2013）修执字第635号为案号进行执行。",
+      "rationale": "这段文字提到了强制执行的案由。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "行政行为-行政强制",
+        "document_title": "案件背景"
+      },
+      "confidence": 1.0
+    },
+    {
+      "span_id": "DOC4_S2",
+      "anchor_id": "DOC4_A3",
+      "quote": "2023年7月7日，修武法院依据（2023）豫0821执恢281号之一执行裁定书对赵某某、崔某某的账户采取强制执行措施，对此赵某某、崔某某向修武法院提起执行异议。",
+      "rationale": "这段文字也提到了强制执行的案由。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "案件背景"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC4_E1",
+      "doc_id": "DOC4",
+      "doc_title": "《判决文书4》",
+      "anchor_id": "DOC4_A3",
+      "anchor_title": "案件背景",
+      "quote": "2013年10月30日，修武农商行某支行申请对借款人和包括担保人赵某某、崔某某在内的7个担保人进行强制执行，修武法院依法以（2013）修执字第635号为案号进行执行。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "行政行为-行政强制",
+        "document_title": "案件背景"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        255,
+        845
+      ]
+    },
+    {
+      "evidence_id": "DOC4_E2",
+      "doc_id": "DOC4",
+      "doc_title": "《判决文书4》",
+      "anchor_id": "DOC4_A3",
+      "anchor_title": "案件背景",
+      "quote": "2023年7月7日，修武法院依据（2023）豫0821执恢281号之一执行裁定书对赵某某、崔某某的账户采取强制执行措施，对此赵某某、崔某某向修武法院提起执行异议。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "案件背景"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        255,
+        845
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "修武法院",
+    "修武农商行某支行",
+    "河南省修武县人民法院",
+    "赵某某",
+    "崔某某",
+    "河南某某商业银行股份有限公司某支行"
+  ],
+  "opened_anchors": [
+    "DOC4_A3",
+    "DOC4_A2",
+    "DOC4_A7",
+    "DOC4_A8",
+    "DOC4_A1",
+    "DOC4_A4"
+  ],
+  "rounds_used": 6,
+  "step_records": [
+    {
+      "step_id": "DOC4_R1",
+      "action": "open",
+      "anchor_id": "DOC4_A3",
+      "anchor_title": "案件背景",
+      "planner_reason": "案件背景部分可能包含有关案由的具体信息，有助于确定文档所属的案由类别。",
+      "extraction_summary": "此段文字主要描述了案件背景，涉及执行案由-先予执行和行政行为-行政强制。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC4_S1",
+        "DOC4_S2"
+      ]
+    },
+    {
+      "step_id": "DOC4_R2",
+      "action": "open",
+      "anchor_id": "DOC4_A2",
+      "anchor_title": "案件受理与审查",
+      "planner_reason": "此锚点可能提供更多关于案件受理和审查的信息，有助于确认是否存在其他指定案由。",
+      "extraction_summary": "此段文字主要描述了案件受理与审查的过程，未明确提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC4_R3",
+      "action": "open",
+      "anchor_id": "DOC4_A7",
+      "anchor_title": "法律规定",
+      "planner_reason": "法律规定部分可能包含具体的案由类型，有助于进一步确认文书的案由分类。",
+      "extraction_summary": "此段文字主要引用了法律规定，未明确提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC4_R4",
+      "action": "open",
+      "anchor_id": "DOC4_A8",
+      "anchor_title": "法院认定",
+      "planner_reason": "法院认定部分可能明确提及具体的案由类型，有助于完成分类任务。",
+      "extraction_summary": "此段文字主要描述了债权人修武农商行某支行申请执行公证债权文书的过程及相关争议，未明确提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC4_R5",
+      "action": "open",
+      "anchor_id": "DOC4_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "当事人信息部分可能会提供有关案由类型的线索。",
+      "extraction_summary": "此段文字主要提供了当事人的基本信息，未明确提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC4_R6",
+      "action": "open",
+      "anchor_id": "DOC4_A4",
+      "anchor_title": "执行证书金额问题",
+      "planner_reason": "此锚点可能包含有关执行证书金额问题的具体细节，有助于判断案由类型。",
+      "extraction_summary": "此段文字主要讨论了执行证书金额问题及相关的法律程序，未明确提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC4_A3 | relevance=medium | reason=案件背景部分可能包含有关案由的具体信息，有助于确定文档所属的案由类别。\nextractor: 此段文字主要描述了案件背景，涉及执行案由-先予执行和行政行为-行政强制。\nnew_spans: 2\n--- Round 2 ---\nplanner: open DOC4_A2 | relevance=high | reason=此锚点可能提供更多关于案件受理和审查的信息，有助于确认是否存在其他指定案由。\nextractor: 此段文字主要描述了案件受理与审查的过程，未明确提及具体的案由类型。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC4_A7 | relevance=high | reason=法律规定部分可能包含具体的案由类型，有助于进一步确认文书的案由分类。\nextractor: 此段文字主要引用了法律规定，未明确提及具体的案由类型。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC4_A8 | relevance=high | reason=法院认定部分可能明确提及具体的案由类型，有助于完成分类任务。\nextractor: 此段文字主要描述了债权人修武农商行某支行申请执行公证债权文书的过程及相关争议，未明确提及具体的案由类型。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC4_A1 | relevance=medium | reason=当事人信息部分可能会提供有关案由类型的线索。\nextractor: 此段文字主要提供了当事人的基本信息，未明确提及具体的案由类型。\nnew_spans: 0\n--- Round 6 ---\nplanner: open DOC4_A4 | relevance=medium | reason=此锚点可能包含有关执行证书金额问题的具体细节，有助于判断案由类型。\nextractor: 此段文字主要讨论了执行证书金额问题及相关的法律程序，未明确提及具体的案由类型。\nnew_spans: 0"
+}

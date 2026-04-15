@@ -1,0 +1,89 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "high",
+  "stop_reason": "已满足搜索目标，找到所需数值。",
+  "doc_hypothesis": "此文档可能包含其他财务数据，但尚未找到关于'支付给职工以及为职工支付的现金'的具体数值。",
+  "evidence": "支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64",
+  "gold_spans": [
+    {
+      "span_id": "DOC2_S1",
+      "anchor_id": "DOC2_A8",
+      "quote": "支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64",
+      "rationale": "此段落直接提到了支付给职工以及为职工支付的现金的具体数值。",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "史丹利农业集团股份有限公司",
+        "cash_paid_to_employees": "185,767,359.47元",
+        "period": "本期"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC2_E1",
+      "doc_id": "DOC2",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC2_A8",
+      "anchor_title": "合并现金流量表",
+      "quote": "支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "史丹利农业集团股份有限公司",
+        "cash_paid_to_employees": "185,767,359.47元",
+        "period": "本期"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        11656,
+        13798
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "史丹利农业集团股份有限公司"
+  ],
+  "opened_anchors": [
+    "DOC2_A8",
+    "DOC2_A3",
+    "DOC2_A2"
+  ],
+  "rounds_used": 3,
+  "step_records": [
+    {
+      "step_id": "DOC2_R1",
+      "action": "open",
+      "anchor_id": "DOC2_A8",
+      "anchor_title": "合并现金流量表",
+      "planner_reason": "合并现金流量表可能包含经营活动产生的现金流量，其中包括支付给职工以及为职工支付的现金。",
+      "extraction_summary": "此锚点提供了合井现金流量表中的详细数据，包括支付给职工以及为职工支付的现金的具体数值。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC2_S1"
+      ]
+    },
+    {
+      "step_id": "DOC2_R2",
+      "action": "open",
+      "anchor_id": "DOC2_A3",
+      "anchor_title": "现金流量变动",
+      "planner_reason": "现金流量变动部分可能包含更多关于支付给职工以及为职工支付的现金的相关信息。",
+      "extraction_summary": "此锚点未提供关于'支付给职工以及为职工支付的现金'的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R3",
+      "action": "open",
+      "anchor_id": "DOC2_A2",
+      "anchor_title": "主要财务数据",
+      "planner_reason": "主要财务数据可能包含更多关于支付给职工以及为职工支付的现金的相关信息。",
+      "extraction_summary": "此锚点未提供关于'支付给职工以及为职工支付的现金'的具体数值。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC2_A8 | relevance=high | reason=合并现金流量表可能包含经营活动产生的现金流量，其中包括支付给职工以及为职工支付的现金。\nextractor: 此锚点提供了合井现金流量表中的详细数据，包括支付给职工以及为职工支付的现金的具体数值。\nnew_spans: 1\n--- Round 2 ---\nplanner: open DOC2_A3 | relevance=high | reason=现金流量变动部分可能包含更多关于支付给职工以及为职工支付的现金的相关信息。\nextractor: 此锚点未提供关于'支付给职工以及为职工支付的现金'的具体数值。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC2_A2 | relevance=high | reason=主要财务数据可能包含更多关于支付给职工以及为职工支付的现金的相关信息。\nextractor: 此锚点未提供关于'支付给职工以及为职工支付的现金'的具体数值。\nnew_spans: 0\n--- Round 4 ---\nplanner: stop | relevance=high | reason=已经找到了支付给职工以及为职工支付的现金的具体数值。"
+}

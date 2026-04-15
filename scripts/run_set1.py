@@ -18,12 +18,12 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from lambo.agents.anchor_agent import AnchorAgent
-from lambo.agents.doc_refine_agent import DocRefineAgent
-from lambo.agents.global_composer import GlobalComposer
-from lambo.agents.generator import Generator
-from lambo.backend import get_default_client
-from lambo.common import (
+from lambo_v2.agents.anchor_agent import AnchorAgent
+from lambo_v2.agents.doc_refine_agent import DocRefineAgent
+from lambo_v2.agents.global_composer import GlobalComposer
+from lambo_v2.agents.generator import Generator
+from lambo_v2.backend import get_default_client
+from lambo_v2.common import (
     current_query_from_record,
     ensure_dir,
     instruction_from_record,
@@ -32,9 +32,9 @@ from lambo.common import (
     write_json,
     write_jsonl,
 )
-from lambo.eval.structured_eval import evaluate_predictions
-from lambo.eval.llm_judge import run_llm_judge
-from lambo.manifest import build_set1_manifest, load_records, save_manifest
+from lambo_v2.eval.structured_eval import evaluate_predictions
+from lambo_v2.eval.llm_judge import run_llm_judge
+from lambo_v2.manifest import build_set1_manifest, load_records, save_manifest
 
 
 DEFAULT_INPUT_PATH = PROJECT_ROOT / "reference" / "Loong" / "data" / "loong_process.jsonl"
@@ -46,14 +46,20 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--input_path", type=str, default=str(DEFAULT_INPUT_PATH))
     parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--max_items", type=int, default=None)
+    parser.add_argument(
+        "--selected_indices",
+        type=str,
+        default="",
+        help="Comma-separated selected_index values for targeted experiments.",
+    )
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--max_refine_rounds", type=int, default=6)
     parser.add_argument(
         "--backend",
         type=str,
         default="local",
-        choices=["local", "gemini"],
-        help="LLM backend: 'local' for Qwen2.5-32B local, 'gemini' for Google Gemini API",
+        choices=["local", "gemini", "openai"],
+        help="LLM backend: 'local' for Qwen2.5-32B, 'gemini' for Gemini API, 'openai' for OpenAI API",
     )
     return parser.parse_args()
 
@@ -78,6 +84,8 @@ def main() -> None:
         output_dir = Path(args.output_dir)
     elif args.backend == "gemini":
         output_dir = PROJECT_ROOT / "logs" / "lambo_v2_set1_10_gemini"
+    elif args.backend == "openai":
+        output_dir = PROJECT_ROOT / "logs" / "lambo_v2_set1_10_openai"
     else:
         output_dir = DEFAULT_OUTPUT_DIR
 
@@ -85,6 +93,13 @@ def main() -> None:
 
     records = load_records(input_path)
     manifest = build_set1_manifest(records)
+    if args.selected_indices.strip():
+        wanted = {
+            int(part.strip())
+            for part in args.selected_indices.split(",")
+            if part.strip()
+        }
+        manifest = [item for item in manifest if item.selected_index in wanted]
     if args.max_items is not None:
         manifest = manifest[: args.max_items]
     save_manifest(manifest, layout["root"] / "manifest.json")
@@ -123,7 +138,7 @@ def main() -> None:
                 record=record, sample_dir=sample_dir, force=args.force,
             )
 
-            # Stage 2: DocRefineAgent per document
+            # Stage 2: DocRefineAgent per document (single think→search→info loop)
             doc_sheets: List[Dict[str, Any]] = []
             for doc_payload in anchor_payload["docs"]:
                 print(
@@ -131,21 +146,20 @@ def main() -> None:
                     f"anchors={doc_payload['anchor_count']}",
                     flush=True,
                 )
-                # Dynamic max_rounds: no more rounds than anchors, capped by user arg
+                # Dynamic max_rounds: anchor_count rounds to open + 1 synthesis round to stop+answer
                 doc_refine_agent.max_rounds = min(
                     args.max_refine_rounds,
-                    max(1, doc_payload["anchor_count"]),
+                    max(1, doc_payload["anchor_count"] + 1),
                 )
                 sheet = doc_refine_agent.run(
                     question=question,
                     instruction=instruction,
-                    record=record,
                     doc_payload=doc_payload,
                     sample_dir=sample_dir,
                     force=args.force,
                 )
                 doc_sheets.append(sheet)
-                evidence_preview = sheet.get("evidence", "")[:80]
+                evidence_preview = (sheet.get("evidence", "") or "")[:80]
                 print(
                     f"    -> {sheet['scan_result']} "
                     f"| rounds={sheet.get('rounds_used',0)} "
@@ -153,17 +167,19 @@ def main() -> None:
                     flush=True,
                 )
 
-            # Stage 3: Global Composer
+            # Stage 3: Global Composer (also sees anchor-level entity candidates to
+            # build a faithful projection_map when refined evidence lacks entity names)
             composed = composer.run(
                 question=question,
                 instruction=instruction,
                 doc_sheets=doc_sheets,
+                anchor_docs=anchor_payload["docs"],
                 sample_dir=sample_dir,
                 force=args.force,
             )
             print(
                 f"  composer -> projection_map keys={list(composed.get('projection_map',{}).keys())} "
-                f"| records={len(composed.get('records',[]))}",
+                f"| records={len(composed.get('records', []))}",
                 flush=True,
             )
 
@@ -177,7 +193,7 @@ def main() -> None:
             )
             final_answer = gen_out["final_answer"]
 
-            keep = ("id", "type", "level", "question", "instruction", "answer", "answer_topology")
+            keep = ("id", "type", "level", "question", "instruction", "answer")
             pred_row = {k: record.get(k) for k in keep if k in record}
             pred_row["selected_index"] = item.selected_index
             pred_row["sample_id"] = item.sample_id

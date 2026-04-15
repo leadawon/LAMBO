@@ -1,0 +1,42 @@
+Backend: openai
+
+==== sample financial_level1_914 (idx=914) ====
+  query plan -> output_shape=string | views=['list']
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='使用权资产|74,341,718.39|82,464,551.16'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> insufficient_evidence | rounds=1 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='使用权资产|249,120,154.43|255,853,131.59'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | artifacts=1
+  -> answer: 74,341,718.39 元; 249,120,154.43 元
+
+==== sample legal_level1_725 (idx=725) ====
+  query plan -> output_shape=list | views=['list']
+  doc DOC1 '《判决文书1》' anchors=5
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=4
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=7
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=4
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=8
+    -> irrelevant_document | rounds=1 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=6
+    -> irrelevant_document | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | artifacts=1
+  -> answer: []
+
+==== sample financial_level2_1065 (idx=1065) ====
+  query plan -> output_shape=string | views=['ranking']
+  doc DOC1 '《2024年一季度报告》' anchors=8
+    -> insufficient_evidence | rounds=2 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=3 | evidence='支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64'
+  doc DOC3 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=3 | evidence='应付职工薪酬|14,113,965.09|27,233,116.29'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | artifacts=1
+  -> answer: 史丹利农业集团股份有限公司
+
+==== sample legal_level2_801 (idx=801) ====

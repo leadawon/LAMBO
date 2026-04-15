@@ -1,0 +1,47 @@
+Backend: local
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/17 [00:35<?, ?it/s]
+Traceback (most recent call last):
+  File "/workspace/lambo/scripts/run_set1.py", line 277, in <module>
+    main()
+  File "/workspace/lambo/scripts/run_set1.py", line 109, in main
+    llm = get_default_client(backend=args.backend)
+  File "/workspace/lambo/lambo/backend.py", line 371, in get_default_client
+    client = QwenLocalClient()
+  File "/workspace/lambo/lambo/backend.py", line 51, in __init__
+    self.backend = LocalTransformersBackend(self.config)
+  File "/workspace/meta-cognitive-RAG/src/meta_cognitive_rag/local_backend.py", line 89, in __init__
+    self.model = AutoModelForCausalLM.from_pretrained(**model_kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 5468, in _load_pretrained_model
+    _error_msgs, disk_offload_index = load_shard_file(args)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 843, in load_shard_file
+    disk_offload_index = _load_state_dict_into_meta_model(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 774, in _load_state_dict_into_meta_model
+    hf_quantizer.create_quantized_param(model, param, param_name, param_device)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/transformers/quantizers/quantizer_bnb_4bit.py", line 233, in create_quantized_param
+    new_value = bnb.nn.Params4bit(new_value, requires_grad=False, **kwargs).to(target_device)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 345, in to
+    return self._quantize(device)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/bitsandbytes/nn/modules.py", line 300, in _quantize
+    w_4bit, quant_state = bnb.functional.quantize_4bit(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/bitsandbytes/functional.py", line 924, in quantize_4bit
+    _out, _absmax = torch.ops.bitsandbytes.quantize_4bit.default(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/torch/_ops.py", line 819, in __call__
+    return self._op(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/torch/_compile.py", line 54, in inner
+    return disable_fn(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py", line 1181, in _fn
+    return fn(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/torch/library.py", line 742, in func_no_dynamo
+    return func(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py", line 323, in _
+    out = torch.empty(((n + 1) // (quant_storage.itemsize * 2), 1), device=A.device, dtype=quant_storage)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 68.00 MiB. GPU 0 has a total capacity of 23.69 GiB of which 50.94 MiB is free. Process 1028599 has 21.40 GiB memory in use. Process 1073763 has 2.22 GiB memory in use. Of the allocated memory 1.86 GiB is allocated by PyTorch, and 73.76 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

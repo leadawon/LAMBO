@@ -1,0 +1,55 @@
+{
+  "doc_id": "DOC8",
+  "doc_title": "《判决文书8》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "All anchors have been inspected.",
+  "doc_hypothesis": "此判决文书可能涉及行政行为相关的案由，但需要进一步查看其他部分以确认具体案由。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "彰武县某合作社",
+    "彰武县东六家子镇人民政府",
+    "彰武县人民政府"
+  ],
+  "opened_anchors": [
+    "DOC8_A2",
+    "DOC8_A3",
+    "DOC8_A1"
+  ],
+  "rounds_used": 3,
+  "step_records": [
+    {
+      "step_id": "DOC8_R1",
+      "action": "open",
+      "anchor_id": "DOC8_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "案件背景部分可能包含具体的案由类型，有助于判断文档所属类别。",
+      "extraction_summary": "此段文字描述了再审申请人彰武县某合作社因行政决定及行政复议案件向法院申请再审的情况，但未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC8_R2",
+      "action": "open",
+      "anchor_id": "DOC8_A3",
+      "anchor_title": "法院裁定",
+      "planner_reason": "法院裁定部分可能包含具体的案由类型。",
+      "extraction_summary": "此段文字描述了法院准许再审申请人彰武县某合作社撤回再审申请的裁定，但未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC8_R3",
+      "action": "open",
+      "anchor_id": "DOC8_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尽管已打开的锚点未提及具体的案由类型，但仍需检查剩余的锚点以确认文档是否相关。",
+      "extraction_summary": "此段文字提供了当事人的基本信息，但未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC8_A2 | relevance=medium | reason=案件背景部分可能包含具体的案由类型，有助于判断文档所属类别。\nextractor: 此段文字描述了再审申请人彰武县某合作社因行政决定及行政复议案件向法院申请再审的情况，但未提及具体的案由类型。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC8_A3 | relevance=medium | reason=法院裁定部分可能包含具体的案由类型。\nextractor: 此段文字描述了法院准许再审申请人彰武县某合作社撤回再审申请的裁定，但未提及具体的案由类型。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC8_A1 | relevance=low | reason=尽管已打开的锚点未提及具体的案由类型，但仍需检查剩余的锚点以确认文档是否相关。\nextractor: 此段文字提供了当事人的基本信息，但未提及具体的案由类型。\nnew_spans: 0"
+}

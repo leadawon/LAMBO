@@ -1,0 +1,90 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "",
+  "doc_hypothesis": "此文档可能包含有关赵某交通事故的相关信息，但尚未发现符合条件的判决文书标题。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "赵某",
+    "某保险公司",
+    "某运输公司",
+    "中华海城公司",
+    "付某顺"
+  ],
+  "opened_anchors": [
+    "DOC1_A2",
+    "DOC1_A3",
+    "DOC1_A4",
+    "DOC1_A5",
+    "DOC1_A6",
+    "DOC1_A7"
+  ],
+  "rounds_used": 6,
+  "step_records": [
+    {
+      "step_id": "DOC1_R1",
+      "action": "open",
+      "anchor_id": "DOC1_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "选择案件背景部分以确认是否有涉及'行政行为-行政强制'的信息。",
+      "extraction_summary": "该锚文本描述了案件背景，但没有提到任何具体的判决文书标题或案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R2",
+      "action": "open",
+      "anchor_id": "DOC1_A3",
+      "anchor_title": "赵某上诉请求",
+      "planner_reason": "继续查找可能包含相关案由的信息。",
+      "extraction_summary": "该锚文本描述了赵某的上诉请求及其理由，但没有提到任何具体的判决文书标题或案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R3",
+      "action": "open",
+      "anchor_id": "DOC1_A4",
+      "anchor_title": "某保险公司上诉请求",
+      "planner_reason": "继续查找可能包含相关案由信息的锚点。",
+      "extraction_summary": "该锚文本描述了某保险公司的上诉请求及其理由，但没有提到任何具体的判决文书标题或案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R4",
+      "action": "open",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "赵某一审请求",
+      "planner_reason": "继续查找可能包含相关案由信息的锚点。",
+      "extraction_summary": "该锚文本描述了赵某的一审请求，但没有提到任何具体的判决文书标题或案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R5",
+      "action": "open",
+      "anchor_id": "DOC1_A6",
+      "anchor_title": "一审法院认定事实",
+      "planner_reason": "一审法院认定事实部分可能包含有关案由的信息。",
+      "extraction_summary": "此锚文本描述了一起交通事故及相关的医疗和司法鉴定情况，未提及任何判决文书的标题或案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R6",
+      "action": "open",
+      "anchor_id": "DOC1_A7",
+      "anchor_title": "误工证明",
+      "planner_reason": "继续查找可能包含所需信息的锚点。",
+      "extraction_summary": "此锚文本提供了赵某的误工证明，但没有提到任何判决文书的标题或案由。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC1_A2 | relevance=low | reason=选择案件背景部分以确认是否有涉及'行政行为-行政强制'的信息。\nextractor: 该锚文本描述了案件背景，但没有提到任何具体的判决文书标题或案由。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC1_A3 | relevance=low | reason=继续查找可能包含相关案由的信息。\nextractor: 该锚文本描述了赵某的上诉请求及其理由，但没有提到任何具体的判决文书标题或案由。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC1_A4 | relevance=low | reason=继续查找可能包含相关案由信息的锚点。\nextractor: 该锚文本描述了某保险公司的上诉请求及其理由，但没有提到任何具体的判决文书标题或案由。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC1_A5 | relevance=low | reason=继续查找可能包含相关案由信息的锚点。\nextractor: 该锚文本描述了赵某的一审请求，但没有提到任何具体的判决文书标题或案由。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC1_A6 | relevance=low | reason=一审法院认定事实部分可能包含有关案由的信息。\nextractor: 此锚文本描述了一起交通事故及相关的医疗和司法鉴定情况，未提及任何判决文书的标题或案由。\nnew_spans: 0\n--- Round 6 ---\nplanner: open DOC1_A7 | relevance=low | reason=继续查找可能包含所需信息的锚点。\nextractor: 此锚文本提供了赵某的误工证明，但没有提到任何判决文书的标题或案由。\nnew_spans: 0"
+}

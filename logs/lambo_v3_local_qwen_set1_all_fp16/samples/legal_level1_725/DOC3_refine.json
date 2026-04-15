@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "此文档不包含所需的案由信息，继续搜索无意义。",
+  "doc_hypothesis": "此文档可能不包含案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "温州市某房地产开发有限公司",
+    "浙江某置业有限公司",
+    "温州市某经贸有限公司",
+    "严某"
+  ],
+  "opened_anchors": [
+    "DOC3_A7",
+    "DOC3_A1"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A7",
+      "anchor_title": "一审判决",
+      "planner_reason": "选择打开一审判决部分，以确认是否存在相关的案由信息。",
+      "extraction_summary": "此锚文本讨论了一起关于公司解散的案件，没有涉及案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R2",
+      "action": "open",
+      "anchor_id": "DOC3_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尽管目前看来不太相关，但仍需进一步确认文档内容，以确保没有遗漏相关信息。",
+      "extraction_summary": "此锚文本提供了当事人的基本信息，未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A7 | relevance=low | reason=选择打开一审判决部分，以确认是否存在相关的案由信息。\nextractor: 此锚文本讨论了一起关于公司解散的案件，没有涉及案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC3_A1 | relevance=low | reason=尽管目前看来不太相关，但仍需进一步确认文档内容，以确保没有遗漏相关信息。\nextractor: 此锚文本提供了当事人的基本信息，未提及任何关于案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0\n--- Round 3 ---\nplanner: stop | relevance=low | reason=已打开两个锚点，均未发现与案由为'侵犯公民人身权利,民主权利罪'相关的判决文书。"
+}

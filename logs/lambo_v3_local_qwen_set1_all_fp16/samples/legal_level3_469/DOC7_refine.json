@@ -1,0 +1,111 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "high",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "此判决文书涉及物权保护纠纷，可能属于物权保护纠纷类别。",
+  "evidence": "上诉人xxx越秀区教育局（以下简称越秀区教育局）、上诉人方x荣因与被上诉人方x坚、吴x隆物权保护纠纷一案\n\n上诉人xxx越秀区教育局（以下简称越秀区教育局）、上诉人方x荣因与被上诉人方x坚、吴x隆物权保护纠纷一案",
+  "gold_spans": [
+    {
+      "span_id": "DOC7_S1",
+      "anchor_id": "DOC7_A2",
+      "quote": "上诉人xxx越秀区教育局（以下简称越秀区教育局）、上诉人方x荣因与被上诉人方x坚、吴x隆物权保护纠纷一案",
+      "rationale": "这段文字明确提到了物权保护纠纷的案由。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "物权保护纠纷",
+        "document_title": "未提供具体标题"
+      },
+      "confidence": 1.0
+    },
+    {
+      "span_id": "DOC7_S2",
+      "anchor_id": "DOC7_A3",
+      "quote": "上诉人xxx越秀区教育局（以下简称越秀区教育局）、上诉人方x荣因与被上诉人方x坚、吴x隆物权保护纠纷一案",
+      "rationale": "此句明确了案件涉及物权保护纠纷。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "物权保护纠纷",
+        "document_title": "《越秀区教育局上诉请求》"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC7_E1",
+      "doc_id": "DOC7",
+      "doc_title": "《判决文书7》",
+      "anchor_id": "DOC7_A2",
+      "anchor_title": "案件背景",
+      "quote": "上诉人xxx越秀区教育局（以下简称越秀区教育局）、上诉人方x荣因与被上诉人方x坚、吴x隆物权保护纠纷一案",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "物权保护纠纷",
+        "document_title": "未提供具体标题"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        214,
+        356
+      ]
+    },
+    {
+      "evidence_id": "DOC7_E2",
+      "doc_id": "DOC7",
+      "doc_title": "《判决文书7》",
+      "anchor_id": "DOC7_A3",
+      "anchor_title": "越秀区教育局上诉请求",
+      "quote": "上诉人xxx越秀区教育局（以下简称越秀区教育局）、上诉人方x荣因与被上诉人方x坚、吴x隆物权保护纠纷一案",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "物权保护纠纷",
+        "document_title": "《越秀区教育局上诉请求》"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        357,
+        1074
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "越秀区教育局",
+    "方x荣",
+    "方x坚",
+    "吴x隆"
+  ],
+  "opened_anchors": [
+    "DOC7_A2",
+    "DOC7_A3"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC7_R1",
+      "action": "open",
+      "anchor_id": "DOC7_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "案件背景部分可能包含关于案由的具体描述。",
+      "extraction_summary": "此段文字描述了一个涉及物权保护纠纷的案件背景。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC7_S1"
+      ]
+    },
+    {
+      "step_id": "DOC7_R2",
+      "action": "open",
+      "anchor_id": "DOC7_A3",
+      "anchor_title": "越秀区教育局上诉请求",
+      "planner_reason": "继续查找更多关于物权保护纠纷的信息以及是否有其他相关案由。",
+      "extraction_summary": "此段文字描述了越秀区教育局的上诉请求，涉及物权保护纠纷。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC7_S2"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC7_A2 | relevance=medium | reason=案件背景部分可能包含关于案由的具体描述。\nextractor: 此段文字描述了一个涉及物权保护纠纷的案件背景。\nnew_spans: 1\n--- Round 2 ---\nplanner: open DOC7_A3 | relevance=high | reason=继续查找更多关于物权保护纠纷的信息以及是否有其他相关案由。\nextractor: 此段文字描述了越秀区教育局的上诉请求，涉及物权保护纠纷。\nnew_spans: 1"
+}

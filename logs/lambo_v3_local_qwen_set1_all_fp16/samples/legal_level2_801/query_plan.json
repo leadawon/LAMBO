@@ -1,0 +1,34 @@
+{
+  "plan_id": "-",
+  "query_focus": "哪些判决文书的案由是'行政行为-行政强制'?",
+  "output_shape": "list",
+  "search_objective": "寻找案由为'行政行为-行政强制'的判决文书标题。",
+  "answer_objective": "提供所有案由为'行政行为-行政强制'的判决文书标题列表。",
+  "focus_aspects": [
+    "title",
+    "case_reason"
+  ],
+  "closed_set_labels": [],
+  "structure_hints": [
+    "list"
+  ],
+  "structure_views": [
+    {
+      "view_type": "list",
+      "title": "符合条件的判决文书",
+      "fields": [
+        "title",
+        "supporting_evidence_ids"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "提取每个判决文书的标题和案由信息。",
+    "确保提取的案由信息准确无误，特别是'行政行为-行政强制'这一特定案由。"
+  ],
+  "stop_checks": [
+    "至少打开一个文档中的锚点。",
+    "如果已经找到所有符合条件的判决文书，则可以停止进一步搜索。"
+  ],
+  "raw_text": "{\n  \"query_focus\": \"哪些判决文书的案由是'行政行为-行政强制'?\",\n  \"output_shape\": \"list\",\n  \"search_objective\": \"寻找案由为'行政行为-行政强制'的判决文书标题。\",\n  \"answer_objective\": \"提供所有案由为'行政行为-行政强制'的判决文书标题列表。\",\n  \"focus_aspects\": [\"title\", \"case_reason\"],\n  \"closed_set_labels\": [],\n  \"structure_hints\": [\"list\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"list\",\n      \"title\": \"符合条件的判决文书\",\n      \"fields\": [\"title\", \"supporting_evidence_ids\"]\n    }\n  ],\n  \"span_guidelines\": [\n    \"提取每个判决文书的标题和案由信息。\",\n    \"确保提取的案由信息准确无误，特别是'行政行为-行政强制'这一特定案由。\"\n  ],\n  \"stop_checks\": [\n    \"至少打开一个文档中的锚点。\",\n    \"如果已经找到所有符合条件的判决文书，则可以停止进一步搜索。\"\n  ]\n}"
+}

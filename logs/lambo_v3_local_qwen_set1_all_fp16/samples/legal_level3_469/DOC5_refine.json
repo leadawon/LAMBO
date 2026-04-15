@@ -1,0 +1,68 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "该判决文书属于'物权保护纠纷'类别，因为它涉及甲与A公司之间关于车辆返还的争议。",
+  "evidence": "上诉人甲因与被上诉人A公司（以下简称A公司）、原审被告B公司（以下简称B公司）、乙返还原物纠纷一案",
+  "gold_spans": [
+    {
+      "span_id": "DOC5_S1",
+      "anchor_id": "DOC5_A2",
+      "quote": "上诉人甲因与被上诉人A公司（以下简称A公司）、原审被告B公司（以下简称B公司）、乙返还原物纠纷一案",
+      "rationale": "该段落明确指出了案件的性质为返还原物纠纷。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "物权保护纠纷",
+        "document_title": "案件背景"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC5_E1",
+      "doc_id": "DOC5",
+      "doc_title": "《判决文书5》",
+      "anchor_id": "DOC5_A2",
+      "anchor_title": "案件背景",
+      "quote": "上诉人甲因与被上诉人A公司（以下简称A公司）、原审被告B公司（以下简称B公司）、乙返还原物纠纷一案",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "物权保护纠纷",
+        "document_title": "案件背景"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        47,
+        1210
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "甲",
+    "A公司",
+    "B公司",
+    "乙"
+  ],
+  "opened_anchors": [
+    "DOC5_A2"
+  ],
+  "rounds_used": 1,
+  "step_records": [
+    {
+      "step_id": "DOC5_R1",
+      "action": "open",
+      "anchor_id": "DOC5_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "案件背景部分可能会明确提到案件的具体案由类型。",
+      "extraction_summary": "该锚点描述了一起返还原物纠纷案件的背景和上诉请求，涉及甲与A公司之间的争议。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC5_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC5_A2 | relevance=medium | reason=案件背景部分可能会明确提到案件的具体案由类型。\nextractor: 该锚点描述了一起返还原物纠纷案件的背景和上诉请求，涉及甲与A公司之间的争议。\nnew_spans: 1"
+}

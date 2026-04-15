@@ -1,0 +1,78 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《2022年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "当前文档仅包含2022年一季度的净利润数据，无法提供2023年一季度和2024年一季度的净利润增长率数据。",
+  "doc_hypothesis": "需要进一步查找2023年一季度和2024年一季度的净利润增长率数据。",
+  "evidence": "归属于母公司所有者的净利润|114,675,694.25|61,648,968.09",
+  "gold_spans": [
+    {
+      "span_id": "DOC1_S1",
+      "anchor_id": "DOC1_A5",
+      "quote": "归属于母公司所有者的净利润|114,675,694.25|61,648,968.09",
+      "rationale": "该段落提供了2022年一季度的净利润数据。",
+      "evidence_type": "financial_data",
+      "fields": {
+        "quarter": "2022年一季度",
+        "metric_label": "净利润",
+        "value": "114,675,694.25"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC1_E1",
+      "doc_id": "DOC1",
+      "doc_title": "《2022年一季度报告》",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "财务报表",
+      "quote": "归属于母公司所有者的净利润|114,675,694.25|61,648,968.09",
+      "evidence_type": "financial_data",
+      "fields": {
+        "quarter": "2022年一季度",
+        "metric_label": "净利润",
+        "value": "114,675,694.25"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        6283,
+        13064
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "东阿阿胶股份有限公司"
+  ],
+  "opened_anchors": [
+    "DOC1_A2",
+    "DOC1_A5"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC1_R1",
+      "action": "open",
+      "anchor_id": "DOC1_A2",
+      "anchor_title": "主要财务数据",
+      "planner_reason": "此锚点标题为'主要财务数据'，可能包含2022年一季度的净利润增长率。",
+      "extraction_summary": "该锚文本未提供关于2022年一季度至2024年一季度的净利润增长率的具体信息。",
+      "status": "irrelevant",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R2",
+      "action": "open",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "财务报表",
+      "planner_reason": "财务报表可能包含所需的净利润增长率数据。",
+      "extraction_summary": "该锚文本提供了2022年一季度的净利润数据，但未提供2023年一季度和2024年一季度的数据。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC1_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC1_A2 | relevance=high | reason=此锚点标题为'主要财务数据'，可能包含2022年一季度的净利润增长率。\nextractor: 该锚文本未提供关于2022年一季度至2024年一季度的净利润增长率的具体信息。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC1_A5 | relevance=medium | reason=财务报表可能包含所需的净利润增长率数据。\nextractor: 该锚文本提供了2022年一季度的净利润数据，但未提供2023年一季度和2024年一季度的数据。\nnew_spans: 1\n--- Round 3 ---\nplanner: stop | relevance=medium | reason=文档包含2022年一季度的净利润数据，但缺少2023年一季度和2024年一季度的数据。"
+}

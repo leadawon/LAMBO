@@ -1,0 +1,44 @@
+{
+  "plan_id": "2022_2024",
+  "query_focus": "净利润增长率",
+  "output_shape": "string",
+  "search_objective": "查找2022年一季度到2024年一季度的净利润增长率",
+  "answer_objective": "计算并描述净利润增长率的变化趋势",
+  "focus_aspects": [
+    "entity",
+    "metric",
+    "value",
+    "period",
+    "2022年一季度到2024年一季度的",
+    "季度",
+    "净利润增长率"
+  ],
+  "closed_set_labels": [],
+  "structure_hints": [
+    "timeline",
+    "按季度提取净利润增长率数据"
+  ],
+  "structure_views": [
+    {
+      "view_type": "timeline",
+      "title": "净利润增长率时间线",
+      "fields": [
+        "季度",
+        "净利润增长率"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "Keep verbatim spans with enough local context to preserve the relation and owner.",
+    "Preserve the source document identity and anchor id for every extracted span.",
+    "Prefer spans that directly support the requested answer rather than merely topical similarity.",
+    "确保提取的净利润增长率与对应的季度匹配"
+  ],
+  "stop_checks": [
+    "Stop only after at least one anchor has been opened unless the document is clearly irrelevant.",
+    "Stop when the extracted spans cover the main focus aspects needed from this document.",
+    "If the question is comparative or grouping-based, keep searching until the document's role in the comparison is clear.",
+    "找到2022年一季度、2023年一季度和2024年一季度的净利润增长率"
+  ],
+  "raw_text": "{\n  \"query_focus\": \"净利润增长率\",\n  \"output_shape\": \"dict\",\n  \"search_objective\": \"查找2022年一季度到2024年一季度的净利润增长率\",\n  \"answer_objective\": \"计算并描述净利润增长率的变化趋势\",\n  \"focus_aspects\": [\"季度\", \"净利润增长率\"],\n  \"closed_set_labels\": [],\n  \"structure_hints\": [\"按季度提取净利润增长率数据\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"timeline\",\n      \"title\": \"净利润增长率时间线\",\n      \"fields\": [\"季度\", \"净利润增长率\"]\n    }\n  ],\n  \"span_guidelines\": [\"确保提取的净利润增长率与对应的季度匹配\"],\n  \"stop_checks\": [\"找到2022年一季度、2023年一季度和2024年一季度的净利润增长率\"]\n}"
+}
