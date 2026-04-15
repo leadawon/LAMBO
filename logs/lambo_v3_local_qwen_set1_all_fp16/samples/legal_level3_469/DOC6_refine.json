@@ -1,0 +1,78 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "该判决文书属于海事海商纠纷类别。",
+  "evidence": "本案系海上货运代理合同纠纷。",
+  "gold_spans": [
+    {
+      "span_id": "DOC6_S1",
+      "anchor_id": "DOC6_A7",
+      "quote": "本案系海上货运代理合同纠纷。",
+      "rationale": "这段文字明确了案件的性质是海上货运代理合同纠纷。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "海事海商纠纷",
+        "document_title": "一审法院判决"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC6_E1",
+      "doc_id": "DOC6",
+      "doc_title": "《判决文书6》",
+      "anchor_id": "DOC6_A7",
+      "anchor_title": "一审法院判决",
+      "quote": "本案系海上货运代理合同纠纷。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "海事海商纠纷",
+        "document_title": "一审法院判决"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        2601,
+        4543
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "宁波物流公司",
+    "宁波公司",
+    "浙江公司"
+  ],
+  "opened_anchors": [
+    "DOC6_A2",
+    "DOC6_A7"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC6_R1",
+      "action": "open",
+      "anchor_id": "DOC6_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "案件背景部分可能会明确提到具体的案由类型。",
+      "extraction_summary": "此段文字描述了案件背景，涉及的是海上货物运输合同纠纷，但未明确提及指定的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC6_R2",
+      "action": "open",
+      "anchor_id": "DOC6_A7",
+      "anchor_title": "一审法院判决",
+      "planner_reason": "一审法院判决部分可能包含具体的案由类型，有助于确定文档所属的案由类别。",
+      "extraction_summary": "此段文字描述了一审法院对于海上货运代理合同纠纷的判决，未明确提及指定的案由类型。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC6_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC6_A2 | relevance=medium | reason=案件背景部分可能会明确提到具体的案由类型。\nextractor: 此段文字描述了案件背景，涉及的是海上货物运输合同纠纷，但未明确提及指定的案由类型。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC6_A7 | relevance=medium | reason=一审法院判决部分可能包含具体的案由类型，有助于确定文档所属的案由类别。\nextractor: 此段文字描述了一审法院对于海上货运代理合同纠纷的判决，未明确提及指定的案由类型。\nnew_spans: 1"
+}

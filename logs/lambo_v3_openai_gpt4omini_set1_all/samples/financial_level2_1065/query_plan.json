@@ -1,0 +1,33 @@
+{
+  "plan_id": "unknown",
+  "query_focus": "支付给职工以及为职工支付的现金最高的公司",
+  "output_shape": "string",
+  "search_objective": "寻找各公司财务报表中关于支付给职工及为职工支付的现金的具体数额。",
+  "answer_objective": "确定并返回支付给职工及为职工支付的现金最高的公司名称。",
+  "focus_aspects": [
+    "公司名称",
+    "支付金额"
+  ],
+  "closed_set_labels": [],
+  "structure_hints": [
+    "ranking"
+  ],
+  "structure_views": [
+    {
+      "view_type": "ranking",
+      "title": "支付给职工的现金排名",
+      "fields": [
+        "公司名称",
+        "支付金额",
+        "supporting_evidence_ids"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "提取关于支付给职工及为职工支付的现金的具体数额，确保保留上下文以区分不同公司的数据。"
+  ],
+  "stop_checks": [
+    "至少在每个文档中打开一个锚点，且文档标题与问题相关。"
+  ],
+  "raw_text": "{\n  \"query_focus\": \"支付给职工以及为职工支付的现金最高的公司\",\n  \"output_shape\": \"string\",\n  \"search_objective\": \"寻找各公司财务报表中关于支付给职工及为职工支付的现金的具体数额。\",\n  \"answer_objective\": \"确定并返回支付给职工及为职工支付的现金最高的公司名称。\",\n  \"focus_aspects\": [\"公司名称\", \"支付金额\"],\n  \"closed_set_labels\": [],\n  \"structure_hints\": [\"ranking\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"ranking\",\n      \"title\": \"支付给职工的现金排名\",\n      \"fields\": [\"公司名称\", \"支付金额\", \"supporting_evidence_ids\"]\n    }\n  ],\n  \"span_guidelines\": [\"提取关于支付给职工及为职工支付的现金的具体数额，确保保留上下文以区分不同公司的数据。\"],\n  \"stop_checks\": [\"至少在每个文档中打开一个锚点，且文档标题与问题相关。\"]\n}"
+}

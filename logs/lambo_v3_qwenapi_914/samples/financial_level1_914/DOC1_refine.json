@@ -1,0 +1,65 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "high",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "根据合并资产负债表，洋河股份的使用权资产数值为74,341,718.39元。",
+  "evidence": "使用权资产|74,341,718.39|82,464,551.16",
+  "gold_spans": [
+    {
+      "span_id": "DOC1_S1",
+      "anchor_id": "DOC1_A5",
+      "quote": "使用权资产|74,341,718.39|82,464,551.16",
+      "rationale": "表格中明确列出了洋河股份的使用权资产数值。",
+      "evidence_type": "numerical_value",
+      "fields": {
+        "公司名称": "洋河股份",
+        "使用权资产": "74,341,718.39元"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC1_E1",
+      "doc_id": "DOC1",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "合并资产负债表",
+      "quote": "使用权资产|74,341,718.39|82,464,551.16",
+      "evidence_type": "numerical_value",
+      "fields": {
+        "公司名称": "洋河股份",
+        "使用权资产": "74,341,718.39元"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        5143,
+        7851
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "洋河股份"
+  ],
+  "opened_anchors": [
+    "DOC1_A5"
+  ],
+  "rounds_used": 1,
+  "step_records": [
+    {
+      "step_id": "DOC1_R1",
+      "action": "open",
+      "anchor_id": "DOC1_A5",
+      "anchor_title": "合并资产负债表",
+      "planner_reason": "合并资产负债表锚点可能包含洋河股份的使用权资产数值。",
+      "extraction_summary": "该锚点包含了洋河股份的使用权资产数值。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC1_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC1_A5 | relevance=high | reason=合并资产负债表锚点可能包含洋河股份的使用权资产数值。\nextractor: 该锚点包含了洋河股份的使用权资产数值。\nnew_spans: 1"
+}

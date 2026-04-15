@@ -1,0 +1,78 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "All anchors have been inspected.",
+  "doc_hypothesis": "此判决文书尚未提供足够的信息来确定其案由类型。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "郭某某",
+    "国家金融监督管理总局山东监管局",
+    "国家金融监督管理总局",
+    "北京金融法院"
+  ],
+  "opened_anchors": [
+    "DOC2_A2",
+    "DOC2_A4",
+    "DOC2_A5",
+    "DOC2_A3",
+    "DOC2_A1"
+  ],
+  "rounds_used": 5,
+  "step_records": [
+    {
+      "step_id": "DOC2_R1",
+      "action": "open",
+      "anchor_id": "DOC2_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "案件背景部分可能会提供关于案由类型的详细信息。",
+      "extraction_summary": "此段文字描述了案件背景，但未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R2",
+      "action": "open",
+      "anchor_id": "DOC2_A4",
+      "anchor_title": "法院审查意见",
+      "planner_reason": "法院审查意见部分可能会提供关于具体案由类型的详细信息。",
+      "extraction_summary": "此段文字描述了案件背景及法院审查意见，但未提及具体的案由类型。",
+      "status": "enough",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R3",
+      "action": "open",
+      "anchor_id": "DOC2_A5",
+      "anchor_title": "裁定结果",
+      "planner_reason": "裁定结果部分可能会包含具体的案由类型信息。",
+      "extraction_summary": "此段文字描述了裁定结果，但未提及具体的案由类型。",
+      "status": "enough",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R4",
+      "action": "open",
+      "anchor_id": "DOC2_A3",
+      "anchor_title": "再审申请理由",
+      "planner_reason": "再审申请理由部分可能包含具体的案由类型。",
+      "extraction_summary": "此段文字描述了再审申请的理由，但未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R5",
+      "action": "open",
+      "anchor_id": "DOC2_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尚未找到具体的案由类型，尝试打开剩余的锚点以获取更多信息。",
+      "extraction_summary": "此段文字提供了当事人信息，但未提及具体的案由类型。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC2_A2 | relevance=medium | reason=案件背景部分可能会提供关于案由类型的详细信息。\nextractor: 此段文字描述了案件背景，但未提及具体的案由类型。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC2_A4 | relevance=medium | reason=法院审查意见部分可能会提供关于具体案由类型的详细信息。\nextractor: 此段文字描述了案件背景及法院审查意见，但未提及具体的案由类型。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC2_A5 | relevance=low | reason=裁定结果部分可能会包含具体的案由类型信息。\nextractor: 此段文字描述了裁定结果，但未提及具体的案由类型。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC2_A3 | relevance=low | reason=再审申请理由部分可能包含具体的案由类型。\nextractor: 此段文字描述了再审申请的理由，但未提及具体的案由类型。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC2_A1 | relevance=low | reason=尚未找到具体的案由类型，尝试打开剩余的锚点以获取更多信息。\nextractor: 此段文字提供了当事人信息，但未提及具体的案由类型。\nnew_spans: 0"
+}

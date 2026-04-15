@@ -1,0 +1,53 @@
+Backend: openai
+
+==== sample financial_level1_914 (idx=914) ====
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=0 | evidence='使用权资产为74,341,718.39元，较期初下降。'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> no_evidence | rounds=0 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='使用权资产为249,120,154.43元。'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=2
+  -> answer: [{'使用权资产': '74,341,718.39'}, {'使用权资产': '249,120,154.43'}]
+
+==== sample legal_level1_725 (idx=725) ====
+  doc DOC1 '《判决文书1》' anchors=5
+    -> no_evidence | rounds=0 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=4
+    -> no_evidence | rounds=0 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=8
+    -> no_evidence | rounds=0 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=6
+    -> no_evidence | rounds=0 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=7
+    -> no_evidence | rounds=0 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=5
+    -> no_evidence | rounds=0 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | records=0
+  -> answer: 
+
+==== sample financial_level2_1065 (idx=1065) ====
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> no_evidence | rounds=5 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=7
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=5
+    -> evidence_found | rounds=1 | evidence='支付给职工以及为职工支付的现金为26,699,811.03元。'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 《2024年一季度报告》
+{
+  "prediction_path": "logs/lambo_v3b_gpt4omini_smoke/lambo_predictions.jsonl",
+  "structured_summary": {
+    "sample_count": 3,
+    "exact_match_rate": 0,
+    "avg_pair_f1": null
+  },
+  "llm_judge_summary": {
+    "total": 3,
+    "scoring_success_rate": 1.0,
+    "avg_score": 23.333333333333332,
+    "perfect_count": 0,
+    "perfect_rate": 0.0
+  },
+  "num_errors": 0
+}

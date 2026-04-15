@@ -1,0 +1,111 @@
+{
+  "doc_id": "DOC9",
+  "doc_title": "《判决文书9》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "high",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "此判决文书属于'执行案由-先予执行'类别。",
+  "evidence": "王某1与新疆生产建设兵团第四师广播电视台、胡秀先予执行一案，法院作出（2020）兵0402执258号执行裁定书，“裁定先予执行30万元”。\n\n2020年10月26日，王某1向本院申请先予执行，要求先行给付后续医疗费用30万元。",
+  "gold_spans": [
+    {
+      "span_id": "DOC9_S1",
+      "anchor_id": "DOC9_A3",
+      "quote": "王某1与新疆生产建设兵团第四师广播电视台、胡秀先予执行一案，法院作出（2020）兵0402执258号执行裁定书，“裁定先予执行30万元”。",
+      "rationale": "此段落明确提到了'先予执行'的案由。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "异议理由"
+      },
+      "confidence": 1.0
+    },
+    {
+      "span_id": "DOC9_S2",
+      "anchor_id": "DOC9_A4",
+      "quote": "2020年10月26日，王某1向本院申请先予执行，要求先行给付后续医疗费用30万元。",
+      "rationale": "此句明确提到'先予执行'的申请。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "王某1与新疆生产建设兵团第四师广播电视台、胡秀健康权纠纷一案"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC9_E1",
+      "doc_id": "DOC9",
+      "doc_title": "《判决文书9》",
+      "anchor_id": "DOC9_A3",
+      "anchor_title": "异议理由",
+      "quote": "王某1与新疆生产建设兵团第四师广播电视台、胡秀先予执行一案，法院作出（2020）兵0402执258号执行裁定书，“裁定先予执行30万元”。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "异议理由"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        368,
+        737
+      ]
+    },
+    {
+      "evidence_id": "DOC9_E2",
+      "doc_id": "DOC9",
+      "doc_title": "《判决文书9》",
+      "anchor_id": "DOC9_A4",
+      "anchor_title": "案件背景",
+      "quote": "2020年10月26日，王某1向本院申请先予执行，要求先行给付后续医疗费用30万元。",
+      "evidence_type": "statement",
+      "fields": {
+        "case_reason": "执行案由-先予执行",
+        "document_title": "王某1与新疆生产建设兵团第四师广播电视台、胡秀健康权纠纷一案"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        738,
+        1445
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "新疆生产建设兵团第四师融媒体中心",
+    "王某1",
+    "新疆生产建设兵团第四师广播电视台",
+    "胡秀"
+  ],
+  "opened_anchors": [
+    "DOC9_A3",
+    "DOC9_A4"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC9_R1",
+      "action": "open",
+      "anchor_id": "DOC9_A3",
+      "anchor_title": "异议理由",
+      "planner_reason": "异议理由部分可能包含关于先予执行的具体案由信息。",
+      "extraction_summary": "此锚点涉及一起关于先予执行的案件，其中提到了'执行案由-先予执行'。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC9_S1"
+      ]
+    },
+    {
+      "step_id": "DOC9_R2",
+      "action": "open",
+      "anchor_id": "DOC9_A4",
+      "anchor_title": "案件背景",
+      "planner_reason": "案件背景部分可能提供更多关于案由的信息。",
+      "extraction_summary": "此锚点涉及一起关于先予执行的案件，其中再次提到了'执行案由-先予执行'。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC9_S2"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC9_A3 | relevance=medium | reason=异议理由部分可能包含关于先予执行的具体案由信息。\nextractor: 此锚点涉及一起关于先予执行的案件，其中提到了'执行案由-先予执行'。\nnew_spans: 1\n--- Round 2 ---\nplanner: open DOC9_A4 | relevance=high | reason=案件背景部分可能提供更多关于案由的信息。\nextractor: 此锚点涉及一起关于先予执行的案件，其中再次提到了'执行案由-先予执行'。\nnew_spans: 1"
+}

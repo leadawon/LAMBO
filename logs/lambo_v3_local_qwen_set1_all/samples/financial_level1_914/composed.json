@@ -1,0 +1,60 @@
+{
+  "projection_map": {
+    "DOC1": "《2024年一季度报告》",
+    "DOC2": "《2024年一季度报告》",
+    "DOC3": "《2024年一季度报告》"
+  },
+  "analysis_schema": {
+    "schema_id": "usage_rights_assets",
+    "primary_view_type": "mapping",
+    "description": "洋河股份的使用权资产金额",
+    "fields": [
+      "company",
+      "asset_type",
+      "amount",
+      "supporting_evidence_ids"
+    ]
+  },
+  "artifacts": [
+    {
+      "artifact_id": "usage_rights_assets",
+      "view_type": "mapping",
+      "title": "使用权资产",
+      "schema": {
+        "fields": [
+          "company",
+          "asset_type",
+          "amount",
+          "supporting_evidence_ids"
+        ]
+      },
+      "rows": [
+        {
+          "company": "江苏洋河酒厂股份有限公司",
+          "asset_type": "使用权资产",
+          "amount": "74,341,718.39",
+          "supporting_evidence_ids": [
+            "DOC1_E1"
+          ]
+        },
+        {
+          "company": "洋河股份",
+          "asset_type": "使用权资产",
+          "amount": "2,298,773.64",
+          "supporting_evidence_ids": [
+            "DOC2_E1"
+          ]
+        }
+      ],
+      "notes": "不同文档中可能存在不同的公司名称，但均指代洋河股份。"
+    }
+  ],
+  "candidate_answer": "74,341,718.39元",
+  "answer_rationale": "根据《2024年一季度报告》，洋河股份的使用权资产金额为74,341,718.39元。",
+  "unresolved_issues": [
+    "不同文档中存在不同的公司名称，需要进一步确认一致性。"
+  ],
+  "raw_text": "```json\n{\n  \"projection_map\": {\n    \"DOC1\": \"《2024年一季度报告》\",\n    \"DOC2\": \"《2024年一季度报告》\",\n    \"DOC3\": \"《2024年一季度报告》\"\n  },\n  \"analysis_schema\": {\n    \"schema_id\": \"usage_rights_assets\",\n    \"primary_view_type\": \"mapping\",\n    \"description\": \"洋河股份的使用权资产金额\",\n    \"fields\": [\"company\", \"asset_type\", \"amount\", \"supporting_evidence_ids\"]\n  },\n  \"artifacts\": [\n    {\n      \"artifact_id\": \"usage_rights_assets\",\n      \"view_type\": \"mapping\",\n      \"title\": \"使用权资产\",\n      \"schema\": {\n        \"fields\": [\"company\", \"asset_type\", \"amount\", \"supporting_evidence_ids\"]\n      },\n      \"rows\": [\n        {\n          \"company\": \"江苏洋河酒厂股份有限公司\",\n          \"asset_type\": \"使用权资产\",\n          \"amount\": \"74,341,718.39\",\n          \"supporting_evidence_ids\": [\"DOC1_E1\"]\n        },\n        {\n          \"company\": \"洋河股份\",\n          \"asset_type\": \"使用权资产\",\n          \"amount\": \"2,298,773.64\",\n          \"supporting_evidence_ids\": [\"DOC2_E1\"]\n        }\n      ],\n      \"notes\": \"不同文档中可能存在不同的公司名称，但均指代洋河股份。\"\n    }\n  ],\n  \"candidate_answer\": \"74,341,718.39元\",\n  \"answer_rationale\": \"根据《2024年一季度报告》，洋河股份的使用权资产金额为74,341,718.39元。\",\n  \"unresolved_issues\": [\"不同文档中存在不同的公司名称，需要进一步确认一致性。\"]\n}\n```",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3
+}

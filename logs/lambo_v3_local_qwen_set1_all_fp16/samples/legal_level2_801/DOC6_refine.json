@@ -1,0 +1,93 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "",
+  "doc_hypothesis": "该文档可能不包含案由为'行政行为-行政强制'的判决文书标题。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "左某",
+    "阿瓦提县人力资源和社会保障局",
+    "阿克苏市某某装饰装修工程有限公司",
+    "蒋某",
+    "第三人",
+    "阿瓦提县人社局",
+    "阿克苏某某装修工程有限公司",
+    "阿瓦提县人事仲裁委员会"
+  ],
+  "opened_anchors": [
+    "DOC6_A2",
+    "DOC6_A3",
+    "DOC6_A4",
+    "DOC6_A5",
+    "DOC6_A7",
+    "DOC6_A8"
+  ],
+  "rounds_used": 6,
+  "step_records": [
+    {
+      "step_id": "DOC6_R1",
+      "action": "open",
+      "anchor_id": "DOC6_A2",
+      "anchor_title": "案件概述",
+      "planner_reason": "案件概述部分可能包含有关案由的具体信息。",
+      "extraction_summary": "此段文字描述了一个关于工伤保险资格认定案件的再审申请情况，但未提及具体的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC6_R2",
+      "action": "open",
+      "anchor_id": "DOC6_A3",
+      "anchor_title": "再审申请理由",
+      "planner_reason": "继续查找可能包含案由信息的锚点。",
+      "extraction_summary": "此段文字描述了左某的再审申请理由，但未提及具体的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC6_R3",
+      "action": "open",
+      "anchor_id": "DOC6_A4",
+      "anchor_title": "被申请人答辩意见",
+      "planner_reason": "被申请人答辩意见可能包含有关案由的具体信息。",
+      "extraction_summary": "此段文字描述了阿瓦提县人社局对再审申请的答辩意见，但未提及具体的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC6_R4",
+      "action": "open",
+      "anchor_id": "DOC6_A5",
+      "anchor_title": "一审法院查明事实",
+      "planner_reason": "继续查找可能包含具体案由的信息。",
+      "extraction_summary": "此段文字描述了左某与阿克苏某某装修工程有限公司之间的劳动关系争议及其仲裁和诉讼过程，但未提及具体的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC6_R5",
+      "action": "open",
+      "anchor_id": "DOC6_A7",
+      "anchor_title": "法院裁判理由",
+      "planner_reason": "法院裁判理由部分可能包含关于案由的具体信息，有助于判断是否符合'行政行为-行政强制'的要求。",
+      "extraction_summary": "此段文字讨论了法院对于申请人受伤是否属于违法分包、转包应当认定工伤的特殊情形的裁判理由，但未提及具体的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC6_R6",
+      "action": "open",
+      "anchor_id": "DOC6_A8",
+      "anchor_title": "法院裁定结果",
+      "planner_reason": "尚未找到符合要求的案由信息，继续检查剩余的锚点以确认是否存在相关信息。",
+      "extraction_summary": "此段文字描述了法院驳回左某的再审申请的裁定结果，但未提及具体的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC6_A2 | relevance=low | reason=案件概述部分可能包含有关案由的具体信息。\nextractor: 此段文字描述了一个关于工伤保险资格认定案件的再审申请情况，但未提及具体的案由。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC6_A3 | relevance=low | reason=继续查找可能包含案由信息的锚点。\nextractor: 此段文字描述了左某的再审申请理由，但未提及具体的案由。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC6_A4 | relevance=low | reason=被申请人答辩意见可能包含有关案由的具体信息。\nextractor: 此段文字描述了阿瓦提县人社局对再审申请的答辩意见，但未提及具体的案由。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC6_A5 | relevance=low | reason=继续查找可能包含具体案由的信息。\nextractor: 此段文字描述了左某与阿克苏某某装修工程有限公司之间的劳动关系争议及其仲裁和诉讼过程，但未提及具体的案由。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC6_A7 | relevance=low | reason=法院裁判理由部分可能包含关于案由的具体信息，有助于判断是否符合'行政行为-行政强制'的要求。\nextractor: 此段文字讨论了法院对于申请人受伤是否属于违法分包、转包应当认定工伤的特殊情形的裁判理由，但未提及具体的案由。\nnew_spans: 0\n--- Round 6 ---\nplanner: open DOC6_A8 | relevance=low | reason=尚未找到符合要求的案由信息，继续检查剩余的锚点以确认是否存在相关信息。\nextractor: 此段文字描述了法院驳回左某的再审申请的裁定结果，但未提及具体的案由。\nnew_spans: 0"
+}

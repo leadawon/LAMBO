@@ -1,0 +1,40 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "The document has been assessed as irrelevant after opening the available anchors.",
+  "doc_hypothesis": "This document does not contribute relevant information regarding the highest cash payments to employees by any company.",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [],
+  "opened_anchors": [
+    "DOC1_A2",
+    "DOC1_A3"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC1_R1",
+      "action": "open",
+      "anchor_id": "DOC1_A2",
+      "anchor_title": "主要财务数据",
+      "planner_reason": "The '主要财务数据' anchor likely contains key financial figures, including cash payments to employees.",
+      "extraction_summary": "This anchor does not provide any information regarding the cash payments to employees or any specific financial figures related to companies.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC1_R2",
+      "action": "open",
+      "anchor_id": "DOC1_A3",
+      "anchor_title": "会计数据变动情况",
+      "planner_reason": "This anchor discusses changes in accounting data, which may include information about employee compensation and cash payments to employees.",
+      "extraction_summary": "This anchor does not provide any information regarding the cash payments to employees or any specific financial figures related to employee payments.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC1_A2 | relevance=medium | reason=The '主要财务数据' anchor likely contains key financial figures, including cash payments to employees.\nextractor: This anchor does not provide any information regarding the cash payments to employees or any specific financial figures related to companies.\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC1_A3 | relevance=medium | reason=This anchor discusses changes in accounting data, which may include information about employee compensation and cash payments to employees.\nextractor: This anchor does not provide any information regarding the cash payments to employees or any specific financial figures related to employee payments.\nnew_spans: 0\n--- Round 3 ---\nplanner: stop | relevance=low | reason=No further anchors are likely to provide the needed information, and the document appears irrelevant to the question."
+}

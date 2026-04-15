@@ -1,0 +1,32 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "scan_result": "irrelevant_document",
+  "doc_relevance": "irrelevant",
+  "stop_reason": "The document has been assessed as irrelevant after opening.",
+  "doc_hypothesis": "This document likely contributes information about a criminal case involving intentional injury and gambling offenses, but not the specified case of infringement of personal and democratic rights.",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "广东省深圳市中级人民法院",
+    "刘某强"
+  ],
+  "opened_anchors": [
+    "DOC4_A2"
+  ],
+  "rounds_used": 1,
+  "step_records": [
+    {
+      "step_id": "DOC4_R1",
+      "action": "open",
+      "anchor_id": "DOC4_A2",
+      "anchor_title": "判决信息",
+      "planner_reason": "The '判决信息' anchor may contain relevant judgment information that could clarify if it relates to the specified case.",
+      "extraction_summary": "This anchor does not mention the case of 'infringement of citizens' personal rights and democratic rights', but rather discusses a criminal judgment related to intentional injury and operating a casino.",
+      "status": "irrelevant",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC4_A2 | relevance=low | reason=The '判决信息' anchor may contain relevant judgment information that could clarify if it relates to the specified case.\nextractor: This anchor does not mention the case of 'infringement of citizens' personal rights and democratic rights', but rather discusses a criminal judgment related to intentional injury and operating a casino.\nnew_spans: 0\n--- Round 2 ---\nplanner: stop | relevance=irrelevant | reason=The document does not contain any relevant information regarding the specified case."
+}

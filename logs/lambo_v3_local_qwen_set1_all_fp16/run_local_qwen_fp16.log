@@ -1,0 +1,100 @@
+Backend: local
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:01<00:17,  1.09s/it]Loading checkpoint shards:  12%|█▏        | 2/17 [00:02<00:17,  1.14s/it]Loading checkpoint shards:  18%|█▊        | 3/17 [00:03<00:15,  1.12s/it]Loading checkpoint shards:  24%|██▎       | 4/17 [00:04<00:14,  1.13s/it]Loading checkpoint shards:  29%|██▉       | 5/17 [00:05<00:13,  1.13s/it]Loading checkpoint shards:  35%|███▌      | 6/17 [00:06<00:12,  1.13s/it]Loading checkpoint shards:  41%|████      | 7/17 [00:07<00:11,  1.12s/it]Loading checkpoint shards:  47%|████▋     | 8/17 [00:08<00:10,  1.12s/it]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:10<00:09,  1.14s/it]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:11<00:07,  1.13s/it]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:12<00:06,  1.14s/it]Loading checkpoint shards:  71%|███████   | 12/17 [00:13<00:05,  1.14s/it]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:14<00:04,  1.14s/it]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:15<00:03,  1.14s/it]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:16<00:02,  1.13s/it]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:18<00:01,  1.13s/it]Loading checkpoint shards: 100%|██████████| 17/17 [00:18<00:00,  1.04s/it]Loading checkpoint shards: 100%|██████████| 17/17 [00:18<00:00,  1.11s/it]
+
+==== sample financial_level1_914 (idx=914) ====
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  query plan -> output_shape=string | views=['mapping']
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='使用权资产|74,341,718.39|82,464,551.16'
+  doc DOC2 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='|使用权资产|2,298,773.64|2,783,395.84|'
+  doc DOC3 '《2024年一季度报告》' anchors=8
+    -> insufficient_evidence | rounds=6 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | artifacts=1
+  -> answer: 74,341,718.39元
+
+==== sample legal_level1_725 (idx=725) ====
+  query plan -> output_shape=string | views=['mapping']
+  doc DOC1 '《判决文书1》' anchors=10
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=9
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=15
+    -> insufficient_evidence | rounds=2 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=8
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=15
+    -> insufficient_evidence | rounds=1 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=5
+    -> insufficient_evidence | rounds=5 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | artifacts=1
+  -> answer: 
+
+==== sample financial_level2_1065 (idx=1065) ====
+  query plan -> output_shape=string | views=['ranking']
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=3 | evidence='支付给职工以及为职工支付的现金|525,578,977.13|534,001,474.19'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=3 | evidence='支付给职工以及为职工支付的现金|185,767,359.47|142,248,716.64'
+  doc DOC3 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=6 | evidence='支付给职工以及为职工支付的现金|26,699,811.03|31,323,875.70'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | artifacts=1
+  -> answer: 楚天科技股份有限公司
+
+==== sample legal_level2_801 (idx=801) ====
+  query plan -> output_shape=list | views=['list']
+  doc DOC1 '《判决文书1》' anchors=12
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=7
+    -> insufficient_evidence | rounds=2 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=3
+    -> insufficient_evidence | rounds=3 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=6
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=2
+    -> insufficient_evidence | rounds=2 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=8
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC7 '《判决文书7》' anchors=8
+    -> insufficient_evidence | rounds=5 | evidence=''
+  doc DOC8 '《判决文书8》' anchors=9
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC9 '《判决文书9》' anchors=6
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC10 '《判决文书10》' anchors=2
+    -> insufficient_evidence | rounds=2 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | artifacts=1
+  -> answer: []
+
+==== sample financial_level3_1280 (idx=1280) ====
+  query plan -> output_shape=dict | views=['grouping']
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=5 | evidence='|预付款项|62,606,303.29|50,971,870.03|'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> insufficient_evidence | rounds=6 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=2 | evidence='|预付款项|228,126,438.00|175,605,702.96|'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | artifacts=1
+  -> answer: {'合并资产负债表': {'prepayment_amount': '62,606,303.29', 'category': '低预付款'}, '云南恩捷新材料股份有限公司': {'prepayment_amount': '228,126,438.00', 'category': '中预付款'}}
+
+==== sample legal_level3_469 (idx=469) ====
+  query plan -> output_shape=dict | views=['grouping']
+  doc DOC1 '《判决文书1》' anchors=6
+    -> evidence_found | rounds=5 | evidence='2020年10月26日，王某1向新疆生产建设兵团伊宁垦区人民法院申请先予执行，要求先行给付后续医疗费用30万元。\n\n依法裁定不予执行新疆生产建设兵团伊宁垦区人民'
+  doc DOC2 '《判决文书2》' anchors=5
+    -> insufficient_evidence | rounds=5 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=6
+    -> insufficient_evidence | rounds=5 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=9
+    -> evidence_found | rounds=6 | evidence='2013年10月30日，修武农商行某支行申请对借款人和包括担保人赵某某、崔某某在内的7个担保人进行强制执行，修武法院依法以（2013）修执字第635号为案号进行'
+  doc DOC5 '《判决文书5》' anchors=6
+    -> evidence_found | rounds=1 | evidence='上诉人甲因与被上诉人A公司（以下简称A公司）、原审被告B公司（以下简称B公司）、乙返还原物纠纷一案'
+  doc DOC6 '《判决文书6》' anchors=10
+    -> evidence_found | rounds=2 | evidence='本案系海上货运代理合同纠纷。'
+  doc DOC7 '《判决文书7》' anchors=9
+    -> evidence_found | rounds=2 | evidence='上诉人xxx越秀区教育局（以下简称越秀区教育局）、上诉人方x荣因与被上诉人方x坚、吴x隆物权保护纠纷一案\n\n上诉人xxx越秀区教育局（以下简称越秀区教育局）、上'
+  doc DOC8 '《判决文书8》' anchors=3
+    -> insufficient_evidence | rounds=3 | evidence=''
+  doc DOC9 '《判决文书9》' anchors=6
+    -> evidence_found | rounds=2 | evidence='王某1与新疆生产建设兵团第四师广播电视台、胡秀先予执行一案，法院作出（2020）兵0402执258号执行裁定书，“裁定先予执行30万元”。\n\n2020年10月2'

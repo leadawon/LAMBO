@@ -1,0 +1,78 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "已确认该文档中没有符合条件的判决文书案由信息。",
+  "doc_hypothesis": "该文档未提供关于'行政行为-行政强制'案由的相关判决文书标题。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "新疆某实业公司",
+    "新疆某置业公司",
+    "杨某",
+    "张某某"
+  ],
+  "opened_anchors": [
+    "DOC7_A2",
+    "DOC7_A3",
+    "DOC7_A4",
+    "DOC7_A5",
+    "DOC7_A8"
+  ],
+  "rounds_used": 5,
+  "step_records": [
+    {
+      "step_id": "DOC7_R1",
+      "action": "open",
+      "anchor_id": "DOC7_A2",
+      "anchor_title": "案件背景",
+      "planner_reason": "选择'案件背景'锚点，因为它可能包含有关案件类型的信息，有助于判断是否符合查询条件。",
+      "extraction_summary": "此锚文本描述了再审申请人与被申请人之间的抽逃出资纠纷案件背景，未提及任何关于'行政行为-行政强制'的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC7_R2",
+      "action": "open",
+      "anchor_id": "DOC7_A3",
+      "anchor_title": "新疆某实业公司再审申请理由",
+      "planner_reason": "继续查找可能包含'行政行为-行政强制'相关信息的锚点。",
+      "extraction_summary": "此锚文本描述了新疆某实业公司再审申请的理由，主要涉及抽逃出资纠纷，未提及任何关于'行政行为-行政强制'的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC7_R3",
+      "action": "open",
+      "anchor_id": "DOC7_A4",
+      "anchor_title": "再审审查焦点",
+      "planner_reason": "选择打开再审审查焦点部分，以确认是否有涉及'行政行为-行政强制'的案由。",
+      "extraction_summary": "此锚文本讨论了再审审查的焦点问题，主要涉及抽逃出资行为、债权抵销以及鉴定申请程序合法性，未提及任何关于'行政行为-行政强制'的案由。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC7_R4",
+      "action": "open",
+      "anchor_id": "DOC7_A5",
+      "anchor_title": "关于抽逃出资行为的认定",
+      "planner_reason": "继续查找可能包含'行政行为-行政强制'相关信息的锚点，尽管可能性较低。",
+      "extraction_summary": "此锚文本详细描述了关于抽逃出资行为的认定，未提及任何关于'行政行为-行政强制'的案由。",
+      "status": "enough",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC7_R5",
+      "action": "open",
+      "anchor_id": "DOC7_A8",
+      "anchor_title": "裁定结果",
+      "planner_reason": "尽管之前的内容没有提到'行政行为-行政强制'，但裁定结果可能包含相关信息。",
+      "extraction_summary": "此锚文本描述了驳回新疆某实业公司再审申请的裁定结果，未提及任何关于'行政行为-行政强制'的案由。",
+      "status": "enough",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC7_A2 | relevance=low | reason=选择'案件背景'锚点，因为它可能包含有关案件类型的信息，有助于判断是否符合查询条件。\nextractor: 此锚文本描述了再审申请人与被申请人之间的抽逃出资纠纷案件背景，未提及任何关于'行政行为-行政强制'的案由。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC7_A3 | relevance=low | reason=继续查找可能包含'行政行为-行政强制'相关信息的锚点。\nextractor: 此锚文本描述了新疆某实业公司再审申请的理由，主要涉及抽逃出资纠纷，未提及任何关于'行政行为-行政强制'的案由。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC7_A4 | relevance=low | reason=选择打开再审审查焦点部分，以确认是否有涉及'行政行为-行政强制'的案由。\nextractor: 此锚文本讨论了再审审查的焦点问题，主要涉及抽逃出资行为、债权抵销以及鉴定申请程序合法性，未提及任何关于'行政行为-行政强制'的案由。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC7_A5 | relevance=low | reason=继续查找可能包含'行政行为-行政强制'相关信息的锚点，尽管可能性较低。\nextractor: 此锚文本详细描述了关于抽逃出资行为的认定，未提及任何关于'行政行为-行政强制'的案由。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC7_A8 | relevance=low | reason=尽管之前的内容没有提到'行政行为-行政强制'，但裁定结果可能包含相关信息。\nextractor: 此锚文本描述了驳回新疆某实业公司再审申请的裁定结果，未提及任何关于'行政行为-行政强制'的案由。\nnew_spans: 0\n--- Round 6 ---\nplanner: stop | relevance=low | reason=已打开多个锚点，未发现与'行政行为-行政强制'相关的案由信息。"
+}

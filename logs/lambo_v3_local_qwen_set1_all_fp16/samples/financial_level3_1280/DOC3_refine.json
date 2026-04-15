@@ -1,0 +1,78 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "medium",
+  "stop_reason": "Extractor marked document evidence as sufficient.",
+  "doc_hypothesis": "该文档提供了云南恩捷新材料股份有限公司的财务报表，可以用于分类预付款项。",
+  "evidence": "|预付款项|228,126,438.00|175,605,702.96|",
+  "gold_spans": [
+    {
+      "span_id": "DOC3_S1",
+      "anchor_id": "DOC3_A6",
+      "quote": "|预付款项|228,126,438.00|175,605,702.96|",
+      "rationale": "该段落提供了预付款项的具体数值，可用于分类。",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company_report": "云南恩捷新材料股份有限公司",
+        "prepayment_amount": "228,126,438.00",
+        "category": "中预付款"
+      },
+      "confidence": 1.0
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC3_E1",
+      "doc_id": "DOC3",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC3_A6",
+      "anchor_title": "财务报表",
+      "quote": "|预付款项|228,126,438.00|175,605,702.96|",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company_report": "云南恩捷新材料股份有限公司",
+        "prepayment_amount": "228,126,438.00",
+        "category": "中预付款"
+      },
+      "support_score": 1.0,
+      "source_char_span": [
+        7656,
+        14967
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "云南恩捷新材料股份有限公司"
+  ],
+  "opened_anchors": [
+    "DOC3_A2",
+    "DOC3_A6"
+  ],
+  "rounds_used": 2,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A2",
+      "anchor_title": "主要财务数据",
+      "planner_reason": "主要财务数据锚点可能包含预付款项的具体数值。",
+      "extraction_summary": "该锚点未包含有关'预付款项'的具体数值信息。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R2",
+      "action": "open",
+      "anchor_id": "DOC3_A6",
+      "anchor_title": "财务报表",
+      "planner_reason": "财务报表锚点可能包含详细的财务数据，包括预付款项的具体数值。",
+      "extraction_summary": "该锚点包含了云南恩捷新材料股份有限公司2024年3月31日的财务报表，其中包括了预付款项的具体数值。",
+      "status": "enough",
+      "new_span_ids": [
+        "DOC3_S1"
+      ]
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A2 | relevance=medium | reason=主要财务数据锚点可能包含预付款项的具体数值。\nextractor: 该锚点未包含有关'预付款项'的具体数值信息。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC3_A6 | relevance=medium | reason=财务报表锚点可能包含详细的财务数据，包括预付款项的具体数值。\nextractor: 该锚点包含了云南恩捷新材料股份有限公司2024年3月31日的财务报表，其中包括了预付款项的具体数值。\nnew_spans: 1"
+}

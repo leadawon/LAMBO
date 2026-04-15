@@ -1,0 +1,61 @@
+Backend: gemini
+/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/_python_version_support.py:275: FutureWarning: You are using a Python version (3.10.14) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+  warnings.warn(message, FutureWarning)
+
+==== sample financial_level1_914 (idx=914) ====
+  [Gemini] retry 1/5 after 2s: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+  [Gemini] retry 2/5 after 4s: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+  [Gemini] retry 3/5 after 8s: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+  [Gemini] retry 4/5 after 16s: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+  !! error on financial_level1_914: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/grpc/_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/grpc/_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:64.233.177.95:443 {grpc_status:5, grpc_message:"models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/lambo/scripts/run_set1.py", line 122, in main
+    anchor_payload = anchor_agent.run(
+  File "/workspace/lambo/lambo/agents/anchor_agent.py", line 315, in run
+    anchors = self._anchor_doc_with_llm(query=query, instruction=instruction, doc=doc, units=units)
+  File "/workspace/lambo/lambo/agents/anchor_agent.py", line 188, in _anchor_doc_with_llm
+    raw_text = self.llm.generate_text(
+  File "/workspace/lambo/lambo/backend.py", line 171, in generate_text
+    return self._call(
+  File "/workspace/lambo/lambo/backend.py", line 141, in _call
+    response = model.generate_content(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 827, in generate_content
+    response = rpc(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/gapic_v1/method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/retry/retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/workspace/StructRAG/venv/lib/python3.10/site-packages/google/api_core/grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+
+==== sample legal_level1_725 (idx=725) ====
+  [Gemini] retry 1/5 after 2s: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+  [Gemini] retry 2/5 after 4s: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+  [Gemini] retry 3/5 after 8s: 404 models/gemini-2.5-flash-preview-04-17 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.

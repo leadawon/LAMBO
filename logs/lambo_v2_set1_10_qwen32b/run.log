@@ -1,0 +1,156 @@
+Backend: local
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:48<12:54, 48.42s/it]Loading checkpoint shards:  12%|█▏        | 2/17 [01:33<11:40, 46.70s/it]Loading checkpoint shards:  18%|█▊        | 3/17 [02:19<10:48, 46.31s/it]Loading checkpoint shards:  24%|██▎       | 4/17 [03:06<10:02, 46.38s/it]Loading checkpoint shards:  29%|██▉       | 5/17 [03:51<09:13, 46.13s/it]Loading checkpoint shards:  35%|███▌      | 6/17 [04:37<08:25, 45.92s/it]Loading checkpoint shards:  41%|████      | 7/17 [05:23<07:38, 45.88s/it]Loading checkpoint shards:  47%|████▋     | 8/17 [06:08<06:50, 45.61s/it]Loading checkpoint shards:  53%|█████▎    | 9/17 [06:53<06:03, 45.39s/it]Loading checkpoint shards:  59%|█████▉    | 10/17 [07:40<05:21, 45.94s/it]Loading checkpoint shards:  65%|██████▍   | 11/17 [08:26<04:35, 45.89s/it]Loading checkpoint shards:  71%|███████   | 12/17 [09:12<03:50, 46.03s/it]Loading checkpoint shards:  76%|███████▋  | 13/17 [09:59<03:05, 46.32s/it]Loading checkpoint shards:  82%|████████▏ | 14/17 [10:46<02:19, 46.48s/it]Loading checkpoint shards:  88%|████████▊ | 15/17 [11:32<01:32, 46.49s/it]Loading checkpoint shards:  94%|█████████▍| 16/17 [12:17<00:45, 45.98s/it]Loading checkpoint shards: 100%|██████████| 17/17 [12:54<00:00, 43.37s/it]Loading checkpoint shards: 100%|██████████| 17/17 [12:54<00:00, 45.58s/it]
+
+==== sample financial_level1_914 (idx=914) ====
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='使用权资产为74,341,718.39元。'
+  doc DOC2 '《2024年一季度报告》' anchors=6
+    -> no_evidence | rounds=4 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=1 | evidence='使用权资产为249,120,154.43元。'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 74,341,718.39元
+
+==== sample legal_level1_725 (idx=725) ====
+  doc DOC1 '《判决文书1》' anchors=10
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=9
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=15
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=8
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=15
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=5
+    -> no_evidence | rounds=4 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | records=0
+  -> answer: 
+
+==== sample financial_level2_1065 (idx=1065) ====
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=2 | evidence='支付给职工以及为职工支付的现金的具体数值如下：\n- 本期发生额：525,578,977.13元\n- 上期发生额：534,001,474.19元\n\n公司名称：楚天'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=2 | evidence='支付给职工以及为职工支付的现金为185,767,359.47元。史丹利农业集团股份有限公司。'
+  doc DOC3 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=1 | evidence='支付给职工以及为职工支付的现金：26,699,811.03元（本期发生额），31,323,875.70元（上期发生额）。公司名称：西安晨曦航空科技股份有限公司。'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 楚天科技股份有限公司
+
+==== sample legal_level2_801 (idx=801) ====
+  doc DOC1 '《判决文书1》' anchors=12
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=7
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=3
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=6
+    -> no_evidence | rounds=5 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=2
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=8
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC7 '《判决文书7》' anchors=8
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC8 '《判决文书8》' anchors=9
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC9 '《判决文书9》' anchors=6
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC10 '《判决文书10》' anchors=2
+    -> no_evidence | rounds=2 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=0
+  -> answer: []
+
+==== sample financial_level3_1280 (idx=1280) ====
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=3 | evidence='截至2024年3月31日，公司预付款项为62,606,303.29元，属于低预付款类别（0以上且100,000,000.00以下）。公司名称为洋河股份。'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> no_evidence | rounds=5 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='预付款项的期末余额为 228,126,438.00 元，属于“高预付款”；期初余额为 175,605,702.96 元，属于“中预付款”。'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=2
+  -> answer: {'洋河股份': '低预付款', '云南恩捷新材料股份有限公司': '高预付款'}
+
+==== sample legal_level3_469 (idx=469) ====
+  doc DOC1 '《判决文书1》' anchors=6
+    -> evidence_found | rounds=3 | evidence="{'执行案由-先予执行': ['《判决文书1》']}"
+  doc DOC2 '《判决文书2》' anchors=5
+    -> evidence_found | rounds=2 | evidence="{'行政行为-行政裁决': ['《判决文书2》'], '执行案由-先予执行': [], '海事海商纠纷': [], '行政行为-行政强制': [], '物权保护"
+  doc DOC3 '《判决文书3》' anchors=6
+    -> evidence_found | rounds=3 | evidence="{'行政行为-行政裁决': ['《判决文书3》']}"
+  doc DOC4 '《判决文书4》' anchors=9
+    -> evidence_found | rounds=4 | evidence="{'执行案由-先予执行': ['《判决文书4》']}"
+  doc DOC5 '《判决文书5》' anchors=6
+    -> evidence_found | rounds=1 | evidence="{'行政行为-行政裁决': [], '执行案由-先予执行': [], '海事海商纠纷': [], '行政行为-行政强制': [], '物权保护纠纷': ['《判"
+  doc DOC6 '《判决文书6》' anchors=10
+    -> evidence_found | rounds=2 | evidence="{'行政行为-行政裁决': [], '执行案由-先予执行': [], '海事海商纠纷': ['《判决文书6》'], '行政行为-行政强制': [], '物权保护"
+  doc DOC7 '《判决文书7》' anchors=9
+    -> evidence_found | rounds=1 | evidence="{'行政行为-行政裁决': [], '执行案由-先予执行': [], '海事海商纠纷': [], '行政行为-行政强制': [], '物权保护纠纷': ['《判"
+  doc DOC8 '《判决文书8》' anchors=3
+    -> evidence_found | rounds=2 | evidence="{'行政行为-行政裁决': ['《判决文书8》']}"
+  doc DOC9 '《判决文书9》' anchors=6
+    -> evidence_found | rounds=2 | evidence="{'执行案由-先予执行': ['《判决文书9》']}"
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=0
+  -> answer: {'行政行为-行政裁决': [], '执行案由-先予执行': [], '海事海商纠纷': [], '行政行为-行政强制': [], '物权保护纠纷': []}
+
+==== sample paper_level3_63 (idx=63) ====
+  doc DOC1 'Understanding the planning of LLM agents' anchors=13
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC2 'AUtoAcT: Automatic Agent Learning from S' anchors=11
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 'Enhancing the General Agent Capabilities' anchors=11
+    -> evidence_found | rounds=2 | evidence='{\n  "Reference": ["Autoact: Automatic agent learning from scratch via self-plann'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: {'Reference': [], 'Citation': ['Enhancing the General Agent Capabilities of Low-Parameter LLMs through Tuning and Multi-Branch Reasoning']}
+
+==== sample financial_level4_1504 (idx=1504) ====
+  doc DOC1 '《2022年一季度报告》' anchors=10
+    -> evidence_found | rounds=1 | evidence='2022年一季度净利润为114,712,333.67元，归属于母公司所有者的净利润为114,675,694.25元。'
+  doc DOC2 '《2024年一季度报告》' anchors=12
+    -> evidence_found | rounds=4 | evidence='2024年第一季度净利润为353,563,445.96元，2023年第一季度净利润为230,505,318.53元，净利润增长率为53.39%。'
+  doc DOC3 '《2023年一季度报告》' anchors=5
+    -> evidence_found | rounds=2 | evidence='2023年一季度净利润为230,505,318.53元，同比增长率为100.94%。'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=2
+  -> answer: {'2023年一季度': '100.94%', '2024年一季度': '53.39%'}
+
+==== sample legal_level4_596 (idx=596) ====
+  doc DOC1 '《判决文书1》' anchors=10
+    -> evidence_found | rounds=1 | evidence='{"《判决文书1》":"判决结果5"}'
+  doc DOC2 '《判决文书2》' anchors=11
+    -> evidence_found | rounds=1 | evidence='《判决文书2》:判决结果2'
+  doc DOC3 '《判决文书3》' anchors=13
+    -> evidence_found | rounds=1 | evidence='《判决文书3》:判决结果3'
+  doc DOC4 '《判决文书4》' anchors=8
+    -> evidence_found | rounds=2 | evidence='{"《判决文书4》":"判决结果1"}'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=4
+  -> answer: {'《判决文书1》': '5', '《判决文书2》': '2', '《判决文书3》': '3', '《判决文书4》': '1'}
+
+==== sample paper_level4_32 (idx=32) ====
+  doc DOC1 'BEYOND TRADITIONAL MAGNETIC RESONANCE PR' anchors=15
+    -> evidence_found | rounds=1 | evidence='["BEYOND TRADITIONAL MAGNETIC RESONANCE PROCESSING WITH ARTIFICIAL INTELLIGENCE"'
+  doc DOC2 'Semantically Conditioned LSTM-based Natu' anchors=9
+    -> evidence_found | rounds=5 | evidence='["Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dia'
+  doc DOC3 'A Neural Network Architecture Combining ' anchors=11
+    -> evidence_found | rounds=5 | evidence='["A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support'
+  doc DOC4 'Deep Learning using Rectified Linear Uni' anchors=7
+    -> no_evidence | rounds=3 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=0
+  -> answer: []
+{
+  "prediction_path": "/workspace/lambo/logs/lambo_v2_set1_10_qwen32b/lambo_predictions.jsonl",
+  "structured_summary": {
+    "sample_count": 10,
+    "exact_match_rate": 0,
+    "avg_pair_f1": 0.13333333333333333
+  },
+  "llm_judge_summary": {
+    "total": 10,
+    "scoring_success_rate": 1.0,
+    "avg_score": 50.5,
+    "perfect_count": 2,
+    "perfect_rate": 0.2
+  },
+  "num_errors": 0
+}

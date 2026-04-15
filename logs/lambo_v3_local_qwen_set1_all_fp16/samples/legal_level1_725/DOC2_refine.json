@@ -1,0 +1,90 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "scan_result": "insufficient_evidence",
+  "doc_relevance": "low",
+  "stop_reason": "",
+  "doc_hypothesis": "此文档可能不包含案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+  "evidence": "",
+  "gold_spans": [],
+  "evidence_items": [],
+  "entity_candidates": [
+    "西安市雁塔区人民法院",
+    "张某",
+    "张某某",
+    "周某",
+    "陕西**置业有限公司"
+  ],
+  "opened_anchors": [
+    "DOC2_A5",
+    "DOC2_A2",
+    "DOC2_A7",
+    "DOC2_A1",
+    "DOC2_A8",
+    "DOC2_A3"
+  ],
+  "rounds_used": 6,
+  "step_records": [
+    {
+      "step_id": "DOC2_R1",
+      "action": "open",
+      "anchor_id": "DOC2_A5",
+      "anchor_title": "法院查明的事实",
+      "planner_reason": "选择打开'法院查明的事实'部分，以确认是否存在与案由相关的详细信息。",
+      "extraction_summary": "此锚点内容涉及房屋买卖合同纠纷案件的事实查明部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R2",
+      "action": "open",
+      "anchor_id": "DOC2_A2",
+      "anchor_title": "案件审理情况",
+      "planner_reason": "选择打开案件审理情况部分，以确认是否存在与案由相关的判决文书。",
+      "extraction_summary": "此锚点内容涉及不动产登记纠纷案件的事实查明部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R3",
+      "action": "open",
+      "anchor_id": "DOC2_A7",
+      "anchor_title": "法院判决理由",
+      "planner_reason": "选择打开法院判决理由部分，以进一步确认是否存在相关案由的判决文书。",
+      "extraction_summary": "此锚点内容涉及不动产登记纠纷案件的判决理由部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "enough",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R4",
+      "action": "open",
+      "anchor_id": "DOC2_A1",
+      "anchor_title": "当事人信息",
+      "planner_reason": "尚未找到相关案由的判决文书，尝试打开当事人信息以确认是否有相关信息。",
+      "extraction_summary": "此锚点内容涉及当事人信息，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R5",
+      "action": "open",
+      "anchor_id": "DOC2_A8",
+      "anchor_title": "判决结果",
+      "planner_reason": "尚未找到相关案由的判决文书，继续检查剩余的锚点以确认是否存在相关信息。",
+      "extraction_summary": "此锚点内容涉及判决结果部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "enough",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC2_R6",
+      "action": "open",
+      "anchor_id": "DOC2_A3",
+      "anchor_title": "原告的诉讼请求",
+      "planner_reason": "尚未找到相关案由的判决文书，尝试打开原告的诉讼请求部分以寻找相关信息。",
+      "extraction_summary": "此锚点内容涉及不动产登记纠纷案件的诉讼请求和事实理由部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC2_A5 | relevance=low | reason=选择打开'法院查明的事实'部分，以确认是否存在与案由相关的详细信息。\nextractor: 此锚点内容涉及房屋买卖合同纠纷案件的事实查明部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0\n--- Round 2 ---\nplanner: open DOC2_A2 | relevance=low | reason=选择打开案件审理情况部分，以确认是否存在与案由相关的判决文书。\nextractor: 此锚点内容涉及不动产登记纠纷案件的事实查明部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC2_A7 | relevance=low | reason=选择打开法院判决理由部分，以进一步确认是否存在相关案由的判决文书。\nextractor: 此锚点内容涉及不动产登记纠纷案件的判决理由部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC2_A1 | relevance=low | reason=尚未找到相关案由的判决文书，尝试打开当事人信息以确认是否有相关信息。\nextractor: 此锚点内容涉及当事人信息，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0\n--- Round 5 ---\nplanner: open DOC2_A8 | relevance=low | reason=尚未找到相关案由的判决文书，继续检查剩余的锚点以确认是否存在相关信息。\nextractor: 此锚点内容涉及判决结果部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0\n--- Round 6 ---\nplanner: open DOC2_A3 | relevance=low | reason=尚未找到相关案由的判决文书，尝试打开原告的诉讼请求部分以寻找相关信息。\nextractor: 此锚点内容涉及不动产登记纠纷案件的诉讼请求和事实理由部分，未提及案由为'侵犯公民人身权利,民主权利罪'的判决文书。\nnew_spans: 0"
+}

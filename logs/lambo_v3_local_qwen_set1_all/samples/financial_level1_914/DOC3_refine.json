@@ -1,0 +1,101 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "doc_relevance": "low",
+  "stop_reason": "已评估文档内容，未找到相关信息，且文档与洋河股份的相关性较低。",
+  "doc_hypothesis": "此文档可能包含洋河股份的财务信息，但尚未找到使用权资产的具体金额。",
+  "evidence": "使用权资产|249,120,154.43|255,853,131.59",
+  "gold_spans": [
+    {
+      "span_id": "DOC3_S1",
+      "anchor_id": "DOC3_A6",
+      "quote": "使用权资产|249,120,154.43|255,853,131.59",
+      "rationale": "此段文字包含了使用权资产的具体金额，但未明确指出是洋河股份的数据。",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "",
+        "asset_type": "使用权资产",
+        "amount": "249,120,154.43"
+      },
+      "confidence": 0.5
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "DOC3_E1",
+      "doc_id": "DOC3",
+      "doc_title": "《2024年一季度报告》",
+      "anchor_id": "DOC3_A6",
+      "anchor_title": "合并资产负债表",
+      "quote": "使用权资产|249,120,154.43|255,853,131.59",
+      "evidence_type": "financial_figure",
+      "fields": {
+        "company": "",
+        "asset_type": "使用权资产",
+        "amount": "249,120,154.43"
+      },
+      "support_score": 0.5,
+      "source_char_span": [
+        7645,
+        9770
+      ]
+    }
+  ],
+  "entity_candidates": [
+    "洋河股份",
+    "深圳市奋达科技股份有限公司"
+  ],
+  "opened_anchors": [
+    "DOC3_A6",
+    "DOC3_A3",
+    "DOC3_A7",
+    "DOC3_A8"
+  ],
+  "rounds_used": 4,
+  "step_records": [
+    {
+      "step_id": "DOC3_R1",
+      "action": "open",
+      "anchor_id": "DOC3_A6",
+      "anchor_title": "合并资产负债表",
+      "planner_reason": "合并资产负债表可能包含使用权资产的相关信息。",
+      "extraction_summary": "此锚点提供了合并资产负债表的信息，但未明确提及洋河股份的使用权资产金额。",
+      "status": "continue",
+      "new_span_ids": [
+        "DOC3_S1"
+      ]
+    },
+    {
+      "step_id": "DOC3_R2",
+      "action": "open",
+      "anchor_id": "DOC3_A3",
+      "anchor_title": "资产负债表变动",
+      "planner_reason": "资产负债表变动可能包含关于使用权资产的相关信息。",
+      "extraction_summary": "此锚点提供了资产负债表变动的信息，但未提及洋河股份的使用权资产金额。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R3",
+      "action": "open",
+      "anchor_id": "DOC3_A7",
+      "anchor_title": "合并利润表",
+      "planner_reason": "合并利润表可能包含与使用权资产相关的财务信息。",
+      "extraction_summary": "此锚点提供了合并利润表的信息，但未提及洋河股份的使用权资产金额。",
+      "status": "continue",
+      "new_span_ids": []
+    },
+    {
+      "step_id": "DOC3_R4",
+      "action": "open",
+      "anchor_id": "DOC3_A8",
+      "anchor_title": "合并现金流量表",
+      "planner_reason": "合并现金流量表可能包含与使用权资产相关的详细信息。",
+      "extraction_summary": "此锚点提供了合并现金流量表的信息，但未提及洋河股份的使用权资产金额。",
+      "status": "continue",
+      "new_span_ids": []
+    }
+  ],
+  "trace": "--- Round 1 ---\nplanner: open DOC3_A6 | relevance=medium | reason=合并资产负债表可能包含使用权资产的相关信息。\nextractor: 此锚点提供了合并资产负债表的信息，但未明确提及洋河股份的使用权资产金额。\nnew_spans: 1\n--- Round 2 ---\nplanner: open DOC3_A3 | relevance=medium | reason=资产负债表变动可能包含关于使用权资产的相关信息。\nextractor: 此锚点提供了资产负债表变动的信息，但未提及洋河股份的使用权资产金额。\nnew_spans: 0\n--- Round 3 ---\nplanner: open DOC3_A7 | relevance=medium | reason=合并利润表可能包含与使用权资产相关的财务信息。\nextractor: 此锚点提供了合并利润表的信息，但未提及洋河股份的使用权资产金额。\nnew_spans: 0\n--- Round 4 ---\nplanner: open DOC3_A8 | relevance=medium | reason=合并现金流量表可能包含与使用权资产相关的详细信息。\nextractor: 此锚点提供了合并现金流量表的信息，但未提及洋河股份的使用权资产金额。\nnew_spans: 0\n--- Round 5 ---\nplanner: stop | relevance=low | reason=已打开多个锚点，但未找到洋河股份的使用权资产金额。"
+}

@@ -1,0 +1,40 @@
+{
+  "plan_id": "-_-",
+  "query_focus": "对提供的判决文书按照指定的案由进行分类，并输出每篇判决文书的标题。",
+  "output_shape": "dict",
+  "search_objective": "寻找每个判决文书中提到的案由类型，包括'行政行为-行政裁决'、'执行案由-先予执行'、'海事海商纠纷'、'行政行为-行政强制'、'物权保护纠纷'。",
+  "answer_objective": "将每个判决文书按其包含的案由分类，并以指定格式输出标题列表。",
+  "focus_aspects": [
+    "case_reason",
+    "document_title"
+  ],
+  "closed_set_labels": [
+    "行政行为-行政裁决",
+    "执行案由-先予执行",
+    "海事海商纠纷",
+    "行政行为-行政强制",
+    "物权保护纠纷"
+  ],
+  "structure_hints": [
+    "grouping"
+  ],
+  "structure_views": [
+    {
+      "view_type": "grouping",
+      "title": "判决文书分类",
+      "fields": [
+        "case_reason",
+        "document_title",
+        "supporting_evidence_ids"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "提取每个判决文书中明确提及的案由类型，确保提取的文本中包含具体的案由名称。"
+  ],
+  "stop_checks": [
+    "在每个文档中至少打开一个锚点之前，不得停止搜索。",
+    "如果已经确定某个文档不属于任何指定的案由，则可以停止进一步搜索该文档。"
+  ],
+  "raw_text": "{\n  \"query_focus\": \"对提供的判决文书按照指定的案由进行分类，并输出每篇判决文书的标题。\",\n  \"output_shape\": \"dict\",\n  \"search_objective\": \"寻找每个判决文书中提到的案由类型，包括'行政行为-行政裁决'、'执行案由-先予执行'、'海事海商纠纷'、'行政行为-行政强制'、'物权保护纠纷'。\",\n  \"answer_objective\": \"将每个判决文书按其包含的案由分类，并以指定格式输出标题列表。\",\n  \"focus_aspects\": [\"case_reason\", \"document_title\"],\n  \"closed_set_labels\": [\"行政行为-行政裁决\", \"执行案由-先予执行\", \"海事海商纠纷\", \"行政行为-行政强制\", \"物权保护纠纷\"],\n  \"structure_hints\": [\"grouping\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"grouping\",\n      \"title\": \"判决文书分类\",\n      \"fields\": [\"case_reason\", \"document_title\", \"supporting_evidence_ids\"]\n    }\n  ],\n  \"span_guidelines\": [\"提取每个判决文书中明确提及的案由类型，确保提取的文本中包含具体的案由名称。\"],\n  \"stop_checks\": [\"在每个文档中至少打开一个锚点之前，不得停止搜索。\", \"如果已经确定某个文档不属于任何指定的案由，则可以停止进一步搜索该文档。\"]\n}"
+}

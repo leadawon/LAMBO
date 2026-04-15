@@ -1,0 +1,35 @@
+{
+  "plan_id": "unknown",
+  "query_focus": "找出支付给职工以及为职工支付的现金最高的公司。",
+  "output_shape": "string",
+  "search_objective": "寻找每个文档中关于'支付给职工以及为职工支付的现金'的具体数值。",
+  "answer_objective": "确定并报告支付给职工以及为职工支付的现金最高的公司名称。",
+  "focus_aspects": [
+    "company",
+    "cash_paid_to_employees"
+  ],
+  "closed_set_labels": [],
+  "structure_hints": [
+    "ranking"
+  ],
+  "structure_views": [
+    {
+      "view_type": "ranking",
+      "title": "CashPaidToEmployeesRanking",
+      "fields": [
+        "company",
+        "cash_paid_to_employees",
+        "supporting_evidence_ids"
+      ]
+    }
+  ],
+  "span_guidelines": [
+    "提取具体的数值和单位，并确保包含上下文以确认该数值对应的是'支付给职工以及为职工支付的现金'。",
+    "确保提取的数值与公司名称关联正确。"
+  ],
+  "stop_checks": [
+    "至少打开一个锚点以查看文档内容。",
+    "如果找到所有相关数值，则可以停止进一步搜索。"
+  ],
+  "raw_text": "{\n  \"query_focus\": \"找出支付给职工以及为职工支付的现金最高的公司。\",\n  \"output_shape\": \"string\",\n  \"search_objective\": \"寻找每个文档中关于'支付给职工以及为职工支付的现金'的具体数值。\",\n  \"answer_objective\": \"确定并报告支付给职工以及为职工支付的现金最高的公司名称。\",\n  \"focus_aspects\": [\"company\", \"cash_paid_to_employees\"],\n  \"closed_set_labels\": [],\n  \"structure_hints\": [\"ranking\"],\n  \"structure_views\": [\n    {\n      \"view_type\": \"ranking\",\n      \"title\": \"CashPaidToEmployeesRanking\",\n      \"fields\": [\"company\", \"cash_paid_to_employees\", \"supporting_evidence_ids\"]\n    }\n  ],\n  \"span_guidelines\": [\n    \"提取具体的数值和单位，并确保包含上下文以确认该数值对应的是'支付给职工以及为职工支付的现金'。\",\n    \"确保提取的数值与公司名称关联正确。\"\n  ],\n  \"stop_checks\": [\n    \"至少打开一个锚点以查看文档内容。\",\n    \"如果找到所有相关数值，则可以停止进一步搜索。\"\n  ]\n}"
+}

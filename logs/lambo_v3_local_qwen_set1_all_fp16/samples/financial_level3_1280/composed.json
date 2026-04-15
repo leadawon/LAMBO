@@ -1,0 +1,69 @@
+{
+  "projection_map": {
+    "DOC1": "《2024年一季度报告》",
+    "DOC2": "《2024年一季度报告》",
+    "DOC3": "《2024年一季度报告》"
+  },
+  "analysis_schema": {
+    "schema_id": "prepayment_classification",
+    "primary_view_type": "grouping",
+    "description": "对公司财报中的'预付款项'进行分类",
+    "fields": [
+      "company_report",
+      "prepayment_amount",
+      "category",
+      "supporting_evidence_ids"
+    ]
+  },
+  "artifacts": [
+    {
+      "artifact_id": "prepayment_grouping",
+      "view_type": "grouping",
+      "title": "预付款项分类",
+      "schema": {
+        "fields": [
+          "company_report",
+          "prepayment_amount",
+          "category",
+          "supporting_evidence_ids"
+        ]
+      },
+      "rows": [
+        {
+          "company_report": "合并资产负债表",
+          "prepayment_amount": "62,606,303.29",
+          "category": "低预付款",
+          "supporting_evidence_ids": [
+            "DOC1_E1"
+          ]
+        },
+        {
+          "company_report": "云南恩捷新材料股份有限公司",
+          "prepayment_amount": "228,126,438.00",
+          "category": "中预付款",
+          "supporting_evidence_ids": [
+            "DOC3_E1"
+          ]
+        }
+      ],
+      "notes": "未找到DOC2的相关数据"
+    }
+  ],
+  "candidate_answer": {
+    "合并资产负债表": {
+      "prepayment_amount": "62,606,303.29",
+      "category": "低预付款"
+    },
+    "云南恩捷新材料股份有限公司": {
+      "prepayment_amount": "228,126,438.00",
+      "category": "中预付款"
+    }
+  },
+  "answer_rationale": "基于预付款项分类分析，候选答案是从两个文档中提取的预付款项数值及其分类。",
+  "unresolved_issues": [
+    "DOC2未提供有关'预付款项'的具体数值，无法对其进行分类"
+  ],
+  "raw_text": "```json\n{\n  \"projection_map\": {\n    \"DOC1\": \"《2024年一季度报告》\",\n    \"DOC2\": \"《2024年一季度报告》\",\n    \"DOC3\": \"《2024年一季度报告》\"\n  },\n  \"analysis_schema\": {\n    \"schema_id\": \"prepayment_classification\",\n    \"primary_view_type\": \"grouping\",\n    \"description\": \"对公司财报中的'预付款项'进行分类\",\n    \"fields\": [\"company_report\", \"prepayment_amount\", \"category\", \"supporting_evidence_ids\"]\n  },\n  \"artifacts\": [\n    {\n      \"artifact_id\": \"prepayment_grouping\",\n      \"view_type\": \"grouping\",\n      \"title\": \"预付款项分类\",\n      \"schema\": {\n        \"fields\": [\"company_report\", \"prepayment_amount\", \"category\", \"supporting_evidence_ids\"]\n      },\n      \"rows\": [\n        {\n          \"company_report\": \"合并资产负债表\",\n          \"prepayment_amount\": \"62,606,303.29\",\n          \"category\": \"低预付款\",\n          \"supporting_evidence_ids\": [\"DOC1_E1\"]\n        },\n        {\n          \"company_report\": \"云南恩捷新材料股份有限公司\",\n          \"prepayment_amount\": \"228,126,438.00\",\n          \"category\": \"中预付款\",\n          \"supporting_evidence_ids\": [\"DOC3_E1\"]\n        }\n      ],\n      \"notes\": \"未找到DOC2的相关数据\"\n    }\n  ],\n  \"candidate_answer\": {\n    \"合并资产负债表\": {\n      \"prepayment_amount\": \"62,606,303.29\",\n      \"category\": \"低预付款\"\n    },\n    \"云南恩捷新材料股份有限公司\": {\n      \"prepayment_amount\": \"228,126,438.00\",\n      \"category\": \"中预付款\"\n    }\n  },\n  \"answer_rationale\": \"基于预付款项分类分析，候选答案是从两个文档中提取的预付款项数值及其分类。\",\n  \"unresolved_issues\": [\"DOC2未提供有关'预付款项'的具体数值，无法对其进行分类\"]\n}\n```",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 2
+}
