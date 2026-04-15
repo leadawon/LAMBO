@@ -197,11 +197,24 @@ def extract_json_payload(text: str) -> Optional[Any]:
 
 
 def extract_tag_content(text: str, tag: str) -> Optional[str]:
-    pattern = re.compile(rf"<{tag}>(.*?)</{tag}>", re.DOTALL | re.IGNORECASE)
-    matches = pattern.findall(str(text or ""))
-    if not matches:
+    """Return the content of the *last* complete <tag>...</tag> pair.
+
+    Uses rfind to anchor on the last opening tag so that malformed output
+    like ``<answer>garbage</think>…<answer></answer>`` correctly returns
+    the content of the final (intended) tag rather than spanning all the
+    junk between the first open and the only close.
+    """
+    text = str(text or "")
+    open_tag = f"<{tag}>"
+    close_tag = f"</{tag}>"
+    last_open = text.lower().rfind(open_tag.lower())
+    if last_open == -1:
         return None
-    return matches[-1].strip()
+    after_open = last_open + len(open_tag)
+    close_pos = text.lower().find(close_tag.lower(), after_open)
+    if close_pos == -1:
+        return None
+    return text[after_open:close_pos].strip()
 
 
 def write_json(path: Path, payload: Any) -> Path:
