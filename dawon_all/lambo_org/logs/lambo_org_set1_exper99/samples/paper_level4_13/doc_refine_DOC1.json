@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "LGDE: Local Graph-based Dictionary Expansion",
+  "scan_result": "found",
+  "evidence": "[DOC1_C008] (score=0.3275)\nLet us consider a pre-selected list of $n$ keywords $W_{0}=\\left\\{w_{1}, w_{2}, \\ldots, w_{n}\\right\\}$, denoted the seed dictionary, which are known to be relevant to a certain topic. These initial terms are usually derived from expert knowledge, literature research or existing keyword lists (Gharibshah et al., 2022; Heft et al., 2023). Let us further assume that we have access to a domain-specific corpus of $l$ documents $D=$ $\\left\\{d_{1}, d_{2}, \\ldots, d_{l}\\right\\}$ related to the topic of interest, and each keyword in $W_{0}$ is contained in at least one document.We can then formulate the dictionary expansion problem: expand the seed dictionary $W_{0}$ by $m$ new words from the domain-specific corpus $D$ to obtain a data-driven expanded dictionary $W=\\left\\{w_{1}, w_{2}, \\ldots, w_{n}, w_{n+1}, \\ldots, w_{n+m}\\right\\}$ such that the newly discovered keywords make $W$ 'more representative' of the topics of interest as measured by evaluation metrics such as the $F_{1}$ score that balances precision and recall.[^0]\n### 1.2 Related work\n\n[DOC1_C032] (score=0.2155)\nThe constructed graph $G^{(k)}$ encodes the semantic information contained in our domain-specific\ncorpus $D$ at a word-level representation with the inter-word weighted edges $E^{(k)}$ capturing relevant semantic similarities between words. Hence, paths in the graph can be interpreted as chains of word associations. Moreover, the keywords in the seed dictionary $W_{0}$ are nodes in the graph and we can study their context and related words by computing their local semantic community structure. To do so, we use the severability method for fast local community detection (Yu et al., 2020) and determine the semantic community $C(\\boldsymbol{w})$ for each seed keyword $\\boldsymbol{w} \\in W_{0}$. Severability is a community detection algorithm that detects local graph communities by exploiting a discrete-time random walk with transition probability matrix $P$, where $P_{u, v}$ is the probability of the random walk jumping from word $\\boldsymbol{u} \\in V$ to $\\boldsymbol{v} \\in V$ given by:\n\n[DOC1_C084] (score=0.2034)\nWouter van Atteveldt, Dafne van Kuppevelt, and Kasper Welbers. 2022. CAVA: An open source $\\mathrm{R}$ toolkit for dictionary Coherence, Adaptation, Validation, and Analysis.\n\n[DOC1_C096] (score=0.2036)\nJoobin Gharibshah, Jakapun Tachaiya, Arman Irani, Evangelos E. Papalexakis, and Michalis Faloutsos. 2022. IKEA: Unsupervised domain-specific keyword-expansion. In 2022 IEEE/ACM International Conference on\nAdvances in Social Networks Analysis and Mining (ASONAM), pages 496-503.\n\n[DOC1_C104] (score=0.2647)\nRada Mihalcea and Paul Tarau. 2004. TextRank: Bringing Order into Text. In Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing, pages 404-411, Barcelona, Spain. Association for Computational Linguistics.\n\n[DOC1_C122] (score=0.3388)\nZhi Zheng, Kai Hui, Ben He, Xianpei Han, Le Sun, and Andrew Yates. 2020. Bert-qe: contextualized query expansion for document reranking. arXiv preprint arXiv:2009.07258.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C008",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.32748711109161377,
+      "preview": "Let us consider a pre-selected list of $n$ keywords $W_{0}=\\left\\{w_{1}, w_{2}, \\ldots, w_{n}\\right\\}$, denoted the seed dictionary, which are known to be relevant to a certain topic. These initial terms are usually d..."
+    },
+    {
+      "anchor_id": "DOC1_C032",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.21549981832504272,
+      "preview": "The constructed graph $G^{(k)}$ encodes the semantic information contained in our domain-specific corpus $D$ at a word-level representation with the inter-word weighted edges $E^{(k)}$ capturing relevant semantic simi..."
+    },
+    {
+      "anchor_id": "DOC1_C084",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.20336410403251648,
+      "preview": "Wouter van Atteveldt, Dafne van Kuppevelt, and Kasper Welbers. 2022. CAVA: An open source $\\mathrm{R}$ toolkit for dictionary Coherence, Adaptation, Validation, and Analysis."
+    },
+    {
+      "anchor_id": "DOC1_C096",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.20359444618225098,
+      "preview": "Joobin Gharibshah, Jakapun Tachaiya, Arman Irani, Evangelos E. Papalexakis, and Michalis Faloutsos. 2022. IKEA: Unsupervised domain-specific keyword-expansion. In 2022 IEEE/ACM International Conference on Advances in..."
+    },
+    {
+      "anchor_id": "DOC1_C104",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.2647262215614319,
+      "preview": "Rada Mihalcea and Paul Tarau. 2004. TextRank: Bringing Order into Text. In Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing, pages 404-411, Barcelona, Spain. Association for Compu..."
+    },
+    {
+      "anchor_id": "DOC1_C122",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.33884015679359436,
+      "preview": "Zhi Zheng, Kai Hui, Ben He, Xianpei Han, Le Sun, and Andrew Yates. 2020. Bert-qe: contextualized query expansion for document reranking. arXiv preprint arXiv:2009.07258."
+    }
+  ]
+}

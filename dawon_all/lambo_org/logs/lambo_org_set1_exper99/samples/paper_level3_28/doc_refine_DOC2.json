@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon",
+  "scan_result": "found",
+  "evidence": "[DOC2_C001] (score=0.4565)\n# Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon\n\n[DOC2_C003] (score=0.3992)\nThe utilization of long contexts poses a big challenge for LLMs due to their limited context window size. Although the context window can be extended through fine-tuning, it will result in a considerable cost at both training and inference time, and exert an unfavorable impact to the LLM's original capabilities. In this work, we propose a new method called Activation Beacon, which condenses LLM's raw activations into compact forms such that the LLM can perceive a longer context with a limited context window. Activation Beacon is introduced as a plug-in module, which fully preserves the LLM's original capability in short contexts. It works with the sliding window to streamingly process the long context, which leads to a competitive memory and time efficiency in both training and inference. Activation Beacon is trained with short-sequence data of diversified condensing ratios. Thanks to such a treatment, it can be effectively learned to support different context lengths with a small training cost. Our experiment verifies Activation Beacon's effectiveness of context extension: it can remarkably accomplish highquality extension of Llama-2-7B's context by $\\times 100$ times (from $4 \\mathrm{~K}$ to $400 \\mathrm{~K}$ ); meanwhile, it can also achieve superior performances across a variety of longcontext language modeling and understanding tasks. The source code and model checkpoint are available at https://github.com/FlagOpen/FlagEmbedding\n\n[DOC2_C010] (score=0.4576)\nIn this work, we propose Activation Beacon (shown as Figure 2) as a new method for LLM's context extension. It condenses the LLM's raw activations (i.e. keys and values from the self-attention module) into highly compact forms such that the LLM can perceive the information from a vast scope of context even with a limited context window. The above idea shares the common philosophy as sparse attention [3, 8, 38] and context compression [4, 7, 19, 22, 14]. However, it enjoys substantial advantages over the previous methods in many perspectives, including the effectiveness of context extension (especially the quality of long-context generation and the flexibility of supporting diverse context lengths), inference and training efficiency, and the compatibility with the existing LLMs, thanks to a series of crucial technical designs.\n\n[DOC2_C018] (score=0.4039)\nWe aim to adapt the LLM itself for activation condensing given its strong context representation capability. Particularly, we employ special tokens, called beacon tokens, which prompt the LLM to condense the contextual information into their activations. We also maintain another copy of the LLM's MHA (multi-head self-attention) parameters, denoted as MHA ${ }^{b}$, including the layerwise projection matrices for queries, keys, values, and outputs $\\left\\{\\boldsymbol{W}_{Q}^{b}, \\boldsymbol{W}_{K}^{b}, \\boldsymbol{W}_{V}^{b}, \\boldsymbol{W}_{O}^{b}\\right\\}$. These parameters are specifically learned for condensing the activations. Besides, they are lightweight, merely accounting for $1 / 3$ of the LLM's original parameters (e.g., 2B with the LLaMA-2 7B model).\n\n[DOC2_C044] (score=0.4180)\nSecondly, Activation Beacon's performance is comparable to or even better than the fine-tuned full-attention methods. This result is remarkable knowing that Activation Beacon runs with a much higher efficiency (to be analyzed in Section 3.3). Although there are cases where some of the fine-tuned full-attention baselines achieve better performances, their empirical advantages may not be fully resulted from the introduction of long contextual information. For example, YaRN-128K's performance has already been notably higher than Llama-2-7B at the context length of $4 \\mathrm{~K}$, and so is the case with LongChat-32K on Proof-Pile and CodeParrot. Note that the update of the LLM's original parameters is not always favorable because it may not be well generalized to many other scenarios. By comparison, our method is simply a plug-in module to introduce long contextual information without affecting the LLM's existing capabilities.\n\n[DOC2_C050] (score=0.4036)\nextended to $100 \\mathrm{~K}$, where most of the baselines become either ineffective or out-of-memory (OOM). In fact, Activation Beacon is still effective even after the context length is further extended to $400 \\mathrm{~K}$ (see Figure 1), which means a $100 \\times$ extension of Llama-2-7B's maximum context length. Unlike many other methods like fine-tuning, Activation Beacon does not require any long-sequence training data to acquire such a super long-context capability, which contributes to its high usability in practice.\n### 3.2.2 More Long-Context Tasks",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C001",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.45650380849838257,
+      "preview": "# Soaring from 4K to 400K: Extending LLM's Context with Activation Beacon"
+    },
+    {
+      "anchor_id": "DOC2_C003",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.3991895318031311,
+      "preview": "The utilization of long contexts poses a big challenge for LLMs due to their limited context window size. Although the context window can be extended through fine-tuning, it will result in a considerable cost at both..."
+    },
+    {
+      "anchor_id": "DOC2_C010",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.4576413333415985,
+      "preview": "In this work, we propose Activation Beacon (shown as Figure 2) as a new method for LLM's context extension. It condenses the LLM's raw activations (i.e. keys and values from the self-attention module) into highly comp..."
+    },
+    {
+      "anchor_id": "DOC2_C018",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.4039171636104584,
+      "preview": "We aim to adapt the LLM itself for activation condensing given its strong context representation capability. Particularly, we employ special tokens, called beacon tokens, which prompt the LLM to condense the contextua..."
+    },
+    {
+      "anchor_id": "DOC2_C044",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.41799503564834595,
+      "preview": "Secondly, Activation Beacon's performance is comparable to or even better than the fine-tuned full-attention methods. This result is remarkable knowing that Activation Beacon runs with a much higher efficiency (to be..."
+    },
+    {
+      "anchor_id": "DOC2_C050",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.40360164642333984,
+      "preview": "extended to $100 \\mathrm{~K}$, where most of the baselines become either ineffective or out-of-memory (OOM). In fact, Activation Beacon is still effective even after the context length is further extended to $400 \\mat..."
+    }
+  ]
+}

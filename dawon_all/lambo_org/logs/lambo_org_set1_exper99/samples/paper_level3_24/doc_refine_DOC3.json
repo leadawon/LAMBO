@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "MedusA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+  "scan_result": "found",
+  "evidence": "[DOC3_C001] (score=0.4467)\n# MedusA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads\n\n[DOC3_C012] (score=0.4256)\nWe further enhance MedusA with two key insights. Firstly, the current approach of generating a single candidate continuation at each decoding step leads to a restricted acceptance length and inefficient use of computational resources. To address this, we propose generating multiple candidate continuations using the MEDUSA heads and verifying them concurrently through a simple adjustment to the attention mask. Secondly, we can use the rejection sampling scheme similar to that used in speculative decoding to generate responses with the same distribution as the original model, but it is usually unnecessary for many LLM applications. Alternatively, we also introduce a typical acceptance scheme that selects reasonable candidates from the MedusA head outputs. We use temperature as a threshold to manage deviation from the original model's predictions, providing an efficient alternative to the rejection sampling method. This approach effectively addresses its limitations, such as decreased speed at higher temperatures.\n\n[DOC3_C016] (score=0.5554)\nFigure 1: Overview of Medusa. Medusa introduces multiple heads on top of the last hidden states of the LLM, enabling the prediction of several subsequent tokens in parallel (Section 3.1.1). For training Medusa heads, the original model is either frozen (Medusa-1, Section 3.2.1) or trained together (Medusa-2, Section 3.2.2 with Medusa heads. During inference, each head generates multiple top predictions for its designated position. These predictions are assembled into candidates, which are subsequently processed in parallel using a tree-based attention mechanism (Section 3.1.2). The final step is to verify the candidates and accept a continuation. Besides the standard rejection sampling scheme, a typical acceptance scheme (Section 3.3.1) can also be used here to select reasonable continuations, and the longest accepted candidate prefix will be used for the next decoding phase. The efficiency of the decoding process is enhanced by accepting more tokens simultaneously, thus reducing the number of required decoding steps.\n## 2 Related Work\n\n[DOC3_C025] (score=0.4747)\nMEDUSA follows the same framework as speculative decoding, where each decoding step primarily consists of three substeps: (1) generating candidates, (2) processing candidates, and (3) accepting candidates. For MeduSA, (1) is achieved by Medusa heads, (2) is realized by tree attention, and since Medusa heads are on top of the original model, the logits calculated in (2) can be used for substep (1) for the next decoding step. The final step (3) can be realized by either rejection sampling [Leviathan et al. 2022, Chen et al. 2023] or typical acceptance (Section 3.3.1). The overall pipeline is illustrated in Figure 1\n\n[DOC3_C031] (score=0.4396)\nWe initialize $W_{1}^{(k)}$ identically to the original language model head, and $W_{2}^{(k)}$ to zero. This aligns the initial prediction of MEDUSA heads with that of the original model. The SiLU activation function [Elfwing et al. 2017] is employed following the Llama models [Touvron et al., 2023].\n\n[DOC3_C151] (score=0.4797)\n[^1]:    ${ }^{2}$ It's important to note that while MEDUSA can be seamlessly used in a batched inference setting, it requires additional engineering efforts to integrate into a serving engine like vLLM |Kwon et al. 2023]. We are working on this and also welcome community contributions to help us.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC3_C001",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.4466976821422577,
+      "preview": "# MedusA: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads"
+    },
+    {
+      "anchor_id": "DOC3_C012",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.4255950450897217,
+      "preview": "We further enhance MedusA with two key insights. Firstly, the current approach of generating a single candidate continuation at each decoding step leads to a restricted acceptance length and inefficient use of computa..."
+    },
+    {
+      "anchor_id": "DOC3_C016",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.5554171800613403,
+      "preview": "Figure 1: Overview of Medusa. Medusa introduces multiple heads on top of the last hidden states of the LLM, enabling the prediction of several subsequent tokens in parallel (Section 3.1.1). For training Medusa heads,..."
+    },
+    {
+      "anchor_id": "DOC3_C025",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.4746875762939453,
+      "preview": "MEDUSA follows the same framework as speculative decoding, where each decoding step primarily consists of three substeps: (1) generating candidates, (2) processing candidates, and (3) accepting candidates. For MeduSA,..."
+    },
+    {
+      "anchor_id": "DOC3_C031",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.43964430689811707,
+      "preview": "We initialize $W_{1}^{(k)}$ identically to the original language model head, and $W_{2}^{(k)}$ to zero. This aligns the initial prediction of MEDUSA heads with that of the original model. The SiLU activation function..."
+    },
+    {
+      "anchor_id": "DOC3_C151",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.4796968102455139,
+      "preview": "[^1]: ${ }^{2}$ It's important to note that while MEDUSA can be seamlessly used in a batched inference setting, it requires additional engineering efforts to integrate into a serving engine like vLLM |Kwon et al. 2023..."
+    }
+  ]
+}

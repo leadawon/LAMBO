@@ -288,6 +288,49 @@ def main() -> None:
         judge_out = {"summary": {"error": str(exc)}, "verdicts": []}
     write_json(layout["reports"] / "llm_judge.json", judge_out)
 
+    # Consolidated score files so `bash run_exper99.sh` leaves
+    # metrics.json / scores.json / summary.txt behind for later review.
+    structured_public = {
+        k: v for k, v in (structured_summary or {}).items() if k != "per_sample"
+    }
+    judge_summary = judge_out.get("summary", {}) or {}
+    metrics = {
+        "num_predictions": len(prediction_rows),
+        "num_errors": len(errors),
+        "structured_eval": structured_public,
+        "llm_judge_summary": judge_summary,
+    }
+    write_json(layout["reports"] / "metrics.json", metrics)
+
+    scores: Dict[str, Any] = {
+        "num_predictions": len(prediction_rows),
+        "num_errors": len(errors),
+    }
+    for k, v in structured_public.items():
+        if isinstance(v, (int, float)):
+            scores[f"structured.{k}"] = v
+    for k, v in judge_summary.items():
+        if isinstance(v, (int, float)):
+            scores[f"judge.{k}"] = v
+    write_json(layout["reports"] / "scores.json", scores)
+
+    summary_lines = [
+        f"prediction_path: {prediction_path}",
+        f"num_predictions: {len(prediction_rows)}",
+        f"num_errors: {len(errors)}",
+        "",
+        "== structured_eval ==",
+    ]
+    for k, v in structured_public.items():
+        summary_lines.append(f"  {k}: {v}")
+    summary_lines.append("")
+    summary_lines.append("== llm_judge ==")
+    for k, v in judge_summary.items():
+        summary_lines.append(f"  {k}: {v}")
+    (layout["reports"] / "summary.txt").write_text(
+        "\n".join(summary_lines) + "\n", encoding="utf-8"
+    )
+
     print(
         json_dumps_pretty(
             {

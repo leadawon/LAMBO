@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "PromptMind Team at EHRSQL-2024: Improving Reliability of SQL Generation using Ensemble LLMs",
+  "scan_result": "found",
+  "evidence": "[DOC1_C013] (score=0.1937)\nIn the remainder of this paper, we discuss related work, introduce the EHRSQL-2024 task and dataset, and present our two-stage approach. We then provide the results of our experiments and conclude with a summary of our findings.\n## 2 Related Work\n\n[DOC1_C017] (score=0.2208)\nThrough our work, we delve into the application of these techniques for the EHRSQL-2024 task.\n## 3 Shared Task and Dataset\n\n[DOC1_C025] (score=0.1952)\nThe dataset contains a combination of answerable and unanswerable questions across three subsets: train, valid, and test. Table 1 provides an overview of the composition of each subset.\n## 4 Approach\n\n[DOC1_C045] (score=0.2084)\n```\nAlgorithm 1: Multi-Embedding Retrieval\n    Data: train_questions, test_questions, N\n    Result: Similar train questions for test questions\n    // Same size as test_questions\n    // Each element contains top N similar train questions and scores\n    result $\\leftarrow[]$;\n    foreach embed_model $\\in M$ do\n        train_embeddings $\\leftarrow$ create_embeddings(embed_model, train_questions);\n        test_embeddings $\\leftarrow$ create_embeddings(embed_model, test_questions);\n        questions, scores $\\leftarrow$ compute_similarity(test_embeddings, train_embeddings, top_n=N);\n        $\\mu \\leftarrow$ compute_mean(scores);\n        $\\sigma \\leftarrow$ compute_std(scores);\n        z_scores $\\leftarrow$ (scores $-\\mu) / \\sigma$;\n        // Sort and merge top $\\mathrm{N}$ current questions with result\n        // If questions overlap, update with max score\n        result $\\leftarrow$ sort_and_merge(result, questions, z_scores);\n```\nFigure 1: SQL Generation Process\n\n[DOC1_C067] (score=0.2671)\nPatrick S. H. Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and\nDouwe Kiela. 2020. Retrieval-augmented generation for knowledge-intensive NLP tasks. CoRR, $\\mathrm{abs} / 2005.11401$\n\n[DOC1_C071] (score=0.2262)\nNiklas Muennighoff, Nouamane Tazi, Loïc Magne, and Nils Reimers. 2022. Mteb: Massive text embedding benchmark. arXiv preprint arXiv:2210.07316.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C013",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.19372056424617767,
+      "preview": "In the remainder of this paper, we discuss related work, introduce the EHRSQL-2024 task and dataset, and present our two-stage approach. We then provide the results of our experiments and conclude with a summary of ou..."
+    },
+    {
+      "anchor_id": "DOC1_C017",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.22079318761825562,
+      "preview": "Through our work, we delve into the application of these techniques for the EHRSQL-2024 task. ## 3 Shared Task and Dataset"
+    },
+    {
+      "anchor_id": "DOC1_C025",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.19523963332176208,
+      "preview": "The dataset contains a combination of answerable and unanswerable questions across three subsets: train, valid, and test. Table 1 provides an overview of the composition of each subset. ## 4 Approach"
+    },
+    {
+      "anchor_id": "DOC1_C045",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.20842987298965454,
+      "preview": "``` Algorithm 1: Multi-Embedding Retrieval Data: train_questions, test_questions, N Result: Similar train questions for test questions // Same size as test_questions // Each element contains top N similar train questi..."
+    },
+    {
+      "anchor_id": "DOC1_C067",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.267078697681427,
+      "preview": "Patrick S. H. Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela. 2020. Retrieval-augme..."
+    },
+    {
+      "anchor_id": "DOC1_C071",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.2262330800294876,
+      "preview": "Niklas Muennighoff, Nouamane Tazi, Loïc Magne, and Nils Reimers. 2022. Mteb: Massive text embedding benchmark. arXiv preprint arXiv:2210.07316."
+    }
+  ]
+}

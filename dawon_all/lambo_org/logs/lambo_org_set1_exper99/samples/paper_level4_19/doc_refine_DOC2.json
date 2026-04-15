@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Massively scalable stencil algorithm",
+  "scan_result": "found",
+  "evidence": "[DOC2_C061] (score=0.1636)\nUsing a FMUL instruction, incoming cells from a given direction are multiplied \"on the fly\" with coefficients depending on their respective distance to the local cell. There are 4 FMUL operations happening concurrently (one per cardinal direction). This is depicted as step 1 in Figure 5 for the data coming from the West. Each FMUL instruction operates on $5 \\times b$ incoming cells coming from a particular cardinal direction, and the coefficients (corresponding to $c_{x m}$ and $c_{y m}, \\forall m \\in\\{1 \\ldots 4\\}$ in Section III). A given coefficient is applied to $b$ consecutive cells are they are coming from the same distance neighbor.\n\n[DOC2_C073] (score=0.1825)\n(corresponding to discretization parameters $c_{z m}, \\forall m \\in$ $1 \\ldots 4)$. The result of each FMAC is placed into the accumulator buffer (which also contains the contributions from the $X$ and $Y$ dimensions). Given a target block of size $b$ starting at coordinate $z_{b}$, each FMAC takes an input block starting at index $z_{b}+$ offset and multiplies it by a coefficient. The offset values are $\\{0,1,2,3\\}$ and $\\{5,6,7,8\\}$, and corresponding coefficients are $\\left\\{c_{z 4}, c_{z 3}, c_{z 2}, c_{z 1}\\right\\}$ and $\\left\\{c_{z 1}, c_{z 2}, c_{z 3}, c_{z 4}\\right\\}$. The CSL code is provided in Figure 7 and the first 4 steps of this process are illustrated in Figure 6. As can be seen, this step skips offset 4, which would correspond to the multiplication by $c_{z 0}$, since that particular computation has already been done as discussed earlier. At the end of this step, the Laplacian is contained in the accumulator buffer.\n## D. Time integration\n\n[DOC2_C093] (score=0.1732)\nTABLE II: Experimental results for 1,000 time steps for various grid sizes with fixed $n z$.\n\n[DOC2_C129] (score=0.2244)\n[7] R. de la Cruz and M. Araya-Polo, \"Algorithm 942: Semistencil,\" ACM Trans. Math. Softw., vol. 40, no. 3, 2014.\n\n[DOC2_C140] (score=0.1661)\n[18] J. Meng, A. Atle, H. Calandra, and M. ArayaPolo, \"Minimod: A Finite Difference solver for Seismic Modeling,\" arXiv:2007.06048v1, Jul. 2020. [Online]. Available: https://arxiv.org/abs/2007.06048v1\n\n[DOC2_C148] (score=0.1784)\n[26] R. Sai, J. Mellor-Crummey, X. Meng, K. Zhou, M. ArayaPolo, and J. Meng, \"Accelerating high-order stencils on gpus,\" Concurrency and Computation: Practice and Experience, vol. e6467, 2021.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C061",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.1635584831237793,
+      "preview": "Using a FMUL instruction, incoming cells from a given direction are multiplied \"on the fly\" with coefficients depending on their respective distance to the local cell. There are 4 FMUL operations happening concurrentl..."
+    },
+    {
+      "anchor_id": "DOC2_C073",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.1824837177991867,
+      "preview": "(corresponding to discretization parameters $c_{z m}, \\forall m \\in$ $1 \\ldots 4)$. The result of each FMAC is placed into the accumulator buffer (which also contains the contributions from the $X$ and $Y$ dimensions)..."
+    },
+    {
+      "anchor_id": "DOC2_C093",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.17321260273456573,
+      "preview": "TABLE II: Experimental results for 1,000 time steps for various grid sizes with fixed $n z$."
+    },
+    {
+      "anchor_id": "DOC2_C129",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.2243620753288269,
+      "preview": "[7] R. de la Cruz and M. Araya-Polo, \"Algorithm 942: Semistencil,\" ACM Trans. Math. Softw., vol. 40, no. 3, 2014."
+    },
+    {
+      "anchor_id": "DOC2_C140",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.16613581776618958,
+      "preview": "[18] J. Meng, A. Atle, H. Calandra, and M. ArayaPolo, \"Minimod: A Finite Difference solver for Seismic Modeling,\" arXiv:2007.06048v1, Jul. 2020. [Online]. Available: https://arxiv.org/abs/2007.06048v1"
+    },
+    {
+      "anchor_id": "DOC2_C148",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.17838121950626373,
+      "preview": "[26] R. Sai, J. Mellor-Crummey, X. Meng, K. Zhou, M. ArayaPolo, and J. Meng, \"Accelerating high-order stencils on gpus,\" Concurrency and Computation: Practice and Experience, vol. e6467, 2021."
+    }
+  ]
+}

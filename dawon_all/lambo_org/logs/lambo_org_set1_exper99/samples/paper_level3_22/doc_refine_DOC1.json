@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+  "scan_result": "found",
+  "evidence": "[DOC1_C029] (score=0.3934)\nFigure 3: The proposed LLM-Modulo framework where LLMs act as idea generators and various external critiques that specialize in different aspects, critique the candidate plan.\n\n[DOC1_C035] (score=0.4198)\nFigure 3 gives a schematic of the LLM-Modulo Framework, as we envision it. As can be seen readily, the underlying architecture is a Generate-Test-Critique loop, with the LLM generating candidate plans and a bank of critics critiquing the candidate. The loop starts with the LLM getting the problem specification and generating its first plan candidate. ${ }^{10}$ Note that the plans an LLM helps generate in this architecture have soundness guarantees because of the external sound critics. This means that plans coming out of such an architecture will constitute a better corpus of synthetic data for any fine tuning phase carried out to improve/customize the LLM's generation capability.\n\n[DOC1_C042] (score=0.3977)\nOnce the LLM-Modulo framework \"solves\" a planning instance, the solution can then be added to a synthetic data corpus (step 6 in Figure 3), which is intermittently used to fine tune the LLM (step 7), so its future plan candidate guesses improve.\n\n[DOC1_C044] (score=0.3839)\nOne important question is where this additional data for fine tuning comes from. A tempting idea is to have the LLM itself generate this additional data, and improve it by self-critiquing/verification, before fine-tuning itself on the data. This EM-like approach unfortunately will not work given that LLMs can't verify their own solutions (see Section 2.2). In the past, this meant that the only reliable way to generate synthetic data is to use external plan generators-for example, use a classical planner like FF (Hoffmann \\& Nebel 2001) to solve a host of blocks world instances and then use those solutions to fine-tune the LLM. The LLM-Modulo framework, in contrast, provides an alternative way of using an LLM-based framework to generate synthetic data that is guaranteed correct.\n### 3.4 Specification Refinement \\& Model Acquisition (Semi-automated)\n\n[DOC1_C047] (score=0.4394)\nIt is worth summarizing the multiple roles the LLM plays in the LLM-Modulo architecture. The most prominent, of course, is its role in \"guessing\" the candidate plans (step 2 in Figure 3\" in response to problem specification and iterative back prompting from the bank of critics (Step 5). Second the LLM plays a role in converting the guessed plan candidate into specialized representations used by the various critics (e.g., the time-line view, the causal link view etc.). This role leverages the fact that LLMs are very good at format conversion (c.f. (Olmo et al., 2021)) Third, the LLM plays a role in helping the end user flesh out the incomplete problem specification to begin with (Step 1 in Figure 3). Finally, the LLM plays a role in helping the domain expert tease out and refine the domain models used by the various model-based critics (Guan et al., 2023; Kwon et al., 2022).\n## 4 Related Work\n\n[DOC1_C121] (score=0.4149)\n[^6]:    ${ }^{11}$ Such summarization is a reasonable strategy as the back prompts will not be treated as hard constraints by LLMs anyway.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C029",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.3933749198913574,
+      "preview": "Figure 3: The proposed LLM-Modulo framework where LLMs act as idea generators and various external critiques that specialize in different aspects, critique the candidate plan."
+    },
+    {
+      "anchor_id": "DOC1_C035",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.41981184482574463,
+      "preview": "Figure 3 gives a schematic of the LLM-Modulo Framework, as we envision it. As can be seen readily, the underlying architecture is a Generate-Test-Critique loop, with the LLM generating candidate plans and a bank of cr..."
+    },
+    {
+      "anchor_id": "DOC1_C042",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.39770573377609253,
+      "preview": "Once the LLM-Modulo framework \"solves\" a planning instance, the solution can then be added to a synthetic data corpus (step 6 in Figure 3), which is intermittently used to fine tune the LLM (step 7), so its future pla..."
+    },
+    {
+      "anchor_id": "DOC1_C044",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.3838845193386078,
+      "preview": "One important question is where this additional data for fine tuning comes from. A tempting idea is to have the LLM itself generate this additional data, and improve it by self-critiquing/verification, before fine-tun..."
+    },
+    {
+      "anchor_id": "DOC1_C047",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.4394284784793854,
+      "preview": "It is worth summarizing the multiple roles the LLM plays in the LLM-Modulo architecture. The most prominent, of course, is its role in \"guessing\" the candidate plans (step 2 in Figure 3\" in response to problem specifi..."
+    },
+    {
+      "anchor_id": "DOC1_C121",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.41486233472824097,
+      "preview": "[^6]: ${ }^{11}$ Such summarization is a reasonable strategy as the back prompts will not be treated as hard constraints by LLMs anyway."
+    }
+  ]
+}

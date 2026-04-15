@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING",
+  "scan_result": "found",
+  "evidence": "[DOC3_C001] (score=0.3324)\n# PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING\n\n[DOC3_C004] (score=0.4022)\nLarge Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain restricted by pre-defined context window sizes, suffering from notable performance decline when input tokens exceeds these limits. Nevertheless, numerous application scenarios demand extremely long input sequences, including long document summarization (Huang et al., 2021), in-context learning with numerous examples (Li et al., 2023), and long document retrieval (Zhou et al., 2022), etc. This naturally poses a significant challenge of context window extension: Extending the context window of a pre-trained LLM to accommodate longer sequences.\n\n[DOC3_C014] (score=0.3141)\nFine-tuning LLMs for Longer Context. Differing from length extrapolation, which primarily involves training a model from scratch to support lengths exceeding those it was initially trained for, context window extension focuses on extending the context window of a pre-trained LLM. Directly fine-tuning an existing LLM with a longer context window has been shown to progress slowly (Chen et al., 2023a). To expedite and stabilize training, Chen et al. (2023a) first down-scaled position indices to match original context size through Linear Position Interpolation. Subsequently, a range of Positional Interpolation (PI) strategies have been introduced, including NTK (Peng \\& Quesnelle, 2023) and YaRN (Peng et al., 2023). More recently, LongLora (Chen et al., 2023b) propose shift short attention to approximate full attention. However, all these methods require Full-length fine-tuning, suffering computational cost that grows with target context size. By contrast, our method managed to decouple train / target length, requiring only the original context size for fine-tuning.\n\n[DOC3_C045] (score=0.3178)\nTable 1 presents the results of scaling to $16 \\mathrm{k}$ and $32 \\mathrm{k}$ using Full-length, RandPos, and PoSE training method, each with linear interpolation (See Appendix C for results of NTK and YaRN) . For each scaled model, as well as the Original LLaMA model, we report perplexity scores at various evaluation context window sizes, ranging from $2 \\mathrm{k}$ to $32 \\mathrm{k}$, employing the sliding window approach proposed by Press et al. (2021). For evaluation efficiency, we set the stride of the sliding window to 1,024 .\n\n[DOC3_C047] (score=0.3787)\nWe also notice that all the scaling methods suffers certain performance degradation as the supported context length increases. We perceive this as a trade-off between the quantity of tokens the model can process and the level of granularity in the attention the model can pay to each individual token.\n### 4.3 PASSKEY RETRIEVAL FOR EFFECTIVE CONTEXT WINDOW\n\n[DOC3_C064] (score=0.3347)\nBecause PoSE only takes a fixed context window at training stage to extend to target context window size, we can promisingly extend LLMs to support infinite input lengths using this method. In this section, we extend context window size to $96 \\mathrm{k}$ and $128 \\mathrm{k}$ to explore PoSE's potential for extreme context window extension. Given the need to evaluate on extremely long documents, we have opted to employ two book datasets, namely Books3 (Presser, 2020) and Gutenberg (PG-19) (Rae et al., 2019). Both of these datasets consist of extensive collections of literary works, rendering them well-suited subjects for the assessment of long-range modeling. For our evaluation, we randomly selected 20 books from each dataset, each containing more than $128 \\mathrm{k}$ tokens.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC3_C001",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.33243244886398315,
+      "preview": "# PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING"
+    },
+    {
+      "anchor_id": "DOC3_C004",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.4021894335746765,
+      "preview": "Large Language Models (LLMs) have revolutionized language modeling and demonstrated impressive abilities to perform various tasks (Brown et al., 2020). However, even with their remarkable capacity, these LLMs remain r..."
+    },
+    {
+      "anchor_id": "DOC3_C014",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.3141026794910431,
+      "preview": "Fine-tuning LLMs for Longer Context. Differing from length extrapolation, which primarily involves training a model from scratch to support lengths exceeding those it was initially trained for, context window extensio..."
+    },
+    {
+      "anchor_id": "DOC3_C045",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.3178374469280243,
+      "preview": "Table 1 presents the results of scaling to $16 \\mathrm{k}$ and $32 \\mathrm{k}$ using Full-length, RandPos, and PoSE training method, each with linear interpolation (See Appendix C for results of NTK and YaRN) . For ea..."
+    },
+    {
+      "anchor_id": "DOC3_C047",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.3787118196487427,
+      "preview": "We also notice that all the scaling methods suffers certain performance degradation as the supported context length increases. We perceive this as a trade-off between the quantity of tokens the model can process and t..."
+    },
+    {
+      "anchor_id": "DOC3_C064",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.33471110463142395,
+      "preview": "Because PoSE only takes a fixed context window at training stage to extend to target context window size, we can promisingly extend LLMs to support infinite input lengths using this method. In this section, we extend..."
+    }
+  ]
+}

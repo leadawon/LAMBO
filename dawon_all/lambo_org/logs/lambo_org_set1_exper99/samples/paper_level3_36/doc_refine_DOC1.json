@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "RAG VS Fine-TUNing: PiPELINES, TRADEOFFS, AND A CASE STUDY ON AGRICULTURE",
+  "scan_result": "found",
+  "evidence": "[DOC1_C001] (score=0.3922)\n# RAG VS Fine-TUNing: PiPELINES, TRADEOFFS, AND A CASE STUDY ON AGRICULTURE\nMicrosoft<br>Angels Balaguer, Vinamra Benara, Renato Cunha, Roberto Estevão, Todd Hendry, Daniel Holstein,<br>Jennifer Marsman, Nick Mecklenburg, Sara Malvar, Leonardo O. Nunes, Rafael Padilha, Morris Sharp,<br>Bruno Silva, Swati Sharma, Vijay Aski, Ranveer Chandra\n#### Abstract\n\n[DOC1_C012] (score=0.3898)\nThe initial focus of the pipeline is to gather an assorted and well-curated dataset that captures information of interest to an industry. This enables the generation of questions and answers, forming the foundation for refining the models to produce more precise and pertinent responses. For this step, we seek data sources that contain high-quality, authoritative information on the topic of interest. For example, in agriculture, this includes agricultural and environmental government agencies, scientific knowledge repositories, and agronomist exams databases. It is also important that the information extracted to be aligned with the grounding that will be provided to the model. For instance, in the case of agricultural data, we sourced guidelines and procedures that were geography-specific, i.e. with a shared location among documents. We provide further details on the sources and type of documents selected for this step in Section 3 .\nWith authoritative sources defined, web scraping tools come into play to gather the required data. We employed web scraping frameworks, including Scrapy (Zyte, 2023) and BeautifulSoup (BeautifulSoup, 2023), to parse through the websites, uncovering all available documents and downloading the relevant files.\n\n[DOC1_C026] (score=0.4166)\n\"refs\": []...\n\\}\n\\}\n\\}\nListing 2: JSON file extracted from the PDF of Figure 2. We use GROBID (GRO, 2008-2023), which can extract the content and some of the structure (e.g., section and subsection organization) from the document.\n\n[DOC1_C028] (score=0.3876)\nListing 3: Prompt used to identify supporting context (i.e., list of locations and agronomic topics mentioned) from a document during question generation.\n### 2.4 Answer Generation\nWe employ Retrieval-Augmented Generation (RAG) (Lewis et al. 2020), which is an innovative approach that combines the power of retrieval and generation mechanisms, to create high-quality answers. RAG is particularly useful when dealing with large and complex datasets, as it can effectively recover relevant information associated with a query and use it to enhance the generation process.\n\n[DOC1_C030] (score=0.3831)\n```\n{{#system {}\nYou are an expert in agriculture and you are formulating questions from documents to assess\n    the knowledge of a student about agriculture-related topics.\nYou have access to the following document metadata encoded as JSON: {{context}}\n{{~/system}}\n{{#user~}}\nAn example of expected output follows:\nExamples:\n{examples}\nThe document is from {{source}} and has title: {{title}}\nAdd location (state, country) and crop information to each question, if possible.\nPlease formulate as many questions as possible to assess knowledge of the text below.\n{{section}}\n{{~/user}}\n{{#assistant ~}}\n{{gen 'answer' max_tokens=2000}}\n{{~/assistant}}\n```\nListing 4: Example of the question generation prompt for crop-related documents. When prompting the model, we replace the $\\{\\{$ context\\}\\} tag with the supporting information retrieved in the last step, as well as exchange the \\{\\{source\\}\\}, \\{\\{title\\}\\}, \\{\\{section\\}\\} tags for the document source, title, and the section content, respectively. The prompt was directly related to agriculture in our case, but should be adapted with domain-specific knowledge in other scenarios.\n### 2.5 Fine-tuning\n\n[DOC1_C061] (score=0.4312)\nThe primary objective of the experiments section is to offer a comprehensive evaluation and analysis of various models and their performance in generating $\\mathrm{Q} \\& \\mathrm{~A}$ pairs within the context of agricultural data and using these for RAG or fine-tuning. This assessment is crucial as it provides insight into the performance of these models and their potential applications in various settings. It further aids in identifying and understanding the strengths and weaknesses of different models and techniques, thereby offering a foundation for future developments.\nThe experiments section is structured into several self-contained experiments, each focusing on a specific aspect of $\\mathrm{Q} \\& \\mathrm{~A}$ generation and evaluation, RAG and fine-tuning. These experiments are designed to be independent yet complementary, providing a multifaceted understanding of the performance of the models.\nThe experiments explore the following areas:",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C001",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.3922070860862732,
+      "preview": "# RAG VS Fine-TUNing: PiPELINES, TRADEOFFS, AND A CASE STUDY ON AGRICULTURE Microsoft<br>Angels Balaguer, Vinamra Benara, Renato Cunha, Roberto Estevão, Todd Hendry, Daniel Holstein,<br>Jennifer Marsman, Nick Mecklenb..."
+    },
+    {
+      "anchor_id": "DOC1_C012",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.3898228406906128,
+      "preview": "The initial focus of the pipeline is to gather an assorted and well-curated dataset that captures information of interest to an industry. This enables the generation of questions and answers, forming the foundation fo..."
+    },
+    {
+      "anchor_id": "DOC1_C026",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.416564404964447,
+      "preview": "\"refs\": []... \\} \\} \\} Listing 2: JSON file extracted from the PDF of Figure 2. We use GROBID (GRO, 2008-2023), which can extract the content and some of the structure (e.g., section and subsection organization) from..."
+    },
+    {
+      "anchor_id": "DOC1_C028",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.38758164644241333,
+      "preview": "Listing 3: Prompt used to identify supporting context (i.e., list of locations and agronomic topics mentioned) from a document during question generation. ### 2.4 Answer Generation We employ Retrieval-Augmented Genera..."
+    },
+    {
+      "anchor_id": "DOC1_C030",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.3830569386482239,
+      "preview": "``` {{#system {} You are an expert in agriculture and you are formulating questions from documents to assess the knowledge of a student about agriculture-related topics. You have access to the following document metad..."
+    },
+    {
+      "anchor_id": "DOC1_C061",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.43120408058166504,
+      "preview": "The primary objective of the experiments section is to offer a comprehensive evaluation and analysis of various models and their performance in generating $\\mathrm{Q} \\& \\mathrm{~A}$ pairs within the context of agricu..."
+    }
+  ]
+}

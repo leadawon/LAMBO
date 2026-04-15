@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Minimod: A Finite Difference solver for Seismic Modeling",
+  "scan_result": "found",
+  "evidence": "[DOC1_C007] (score=0.1680)\nThe first four items are covered in Section 5 and the remainder items are covered in Section 6 .\n\n[DOC1_C041] (score=0.2008)\n### 5.1 Source Code Structure\n\n[DOC1_C045] (score=0.1619)\n```\nData: $p^{n-1}, p^{n-2}$ : wavefields at previous two timsteps\nResult: $p^{n}$ : wavefield at current timestep\nfor $i \\leftarrow \\mathrm{xmin}$ to xmax do\n    if $i \\geq \\mathrm{x} 3$ and $i \\leq \\mathrm{x} 4$ then\n        for $j \\leftarrow$ ymin to ymax do\n            if $j \\geq \\mathrm{y} 3$ and $j \\leq \\mathrm{y} 4$ then\n                // Bottom Damping (i, j, z1...z2)\n                // Inner Computation (i, j, z3...z4)\n                // Top Damping (i, j, z5...z6)\n            else\n                // Back and Front Damping (i, j, zmin...zmax)\n            end\n        end\n    else\n        // Left and Right Damping (i, ymin...ymax, zmin...zmax)\n    end\nend\n```\nAlgorithm 2: Wavefield solution step\n\n[DOC1_C086] (score=0.2049)\nFigure 11: Example of profiling sequential mode of Minimod acoustic-iso-cd kernel using HPCToolkit.\n\n[DOC1_C093] (score=0.1660)\nThis article introduces a proxy application suite for seismic modeling using finite difference method named Minimod. The design concepts, underline algorithms, and code structures of Minimod are described. The benchmark results of Minimod are shown on different computer architectures for both single compute node-level parallelism and distributed memory approaches.\n## 8 Acknowledgements\n\n[DOC1_C100] (score=0.2268)\n[6] R. de la Cruz and M. Araya-Polo. Algorithm 942: Semi-stencil. ACM Trans. Math. Softw., 40(3), Apr. 2014.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C007",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.16800813376903534,
+      "preview": "The first four items are covered in Section 5 and the remainder items are covered in Section 6 ."
+    },
+    {
+      "anchor_id": "DOC1_C041",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.20077738165855408,
+      "preview": "### 5.1 Source Code Structure"
+    },
+    {
+      "anchor_id": "DOC1_C045",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.1619282215833664,
+      "preview": "``` Data: $p^{n-1}, p^{n-2}$ : wavefields at previous two timsteps Result: $p^{n}$ : wavefield at current timestep for $i \\leftarrow \\mathrm{xmin}$ to xmax do if $i \\geq \\mathrm{x} 3$ and $i \\leq \\mathrm{x} 4$ then fo..."
+    },
+    {
+      "anchor_id": "DOC1_C086",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.20485684275627136,
+      "preview": "Figure 11: Example of profiling sequential mode of Minimod acoustic-iso-cd kernel using HPCToolkit."
+    },
+    {
+      "anchor_id": "DOC1_C093",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.1659708470106125,
+      "preview": "This article introduces a proxy application suite for seismic modeling using finite difference method named Minimod. The design concepts, underline algorithms, and code structures of Minimod are described. The benchma..."
+    },
+    {
+      "anchor_id": "DOC1_C100",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.22675155103206635,
+      "preview": "[6] R. de la Cruz and M. Araya-Polo. Algorithm 942: Semi-stencil. ACM Trans. Math. Softw., 40(3), Apr. 2014."
+    }
+  ]
+}

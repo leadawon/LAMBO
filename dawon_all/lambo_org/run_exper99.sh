@@ -39,7 +39,7 @@ mkdir -p "${DATA_DIR}" "${OUTPUT_DIR}"
   --indices-output "${INDICES_PATH}" \
   --manifest-output "${MANIFEST_PATH}"
 
-exec "${PYTHON_BIN}" "${SCRIPT_DIR}/run_infer.py" \
+"${PYTHON_BIN}" "${SCRIPT_DIR}/run_infer.py" \
   --input_path "${INPUT_PATH}" \
   --output_dir "${OUTPUT_DIR}" \
   --selected_indices_path "${INDICES_PATH}" \
@@ -49,3 +49,12 @@ exec "${PYTHON_BIN}" "${SCRIPT_DIR}/run_infer.py" \
   --retrieval_scope "${RETRIEVAL_SCOPE}" \
   --backend "${BACKEND}" \
   "$@"
+
+# Evaluation — runs structured eval + LLM judge by default so running
+# run_exper99.sh end-to-end produces reports/metrics.json, scores.json,
+# summary.txt. Set LAMBO_ORG_SKIP_JUDGE=1 to skip the judge pass.
+EVAL_ARGS=(--output_dir "${OUTPUT_DIR}" --backend "${BACKEND}")
+if [[ "${LAMBO_ORG_SKIP_JUDGE:-0}" == "1" ]]; then
+  EVAL_ARGS+=(--skip_judge)
+fi
+exec "${PYTHON_BIN}" "${SCRIPT_DIR}/run_eval.py" "${EVAL_ARGS[@]}"

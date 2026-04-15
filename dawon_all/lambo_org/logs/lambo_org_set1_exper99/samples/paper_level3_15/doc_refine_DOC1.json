@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language",
+  "scan_result": "found",
+  "evidence": "[DOC1_C010] (score=0.4922)\nFor the sake of efficiency, we use Llama (Touvron et al., 2023a) in the experiments. We select the Turkish language as a low-resource language. We therefore refer to the model family used in this study as LlamaTurk. The model size and language selection are affordable when the number of experiments is considered in this study ${ }^{1}$. Also, Llama is trained mostly with English data, which can provide better investigation for adapting non-English languages. The Turkish language can be categorized under low-resource languages when training corpus of open-source generative LLMs are considered (Touvron et al., 2023a), yet the recipes given in this study can also be used for other low-resource languages since the methods are independent of language itself.\n\n[DOC1_C011] (score=0.4787)\nWe further examine adaptation in terms of two more aspects: Model size and multilinguality. Model size is important for scalability and performance (Zhao et al., 2023a; Yang et al., 2023a). We provide an analysis of the adaptation of Llama-7b and $13 \\mathrm{~b}$ in this respect. Moreover, multilingual LLMs, such as BLOOM (Scao et al., 2022), Yi (AI et al., 2024), Aya (Üstün et al., 2024), and MaLA (Lin et al., 2024a), can provide an opportunity to adapt low-resource languages easier than Englishdominant ones due to multilingual corpus and vocabulary. Since BLOOM and Yi do not involve Turkish in training and Aya is larger than MaLA in terms of model parameters, we use MaLA for an analysis of multilingual LLMs.\n\n[DOC1_C032] (score=0.4477)\nLlama has a vocabulary size of $32 \\mathrm{k}$ tokens based on BPE tokenization (Touvron et al., 2023a). The majority of tokens in its vocabulary are English. The remaining small portion involves European languages with Latin and Cyrillic symbols.\n\n[DOC1_C033] (score=0.4547)\nIn this study, we extend Llama's vocabulary by merging with low-resource language tokens. Specifically, we use the Turkish tokenizer with 28,600 tokens trained by BPE algorithm (Toraman et al., 2023) (We publish the tokenizer ${ }^{6}$ ).\n\n[DOC1_C086] (score=0.4325)\nWe also provide an analysis for the impact of multilingual generative LLMs on adapting generative LLMs. For this purpose, we fine-tune a multilingual model, MaLA-500 (Lin et al., 2024b). MaLA is developed to cover 534 languages by using vocabulary extension and continual training on Llama2 (Touvron et al., 2023b). Analyzing a multilingual LLM with an enriched vocabulary can provide more insights into LLM adaptation for lowresource languages.\n\n[DOC1_C167] (score=0.4852)\nJun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024. Llama beyond english: An empirical study on language capability transfer.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C010",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.4922221899032593,
+      "preview": "For the sake of efficiency, we use Llama (Touvron et al., 2023a) in the experiments. We select the Turkish language as a low-resource language. We therefore refer to the model family used in this study as LlamaTurk. T..."
+    },
+    {
+      "anchor_id": "DOC1_C011",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.47868186235427856,
+      "preview": "We further examine adaptation in terms of two more aspects: Model size and multilinguality. Model size is important for scalability and performance (Zhao et al., 2023a; Yang et al., 2023a). We provide an analysis of t..."
+    },
+    {
+      "anchor_id": "DOC1_C032",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.4476962387561798,
+      "preview": "Llama has a vocabulary size of $32 \\mathrm{k}$ tokens based on BPE tokenization (Touvron et al., 2023a). The majority of tokens in its vocabulary are English. The remaining small portion involves European languages wi..."
+    },
+    {
+      "anchor_id": "DOC1_C033",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.454723984003067,
+      "preview": "In this study, we extend Llama's vocabulary by merging with low-resource language tokens. Specifically, we use the Turkish tokenizer with 28,600 tokens trained by BPE algorithm (Toraman et al., 2023) (We publish the t..."
+    },
+    {
+      "anchor_id": "DOC1_C086",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.4325425922870636,
+      "preview": "We also provide an analysis for the impact of multilingual generative LLMs on adapting generative LLMs. For this purpose, we fine-tune a multilingual model, MaLA-500 (Lin et al., 2024b). MaLA is developed to cover 534..."
+    },
+    {
+      "anchor_id": "DOC1_C167",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.48515385389328003,
+      "preview": "Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024. Llama beyond english: An empirical study on language capability transfer."
+    }
+  ]
+}

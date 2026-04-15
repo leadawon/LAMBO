@@ -42,14 +42,13 @@ of 99 Loong rows (33 each from `paper`, `legal`, `financial`), held in
 ### Commands
 
 Single entrypoint (mirrors `dawonv7/run_exper99.sh`): builds the 99-sample
-subset if needed, then runs inference.
+subset if needed, runs inference, then runs structured eval + LLM judge
+and writes `reports/metrics.json` / `scores.json` / `summary.txt`.
 
 ```bash
-# Inference on the 99 subset
 bash dawon_all/lambo_org/run_exper99.sh
-
-# Evaluation (writes metrics.json / scores.json / summary.txt under <OUTPUT_DIR>/reports)
-python dawon_all/lambo_org/run_eval.py --output_dir dawon_all/lambo_org/logs/lambo_org_set1_exper99
+# skip the judge pass:
+LAMBO_ORG_SKIP_JUDGE=1 bash dawon_all/lambo_org/run_exper99.sh
 ```
 
 Common env vars:

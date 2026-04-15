@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Extreme Compression of Large Language Models via Additive Quantization",
+  "scan_result": "found",
+  "evidence": "[DOC2_C001] (score=0.5568)\n# Extreme Compression of Large Language Models via Additive Quantization\n\n[DOC2_C003] (score=0.4316)\nThe emergence of accurate open large language models (LLMs) has led to a race towards performant quantization techniques which can enable their execution on end-user devices. In this paper, we revisit the problem of \"extreme\" LLM compression-defined as targeting extremely low bit counts, such as 2 to 3 bits per parameter-from the point of view of classic methods in MultiCodebook Quantization (MCQ). Our algorithm, called AQLM, generalizes the classic Additive Quantization (AQ) approach for information retrieval to advance the state-of-the-art in LLM compression, via two innovations: 1) learned additive quantization of weight matrices in input-adaptive fashion, and 2) joint optimization of codebook parameters across entire layer blocks. Broadly, AQLM is the first scheme that is Pareto optimal in terms of accuracy-vs-model-size when compressing to less than 3 bits per parameter, and significantly improves upon all known schemes in the extreme compression (2bit) regime. In addition, AQLM is practical: we provide fast GPU and CPU implementations of AQLM for token generation, which enable us to match or outperform optimized FP16 implementations for speed, while executing in a much smaller memory footprint.\n## 1. Introduction\n\n[DOC2_C009] (score=0.4320)\nContribution. In this work, we improve the state-of-the-art in LLM compression by showing for the first time that MultiCodebook Quantization (MCQ) techniques can be extended to LLM weight compression. Broadly, MCQ is a family of information retrieval methods (Chen et al., 2010; Jegou et al., 2010; Ge et al., 2013; Zhang et al., 2014; Babenko \\& Lempitsky, 2014; Martinez et al., 2016; 2018), consisting of specialized quantization algorithms to compress databases of vectors, allowing for efficient search. Unlike direct quantization, MCQ compresses multiple values jointly, by leveraging the mutual information of quantized values.\n\n[DOC2_C026] (score=0.4170)\nFinally, several recent works (Martinez et al., 2016; 2018; Zhang et al., 2014) elaborate the idea of Additive Quantization, proposing the more effective procedure for codebooks learning. Composite Quantization (CQ) (Zhang et al., 2014) learns codebooks with a fixed value of scalar product between the codewords from different codebooks. Currently, the state-of-the-art compression accuracy is achieved by the LSQ method (Martinez et al., 2018).\n\n[DOC2_C027] (score=0.4219)\nVector quantization for model compression. There has been significant work on exploiting vector quantization in the context of machine learning. For instance, Zhou et al. (2017); Li et al. (2017); Chen et al. (2019) use multi-codebook quantization to compress word embeddings within deep learning models. Another line of work (Blalock \\& Guttag, 2021; McCarter \\& Dronen, 2022; FernándezMarqués et al., 2023) explores vector quantization for linear models, or linear layers within deep models. Similarly to $\\mathrm{PQ}$ above, these techniques pre-compute inner products between inputs and all codes, then compute linear layer via look-up, which speeds up inference. However, these algorithms introduce significant prediction error that does not allow them to compress deep models. Thus, we believe we are the first to successfully adapt and scale MCQ to LLMs.\n## 3. AQLM: Additive Quantization for LLMs\n\n[DOC2_C122] (score=0.4198)\nKurtic, E., Kuznedelev, D., Frantar, E., Goin, M., and Alistarh, D. Sparse fine-tuning for inference acceleration of large language models, 2023.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C001",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.5568444728851318,
+      "preview": "# Extreme Compression of Large Language Models via Additive Quantization"
+    },
+    {
+      "anchor_id": "DOC2_C003",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.43159031867980957,
+      "preview": "The emergence of accurate open large language models (LLMs) has led to a race towards performant quantization techniques which can enable their execution on end-user devices. In this paper, we revisit the problem of \"..."
+    },
+    {
+      "anchor_id": "DOC2_C009",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.43199586868286133,
+      "preview": "Contribution. In this work, we improve the state-of-the-art in LLM compression by showing for the first time that MultiCodebook Quantization (MCQ) techniques can be extended to LLM weight compression. Broadly, MCQ is..."
+    },
+    {
+      "anchor_id": "DOC2_C026",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.41704005002975464,
+      "preview": "Finally, several recent works (Martinez et al., 2016; 2018; Zhang et al., 2014) elaborate the idea of Additive Quantization, proposing the more effective procedure for codebooks learning. Composite Quantization (CQ) (..."
+    },
+    {
+      "anchor_id": "DOC2_C027",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.4219142198562622,
+      "preview": "Vector quantization for model compression. There has been significant work on exploiting vector quantization in the context of machine learning. For instance, Zhou et al. (2017); Li et al. (2017); Chen et al. (2019) u..."
+    },
+    {
+      "anchor_id": "DOC2_C122",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.4198106825351715,
+      "preview": "Kurtic, E., Kuznedelev, D., Frantar, E., Goin, M., and Alistarh, D. Sparse fine-tuning for inference acceleration of large language models, 2023."
+    }
+  ]
+}

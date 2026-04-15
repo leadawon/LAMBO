@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Large Language Models (LLMs): Deployment, Tokenomics and Sustainability",
+  "scan_result": "found",
+  "evidence": "[DOC2_C012] (score=0.2739)\nLLMs are highly effective in a wide range of natural language processing (NLP) tasks [3], but they often fall short in specific real-world applications due to a lack of specialized knowledge during their training. These models are typically trained on extensive, web-sourced annotated data, which broadens their general applicability but diminishes their accuracy in specialized areas. For instance, BloombergGPT [4], which includes a significant proportion of finance-specific data, has shown improved performance in financial contexts, illustrating the benefits of targeted data training. However, assembling large, clean datasets for specialized training involves considerable logistical and cost challenges. In this case, deploying LLMs that have been trained primarily with generic datasets can lead to challenges in processing long, complex texts, thereby limiting their effectiveness in detailed domain discussions and increasing the likelihood of generating hallucinations and producing irrelevant or incorrect content [5]. To address this challenge, two main deployment strategies have emerged: Retrieval-Augmented Generation (RAG) and fine-tuning.\n## A. RAG: Solving Context Window Limitation\n\n[DOC2_C013] (score=0.3166)\nThe RAG model enhances LLMs by integrating the external knowledge base to efficiently retrieve relevant information that complements the LLM's inherent knowledge. This retrieved information is then incorporated into the LLM's prompt, providing essential contexts. The RAG mechanism is particularly beneficial for tasks that require factual retrieval or similarity searches, as it directly supplies relevant context, thereby reducing the likelihood of generating inaccurate or hallucinations. RAG can also be further enhanced by integrating techniques for in-context examples' retrieval during runtime. This method involves fetching relevant few-shot examples that are semantically similar to the user's query.\n\n[DOC2_C017] (score=0.3148)\nFig. 2. Retrieval-Augmented Generation (RAG) architecture for large language models. RAG retrieves relevant data from a knowledge base and optionally few-shot examples to address context window limitations and improve response generation.\n\n[DOC2_C022] (score=0.3439)\nThis section highlights the key considerations when choosing between RAG and fine-tuning for LLM applications. RAG offers faster adaptation and leverages external knowledge bases for factual retrieval and similarity search. However, the quality of the retrieved information heavily relies on the underlying knowledge base. If the knowledge base is outdated, inaccurate, or incomplete, the retrieved information can mislead the LLM to generate factually incorrect outputs. Additionally, RAG struggles with tasks requiring complex reasoning or inference beyond the information explicitly contained in the knowledge base [8]. Integrating and reasoning over information from multiple sources can also be challenging for RAG models, potentially leading to inconsistencies or inaccuracies in the generated response. One approach to alleviate these limitations is to employ reranking techniques. Reranking involves applying a secondary sorting step to the retrieved information from the knowledge base. This step can be based on various factors, such as using a confidence score assigned by the retrieval model [9], or evaluating whether the retrieved items collectively address all aspects of the user query.\n\n[DOC2_C024] (score=0.3082)\nThe choice between RAG and fine-tuning depends on the specific needs of LLM applications. RAG offers a faster and more adaptable solution for retrieval-based tasks, while finetuning provides superior performance for tasks demanding deeper domain expertise.\n## III. TRaIning and InfERENCE BY XPUs: CPU IS OUT-OF-THE-DATE?\n\n[DOC2_C054] (score=0.4340)\n[10] A. Balaguer, V. Benara, R. L. de Freitas Cunha, R. d. M. Estevão Filho, T. Hendry, D. Holstein, J. Marsman, N. Mecklenburg, S. Malvar, L. O. Nunes et al., \"Rag vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture,\" arXiv e-prints, pp. arXiv-2401, 2024.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C012",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.2738514244556427,
+      "preview": "LLMs are highly effective in a wide range of natural language processing (NLP) tasks [3], but they often fall short in specific real-world applications due to a lack of specialized knowledge during their training. The..."
+    },
+    {
+      "anchor_id": "DOC2_C013",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.3166326880455017,
+      "preview": "The RAG model enhances LLMs by integrating the external knowledge base to efficiently retrieve relevant information that complements the LLM's inherent knowledge. This retrieved information is then incorporated into t..."
+    },
+    {
+      "anchor_id": "DOC2_C017",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.3147832751274109,
+      "preview": "Fig. 2. Retrieval-Augmented Generation (RAG) architecture for large language models. RAG retrieves relevant data from a knowledge base and optionally few-shot examples to address context window limitations and improve..."
+    },
+    {
+      "anchor_id": "DOC2_C022",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.3439069390296936,
+      "preview": "This section highlights the key considerations when choosing between RAG and fine-tuning for LLM applications. RAG offers faster adaptation and leverages external knowledge bases for factual retrieval and similarity s..."
+    },
+    {
+      "anchor_id": "DOC2_C024",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.308216392993927,
+      "preview": "The choice between RAG and fine-tuning depends on the specific needs of LLM applications. RAG offers a faster and more adaptable solution for retrieval-based tasks, while finetuning provides superior performance for t..."
+    },
+    {
+      "anchor_id": "DOC2_C054",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.4339570701122284,
+      "preview": "[10] A. Balaguer, V. Benara, R. L. de Freitas Cunha, R. d. M. Estevão Filho, T. Hendry, D. Holstein, J. Marsman, N. Mecklenburg, S. Malvar, L. O. Nunes et al., \"Rag vs Fine-tuning: Pipelines, Tradeoffs, and a Case Stu..."
+    }
+  ]
+}

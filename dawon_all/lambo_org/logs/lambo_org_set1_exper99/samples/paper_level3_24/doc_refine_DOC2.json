@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "ONLINE SPECULATIVE DECODING",
+  "scan_result": "found",
+  "evidence": "[DOC2_C005] (score=0.2987)\nThe latency of today's LLM service is unfortunately very high. This is primarily because serving a user query requires multiple serial evaluations of the LLM, each generating only one token of the response. An emerging solution to reduce the latency is speculative decoding. Speculative decoding employs a smaller model to speculate multiple output tokens of the target (large) model, then lets the target LLM verify these speculations in parallel. Then, if the verification of a token fails, the large model must recompute from that point. Therefore, the performance of speculative decoding primarily depends on the speculation accuracy of the small model. In the presence of diverse text inputs, the accuracy of existing speculative decoding methods is unfortunately not very high, due to the capability gap between the draft and target model. Employing a larger, more accurate model however defeats the purpose of speculative decoding as it potentially increases latency.\n\n[DOC2_C011] (score=0.2950)\nLLMs have become pervasive in today's AI applications, underscoring the importance of optimizing LLM inference. Numerous system optimizations have been developed to optimize the throughput of LLM serving (Yu et al., 2022; Kwon et al., 2023). This paper particularly concentrates on a significant strand of research, speculative decoding, aimed at reducing the latency of LLM inference.\n\n[DOC2_C071] (score=0.3646)\nTianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, and Tri Dao. Medusa: Simple framework for accelerating $11 \\mathrm{~m}$ generation with multiple decoding heads. https://github.com/ FasterDecoding/Medusa, 2023.\n\n[DOC2_C081] (score=0.3060)\nWoosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention. arXiv preprint arXiv:2309.06180, 2023.\n\n[DOC2_C084] (score=0.2937)\nXupeng Miao, Gabriele Oliaro, Zhihao Zhang, Xinhao Cheng, Zeyu Wang, Rae Ying Yee Wong, Zhuoming Chen, Daiyaan Arfeen, Reyna Abhyankar, and Zhihao Jia. Specinfer: Accelerating generative llm serving with speculative inference and token tree verification, 2023.\nR OpenAI. Gpt-4 technical report. arXiv, pp. 2303-08774, 2023.\n\n[DOC2_C086] (score=0.2843)\nBenjamin Spector and Chris Re. Accelerating llm inference with staged speculative decoding. arXiv preprint arXiv:2308.04623, 2023.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C005",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.2986689805984497,
+      "preview": "The latency of today's LLM service is unfortunately very high. This is primarily because serving a user query requires multiple serial evaluations of the LLM, each generating only one token of the response. An emergin..."
+    },
+    {
+      "anchor_id": "DOC2_C011",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.29502370953559875,
+      "preview": "LLMs have become pervasive in today's AI applications, underscoring the importance of optimizing LLM inference. Numerous system optimizations have been developed to optimize the throughput of LLM serving (Yu et al., 2..."
+    },
+    {
+      "anchor_id": "DOC2_C071",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.3646429777145386,
+      "preview": "Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, and Tri Dao. Medusa: Simple framework for accelerating $11 \\mathrm{~m}$ generation with multiple decoding heads. https://github.com/ FasterDecoding/Medusa, 2023."
+    },
+    {
+      "anchor_id": "DOC2_C081",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.3060476779937744,
+      "preview": "Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E Gonzalez, Hao Zhang, and Ion Stoica. Efficient memory management for large language model serving with pagedattention. arXiv pre..."
+    },
+    {
+      "anchor_id": "DOC2_C084",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.2937195897102356,
+      "preview": "Xupeng Miao, Gabriele Oliaro, Zhihao Zhang, Xinhao Cheng, Zeyu Wang, Rae Ying Yee Wong, Zhuoming Chen, Daiyaan Arfeen, Reyna Abhyankar, and Zhihao Jia. Specinfer: Accelerating generative llm serving with speculative i..."
+    },
+    {
+      "anchor_id": "DOC2_C086",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.28428107500076294,
+      "preview": "Benjamin Spector and Chris Re. Accelerating llm inference with staged speculative decoding. arXiv preprint arXiv:2308.04623, 2023."
+    }
+  ]
+}

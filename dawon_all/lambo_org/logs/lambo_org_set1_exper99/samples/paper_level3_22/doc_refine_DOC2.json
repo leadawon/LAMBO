@@ -1,0 +1,45 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Can Large Language Models Really Improve by Self-critiquing Their Own Plans?",
+  "scan_result": "found",
+  "evidence": "[DOC2_C009] (score=0.2934)\nThus, our systematic investigation offers compelling preliminary evidence to question the efficacy of LLMs as verifiers for planning tasks within an iterative, self-critiquing framework. In the rest of the paper, we first present the related work, then the required background before delving into the methodology and the evaluation.\n## 2 Related Work\n\n[DOC2_C011] (score=0.2889)\nThere have also been studies that utilize multiple LLMs to generate and verify candidate solutions, either in the form of a debate [2] or through cross-examination [1]. However, these studies still rely solely on the verification/self-critiquing abilities of the LLMs, an aspect our work critically examines in the context of planning. Our results provide compelling reasons to question the use of LLMs for self-critiquing in planning.\n## 3 Background\n\n[DOC2_C014] (score=0.3852)\n## 4 Methodology\n### 4.1 The LLM+LLM planning system\n\n[DOC2_C016] (score=0.3446)\nFor the LLM+LLM Planning system described above, we utilize distinct prompts for the generator and verifier LLMs. The prompt generator (as shown in Figure 1) utilizes the PDDL domain and instance files to generate the required prompts in natural language. Our prompts are structured similarly to the natural language prompts found in [12]. For plan generation, our prompts are one-shot: we begin by presenting the domain description, followed by an example instance (along with its corresponding plan). We then present the query instance. These example instances are randomly selected from our set of instances, and this forms the input for the generator LLM. For the verifier LLM, we adopt a zero-shot approach. Here, we present the domain description, followed by the query instance and its corresponding plan. The verifier LLM is then tasked with verifying the query plan and providing feedback if necessary. As mentioned earlier, we do not restrict the type or format of the feedback for the verifier LLM. Detailed examples of the prompts given to both the generator and verifier LLMs can be found in the Appendix.\n## 5 Evaluation and Analysis\n\n[DOC2_C020] (score=0.2952)\n| Plan Generation Method | Accuracy | Avg. Number of iterations |\n| :--- | :---: | :---: |\n| LLM+LLM w/ Backprompting (BP) | $55 / 100(55 \\%)$ | 3.48 |\n| LLM+VAL w/ BP | $88 / 100(88 \\%)$ | 4.18 |\n| Generator LLM only w/o BP | $40 / 100(40 \\%)$ | 1.00 |\n\n[DOC2_C030] (score=0.3171)\nTable 3: Performance of LLM+VAL system on plan generation with varied levels of feedback.\n## 6 Conclusion and Future Work",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C009",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.2934454381465912,
+      "preview": "Thus, our systematic investigation offers compelling preliminary evidence to question the efficacy of LLMs as verifiers for planning tasks within an iterative, self-critiquing framework. In the rest of the paper, we f..."
+    },
+    {
+      "anchor_id": "DOC2_C011",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.2888815402984619,
+      "preview": "There have also been studies that utilize multiple LLMs to generate and verify candidate solutions, either in the form of a debate [2] or through cross-examination [1]. However, these studies still rely solely on the..."
+    },
+    {
+      "anchor_id": "DOC2_C014",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.3851652443408966,
+      "preview": "## 4 Methodology ### 4.1 The LLM+LLM planning system"
+    },
+    {
+      "anchor_id": "DOC2_C016",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.34464991092681885,
+      "preview": "For the LLM+LLM Planning system described above, we utilize distinct prompts for the generator and verifier LLMs. The prompt generator (as shown in Figure 1) utilizes the PDDL domain and instance files to generate the..."
+    },
+    {
+      "anchor_id": "DOC2_C020",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.2952321171760559,
+      "preview": "| Plan Generation Method | Accuracy | Avg. Number of iterations | | :--- | :---: | :---: | | LLM+LLM w/ Backprompting (BP) | $55 / 100(55 \\%)$ | 3.48 | | LLM+VAL w/ BP | $88 / 100(88 \\%)$ | 4.18 | | Generator LLM only..."
+    },
+    {
+      "anchor_id": "DOC2_C030",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.3171151280403137,
+      "preview": "Table 3: Performance of LLM+VAL system on plan generation with varied levels of feedback. ## 6 Conclusion and Future Work"
+    }
+  ]
+}
