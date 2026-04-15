@@ -12,8 +12,8 @@ Definitions:
 For each anchor you must produce:
 1. anchor_title: a short human-readable label naming the topic of the region (<= 60 chars). Use the document'"'"'s own wording where possible.
 2. start_unit_id, end_unit_id: the inclusive unit range.
-3. summary: a faithful, evidence-centric summary of what the region literally says. Keep concrete names, numbers, years, labels, ratios, verdicts, conclusions, and explicit cross-references. NEVER invent facts. NEVER paraphrase numbers. Target 2-6 sentences.
-4. key_entities: a short list (<= 8) of the most salient named entities / numeric facts / terms from the region, verbatim.
+3. summary: a faithful NAVIGATION summary of what the region contains. The summary should help downstream search choose whether to open this anchor, not act as standalone evidence. Mention the kind of information present (e.g. balance-sheet rows, ruling discussion, cited references, company names, time periods), but avoid phrasing the summary as a direct answer to likely user questions. Do NOT turn the summary into an evidence sheet. Include exact numbers or verdict labels only when needed to distinguish this anchor from nearby anchors. NEVER invent facts. Target 1-3 sentences.
+4. key_entities: a short list (<= 8) of the most salient named entities / field names / terms from the region, verbatim. Prefer routing hints over full answer strings; include exact numeric values only when they are necessary to disambiguate anchors.
 
 Hard rules:
 - The union of anchor ranges MUST exactly tile all units with no gaps and no overlaps.
