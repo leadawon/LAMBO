@@ -1,0 +1,138 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+  "scan_result": "found",
+  "evidence": "[doc_meta DOC1] owner=paper:Scalable Pre-training of Large Autoregressive Image Models | kind=paper_like\n[DOC1_C001] (score=0.4726)\nmeta: doc=DOC1:Scalable Pre-training of Large Autoregressive Image Models | owner=paper:Scalable Pre-training of Large Autoregressive Image Models | section=# Scalable Pre-training of Large Autoregressive Image Models | kind=paragraph\n# Scalable Pre-training of Large Autoregressive Image Models\n\n[DOC1_C006] (score=0.4041)\nmeta: doc=DOC1:Scalable Pre-training of Large Autoregressive Image Models | owner=paper:Scalable Pre-training of Large Autoregressive Image Models | section=## 1. Introduction | kind=paragraph | role=methodology\nThe scaling behavior of these models is remarkable for two key reasons. First, even though these models are trained with a simple objective - predicting the next word in a sentence given its past - they are able to learn intricate patterns over long contexts. Second, the scalability of this autoregressive objective is mostly observed when used in conjunction with certain architectures, and in particular Transformers [79], highlighting the potential synergy between the autoregressive pre-training and this architecture.\n\n[DOC1_C009] (score=0.4010)\nmeta: doc=DOC1:Scalable Pre-training of Large Autoregressive Image Models | owner=paper:Scalable Pre-training of Large Autoregressive Image Models | section=## 1. Introduction | kind=figure | role=result\nWe provide a study of a series of models, ranging from $600 \\mathrm{M}$ to 7B parameters pre-trained using 2B uncurated images with permissive licenses. Our AIM models exhibit strong scaling behavior w.r.t. the model size as shown in Figure 1 where higher capacity models achieve better downstream performance, measured as the average accuracy over 15 image recognition benchmarks. More importantly, there is a correlation between the value of our objective function on a validation set and the quality of the subsequent frozen features. This observation confirms that the autoregressive objective is adequate for the training of visual features. Furthermore, we observe consistent improvement in downstream performance as we train on more images, with no sign of saturation. Overall, these observations are aligned with the previous studies on scaling large language models.\n## 2. Related Work\n\n[DOC1_C010] (score=0.4442)\nmeta: doc=DOC1:Scalable Pre-training of Large Autoregressive Image Models | owner=paper:Scalable Pre-training of Large Autoregressive Image Models | section=## 2. Related Work | kind=paragraph | role=methodology\nAutoregressive models. While most of the literature on autoregressive models come from language modeling [9, 53, 64] or speech [56, 57], few works have explored the potential of this approach for images [18, 49, 61, 61, 68, 76].\nOf particular interest, Van den Oord et al. [76] show that using an architecture adapted to images, e.g., a convolution network, significantly improved over autoregressive models built with more generic architecture [77], e.g., a recurrent network [31]. Parmar et al. [61] further improve the quality of these autoregressive models by adopting the transformer architecture [79]. More recently, Chen et al. [18] have shown that scaling with more compute leads to continuous improvements. Our work follows this line of research, and we benefit from training on significantly more data, and further improvement in architecture design [29], training [73, 75] and understanding of the scaling law [43]. Concurrent to our work, Bai et al. [3] demonstrate the effectiveness of large-scale autoregressive vision models for in-context pixel prediction tasks (e.g., semantic segmentation, depth estimation).\n\n[DOC1_C062] (score=0.3928)\nmeta: doc=DOC1:Scalable Pre-training of Large Autoregressive Image Models | owner=paper:Scalable Pre-training of Large Autoregressive Image Models | section=### 5.2. Architecture and Design | kind=paragraph\nAutoregression pattern (b). Autoregressive pre-training typically follows a specific order of traversal to facilitate the prediction of the next token. In the case of language, the traversal pattern is clear, as text is read and written one word at a time in a sequential manner (e.g., left to right for English). However, for images, determining the traversal pattern is less obvious. We explore various deterministic patterns, including raster, spiraling out, checkerboard, and randomly pre-sampled patterns. Detailed examples of each pattern are found in Appendix B. Even though our model performs reasonably well with each pattern, we observe that the raster pattern leads to significantly higher performance.\n\n[DOC1_C072] (score=0.3987)\nmeta: doc=DOC1:Scalable Pre-training of Large Autoregressive Image Models | owner=paper:Scalable Pre-training of Large Autoregressive Image Models | section=### 5.2. Architecture and Design | kind=figure\nFigure 7. Autoregression patterns We explore a number of patterns for the autoregressive traversal of an image. The set of image patches is broken into equal-sized chunks and the validation loss is measured per chunk. We observe that the way the task difficulty is distributed across chunks varies strongly among patterns.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C001",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.47264087200164795,
+      "preview": "# Scalable Pre-training of Large Autoregressive Image Models",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+        "owner_type": "paper",
+        "owner_name": "Scalable Pre-training of Large Autoregressive Image Models",
+        "doc_kind_hint": "paper_like",
+        "section_path": "# Scalable Pre-training of Large Autoregressive Image Models",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C006",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.404060035943985,
+      "preview": "The scaling behavior of these models is remarkable for two key reasons. First, even though these models are trained with a simple objective - predicting the next word in a sentence given its past - they are able to le...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+        "owner_type": "paper",
+        "owner_name": "Scalable Pre-training of Large Autoregressive Image Models",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 1. Introduction",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "methodology",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C009",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.4010235667228699,
+      "preview": "We provide a study of a series of models, ranging from $600 \\mathrm{M}$ to 7B parameters pre-trained using 2B uncurated images with permissive licenses. Our AIM models exhibit strong scaling behavior w.r.t. the model...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+        "owner_type": "paper",
+        "owner_name": "Scalable Pre-training of Large Autoregressive Image Models",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 1. Introduction",
+        "content_type": "figure",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C010",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.4441708028316498,
+      "preview": "Autoregressive models. While most of the literature on autoregressive models come from language modeling [9, 53, 64] or speech [56, 57], few works have explored the potential of this approach for images [18, 49, 61, 6...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+        "owner_type": "paper",
+        "owner_name": "Scalable Pre-training of Large Autoregressive Image Models",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 2. Related Work",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "methodology",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C062",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.3928455114364624,
+      "preview": "Autoregression pattern (b). Autoregressive pre-training typically follows a specific order of traversal to facilitate the prediction of the next token. In the case of language, the traversal pattern is clear, as text...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+        "owner_type": "paper",
+        "owner_name": "Scalable Pre-training of Large Autoregressive Image Models",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 5.2. Architecture and Design",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C072",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.3986608386039734,
+      "preview": "Figure 7. Autoregression patterns We explore a number of patterns for the autoregressive traversal of an image. The set of image patches is broken into equal-sized chunks and the validation loss is measured per chunk....",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Scalable Pre-training of Large Autoregressive Image Models",
+        "owner_type": "paper",
+        "owner_name": "Scalable Pre-training of Large Autoregressive Image Models",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 5.2. Architecture and Design",
+        "content_type": "figure",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    }
+  ],
+  "doc_metadata": {
+    "owner_type": "paper",
+    "owner_name": "Scalable Pre-training of Large Autoregressive Image Models",
+    "doc_kind_hint": "paper_like",
+    "doc_case_id": "",
+    "num_tables": 9,
+    "num_headings": 17,
+    "record_type": "paper"
+  }
+}

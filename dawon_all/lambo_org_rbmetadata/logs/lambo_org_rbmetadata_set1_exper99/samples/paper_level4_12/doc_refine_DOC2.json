@@ -1,0 +1,82 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+  "scan_result": "found",
+  "evidence": "[doc_meta DOC2] owner=paper:Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All | kind=paper_like\n[DOC2_C030] (score=0.3277)\nmeta: doc=DOC2:Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All | owner=paper:Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All | section=## 3 Related Work | kind=paragraph | role=result\nwhere $\\bar{d}$ is the average degree of the graph $G_{s}$. This formula comes from the fact that, for general Ising problem, the chain strength scales as $\\tau \\sqrt{N}$ where $\\tau$ is the root mean square of the quadratic couplers. In practice, the value of the chain strength is mostly set with a basic chain scan method used to maximize the average expectation value of the QA. For detailed experimental studies on chain strength scanning, the reader may refer to [12]19. The chain scan method performs well but is very expensive in terms of the number of calls to the QA. The optimization of the chain strength is usually done based on the expectation value. A single advanced optimization method of the chain strength has been developed for the max-clique problem by H. Djidjev recently and is based on augmented lagrangian method 7. Recent studies have benchmarked the chain break properties. In E. Grant et al. [11, the authors find that the chain break concentrates on specific locations of the D-Wave 2000Q processor and design post-processing strategies to limit these bias. In another recent paper of Pelofske [14], it is seen that the approximation ratio is inversely correlated with the rate of getting chain breaks. The author shows that the optimal chain strength is also conditioned by the density of the problem and the type of quantum solver used. We reuse these conclusions as well as the first theoretical bound given in equation 6 to create an efficient method to set the chain strength.\n## 4 Method\n\n[DOC2_C059] (score=0.2548)\nmeta: doc=DOC2:Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All | owner=paper:Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All | section=## 7 Chain Strength Setting Heuristic | kind=paragraph | role=methodology | units=eur\nThe previous section detailed our motivations for designing a heuristic to set the chain strength for each instance. Algorithm 1 describes this method in pseudocode. The algorithm performs a binary search to find the optimal chain strength value within an initial interval of chain strengths set by the user csInterval. When the user does not specify it, the default interval's upper bound is set according to Choi's first bound (line 3):\n\n[DOC2_C062] (score=0.2634)\nmeta: doc=DOC2:Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All | owner=paper:Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All | section=## 7 Chain Strength Setting Heuristic | kind=paragraph | role=methodology | units=eur\nAt each iteration, the chain strength $c s$ is chosen as the midpoint of the chain strength interval csInterval (line 6). The embedded instance embInstance is then sent to the quantum annealer with the specified chain strength cs (line 7). We then compute the breaking chain rate of the result according to equation 11 and check if the new breaking chain rate is in the interval specified by the user cbInterval. If this is the case, the algorithm converges (lines 9 and 10), and the\nloop breaks. If the chain break is higher than the upper bound of cbInterval, the chain strength is insufficient and requires an increase: we then rescale the lower bound of csInterval (lines 11 and 12). In the other case, the upper bound of the chain strength interval is rescaled (line 14). The subtlety of this algorithm relies in the setting of the chain break interval cbInterval which stops the algorithm when the sampling produces a breaking chain rate in this interval. This interval depends on the effective noise of the quantum computer and may also depend on the size of the instance. We test our heuristic and compare the results obtained with the default method implemented by D-Wave that relies on equation 8 . The comparison is done both on Advantage2_prototype2.2 on small Erdős-Rényi instances $(n=40$ and $n=80)$ and Advantage6.4 for large instances ( $n=100$ and $n=170)$ with density $p \\in\\{0.1,0.5,0.9\\}$. For each instance set, we choose the embedding heuristic that provides the best average performance based on the size and density of the instance (see Fig 2). We empirically set the interval cbInterval to $\\left[6 \\times 10^{-3}, 2 \\times 10^{-2}\\right]$ for the Advantage2_prototype2.2 and to $\\left[2 \\times 10^{-2}, 5 \\times 10^{-2}\\right]$ for the Advantage6.4. This range stays untouched during the whole experiment. Each round of pre-processing step is done with 128 shots. The final run of our heuristic, as well as the default D-Wave method, is programmed with 4096 shots for instances run on Advantage2_prototype2.2 and 3072 shots for instances run on Advantage6.4. Table 1 shows the result of this experiment. With a global setting of the value for cbInterval, our heuristic is able to outper-",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C030",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.32774966955184937,
+      "preview": "where $\\bar{d}$ is the average degree of the graph $G_{s}$. This formula comes from the fact that, for general Ising problem, the chain strength scales as $\\tau \\sqrt{N}$ where $\\tau$ is the root mean square of the qu...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+        "owner_type": "paper",
+        "owner_name": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 3 Related Work",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC2_C059",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.25484761595726013,
+      "preview": "The previous section detailed our motivations for designing a heuristic to set the chain strength for each instance. Algorithm 1 describes this method in pseudocode. The algorithm performs a binary search to find the...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+        "owner_type": "paper",
+        "owner_name": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 7 Chain Strength Setting Heuristic",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "methodology",
+        "time_scope": "",
+        "unit_hints": [
+          "eur"
+        ],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC2_C062",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.26344966888427734,
+      "preview": "At each iteration, the chain strength $c s$ is chosen as the midpoint of the chain strength interval csInterval (line 6). The embedded instance embInstance is then sent to the quantum annealer with the specified chain...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+        "owner_type": "paper",
+        "owner_name": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 7 Chain Strength Setting Heuristic",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "methodology",
+        "time_scope": "",
+        "unit_hints": [
+          "eur"
+        ],
+        "case_id": ""
+      }
+    }
+  ],
+  "doc_metadata": {
+    "owner_type": "paper",
+    "owner_name": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+    "doc_kind_hint": "paper_like",
+    "doc_case_id": "",
+    "num_tables": 1,
+    "num_headings": 17,
+    "record_type": "paper"
+  }
+}

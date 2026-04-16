@@ -1,0 +1,138 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+  "scan_result": "found",
+  "evidence": "[doc_meta DOC1] owner=paper:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | kind=paper_like\n[DOC1_C011] (score=0.2952)\nmeta: doc=DOC1:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | owner=paper:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | section=### 2.1 Preliminaries | kind=paragraph | role=definition\nTask Definition Given a query $Q$ and a corpus $C=\\left\\{D_{1}, D_{2}, \\ldots, D_{n}\\right\\}$ consisting of $n$ documents, the goal of text retrieval is to find the $k$ documents that are most relevant to the query $Q$, with $k \\ll n$. In a multi-stage retrieval pipeline composed by a retriever and a reranker, the retriever's task is to efficiently generate the top- $k$ candidates that are relevant to the query based on the similarity metric $\\operatorname{Sim}(Q, D) \\in \\mathbb{R}$. The reranker's task is to reorder these $k$ candidate documents further to improve the relevance order using a more effective, but typically more computationally expensive reranking model. Note that \"document\" in this context can refer to an arbitrary information snippet, including sentences, passages, or full documents. While a multi-stage pipeline can contain multiple rerankers, in this paper we focus on a single reranker.\n\n[DOC1_C035] (score=0.3014)\nmeta: doc=DOC1:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | owner=paper:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | section=### 3.1 Passage Retrieval | kind=paragraph | role=result\nIn-Domain Evaluation Table 1 presents the effectiveness of RepLLaMA and RankLLaMA on the MS MARCO passage corpus in comparison to existing methods.[^2]\n\n[DOC1_C049] (score=0.3486)\nmeta: doc=DOC1:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | owner=paper:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | section=### 3.2 Document Retrieval | kind=paragraph | role=comparison\nTable 3: The effectiveness of RepLLaMA and RankLLaMA on the MS MARCO document corpus compared to existing methods.\n\n[DOC1_C053] (score=0.3003)\nmeta: doc=DOC1:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | owner=paper:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | section=### 3.2 Document Retrieval | kind=paragraph\nResults Table 3 reports the effectiveness of our RepLLaMA-RankLLaMA pipeline for fulldocument retrieval on the MS MARCO document corpus. We see that both our retriever and reranker outperform existing methods. RepLLaMA achieves an MRR@100 score that is approximately 3 points higher than CoCondenser-MaxP, while RankLLaMA exceeds (to our knowledge) the current state-of-the-art document reranker, MORES+ (Gao and Callan, 2022a), by 1 point in MRR@ 100.\n\n[DOC1_C099] (score=0.3170)\nmeta: doc=DOC1:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | owner=paper:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | section=## References | kind=paragraph\nXueguang Ma, Xinyu Crystina Zhang, Ronak Pradeep, and Jimmy Lin. 2023. Zero-shot listwise document reranking with a large language model. arXiv:2305.02156.\n\n[DOC1_C112] (score=0.3008)\nmeta: doc=DOC1:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | owner=paper:Fine-Tuning LLaMA for Multi-Stage Text Retrieval | section=## References | kind=paragraph\nRonak Pradeep, Sahel Sharifymoghaddam, and Jimmy Lin. 2023. RankVicuna: Zero-shot listwise document reranking with open-source large language models. arXiv:2309.15088.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C011",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.29523545503616333,
+      "preview": "Task Definition Given a query $Q$ and a corpus $C=\\left\\{D_{1}, D_{2}, \\ldots, D_{n}\\right\\}$ consisting of $n$ documents, the goal of text retrieval is to find the $k$ documents that are most relevant to the query $Q...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "owner_type": "paper",
+        "owner_name": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 2.1 Preliminaries",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "definition",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C035",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.3014336824417114,
+      "preview": "In-Domain Evaluation Table 1 presents the effectiveness of RepLLaMA and RankLLaMA on the MS MARCO passage corpus in comparison to existing methods.[^2]",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "owner_type": "paper",
+        "owner_name": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 3.1 Passage Retrieval",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C049",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.3486475348472595,
+      "preview": "Table 3: The effectiveness of RepLLaMA and RankLLaMA on the MS MARCO document corpus compared to existing methods.",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "owner_type": "paper",
+        "owner_name": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 3.2 Document Retrieval",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "comparison",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C053",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.3003268241882324,
+      "preview": "Results Table 3 reports the effectiveness of our RepLLaMA-RankLLaMA pipeline for fulldocument retrieval on the MS MARCO document corpus. We see that both our retriever and reranker outperform existing methods. RepLLaM...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "owner_type": "paper",
+        "owner_name": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 3.2 Document Retrieval",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C099",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.3170141577720642,
+      "preview": "Xueguang Ma, Xinyu Crystina Zhang, Ronak Pradeep, and Jimmy Lin. 2023. Zero-shot listwise document reranking with a large language model. arXiv:2305.02156.",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "owner_type": "paper",
+        "owner_name": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## References",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C112",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.300804078578949,
+      "preview": "Ronak Pradeep, Sahel Sharifymoghaddam, and Jimmy Lin. 2023. RankVicuna: Zero-shot listwise document reranking with open-source large language models. arXiv:2309.15088.",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "owner_type": "paper",
+        "owner_name": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## References",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    }
+  ],
+  "doc_metadata": {
+    "owner_type": "paper",
+    "owner_name": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+    "doc_kind_hint": "paper_like",
+    "doc_case_id": "",
+    "num_tables": 4,
+    "num_headings": 19,
+    "record_type": "paper"
+  }
+}

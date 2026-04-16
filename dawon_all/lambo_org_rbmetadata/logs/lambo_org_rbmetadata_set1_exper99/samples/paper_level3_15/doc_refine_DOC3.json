@@ -1,0 +1,140 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+  "scan_result": "found",
+  "evidence": "[doc_meta DOC3] owner=paper:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | kind=paper_like\n[DOC3_C001] (score=0.4792)\nmeta: doc=DOC3:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | owner=paper:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | section=# LLaMA Beyond English: An Empirical Study on Language Capability Transfer | kind=paragraph\n# LLaMA Beyond English: An Empirical Study on Language Capability Transfer\n\n[DOC3_C006] (score=0.4578)\nmeta: doc=DOC3:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | owner=paper:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | section=## Introduction | kind=figure\nFigure 1: Pretrained LLaMA models, which are primarily trained on English-dominated corpus (as depicted on the left), are not inherently proficient in handling non-English languages. We aim to investigate the necessity of vocabulary extension, further pretraining, and instruction tuning, as well as to what extent they influence the capability transfer. This exploration enables us to efficiently transfer LLaMA's language capabilities to non-English languages (as illustrated on the right), minimizing costs in the process.\n\n[DOC3_C008] (score=0.4570)\nmeta: doc=DOC3:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | owner=paper:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | section=## Introduction | kind=paragraph | units=%\nMany well-known LLMs are capable of comprehending input and generating responses across different languages, thanks to their pretraining on a diverse mix of corpus from multiple languages. However, due to the imbalanced distribution of language resources, collecting extensive training data for all languages is nearly impossible (Ranta and Goutte 2021). Taking the representative LLM BLOOM (Scao et al. 2023) as an example, it has been pretrained on 46 natural languages. Yet, this number accounts for only $0.66 \\%$ of the roughly 7,000 languages currently in use. Moreover, within the corpus of these 46 languages, there exists extreme imbalance, with the high-resource English texts being 2.8 million times more than that of the lowresource Chitumbuka language. This is not an isolated case. Another widely discussed language model, LLaMA, has\nbeen pretrained primarily on English-dominated corpus, supplemented with limited data from 20 related languages that utilize the Latin and Cyrillic scripts. As a result, LLaMA exhibits inferior performance in contexts involving non-English languages where it has not undergone sufficient training. Some researchers collect large-scale data for specific languages of interest and retrain an LLM (Team 2023a). However, this inevitably leads to high computational and data collection costs, which is not suitable for lowresource languages. While Cui, Yang, and Yao (2023b) extend original vocabulary and further pretrain LLaMA with 30B Chinese tokens by LoRA (Hu et al. 2021), reporting promising results. Nonetheless, a fine-grained systematic investigation of the transfer process remains lacking.\n\n[DOC3_C009] (score=0.4879)\nmeta: doc=DOC3:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | owner=paper:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | section=## Introduction | kind=figure\nIn this work, we take a step towards gaining a comprehensive understanding of the language capability transfer in LLMs. As shown in figure 1, we empirically investigate several key aspects based on LLaMA:\n\n[DOC3_C030] (score=0.4589)\nmeta: doc=DOC3:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | owner=paper:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | section=## Datasets | kind=paragraph | role=result\nTo transfer the language capabilities of LLaMA to the non-English language of interest, we utilize two instruction datasets, namely BELLE and Bactrain-X, for training. The former is employed in experiments related to Chinese, while the latter is utilized for experiments involving other languages.\n\n[DOC3_C050] (score=0.4567)\nmeta: doc=DOC3:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | owner=paper:LLaMA Beyond English: An Empirical Study on Language Capability Transfer | section=## How about the Original English Capabilities | kind=paragraph\nAnother issue of interest to us is whether the improvement in Chinese proficiency has an impact on the existing English capabilities. To address this question, we additionally collected 200,000 Chinese samples from the internet and randomly extracted 200,000 English samples from the refinedweb dataset (Penedo et al. 2023). Utilizing these samples, we evaluate the English perplexity and Chinese perplexity of LLaMA models trained on differentscale corpora, as depicted in table 2. Our findings reveal that with the increase in further pretraining scale, the perplexity of the models decreases steadily in Chinese, yet notably increases in English. This suggests that enhancing the model's capabilities solely through a single Chinese corpus comes at the cost of sacrificing the original English proficiency.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC3_C001",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.4792374074459076,
+      "preview": "# LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+      "chunk_metadata": {
+        "doc_id": "DOC3",
+        "doc_title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "owner_type": "paper",
+        "owner_name": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "doc_kind_hint": "paper_like",
+        "section_path": "# LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC3_C006",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.45776206254959106,
+      "preview": "Figure 1: Pretrained LLaMA models, which are primarily trained on English-dominated corpus (as depicted on the left), are not inherently proficient in handling non-English languages. We aim to investigate the necessit...",
+      "chunk_metadata": {
+        "doc_id": "DOC3",
+        "doc_title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "owner_type": "paper",
+        "owner_name": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## Introduction",
+        "content_type": "figure",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC3_C008",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.4570210576057434,
+      "preview": "Many well-known LLMs are capable of comprehending input and generating responses across different languages, thanks to their pretraining on a diverse mix of corpus from multiple languages. However, due to the imbalanc...",
+      "chunk_metadata": {
+        "doc_id": "DOC3",
+        "doc_title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "owner_type": "paper",
+        "owner_name": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## Introduction",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [
+          "%"
+        ],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC3_C009",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.48786109685897827,
+      "preview": "In this work, we take a step towards gaining a comprehensive understanding of the language capability transfer in LLMs. As shown in figure 1, we empirically investigate several key aspects based on LLaMA:",
+      "chunk_metadata": {
+        "doc_id": "DOC3",
+        "doc_title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "owner_type": "paper",
+        "owner_name": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## Introduction",
+        "content_type": "figure",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC3_C030",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.45891642570495605,
+      "preview": "To transfer the language capabilities of LLaMA to the non-English language of interest, we utilize two instruction datasets, namely BELLE and Bactrain-X, for training. The former is employed in experiments related to...",
+      "chunk_metadata": {
+        "doc_id": "DOC3",
+        "doc_title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "owner_type": "paper",
+        "owner_name": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## Datasets",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC3_C050",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.4566742181777954,
+      "preview": "Another issue of interest to us is whether the improvement in Chinese proficiency has an impact on the existing English capabilities. To address this question, we additionally collected 200,000 Chinese samples from th...",
+      "chunk_metadata": {
+        "doc_id": "DOC3",
+        "doc_title": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "owner_type": "paper",
+        "owner_name": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## How about the Original English Capabilities",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    }
+  ],
+  "doc_metadata": {
+    "owner_type": "paper",
+    "owner_name": "LLaMA Beyond English: An Empirical Study on Language Capability Transfer",
+    "doc_kind_hint": "paper_like",
+    "doc_case_id": "",
+    "num_tables": 3,
+    "num_headings": 22,
+    "record_type": "paper"
+  }
+}

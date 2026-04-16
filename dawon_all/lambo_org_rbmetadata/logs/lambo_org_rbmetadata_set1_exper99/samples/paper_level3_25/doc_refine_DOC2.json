@@ -1,0 +1,140 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Data Filtering Networks",
+  "scan_result": "found",
+  "evidence": "[doc_meta DOC2] owner=paper:Data Filtering Networks | kind=paper_like\n[DOC2_C015] (score=0.3711)\nmeta: doc=DOC2:Data Filtering Networks | owner=paper:Data Filtering Networks | section=### 2.1 Contrastive Image Language Pre-training (CLIP) | kind=paragraph\nCLIP has altered the use of cheaply available image-alt-text datasets by demonstrating the practicality of large-scale training on web-scraped image-text pairs to build state-of-the-art image representations. CLIP consists of separate vision and text encoders, and uses contrastive loss during training to push the representations of related images and text pairs together, and unrelated pairs apart. Crucial to this process is a large dataset of aligned image-text pairs - images paired with semantically relevant text. The release of CLIP was followed by several other image-text models such as ALIGN, BASIC, LiT and Open-CLIP all of which we will refer to in this work as CLIP models (Jia et al., 2021; Pham et al., 2023; Zhai et al. 2022b, Ilharco et al., 2021). CLIP models generally come in 3 canonical sizes of vision transformer: ViT-B/32, ViT-B/16 and ViT-L/14; since then, the open source community has extended these to 3 larger variants ViT-H/14, ViT-g/14 and ViT-G/14 (Dosovitskiy et al., 2020; Zhai et al. 2022a). Generally the larger models exhibit better zero-shot generalization and transfer properties. CLIP models have been trained on a variety of datasets from OpenAI's WiT, Google's WebLI and JFT-3B, LAION, COYO and DataComp-1B.\n\n[DOC2_C016] (score=0.3539)\nmeta: doc=DOC2:Data Filtering Networks | owner=paper:Data Filtering Networks | section=### 2.1 Contrastive Image Language Pre-training (CLIP) | kind=paragraph\nPrior work has also studied how to fine-tune CLIP models to improve performance in targeted directions. CLIP models can be fine-tuned on image classification tasks by using templates to transform labels to text (Fang et al., 2022; Goyal et al., 2022). Additionally, practitioners often use weight ensembling to preserve robustness properties of the pre-trained model while reaping the benefits of fine-tuning (Wortsman et al., 2022). We take advantage of these techniques in order to improve the filtering models we train in this work.\n### 2.2 Dataset Construction\n\n[DOC2_C022] (score=0.3995)\nmeta: doc=DOC2:Data Filtering Networks | owner=paper:Data Filtering Networks | section=# filter by alignment | kind=paragraph | role=result\nTo better facilitate the study of image-text datasets, researchers created the DataComp benchmark (Gadre et al. 2023). The benchmark provides 12.8 billion image-text pairs from Common Crawl so that researchers can study the effect of various data filtering techniques. DataComp fixes the computational budget used to train the resulting models, fixing the compute budget of the largest scale to match the cost of training OpenAI's ViT-L/14 CLIP model. These models are then evaluated on a suite of 38 downstream tasks, which includes ImageNet and distribution shifts, VTAB, and retrieval tasks. We use this benchmark as our primary method of evaluating the datasets created by our data filtering networks.\n\n[DOC2_C036] (score=0.3921)\nmeta: doc=DOC2:Data Filtering Networks | owner=paper:Data Filtering Networks | section=### 3.2 Data Filtering Networks Evaluation Setup | kind=paragraph\nframework for datasets by measuring CLIP model zero-shot performance. It provides 4 nested unfiltered image-text pair pools of increasing size. In this work, we use the medium (128M datapoints), large (1.28B datapoints) and xlarge(12.8B datapoints) pools. We also follow the DataComp guidelines of model hyperparameters for each of these pools, which are ViT-B/32 for medium, ViT-B/16 for large and ViT-L/14 for XL. Exact hyperparameters can be found in Table 7. We additionally expand our DFN to a larger pool of 42B images by combining 30B non-DataComp web-scraped images with the DataComp XL pool. We denote the dataset induced using this pool and our DFN as DFN-5B, which we use to train a ViT-H/14 model.\n\n[DOC2_C082] (score=0.3537)\nmeta: doc=DOC2:Data Filtering Networks | owner=paper:Data Filtering Networks | section=### 4.2 Publicly Reproducible DFNs | kind=paragraph\nJia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. Imagenet: A large-scale hierarchical image database. In Conference on Computer Vision and Pattern Recognition (CVPR), 2009. https://ieeexplore.ieee.org/abstract/document/5206848.\n\n[DOC2_C116] (score=0.3835)\nmeta: doc=DOC2:Data Filtering Networks | owner=paper:Data Filtering Networks | section=### 4.2 Publicly Reproducible DFNs | kind=paragraph | role=result | units=eur\nChristoph Schuhmann, Romain Beaumont, Richard Vencu, Cade W Gordon, Ross Wightman, Mehdi Cherti, Theo Coombes, Aarush Katta, Clayton Mullis, Mitchell Wortsman, Patrick Schramowski, Srivatsa R Kundurthy, Katherine Crowson, Ludwig Schmidt, Robert Kaczmarczyk, and Jenia Jitsev. LAION-5B: An open large-scale dataset for training next generation imagetext models. In Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track, 2022. https://openreview.net/forum?id=M3Y74vmsMcY.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC2_C015",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.37111568450927734,
+      "preview": "CLIP has altered the use of cheaply available image-alt-text datasets by demonstrating the practicality of large-scale training on web-scraped image-text pairs to build state-of-the-art image representations. CLIP con...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Data Filtering Networks",
+        "owner_type": "paper",
+        "owner_name": "Data Filtering Networks",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 2.1 Contrastive Image Language Pre-training (CLIP)",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC2_C016",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.353934645652771,
+      "preview": "Prior work has also studied how to fine-tune CLIP models to improve performance in targeted directions. CLIP models can be fine-tuned on image classification tasks by using templates to transform labels to text (Fang...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Data Filtering Networks",
+        "owner_type": "paper",
+        "owner_name": "Data Filtering Networks",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 2.1 Contrastive Image Language Pre-training (CLIP)",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC2_C022",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.3994508385658264,
+      "preview": "To better facilitate the study of image-text datasets, researchers created the DataComp benchmark (Gadre et al. 2023). The benchmark provides 12.8 billion image-text pairs from Common Crawl so that researchers can stu...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Data Filtering Networks",
+        "owner_type": "paper",
+        "owner_name": "Data Filtering Networks",
+        "doc_kind_hint": "paper_like",
+        "section_path": "# filter by alignment",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC2_C036",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.3921193480491638,
+      "preview": "framework for datasets by measuring CLIP model zero-shot performance. It provides 4 nested unfiltered image-text pair pools of increasing size. In this work, we use the medium (128M datapoints), large (1.28B datapoint...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Data Filtering Networks",
+        "owner_type": "paper",
+        "owner_name": "Data Filtering Networks",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 3.2 Data Filtering Networks Evaluation Setup",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC2_C082",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.35371899604797363,
+      "preview": "Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei-Fei. Imagenet: A large-scale hierarchical image database. In Conference on Computer Vision and Pattern Recognition (CVPR), 2009. https://ieeexplore.iee...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Data Filtering Networks",
+        "owner_type": "paper",
+        "owner_name": "Data Filtering Networks",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 4.2 Publicly Reproducible DFNs",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC2_C116",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.38349658250808716,
+      "preview": "Christoph Schuhmann, Romain Beaumont, Richard Vencu, Cade W Gordon, Ross Wightman, Mehdi Cherti, Theo Coombes, Aarush Katta, Clayton Mullis, Mitchell Wortsman, Patrick Schramowski, Srivatsa R Kundurthy, Katherine Crow...",
+      "chunk_metadata": {
+        "doc_id": "DOC2",
+        "doc_title": "Data Filtering Networks",
+        "owner_type": "paper",
+        "owner_name": "Data Filtering Networks",
+        "doc_kind_hint": "paper_like",
+        "section_path": "### 4.2 Publicly Reproducible DFNs",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [
+          "eur"
+        ],
+        "case_id": ""
+      }
+    }
+  ],
+  "doc_metadata": {
+    "owner_type": "paper",
+    "owner_name": "Data Filtering Networks",
+    "doc_kind_hint": "paper_like",
+    "doc_case_id": "",
+    "num_tables": 5,
+    "num_headings": 16,
+    "record_type": "paper"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "Mistral 7B",
+  "scan_result": "found",
+  "evidence": "[doc_meta DOC1] owner=paper:Mistral 7B | kind=paper_like\n[DOC1_C004] (score=0.2586)\nmeta: doc=DOC1:Mistral 7B | owner=paper:Mistral 7B | section=#### Abstract | kind=paragraph | role=result\nWe introduce Mistral 7B, a 7-billion-parameter language model engineered for superior performance and efficiency. Mistral 7B outperforms the best open 13B model (Llama 2) across all evaluated benchmarks, and the best released 34B model (Llama 1) in reasoning, mathematics, and code generation. Our model leverages grouped-query attention (GQA) for faster inference, coupled with sliding window attention (SWA) to effectively handle sequences of arbitrary length with a reduced inference cost. We also provide a model fine-tuned to follow instructions, Mistral 7B - Instruct, that surpasses Llama 2 13B - chat model both on human and automated benchmarks. Our models are released under the Apache 2.0 license.\nCode: https://github.com/mistralai/mistral-src\n\n[DOC1_C011] (score=0.2903)\nmeta: doc=DOC1:Mistral 7B | owner=paper:Mistral 7B | section=## 2 Architectural details | kind=figure\nFigure 1: Sliding Window Attention. The number of operations in vanilla attention is quadratic in the sequence length, and the memory increases linearly with the number of tokens. At inference time, this incurs higher latency and smaller throughput due to reduced cache availability. To alleviate this issue, we use sliding window attention: each token can attend to at most $W$ tokens from the previous layer (here, $W=3$ ). Note that tokens outside the sliding window still influence next word prediction. At each attention layer, information can move forward by $W$ tokens. Hence, after $k$ attention layers, information can move forward by up to $k \\times W$ tokens.\n\n[DOC1_C018] (score=0.2905)\nmeta: doc=DOC1:Mistral 7B | owner=paper:Mistral 7B | section=## 2 Architectural details | kind=paragraph\nPre-fill and Chunking. When generating a sequence, we need to predict tokens one-by-one, as each token is conditioned on the previous ones. However, the prompt is known in advance, and we can pre-fill the $(k, v)$ cache with the prompt. If the prompt is very large, we can chunk it into smaller pieces, and pre-fill the cache with each chunk. For this purpose, we can select the window size as our chunk size. For each chunk, we thus need to compute the attention over the cache and over the chunk. Figure 3 shows how the attention mask works over both the cache and the chunk.\n\n[DOC1_C028] (score=0.2785)\nmeta: doc=DOC1:Mistral 7B | owner=paper:Mistral 7B | section=## 3 Results | kind=paragraph | role=result\nEvaluation Differences. On some benchmarks, there are some differences between our evaluation protocol and the one reported in the Llama 2 paper: 1) on MBPP, we use the hand-verified subset 2) on TriviaQA, we do not provide Wikipedia contexts.\n## 4 Instruction Finetuning\n\n[DOC1_C053] (score=0.2665)\nmeta: doc=DOC1:Mistral 7B | owner=paper:Mistral 7B | section=## References | kind=paragraph | role=citation_context\n[1] Joshua Ainslie, James Lee-Thorp, Michiel de Jong, Yury Zemlyanskiy, Federico Lebrón, and Sumit Sanghai. Gqa: Training generalized multi-query transformer models from multi-head checkpoints. arXiv preprint arXiv:2305.13245, 2023.\n\n[DOC1_C083] (score=0.2693)\nmeta: doc=DOC1:Mistral 7B | owner=paper:Mistral 7B | section=## References | kind=paragraph\n[^1]:    ${ }^{4}$ Since Llama 2 34B was not open-sourced, we report results for Llama 1 34B.",
+  "rounds_used": 1,
+  "retrieved_anchors": [
+    {
+      "anchor_id": "DOC1_C004",
+      "retrieval_rank": 5,
+      "retrieval_score": 0.25856053829193115,
+      "preview": "We introduce Mistral 7B, a 7-billion-parameter language model engineered for superior performance and efficiency. Mistral 7B outperforms the best open 13B model (Llama 2) across all evaluated benchmarks, and the best...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Mistral 7B",
+        "owner_type": "paper",
+        "owner_name": "Mistral 7B",
+        "doc_kind_hint": "paper_like",
+        "section_path": "#### Abstract",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C011",
+      "retrieval_rank": 1,
+      "retrieval_score": 0.29032421112060547,
+      "preview": "Figure 1: Sliding Window Attention. The number of operations in vanilla attention is quadratic in the sequence length, and the memory increases linearly with the number of tokens. At inference time, this incurs higher...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Mistral 7B",
+        "owner_type": "paper",
+        "owner_name": "Mistral 7B",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 2 Architectural details",
+        "content_type": "figure",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C018",
+      "retrieval_rank": 0,
+      "retrieval_score": 0.2905130982398987,
+      "preview": "Pre-fill and Chunking. When generating a sequence, we need to predict tokens one-by-one, as each token is conditioned on the previous ones. However, the prompt is known in advance, and we can pre-fill the $(k, v)$ cac...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Mistral 7B",
+        "owner_type": "paper",
+        "owner_name": "Mistral 7B",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 2 Architectural details",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C028",
+      "retrieval_rank": 2,
+      "retrieval_score": 0.2784969210624695,
+      "preview": "Evaluation Differences. On some benchmarks, there are some differences between our evaluation protocol and the one reported in the Llama 2 paper: 1) on MBPP, we use the hand-verified subset 2) on TriviaQA, we do not p...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Mistral 7B",
+        "owner_type": "paper",
+        "owner_name": "Mistral 7B",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## 3 Results",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "result",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C053",
+      "retrieval_rank": 4,
+      "retrieval_score": 0.266477108001709,
+      "preview": "[1] Joshua Ainslie, James Lee-Thorp, Michiel de Jong, Yury Zemlyanskiy, Federico Lebrón, and Sumit Sanghai. Gqa: Training generalized multi-query transformer models from multi-head checkpoints. arXiv preprint arXiv:23...",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Mistral 7B",
+        "owner_type": "paper",
+        "owner_name": "Mistral 7B",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## References",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "citation_context",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    },
+    {
+      "anchor_id": "DOC1_C083",
+      "retrieval_rank": 3,
+      "retrieval_score": 0.269273579120636,
+      "preview": "[^1]: ${ }^{4}$ Since Llama 2 34B was not open-sourced, we report results for Llama 1 34B.",
+      "chunk_metadata": {
+        "doc_id": "DOC1",
+        "doc_title": "Mistral 7B",
+        "owner_type": "paper",
+        "owner_name": "Mistral 7B",
+        "doc_kind_hint": "paper_like",
+        "section_path": "## References",
+        "content_type": "paragraph",
+        "table_header": "",
+        "semantic_role": "unknown",
+        "time_scope": "",
+        "unit_hints": [],
+        "case_id": ""
+      }
+    }
+  ],
+  "doc_metadata": {
+    "owner_type": "paper",
+    "owner_name": "Mistral 7B",
+    "doc_kind_hint": "paper_like",
+    "doc_case_id": "",
+    "num_tables": 6,
+    "num_headings": 14,
+    "record_type": "paper"
+  }
+}
