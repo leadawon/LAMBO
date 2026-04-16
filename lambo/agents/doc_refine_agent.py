@@ -436,6 +436,71 @@ class DocRefineAgent:
             return answer_text.strip()
         return ""
 
+    @staticmethod
+    def _chunk_text_for_evidence(text: str) -> List[str]:
+        chunks = [chunk.strip() for chunk in re.split(r"\n\s*\n+", str(text or "")) if chunk.strip()]
+        if chunks:
+            return chunks
+        return [line.strip() for line in str(text or "").splitlines() if line.strip()]
+
+    def _fallback_evidence_from_opened(
+        self,
+        *,
+        question: str,
+        instruction: str,
+        opened_anchor_payloads: List[Dict[str, Any]],
+    ) -> str:
+        if not opened_anchor_payloads:
+            return ""
+
+        target_terms = self._extract_target_terms(question, instruction, question)
+        query_tokens = tokenize_query(question)
+        instruction_tokens = tokenize_query(instruction)
+        scored_chunks: List[Tuple[float, str]] = []
+
+        for anchor in opened_anchor_payloads:
+            anchor_title = normalize_ws(anchor.get("anchor_title", ""))
+            for chunk in self._chunk_text_for_evidence(anchor.get("text", "")):
+                normalized_chunk = normalize_ws(chunk)
+                if len(normalized_chunk) < 20:
+                    continue
+                lowered = normalized_chunk.casefold()
+                score = 0.0
+                for term in target_terms:
+                    if term.casefold() in lowered:
+                        score += 10.0 + min(len(term) / 10.0, 4.0)
+                score += sum(1.5 for token in query_tokens[:12] if token in lowered)
+                score += sum(0.75 for token in instruction_tokens[:12] if token in lowered)
+                if anchor_title and anchor_title.casefold() in lowered:
+                    score += 2.0
+                if re.search(r"\d", normalized_chunk):
+                    score += 1.0
+                if re.search(r"(method|model|approach|dataset|experiment|result|conclusion|方法|模型|实验|结果|结论|引用|参考文献)", lowered):
+                    score += 1.5
+                if score > 0:
+                    scored_chunks.append((score, chunk.strip()))
+
+        if not scored_chunks:
+            fallback_chunks: List[str] = []
+            for anchor in opened_anchor_payloads[:2]:
+                chunk_candidates = self._chunk_text_for_evidence(anchor.get("text", ""))
+                if chunk_candidates:
+                    fallback_chunks.append(chunk_candidates[0].strip())
+            return "\n\n".join(chunk for chunk in fallback_chunks if chunk)
+
+        scored_chunks.sort(key=lambda item: item[0], reverse=True)
+        selected: List[str] = []
+        seen = set()
+        for _, chunk in scored_chunks:
+            normalized = normalize_ws(chunk)
+            if normalized in seen:
+                continue
+            selected.append(chunk)
+            seen.add(normalized)
+            if len(selected) >= 3:
+                break
+        return "\n\n".join(selected)
+
     def _plan_step(
         self,
         *,
@@ -596,6 +661,7 @@ class DocRefineAgent:
         state = self.initialize_state(query=question, instruction=instruction, anchors=all_anchors)
         opened_anchors: List[str] = []
         opened_texts: List[str] = []
+        opened_anchor_payloads: List[Dict[str, Any]] = []
         accumulated_trace = ""
         rounds: List[Dict[str, Any]] = []
         final_decision: Dict[str, Any] = {}
@@ -664,6 +730,7 @@ class DocRefineAgent:
             anchor = anchor_by_id[anchor_id]
             opened_anchors.append(anchor_id)
             opened_texts.append(str(anchor.get("text", "")))
+            opened_anchor_payloads.append(anchor)
             accumulated_trace += f"<info anchor_id=\"{anchor_id}\">\n{anchor.get('text', '')}\n</info>\n"
 
             remaining_anchor_ids = [candidate for candidate in anchor_by_id if candidate not in opened_anchors]
@@ -685,6 +752,16 @@ class DocRefineAgent:
                     "search_state": state.to_dict(),
                 }
             )
+
+        if not evidence_text:
+            fallback_evidence = self._fallback_evidence_from_opened(
+                question=question,
+                instruction=instruction,
+                opened_anchor_payloads=opened_anchor_payloads,
+            )
+            if fallback_evidence.strip():
+                evidence_text = fallback_evidence
+                scan_result = "evidence_found"
 
         evidence_sheet = {
             "doc_id": doc_id,
