@@ -1,0 +1,67 @@
+{
+  "think": "Stage 1 feature sheet: - DOC1: 预付款项数值为62,606,303.29 和 50,971,870.03 - DOC2: - 上海伊洛私募基金管理有限公司-君行23号伊洛私募证券投资基金的预付款项为0 - 尤小平的预付款项为0 - 上海利位投资管理有限公司－利位复兴十号私募证券投资基金的预付款项为19,380,000.00 - 尤小华的预付款项为19,218,182.00 - DOC3: 无相关数据 Stage 2 reasoning about structure and mapping: 根据问题和指令，我们需要将公司财报按照“预付款项”的数值进行分类。结构应为“mapping”，其中键是公司名称或基金名称，值是对应的预付款项类别（高、中、低、负）。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [
+        "公司名称",
+        "预付款项类别"
+      ],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "DOC1",
+          "value": "中预付款"
+        },
+        "sources": [
+          "DOC1:DOC1_A7"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "上海伊洛私募基金管理有限公司-君行23号伊洛私募证券投资基金",
+          "value": "负预付款"
+        },
+        "sources": [
+          "DOC2:DOC2_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "尤小平",
+          "value": "负预付款"
+        },
+        "sources": [
+          "DOC2:DOC2_A4"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "上海利位投资管理有限公司－利位复兴十号私募证券投资基金",
+          "value": "低预付款"
+        },
+        "sources": [
+          "DOC2:DOC2_A6"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "尤小华",
+          "value": "低预付款"
+        },
+        "sources": [
+          "DOC2:DOC2_A6"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 feature sheet:\n  - DOC1: 预付款项数值为62,606,303.29 和 50,971,870.03\n  - DOC2: \n    - 上海伊洛私募基金管理有限公司-君行23号伊洛私募证券投资基金的预付款项为0\n    - 尤小平的预付款项为0\n    - 上海利位投资管理有限公司－利位复兴十号私募证券投资基金的预付款项为19,380,000.00\n    - 尤小华的预付款项为19,218,182.00\n  - DOC3: 无相关数据\n  \n  Stage 2 reasoning about structure and mapping:\n  根据问题和指令，我们需要将公司财报按照“预付款项”的数值进行分类。结构应为“mapping”，其中键是公司名称或基金名称，值是对应的预付款项类别（高、中、低、负）。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [\"公司名称\", \"预付款项类别\"],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"DOC1\",\n        \"value\": \"中预付款\"\n      },\n      \"sources\": [\"DOC1:DOC1_A7\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"上海伊洛私募基金管理有限公司-君行23号伊洛私募证券投资基金\",\n        \"value\": \"负预付款\"\n      },\n      \"sources\": [\"DOC2:DOC2_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"尤小平\",\n        \"value\": \"负预付款\"\n      },\n      \"sources\": [\"DOC2:DOC2_A4\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"上海利位投资管理有限公司－利位复兴十号私募证券投资基金\",\n        \"value\": \"低预付款\"\n      },\n      \"sources\": [\"DOC2:DOC2_A6\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"尤小华\",\n        \"value\": \"低预付款\"\n      },\n      \"sources\": [\"DOC2:DOC2_A6\"]\n    }\n  ]\n}\n</relations>"
+}

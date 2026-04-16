@@ -1,0 +1,1980 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems",
+  "opened_anchor_ids": [
+    "DOC2_A1",
+    "DOC2_A29",
+    "DOC2_A30",
+    "DOC2_A27",
+    "DOC2_A23",
+    "DOC2_A16",
+    "DOC2_A18",
+    "DOC2_A20"
+  ],
+  "items": [],
+  "rounds": [
+    {
+      "round_index": 1,
+      "plan": {
+        "think": "The document title suggests that this paper could be the starting point of the citation chain. I need to find the title of this paper and check its references to find the next paper in the chain. I will start by opening the anchor that contains the title and author information of this paper.",
+        "action": "open",
+        "anchor_id": "DOC2_A1",
+        "need": "title and authors",
+        "reason": "to identify the title of the current paper and find its references",
+        "candidate_anchor_ids": [
+          "DOC2_A13",
+          "DOC2_A1",
+          "DOC2_A3",
+          "DOC2_A11"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A13",
+          "DOC2_A1",
+          "DOC2_A3",
+          "DOC2_A11"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A13",
+          "DOC2_A1",
+          "DOC2_A3",
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A29",
+          "DOC2_A30",
+          "DOC2_A2",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A12",
+          "DOC2_A5",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A4",
+          "DOC2_A15",
+          "DOC2_A6",
+          "DOC2_A19",
+          "DOC2_A22",
+          "DOC2_A14"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A13",
+            "score": 46.0,
+            "reasons": [
+              "query_overlap=4",
+              "instruction_overlap=4",
+              "citation_cue",
+              "position_bonus=0.00"
+            ],
+            "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+          },
+          {
+            "anchor_id": "DOC2_A1",
+            "score": 39.807,
+            "reasons": [
+              "query_overlap=4",
+              "instruction_overlap=4",
+              "position_bonus=1.81"
+            ],
+            "summary": "# Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems Tsung-Hsien Wen, Milica Gašić, Nikola Mrkšić,<br>Pei-Hao Su, David Vandyke and Stev..."
+          },
+          {
+            "anchor_id": "DOC2_A3",
+            "score": 39.114,
+            "reasons": [
+              "query_overlap=4",
+              "instruction_overlap=4",
+              "position_bonus=1.11"
+            ],
+            "summary": "Conventional approaches to NLG typically divide the task into sentence planning and surface realisation. Sentence planning maps input semantic symbols into an intermediary form..."
+          },
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 38.015,
+            "reasons": [
+              "query_overlap=4",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          }
+        ],
+        "raw_text": "<think>\nThe document title suggests that this paper could be the starting point of the citation chain. I need to find the title of this paper and check its references to find the next paper in the chain. I will start by opening the anchor that contains the title and author information of this paper.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A1\",\"need\":\"title and authors\",\"reason\":\"to identify the title of the current paper and find its references\"}\n</search>",
+        "action_type": "inspect_anchor",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them.",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [],
+          "last_anchor_id": "",
+          "last_action": "inspect_anchor",
+          "round_index": 1,
+          "local_frontier_anchor_ids": [],
+          "global_frontier_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A16",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A23",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A27",
+            "DOC2_A28",
+            "DOC2_A29",
+            "DOC2_A30"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A1",
+      "info": {
+        "anchor_title": "# Semantically Conditioned LSTM-based Natural L...",
+        "char_count": 2338
+      },
+      "extract": {
+        "think": "I looked for citations between the current paper and others mentioned in the text. I found that the paper cites several other works, such as Stent et al. (2005), Cheyer and Guzzoni (2007), Mirkovic and Cavedon (2011), Young et al. (2013), Gašić et al. (2014), and Henderson et al. (2014). However, none of these citations indicate a linear citation chain involving the current paper and other provided papers. Therefore, there are no items to record for constructing a citation chain.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A1",
+        "last_action": "rewrite_query",
+        "round_index": 2,
+        "local_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A16",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A29",
+          "DOC2_A30"
+        ]
+      }
+    },
+    {
+      "round_index": 2,
+      "plan": {
+        "think": "The current evidence does not provide any titles of the papers or their citation relationships. I need to find an anchor that contains references or citations to other papers. The anchor \"DOC2_A29\" seems promising as it lists authors and a publication year, which might indicate a citation.",
+        "action": "open",
+        "anchor_id": "DOC2_A29",
+        "need": "citation or reference evidence",
+        "reason": "This anchor lists authors and a publication year, which could provide citation information.",
+        "candidate_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A5",
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A3"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A5",
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A13",
+          "DOC2_A29",
+          "DOC2_A30",
+          "DOC2_A4",
+          "DOC2_A9",
+          "DOC2_A12",
+          "DOC2_A8",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A18",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A17",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A26",
+          "DOC2_A6",
+          "DOC2_A15",
+          "DOC2_A19",
+          "DOC2_A22",
+          "DOC2_A14"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A5",
+            "score": 59.208,
+            "reasons": [
+              "query_overlap=6",
+              "instruction_overlap=3",
+              "local_frontier_boost",
+              "position_bonus=0.71"
+            ],
+            "summary": "Figure 1: Semantic Controlled LSTM cell proposed in this paper. The upper part is a traditional LSTM cell in charge of surface realisation, while the lower part is a sentence pl..."
+          },
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 59.015,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          },
+          {
+            "anchor_id": "DOC2_A16",
+            "score": 59.0,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.00"
+            ],
+            "summary": "In this paper we have proposed a neural networkbased generator that is capable of generating natural linguistically varied responses based on a deep, semantically controlled LST..."
+          },
+          {
+            "anchor_id": "DOC2_A3",
+            "score": 55.114,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=4",
+              "local_frontier_boost",
+              "position_bonus=1.11"
+            ],
+            "summary": "Conventional approaches to NLG typically divide the task into sentence planning and surface realisation. Sentence planning maps input semantic symbols into an intermediary form..."
+          }
+        ],
+        "raw_text": "<think>\nThe current evidence does not provide any titles of the papers or their citation relationships. I need to find an anchor that contains references or citations to other papers. The anchor \"DOC2_A29\" seems promising as it lists authors and a publication year, which might indicate a citation.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A29\",\"need\":\"citation or reference evidence\",\"reason\":\"This anchor lists authors and a publication year, which could provide citation information.\"}\n</search>",
+        "action_type": "scan_neighbors",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [
+            "DOC2_A1"
+          ],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [
+            "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+          ],
+          "last_anchor_id": "DOC2_A1",
+          "last_action": "rewrite_query",
+          "round_index": 2,
+          "local_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5"
+          ],
+          "global_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A16",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A23",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A27",
+            "DOC2_A28",
+            "DOC2_A29",
+            "DOC2_A30"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A29",
+      "info": {
+        "anchor_title": "Tsung-Hsien Wen, Milica Gašić, Dongho Kim, Niko...",
+        "char_count": 939
+      },
+      "extract": {
+        "think": "The raw text contains multiple citations but none of them form a clear citation chain as described in the instruction. Each citation is listed individually without indicating a citation relationship between them. Therefore, there is no evidence to support a citation chain among the provided papers.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A29"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A29",
+        "last_action": "jump_to_section",
+        "round_index": 3,
+        "local_frontier_anchor_ids": [
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A30"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A16",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A30"
+        ]
+      }
+    },
+    {
+      "round_index": 3,
+      "plan": {
+        "think": "The current evidence does not provide any titles of the papers or their citation relationships. I need to find an anchor that contains the titles of the papers and their citation relationships. The anchor \"DOC2_A30\" seems promising as it mentions a specific paper by Xingxing Zhang and Mirella Lapata, which could potentially be one of the papers in the citation chain.",
+        "action": "open",
+        "anchor_id": "DOC2_A30",
+        "need": "titles and citation relationships",
+        "reason": "This anchor mentions a specific paper that could be part of the citation chain",
+        "candidate_anchor_ids": [
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A30",
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A30",
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13",
+          "DOC2_A25",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A9",
+          "DOC2_A12",
+          "DOC2_A5",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A26",
+          "DOC2_A8",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A18",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A4",
+          "DOC2_A17",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A6",
+          "DOC2_A15",
+          "DOC2_A19",
+          "DOC2_A22",
+          "DOC2_A14"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A30",
+            "score": 61.0,
+            "reasons": [
+              "query_overlap=6",
+              "instruction_overlap=4",
+              "local_frontier_boost",
+              "position_bonus=0.00"
+            ],
+            "summary": "Xingxing Zhang and Mirella Lapata. 2014. Chinese poetry generation with recurrent neural networks. In Proceedings of the 2014 Conference on EMNLP. Association for Computational..."
+          },
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 59.015,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          },
+          {
+            "anchor_id": "DOC2_A16",
+            "score": 59.0,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.00"
+            ],
+            "summary": "In this paper we have proposed a neural networkbased generator that is capable of generating natural linguistically varied responses based on a deep, semantically controlled LST..."
+          },
+          {
+            "anchor_id": "DOC2_A13",
+            "score": 53.0,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=4",
+              "citation_cue",
+              "position_bonus=0.00"
+            ],
+            "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+          }
+        ],
+        "raw_text": "<think>\nThe current evidence does not provide any titles of the papers or their citation relationships. I need to find an anchor that contains the titles of the papers and their citation relationships. The anchor \"DOC2_A30\" seems promising as it mentions a specific paper by Xingxing Zhang and Mirella Lapata, which could potentially be one of the papers in the citation chain.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A30\",\"need\":\"titles and citation relationships\",\"reason\":\"This anchor mentions a specific paper that could be part of the citation chain\"}\n</search>",
+        "action_type": "scan_neighbors",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A29"
+          ],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [
+            "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+          ],
+          "last_anchor_id": "DOC2_A29",
+          "last_action": "jump_to_section",
+          "round_index": 3,
+          "local_frontier_anchor_ids": [
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A27",
+            "DOC2_A28",
+            "DOC2_A30"
+          ],
+          "global_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A16",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A23",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A27",
+            "DOC2_A28",
+            "DOC2_A30"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A30",
+      "info": {
+        "anchor_title": "Xingxing Zhang and Mirella Lapata. 2014. Chines...",
+        "char_count": 550
+      },
+      "extract": {
+        "think": "The raw text provides the title and authors of a paper but lacks information about citation relationships. Since the Search Agent was looking for titles and citation relationships, and there is no evidence of citation relationships in the given text, no items are recorded.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A29",
+          "DOC2_A30"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A30",
+        "last_action": "jump_to_section",
+        "round_index": 4,
+        "local_frontier_anchor_ids": [
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A16",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28"
+        ]
+      }
+    },
+    {
+      "round_index": 4,
+      "plan": {
+        "think": "The current evidence does not provide any titles of the papers or citation relationships. I need to find a section that lists references or citations to other papers. The anchor \"DOC2_A27\" seems promising as it contains citations to other works, which might help in identifying the titles and citation relationships.",
+        "action": "open",
+        "anchor_id": "DOC2_A27",
+        "need": "citation or reference evidence",
+        "reason": "This anchor contains citations to other works, which could provide the titles and citation relationships.",
+        "candidate_anchor_ids": [
+          "DOC2_A26",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A11"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13",
+          "DOC2_A27"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13",
+          "DOC2_A27",
+          "DOC2_A28",
+          "DOC2_A9",
+          "DOC2_A12",
+          "DOC2_A5",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A26",
+          "DOC2_A8",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A18",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A4",
+          "DOC2_A17",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A6",
+          "DOC2_A15",
+          "DOC2_A19",
+          "DOC2_A22",
+          "DOC2_A14"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 59.015,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          },
+          {
+            "anchor_id": "DOC2_A16",
+            "score": 59.0,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.00"
+            ],
+            "summary": "In this paper we have proposed a neural networkbased generator that is capable of generating natural linguistically varied responses based on a deep, semantically controlled LST..."
+          },
+          {
+            "anchor_id": "DOC2_A13",
+            "score": 53.0,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=4",
+              "citation_cue",
+              "position_bonus=0.00"
+            ],
+            "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+          },
+          {
+            "anchor_id": "DOC2_A27",
+            "score": 51.5,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=3",
+              "local_frontier_boost",
+              "position_bonus=0.00"
+            ],
+            "summary": "Amanda Stent and Martin Molina. 2009. Evaluating automatic extraction of rules for sentence plan construction. In Proceedings of SIGdial. Association for Computational Linguisti..."
+          }
+        ],
+        "raw_text": "<think>\nThe current evidence does not provide any titles of the papers or citation relationships. I need to find a section that lists references or citations to other papers. The anchor \"DOC2_A27\" seems promising as it contains citations to other works, which might help in identifying the titles and citation relationships.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A27\",\"need\":\"citation or reference evidence\",\"reason\":\"This anchor contains citations to other works, which could provide the titles and citation relationships.\"}\n</search>",
+        "action_type": "scan_neighbors",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A29",
+            "DOC2_A30"
+          ],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [
+            "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+          ],
+          "last_anchor_id": "DOC2_A30",
+          "last_action": "jump_to_section",
+          "round_index": 4,
+          "local_frontier_anchor_ids": [
+            "DOC2_A26",
+            "DOC2_A27",
+            "DOC2_A28"
+          ],
+          "global_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A16",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A23",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A27",
+            "DOC2_A28"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A27",
+      "info": {
+        "anchor_title": "Amanda Stent and Martin Molina. 2009. Evaluatin...",
+        "char_count": 777
+      },
+      "extract": {
+        "think": "The raw text contains multiple citations but none of them form a clear citation chain as described in the instruction. Each citation is a standalone entry without explicit indication of being cited by another paper listed here. Therefore, there is no evidence to support a citation chain between the papers mentioned.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A29",
+          "DOC2_A30",
+          "DOC2_A27"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A27",
+        "last_action": "jump_to_section",
+        "round_index": 5,
+        "local_frontier_anchor_ids": [
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A28"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A16",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A28"
+        ]
+      }
+    },
+    {
+      "round_index": 5,
+      "plan": {
+        "think": "The current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. However, some of the anchors might contain references to other papers, which could help us identify the titles and establish the citation chain. I will start by examining the anchor that lists references to other works, as it might contain the titles of the papers we need.",
+        "action": "open",
+        "anchor_id": "DOC2_A23",
+        "need": "citation or reference evidence",
+        "reason": "This anchor contains references to other works, which might include the titles of the papers and their citation relationships.",
+        "candidate_anchor_ids": [
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13",
+          "DOC2_A23"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13",
+          "DOC2_A23",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A28",
+          "DOC2_A9",
+          "DOC2_A12",
+          "DOC2_A5",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A26",
+          "DOC2_A8",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A18",
+          "DOC2_A4",
+          "DOC2_A17",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A6",
+          "DOC2_A15",
+          "DOC2_A19",
+          "DOC2_A22",
+          "DOC2_A14"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 59.015,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          },
+          {
+            "anchor_id": "DOC2_A16",
+            "score": 59.0,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.00"
+            ],
+            "summary": "In this paper we have proposed a neural networkbased generator that is capable of generating natural linguistically varied responses based on a deep, semantically controlled LST..."
+          },
+          {
+            "anchor_id": "DOC2_A13",
+            "score": 53.0,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=4",
+              "citation_cue",
+              "position_bonus=0.00"
+            ],
+            "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+          },
+          {
+            "anchor_id": "DOC2_A23",
+            "score": 51.5,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=3",
+              "local_frontier_boost",
+              "position_bonus=0.00"
+            ],
+            "summary": "François Mairesse and Marilyn A. Walker. 2011. Controlling user perceptions of linguistic style: Trainable generation of personality traits. Computer Linguistics. François Maire..."
+          }
+        ],
+        "raw_text": "<think>\nThe current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. However, some of the anchors might contain references to other papers, which could help us identify the titles and establish the citation chain. I will start by examining the anchor that lists references to other works, as it might contain the titles of the papers we need.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A23\",\"need\":\"citation or reference evidence\",\"reason\":\"This anchor contains references to other works, which might include the titles of the papers and their citation relationships.\"}\n</search>",
+        "action_type": "scan_neighbors",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A29",
+            "DOC2_A30",
+            "DOC2_A27"
+          ],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [
+            "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+          ],
+          "last_anchor_id": "DOC2_A27",
+          "last_action": "jump_to_section",
+          "round_index": 5,
+          "local_frontier_anchor_ids": [
+            "DOC2_A23",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A28"
+          ],
+          "global_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A16",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A23",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A28"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A23",
+      "info": {
+        "anchor_title": "François Mairesse and Marilyn A. Walker. 2011....",
+        "char_count": 675
+      },
+      "extract": {
+        "think": "The raw text contains citations to multiple papers but does not provide clear evidence of a citation chain among the specific papers mentioned in the question. The citations listed are individual references without explicit indication of their citation relationships with each other. Therefore, there is no new evidence to add to the citation chain.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A29",
+          "DOC2_A30",
+          "DOC2_A27",
+          "DOC2_A23"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A23",
+        "last_action": "jump_to_section",
+        "round_index": 6,
+        "local_frontier_anchor_ids": [
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A16",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A28"
+        ]
+      }
+    },
+    {
+      "round_index": 6,
+      "plan": {
+        "think": "The current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. However, I will continue to search for any potential references or citations within the document. The next logical step would be to check the sections that discuss related work or references, such as the conclusion or acknowledgments sections.",
+        "action": "open",
+        "anchor_id": "DOC2_A16",
+        "need": "citation or reference evidence",
+        "reason": "This section might contain references to other papers that could help establish the citation chain.",
+        "candidate_anchor_ids": [
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13",
+          "DOC2_A24"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A16",
+          "DOC2_A13",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A9",
+          "DOC2_A12",
+          "DOC2_A5",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A26",
+          "DOC2_A8",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A18",
+          "DOC2_A28",
+          "DOC2_A19",
+          "DOC2_A4",
+          "DOC2_A17",
+          "DOC2_A6",
+          "DOC2_A15",
+          "DOC2_A22",
+          "DOC2_A14"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 59.015,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          },
+          {
+            "anchor_id": "DOC2_A16",
+            "score": 59.0,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.00"
+            ],
+            "summary": "In this paper we have proposed a neural networkbased generator that is capable of generating natural linguistically varied responses based on a deep, semantically controlled LST..."
+          },
+          {
+            "anchor_id": "DOC2_A13",
+            "score": 53.0,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=4",
+              "citation_cue",
+              "position_bonus=0.00"
+            ],
+            "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+          },
+          {
+            "anchor_id": "DOC2_A24",
+            "score": 51.5,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=3",
+              "local_frontier_boost",
+              "position_bonus=0.00"
+            ],
+            "summary": "Tomáš Mikolov and Geoffrey Zweig. 2012. Context dependent recurrent neural network language model. In In Proceedings on IEEE SLT workshop. Tomáš Mikolov, Martin Karafit, Lukáš B..."
+          }
+        ],
+        "raw_text": "<think>\nThe current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. However, I will continue to search for any potential references or citations within the document. The next logical step would be to check the sections that discuss related work or references, such as the conclusion or acknowledgments sections.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A16\",\"need\":\"citation or reference evidence\",\"reason\":\"This section might contain references to other papers that could help establish the citation chain.\"}\n</search>",
+        "action_type": "scan_neighbors",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A29",
+            "DOC2_A30",
+            "DOC2_A27",
+            "DOC2_A23"
+          ],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [
+            "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+          ],
+          "last_anchor_id": "DOC2_A23",
+          "last_action": "jump_to_section",
+          "round_index": 6,
+          "local_frontier_anchor_ids": [
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26"
+          ],
+          "global_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A16",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A28"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A16",
+      "info": {
+        "anchor_title": "In this paper we have proposed a neural network...",
+        "char_count": 2308
+      },
+      "extract": {
+        "think": "The raw text of this anchor does not contain any explicit citations or references to other papers. It primarily discusses the methodology and results of the current paper, including details about the SC-LSTM model and its performance. Since there is no citation information related to the titles of the papers mentioned in the question, no items are recorded.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A29",
+          "DOC2_A30",
+          "DOC2_A27",
+          "DOC2_A23",
+          "DOC2_A16"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A16",
+        "last_action": "jump_to_section",
+        "round_index": 7,
+        "local_frontier_anchor_ids": [
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A19",
+          "DOC2_A20"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A17",
+          "DOC2_A18",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A28"
+        ]
+      }
+    },
+    {
+      "round_index": 7,
+      "plan": {
+        "think": "The current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. I need to find an anchor that contains references or citations to other papers. I will look for an anchor that might contain a bibliography or a section discussing related work.",
+        "action": "open",
+        "anchor_id": "DOC2_A18",
+        "need": "citation or reference evidence",
+        "reason": "This anchor appears to contain citations to other works, which could help identify the titles of the papers and their citation relationships.",
+        "candidate_anchor_ids": [
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A13",
+          "DOC2_A12",
+          "DOC2_A11",
+          "DOC2_A18"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A13",
+          "DOC2_A12",
+          "DOC2_A11",
+          "DOC2_A18",
+          "DOC2_A9",
+          "DOC2_A5",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A17",
+          "DOC2_A20",
+          "DOC2_A8",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A28",
+          "DOC2_A15",
+          "DOC2_A19",
+          "DOC2_A4",
+          "DOC2_A21",
+          "DOC2_A26",
+          "DOC2_A6",
+          "DOC2_A14",
+          "DOC2_A22"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A13",
+            "score": 62.0,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=4",
+              "citation_cue",
+              "local_frontier_boost",
+              "position_bonus=0.00"
+            ],
+            "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+          },
+          {
+            "anchor_id": "DOC2_A12",
+            "score": 59.5,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=3",
+              "citation_cue",
+              "local_frontier_boost",
+              "position_bonus=0.00"
+            ],
+            "summary": "The system was implemented using the Theano library (Bergstra et al., 2010; Bastien et al., 2012), and trained by partitioning each of the collected corpus into a training, vali..."
+          },
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 59.015,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          },
+          {
+            "anchor_id": "DOC2_A18",
+            "score": 51.5,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=3",
+              "local_frontier_boost",
+              "position_bonus=0.00"
+            ],
+            "summary": "Gabor Angeli, Percy Liang, and Dan Klein. 2010. A simple domain-independent probabilistic approach to generation. In Proceedings of the 2010 Con- ference on EMNLP, EMNLP '10. As..."
+          }
+        ],
+        "raw_text": "<think>\nThe current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. I need to find an anchor that contains references or citations to other papers. I will look for an anchor that might contain a bibliography or a section discussing related work.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A18\",\"need\":\"citation or reference evidence\",\"reason\":\"This anchor appears to contain citations to other works, which could help identify the titles of the papers and their citation relationships.\"}\n</search>",
+        "action_type": "scan_neighbors",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A29",
+            "DOC2_A30",
+            "DOC2_A27",
+            "DOC2_A23",
+            "DOC2_A16"
+          ],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [
+            "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+          ],
+          "last_anchor_id": "DOC2_A16",
+          "last_action": "jump_to_section",
+          "round_index": 7,
+          "local_frontier_anchor_ids": [
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20"
+          ],
+          "global_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A17",
+            "DOC2_A18",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A28"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A18",
+      "info": {
+        "anchor_title": "Gabor Angeli, Percy Liang, and Dan Klein. 2010....",
+        "char_count": 795
+      },
+      "extract": {
+        "think": "The raw text contains citations to various papers but does not provide any explicit citation chain information between the listed papers. Each citation is a separate entry without indicating how they cite each other. Therefore, there is no evidence to support a citation chain as requested in the question.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A29",
+          "DOC2_A30",
+          "DOC2_A27",
+          "DOC2_A23",
+          "DOC2_A16",
+          "DOC2_A18"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A18",
+        "last_action": "jump_to_section",
+        "round_index": 8,
+        "local_frontier_anchor_ids": [
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A17",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A17",
+          "DOC2_A19",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A28"
+        ]
+      }
+    },
+    {
+      "round_index": 8,
+      "plan": {
+        "think": "The current document does not seem to contain the necessary citation information to construct a citation chain. The opened anchors so far have not provided any titles of papers or citation relationships. I will try to open another anchor that might contain such information, but if none of the remaining anchors provide the required evidence, I will need to stop the search.",
+        "action": "open",
+        "anchor_id": "DOC2_A20",
+        "need": "citation or reference evidence",
+        "reason": "This anchor contains author names and years, which might indicate citations or references to other papers.",
+        "candidate_anchor_ids": [
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A17",
+          "DOC2_A19"
+        ],
+        "ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A13",
+          "DOC2_A9",
+          "DOC2_A12"
+        ],
+        "all_ranked_anchor_ids": [
+          "DOC2_A11",
+          "DOC2_A13",
+          "DOC2_A9",
+          "DOC2_A12",
+          "DOC2_A5",
+          "DOC2_A3",
+          "DOC2_A2",
+          "DOC2_A17",
+          "DOC2_A20",
+          "DOC2_A21",
+          "DOC2_A8",
+          "DOC2_A7",
+          "DOC2_A10",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A28",
+          "DOC2_A15",
+          "DOC2_A19",
+          "DOC2_A4",
+          "DOC2_A26",
+          "DOC2_A6",
+          "DOC2_A22",
+          "DOC2_A14"
+        ],
+        "rule_hits": [
+          {
+            "anchor_id": "DOC2_A11",
+            "score": 59.015,
+            "reasons": [
+              "query_overlap=7",
+              "instruction_overlap=4",
+              "position_bonus=0.02"
+            ],
+            "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+          },
+          {
+            "anchor_id": "DOC2_A13",
+            "score": 53.0,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=4",
+              "citation_cue",
+              "position_bonus=0.00"
+            ],
+            "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+          },
+          {
+            "anchor_id": "DOC2_A9",
+            "score": 50.697,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=3",
+              "citation_cue",
+              "position_bonus=0.20"
+            ],
+            "summary": "Paliwal, 1997) have been shown to be effective for sequential problems (Graves et al., 2013a; Sundermeyer et al., 2014). However, applying a bidirectional network directly in th..."
+          },
+          {
+            "anchor_id": "DOC2_A12",
+            "score": 50.5,
+            "reasons": [
+              "query_overlap=5",
+              "instruction_overlap=3",
+              "citation_cue",
+              "position_bonus=0.00"
+            ],
+            "summary": "The system was implemented using the Theano library (Bergstra et al., 2010; Bastien et al., 2012), and trained by partitioning each of the collected corpus into a training, vali..."
+          }
+        ],
+        "raw_text": "<think>\nThe current document does not seem to contain the necessary citation information to construct a citation chain. The opened anchors so far have not provided any titles of papers or citation relationships. I will try to open another anchor that might contain such information, but if none of the remaining anchors provide the required evidence, I will need to stop the search.\n</think>\n<search>\n{\"action\":\"open\",\"anchor_id\":\"DOC2_A20\",\"need\":\"citation or reference evidence\",\"reason\":\"This anchor contains author names and years, which might indicate citations or references to other papers.\"}\n</search>",
+        "action_type": "scan_neighbors",
+        "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "search_state": {
+          "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+          "must_find": [
+            "citation or reference evidence"
+          ],
+          "seen_anchor_ids": [
+            "DOC2_A1",
+            "DOC2_A29",
+            "DOC2_A30",
+            "DOC2_A27",
+            "DOC2_A23",
+            "DOC2_A16",
+            "DOC2_A18"
+          ],
+          "known_items": [],
+          "missing_slots": [
+            "Title of Paper 1",
+            "Title of Paper 2",
+            "Title of Paper n",
+            "relationships"
+          ],
+          "failed_queries": [
+            "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+          ],
+          "last_anchor_id": "DOC2_A18",
+          "last_action": "jump_to_section",
+          "round_index": 8,
+          "local_frontier_anchor_ids": [
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A17",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22"
+          ],
+          "global_frontier_anchor_ids": [
+            "DOC2_A2",
+            "DOC2_A3",
+            "DOC2_A4",
+            "DOC2_A5",
+            "DOC2_A6",
+            "DOC2_A7",
+            "DOC2_A8",
+            "DOC2_A9",
+            "DOC2_A10",
+            "DOC2_A11",
+            "DOC2_A12",
+            "DOC2_A13",
+            "DOC2_A14",
+            "DOC2_A15",
+            "DOC2_A17",
+            "DOC2_A19",
+            "DOC2_A20",
+            "DOC2_A21",
+            "DOC2_A22",
+            "DOC2_A24",
+            "DOC2_A25",
+            "DOC2_A26",
+            "DOC2_A28"
+          ]
+        }
+      },
+      "anchor_id": "DOC2_A20",
+      "info": {
+        "anchor_title": "Milica Gašić, Dongho Kim, Pirros Tsiakoulis, an...",
+        "char_count": 779
+      },
+      "extract": {
+        "think": "The raw text contains citations to various papers but does not provide explicit citation chains or relationships between the papers listed. Each entry provides details about a specific paper, including authors, year, and publication venue, but there is no information indicating how these papers cite each other. Therefore, no items are recorded as they do not contribute to constructing a citation chain as requested.",
+        "item_count": 0
+      },
+      "search_state": {
+        "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+        "must_find": [
+          "citation or reference evidence"
+        ],
+        "seen_anchor_ids": [
+          "DOC2_A1",
+          "DOC2_A29",
+          "DOC2_A30",
+          "DOC2_A27",
+          "DOC2_A23",
+          "DOC2_A16",
+          "DOC2_A18",
+          "DOC2_A20"
+        ],
+        "known_items": [],
+        "missing_slots": [
+          "Title of Paper 1",
+          "Title of Paper 2",
+          "Title of Paper n",
+          "relationships"
+        ],
+        "failed_queries": [
+          "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+        ],
+        "last_anchor_id": "DOC2_A20",
+        "last_action": "jump_to_section",
+        "round_index": 9,
+        "local_frontier_anchor_ids": [
+          "DOC2_A17",
+          "DOC2_A19",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A24"
+        ],
+        "global_frontier_anchor_ids": [
+          "DOC2_A2",
+          "DOC2_A3",
+          "DOC2_A4",
+          "DOC2_A5",
+          "DOC2_A6",
+          "DOC2_A7",
+          "DOC2_A8",
+          "DOC2_A9",
+          "DOC2_A10",
+          "DOC2_A11",
+          "DOC2_A12",
+          "DOC2_A13",
+          "DOC2_A14",
+          "DOC2_A15",
+          "DOC2_A17",
+          "DOC2_A19",
+          "DOC2_A21",
+          "DOC2_A22",
+          "DOC2_A24",
+          "DOC2_A25",
+          "DOC2_A26",
+          "DOC2_A28"
+        ]
+      }
+    }
+  ],
+  "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+  "must_find": [
+    "citation or reference evidence"
+  ],
+  "action_type": "scan_neighbors",
+  "next_query_if_fail": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+  "candidate_anchor_ids": [
+    "DOC2_A14",
+    "DOC2_A15",
+    "DOC2_A17",
+    "DOC2_A19"
+  ],
+  "ranked_anchor_ids": [
+    "DOC2_A11",
+    "DOC2_A13",
+    "DOC2_A9",
+    "DOC2_A12"
+  ],
+  "all_ranked_anchor_ids": [
+    "DOC2_A11",
+    "DOC2_A13",
+    "DOC2_A9",
+    "DOC2_A12",
+    "DOC2_A5",
+    "DOC2_A3",
+    "DOC2_A2",
+    "DOC2_A17",
+    "DOC2_A20",
+    "DOC2_A21",
+    "DOC2_A8",
+    "DOC2_A7",
+    "DOC2_A10",
+    "DOC2_A24",
+    "DOC2_A25",
+    "DOC2_A28",
+    "DOC2_A15",
+    "DOC2_A19",
+    "DOC2_A4",
+    "DOC2_A26",
+    "DOC2_A6",
+    "DOC2_A22",
+    "DOC2_A14"
+  ],
+  "rule_hits": [
+    {
+      "anchor_id": "DOC2_A11",
+      "score": 59.015,
+      "reasons": [
+        "query_overlap=7",
+        "instruction_overlap=4",
+        "position_bonus=0.02"
+      ],
+      "summary": "### 4.1 Experimental Setup The target application for our generation system is a spoken dialogue system providing information about certain venues in San Francisco. In order to..."
+    },
+    {
+      "anchor_id": "DOC2_A13",
+      "score": 53.0,
+      "reasons": [
+        "query_overlap=5",
+        "instruction_overlap=4",
+        "citation_cue",
+        "position_bonus=0.00"
+      ],
+      "summary": "two hidden layers (+deep) against several baselines: the handcrafted generator $(h d c)$, k-nearest neighbour ( $k N N$ ), class-based LMs (classlm) as proposed in Oh and Rudnic..."
+    },
+    {
+      "anchor_id": "DOC2_A9",
+      "score": 50.697,
+      "reasons": [
+        "query_overlap=5",
+        "instruction_overlap=3",
+        "citation_cue",
+        "position_bonus=0.20"
+      ],
+      "summary": "Paliwal, 1997) have been shown to be effective for sequential problems (Graves et al., 2013a; Sundermeyer et al., 2014). However, applying a bidirectional network directly in th..."
+    },
+    {
+      "anchor_id": "DOC2_A12",
+      "score": 50.5,
+      "reasons": [
+        "query_overlap=5",
+        "instruction_overlap=3",
+        "citation_cue",
+        "position_bonus=0.00"
+      ],
+      "summary": "The system was implemented using the Theano library (Bergstra et al., 2010; Bastien et al., 2012), and trained by partitioning each of the collected corpus into a training, vali..."
+    }
+  ],
+  "search_state": {
+    "current_query": "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2",
+    "must_find": [
+      "citation or reference evidence"
+    ],
+    "seen_anchor_ids": [
+      "DOC2_A1",
+      "DOC2_A29",
+      "DOC2_A30",
+      "DOC2_A27",
+      "DOC2_A23",
+      "DOC2_A16",
+      "DOC2_A18",
+      "DOC2_A20"
+    ],
+    "known_items": [],
+    "missing_slots": [
+      "Title of Paper 1",
+      "Title of Paper 2",
+      "Title of Paper n",
+      "relationships"
+    ],
+    "failed_queries": [
+      "We kindly ask you to thoroughly review the provided papers and construct a citation chain from them."
+    ],
+    "last_anchor_id": "DOC2_A20",
+    "last_action": "jump_to_section",
+    "round_index": 9,
+    "local_frontier_anchor_ids": [
+      "DOC2_A17",
+      "DOC2_A19",
+      "DOC2_A21",
+      "DOC2_A22",
+      "DOC2_A24"
+    ],
+    "global_frontier_anchor_ids": [
+      "DOC2_A2",
+      "DOC2_A3",
+      "DOC2_A4",
+      "DOC2_A5",
+      "DOC2_A6",
+      "DOC2_A7",
+      "DOC2_A8",
+      "DOC2_A9",
+      "DOC2_A10",
+      "DOC2_A11",
+      "DOC2_A12",
+      "DOC2_A13",
+      "DOC2_A14",
+      "DOC2_A15",
+      "DOC2_A17",
+      "DOC2_A19",
+      "DOC2_A21",
+      "DOC2_A22",
+      "DOC2_A24",
+      "DOC2_A25",
+      "DOC2_A26",
+      "DOC2_A28"
+    ]
+  },
+  "tagged_trace": "<think>The document title suggests that this paper could be the starting point of the citation chain. I need to find the title of this paper and check its references to find the next paper in the chain. I will start by opening the anchor that contains the title and author information of this paper.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A1\", \"need\": \"title and authors\", \"action_type\": \"inspect_anchor\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A1\", \"anchor_title\": \"# Semantically Conditioned LSTM-based Natural L...\"}</info>\n<think>I looked for citations between the current paper and others mentioned in the text. I found that the paper cites several other works, such as Stent et al. (2005), Cheyer and Guzzoni (2007), Mirkovic and Cavedon (2011), Young et al. (2013), Gašić et al. (2014), and Henderson et al. (2014). However, none of these citations indicate a linear citation chain involving the current paper and other provided papers. Therefore, there are no items to record for constructing a citation chain.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current evidence does not provide any titles of the papers or their citation relationships. I need to find an anchor that contains references or citations to other papers. The anchor \"DOC2_A29\" seems promising as it lists authors and a publication year, which might indicate a citation.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A29\", \"need\": \"citation or reference evidence\", \"action_type\": \"scan_neighbors\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A29\", \"anchor_title\": \"Tsung-Hsien Wen, Milica Gašić, Dongho Kim, Niko...\"}</info>\n<think>The raw text contains multiple citations but none of them form a clear citation chain as described in the instruction. Each citation is listed individually without indicating a citation relationship between them. Therefore, there is no evidence to support a citation chain among the provided papers.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current evidence does not provide any titles of the papers or their citation relationships. I need to find an anchor that contains the titles of the papers and their citation relationships. The anchor \"DOC2_A30\" seems promising as it mentions a specific paper by Xingxing Zhang and Mirella Lapata, which could potentially be one of the papers in the citation chain.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A30\", \"need\": \"titles and citation relationships\", \"action_type\": \"scan_neighbors\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A30\", \"anchor_title\": \"Xingxing Zhang and Mirella Lapata. 2014. Chines...\"}</info>\n<think>The raw text provides the title and authors of a paper but lacks information about citation relationships. Since the Search Agent was looking for titles and citation relationships, and there is no evidence of citation relationships in the given text, no items are recorded.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current evidence does not provide any titles of the papers or citation relationships. I need to find a section that lists references or citations to other papers. The anchor \"DOC2_A27\" seems promising as it contains citations to other works, which might help in identifying the titles and citation relationships.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A27\", \"need\": \"citation or reference evidence\", \"action_type\": \"scan_neighbors\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A27\", \"anchor_title\": \"Amanda Stent and Martin Molina. 2009. Evaluatin...\"}</info>\n<think>The raw text contains multiple citations but none of them form a clear citation chain as described in the instruction. Each citation is a standalone entry without explicit indication of being cited by another paper listed here. Therefore, there is no evidence to support a citation chain between the papers mentioned.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. However, some of the anchors might contain references to other papers, which could help us identify the titles and establish the citation chain. I will start by examining the anchor that lists references to other works, as it might contain the titles of the papers we need.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A23\", \"need\": \"citation or reference evidence\", \"action_type\": \"scan_neighbors\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A23\", \"anchor_title\": \"François Mairesse and Marilyn A. Walker. 2011....\"}</info>\n<think>The raw text contains citations to multiple papers but does not provide clear evidence of a citation chain among the specific papers mentioned in the question. The citations listed are individual references without explicit indication of their citation relationships with each other. Therefore, there is no new evidence to add to the citation chain.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. However, I will continue to search for any potential references or citations within the document. The next logical step would be to check the sections that discuss related work or references, such as the conclusion or acknowledgments sections.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A16\", \"need\": \"citation or reference evidence\", \"action_type\": \"scan_neighbors\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A16\", \"anchor_title\": \"In this paper we have proposed a neural network...\"}</info>\n<think>The raw text of this anchor does not contain any explicit citations or references to other papers. It primarily discusses the methodology and results of the current paper, including details about the SC-LSTM model and its performance. Since there is no citation information related to the titles of the papers mentioned in the question, no items are recorded.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current document does not seem to provide direct evidence for the titles of the papers or their citation relationships. I need to find an anchor that contains references or citations to other papers. I will look for an anchor that might contain a bibliography or a section discussing related work.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A18\", \"need\": \"citation or reference evidence\", \"action_type\": \"scan_neighbors\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A18\", \"anchor_title\": \"Gabor Angeli, Percy Liang, and Dan Klein. 2010....\"}</info>\n<think>The raw text contains citations to various papers but does not provide any explicit citation chain information between the listed papers. Each citation is a separate entry without indicating how they cite each other. Therefore, there is no evidence to support a citation chain as requested in the question.</think>\n<extracted>{\"items\": []}</extracted>\n<think>The current document does not seem to contain the necessary citation information to construct a citation chain. The opened anchors so far have not provided any titles of papers or citation relationships. I will try to open another anchor that might contain such information, but if none of the remaining anchors provide the required evidence, I will need to stop the search.</think>\n<search>{\"action\": \"open\", \"anchor_id\": \"DOC2_A20\", \"need\": \"citation or reference evidence\", \"action_type\": \"scan_neighbors\", \"next_query_if_fail\": \"We kindly ask you to thoroughly review the provided papers and construct a citation chain from them. Focus on evidence about: Title of Paper 1, Title of Paper 2\"}</search>\n<info>{\"anchor_id\": \"DOC2_A20\", \"anchor_title\": \"Milica Gašić, Dongho Kim, Pirros Tsiakoulis, an...\"}</info>\n<think>The raw text contains citations to various papers but does not provide explicit citation chains or relationships between the papers listed. Each entry provides details about a specific paper, including authors, year, and publication venue, but there is no information indicating how these papers cite each other. Therefore, no items are recorded as they do not contribute to constructing a citation chain as requested.</think>\n<extracted>{\"items\": []}</extracted>"
+}

@@ -1,0 +1,82 @@
+{
+  "think": "Stage 1 — feature sheet: - DOC1: 涉及“执行案由-先予执行” - DOC2: 涉及“行政行为-行政裁决”（通过行政复议） - DOC3: 涉及“行政行为-行政裁决”（通过行政复议） - DOC4: 涉及“行政行为-行政强制” - DOC5: 涉及“物权保护纠纷” - DOC6: 涉及“海事海商纠纷” - DOC7: 涉及“物权保护纠纷” - DOC8: 涉及“行政行为-行政裁决”（通过行政复议） - DOC9: 涉及“执行案由-先予执行” Stage 2 — 结构选择和映射： - 结构类型为“mapping”，因为需要将每个判决文书分类到指定的案由类别中。 - 每个案由类别作为键，对应的判决文书标题列表作为值。",
+  "relations": {
+    "structure": "mapping",
+    "schema": {
+      "entities": [],
+      "attributes": [],
+      "relation_types": []
+    },
+    "records": [
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政裁决",
+          "value": [
+            "《判决文书2》",
+            "《判决文书3》",
+            "《判决文书8》"
+          ]
+        },
+        "sources": [
+          "DOC2:DOC2_A2",
+          "DOC3:DOC3_A2",
+          "DOC8:DOC8_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "执行案由-先予执行",
+          "value": [
+            "《判决文书1》",
+            "《判决文书9》"
+          ]
+        },
+        "sources": [
+          "DOC1:DOC1_A2",
+          "DOC9:DOC9_A2"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "海事海商纠纷",
+          "value": [
+            "《判决文书6》"
+          ]
+        },
+        "sources": [
+          "DOC6:DOC6_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "行政行为-行政强制",
+          "value": [
+            "《判决文书4》"
+          ]
+        },
+        "sources": [
+          "DOC4:DOC4_A3"
+        ]
+      },
+      {
+        "kind": "pair",
+        "payload": {
+          "key": "物权保护纠纷",
+          "value": [
+            "《判决文书5》",
+            "《判决文书7》"
+          ]
+        },
+        "sources": [
+          "DOC5:DOC5_A5",
+          "DOC7:DOC7_A1"
+        ]
+      }
+    ]
+  },
+  "raw_text": "<think>\n  Stage 1 — feature sheet:\n  - DOC1: 涉及“执行案由-先予执行”\n  - DOC2: 涉及“行政行为-行政裁决”（通过行政复议）\n  - DOC3: 涉及“行政行为-行政裁决”（通过行政复议）\n  - DOC4: 涉及“行政行为-行政强制”\n  - DOC5: 涉及“物权保护纠纷”\n  - DOC6: 涉及“海事海商纠纷”\n  - DOC7: 涉及“物权保护纠纷”\n  - DOC8: 涉及“行政行为-行政裁决”（通过行政复议）\n  - DOC9: 涉及“执行案由-先予执行”\n\n  Stage 2 — 结构选择和映射：\n  - 结构类型为“mapping”，因为需要将每个判决文书分类到指定的案由类别中。\n  - 每个案由类别作为键，对应的判决文书标题列表作为值。\n</think>\n<relations>\n{\n  \"structure\": \"mapping\",\n  \"schema\": {\n    \"entities\": [],\n    \"attributes\": [],\n    \"relation_types\": []\n  },\n  \"records\": [\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政裁决\",\n        \"value\": [\"《判决文书2》\", \"《判决文书3》\", \"《判决文书8》\"]\n      },\n      \"sources\": [\"DOC2:DOC2_A2\", \"DOC3:DOC3_A2\", \"DOC8:DOC8_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"执行案由-先予执行\",\n        \"value\": [\"《判决文书1》\", \"《判决文书9》\"]\n      },\n      \"sources\": [\"DOC1:DOC1_A2\", \"DOC9:DOC9_A2\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"海事海商纠纷\",\n        \"value\": [\"《判决文书6》\"]\n      },\n      \"sources\": [\"DOC6:DOC6_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"行政行为-行政强制\",\n        \"value\": [\"《判决文书4》\"]\n      },\n      \"sources\": [\"DOC4:DOC4_A3\"]\n    },\n    {\n      \"kind\": \"pair\",\n      \"payload\": {\n        \"key\": \"物权保护纠纷\",\n        \"value\": [\"《判决文书5》\", \"《判决文书7》\"]\n      },\n      \"sources\": [\"DOC5:DOC5_A5\", \"DOC7:DOC7_A1\"]\n    }\n  ]\n}\n</relations>"
+}
