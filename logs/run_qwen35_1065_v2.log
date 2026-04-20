@@ -1,0 +1,27 @@
+Backend: openai
+
+==== sample financial_level2_1065 (idx=1065) ====
+  doc DOC1 '《2024年一季度报告》' anchors=12
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=7
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=1 | evidence='"支付给职工以及为职工支付的现金|26,699,811.03|31,323,875.70"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 晨曦航空
+{
+  "prediction_path": "/workspace/lambo/logs/lambo_v2_set1_10_qwen35_27b/lambo_predictions.jsonl",
+  "structured_summary": {
+    "sample_count": 1,
+    "exact_match_rate": 0,
+    "avg_pair_f1": null
+  },
+  "llm_judge_summary": {
+    "total": 1,
+    "scoring_success_rate": 1.0,
+    "avg_score": 0.0,
+    "perfect_count": 0,
+    "perfect_rate": 0.0
+  },
+  "num_errors": 0
+}

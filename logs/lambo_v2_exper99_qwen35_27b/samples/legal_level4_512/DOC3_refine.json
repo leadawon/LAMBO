@@ -1,0 +1,11 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "evidence_found",
+  "evidence": "\"驳回上诉，维持原判。\\n二审案件受理费13800元，由杨某、秦某1、秦某2负担。\\n本判决为终审判决。\"",
+  "opened_anchors": [
+    "DOC3_A7"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>Looking at the anchor summaries for DOC3, I can see DOC3_A7 contains the judgment result (判决结果). The summary states: \"判决驳回上诉，维持原判。二审案件受理费13800元由杨某、秦某1、秦某2负担。本判决为终审判决。\"\n\nThis appears to match 判决结果1 exactly: '驳回上诉，维持原判。\\n二审案件受理费13800元，由杨某、秦某1、秦某2负担。\\n本判决为终审判决。'\n\nThe parties (杨某、秦某1、秦某2), the fee amount (13800元), and the verdict language all match. I need to open DOC3_A7 to get the verbatim text for evidence extraction.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"DOC3_A7\",\"expected_evidence\":\"判决结果具体内容，包括是否驳回上诉、维持原判、案件受理费金额及负担方\"}</search>\n<info anchor_id=\"DOC3_A7\">\n驳回上诉，维持原判。\n二审案件受理费13800元，由杨某、秦某1、秦某2负担。\n本判决为终审判决。\n</info>\n\n--- Round 2 ---\n<think>I have opened DOC3_A7 and obtained the verbatim judgment result text. The content is:\n\n\"驳回上诉，维持原判。\n二审案件受理费13800元，由杨某、秦某1、秦某2负担。\n本判决为终审判决。\"\n\nThis matches exactly with 判决结果1 from the question: '驳回上诉，维持原判。\\n二审案件受理费13800元，由杨某、秦某1、秦某2负担。\\n本判决为终审判决。'\n\nThe parties (杨某、秦某1、秦某2), the fee amount (13800元), and all the verdict language are identical.\n\nI have collected the evidence needed to determine that DOC3 (《判决文书3》) corresponds to 判决结果1. I can now stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found exact matching judgment result in DOC3_A7\"}</search>\n<answer>\"驳回上诉，维持原判。\\n二审案件受理费13800元，由杨某、秦某1、秦某2负担。\\n本判决为终审判决。\"</answer>\n"
+}

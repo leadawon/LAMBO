@@ -59,7 +59,7 @@ class Generator:
         raw_text = self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=2000,
+            max_output_tokens=4000,
             metadata={"module": "generator"},
         )
 

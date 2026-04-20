@@ -1,0 +1,39 @@
+Backend: openai
+
+==== sample financial_level1_914 (idx=914) ====
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='["使用权资产|74,341,718.39|82,464,551.16"]'
+  doc DOC2 '《2024年一季度报告》' anchors=16
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=7
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 74,341,718.39
+
+==== sample legal_level1_725 (idx=725) ====
+  doc DOC1 '《判决文书1》' anchors=10
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=9
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=16
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=13
+    -> evidence_found | rounds=1 | evidence='《判决文书4》'
+  doc DOC5 '《判决文书5》' anchors=15
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=6
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | records=1
+  -> answer: 《判决文书4》
+
+==== sample financial_level2_1065 (idx=1065) ====
+  doc DOC1 '《2024年一季度报告》' anchors=12
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='". I have opened the most plausible anchor (A2) and it does not contain the spec'
+  doc DOC3 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["西安晨曦航空科技股份有限公司", "支付给职工以及为职工支付的现金|26,699,811.03"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 晨曦航空
+
+==== sample legal_level2_801 (idx=801) ====

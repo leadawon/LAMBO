@@ -1,0 +1,30 @@
+{
+  "projection_map": {
+    "DOC1": "MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing",
+    "DOC2": "Very Deep Transformers for Neural Machine Translation",
+    "DOC3": "Understanding the Difficulty of Training Transformers"
+  },
+  "structure_description": "Cross-document citation chain construction: records represent the longest linear sequence where each paper cites the previous one, ordered from the earliest cited (root) to the latest citing (leaf).",
+  "records": [
+    {
+      "entity": "Understanding the Difficulty of Training Transformers",
+      "role": "root",
+      "cited_by": "MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing"
+    },
+    {
+      "entity": "MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing",
+      "role": "intermediate",
+      "cites": "Understanding the Difficulty of Training Transformers",
+      "cited_by": null
+    },
+    {
+      "entity": "Very Deep Transformers for Neural Machine Translation",
+      "role": "isolated",
+      "cites": null,
+      "cited_by": "Understanding the Difficulty of Training Transformers"
+    }
+  ],
+  "raw_text": "{\n  \"projection_map\": {\n    \"DOC1\": \"MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing\",\n    \"DOC2\": \"Very Deep Transformers for Neural Machine Translation\",\n    \"DOC3\": \"Understanding the Difficulty of Training Transformers\"\n  },\n  \"structure_description\": \"Cross-document citation chain construction: records represent the longest linear sequence where each paper cites the previous one, ordered from the earliest cited (root) to the latest citing (leaf).\",\n  \"records\": [\n    {\n      \"entity\": \"Understanding the Difficulty of Training Transformers\",\n      \"role\": \"root\",\n      \"cited_by\": \"MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing\"\n    },\n    {\n      \"entity\": \"MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing\",\n      \"role\": \"intermediate\",\n      \"cites\": \"Understanding the Difficulty of Training Transformers\",\n      \"cited_by\": null\n    },\n    {\n      \"entity\": \"Very Deep Transformers for Neural Machine Translation\",\n      \"role\": \"isolated\",\n      \"cites\": null,\n      \"cited_by\": \"Understanding the Difficulty of Training Transformers\"\n    }\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 2
+}

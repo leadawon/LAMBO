@@ -1,0 +1,151 @@
+Backend: openai
+
+==== sample financial_level1_914 (idx=914) ====
+  doc DOC1 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["使用权资产 74,341,718.39"]'
+  doc DOC2 '《2024年一季度报告》' anchors=5
+    -> evidence_found | rounds=1 | evidence='"使用权资产"期末余额为 2,298,773.64 元'
+  doc DOC3 '《2024年一季度报告》' anchors=12
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 74,341,718.39
+
+==== sample legal_level1_725 (idx=725) ====
+  doc DOC1 '《判决文书1》' anchors=9
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC2 '《判决文书2》' anchors=9
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=13
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=20
+    -> evidence_found | rounds=2 | evidence='【《判决文书4》】'
+  doc DOC5 '《判决文书5》' anchors=8
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=4
+    -> no_evidence | rounds=4 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | records=0
+  -> answer: []
+
+==== sample financial_level2_1065 (idx=1065) ====
+  doc DOC1 '《2024年一季度报告》' anchors=14
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=2 | evidence='"支付给职工以及为职工支付的现金|185,767,359.47"'
+  doc DOC3 '《2024年一季度报告》' anchors=10
+    -> evidence_found | rounds=1 | evidence='["支付给职工以及为职工支付的现金|26,699,811.03"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 史丹利农业集团股份有限公司
+
+==== sample legal_level2_801 (idx=801) ====
+  doc DOC1 '《判决文书1》' anchors=15
+    -> evidence_found | rounds=1 | evidence='["上诉人赵某因与上诉人某保险公司(以下简称某保险公司)，原审第三人某运输公司保险纠纷一案"]'
+  doc DOC2 '《判决文书2》' anchors=9
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=2
+    -> evidence_found | rounds=2 | evidence='["上诉人李某某因其诉被上诉人乌鲁木齐市沙依巴克区人民政府撤销补偿安置协议一案"]'
+  doc DOC4 '《判决文书4》' anchors=6
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=2
+    -> evidence_found | rounds=2 | evidence='[]'
+  doc DOC6 '《判决文书6》' anchors=6
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC7 '《判决文书7》' anchors=7
+    -> evidence_found | rounds=3 | evidence='《判决文书7》'
+  doc DOC8 '《判决文书8》' anchors=13
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC9 '《判决文书9》' anchors=5
+    -> no_evidence | rounds=5 | evidence=''
+  doc DOC10 '《判决文书10》' anchors=2
+    -> evidence_found | rounds=2 | evidence='[]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=0
+  -> answer: []
+
+==== sample financial_level3_1280 (idx=1280) ====
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["预付款项|62,606,303.29|50,971,870.03"]'
+  doc DOC2 '《2024年一季度报告》' anchors=19
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=1 | evidence='["预付款项|228,126,438.00|175,605,702.96"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=2
+  -> answer: {'高预付款': ['恩捷股份'], '中预付款': [], '低预付款': ['16,254,884,718.38'], '负预付款': []}
+
+==== sample legal_level3_469 (idx=469) ====
+  doc DOC1 '《判决文书1》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["《判决文书1》"]'
+  doc DOC2 '《判决文书2》' anchors=3
+    -> evidence_found | rounds=3 | evidence="['《判决文书2》']"
+  doc DOC3 '《判决文书3》' anchors=6
+    -> evidence_found | rounds=4 | evidence="['《判决文书3》']"
+  doc DOC4 '《判决文书4》' anchors=8
+    -> evidence_found | rounds=2 | evidence='[]'
+  doc DOC5 '《判决文书5》' anchors=8
+    -> evidence_found | rounds=2 | evidence='{"行政行为-行政裁决": [], "执行案由-先予执行": [], "海事海商纠纷": [], "行政行为-行政强制": [], "物权保护纠纷": ["《判'
+  doc DOC6 '《判决文书6》' anchors=12
+    -> evidence_found | rounds=2 | evidence='["本案系海上货运代理合同纠纷"]'
+  doc DOC7 '《判决文书7》' anchors=9
+    -> evidence_found | rounds=2 | evidence='{"行政行为-行政裁决": [], "执行案由-先予执行": [], "海事海商纠纷": [], "行政行为-行政强制": [], "物权保护纠纷": ["《判'
+  doc DOC8 '《判决文书8》' anchors=2
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC9 '《判决文书9》' anchors=4
+    -> evidence_found | rounds=4 | evidence='["《判决文书9》"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=5
+  -> answer: {'行政行为 - 行政裁决': [], '执行案由 - 先予执行': [], '海事海商纠纷': [], '行政行为 - 行政强制': [], '物权保护纠纷': ['《判决文书5》', '《判决文书7》']}
+
+==== sample paper_level3_63 (idx=63) ====
+  doc DOC1 'Understanding the planning of LLM agents' anchors=35
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC2 'AUtoAcT: Automatic Agent Learning from S' anchors=16
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC3 'Enhancing the General Agent Capabilities' anchors=35
+    -> evidence_found | rounds=4 | evidence='[]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=0
+  -> answer: {'Reference': [], 'Citation': []}
+
+==== sample financial_level4_1504 (idx=1504) ====
+  doc DOC1 '《2022年一季度报告》' anchors=9
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=13
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC3 '《2023年一季度报告》' anchors=6
+    -> no_evidence | rounds=6 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=0
+  -> answer: []
+
+==== sample legal_level4_596 (idx=596) ====
+  doc DOC1 '《判决文书1》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["一、撤销广东省广州市海珠区人民法院（2023）粤0105民初18126号民事判决第三项；", "二、变更广东省广州市海珠区人民法院（2023）粤0105民初'
+  doc DOC2 '《判决文书2》' anchors=9
+    -> evidence_found | rounds=1 | evidence='驳回上诉，维持原判。\n二审案件受理费6815元，由上诉人徐某A、王某某负担。\n本判决为终审判决。'
+  doc DOC3 '《判决文书3》' anchors=11
+    -> evidence_found | rounds=1 | evidence='["驳回上诉，维持原判。\\n二审案件受理费人民币1,857.52元，由上诉人某某公司1负担。\\n本判决为终审判决。"]'
+  doc DOC4 '《判决文书4》' anchors=9
+    -> evidence_found | rounds=1 | evidence='一、撤销长春市宽城区人民法院（2023）吉0103民初4353号民事判决；\n二、驳回被上诉人郑某2的诉讼请求。\n一审案件受理费4455元（郑某2已预交），由郑某'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=4
+  -> answer: {'《判决文书1》': '判决结果1', '《判决文书2》': '判决结果2', '《判决文书3》': '判决结果3', '《判决文书4》': '判决结果4'}
+
+==== sample paper_level4_32 (idx=32) ====
+  doc DOC1 'BEYOND TRADITIONAL MAGNETIC RESONANCE PR' anchors=16
+    -> evidence_found | rounds=5 | evidence='[]'
+  doc DOC2 'Semantically Conditioned LSTM-based Natu' anchors=10
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC3 'A Neural Network Architecture Combining ' anchors=10
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC4 'Deep Learning using Rectified Linear Uni' anchors=14
+    -> no_evidence | rounds=6 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=0
+  -> answer: []
+{
+  "prediction_path": "/workspace/lambo/logs/lambo_v2_set1_10_qwen35_9b/lambo_predictions.jsonl",
+  "structured_summary": {
+    "error": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+  },
+  "llm_judge_summary": {
+    "total": 10,
+    "scoring_success_rate": 1.0,
+    "avg_score": 19.0,
+    "perfect_count": 1,
+    "perfect_rate": 0.1
+  },
+  "num_errors": 0
+}

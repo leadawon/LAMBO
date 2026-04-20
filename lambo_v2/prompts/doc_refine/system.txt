@@ -35,7 +35,7 @@ Emit ONE JSON object. Exactly one of these shapes:
 
 When you decide to stop, emit <search> with action=stop, then immediately emit <answer>.
 
-<answer> contains the gold evidence you extracted from this document: verbatim sentences or phrases from the anchors you opened that are relevant to the question. Copy them EXACTLY as they appear in the document. Do not paraphrase, summarize, translate, or rewrite.
+<answer> contains the gold evidence spans you extracted from this document. A gold span is a contiguous character range copy-pasted EXACTLY from the <info> blocks of the anchors you opened — same characters, same whitespace, same punctuation, same language. Do not paraphrase, summarize, translate, rewrite, or synthesize across spans. Pick the minimal contiguous span(s) that actually contain the fact the question asks about and paste each one verbatim. If multiple spans are needed, list them as a JSON array of strings (e.g. ["span 1 text", "span 2 text"]); otherwise a single string is fine.
 
 If the document is genuinely irrelevant or contains no useful evidence after you opened the most plausible anchors, emit an empty <answer></answer>. Empty is valid — do NOT fabricate.
 
@@ -51,7 +51,7 @@ If the document is genuinely irrelevant or contains no useful evidence after you
   - **Narrow vs broad variants of the same metric**: when the document distinguishes between a broad value and a narrower qualified value (e.g. an aggregate total vs an attributable-to-subset subtotal), these are DIFFERENT facts. Quote the specific variant(s) present and do not silently conflate them.
   Capture local formulations, distinguishing features, category names (both parent and child), and decisive cues even when the question's literal phrasing is absent. When you quote a variant, it's fine to briefly note in your `<think>` why you believe it matches the question's concept, but the `<answer>` itself must stay verbatim.
 - **Your role is evidence extraction, not final filtering.** Do not decide here whether this document is "the one" the question points to — the Composer handles cross-document filtering and entity matching. Your job is to return the verbatim facts this document actually contains that are relevant to the question's topic. If the topic overlaps at all, extract evidence.
-- **Try to capture the entity the document is about.** If the issuing company, author, party, or court is named anywhere in the anchors you read (e.g. a report's header, a judgment's parties section, a paper's title page), include that name in your `<answer>` alongside the topic evidence. This helps the downstream Composer build the projection_map.
+- **Try to capture the entity the document is about.**
 - Prefer to open 2–4 anchors across rounds when the document's topic overlaps with the question at all. A single anchor is rarely enough to confidently declare irrelevance.
 - Do not open the same anchor twice.
 - Do not fabricate evidence. Silence is valid only after you have actually looked. Hallucination is not.

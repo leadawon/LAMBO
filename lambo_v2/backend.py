@@ -4,7 +4,7 @@ import os
 import sys
 import time
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Dict, Optional
 
 from dotenv import load_dotenv
 
@@ -136,6 +136,7 @@ class GeminiClient:
         user_prompt: str,
         max_output_tokens: int = 2048,
         temperature: float = 0.0,
+        metadata: Optional[Dict[str, Any]] = None,
     ) -> str:
         model = self._genai.GenerativeModel(
             model_name=self.model_name,
@@ -190,6 +191,7 @@ class GeminiClient:
             user_prompt=user_prompt,
             max_output_tokens=max_output_tokens or 2048,
             temperature=temperature,
+            metadata=metadata,
         )
 
     def generate_json(
@@ -257,6 +259,11 @@ class OpenAIClient:
         if self.base_url:
             client_kwargs["base_url"] = self.base_url
         self._client = OpenAI(**client_kwargs)
+        # Qwen3 thinking-model toggle (vLLM OpenAI-compat). Set
+        # OPENAI_ENABLE_THINKING=false to disable <think> output so JSON fits
+        # inside max_tokens.
+        temp_env = os.getenv("OPENAI_DEFAULT_TEMPERATURE", "").strip()
+        self._default_temperature = float(temp_env) if temp_env else None
 
     def _call(
         self,
@@ -265,22 +272,44 @@ class OpenAIClient:
         user_prompt: str,
         max_output_tokens: int = 2048,
         temperature: float = 0.0,
+        metadata: Optional[Dict[str, Any]] = None,
     ) -> str:
         messages = []
         if system_prompt:
             messages.append({"role": "system", "content": system_prompt})
         messages.append({"role": "user", "content": user_prompt})
 
+        if self._default_temperature is not None:
+            temperature = self._default_temperature
+
+        module = (metadata or {}).get("module", "")
+        thinking_modules = set(
+            filter(None, os.getenv("OPENAI_THINKING_MODULES", "").split(","))
+        )
+        use_thinking = module in thinking_modules if thinking_modules else False
+        merge_thinking = use_thinking
+
         backoff = self.INITIAL_BACKOFF
         for attempt in range(1, self.MAX_RETRIES + 1):
             try:
-                response = self._client.chat.completions.create(
-                    model=self.model_name,
-                    messages=messages,
-                    max_tokens=max_output_tokens,
-                    temperature=temperature,
-                )
-                return response.choices[0].message.content or ""
+                create_kwargs: Dict[str, Any] = {
+                    "model": self.model_name,
+                    "messages": messages,
+                    "max_tokens": max_output_tokens,
+                    "temperature": temperature,
+                }
+                if not use_thinking:
+                    create_kwargs["extra_body"] = {
+                        "chat_template_kwargs": {"enable_thinking": False}
+                    }
+                response = self._client.chat.completions.create(**create_kwargs)
+                msg = response.choices[0].message
+                content = msg.content or ""
+                if merge_thinking:
+                    reasoning = getattr(msg, "reasoning", None) or getattr(msg, "reasoning_content", None) or ""
+                    if reasoning:
+                        content = f"<think>{reasoning}</think>\n{content}"
+                return content
             except Exception as exc:
                 err_str = str(exc).lower()
                 retryable = any(
@@ -311,6 +340,7 @@ class OpenAIClient:
             user_prompt=user_prompt,
             max_output_tokens=max_output_tokens or 2048,
             temperature=temperature,
+            metadata=metadata,
         )
 
     def generate_json(

@@ -52,6 +52,12 @@ def parse_args() -> argparse.Namespace:
         default="",
         help="Comma-separated selected_index values for targeted experiments.",
     )
+    parser.add_argument(
+        "--selected_indices_path",
+        type=str,
+        default="",
+        help="Path to JSON file containing indices list (dict with 'indices' key or plain list).",
+    )
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--max_refine_rounds", type=int, default=6)
     parser.add_argument(
@@ -92,14 +98,37 @@ def main() -> None:
     layout = ensure_layout(output_dir)
 
     records = load_records(input_path)
-    manifest = build_set1_manifest(records)
+    wanted = set()
+    if args.selected_indices_path.strip():
+        import json as _json
+        raw = _json.load(open(args.selected_indices_path))
+        idx_list = raw["indices"] if isinstance(raw, dict) and "indices" in raw else raw
+        wanted = {int(i) for i in idx_list}
     if args.selected_indices.strip():
-        wanted = {
+        wanted |= {
             int(part.strip())
             for part in args.selected_indices.split(",")
             if part.strip()
         }
-        manifest = [item for item in manifest if item.selected_index in wanted]
+    if wanted:
+        from lambo_v2.manifest import ManifestItem
+        manifest = []
+        for idx in sorted(wanted):
+            if idx >= len(records):
+                continue
+            rec = records[idx]
+            manifest.append(ManifestItem(
+                selected_index=idx,
+                record_id=str(rec.get("id", "unknown")),
+                set_id=int(rec.get("set", 0) or 0),
+                record_type=str(rec.get("type", "unknown")),
+                level=int(rec.get("level", 0) or 0),
+                language=str(rec.get("language", "unknown")),
+                question=str(rec.get("question", "")).strip(),
+                sample_id=f"{rec.get('type', 'unknown')}_level{rec.get('level', 0)}_{idx}",
+            ))
+    else:
+        manifest = build_set1_manifest(records)
     if args.max_items is not None:
         manifest = manifest[: args.max_items]
     save_manifest(manifest, layout["root"] / "manifest.json")
@@ -140,6 +169,10 @@ def main() -> None:
 
             # Stage 2: DocRefineAgent per document (single think→search→info loop)
             doc_sheets: List[Dict[str, Any]] = []
+            other_docs_list = [
+                {"doc_id": d["doc_id"], "doc_title": d.get("doc_title", "")}
+                for d in anchor_payload["docs"]
+            ]
             for doc_payload in anchor_payload["docs"]:
                 print(
                     f"  doc {doc_payload['doc_id']} '{doc_payload['doc_title'][:40]}' "
@@ -157,6 +190,7 @@ def main() -> None:
                     doc_payload=doc_payload,
                     sample_dir=sample_dir,
                     force=args.force,
+                    other_docs=other_docs_list,
                 )
                 doc_sheets.append(sheet)
                 evidence_preview = (sheet.get("evidence", "") or "")[:80]

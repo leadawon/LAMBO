@@ -196,7 +196,7 @@ class AnchorAgent:
         raw_text = self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=3500,
+            max_output_tokens=6000,
             metadata={"module": "anchor_agent", "doc_title": doc["doc_title"]},
         )
         payload = extract_json_payload(raw_text)

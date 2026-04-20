@@ -118,7 +118,7 @@ class GlobalComposer:
         payload, raw_text = self.llm.generate_json(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=2500,
+            max_output_tokens=5000,
             metadata={"module": "global_composer"},
         )
 
@@ -133,6 +133,11 @@ class GlobalComposer:
             raw_records = payload.get("records", [])
             if isinstance(raw_records, list):
                 records = raw_records
+            elif isinstance(raw_records, dict):
+                records = [
+                    {"category": str(k), "items": v if isinstance(v, list) else [v]}
+                    for k, v in raw_records.items()
+                ]
             structure_description = str(payload.get("structure_description", ""))
 
         # Fallback: build projection_map from doc_title if the LLM missed it

@@ -1,0 +1,11 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "scan_result": "evidence_found",
+  "evidence": "原告张某与被告张某某、周某不动产登记纠纷一案",
+  "opened_anchors": [
+    "DOC6_A2"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to classify judgment documents into 6 categories based on their case types (案由). I'm currently processing DOC6 (《判决文书6》).\n\nLooking at the anchor summaries for DOC6:\n- DOC6_A2 mentions \"原告张某与被告张某某、周某不动产登记纠纷一案\" - this explicitly states this is a \"不动产登记纠纷\" (Real Estate Registration Dispute) case.\n- DOC6_A3, A5, A6, A7, A8 all discuss property ownership transfer registration, which confirms this is about real estate registration issues.\n\nThis clearly falls under the \"不动产登记纠纷\" category.\n\nSince I need to extract evidence for the question, I should open at least one anchor to get the verbatim text that confirms the case type. Let me open DOC6_A2 which mentions the case type explicitly.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"DOC6_A2\",\"expected_evidence\":\"案件类型为不动产登记纠纷的明确表述\"}</search>\n<info anchor_id=\"DOC6_A2\">\n原告张某与被告张某某、周某不动产登记纠纷一案，本院于2024年1月15日立案后，依法适用简易程序，公开开庭进行了审理。当事人及委托诉讼代理人均到庭参加了诉讼。本案现已审理终结。\n</info>\n\n--- Round 2 ---\n<think>The <info> block from DOC6_A2 contains the exact phrase \"原告张某与被告张某某、周某不动产登记纠纷一案\" which clearly indicates this is a \"不动产登记纠纷\" (Real Estate Registration Dispute) case.\n\nThis directly matches one of the 6 categories in the question: '不动产登记纠纷'.\n\nI have found the evidence I need. The document title is 《判决文书6》 and it belongs to the '不动产登记纠纷' category.\n\nSince I've opened at least one anchor and found clear evidence of the case type, I can now stop and provide the answer. The answer should be the verbatim text that shows this is a 不动产登记纠纷 case.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found clear evidence of case type 不动产登记纠纷 in DOC6_A2\"}</search>\n<answer>原告张某与被告张某某、周某不动产登记纠纷一案</answer>\n"
+}

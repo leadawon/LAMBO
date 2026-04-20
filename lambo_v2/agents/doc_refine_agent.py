@@ -50,8 +50,12 @@ class DocRefineAgent:
         """Format all anchor summaries for the LLM in original document order."""
         lines: List[str] = []
         for anchor in anchors:
+            region = anchor.get("region_type", "")
+            heading = " > ".join(anchor.get("heading_path", []))
+            meta_parts = [p for p in [region, heading] if p]
+            meta = f" ({', '.join(meta_parts)})" if meta_parts else ""
             lines.append(
-                f"[{anchor['anchor_id']}] {anchor.get('anchor_title', '')} "
+                f"[{anchor['anchor_id']}] {anchor.get('anchor_title', '')}{meta} "
                 f"| {compact_text(anchor.get('summary', ''), limit=200)}"
             )
         return "\n".join(lines) if lines else "(no anchors available)"
@@ -64,6 +68,7 @@ class DocRefineAgent:
         doc_id: str,
         doc_title: str,
         doc_map_text: str,
+        all_docs_list: str,
         accumulated_trace: str,
     ) -> str:
         """Single LLM call per round: emit <think> and <search>, optionally <answer>."""
@@ -76,13 +81,14 @@ class DocRefineAgent:
             doc_title=doc_title,
             doc_id=doc_id,
             doc_map=doc_map_text,
+            all_docs_list=all_docs_list,
             accumulated_trace=trace_section,
         )
         return self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=1500,
-            metadata={"module": "doc_refine", "phase": "think_search", "doc_id": doc_id},
+            max_output_tokens=4000,
+            metadata={"module": "doc_refine", "phase": "plan_search", "doc_id": doc_id},
         )
 
     def run(
@@ -93,6 +99,7 @@ class DocRefineAgent:
         doc_payload: Dict[str, Any],
         sample_dir: Path,
         force: bool = False,
+        other_docs: Optional[List[Dict[str, str]]] = None,
     ) -> Dict[str, Any]:
         doc_id = doc_payload["doc_id"]
         doc_title = doc_payload["doc_title"]
@@ -102,6 +109,11 @@ class DocRefineAgent:
 
         all_anchors = doc_payload.get("anchors", [])
         doc_map_text = self._format_doc_map(all_anchors)
+
+        docs_for_list = other_docs or [{"doc_id": doc_id, "doc_title": doc_title}]
+        all_docs_list = "\n".join(
+            f"- {d['doc_id']}: {d.get('doc_title', '')}" for d in docs_for_list
+        )
 
         anchor_by_id = {a["anchor_id"]: a for a in all_anchors}
         opened_anchors: List[str] = []
@@ -118,6 +130,7 @@ class DocRefineAgent:
                 doc_id=doc_id,
                 doc_title=doc_title,
                 doc_map_text=doc_map_text,
+                all_docs_list=all_docs_list,
                 accumulated_trace=accumulated_trace,
             )
 
