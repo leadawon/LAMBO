@@ -1,0 +1,11 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "evidence_found",
+  "evidence": "驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。",
+  "opened_anchors": [
+    "DOC1_A11"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to match a judgment document (DOC1) to one of the provided judgment results (判决结果1-10). I need to extract the actual verdict from DOC1 and compare it to the given options.\n\nLooking at the anchor summaries for DOC1, I can see:\n- DOC1_A11 contains the verdict (判决结果) section\n- The summary says: \"驳回上诉，维持原判。二审案件受理费5354元由上诉人某电力公司负担。本判决为终审判决。\"\n\nThis matches 判决结果10 which states:\n\"驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。\"\n\nI should open DOC1_A11 to get the exact verbatim text to confirm this match.\n\nLet me open this anchor first to get the exact text.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"DOC1_A11\",\"expected_evidence\":\"判决结果的具体内容，包括是否驳回上诉、维持原判、案件受理费金额及负担方、是否为终审判决\"}</search>\n<info anchor_id=\"DOC1_A11\">\n综上，某电力公司的上诉理由不能成立，本院不予支持。一审法院认定事实清楚，适用法律正确，实体处理得当。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项之规定，判决如下：\n驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。\n</info>\n\n--- Round 2 ---\n<think>I have now opened DOC1_A11 and can see the exact verdict text:\n\n\"驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。\"\n\nThis matches 判决结果10 exactly:\n\"驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。\"\n\nThe key matching elements are:\n1. \"驳回上诉，维持原判\" - dismiss appeal, maintain original judgment\n2. \"二审案件受理费5354元\" - second instance case acceptance fee 5354 yuan\n3. \"由上诉人某电力公司负担\" - borne by appellant 某电力公司\n4. \"本判决为终审判决\" - this judgment is the final judgment\n\nThis is a clear match to 判决结果10.\n\nNow I need to stop and provide the answer. The answer should be the verbatim text from the document that contains the judgment result.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found exact match for DOC1 verdict with 判决结果10\"}</search>\n<answer>驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。</answer>\n"
+}

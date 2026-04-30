@@ -1,0 +1,143 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "A document must cite another document from the provided set to be part of the chain, forming a continuous sequence A -> B -> C where A is cited by B, and B is cited by C.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", \"Title of Paper 3\"]",
+      "ref_unit": "title",
+      "ref_unit_justification": "The instruction explicitly requires presenting 'the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "DOC1 cites DOC3 ('Scaling Advantage in Approximate Optimization with Quantum Annealing') as reference [12], establishing a link from DOC3 to DOC1.",
+      "ref_value": "4-clique Network Minor Embedding for Quantum Annealers",
+      "facts": "DOC1 contains a citation to 'Scaling Advantage in Approximate Optimization with Quantum Annealing' (DOC3) in its reference list [12]. This makes DOC1 the successor to DOC3 in the citation chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "[12] Humberto Munoz Bauza and Daniel A. Lidar. Scaling Advantage in Approximate Optimization with Quantum Annealing. 2024. arXiv: 2401.07184 [quant-ph]."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "DOC2 cites DOC1 ('4-clique network minor embedding for quantum annealers') as reference [13] and [14], establishing a link from DOC1 to DOC2.",
+      "ref_value": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+      "facts": "DOC2 cites '4-clique network minor embedding for quantum annealers' (DOC1) in its text and references [13] and [14]. This makes DOC2 the successor to DOC1 in the citation chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Pelofske, E.: 4-clique network minor embedding for quantum annealers. arXiv preprint arXiv:2301.08807 (2023)"
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "DOC3 does not cite any other document from the provided set (DOC1, DOC2, DOC4), making it the potential start (root) of the chain.",
+      "ref_value": "Scaling Advantage in Approximate Optimization with Quantum Annealing",
+      "facts": "DOC3 lists numerous references, but none correspond to the titles of DOC1, DOC2, or DOC4. It serves as the starting point of the chain as it is cited by DOC1 but cites no other provided paper.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC4",
+      "verdict": "match",
+      "verdict_reason": "DOC4 cites DOC2 ('Quantum annealers chain strengths: A simple heuristic to set them all') as reference [29], establishing a link from DOC2 to DOC4.",
+      "ref_value": "Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances",
+      "facts": "DOC4 cites 'Quantum annealers chain strengths: A simple heuristic to set them all' (DOC2) in reference [29]. This makes DOC4 the successor to DOC2 in the citation chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "[29] V. Gilbert and S. Louise, \"Quantum annealers chain strengths: A simple heuristic to set them all,\" arXiv preprint arXiv:2404.05443, 2024."
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "The documents form a single linear citation chain starting with DOC3, which is cited by DOC1, which is cited by DOC2, which is finally cited by DOC4."
+  },
+  "completeness": {
+    "expected_hint": "The instruction asks to 'identify and list the longest citation chain', implying a search for the maximal sequence within the set.",
+    "selected_count": 4,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "Scaling Advantage in Approximate Optimization with Quantum Annealing",
+    "4-clique Network Minor Embedding for Quantum Annealers",
+    "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+    "Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"A document must cite another document from the provided set to be part of the chain, forming a continuous sequence A -> B -> C where A is cited by B, and B is cited by C.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", \\\"Title of Paper 3\\\"]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"The instruction explicitly requires presenting 'the titles of the papers in the form of a list'.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC1 cites DOC3 ('Scaling Advantage in Approximate Optimization with Quantum Annealing') as reference [12], establishing a link from DOC3 to DOC1.\",\n      \"ref_value\": \"4-clique Network Minor Embedding for Quantum Annealers\",\n      \"facts\": \"DOC1 contains a citation to 'Scaling Advantage in Approximate Optimization with Quantum Annealing' (DOC3) in its reference list [12]. This makes DOC1 the successor to DOC3 in the citation chain.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"[12] Humberto Munoz Bauza and Daniel A. Lidar. Scaling Advantage in Approximate Optimization with Quantum Annealing. 2024. arXiv: 2401.07184 [quant-ph].\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC2 cites DOC1 ('4-clique network minor embedding for quantum annealers') as reference [13] and [14], establishing a link from DOC1 to DOC2.\",\n      \"ref_value\": \"Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All\",\n      \"facts\": \"DOC2 cites '4-clique network minor embedding for quantum annealers' (DOC1) in its text and references [13] and [14]. This makes DOC2 the successor to DOC1 in the citation chain.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Pelofske, E.: 4-clique network minor embedding for quantum annealers. arXiv preprint arXiv:2301.08807 (2023)\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC3 does not cite any other document from the provided set (DOC1, DOC2, DOC4), making it the potential start (root) of the chain.\",\n      \"ref_value\": \"Scaling Advantage in Approximate Optimization with Quantum Annealing\",\n      \"facts\": \"DOC3 lists numerous references, but none correspond to the titles of DOC1, DOC2, or DOC4. It serves as the starting point of the chain as it is cited by DOC1 but cites no other provided paper.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC4\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC4 cites DOC2 ('Quantum annealers chain strengths: A simple heuristic to set them all') as reference [29], establishing a link from DOC2 to DOC4.\",\n      \"ref_value\": \"Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances\",\n      \"facts\": \"DOC4 cites 'Quantum annealers chain strengths: A simple heuristic to set them all' (DOC2) in reference [29]. This makes DOC4 the successor to DOC2 in the citation chain.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"[29] V. Gilbert and S. Louise, \\\"Quantum annealers chain strengths: A simple heuristic to set them all,\\\" arXiv preprint arXiv:2404.05443, 2024.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"The documents form a single linear citation chain starting with DOC3, which is cited by DOC1, which is cited by DOC2, which is finally cited by DOC4.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"The instruction asks to 'identify and list the longest citation chain', implying a search for the maximal sequence within the set.\",\n    \"selected_count\": 4,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"Scaling Advantage in Approximate Optimization with Quantum Annealing\",\n    \"4-clique Network Minor Embedding for Quantum Annealers\",\n    \"Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All\",\n    \"Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances\"\n  ]\n}",
+  "doc_sheet_count": 4,
+  "evidence_found_count": 4,
+  "projection_map": {
+    "DOC1": "4-clique Network Minor Embedding for Quantum Annealers",
+    "DOC2": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+    "DOC3": "Scaling Advantage in Approximate Optimization with Quantum Annealing",
+    "DOC4": "Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "DOC1 cites DOC3 ('Scaling Advantage in Approximate Optimization with Quantum Annealing') as reference [12], establishing a link from DOC3 to DOC1.",
+      "ref_value": "4-clique Network Minor Embedding for Quantum Annealers",
+      "facts": "DOC1 contains a citation to 'Scaling Advantage in Approximate Optimization with Quantum Annealing' (DOC3) in its reference list [12]. This makes DOC1 the successor to DOC3 in the citation chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "[12] Humberto Munoz Bauza and Daniel A. Lidar. Scaling Advantage in Approximate Optimization with Quantum Annealing. 2024. arXiv: 2401.07184 [quant-ph]."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "DOC2 cites DOC1 ('4-clique network minor embedding for quantum annealers') as reference [13] and [14], establishing a link from DOC1 to DOC2.",
+      "ref_value": "Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All",
+      "facts": "DOC2 cites '4-clique network minor embedding for quantum annealers' (DOC1) in its text and references [13] and [14]. This makes DOC2 the successor to DOC1 in the citation chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Pelofske, E.: 4-clique network minor embedding for quantum annealers. arXiv preprint arXiv:2301.08807 (2023)"
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "DOC3 does not cite any other document from the provided set (DOC1, DOC2, DOC4), making it the potential start (root) of the chain.",
+      "ref_value": "Scaling Advantage in Approximate Optimization with Quantum Annealing",
+      "facts": "DOC3 lists numerous references, but none correspond to the titles of DOC1, DOC2, or DOC4. It serves as the starting point of the chain as it is cited by DOC1 but cites no other provided paper.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC4",
+      "verdict": "match",
+      "verdict_reason": "DOC4 cites DOC2 ('Quantum annealers chain strengths: A simple heuristic to set them all') as reference [29], establishing a link from DOC2 to DOC4.",
+      "ref_value": "Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Instances",
+      "facts": "DOC4 cites 'Quantum annealers chain strengths: A simple heuristic to set them all' (DOC2) in reference [29]. This makes DOC4 the successor to DOC2 in the citation chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "[29] V. Gilbert and S. Louise, \"Quantum annealers chain strengths: A simple heuristic to set them all,\" arXiv preprint arXiv:2404.05443, 2024."
+        }
+      ]
+    }
+  ],
+  "structure_description": "The documents form a single linear citation chain starting with DOC3, which is cited by DOC1, which is cited by DOC2, which is finally cited by DOC4.",
+  "ref_unit": "title"
+}

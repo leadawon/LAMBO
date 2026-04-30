@@ -1,0 +1,1285 @@
+Backend: openai
+
+==== sample paper_level3_0 (idx=0) ====
+  doc DOC1 'TinyLlama: An Open-Source Small Language' anchors=11
+    -> evidence_found | rounds=2 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC2 'Lory: Fully Differentiable Mixture-of-Ex' anchors=12
+    -> evidence_found | rounds=2 | evidence='["Fuzhao Xue, Zian Zheng, Yao Fu, Jinjie Ni, Zangwei Zheng, Wangchunshu Zhou, an'
+  doc DOC3 'OpenMoE: An Early Effort on Open Mixture' anchors=14
+    -> evidence_found | rounds=2 | evidence='["P. Zhang, G. Zeng, T. Wang, and W. Lu, Tinyllama: An open-source small languag'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['TinyLlama: An Open-Source Small Language Model'], 'Citation': ['Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training']}
+
+==== sample paper_level3_1 (idx=1) ====
+  doc DOC1 'A Survey of Hallucination in "Large" Fou' anchors=16
+    -> evidence_found | rounds=5 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC2 'From Role-Play to Drama-Interaction: An ' anchors=11
+    -> evidence_found | rounds=2 | evidence='["Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese'
+  doc DOC3 'CharacterEval: A Chinese Benchmark for R' anchors=14
+    -> evidence_found | rounds=3 | evidence='["Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in '
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['A Survey of Hallucination in "Large" Foundation Models'], 'Citation': ['From Role-Play to Drama-Interaction: An LLM Solution']}
+
+==== sample paper_level4_2 (idx=2) ====
+  doc DOC1 'HuBERT: Self-Supervised Speech Represent' anchors=14
+    -> evidence_found | rounds=1 | evidence='"A. Xiao, C. Fuegen, and A. Mohamed, \'Contrastive semi-supervised learning for a'
+  doc DOC2 'CONTRASTIVE SEMI-SUPERVISED LEARNING FOR' anchors=10
+    -> evidence_found | rounds=3 | evidence='["Wei-Ning Hsu, Yao-Hung Hubert Tsai, Benjamin Bolte, Ruslan Salakhutdinov, and '
+  doc DOC3 'SUPERB: Speech processing Universal PERf' anchors=9
+    -> evidence_found | rounds=3 | evidence='["W.-N. Hsu, B. Bolte, Y.-H. H. Tsai, K. Lakhotia, R. Salakhutdinov, and A. Moha'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units', 'CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR', 'SUPERB: Speech processing Universal PERformance Benchma
+
+==== sample paper_level4_3 (idx=3) ====
+  doc DOC1 'A Neural Network Architecture Combining ' anchors=14
+    -> evidence_found | rounds=2 | evidence='["A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support'
+  doc DOC2 'Semantically Conditioned LSTM-based Natu' anchors=10
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2'] | records=2
+  -> answer: ['Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems', 'A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for
+
+==== sample paper_level4_4 (idx=4) ====
+  doc DOC1 'On the performativity of SDG classificat' anchors=17
+    -> evidence_found | rounds=1 | evidence='Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrastiv'
+  doc DOC2 'Contrastive Decoding: Open-ended Text Ge' anchors=32
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC3 'An Empirical Study On Contrastive Search' anchors=10
+    -> evidence_found | rounds=1 | evidence='[3] Xiang Lisa Li, Ari Holtzman, Daniel Fried, Percy Liang, Jason Eisner, Tatsun'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['Contrastive Decoding: Open-ended Text Generation as Optimization', 'An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation', 'On the performativity of SDG c
+
+==== sample paper_level4_5 (idx=5) ====
+  doc DOC1 'MUlTimodAL DeEP LEARNING OF Word-OF-MOUT' anchors=11
+    -> evidence_found | rounds=2 | evidence='["C Gary Mena, Arno De Caigny, Kristof Coussement, Koen W De Bock, and Stefan Le'
+  doc DOC2 'Churn analysis using deep convolutional ' anchors=12
+    -> evidence_found | rounds=2 | evidence='["The reference list includes 17 citations covering loss functions, backpropagat'
+  doc DOC3 'Churn Prediction with Sequential Data an' anchors=9
+    -> evidence_found | rounds=2 | evidence='["Churn Prediction with Sequential Data and Deep Neural Networks A Comparative A'
+  doc DOC4 'An Efficient Multimodal Learning Framewo' anchors=13
+    -> evidence_found | rounds=1 | evidence='[6] J. Niimi, "Multimodal deep learning of word-of-mouth text and demographics t'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=4
+  -> answer: ['Churn analysis using deep convolutional neural networks and autoencoders', 'Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*', 'MUlTimodAL DeEP LEARNING OF Word
+
+==== sample paper_level3_7 (idx=7) ====
+  doc DOC1 'Benchmarking Large Language Models in Re' anchors=13
+    -> evidence_found | rounds=3 | evidence='[]'
+  doc DOC2 'Seven Failure Points When Engineering a ' anchors=13
+    -> evidence_found | rounds=3 | evidence='{"Reference":["Benchmarking Large Language Models in Retrieval-Augmented Generat'
+  doc DOC3 'When to Retrieve: Teaching LLMs to Utili' anchors=11
+    -> evidence_found | rounds=1 | evidence='["S. Barnett, S. Kurniawan, S. Thudumu, Z. Brannelly, and M. Abdelrazek. Seven f'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['Benchmarking Large Language Models in Retrieval-Augmented Generation'], 'Citation': ['When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively']}
+
+==== sample paper_level4_8 (idx=8) ====
+  doc DOC1 'Breaking the Molecular Dynamics Timescal' anchors=18
+    -> evidence_found | rounds=1 | evidence='["[20] K. Rocki, D. V. Essendelft, I. Sharapov, R. Schreiber, M. Morrison, V. Ki'
+  doc DOC2 'Massively scalable stencil algorithm' anchors=12
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC3 'Disruptive Changes in Field Equation Mod' anchors=12
+    -> evidence_found | rounds=2 | evidence='["Jacquelin, M., Araya-Polo, M., Meng, J.: Massively scalable stencil algorithm.'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['Massively scalable stencil algorithm', 'Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines', 'Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Sc
+
+==== sample paper_level4_9 (idx=9) ====
+  doc DOC1 'Dance Any Beat: Blending Beats with Visu' anchors=8
+    -> evidence_found | rounds=1 | evidence='"[55] Yaohui Wang, Di Yang, Francois Bremond, and Antitza Dantcheva. Latent imag'
+  doc DOC2 'InMoDeGAN: Interpretable Motion Decompos' anchors=12
+    -> evidence_found | rounds=3 | evidence='["InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network f'
+  doc DOC3 'LATENT IMAGE ANIMATOR: <br> LEARNING TO ' anchors=11
+    -> evidence_found | rounds=3 | evidence='["Yaohui Wang, Francois Bremond, and Antitza Dantcheva. Inmodegan: Interpretable'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation', 'LATENT IMAGE ANIMATOR: <br> LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION', 'Dance Any B
+
+==== sample paper_level3_10 (idx=10) ====
+  doc DOC1 'EasyTool: Enhancing LLM-based Agents wit' anchors=10
+    -> evidence_found | rounds=2 | evidence='["Kexun Zhang, Hongqiao Chen, Lei Li, and William Wang. 2023. Syntax error-free '
+  doc DOC2 'Don't Fine-Tune, Decode: Syntax Error-Fr' anchors=9
+    -> evidence_found | rounds=3 | evidence='"Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. '
+  doc DOC3 'Smurfs: Leveraging Multiple Proficiency ' anchors=11
+    -> evidence_found | rounds=4 | evidence='["Siyu Yuan, Kaitao Song, Jiangjie Chen, Xu Tan, Yongliang Shen, Ren Kan, Dongsh'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ["Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding"], 'Citation': ["Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding", 'Smurfs: Le
+
+==== sample paper_level4_11 (idx=11) ====
+  doc DOC1 'Fine-Tuning LLaMA for Multi-Stage Text R' anchors=14
+    -> evidence_found | rounds=1 | evidence='"Ronak Pradeep, Sahel Sharifymoghaddam, and Jimmy Lin. 2023. RankVicuna: Zero-sh'
+  doc DOC2 'RankVicuna: Zero-Shot Listwise Document ' anchors=8
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC3 'Improving Text Embeddings with Large Lan' anchors=10
+    -> evidence_found | rounds=2 | evidence='["[24] Xueguang Ma, Liang Wang, Nan Yang, Furu Wei, and Jimmy Lin. Fine-tuning l'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['Fine-Tuning LLaMA for Multi-Stage Text Retrieval', 'Improving Text Embeddings with Large Language Models', 'RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models']
+
+==== sample paper_level4_12 (idx=12) ====
+  doc DOC1 '4-clique Network Minor Embedding for Qua' anchors=10
+    -> evidence_found | rounds=3 | evidence='["4-clique Network Minor Embedding for Quantum Annealers", "Humberto Munoz Bauza'
+  doc DOC2 'Quantum Annealers Chain Strengths: A Sim' anchors=22
+    -> evidence_found | rounds=5 | evidence='"13. Pelofske, E.: 4-clique network minor embedding for quantum annealers. arXiv'
+  doc DOC3 'Scaling Advantage in Approximate Optimiz' anchors=14
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC4 'Benchmarking Quantum Annealers with Near' anchors=8
+    -> evidence_found | rounds=3 | evidence='["V. Gilbert and S. Louise, \\"Quantum annealers chain strengths: A simple heuris'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=3
+  -> answer: ['4-clique Network Minor Embedding for Quantum Annealers', 'Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them All', 'Benchmarking Quantum Annealers with Near-Optimal Minor-Embedded Ins
+
+==== sample paper_level4_13 (idx=13) ====
+  doc DOC1 'LGDE: Local Graph-based Dictionary Expan' anchors=13
+    -> evidence_found | rounds=5 | evidence='["Rolf Jagerman, Honglei Zhuang, Zhen Qin, Xuanhui Wang, and Michael Bendersky. '
+  doc DOC2 'Query2doc: Query Expansion with Large La' anchors=13
+    -> evidence_found | rounds=2 | evidence='["Liang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, '
+  doc DOC3 'Query Expansion by Prompting Large Langu' anchors=11
+    -> evidence_found | rounds=4 | evidence='["[31] Liang Wang, Nan Yang, and Furu Wei. 2023. Query2doc: Query Expansion with'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['Query Expansion by Prompting Large Language Models', 'Query2doc: Query Expansion with Large Language Models', 'LGDE: Local Graph-based Dictionary Expansion']
+
+==== sample paper_level3_15 (idx=15) ====
+  doc DOC1 'LlamaTurk: Adapting Open-Source Generati' anchors=18
+    -> evidence_found | rounds=3 | evidence='["Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024'
+  doc DOC2 'InstructionCP: A fast approach to transf' anchors=13
+    -> evidence_found | rounds=4 | evidence='["Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024'
+  doc DOC3 'LLaMA Beyond English: An Empirical Study' anchors=8
+    -> evidence_found | rounds=2 | evidence='{"Reference":[],"Citation":[]}'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': [], 'Citation': ['LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language', 'InstructionCP: A fast approach to transfer Large Language Models into targ
+
+==== sample paper_level3_16 (idx=16) ====
+  doc DOC1 'Mistral 7B' anchors=13
+    -> evidence_found | rounds=2 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC2 'Extreme Compression of Large Language Mo' anchors=13
+    -> evidence_found | rounds=3 | evidence='["Jiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., Casas'
+  doc DOC3 'Sparse Expansion and Neuronal Disentangl' anchors=15
+    -> evidence_found | rounds=3 | evidence='["[31] Vage Egiazarian, Andrei Panferov, Denis Kuznedelev, Elias Frantar, Artem '
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['Mistral 7B'], 'Citation': ['Sparse Expansion and Neuronal Disentanglement']}
+
+==== sample paper_level4_17 (idx=17) ====
+  doc DOC1 'Context-Aware Learning to Rank with Self' anchors=29
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC2 'Influence of Neighborhood on the Prefere' anchors=9
+    -> evidence_found | rounds=1 | evidence='[1] C. J. Burges, "From ranknet to lambdarank to lambdamart: An overview," Learn'
+  composer -> projection_map keys=['DOC1', 'DOC2'] | records=0
+  -> answer: []
+
+==== sample paper_level4_18 (idx=18) ====
+  doc DOC1 'Churn Prediction with Sequential Data an' anchors=9
+    -> evidence_found | rounds=2 | evidence='["Churn analysis using deep convolutional neural networks and autoencoders", "Ch'
+  doc DOC2 'Churn analysis using deep convolutional ' anchors=12
+    -> evidence_found | rounds=2 | evidence='"Churn analysis using deep convolutional neural networks and autoencoders"'
+  composer -> projection_map keys=['DOC1', 'DOC2'] | records=2
+  -> answer: ['Churn analysis using deep convolutional neural networks and autoencoders', 'Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*']
+
+==== sample paper_level4_19 (idx=19) ====
+  doc DOC1 'Minimod: A Finite Difference solver for ' anchors=14
+    -> evidence_found | rounds=3 | evidence='["[1] M. Araya-Polo, J. Cabezas, M. Hanzich, M. Pericas, F. Rubio, I. Gelado, M.'
+  doc DOC2 'Massively scalable stencil algorithm' anchors=12
+    -> evidence_found | rounds=2 | evidence='["Minimod: A Finite Difference solver for Seismic Modeling", "Massively scalable'
+  composer -> projection_map keys=['DOC1', 'DOC2'] | records=2
+  -> answer: ['Minimod: A Finite Difference solver for Seismic Modeling', 'Massively scalable stencil algorithm']
+
+==== sample paper_level3_20 (idx=20) ====
+  doc DOC1 'Evolution of Heuristics: Towards Efficie' anchors=11
+    -> evidence_found | rounds=2 | evidence='["Xiao, H. and Wang, P. Llm a*: Human in the loop large language models enabled '
+  doc DOC2 'Ensembling Prioritized Hybrid Policies f' anchors=13
+    -> evidence_found | rounds=3 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC3 'LLM A*: Human in the Loop Large Language' anchors=17
+    -> evidence_found | rounds=4 | evidence='{"Reference":[],"Citation":[]}'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['LLM A*: Human in the Loop Large Language Models Enabled A* Search for Robotics'], 'Citation': []}
+
+==== sample paper_level4_21 (idx=21) ====
+  doc DOC1 'MUlTimodAL DeEP LEARNING OF Word-OF-MOUT' anchors=11
+    -> evidence_found | rounds=3 | evidence='["C Gary Mena, Arno De Caigny, Kristof Coussement, Koen W De Bock, and Stefan Le'
+  doc DOC2 'Churn Prediction with Sequential Data an' anchors=9
+    -> evidence_found | rounds=2 | evidence='["Churn Prediction with Sequential Data and Deep Neural Networks A Comparative A'
+  doc DOC3 'An Efficient Multimodal Learning Framewo' anchors=13
+    -> evidence_found | rounds=2 | evidence='["An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences '
+  doc DOC4 'Churn analysis using deep convolutional ' anchors=12
+    -> evidence_found | rounds=4 | evidence='["[^0]${ }^{7}$ Buja, Andreas, Werner Stuetzle, and Yi Shen. \\"Loss functions fo'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=4
+  -> answer: ['Churn analysis using deep convolutional neural networks and autoencoders', 'Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*', 'MUlTimodAL DeEP LEARNING OF Word
+
+==== sample paper_level3_22 (idx=22) ====
+  doc DOC1 'LLMs Can't Plan, But Can Help Planning i' anchors=9
+    -> evidence_found | rounds=3 | evidence='["Valmeekam, K., Marquez, M., and Kambhampati, S. Can large language models real'
+  doc DOC2 'Can Large Language Models Really Improve' anchors=10
+    -> evidence_found | rounds=2 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC3 'LARGE LANGUAGE MoDELS CANNOT SELF-CorREC' anchors=10
+    -> evidence_found | rounds=3 | evidence='{"Reference":[],"Citation":[]}'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['Can Large Language Models Really Improve by Self-critiquing Their Own Plans?', 'LARGE LANGUAGE MoDELS CANNOT SELF-CorRECT REASONING YET'], 'Citation': []}
+
+==== sample paper_level4_23 (idx=23) ====
+  doc DOC1 'MonaCoBERT: Monotonic attention based Co' anchors=12
+    -> evidence_found | rounds=2 | evidence='"Liu, L.; Liu, X.; Gao, J.; Chen, W.; and Han, J. 2020. Understanding the diffic'
+  doc DOC2 'Very Deep Transformers for Neural Machin' anchors=11
+    -> evidence_found | rounds=2 | evidence='"Liyuan Liu, Xiaodong Liu, Jianfeng Gao, Weizhu Chen, and Jiawei Han. 2020a. Und'
+  doc DOC3 'Understanding the Difficulty of Training' anchors=12
+    -> evidence_found | rounds=2 | evidence='"Xiaodong Liu, Kevin Duh, Liyuan Liu, and Jianfeng Gao. 2020b. Very deep transfo'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['Understanding the Difficulty of Training Transformers', 'Very Deep Transformers for Neural Machine Translation', 'MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing']
+
+==== sample paper_level3_24 (idx=24) ====
+  doc DOC1 'LoRA-Switch: Boosting the Efficiency of ' anchors=10
+    -> evidence_found | rounds=2 | evidence='["Medusa: Simple llm inference acceleration framework with multiple decoding hea'
+  doc DOC2 'ONLINE SPECULATIVE DECODING' anchors=14
+    -> evidence_found | rounds=3 | evidence='["Tianle Cai, Yuhong Li, Zhengyang Geng, Hongwu Peng, and Tri Dao. Medusa: Simpl'
+  doc DOC3 'MedusA: Simple LLM Inference Acceleratio' anchors=14
+    -> evidence_found | rounds=2 | evidence='"Xiaoxuan Liu, Lanxiang Hu, Peter Bailis, Ion Stoica, Zhijie Deng, Alvin Cheung,'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': [], 'Citation': ['LoRA-Switch: Boosting the Efficiency of Dynamic LLM Adapters via System-Algorithm Co-design', 'ONLINE SPECULATIVE DECODING']}
+
+==== sample paper_level3_25 (idx=25) ====
+  doc DOC1 'Scalable Pre-training of Large Autoregre' anchors=8
+    -> evidence_found | rounds=3 | evidence='["Alex Fang, Albin Madappally Jose, Amit Jain, Ludwig Schmidt, Alexander Toshev,'
+  doc DOC2 'Data Filtering Networks' anchors=14
+    -> evidence_found | rounds=3 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC3 'ARVideo: Autoregressive Pretraining for ' anchors=12
+    -> evidence_found | rounds=3 | evidence='["[10] Alaaeldin El-Nouby, Michal Klein, Shuangfei Zhai, Miguel Angel Bautista, '
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['Data Filtering Networks'], 'Citation': ['ARVideo: Autoregressive Pretraining for Self-Supervised Video Representation Learning']}
+
+==== sample paper_level3_27 (idx=27) ====
+  doc DOC1 'On Prompt-Driven Safeguarding for Large ' anchors=11
+    -> evidence_found | rounds=1 | evidence='["Bhatt, M., Chennabasappa, S., Nikolaidis, C., Wan, S., Evtimov, I., Gabi, D., '
+  doc DOC2 'Purple Llama CYBERSECEvAL: A Secure Codi' anchors=9
+    -> evidence_found | rounds=2 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC3 'Navigating the Safety Landscape: Measuri' anchors=9
+    -> evidence_found | rounds=3 | evidence='["Chujie Zheng, Fan Yin, Hao Zhou, Fandong Meng, Jie Zhou, Kai-Wei Chang, Minlie'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['Purple Llama CYBERSECEvAL: A Secure Coding Benchmark for Language Models'], 'Citation': ['Navigating the Safety Landscape: Measuring Risks in Finetuning Large Language Models']}
+
+==== sample paper_level3_28 (idx=28) ====
+  doc DOC1 'Extending Llama-3's Context Ten-Fold Ove' anchors=8
+    -> evidence_found | rounds=2 | evidence='["P. Zhang, Z. Liu, S. Xiao, N. Shao, Q. Ye, and Z. Dou. Soaring from 4k to 400k'
+  doc DOC2 'Soaring from 4K to 400K: Extending LLM's' anchors=12
+    -> evidence_found | rounds=2 | evidence='["Zhu, D., Yang, N., Wang, L., Song, Y., Wu, W., Wei, F., and Li, S. Pose: Effic'
+  doc DOC3 'PoSE: EFFICIENT CONTEXT WINDOW EXTENSION' anchors=14
+    -> evidence_found | rounds=3 | evidence='{"Reference":[],"Citation":[]}'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['PoSE: EFFICIENT CONTEXT WINDOW EXTENSION OF LLMS VIA POSITIONAL SKIP-WISE TRAINING'], 'Citation': ["Extending Llama-3's Context Ten-Fold Overnight"]}
+
+==== sample paper_level4_29 (idx=29) ====
+  doc DOC1 '![](https://cdn.mathpix.com/cropped/2024' anchors=15
+    -> evidence_found | rounds=3 | evidence='["GTBENCH: Uncovering the Strategic Reasoning Limitations of LLMs via Game-Theor'
+  doc DOC2 'Exploring Equilibrium Strategies in Netw' anchors=14
+    -> evidence_found | rounds=2 | evidence='["Exploring Equilibrium Strategies in Network Games with Generative AI", "L. He,'
+  doc DOC3 'Generative AI for Game Theory-based Mobi' anchors=11
+    -> evidence_found | rounds=4 | evidence='["[1] P. Lai, Q. He, F. Chen, M. Abdelrazek, J. Hosking, J. Grundy, and Y. Yang,'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['GTBENCH: Uncovering the Strategic Reasoning Limitations of LLMs via Game-Theoretic Evaluations', 'Generative AI for Game Theory-based Mobile Networking', 'Exploring Equilibrium Strategies in Network
+
+==== sample paper_level4_30 (idx=30) ====
+  doc DOC1 'PromptMind Team at EHRSQL-2024: Improvin' anchors=12
+    -> evidence_found | rounds=4 | evidence='["Xianming Li and Jing Li. 2023. Angle-optimized text embeddings. arXiv preprint'
+  doc DOC2 'ANGLE-OPTIMIZED TEXT EMBEDDINGS' anchors=15
+    -> evidence_found | rounds=2 | evidence='["Ting Jiang, Shaohan Huang, Zhongzhi Luan, Deqing Wang, and Fuzhen Zhuang. Scal'
+  doc DOC3 'Scaling Sentence Embeddings with Large L' anchors=13
+    -> no_evidence | rounds=3 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: ['Scaling Sentence Embeddings with Large Language Models', 'ANGLE-OPTIMIZED TEXT EMBEDDINGS', 'PromptMind Team at EHRSQL-2024: Improving Reliability of SQL Generation using Ensemble LLMs']
+
+==== sample paper_level4_32 (idx=32) ====
+  doc DOC1 'BEYOND TRADITIONAL MAGNETIC RESONANCE PR' anchors=9
+    -> evidence_found | rounds=3 | evidence='["A. F. Agarap, \\"Deep learning using rectified linear units (relu),\\" arXiv pre'
+  doc DOC2 'Semantically Conditioned LSTM-based Natu' anchors=10
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 'A Neural Network Architecture Combining ' anchors=14
+    -> evidence_found | rounds=2 | evidence='"Tsung-Hsien Wen, Milica Gasic, Nikola Mrksic, Pei-Hao Su, David Vandyke, and St'
+  doc DOC4 'Deep Learning using Rectified Linear Uni' anchors=11
+    -> evidence_found | rounds=3 | evidence='["Abien Fred Agarap. 2017. A Neural Network Architecture Combining Gated Recurre'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=3
+  -> answer: ['Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems', 'A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for
+
+==== sample paper_level3_33 (idx=33) ====
+  doc DOC1 'Mistral 7B' anchors=13
+    -> evidence_found | rounds=2 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC2 'Break the Sequential Dependency of LLM I' anchors=9
+    -> evidence_found | rounds=3 | evidence='["Jiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., Casas'
+  doc DOC3 'Kangaroo: Lossless Self-Speculative Deco' anchors=10
+    -> evidence_found | rounds=2 | evidence='["Mistral 7b. arXiv preprint arXiv:2310.06825, 2023.", "Break the sequential dep'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['Mistral 7B'], 'Citation': ['Kangaroo: Lossless Self-Speculative Decoding via Double Early Exiting']}
+
+==== sample paper_level4_34 (idx=34) ====
+  doc DOC1 'BEYOND TRADITIONAL MAGNETIC RESONANCE PR' anchors=9
+    -> evidence_found | rounds=3 | evidence='"A. F. Agarap, \\"Deep learning using rectified linear units (relu),\\" arXiv prep'
+  doc DOC2 'Deep Learning using Rectified Linear Uni' anchors=11
+    -> evidence_found | rounds=2 | evidence='["Deep Learning using Rectified Linear Units (ReLU)", "[2] Abien Fred Agarap. 20'
+  doc DOC3 'A Neural Network Architecture Combining ' anchors=14
+    -> evidence_found | rounds=2 | evidence='"[23] Tsung-Hsien Wen, Milica Gasic, Nikola Mrksic, Pei-Hao Su, David Vandyke, a'
+  doc DOC4 'Semantically Conditioned LSTM-based Natu' anchors=10
+    -> evidence_found | rounds=2 | evidence='["Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dia'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=4
+  -> answer: ['Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems', 'A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for
+
+==== sample paper_level4_35 (idx=35) ====
+  doc DOC1 'Context-Aware Learning to Rank with Self' anchors=29
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC2 'Treatment Effect Estimation for User Int' anchors=45
+    -> no_evidence | rounds=6 | evidence=''
+  doc DOC3 'On the Impact of Outlier Bias on User Cl' anchors=16
+    -> evidence_found | rounds=2 | evidence='["[28] Przemyslaw Pobrotyn, Tomasz Bartczak, Mikolaj Synowiec, Radoslaw Bialobrz'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: ['Context-Aware Learning to Rank with Self-Attention', 'On the Impact of Outlier Bias on User Clicks']
+
+==== sample paper_level3_36 (idx=36) ====
+  doc DOC1 'RAG VS Fine-TUNing: PiPELINES, TRADEOFFS' anchors=15
+    -> evidence_found | rounds=3 | evidence='["Bruno Silva, Leonardo Nunes, VIjay Estevão, Robertp amd Aski, and Ranveer Chan'
+  doc DOC2 'Large Language Models (LLMs): Deployment' anchors=12
+    -> evidence_found | rounds=4 | evidence='["A. Balaguer, V. Benara, R. L. de Freitas Cunha, R. d. M. Estevão Filho, T. Hen'
+  doc DOC3 'GPT-4 AS AN AGRONOMIST ASSISTANT? ANSWER' anchors=14
+    -> evidence_found | rounds=3 | evidence='[]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: {'Reference': ['GPT-4 AS AN AGRONOMIST ASSISTANT? ANSWERING AGRICULTURE QUESTIONS USING LARGE LANGUAGE MODELS'], 'Citation': ['Large Language Models (LLMs): Deployment, Tokenomics and Sustainability']
+
+==== sample legal_level3_409 (idx=409) ====
+  doc DOC1 '《判决文书1》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议", "拉萨中院在执行申请'
+  doc DOC2 '《判决文书2》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["复议申请人（被执行人）：宁某公司", "申请执行人：西吉县城市管理综合执法局", "（2023）宁0422执异5号执行裁定书", "（2023）宁0422执'
+  doc DOC3 '《判决文书3》' anchors=8
+    -> evidence_found | rounds=2 | evidence='section.\n</think>\n\n\n<search>{"action":"stop","reason":"collected sufficient evid'
+  doc DOC4 '《判决文书4》' anchors=17
+    -> evidence_found | rounds=2 | evidence='["申诉人祝某某因申请湖北省沙洋荷花垸监狱（以下简称荷花垸监狱）殴打、虐待致伤及无罪羁押赔偿一案，不服湖北省高级人民法院赔偿委员会（2023）鄂委赔1号决定，向'
+  doc DOC5 '《判决文书5》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["（2024）辽12执异14号执行裁定", "维持铁岭市中级人民法院（2024）辽12执异14号执行裁定"]'
+  doc DOC6 '《判决文书6》' anchors=7
+    -> evidence_found | rounds=1 | evidence='["因与被申请人南充市高坪区人民政府及一审第三人旷某、刘某、周某、彭某合同纠纷一案，不服四川省高级人民法院（以下简称二审法院）作出的（2023）川民终125号民'
+  doc DOC7 '《判决文书7》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["章某因申请上海市第一中级人民法院（以下简称一中院）再审无罪赔偿一案，不服上海市高级人民法院（以下简称上海高院）赔偿委员会（2022）沪委赔3号国家赔偿决定，'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7'] | records=3
+  -> answer: {'赔偿案件': ['《判决文书4》', '《判决文书7》'], '民事案件': ['《判决文书6》'], '执行案件': ['《判决文书1》', '《判决文书2》', '《判决文书3》', '《判决文书5》']}
+
+==== sample legal_level3_410 (idx=410) ====
+  doc DOC1 '《判决文书1》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["你因危险驾驶一案，不服辽宁省沈阳市和平区人民法院（2023）辽0102刑初454号刑事判决及沈阳市中级人民法院（2023）辽01刑终419号刑事裁定", "'
+  doc DOC2 '《判决文书2》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["再审申请人赵某因其诉被申请人乌鲁木齐市公安局天山区分局（以下简称天山区分局）行政拘留及罚款一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院作出的（2023）'
+  doc DOC3 '《判决文书3》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["（2020）粤04执异329、330号执行裁定", "维持珠海市中级人民法院（2020）粤04执异329、330号执行裁定"]'
+  doc DOC4 '《判决文书4》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。"]'
+  doc DOC5 '《判决文书5》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["《判决文书5》"]'
+  doc DOC6 '《判决文书6》' anchors=10
+    -> evidence_found | rounds=3 | evidence='["复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议", "本案为刑事裁判涉财产部分执行"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | records=3
+  -> answer: {'刑事案件': ['《判决文书1》', '《判决文书6》'], '执行案件': ['《判决文书3》', '《判决文书6》'], '行政案件': ['《判决文书2》', '《判决文书4》']}
+
+==== sample legal_level3_411 (idx=411) ====
+  doc DOC1 '《判决文书1》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["（2019）辽0404刑初216号刑事判决", "你因受贿一案", "认定我受贿罪成立错误", "《刑法修正案（九）》", "原判认定你的行为构成受贿罪",'
+  doc DOC2 '《判决文书2》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["青海省西宁市城西区人民法院审理该区人民检察院指控被告人赖某3、赖某2犯诈骗罪及赖某3犯非法持有枪支罪一案，于2023年12月27日作出（2023）青0104'
+  doc DOC3 '《判决文书3》' anchors=5
+    -> evidence_found | rounds=4 | evidence='["上诉人霍尔果斯某1影业有限公司（以下简称某1公司）与被上诉人重庆某2文化传媒有限公司（以下简称某2公司）、原审被告浙江某影视有限公司（以下简称某影视公司）广'
+  doc DOC4 '《判决文书4》' anchors=11
+    -> evidence_found | rounds=1 | evidence='上诉人郑某1、郑某2因与被上诉人郑某3及原审第三人郑某4法定继承纠纷一案，不服广东省广州市天河区人民法院（2022）粤0106民初34460号民事判决，向本院提'
+  doc DOC5 '《判决文书5》' anchors=5
+    -> evidence_found | rounds=4 | evidence='["上诉人某某公司1对本案管辖权提出的上诉理由不能成立，本院不予支持。", "某某公司1因侵害外观设计专利权纠纷，不服上海知识产权法院（2023）沪73民初87'
+  doc DOC6 '《判决文书6》' anchors=10
+    -> evidence_found | rounds=1 | evidence='"上诉人海珠区某某花园业主委员会（以下简称某某花园业委会）因与被上诉人广州某某口腔门诊部有限公司（以下简称某某口腔门诊部）、原审第三人黄某某、袁某某业主共有权纠'
+  doc DOC7 '《判决文书7》' anchors=5
+    -> evidence_found | rounds=4 | evidence='["上诉人山东博某生物产业有限公司（以下简称博某公司）因与被上诉人广州埃某森生物科技有限公司（以下简称埃某森公司）、原审被告山东博某贸易有限公司、枣庄博某滕进出'
+  doc DOC8 '《判决文书8》' anchors=14
+    -> evidence_found | rounds=1 | evidence='上诉人韦某某因与被上诉人温州某某电气有限公司（以下简称某某公司）破产债权确认纠纷一案，不服浙江省乐清市人民法院（2023）浙0382民初5745号之三民事判决，'
+  doc DOC9 '《判决文书9》' anchors=7
+    -> evidence_found | rounds=3 | evidence='["原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。", "山东省青岛市黄岛'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=3
+  -> answer: {'刑事案件': ['《判决文书1》', '《判决文书2》'], '民事案件': ['《判决文书4》', '《判决文书6》', '《判决文书8》'], '管辖案件': ['《判决文书3》', '《判决文书5》', '《判决文书7》', '《判决文书9》']}
+
+==== sample legal_level3_414 (idx=414) ====
+  doc DOC1 '《判决文书1》' anchors=5
+    -> evidence_found | rounds=4 | evidence='上诉人霍尔果斯某1影业有限公司（以下简称某1公司）与被上诉人重庆某2文化传媒有限公司（以下简称某2公司）、原审被告浙江某影视有限公司（以下简称某影视公司）广播电'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> evidence_found | rounds=1 | evidence='["河北省雄县人民法院审理雄县人民检察院指控原审被告人徐某犯职务侵占罪、合同诈骗罪一案，于2023年7月28日作出（2022）冀0638刑初110号刑事判决。"'
+  doc DOC3 '《判决文书3》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"王某因与被申请人新疆某某能源有限责任公司（以下简称某某公司）劳动争议一案，不服新疆维吾尔自治区克拉玛依市中级人民法院（2023）新02民终144号民事判决，向'
+  doc DOC4 '《判决文书4》' anchors=11
+    -> evidence_found | rounds=3 | evidence='["复议申请人布珠、嘎地、多扎、曲珍不服西藏自治区拉萨市中级人民法院（以下简称拉萨中院）（2021）藏01执异5号裁定，向本院申请复议", "拉萨中院在执行申请'
+  doc DOC5 '《判决文书5》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["原审被告人雷冰对你犯故意伤害罪一案，对西安市新城区人民法院（2022）陕0102刑初246号刑事判决及西安市中级人民法院（2023）陕01刑终49号刑事裁定'
+  doc DOC6 '《判决文书6》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["你因起诉被告人赵天齐故意伤害一案，不服新疆维吾尔自治区哈密市伊州区人民法院作出的（2023）新2201刑初277号刑事裁定和新疆维吾尔自治区哈密市中级人民法'
+  doc DOC7 '《判决文书7》' anchors=2
+    -> evidence_found | rounds=2 | evidence='"重庆市垫江县人民法院以该院对本案不便行使管辖权为由，依法报请本院指定管辖"'
+  doc DOC8 '《判决文书8》' anchors=7
+    -> evidence_found | rounds=1 | evidence='["上诉人刘某、沈某某与被上诉人张某某、张某某、蔡某某、某某物业管理（北京）有限公司财产损害赔偿纠纷一案，不服江苏省盐城经济技术开发区人民法院（2023）苏09'
+  doc DOC9 '《判决文书9》' anchors=1
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC10 '《判决文书10》' anchors=8
+    -> evidence_found | rounds=4 | evidence='["上诉人北京某1科技有限公司（以下简称北京某1公司）因与被上诉人北京某2科技有限公司（以下简称北京某2公司）、重庆某科技有限公司（以下简称重庆某公司）侵害作品'
+  doc DOC11 '《判决文书11》' anchors=5
+    -> evidence_found | rounds=2 | evidence='上诉人贵阳花溪某置业有限公司（以下简称某置业公司）因与被上诉人某银行股份有限公司重庆分行（以下简称重庆某行）保证合同纠纷一案，不服成渝金融法院(2023)渝87'
+  doc DOC12 '《判决文书12》' anchors=7
+    -> evidence_found | rounds=3 | evidence='["原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案，山东省青岛市黄岛区人民法院于2022年8月5日立案。", "2022年8月1'
+  doc DOC13 '《判决文书13》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["（2024）辽71执异3号执行裁定", "《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》", "维持沈阳铁路运输中级法院（2024）辽71'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10', 'DOC11', 'DOC12', 'DOC13'] | records=4
+  -> answer: {'民事案件': ['《判决文书3》', '《判决文书8》'], '执行案件': ['《判决文书4》', '《判决文书13》'], '管辖案件': ['《判决文书1》', '《判决文书7》', '《判决文书10》', '《判决文书11》', '《判决文书12》'], '刑事案件': ['《判决文书2》', '《判决文书5》', '《判决文书6》']}
+
+==== sample legal_level3_417 (idx=417) ====
+  doc DOC1 '《判决文书1》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["吕某因申请山东省德州市中级人民法院（以下简称德州中院）违法拖延执行赔偿一案，不服山东省高级人民法院（以下简称山东高院）赔偿委员会（2023）鲁委赔3号国家赔'
+  doc DOC2 '《判决文书2》' anchors=1
+    -> evidence_found | rounds=1 | evidence='["你因危险驾驶一案，不服辽宁省建平县人民法院（2021）辽1322刑初21号刑事判决及朝阳市中级人民法院（2021）辽13刑终323号刑事裁定", "原审认定'
+  doc DOC3 '《判决文书3》' anchors=7
+    -> evidence_found | rounds=1 | evidence='contains the gold evidence spans...". The user\'s question asks for a classificat'
+  doc DOC4 '《判决文书4》' anchors=8
+    -> evidence_found | rounds=1 | evidence='should contain verbatim text from the <info> blocks that proves the case type. I'
+  doc DOC5 '《判决文书5》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["执行裁定，向本院申诉。本院受理后，依法组成合议庭进行审查。本案现已审查终结。", "参照《中华人民共和国民事诉讼法》第二百一十一条，依照《最高人民法院关于人'
+  doc DOC6 '《判决文书6》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["赔偿请求人李惠元申请赔偿义务机关阳江市公安局怠于履行监管职责致死国家赔偿一案，不服广东省公安厅作出的粤公赔复决字[2024]1号刑事赔偿复议决定，向本院赔偿'
+  doc DOC7 '《判决文书7》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["宋某香因申请吉林省长春净月监狱（以下简称净月监狱）殴打、怠于履行监管职责致死赔偿一案，不服吉林省高级人民法院（以下简称吉林高院）赔偿委员会（2022）吉委赔'
+  doc DOC8 '《判决文书8》' anchors=3
+    -> evidence_found | rounds=1 | evidence='"（2023）新23行终74号行政判决"'
+  doc DOC9 '《判决文书9》' anchors=12
+    -> evidence_found | rounds=1 | evidence='"泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（202'
+  doc DOC10 '《判决文书10》' anchors=6
+    -> evidence_found | rounds=1 | evidence='["再审申请人周某、黄某某因与被申请人新疆某某汽车销售有限公司（以下简称某某公司）及原审第三人赵某某公司解散纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=5
+  -> answer: {'民事案件': ['《判决文书10》'], '赔偿案件': ['《判决文书1》', '《判决文书6》', '《判决文书7》'], '行政案件': ['《判决文书4》', '《判决文书8》'], '执行案件': ['《判决文书3》', '《判决文书5》'], '刑事案件': ['《判决文书2》', '《判决文书9》']}
+
+==== sample legal_level3_420 (idx=420) ====
+  doc DOC1 '《判决文书1》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议"]'
+  doc DOC2 '《判决文书2》' anchors=14
+    -> evidence_found | rounds=1 | evidence='["上诉人张某因与被上诉人高某1、高某2、高某3、高某4、汤某、高某5分家析产、法定继承纠纷一案，不服上海市嘉定区人民法院（2023）沪0114民初22338号'
+  doc DOC3 '《判决文书3》' anchors=10
+    -> evidence_found | rounds=1 | evidence='["上诉人古志梁、钟运枚因与被上诉人麦汉莲相邻关系纠纷一案，不服广东省广州市海珠区人民法院（2023）粤0105民初10757号民事判决，向本院提起上诉。"]'
+  doc DOC4 '《判决文书4》' anchors=3
+    -> evidence_found | rounds=1 | evidence='"不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2024）新01行终16号行政判决"'
+  doc DOC5 '《判决文书5》' anchors=13
+    -> evidence_found | rounds=2 | evidence='["申诉人王某某、田某某因申请辽宁省葫芦岛市中级人民法院（以下简称葫芦岛中院）错误执行赔偿一案，不服辽宁省高级人民法院（以下简称辽宁高院）赔偿委员会(2019)'
+  doc DOC6 '《判决文书6》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["你因原审被告人王昊非法吸收公众存款一案，不服丹东市振安区人民法院（2022）辽0604刑初71号刑事判决", "上述款项为王昊非法吸收的公众款项，系案涉应予'
+  doc DOC7 '《判决文书7》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["原告孙某、李某1与被告陈某、李某2、李某3继承纠纷一案", "应更正为继承纠纷"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7'] | records=5
+  -> answer: {'行政案件': ['《判决文书4》'], '民事案件': ['《判决文书2》', '《判决文书3》', '《判决文书7》'], '执行案件': ['《判决文书1》'], '赔偿案件': ['《判决文书5》'], '刑事案件': ['《判决文书6》']}
+
+==== sample legal_level3_428 (idx=428) ====
+  doc DOC1 '《判决文书1》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院作出的（2023）新28行终46号行政判决", "工伤保险资格认定一案", "被申请人巴州人社局作为作出具'
+  doc DOC2 '《判决文书2》' anchors=10
+    -> evidence_found | rounds=1 | evidence='["上诉人张某1因与被上诉人张某2分家析产纠纷一案，不服浙江省嘉善县人民法院（2023）浙0421民初1174号民事判决，向本院提起上诉。"]'
+  doc DOC3 '《判决文书3》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。", "东莞市生态环'
+  doc DOC4 '《判决文书4》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["不服铁岭市中级人民法院作出的（2024）辽12执异14号执行裁定", "维持铁岭市中级人民法院（2024）辽12执异14号执行裁定"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=3
+  -> answer: {'民事案件': ['《判决文书2》'], '执行案件': ['《判决文书4》'], '行政案件': ['《判决文书1》', '《判决文书3》']}
+
+==== sample legal_level3_429 (idx=429) ====
+  doc DOC1 '《判决文书1》' anchors=7
+    -> evidence_found | rounds=1 | evidence='["泉州市中级人民法院审理泉州市人民检察院指控被告人柯某宁犯故意伤害罪，附带民事诉讼原告人李某锡、郑某珠提起附带民事诉讼一案，于2023年10月17日作出（20'
+  doc DOC2 '《判决文书2》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2022）新01行终132号行政判决"'
+  doc DOC3 '《判决文书3》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["你因原审被告人雷冰对你犯故意伤害罪一案，对西安市新城区人民法院（2022）陕0102刑初246号刑事判决及西安市中级人民法院（2023）陕01刑终49号刑事'
+  doc DOC4 '《判决文书4》' anchors=10
+    -> evidence_found | rounds=1 | evidence='"上诉人敦煌某良种公司因与被上诉人吉林某种业公司、桦甸某农资商店侵害植物新品种权纠纷一案，不服吉林省长春市中级人民法院于2021年11月20日作出的（2021）'
+  doc DOC5 '《判决文书5》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["上诉人王某某、庞某某因与被上诉人甲公司财产损害赔偿纠纷一案，不服杭州市上城区人民法院民事判决，向本院提起上诉。"]'
+  doc DOC6 '《判决文书6》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包'
+  doc DOC7 '《判决文书7》' anchors=10
+    -> evidence_found | rounds=1 | evidence='["原告江苏某电气公司与被告施某公司、第三人镇江某电器公司、镇江某科技公司案外人执行异议之诉一案"]'
+  doc DOC8 '《判决文书8》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["再审申请人刘某某因诉北京市海淀区四季青镇人民政府（以下简称四季青镇政府）建房施工许可一案，不服北京市第一中级人民法院作出的（2023）京01行终583号行政'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8'] | records=3
+  -> answer: {'刑事案件': ['《判决文书1》', '《判决文书3》'], '行政案件': ['《判决文书2》', '《判决文书6》', '《判决文书8》'], '民事案件': ['《判决文书4》', '《判决文书5》', '《判决文书7》']}
+
+==== sample legal_level3_430 (idx=430) ====
+  doc DOC1 '《判决文书1》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云执异1号执行裁定，向本院申请执行复议。"'
+  doc DOC2 '《判决文书2》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["因诉苏州市姑苏区人民政府房屋征收决定一案，不服本院（2022）苏行终25号行政判决", "欧阳德凤等五人的再审申请不符合《中华人民共和国行政诉讼法》第九十一'
+  doc DOC3 '《判决文书3》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["本案系被执行人对法院裁定对其银行账户存款的冻结扣划行为不服提出的异议，属执行行为异议", "（2023）辽72执异108号执行裁定"]'
+  doc DOC4 '《判决文书4》' anchors=16
+    -> evidence_found | rounds=2 | evidence='["复议申请人朱某不服大连市中级人民法院（以下简称大连中院）作出的（2023）辽02 执异 1076 号执行裁定（以下简称不予执行裁定），向本院申请复议。", '
+  doc DOC5 '《判决文书5》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["你因诈骗一案，不服辽宁省开原市人民法院（2021）辽1282刑初225号刑事判决及铁岭市中级人民法院（2022）辽12刑终62号刑事裁定"]'
+  doc DOC6 '《判决文书6》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["你因被告人王某1犯诈骗罪一案，对天津市滨海新区人民法院（2023）津0116刑初420号刑事判决和天津市第三中级人民法院（2023）津03刑终158号刑事裁'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | records=3
+  -> answer: {'行政案件': ['《判决文书2》'], '执行案件': ['《判决文书1》', '《判决文书3》', '《判决文书4》'], '刑事案件': ['《判决文书5》', '《判决文书6》']}
+
+==== sample legal_level3_442 (idx=442) ====
+  doc DOC1 '《判决文书1》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["再审申请人赵某因与被申请人付某及原审第三人吴某某、巴州某房地产开发有限责任公司（以下简称巴州某公司）案外人执行异议之诉一案"]'
+  doc DOC2 '《判决文书2》' anchors=5
+    -> evidence_found | rounds=1 | evidence='"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案"'
+  doc DOC3 '《判决文书3》' anchors=10
+    -> no_evidence | rounds=4 | evidence=''
+  doc DOC4 '《判决文书4》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["原告陈某文与被告赵某等民间借贷纠纷一案", "本院认为，本案系民间借贷纠纷。"]'
+  doc DOC5 '《判决文书5》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案"]'
+  doc DOC6 '《判决文书6》' anchors=7
+    -> evidence_found | rounds=3 | evidence="since there's no verbatim evidence matching any of the categories.\n\nActually, wa"
+  doc DOC7 '《判决文书7》' anchors=8
+    -> evidence_found | rounds=3 | evidence='上诉人蔺某某因诉中华人民共和国公安部（以下简称公安部）政府信息公开一案，不服北京市第二中级人民法院（以下简称一审法院）作出的（2023）京 02 行初 218 '
+  doc DOC8 '《判决文书8》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["再审申请人康某军、康某荣、康某艳诉被申请人桂林市叠彩区应急管理局（以下简称叠彩区应急局）、原审第三人广西某某汽车运输有限公司（以下简称某甲公司）、原审第三人'
+  doc DOC9 '《判决文书9》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号'
+  doc DOC10 '《判决文书10》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["拆迁安置一案", "安置补偿协议", "拆迁安置手续"]'
+  doc DOC11 '《判决文书11》' anchors=1
+    -> evidence_found | rounds=1 | evidence='"再审申请人新疆某某标识设计制作有限公司因与被申请人新疆某某生物科技有限公司产品责任纠纷一案"'
+  doc DOC12 '《判决文书12》' anchors=14
+    -> evidence_found | rounds=3 | evidence='["上诉人陕西某公司因与被上诉人沙某慧、安徽某公司执行异议之诉一案", "甲公司与安徽某公司、广西某公司、乙公司借款合同纠纷一案", "陕西某公司与安徽某公司签'
+  doc DOC13 '《判决文书13》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["诉古田县大桥镇人民政府（以下简称大桥镇政府）强制拆除设施一案", "被申请人大桥镇政府强拆行为违反《中华人民共和国行政强制法》规定的程序为由，判决确认被申请'
+  doc DOC14 '《判决文书14》' anchors=5
+    -> evidence_found | rounds=1 | evidence='"机动车交通事故责任纠纷"'
+  doc DOC15 '《判决文书15》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["再审申请人王某某因诉被申请人宣城市宣州区济川街道办事处强制拆除房屋一案，不服安徽省宣城市中级人民法院（2021）皖18行终171号行政判决，向本院申请再审。'
+  doc DOC16 '《判决文书16》' anchors=10
+    -> evidence_found | rounds=3 | evidence='["再审申请人韩某甲因与被申请人新疆某肥业有限公司、原审被告齐某、韩某乙、原审第三人新疆某种业有限责任公司、阿瓦提县某棉业有限公司追加被执行人异议之诉一案", '
+  doc DOC17 '《判决文书17》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人刘某某因政府信息公开及行政复议一案，不服北京市第二中级人民法院（2023）京02行终1059号行政判决，向本院申请再审。", "本院认为，根据《中'
+  doc DOC18 '《判决文书18》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"再审申请人夏某因与被申请人向某甲、向某乙侵权责任纠纷一案"'
+  doc DOC19 '《判决文书19》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初522号刑事裁定、沈阳市中级人民法院（2023）辽01刑终580号'
+  doc DOC20 '《判决文书20》' anchors=7
+    -> evidence_found | rounds=1 | evidence='".\nIs this document irrelevant? The question asks to classify "all judgment docu'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10', 'DOC11', 'DOC12', 'DOC13', 'DOC14', 'DOC15', 'DOC16', 'DOC17', 'DOC18', 'DOC19', 'DOC20'] | records=6
+  -> answer: {'适用特殊程序案件案由': [], '侵权责任纠纷': ['《判决文书2》', '《判决文书11》', '《判决文书14》', '《判决文书18》'], '民间借贷纠纷': ['《判决文书4》'], '行政行为-行政监督': ['《判决文书7》', '《判决文书17》'], '渎职罪': ['《判决文书9》', '《判决文书19》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书5》'
+
+==== sample legal_level3_447 (idx=447) ====
+  doc DOC1 '《判决文书1》' anchors=4
+    -> evidence_found | rounds=3 | evidence='["上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案", "决定终止执行乌高（新）告［2022］12号《房屋征收决定公告》"]'
+  doc DOC2 '《判决文书2》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["上诉人吴某因房屋征收补偿决定一案，不服上海市第二中级人民法院（2023）沪02行初220号行政判决，向本院提起上诉。"]'
+  doc DOC3 '《判决文书3》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人淄博高新技术产业开发区人力资源和社会保障局（以下简称高新区人社局）因与被申请人淄博忠某有限公司（以下简称忠康劳务公司）工伤保险资格认定一案", "'
+  doc DOC4 '《判决文书4》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["再审申请人余某（1978年6月3日出生）因不服巴音郭楞蒙古自治州公安局交通警察支队作出的吊销机动车驾驶证行政处罚，申请再审。", "申请人系因不服被申请人作'
+  doc DOC5 '《判决文书5》' anchors=5
+    -> evidence_found | rounds=3 | evidence='["被申请人（一审被告、二审被上诉人）唐山市路南区人力资源和社会保障局。住所地：唐山市路南区。", "再审申请人石家庄某某集团有限公司因诉唐山市路南区人力资源和'
+  doc DOC6 '《判决文书6》' anchors=4
+    -> evidence_found | rounds=1 | evidence='["你身为国家司法机关工作人员，利用职务便利，非法收受他人财物，为他人谋取利益，数额较大，原判认定你的行为构成受贿罪，并无不当。", "你的行为均构成受贿罪"]'
+  doc DOC7 '《判决文书7》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["再审申请人罗某某因与被申请人中国证券监督管理委员会新疆监管局、中国证券监督管理委员会没收违法所得、罚款及行政复议一案"]'
+  doc DOC8 '《判决文书8》' anchors=3
+    -> evidence_found | rounds=2 | evidence='"被上诉人伊犁哈萨克自治州人民政府已撤销不予受理决定并重新受理"'
+  doc DOC9 '《判决文书9》' anchors=5
+    -> evidence_found | rounds=3 | evidence='["北京市通州区人民政府房屋征收办公室", "征收补偿协议书", "国有土地上房屋征收项目"]'
+  doc DOC10 '《判决文书10》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人鞍山市社会保险事业服务中心（以下简称鞍山市社保中心）因与被申请人田某某、刘某某、代某某不予先行支付工伤保险待遇一案，不服辽宁省鞍山市中级人民法院（'
+  doc DOC11 '《判决文书11》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["拆迁安置一案", "2017年12月29日，再审申请人荆某与北园街道办、水屯居委会签订涉案安置补偿协议约定：荆某方家庭共有人口11人（包括再审申请人夫妇二人'
+  doc DOC12 '《判决文书12》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["再审申请人逄某甲因与被申请人乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室）（以下简称米东区征收办）、新疆某房地产开发有限公司'
+  doc DOC13 '《判决文书13》' anchors=3
+    -> evidence_found | rounds=3 | evidence='["上诉人李某某因其诉被上诉人乌鲁木齐市沙依巴克区人民政府撤销补偿安置协议一案"]'
+  doc DOC14 '《判决文书14》' anchors=8
+    -> evidence_found | rounds=4 | evidence='"再审申请人康某军、康某荣、康某艳诉被申请人桂林市叠彩区应急管理局（以下简称叠彩区应急局）、原审第三人广西某某汽车运输有限公司（以下简称某甲公司）、原审第三人桂'
+  doc DOC15 '《判决文书15》' anchors=1
+    -> evidence_found | rounds=1 | evidence='《判决文书15》'
+  doc DOC16 '《判决文书16》' anchors=2
+    -> evidence_found | rounds=2 | evidence='["再审申请人阿某某因其诉被申请人巴楚县农业农村局、巴楚县农村合作经济发展中心，原审第三人新疆维吾尔自治区喀什地区巴楚县多来提巴格乡玛依仓村民委员会撤销土地承包'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10', 'DOC11', 'DOC12', 'DOC13', 'DOC14', 'DOC15', 'DOC16'] | records=7
+  -> answer: {'行政主体-房屋拆迁管理（拆迁）': ['《判决文书11》'], '行政行为-行政强制': ['《判决文书14》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书3》', '《判决文书5》', '《判决文书10》'], '贪污受贿罪': ['《判决文书6》'], '行政行为-行政撤销': ['《判决文书8》', '《判决文书13》', '《判决文书16》'], '行
+
+==== sample legal_level3_451 (idx=451) ====
+  doc DOC1 '《判决文书1》' anchors=11
+    -> evidence_found | rounds=3 | evidence='上诉人孙某某因其诉被上诉人霍城县人民政府土地承包经营权登记一案，不服新疆维吾尔自治区高级人民法院伊犁哈萨克自治州分院作出的（2023）新40行初20号行政判决，'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["章某因申请上海市第一中级人民法院（以下简称一中院）再审无罪赔偿一案，不服上海市高级人民法院（以下简称上海高院）赔偿委员会（2022）沪委赔3号国家赔偿决定，'
+  doc DOC3 '《判决文书3》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["再审申请人李某、张某因与被申请人乌鲁木齐高新技术产业开发区（乌鲁木齐市新市区）市场监督管理局（以下简称高新区市监局）、原审第三人新疆某科技有限公司（以下简称'
+  doc DOC4 '《判决文书4》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["复议申请人开原市自然资源保护事务服务中心（开原市土地储备中心）不服铁岭市中级人民法院（以下简称铁岭中院）作出的（2024）辽12执异14号执行裁定（以下简称'
+  doc DOC5 '《判决文书5》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["本院在执行华融创新投资有限责任公司（以下简称华融创新）与陕西龙天投资置业有限公司（以下简称龙天公司）、延安王家坪实业发展集团有限公司（以下简称王家坪公司）、'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["复议申请人大连长兴岛经济技术开发区交流岛街道西海头村民委员会（以下简称西海头村委会）不服大连海事法院于2023年11月28日作出的（2023）辽72执异10'
+  doc DOC7 '《判决文书7》' anchors=4
+    -> evidence_found | rounds=3 | evidence='contains the gold evidence spans you extracted from this document. A gold span i'
+  doc DOC8 '《判决文书8》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人乔某某因与被申请人新疆某投资有限公司（以下简称某投资公司）股权转让纠纷一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院（2023）新28民'
+  doc DOC9 '《判决文书9》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["云南省某产业发展集团有限责任公司（以下简称云南省某产业公司）不服云南省高级人民法院（以下简称云南高院）（2023）云执异1号执行裁定，向本院申请执行复议。"'
+  doc DOC10 '《判决文书10》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["在本院执行王某1与新疆生产建设兵团第四师广播电视台、胡秀先予执行一案中", "本案中确定先予执行给付责任的是（2020）兵0402民初433号先予执行民事裁'
+  doc DOC11 '《判决文书11》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["上诉人云南某某农业开发有限公司（以下简称：“某甲公司”）因与被上诉人云南某甲科技有限公司（以下简称：“某丙公司”）、云南某某投资集团有限公司（以下简称：“某'
+  doc DOC12 '《判决文书12》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["复议申请人赵某某、崔某某不服河南省修武县人民法院（以下简称修武法院）（2023）豫0821执异79号执行裁定，向本院申请复议", "驳回赵某某、崔某某的复议'
+  doc DOC13 '《判决文书13》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10', 'DOC11', 'DOC12', 'DOC13'] | records=7
+  -> answer: {'行政行为 - 行政登记': ['《判决文书 1》', '《判决文书 3》', '《判决文书 13》'], '与公司，证券，保险，票据等有关的民事纠纷': ['《判决文书 8》', '《判决文书 11》'], '执行案由 - 先予执行': ['《判决文书 10》'], '执行案由 - 对下级法院执行异议裁定的复议': ['《判决文书 4》', '《判决文书 6》', '《判决文书 9》', '《
+
+==== sample legal_level3_455 (idx=455) ====
+  doc DOC1 '《判决文书1》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人瞿某全因诉古田县大桥镇人民政府（以下简称大桥镇政府）强制拆除设施一案，不服福建省宁德市中级人民法院（2022）闽09行终145号行政裁定，向本院申'
+  doc DOC2 '《判决文书2》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人王某奇因诉石家庄市司法局行政处罚一案，不服石家庄市中级人民法院（2022）冀01行终848号行政判决，向本院申请再审。", "司法行政机关负有对律'
+  doc DOC3 '《判决文书3》' anchors=9
+    -> evidence_found | rounds=3 | evidence='["强制拆除房屋及行政赔偿一案", "叠彩区应急局实施被诉强制拆除行为违法", "危旧房改住房改造项目", "拆迁过渡协议书"]'
+  doc DOC4 '《判决文书4》' anchors=9
+    -> evidence_found | rounds=3 | evidence='["再审申请人杨某因其诉被申请人焉耆回族自治县住房和城乡建设局（以下简称焉耆县住建局）行政赔偿一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院作出的（2'
+  doc DOC5 '《判决文书5》' anchors=8
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["赔偿请求人廖某辉因申请贵州省高级人民法院（以下简称贵州高院）错误执行赔偿一案", "驳回廖某辉的国家赔偿申请"]'
+  doc DOC7 '《判决文书7》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人刘某某因诉北京市海淀区四季青镇人民政府（以下简称四季青镇政府）建房施工许可一案", "四季青镇政府对穆桂花作出施工许可的行为", "四季青镇政府于'
+  doc DOC8 '《判决文书8》' anchors=4
+    -> evidence_found | rounds=1 | evidence='must contain raw original text only."\n\nSo I should extract the verbatim text tha'
+  doc DOC9 '《判决文书9》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["上诉人林某因诉国家文物局所作文物保函〔2022〕775号《国家文物局不予行政许可决定书》（以下简称775号决定书）一案", "根据《中华人民共和国行政许可法'
+  doc DOC10 '《判决文书10》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["拆迁安置一案", "安置补偿协议", "安置房"]'
+  doc DOC11 '《判决文书11》' anchors=7
+    -> evidence_found | rounds=1 | evidence='["被告人胡伯益犯集资诈骗罪"]'
+  doc DOC12 '《判决文书12》' anchors=3
+    -> evidence_found | rounds=3 | evidence='["你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初517号刑事裁定、沈阳市中级人民法院（2023）辽01刑终575号'
+  doc DOC13 '《判决文书13》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["被申请人（一审被告、二审被上诉人）：东莞市生态环境局", "本案系罚款纠纷，争议焦点是东莞市生态环境局作出的被诉《行政处罚决定》是否合法", "吴明均经营的'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10', 'DOC11', 'DOC12', 'DOC13'] | records=6
+  -> answer: {'行政行为-行政许可': ['《判决文书7》', '《判决文书8》', '《判决文书9》'], '渎职罪': ['《判决文书12》'], '行政主体-司法行政管理（司法行政）': ['《判决文书2》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书1》', '《判决文书3》', '《判决文书4》', '《判决文书10》'], '破坏社会主义市场经济秩序罪': ['《判决文书11》'],
+
+==== sample legal_level3_457 (idx=457) ====
+  doc DOC1 '《判决文书1》' anchors=4
+    -> evidence_found | rounds=1 | evidence='上诉人于某某因其诉被上诉人乌鲁木齐市新市区人民政府房屋征收决定一案'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["单方解除房屋征收补偿协议一案", "乌鲁木齐市米东区房屋征收与补偿管理办公室（乌鲁木齐市米东区土地征收管理办公室）"]'
+  doc DOC4 '《判决文书4》' anchors=10
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC5 '《判决文书5》' anchors=11
+    -> no_evidence | rounds=4 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=7
+    -> evidence_found | rounds=1 | evidence='["原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案"]'
+  doc DOC7 '《判决文书7》' anchors=7
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC8 '《判决文书8》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["再审申请人新疆某旅游开发有限公司因与被申请人昌吉市应急管理局罚款一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行终74号行政判决，向'
+  doc DOC9 '《判决文书9》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["原告江苏某电气公司与被告施某公司、第三人镇江某电器公司、镇江某科技公司案外人执行异议之诉一案，本院于2023年11月13日立案后，依法适用普通程序"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=6
+  -> answer: {'执行案由-先予执行': ['《判决文书9》'], '适用特殊程序案件案由': [], '行政行为-行政征收': ['《判决文书1》', '《判决文书3》'], '产品责任纠纷': ['《判决文书6》'], '行政行为-行政处罚': ['《判决文书8》'], '人格权纠纷': []}
+
+==== sample legal_level3_461 (idx=461) ====
+  doc DOC1 '《判决文书1》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初518号刑事裁定、沈阳市中级人民法院（2023）辽01刑终574号'
+  doc DOC2 '《判决文书2》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["你因玩忽职守一案", "你的身份符合玩忽职守罪的犯罪主体", "足以证明你玩忽职守犯罪事实"]'
+  doc DOC3 '《判决文书3》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案", "本院认为，本案系产品责任纠纷"]'
+  doc DOC4 '《判决文书4》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["复议申请人（异议人、被执行人）为大连长兴岛经济技术开发区交流岛街道西海头村民委员会，法定代表人为段晓东。申请执行人为刘广东。", "西海头村委会不服大连海事'
+  doc DOC5 '《判决文书5》' anchors=4
+    -> evidence_found | rounds=1 | evidence='"再审申请人夏某诉被申请人大连市司法局、大连市人民政府行政处理决定及行政复议一案"'
+  doc DOC6 '《判决文书6》' anchors=9
+    -> evidence_found | rounds=1 | evidence='"再审申请人郭某因与被申请人乌鲁木齐市公安局公交地铁治安管理支队（公交地铁治安管理分局）（以下简称公交地铁支队）、乌鲁木齐市公安局、原审第三人张某乙行政拘留及行'
+  doc DOC7 '《判决文书7》' anchors=6
+    -> evidence_found | rounds=1 | evidence='["上诉人深圳市聚信欧美供应链有限公司、龚某、张某达因与被上诉人深圳市戴瑞昂国际货运代理有限公司、中顺生命技术（深圳）有限公司海上货物运输合同纠纷一案，不服广州'
+  doc DOC8 '《判决文书8》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人朱骏杰因诉靖江市人民政府（以下简称靖江市政府）、靖江市人力资源和社会保障局（以下简称靖江市人社局）工伤保险资格认定及行政复议一案，不服江苏省泰州市'
+  doc DOC9 '《判决文书9》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["某某公司因其诉新疆巴音郭楞蒙古自治州住房和城乡建设局（以下简称巴州住建局）、巴音郭楞蒙古自治州人民政府（以下简称巴州政府）征收防空地下室易地建设费及行政复议'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=6
+  -> answer: {'海事海商纠纷': ['《判决文书7》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书4》'], '行政行为-行政复议': ['《判决文书5》', '《判决文书6》', '《判决文书8》', '《判决文书9》'], '渎职罪': ['《判决文书1》', '《判决文书2》'], '产品责任纠纷': ['《判决文书3》'], '行政行为-行政裁决': []}
+
+==== sample legal_level3_463 (idx=463) ====
+  doc DOC1 '《判决文书1》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案", "本院认为，本案系产品责任纠纷"]'
+  doc DOC2 '《判决文书2》' anchors=1
+    -> evidence_found | rounds=1 | evidence='["你因危险驾驶一案", "你的行为已构成危险驾驶罪"]'
+  doc DOC3 '《判决文书3》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["你因自诉沈阳市中级人民法院滥用职权一案，不服沈阳市皇姑区人民法院（2023）辽0105刑初517号刑事裁定、沈阳市中级人民法院（2023）辽01刑终575号'
+  doc DOC4 '《判决文书4》' anchors=8
+    -> evidence_found | rounds=1 | evidence='永新县人民法院在执行申请执行人永新县市场监督管理局与被执行人永新县麦点广告有限公司行政非诉执行一案中'
+  doc DOC5 '《判决文书5》' anchors=7
+    -> evidence_found | rounds=2 | evidence='with the verbatim evidence spans I extracted. The answer should contain the actu'
+  doc DOC6 '《判决文书6》' anchors=9
+    -> evidence_found | rounds=2 | evidence='.\n\nThe evidence I should extract:\n1. From A4: The text about the administrative '
+  doc DOC7 '《判决文书7》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["你因原审被告人冯涛玩忽职守一案", "冯涛不构成玩忽职守罪", "原审认定冯涛玩忽职守犯罪事实", "其行为已构成玩忽职守罪", "其行为符合玩忽职守罪的构'
+  doc DOC8 '《判决文书8》' anchors=16
+    -> evidence_found | rounds=2 | evidence='["申诉人李某某因申请辽宁省沈阳新入监犯监狱（以下简称沈阳新入监犯监狱）怠于履行监管职责致死赔偿一案，不服辽宁省高级人民法院赔偿委员会（2018）辽委赔85号国'
+  doc DOC9 '《判决文书9》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["申请执行人：西吉县城市管理综合执法局", "复议申请人宁某公司不服固原市西吉县人民法院（以下简称西吉县法院）作出的（2023）宁0422执异5号执行裁定书，'
+  doc DOC10 '《判决文书10》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["申诉人祝某某因申请湖北省沙洋荷花垸监狱（以下简称荷花垸监狱）殴打、虐待致伤及无罪羁押赔偿一案", "应当给予刑事赔偿"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=6
+  -> answer: {'渎职罪': ['《判决文书3》', '《判决文书7》'], '执行案由-行政非诉执行': ['《判决文书4》', '《判决文书6》', '《判决文书9》'], '刑事赔偿': ['《判决文书8》', '《判决文书10》'], '民间借贷纠纷': ['《判决文书5》'], '危害公共安全罪': ['《判决文书2》'], '产品责任纠纷': ['《判决文书1》']}
+
+==== sample legal_level3_464 (idx=464) ====
+  doc DOC1 '《判决文书1》' anchors=9
+    -> evidence_found | rounds=1 | evidence='再审申请人新疆某科学研究院有限责任公司（以下简称某科院）与被申请人喀什某工程咨询有限公司（以下简称某公司）、阿勒泰地区某局（以下简称阿勒泰某局）、阿勒泰某投资发'
+  doc DOC2 '《判决文书2》' anchors=9
+    -> evidence_found | rounds=1 | evidence='上诉人连某法因与被上诉人杨某泽侵害发明专利权纠纷一案，不服广州知识产权法院于2023年1月9日作出的（2021）粤73知民初1187号民事判决，向本院提起上诉。'
+  doc DOC3 '《判决文书3》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）'
+  doc DOC4 '《判决文书4》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["章某因申请上海市第一中级人民法院（以下简称一中院）再审无罪赔偿一案，不服上海市高级人民法院（以下简称上海高院）赔偿委员会（2022）沪委赔3号国家赔偿决定，'
+  doc DOC5 '《判决文书5》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["申诉人王某庆因诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案"]'
+  doc DOC6 '《判决文书6》' anchors=9
+    -> evidence_found | rounds=1 | evidence='原告张某与被告张某某、周某不动产登记纠纷一案'
+  doc DOC7 '《判决文书7》' anchors=3
+    -> evidence_found | rounds=1 | evidence='再审申请人王某某因诉被申请人宣城市宣州区济川街道办事处强制拆除房屋一案，不服安徽省宣城市中级人民法院（2021）皖18行终171号行政判决，向本院申请再审。'
+  doc DOC8 '《判决文书8》' anchors=7
+    -> evidence_found | rounds=2 | evidence='should contain the verbatim text from the <info> blocks that proves the classifi'
+  doc DOC9 '《判决文书9》' anchors=6
+    -> evidence_found | rounds=1 | evidence='["再审申请人四川某知识产权服务有限公司（以下简称某服务公司）、夏某某与被申请人新疆生产建设兵团某网站（以下简称某网站）侵害作品信息网络传播权纠纷一案"]'
+  doc DOC10 '《判决文书10》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人王某某因诉北京市西城区人力资源和社会保障局（以下简称西城人社局）基本养老保险资格认定一案", "西城人社局经过调查认定，告知王某某不符合在北京办理'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=6
+  -> answer: {'行政主体-房屋拆迁管理（拆迁）': ['《判决文书3》', '《判决文书5》', '《判决文书7》'], '刑事赔偿': ['《判决文书4》'], '不动产登记纠纷': ['《判决文书6》'], '知识产权与竞争': ['《判决文书2》', '《判决文书9》'], '产品责任纠纷': ['《判决文书8》'], '行政行为-行政给付': ['《判决文书10》']}
+
+==== sample legal_level3_465 (idx=465) ====
+  doc DOC1 '《判决文书1》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["再审申请人叶某厚、欧某凤因被申请人北海市综合行政执法局（以下简称北海市综合执法局）、北海市银海区福成镇人民政府（以下简称福成镇政府）行政强制及行政赔偿一案，'
+  doc DOC2 '《判决文书2》' anchors=12
+    -> evidence_found | rounds=1 | evidence='["上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案"]'
+  doc DOC3 '《判决文书3》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案", "本院认为，本案系产品责任纠纷。"]'
+  doc DOC4 '《判决文书4》' anchors=4
+    -> evidence_found | rounds=4 | evidence='["再审申请人赵某庚因诉被申请人昌乐县人民政府行政强制及行政赔偿一案，不服本院（2022）鲁行终997号行政判决，向本院申请再审。", "本案的审理重点是：案涉'
+  doc DOC5 '《判决文书5》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["上诉人石家庄市新华区人民政府（以下简称新华区政府）因黄某设诉其作出的征收补偿安置决定一案，不服石家庄市中级人民法院（2023）冀01行初158号行政判决，向'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["上诉人刘某某因诉北京市人民政府（以下简称市政府）不予受理行政复议申请决定一案", "市政府作出《不予受理行政复议申请决定书》（京政复告字〔2023〕55号，'
+  doc DOC7 '《判决文书7》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["你因自诉沈阳市中级人民法院滥用职权一案", "滥用职权罪不是自诉案件的罪名"]'
+  doc DOC8 '《判决文书8》' anchors=8
+    -> evidence_found | rounds=2 | evidence='.\n</think>\n\n\n<search>{"action":"stop","reason":"collected all needed evidence"}<'
+  doc DOC9 '《判决文书9》' anchors=3
+    -> evidence_found | rounds=3 | evidence='["上诉人马某某因其诉被上诉人吉木萨尔县人民政府不履行土地征收补偿职责一案，不服新疆维吾尔自治区昌吉回族自治州中级人民法院（2023）新23行初17号行政判决，'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=6
+  -> answer: {'知识产权与竞争': ['《判决文书2》'], '行政主体-民政行政管理（民政）': [], '行政行为-行政受理': ['《判决文书6》'], '行政行为-其他行政行为': ['《判决文书1》', '《判决文书4》', '《判决文书5》', '《判决文书8》', '《判决文书9》'], '渎职罪': ['《判决文书7》'], '产品责任纠纷': ['《判决文书3》']}
+
+==== sample legal_level3_470 (idx=470) ====
+  doc DOC1 '《判决文书1》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["再审申请人左某因与被申请人阿瓦提县人力资源和社会保障局（以下简称阿瓦提县人社局）、原审第三人阿克苏市某某装饰装修工程有限公司（以下简称某某公司）工伤保险资格'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["茂名中院在执行申请执行人茂名市电白区坡心镇谭莲村田洋第二经济合作社（以下简称田洋第二经济合作社）与被执行人茂名市自然资源局高新区分局行政答复一案中", "（'
+  doc DOC3 '《判决文书3》' anchors=3
+    -> evidence_found | rounds=3 | evidence='["姜某某诉丹东市社会保险事业服务中心不予支付工伤保险待遇一案，辽宁省丹东市中级人民法院已于2023年8月25日作出（2023）辽06行终54号行政判决，该判决'
+  doc DOC4 '《判决文书4》' anchors=9
+    -> evidence_found | rounds=2 | evidence='["再审申请人席某因与被申请人阜康市公安局上户沟乡派出所（以下简称上户沟乡派出所）、阜康市人民政府、原审第三人王某罚款及行政复议一案", "本案的争议焦点是被诉'
+  doc DOC5 '《判决文书5》' anchors=10
+    -> evidence_found | rounds=1 | evidence='上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["沈铁中院在执行申请执行人张某斌、张某英、张某梅与被执行人铁岭市人民政府行政执行一案中", "复议申请人张某斌、张某英、张某梅不服沈阳铁路运输中级法院（以下简'
+  doc DOC7 '《判决文书7》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["陈某不服广东省中山市中级人民法院（2023）粤20执异132号执行裁定，向本院申请复议", "驳回陈某的复议申请，维持广东省中山市中级人民法院（2023）粤'
+  doc DOC8 '《判决文书8》' anchors=7
+    -> evidence_found | rounds=1 | evidence='原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8'] | records=5
+  -> answer: {'行政行为-行政强制': ['《判决文书4》'], '不动产登记纠纷': ['《判决文书5》'], '行政行为-行政给付': ['《判决文书1》', '《判决文书3》'], '产品责任纠纷': ['《判决文书8》'], '执行案由-行政': ['《判决文书2》', '《判决文书6》', '《判决文书7》']}
+
+==== sample legal_level3_471 (idx=471) ====
+  doc DOC1 '《判决文书1》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["诉永清县韩村镇人民政府、第三人永清县韩村镇西庄窠村民委员拆迁安置协议一案"]'
+  doc DOC2 '《判决文书2》' anchors=3
+    -> evidence_found | rounds=1 | evidence='"上诉人徐某因与被上诉人陶某航次租船合同纠纷一案，不服上海海事法院（2023）沪 72 民初 1239 号民事判决，向本院提起上诉。"'
+  doc DOC3 '《判决文书3》' anchors=10
+    -> evidence_found | rounds=1 | evidence='["重庆市渝中区人民政府与被执行人唐晓梅行政非诉执行一案"]'
+  doc DOC4 '《判决文书4》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["强制拆除房屋及行政赔偿一案"]'
+  doc DOC5 '《判决文书5》' anchors=18
+    -> evidence_found | rounds=1 | evidence='tag. I should only output the evidence spans.\nThe downstream system (Composer) w'
+  doc DOC6 '《判决文书6》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["荆某、王某因诉济南市天桥区人民政府北园街道办事处（以下简称北园街道办），原审第三人荆小波及济南市天桥区北园街道办事处水屯社区居民委员会（以下简称水屯居委会）'
+  doc DOC7 '《判决文书7》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["申诉人高某因申请河北省监狱管理局冀东分局（以下简称冀东分局）怠于履行监管职责致死赔偿一案，不服河北省高级人民法院（以下简称河北高院）赔偿委员会（2022）冀'
+  doc DOC8 '《判决文书8》' anchors=1
+    -> evidence_found | rounds=1 | evidence='["原告魏某诉被告湖北省人力资源和社会保障厅不履行法定职责一案"]'
+  doc DOC9 '《判决文书9》' anchors=6
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC10 '《判决文书10》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["申诉人祝某某因申请湖北省沙洋荷花垸监狱（以下简称荷花垸监狱）殴打、虐待致伤及无罪羁押赔偿一案", "应当给予刑事赔偿"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=5
+  -> answer: {'海事海商纠纷': ['《判决文书2》', '《判决文书5》'], '执行案由-行政非诉执行': ['《判决文书3》'], '行政主体-房屋拆迁管理（拆迁）': ['《判决文书1》', '《判决文书4》', '《判决文书6》'], '刑事赔偿': ['《判决文书7》', '《判决文书10》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书8》']}
+
+==== sample legal_level3_473 (idx=473) ====
+  doc DOC1 '《判决文书1》' anchors=4
+    -> evidence_found | rounds=4 | evidence='["再审申请人张某军因诉被申请人平度市人民政府凤台街道办事处行政赔偿一案"]'
+  doc DOC2 '《判决文书2》' anchors=9
+    -> evidence_found | rounds=1 | evidence='再审申请人郭某因与被申请人乌鲁木齐市公安局公交地铁治安管理支队（公交地铁治安管理分局）（以下简称公交地铁支队）、乌鲁木齐市公安局、原审第三人张某乙行政拘留及行政'
+  doc DOC3 '《判决文书3》' anchors=5
+    -> evidence_found | rounds=2 | evidence='must contain raw original text only. Copy-paste the actual sentences or paragrap'
+  doc DOC4 '《判决文书4》' anchors=16
+    -> evidence_found | rounds=1 | evidence='["周某不服安徽省高级人民法院（以下简称安徽高院）（2021）皖执复148号执行裁定", "申请执行人", "被执行人", "执行异议", "执行复议"]'
+  doc DOC5 '《判决文书5》' anchors=9
+    -> evidence_found | rounds=1 | evidence='上诉人马某海因其诉迁西县人民政府（以下简称迁西县政府）作出的行政复议决定书一案，不服唐山市中级人民法院（2023）冀02行初138号行政判决，向本院提起上诉。'
+  doc DOC6 '《判决文书6》' anchors=4
+    -> evidence_found | rounds=3 | evidence='["再审申请人赵某庚因诉被申请人昌乐县人民政府行政强制及行政赔偿一案，不服本院（2022）鲁行终997号行政判决，向本院申请再审。", "本案的审理重点是：案涉'
+  doc DOC7 '《判决文书7》' anchors=5
+    -> evidence_found | rounds=4 | evidence='["再审申请人（一审原告、二审上诉人）李某某。被申请人（一审被告、二审被上诉人）北京市律师协会。", "请求撤销一审、二审裁定，提审本案或者指令一审法院进行实体'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7'] | records=5
+  -> answer: {'行政主体-行政检查（监察）': [], '行政行为-行政复议': ['《判决文书2》', '《判决文书3》', '《判决文书5》'], '执行案由-民事': ['《判决文书4》'], '行政主体-民政行政管理（民政）': [], '行政行为-行政裁决': []}
+
+==== sample legal_level3_474 (idx=474) ====
+  doc DOC1 '《判决文书1》' anchors=5
+    -> evidence_found | rounds=2 | evidence='should be the verbatim text from the <info> blocks that shows this document belo'
+  doc DOC2 '《判决文书2》' anchors=5
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《判决文书3》' anchors=9
+    -> evidence_found | rounds=1 | evidence='"2011年11月3日，本院作出（2011）闽刑终字第261号刑事判决，判决：\'……被告人曾某梅犯贩卖、运输、制造毒品罪，判处无期徒刑，剥夺政治权利终身，并处没'
+  doc DOC4 '《判决文书4》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["申请执行人：西吉县城市管理综合执法局", "西吉县城市管理综合执法局...作出...行政处罚决定书", "裁定准予强制执行西吉城管执法局于2022年8月15'
+  doc DOC5 '《判决文书5》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"再审申请人四川某知识产权服务有限公司（以下简称某服务公司）、夏某某与被申请人新疆生产建设兵团某网站（以下简称某网站）侵害作品信息网络传播权纠纷一案"'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=1 | evidence='"永新县人民法院在执行申请执行人永新县市场监督管理局与被执行人永新县麦点广告有限公司行政非诉执行一案中"'
+  doc DOC7 '《判决文书7》' anchors=10
+    -> evidence_found | rounds=1 | evidence='["上诉人台州市金博金某新材料有限公司（以下简称金博金某公司）因与被上诉人江苏博迁博某新材料股份有限公司（以下简称博迁博某公司）侵害发明专利权纠纷一案"]'
+  doc DOC8 '《判决文书8》' anchors=4
+    -> evidence_found | rounds=1 | evidence='["再审申请人淄博高新技术产业开发区人力资源和社会保障局（以下简称高新区人社局）因与被申请人淄博忠某有限公司（以下简称忠康劳务公司）工伤保险资格认定一案"]'
+  doc DOC9 '《判决文书9》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["上诉人徐某因与被上诉人陶某航次租船合同纠纷一案，不服上海海事法院（2023）沪72民初1239号民事判决"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=5
+  -> answer: {'执行案由-刑事': ['《判决文书3》'], '执行案由-行政非诉执行': ['《判决文书4》', '《判决文书6》'], '海事海商纠纷': ['《判决文书9》'], '知识产权与竞争': ['《判决文书5》', '《判决文书7》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书1》', '《判决文书8》']}
+
+==== sample legal_level3_477 (idx=477) ====
+  doc DOC1 '《判决文书1》' anchors=12
+    -> evidence_found | rounds=3 | evidence='["上诉人（原审被告人）丁某，男，汉族，1975年10月23日出生，大学专科文化，原系青海旅游投资集团股份有限公司（以下简称青海省旅投公司）总经理助理，户籍地西'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> evidence_found | rounds=3 | evidence='["再审申请人先某因其诉被申请人乌鲁木齐高新技术产业开发区（乌鲁木齐市新市区）二工乡人民政府（以下简称二工乡政府）、乌鲁木齐高新技术产业开发区（乌鲁木齐市新市区'
+  doc DOC3 '《判决文书3》' anchors=12
+    -> evidence_found | rounds=2 | evidence='["赔偿请求人廖某辉因申请贵州省高级人民法院（以下简称贵州高院）错误执行赔偿一案，不服贵州高院（2022）黔法赔1号决定，向本院赔偿委员会申请作出国家赔偿决定。'
+  doc DOC4 '《判决文书4》' anchors=4
+    -> evidence_found | rounds=3 | evidence='["再审申请人因诉安徽省人民政府行政复议一案，不服本院（2022）皖行终441号行政判决，向本院申请再审。", "原审查明李某甲于2016年11月15日申请预支'
+  doc DOC5 '《判决文书5》' anchors=3
+    -> evidence_found | rounds=2 | evidence='["因涉嫌贪污罪、受贿罪", "以原审被告人金钢犯受贿罪，判处有期徒刑三年三个月，并处罚金人民币二十万元；犯贪污罪，判处有期徒刑三年，并处罚金人民币二十万元"]'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=3 | evidence='["上诉人蔺某某因诉中华人民共和国公安部（以下简称公安部）政府信息公开一案，不服北京市第二中级人民法院（以下简称一审法院）作出的（2023）京02行初218号行'
+  doc DOC7 '《判决文书7》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["再审申请人鞍山市社会保险事业服务中心（以下简称鞍山市社保中心）因与被申请人田某某、刘某某、代某某不予先行支付工伤保险待遇一案，不服辽宁省鞍山市中级人民法院（'
+  doc DOC8 '《判决文书8》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["上诉人黎某某因诉广东省公安厅政府信息公开一案，不服广州铁路运输中级法院（2023）粤71行初8号行政判决，向本院提起上诉。", "原审法院认为，本案审查对象'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8'] | records=5
+  -> answer: {'行政主体-行政检查（监察）': [], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书7》'], '行政行为-行政监督': ['《判决文书6》', '《判决文书8》'], '非刑事赔偿-错误执行赔偿': ['《判决文书3》'], '贪污受贿罪': ['《判决文书1》', '《判决文书5》']}
+
+==== sample legal_level3_478 (idx=478) ====
+  doc DOC1 '《判决文书1》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["复议申请人宋某华不服沈阳市中级人民法院（以下简称沈阳中院）作出的（2022）辽 01 执异 923 号执行裁定（以下简称变更裁定），向本院申请复议。", "'
+  doc DOC2 '《判决文书2》' anchors=10
+    -> evidence_found | rounds=2 | evidence='tag, not the classification JSON itself. The system will likely aggregate eviden'
+  doc DOC3 '《判决文书3》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["沈阳某公司诉沈阳市沈河区人民政府（以下简称沈河区政府）、沈阳市沈河区城市更新局（以下简称沈河区更新局）、沈阳某百货公司履行征收补偿职责一案，辽宁省沈阳市中级'
+  doc DOC4 '《判决文书4》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["诉被申请人乌鲁木齐市公安局天山区分局（以下简称天山区分局）行政拘留及罚款一案", "根据《中华人民共和国治安管理处罚法》第二十六条第四项规定，对其作出行政拘'
+  doc DOC5 '《判决文书5》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["叶某因其诉被申请人博尔塔拉蒙古自治州住房公积金管理中心（以下简称博州公积金管理中心）不履行法定职责一案，不服新疆维吾尔自治区博尔塔拉蒙古自治州中级人民法院作'
+  doc DOC6 '《判决文书6》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["某有限公司不服浙江省高级人民法院（以下简称浙江高院）（2023）浙执复5号执行裁定，向本院申诉。", "申请执行人某有限公司向浙江省舟山市中级人民法院（以下'
+  doc DOC7 '《判决文书7》' anchors=9
+    -> evidence_found | rounds=1 | evidence='上诉人王某1因与被上诉人孔某1、被上诉人刘某1及原审第三人某某公司XX分公司法定继承纠纷一案，不服上海市静安区人民法院（2023）沪0106民初47382号民事'
+  doc DOC8 '《判决文书8》' anchors=12
+    -> evidence_found | rounds=2 | evidence='["新疆维吾尔自治区乌鲁木齐市中级人民法院（以下简称乌鲁木齐中院）在执行申请执行人方某某与被执行人柴某某合同纠纷一案中，陈某某申请变更其为申请执行人。2024 '
+  doc DOC9 '《判决文书9》' anchors=16
+    -> evidence_found | rounds=1 | evidence='上诉人秦某因与被上诉人戴某1、戴某2、戴某3、戴某4、戴某5法定继承纠纷一案，不服广东省广州市黄埔区人民法院（2022）粤0112民初27823号民事判决，向本'
+  doc DOC10 '《判决文书10》' anchors=7
+    -> evidence_found | rounds=1 | evidence='"本院认为，本案系民间借贷纠纷。"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=5
+  -> answer: {'继承纠纷': ['《判决文书7》', '《判决文书9》'], '执行案由-民事': ['《判决文书1》', '《判决文书6》', '《判决文书8》'], '民间借贷纠纷': ['《判决文书10》'], '行政行为-行政处罚': ['《判决文书2》', '《判决文书4》'], '行政行为-其他行政行为': ['《判决文书3》', '《判决文书5》']}
+
+==== sample legal_level3_479 (idx=479) ====
+  doc DOC1 '《判决文书1》' anchors=12
+    -> evidence_found | rounds=3 | evidence='["复议申请人周某、周某某不服北京市第四中级人民法院（以下简称北京四中院）作出的（2023）京04执恢20号限制出境决定，向本院申请复议。", "北京四中院于2'
+  doc DOC2 '《判决文书2》' anchors=6
+    -> evidence_found | rounds=2 | evidence='["再审申请人叶某因其诉被申请人博尔塔拉蒙古自治州住房公积金管理中心（以下简称博州公积金管理中心）行政赔偿一案，不服新疆维吾尔自治区博尔塔拉蒙古自治州中级人民法'
+  doc DOC3 '《判决文书3》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["海上货运代理合同纠纷"]'
+  doc DOC4 '《判决文书4》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["再审申请人左某因与被申请人阿瓦提县人力资源和社会保障局（以下简称阿瓦提县人社局）、原审第三人阿克苏市某某装饰装修工程有限公司（以下简称某某公司）工伤保险资格'
+  doc DOC5 '《判决文书5》' anchors=9
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC6 '《判决文书6》' anchors=12
+    -> evidence_found | rounds=2 | evidence='["《判决文书6》"]'
+  doc DOC7 '《判决文书7》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"其行为均已构成帮助信息网络犯罪活动罪"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7'] | records=5
+  -> answer: {'行政行为-行政强制': ['《判决文书1》'], '妨碍社会管理秩序罪': ['《判决文书7》'], '执行案由-行政': [], '行政行为-行政补偿': [], '海事海商纠纷': ['《判决文书3》']}
+
+==== sample legal_level3_481 (idx=481) ====
+  doc DOC1 '《判决文书1》' anchors=11
+    -> evidence_found | rounds=1 | evidence='"在执行申请执行人中国某乙建设有限责任公司（以下简称某乙公司）与被执行人特克斯某甲房地产开发有限公司（以下简称某甲公司）建设工程施工合同纠纷一案中"'
+  doc DOC2 '《判决文书2》' anchors=12
+    -> evidence_found | rounds=1 | evidence='["被告人常某某违反交通运输管理法规，因而发生重大事故，造成一人死亡，负事故主要责任，其行为已构成交通肇事罪", "被告人常某某犯交通肇事罪，判处有期徒刑九个月'
+  doc DOC3 '《判决文书3》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["你因交通肇事一案，不服辽宁省凌海市人民法院（2022）辽0781刑初249号刑事附带民事判决及锦州市中级人民法院（2023）辽07刑终113号刑事附带民事裁'
+  doc DOC4 '《判决文书4》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["被告人石某根甲犯过失以危险方法危害公共安全罪，判处有期徒刑三年三个月", "上诉人（原审被告人）周某明犯过失以危险方法危害公共安全罪，判处有期徒刑一年，缓刑'
+  doc DOC5 '《判决文书5》' anchors=8
+    -> evidence_found | rounds=2 | evidence='"再审申请人尚某因与被申请人新疆某某洗涤服务有限公司（以下简称某某洗涤公司）劳动争议一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终477'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=1 | evidence='"上海某某公司与喀什某某公司、李某某、叶某某、方某某、陈某某、陈某某、王某某、陈某某合资、合作开发房地产合同纠纷一案中"'
+  doc DOC7 '《判决文书7》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["原告吴某波与被告江西昌某某建设集团有限公司（以下简称某某公司）承包经营合同纠纷一案", "本案系当事人之间因履行《承包经营协议书》产生，案由应为合资、合作开'
+  doc DOC8 '《判决文书8》' anchors=11
+    -> evidence_found | rounds=4 | evidence='["马某某根据《中华人民共和国民事诉讼法》（2021 年修正）第二百零七条第十一项之规定申请再审。事实与理由：一、上海某银行的保证担保形成的债权不能对抗马某某依'
+  doc DOC9 '《判决文书9》' anchors=14
+    -> evidence_found | rounds=3 | evidence='["上诉人陕西某公司因与被上诉人沙某慧、安徽某公司执行异议之诉一案，不服安徽省蚌埠市中级人民法院（2023）皖 03 民初 20 号民事判决，向本院提起上诉。"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=5
+  -> answer: {'劳动争议，人事争议': ['《判决文书5》'], '危害公共安全罪': ['《判决文书2》', '《判决文书3》', '《判决文书4》'], '民事案由-合同，无因管理，不当得利纠纷': ['《判决文书1》', '《判决文书6》', '《判决文书7》'], '适用特殊程序案件案由': ['《判决文书8》', '《判决文书9》'], '用益物权纠纷': []}
+
+==== sample legal_level3_482 (idx=482) ====
+  doc DOC1 '《判决文书1》' anchors=7
+    -> evidence_found | rounds=1 | evidence='["复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议"]'
+  doc DOC2 '《判决文书2》' anchors=10
+    -> evidence_found | rounds=2 | evidence='上诉人某某农资公司因与被上诉人某某房产公司、原审第三人某某肥业公司不动产登记纠纷一案'
+  doc DOC3 '《判决文书3》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人郑某某因拆迁裁决不予受理决定一案，不服北京市东城区人民法院（以下简称一审法院）（2023）京0101行初323号行政裁定及北京市第二中级人民法院（'
+  doc DOC4 '《判决文书4》' anchors=4
+    -> evidence_found | rounds=1 | evidence='原告李生英与被告青海首宏置业投资有限公司不动产登记纠纷一案，本院于2024年1月3日立案后，依法适用简易程序，公开开庭进行了审理，原告李生英及被告青海首宏置业投'
+  doc DOC5 '《判决文书5》' anchors=9
+    -> evidence_found | rounds=1 | evidence='原告张某与被告张某某、周某不动产登记纠纷一案'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=1 | evidence='再审申请人樟树市某某商贸有限公司（原深圳市某某照明科技有限公司，以下简称某某公司）因与被申请人李某侵害实用新型专利权纠纷一案，不服本院（2021）最高法知民终1'
+  doc DOC7 '《判决文书7》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["上诉人刘某某因诉北京市人民政府（以下简称市政府）不予受理行政复议申请决定一案，不服北京市第三中级人民法院（以下简称一审法院）作出的（2023）京03行初11'
+  doc DOC8 '《判决文书8》' anchors=7
+    -> evidence_found | rounds=1 | evidence='原告张某亮与被告上海某某通信科技有限公司、北京某某贸易有限公司产品责任纠纷一案'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8'] | records=5
+  -> answer: {'执行案由-对下级法院执行异议裁定的复议': ['《判决文书1》'], '产品责任纠纷': ['《判决文书8》'], '行政行为-行政受理': ['《判决文书3》', '《判决文书7》'], '知识产权与竞争': ['《判决文书6》'], '不动产登记纠纷': ['《判决文书2》', '《判决文书4》', '《判决文书5》']}
+
+==== sample legal_level3_484 (idx=484) ====
+  doc DOC1 '《判决文书1》' anchors=4
+    -> evidence_found | rounds=3 | evidence='["再审申请人夏某诉被申请人大连市司法局、大连市人民政府行政处理决定及行政复议一案", "大连市中级人民法院于2023年1月11日作出（2022）辽02行终70'
+  doc DOC2 '《判决文书2》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["原判认定孙明等人的行为共同构成贪污罪并无不当"]'
+  doc DOC3 '《判决文书3》' anchors=1
+    -> evidence_found | rounds=1 | evidence='《判决文书3》'
+  doc DOC4 '《判决文书4》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人（一审原告、二审上诉人）郭某某。被申请人（一审被告、二审被上诉人）国家金融监督管理总局山东监管局。被申请人（一审被告、二审被上诉人）国家金融监督管'
+  doc DOC5 '《判决文书5》' anchors=10
+    -> evidence_found | rounds=2 | evidence='... <answer> contains the gold evidence spans you extracted from this document."'
+  doc DOC6 '《判决文书6》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["李某某因诉北京市律师协会（以下简称市律协）纪律处分决定及复查决定一案，不服北京市东城区人民法院（以下简称一审法院）（2022）京0101行初520号（以下简'
+  doc DOC7 '《判决文书7》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人淄博高新技术产业开发区人力资源和社会保障局（以下简称高新区人社局）因与被申请人淄博忠某有限公司（以下简称忠康劳务公司）工伤保险资格认定一案，不服淄'
+  doc DOC8 '《判决文书8》' anchors=10
+    -> evidence_found | rounds=2 | evidence='["茂名中院在执行申请执行人茂名市电白区坡心镇谭莲村田洋第二经济合作社（以下简称田洋第二经济合作社）与被执行人茂名市自然资源局高新区分局行政答复一案中", "（'
+  doc DOC9 '《判决文书9》' anchors=4
+    -> evidence_found | rounds=1 | evidence='should contain the gold evidence spans (verbatim quotes) that prove the classifi'
+  doc DOC10 '《判决文书10》' anchors=6
+    -> evidence_found | rounds=1 | evidence='["再审申请人郭某辰、郭某勋、黄某芳因诉被申请人某市人力资源和社会保障局（以下简称某市人社局）工伤保险资格或者待遇认定一案，不服河南省新乡市中级人民法院（202'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9', 'DOC10'] | records=5
+  -> answer: {'贪污受贿罪': ['《判决文书2》', '《判决文书9》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书7》', '《判决文书10》'], '执行案由-行政': ['《判决文书8》'], '所有权纠纷': ['《判决文书5》'], '行政行为-行政裁决': []}
+
+==== sample legal_level3_485 (idx=485) ====
+  doc DOC1 '《判决文书1》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["双方在履行合同过程中发生的纠纷属于劳务合同纠纷"]'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> evidence_found | rounds=1 | evidence='["再审申请人欧阳德凤、沈夕坤、蔡福男、吴金珠、陈惠忠（以下简称欧阳德凤等五人）因诉苏州市姑苏区人民政府（以下简称姑苏区政府）房屋征收决定一案", "被申请人征'
+  doc DOC3 '《判决文书3》' anchors=11
+    -> evidence_found | rounds=3 | evidence='{"物权保护纠纷": ["《判决文书3》"], "合同，无因管理，不当得利纠纷": [], "侵权责任纠纷": [], "行政主体-劳动和社会保障行政管理（劳动'
+  doc DOC4 '《判决文书4》' anchors=5
+    -> evidence_found | rounds=2 | evidence='["再审申请人石家庄某某集团有限公司因诉唐山市路南区人力资源和社会保障局（以下简称路南区人社局）行政处理决定一案，不服唐山市中级人民法院（2022）冀 02 行'
+  doc DOC5 '《判决文书5》' anchors=6
+    -> evidence_found | rounds=1 | evidence='再审申请人闫某、常某与一审第三人王某劳务合同纠纷一案'
+  doc DOC6 '《判决文书6》' anchors=3
+    -> evidence_found | rounds=1 | evidence='"再审申请人新疆某某标识设计制作有限公司因与被申请人新疆某某生物科技有限公司产品责任纠纷一案"'
+  doc DOC7 '《判决文书7》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"上诉人某公司（以下简称某公司）、上诉人某某公司（以下简称某某公司）因与被上诉人某分公司(以下简称某分公司)、被上诉人王某某、某有限公司（以下简称某有限公司）财'
+  doc DOC8 '《判决文书8》' anchors=5
+    -> evidence_found | rounds=1 | evidence='"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案"'
+  doc DOC9 '《判决文书9》' anchors=6
+    -> evidence_found | rounds=1 | evidence='再审申请人郭某辰、郭某勋、黄某芳因诉被申请人某市人力资源和社会保障局（以下简称某市人社局）工伤保险资格或者待遇认定一案，不服河南省新乡市中级人民法院（2023）'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=5
+  -> answer: {'物权保护纠纷': ['《判决文书3》'], '合同，无因管理，不当得利纠纷': ['《判决文书1》', '《判决文书5》'], '侵权责任纠纷': ['《判决文书6》', '《判决文书7》', '《判决文书8》'], '行政主体-劳动和社会保障行政管理（劳动，社会保障）': ['《判决文书4》', '《判决文书9》'], '行政行为-行政征收': ['《判决文书2》']}
+
+==== sample legal_level3_486 (idx=486) ====
+  doc DOC1 '《判决文书1》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人刘某某因政府信息公开及行政复议一案，不服北京市第二中级人民法院（2023）京02行终1059号行政判决，向本院申请再审。", "根据《中华人民共和'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> evidence_found | rounds=3 | evidence='["上诉人蔺某某因诉中华人民共和国公安部（以下简称公安部）政府信息公开一案，不服北京市第二中级人民法院（以下简称一审法院）作出的（2023）京02行初218号行'
+  doc DOC3 '《判决文书3》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["上诉人石家庄市新华区人民政府因黄某设诉其作出的征收补偿安置决定一案，不服石家庄市中级人民法院（2023）冀01行初158号行政判决，向本院提起上诉。", "'
+  doc DOC4 '《判决文书4》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["因与被申请人张亮、一审第三人唐春江合同纠纷一案", "王云霄、白凯全、史健与张亮签订了火锅店转让合同"]'
+  doc DOC5 '《判决文书5》' anchors=4
+    -> evidence_found | rounds=2 | evidence='["再审申请人赵某庚因诉被申请人昌乐县人民政府行政强制及行政赔偿一案，不服本院（2022）鲁行终997号行政判决，向本院申请再审。", "案涉协议虽然名为土地征'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=1 | evidence='["复议申请人浙江勤业建工集团有限公司（以下简称勤业公司）不服浙江省绍兴市中级人民法院（以下简称绍兴中院）作出的（2022）浙06执异27号执行裁定，向本院申请'
+  doc DOC7 '《判决文书7》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["再审申请人乔某某因与被申请人新疆某投资有限公司（以下简称某投资公司）股权转让纠纷一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院（2023）新28民'
+  doc DOC8 '《判决文书8》' anchors=9
+    -> evidence_found | rounds=3 | evidence='["上诉人罗某某因政府信息公开一案，不服北京金融法院（以下简称一审法院）（2023）京74行初97号行政裁定（以下简称一审裁定），向本院提起上诉。", "本案中'
+  doc DOC9 '《判决文书9》' anchors=10
+    -> evidence_found | rounds=3 | evidence='["上诉人李某某因诉北京市朝阳区人民政府（以下简称朝阳区政府）、北京市朝阳区房屋管理局（以下简称朝阳房管局）行政协议一案，不服北京市第四中级人民法院（以下简称一'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8', 'DOC9'] | records=5
+  -> answer: {'行政行为-行政监督': ['《判决文书1》', '《判决文书2》', '《判决文书8》'], '执行案由-对下级法院执行异议裁定的复议': ['《判决文书6》'], '行政行为-行政合同': ['《判决文书9》'], '行政主体-民政行政管理（民政）': [], '与公司，证券，保险，票据等有关的民事纠纷': ['《判决文书7》']}
+
+==== sample legal_level4_512 (idx=512) ====
+  doc DOC1 '《判决文书1》' anchors=12
+    -> evidence_found | rounds=2 | evidence='["一、撤销广东省广州市海珠区人民法院（2023）粤0105民初18126号民事判决第三项；\\n\\n二、变更广东省广州市海珠区人民法院（2023）粤0105民初'
+  doc DOC2 '《判决文书2》' anchors=8
+    -> evidence_found | rounds=1 | evidence='驳回上诉，维持原判。\n二审案件受理费13376元，由上诉人梁某负担。\n本判决为终审判决。'
+  doc DOC3 '《判决文书3》' anchors=7
+    -> evidence_found | rounds=1 | evidence='"驳回上诉，维持原判。\\n二审案件受理费13800元，由杨某、秦某1、秦某2负担。\\n本判决为终审判决。"'
+  doc DOC4 '《判决文书4》' anchors=3
+    -> evidence_found | rounds=1 | evidence='"准许河南省某某建筑防水工程有限公司松原市开发区分公司撤回再审申请。"'
+  doc DOC5 '《判决文书5》' anchors=9
+    -> evidence_found | rounds=2 | evidence='should contain the verbatim evidence from the document that supports the matchin'
+  doc DOC6 '《判决文书6》' anchors=6
+    -> evidence_found | rounds=1 | evidence='驳回谢兴楼、谢丽莉的再审申请。'
+  doc DOC7 '《判决文书7》' anchors=3
+    -> evidence_found | rounds=1 | evidence='"准许上诉人李某某撤回上诉。\\n二审案件受理费50元（李某某已预交），减半收取25元，由上诉人李某某负担。\\n本裁定为终审裁定。"'
+  doc DOC8 '《判决文书8》' anchors=8
+    -> evidence_found | rounds=1 | evidence='should contain the raw text from the document that shows the judgment result.\n\nL'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8'] | records=8
+  -> answer: {'《判决文书1》': '判决结果5', '《判决文书2》': '判决结果4', '《判决文书3》': '判决结果1', '《判决文书4》': '判决结果7', '《判决文书5》': '判决结果2', '《判决文书6》': '判决结果8', '《判决文书7》': '判决结果6', '《判决文书8》': '判决结果3'}
+
+==== sample legal_level4_526 (idx=526) ====
+  doc DOC1 '《判决文书1》' anchors=11
+    -> evidence_found | rounds=1 | evidence='驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。'
+  doc DOC2 '《判决文书2》' anchors=12
+    -> evidence_found | rounds=1 | evidence='["驳回上诉，维持原判。\\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\\n本判决为终审判决。"]'
+  doc DOC3 '《判决文书3》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["一、维持鞍山市千山区人民法院（2023）辽0311刑初137号刑事判决中对上诉人路某的定罪部分。\\n\\n二、撤销鞍山市千山区人民法院（2023）辽0311刑'
+  doc DOC4 '《判决文书4》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["驳回复议申请人李某妮的复议申请，维持朝阳市中级人民法院（2023）辽13执恢46号拘留决定。", "本决定一经作出即生效。"]'
+  doc DOC5 '《判决文书5》' anchors=3
+    -> evidence_found | rounds=1 | evidence='["一、指令辽宁省朝阳市中级人民法院对本案进行再审；\\n二、本案再审期间不停止原判决、裁定的执行。"]'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["被告张某某、周某于本判决生效后十日内协助原告张某办理将西安市曲江新区××路*号*幢*室房屋所有权转移登记至原告张某名下的过户手续，过户所需相关费用由原告张某'
+  doc DOC7 '《判决文书7》' anchors=12
+    -> evidence_found | rounds=2 | evidence='["一、变更广东省广州市海珠区人民法院（2023）粤0105民初12767号民事判决第一项为：坐落广州市海珠区南箕路邓岗街19号402房由潘某2、潘某3和潘某1'
+  doc DOC8 '《判决文书8》' anchors=6
+    -> evidence_found | rounds=1 | evidence='["一、维持河南省南阳市卧龙区人民法院（2023）豫1303民初7817号民事判决第二项及诉讼费用负担部分；\\n二、撤销河南省南阳市卧龙区人民法院（2023）豫'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8'] | records=8
+  -> answer: {'《判决文书1》': '判决结果10', '《判决文书2》': '判决结果1', '《判决文书3》': '判决结果8', '《判决文书4》': '判决结果4', '《判决文书5》': '判决结果5', '《判决文书6》': '判决结果3', '《判决文书7》': '判决结果7', '《判决文书8》': '判决结果9'}
+
+==== sample legal_level4_527 (idx=527) ====
+  doc DOC1 '《判决文书1》' anchors=5
+    -> evidence_found | rounds=1 | evidence='一、准许上诉人（原审被告人）刘某某撤回上诉；\n\n二、驳回上诉，维持原判。\n本裁定为终审裁定。'
+  doc DOC2 '《判决文书2》' anchors=4
+    -> evidence_found | rounds=2 | evidence='驳回吴某某的再审申请。'
+  doc DOC3 '《判决文书3》' anchors=1
+    -> evidence_found | rounds=1 | evidence='["本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。\\n特此通知。"]'
+  doc DOC4 '《判决文书4》' anchors=9
+    -> evidence_found | rounds=1 | evidence='["驳回上诉，维持一审判决。\\n二审案件受理费人民币50元，由上诉人何柏忠负担（已交纳）。\\n本判决为终审判决。\\n（此页无正文）"]'
+  doc DOC5 '《判决文书5》' anchors=15
+    -> evidence_found | rounds=1 | evidence='["一、撤销湖南省高级人民法院（2023）湘执复51号执行裁定；\\n二、撤销湖南省郴州市中级人民法院（2023）湘10执异5号执行裁定；\\n三、撤销湖南省郴州市'
+  doc DOC6 '《判决文书6》' anchors=8
+    -> evidence_found | rounds=1 | evidence='["驳回某某甲公司的复议申请，维持湖北省恩施土家族苗族自治州中级人民法院（2023）鄂28执异10号执行裁定。\\n\\n本裁定为终审裁定。"]'
+  doc DOC7 '《判决文书7》' anchors=6
+    -> evidence_found | rounds=1 | evidence='驳回郭某辰、郭某勋、黄某芳的再审申请。'
+  doc DOC8 '《判决文书8》' anchors=16
+    -> evidence_found | rounds=1 | evidence='["驳回上诉，维持原判。\\n二审案件受理费2300元，由张某某负担1813元，广东汇满鑫产业投资有限公司负担487元。\\n本判决为终审判决。"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6', 'DOC7', 'DOC8'] | records=8
+  -> answer: {'《判决文书1》': '判决结果6', '《判决文书2》': '判决结果2', '《判决文书3》': '判决结果3', '《判决文书4》': '判决结果9', '《判决文书5》': '判决结果5', '《判决文书6》': '判决结果1', '《判决文书7》': '判决结果7', '《判决文书8》': '判决结果8'}
+
+==== sample financial_level1_903 (idx=903) ====
+  doc DOC1 '《2024年一季度报告》' anchors=16
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["（3）公允价值变动损益本期发生额 14.48 万元，同比增加 100%，主要原因是本期 PVC 期货浮动盈亏增加。", "公允价值变动收益（损失以"－"号填'
+  composer -> projection_map keys=['DOC1', 'DOC2'] | records=1
+  -> answer: 144,480.00
+
+==== sample financial_level1_907 (idx=907) ====
+  doc DOC1 '《2024年一季度报告》' anchors=16
+    -> evidence_found | rounds=1 | evidence='使用权资产\n39,334,577.43\n44,460,859.95'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2'] | records=1
+  -> answer: 39,334,577.43
+
+==== sample financial_level1_908 (idx=908) ====
+  doc DOC1 '《2024年一季度报告》' anchors=12
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='信用减值损失（损失以"-"号填列）|6,889,697.28|2,589,507.89'
+  composer -> projection_map keys=['DOC1', 'DOC2'] | records=1
+  -> answer: 6,889,697.28
+
+==== sample financial_level1_910 (idx=910) ====
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='"|其他应付款|239,644,736.01|308,046,220.98|"'
+  doc DOC2 '《2024年一季度报告》' anchors=13
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=10
+    -> no_evidence | rounds=2 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 239,644,736.01
+
+==== sample financial_level1_911 (idx=911) ====
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=1 | evidence='公允价值变动收益（损失以"－"号填列）|2,914,389.00|2,479,367.00|'
+  doc DOC3 '《浙江大丰实业股份有限公司2024年第一季度报告》' anchors=6
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 435,022.00
+
+==== sample financial_level1_912 (idx=912) ====
+  doc DOC1 '《2024年一季度报告》' anchors=14
+    -> evidence_found | rounds=1 | evidence='一年内到期的非流动资产|7,941,067.96|6,597,436.36'
+  doc DOC2 '《2024年一季度报告》' anchors=11
+    -> evidence_found | rounds=2 | evidence='["一年内到期的非流动资产|13,491.33|5,067.32|8,424.01|166.24%|主要由于新增一年以上保函保证金所致。", "一年内到期的非流'
+  doc DOC3 '《2024年一季度报告》' anchors=11
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 134,913,273.06
+
+==== sample financial_level1_913 (idx=913) ====
+  doc DOC1 '《2024年一季度报告》' anchors=11
+    -> evidence_found | rounds=1 | evidence='- My role is evidence extraction for THIS document only - I should not fabricate'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=1 | evidence='公允价值变动收益（损失以"－"号填列）|2,914,389.00|2,479,367.00|'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 2,914,389.00
+
+==== sample financial_level1_914 (idx=914) ====
+  doc DOC1 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=1 | evidence='|使用权资产|74,341,718.39|82,464,551.16|'
+  doc DOC2 '《2024年一季度报告》' anchors=15
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=7
+    -> no_evidence | rounds=2 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 74,341,718.39
+
+==== sample financial_level1_916 (idx=916) ====
+  doc DOC1 '《2024年一季度报告》' anchors=9
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=1 | evidence='"|其他应付款|913,610.87|743,805.85|"'
+  doc DOC3 '《2024年一季度报告》' anchors=9
+    -> no_evidence | rounds=2 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 913,610.87
+
+==== sample financial_level1_917 (idx=917) ====
+  doc DOC1 '《2024年一季度报告》' anchors=10
+    -> evidence_found | rounds=3 | evidence='"|交易性金融负债|880,750.00|-|-|远期结汇产品公允价值变动。|"'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《中信博2024年第一季度报告》' anchors=12
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=1
+  -> answer: 880,750.00
+
+==== sample financial_level1_920 (idx=920) ====
+  doc DOC1 '《2024年一季度报告》' anchors=11
+    -> evidence_found | rounds=1 | evidence='"一年内到期的非流动资产|15,491.66|113,843.56"'
+  doc DOC2 '《2024年一季度报告》' anchors=13
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=9
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC4 '《2024年一季度报告》' anchors=6
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=1
+  -> answer: 15,491.66
+
+==== sample financial_level1_922 (idx=922) ====
+  doc DOC1 '《浙江大丰实业股份有限公司2024年第一季度报告》' anchors=8
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC2 '《中信博2024年第一季度报告》' anchors=11
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《2024年一季度报告》' anchors=16
+    -> evidence_found | rounds=1 | evidence='交易性金融资产|310,617,164.36|356,141,849.77'
+  doc DOC4 '《2024年一季度报告》' anchors=11
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4'] | records=1
+  -> answer: 310,617,164.36
+
+==== sample financial_level2_1050 (idx=1050) ====
+  doc DOC1 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='["编制单位：浙江盾安人工环境股份有限公司", "交易性金融资产|17,841,600.00|23,251,200.00|"]'
+  doc DOC2 '《2024年一季度报告》' anchors=13
+    -> evidence_found | rounds=2 | evidence='["编制单位：迈克生物股份有限公司\\n2024年 03月 31日\\n单位：元\\n|项目|期末余额|期初余额|\\n|---|---|---|\\n|流动资产：|-|'
+  doc DOC3 '《倍加洁集团股份有限公司2024年第一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"交易性金融资产|16,643,715.99|16,999,892.25"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 迈克生物股份有限公司
+
+==== sample financial_level2_1051 (idx=1051) ====
+  doc DOC1 '《2024年一季度报告》' anchors=7
+    -> evidence_found | rounds=2 | evidence='["浙江盾安人工环境股份有限公司 2024 年第一季度报告", "资本公积|3,100,051,705.03|3,041,751,253.03"]'
+  doc DOC2 '《倍加洁集团股份有限公司2024年第一季度报告》' anchors=7
+    -> evidence_found | rounds=1 | evidence='资本公积|523,169,642.35|522,887,707.68|'
+  doc DOC3 '《2024年一季度报告》' anchors=14
+    -> evidence_found | rounds=1 | evidence='"资本公积|1,780,989,744.69|1,780,989,744.69"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 《2024 年一季度报告》
+
+==== sample financial_level2_1052 (idx=1052) ====
+  doc DOC1 '《倍加洁集团股份有限公司2024年第一季度报告》' anchors=7
+    -> evidence_found | rounds=2 | evidence='|收到的税费返还|11,078,142.33|7,264,982.65|'
+  doc DOC2 '《2024年一季度报告》' anchors=6
+    -> evidence_found | rounds=1 | evidence='"收到的税费返还|40,638,256.54|34,433,289.10"'
+  doc DOC3 '《2024年一季度报告》' anchors=5
+    -> evidence_found | rounds=2 | evidence='"收到的税费返还|21,428,623.41|1,678,971.78"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 1. 《倍加洁集团股份有限公司2024年第一季度报告》：11,078,142.33
+2. 《2024年一季度报告》：21,428,623.41
+3. 《2024年一季度报告》：40,638,256.54
+
+==== sample financial_level2_1054 (idx=1054) ====
+  doc DOC1 '《2024年一季度报告》' anchors=18
+    -> evidence_found | rounds=1 | evidence='|公允价值变动收益（损失以"－"号填列）|112,766,329.91|100,621,258.88|'
+  doc DOC2 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["公允价值变动收益（损失以"－"号填列）|2,914,389.00|2,479,367.00|", "证券代码：003006             证券简称'
+  doc DOC3 '《2024年一季度报告》' anchors=13
+    -> evidence_found | rounds=2 | evidence='["（3）公允价值变动损益本期发生额 14.48 万元，同比增加 100%，主要原因是本期 PVC 期货浮动盈亏增加。", "公允价值变动收益（损失以"－"号填'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 《2024年一季度报告》
+
+==== sample financial_level2_1055 (idx=1055) ====
+  doc DOC1 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=1 | evidence='["证券代码：003006             证券简称：百亚股份             公告编号：2024-027\\n重庆百亚卫生用品股份有限公司202'
+  doc DOC2 '《2024年一季度报告》' anchors=12
+    -> evidence_found | rounds=1 | evidence='["宁夏英力特化工股份有限公司2024年第一季度报告", "加权平均净资产收益率|-4.46%|-6.99%|2.53%"]'
+  doc DOC3 '《2024年一季度报告》' anchors=17
+    -> evidence_found | rounds=1 | evidence='"加权平均净资产收益率|-1.76%|-0.35%|1.41%"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 重庆百亚卫生用品股份有限公司
+
+==== sample financial_level2_1056 (idx=1056) ====
+  doc DOC1 '《2024年一季度报告》' anchors=14
+    -> evidence_found | rounds=1 | evidence='"营业收入（元）|3,646,215,386.95|2,887,584,461.77|26.27%"'
+  doc DOC2 '《2024年一季度报告》' anchors=15
+    -> evidence_found | rounds=1 | evidence='"营业收入（元）|409,627,887.28|389,968,590.23|5.04%"'
+  doc DOC3 '《2024年一季度报告》' anchors=8
+    -> evidence_found | rounds=2 | evidence='["营业收入（元）|765,153,323.00|522,657,181.00|46.40", "2024年第一季度，公司实现营业收入 7.65亿元，较上年同期'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 《2024 年一季度报告》：5.04%
+《2024 年一季度报告》：26.27%
+《2024 年一季度报告》：46.4%
+
+==== sample financial_level2_1060 (idx=1060) ====
+  doc DOC1 '《2024年一季度报告》' anchors=13
+    -> evidence_found | rounds=1 | evidence='"税金及附加|7,148,939.55|4,202,148.76|"'
+  doc DOC2 '《2024年一季度报告》' anchors=15
+    -> evidence_found | rounds=2 | evidence='["广东拓斯达科技股份有限公司2024年第一季度报告", "|税金及附加|3,176,429.81|3,703,564.81|"]'
+  doc DOC3 '《2024年一季度报告》' anchors=11
+    -> evidence_found | rounds=1 | evidence='"税金及附加|11,789,849.47|27,479,986.41"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 《2024年一季度报告》: 3,176,429.81
+《2024年一季度报告》: 7,148,939.55
+《2024年一季度报告》: 11,789,849.47
+
+==== sample financial_level2_1061 (idx=1061) ====
+  doc DOC1 '《2024年一季度报告》' anchors=10
+    -> evidence_found | rounds=1 | evidence='"递延所得税负债|9,568,721.54|9,128,142.01"'
+  doc DOC2 '《2024年一季度报告》' anchors=5
+    -> evidence_found | rounds=1 | evidence='["递延所得税负债|9,724,652.44|10,103,120.96|"]'
+  doc DOC3 '《2024年一季度报告》' anchors=9
+    -> evidence_found | rounds=1 | evidence='"递延所得税负债|147,269,559.12|153,436,201.83|"'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 《2024年一季度报告》
+
+==== sample financial_level2_1062 (idx=1062) ====

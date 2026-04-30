@@ -1,0 +1,11 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "scan_result": "evidence_found",
+  "evidence": "[\"驳回上诉，维持原判。\\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\\n本判决为终审判决。\"]",
+  "opened_anchors": [
+    "DOC2_A12"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to match a judgment document (DOC2 - 《判决文书2》) to one of the provided judgment results (判决结果1-10).\n\nLooking at the document map for DOC2, I can see:\n- This is an insurance dispute case (保险纠纷)\n- Appellants: 赵某 (Zhao) and 某保险公司 (an insurance company)\n- The case went through first instance and second instance (appeal)\n- The second instance judgment is in anchor DOC2_A12\n\nLet me look at DOC2_A12 which contains the second instance judgment result:\n\"二审驳回上诉，维持原判。二审案件受理费4389元，由赵某负担50元，某保险公司负担4339元。本判决为终审判决。\"\n\nNow let me compare this with the provided judgment results:\n\n判决结果1: '驳回上诉，维持原判。\\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\\n本判决为终审判决。'\n\nThis matches almost exactly with what I see in DOC2_A12! The amounts match (4389元 total, 赵某 50元, 某保险公司 4339元), and the language is the same (驳回上诉，维持原判，终审判决).\n\nSo DOC2 (《判决文书2》) should match 判决结果1.\n\nI need to open at least one anchor before stopping. Let me open DOC2_A12 to get the exact verbatim text for the answer.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"DOC2_A12\",\"expected_evidence\":\"二审判决结果，包括驳回上诉、维持原判、案件受理费分配等\"}</search>\n<info anchor_id=\"DOC2_A12\">\n综上所述，上诉人赵某、某保险公司的上诉请求均不能成立，应予驳回。一审判决认定事实清楚，适用法律正确，应予维持。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项规定，判决如下：\n驳回上诉，维持原判。\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\n本判决为终审判决。\n</info>\n\n--- Round 2 ---\n<think>I have now opened DOC2_A12 and can see the exact judgment result text:\n\n\"驳回上诉，维持原判。\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\n本判决为终审判决。\"\n\nThis matches 判决结果1 exactly:\n'驳回上诉，维持原判。\\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\\n本判决为终审判决。'\n\nThe amounts match (4389元 total, 赵某 50元, 某保险公司 4339元), and the language is identical.\n\nI have collected the evidence I need. I should now stop and provide the answer with the verbatim text from the document.</think>\n<search>{\"action\":\"stop\",\"reason\":\"collected all needed evidence - DOC2_A12 contains the exact judgment result that matches 判决结果1\"}</search>\n<answer>[\"驳回上诉，维持原判。\\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\\n本判决为终审判决。\"]</answer>\n"
+}

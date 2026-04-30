@@ -1,0 +1,123 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must be part of a continuous sequence where Paper A is cited by Paper B, and Paper B is cited by Paper C, etc., using only the provided documents.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", ..., \"Title of Paper n\"]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction Requirement 1 explicitly states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites both DOC2 and DOC3, making it a potential starting point (source) in a citation chain.",
+      "ref_value": "LGDE: Local Graph-based Dictionary Expansion",
+      "facts": "DOC1 contains references to 'Query Expansion by Prompting Large Language Models' (DOC3) and 'Query2doc: Query Expansion with Large Language Models' (DOC2).",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Rolf Jagerman, Honglei Zhuang, Zhen Qin, Xuanhui Wang, and Michael Bendersky. 2023. Query Expansion by Prompting Large Language Models."
+        },
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Liang Wang, Nan Yang, and Furu Wei. 2023. Query2doc: Query Expansion with Large Language Models."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 is cited by DOC1 and DOC3, and it does not cite any other provided document, making it a potential end point (sink) in the chain.",
+      "ref_value": "Query2doc: Query Expansion with Large Language Models",
+      "facts": "DOC2 is referenced in DOC1 and DOC3. Its own evidence lists external references (e.g., Bondarenko et al., Liu et al.) but no citations to DOC1 or DOC3.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 is cited by DOC1 and cites DOC2, forming the middle link in the chain DOC1 -> DOC3 -> DOC2.",
+      "ref_value": "Query Expansion by Prompting Large Language Models",
+      "facts": "DOC3 contains a reference to 'Query2doc: Query Expansion with Large Language Models' (DOC2). It is also cited by DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Liang Wang, Nan Yang, and Furu Wei. 2023. Query2doc: Query Expansion with Large Language Models. arXiv preprint arXiv:2303.07678 (2023)"
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "A linear citation chain exists where 'LGDE: Local Graph-based Dictionary Expansion' cites 'Query Expansion by Prompting Large Language Models', which in turn cites 'Query2doc: Query Expansion with Large Language Models'."
+  },
+  "completeness": {
+    "expected_hint": "Instruction requires identifying 'the longest citation chain' and ensuring it is 'linear and continuous'.",
+    "selected_count": 3,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "LGDE: Local Graph-based Dictionary Expansion",
+    "Query Expansion by Prompting Large Language Models",
+    "Query2doc: Query Expansion with Large Language Models"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must be part of a continuous sequence where Paper A is cited by Paper B, and Paper B is cited by Paper C, etc., using only the provided documents.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", ..., \\\"Title of Paper n\\\"]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction Requirement 1 explicitly states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites both DOC2 and DOC3, making it a potential starting point (source) in a citation chain.\",\n      \"ref_value\": \"LGDE: Local Graph-based Dictionary Expansion\",\n      \"facts\": \"DOC1 contains references to 'Query Expansion by Prompting Large Language Models' (DOC3) and 'Query2doc: Query Expansion with Large Language Models' (DOC2).\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"Rolf Jagerman, Honglei Zhuang, Zhen Qin, Xuanhui Wang, and Michael Bendersky. 2023. Query Expansion by Prompting Large Language Models.\"\n        },\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"Liang Wang, Nan Yang, and Furu Wei. 2023. Query2doc: Query Expansion with Large Language Models.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC2 is cited by DOC1 and DOC3, and it does not cite any other provided document, making it a potential end point (sink) in the chain.\",\n      \"ref_value\": \"Query2doc: Query Expansion with Large Language Models\",\n      \"facts\": \"DOC2 is referenced in DOC1 and DOC3. Its own evidence lists external references (e.g., Bondarenko et al., Liu et al.) but no citations to DOC1 or DOC3.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 is cited by DOC1 and cites DOC2, forming the middle link in the chain DOC1 -> DOC3 -> DOC2.\",\n      \"ref_value\": \"Query Expansion by Prompting Large Language Models\",\n      \"facts\": \"DOC3 contains a reference to 'Query2doc: Query Expansion with Large Language Models' (DOC2). It is also cited by DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"Liang Wang, Nan Yang, and Furu Wei. 2023. Query2doc: Query Expansion with Large Language Models. arXiv preprint arXiv:2303.07678 (2023)\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"A linear citation chain exists where 'LGDE: Local Graph-based Dictionary Expansion' cites 'Query Expansion by Prompting Large Language Models', which in turn cites 'Query2doc: Query Expansion with Large Language Models'.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction requires identifying 'the longest citation chain' and ensuring it is 'linear and continuous'.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"LGDE: Local Graph-based Dictionary Expansion\",\n    \"Query Expansion by Prompting Large Language Models\",\n    \"Query2doc: Query Expansion with Large Language Models\"\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "LGDE: Local Graph-based Dictionary Expansion",
+    "DOC2": "Query2doc: Query Expansion with Large Language Models",
+    "DOC3": "Query Expansion by Prompting Large Language Models"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites both DOC2 and DOC3, making it a potential starting point (source) in a citation chain.",
+      "ref_value": "LGDE: Local Graph-based Dictionary Expansion",
+      "facts": "DOC1 contains references to 'Query Expansion by Prompting Large Language Models' (DOC3) and 'Query2doc: Query Expansion with Large Language Models' (DOC2).",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Rolf Jagerman, Honglei Zhuang, Zhen Qin, Xuanhui Wang, and Michael Bendersky. 2023. Query Expansion by Prompting Large Language Models."
+        },
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Liang Wang, Nan Yang, and Furu Wei. 2023. Query2doc: Query Expansion with Large Language Models."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 is cited by DOC1 and DOC3, and it does not cite any other provided document, making it a potential end point (sink) in the chain.",
+      "ref_value": "Query2doc: Query Expansion with Large Language Models",
+      "facts": "DOC2 is referenced in DOC1 and DOC3. Its own evidence lists external references (e.g., Bondarenko et al., Liu et al.) but no citations to DOC1 or DOC3.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 is cited by DOC1 and cites DOC2, forming the middle link in the chain DOC1 -> DOC3 -> DOC2.",
+      "ref_value": "Query Expansion by Prompting Large Language Models",
+      "facts": "DOC3 contains a reference to 'Query2doc: Query Expansion with Large Language Models' (DOC2). It is also cited by DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Liang Wang, Nan Yang, and Furu Wei. 2023. Query2doc: Query Expansion with Large Language Models. arXiv preprint arXiv:2303.07678 (2023)"
+        }
+      ]
+    }
+  ],
+  "structure_description": "A linear citation chain exists where 'LGDE: Local Graph-based Dictionary Expansion' cites 'Query Expansion by Prompting Large Language Models', which in turn cites 'Query2doc: Query Expansion with Large Language Models'.",
+  "ref_unit": "title"
+}

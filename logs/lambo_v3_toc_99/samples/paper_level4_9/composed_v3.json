@@ -1,0 +1,105 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", ...]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 (Latent Image Animator) via reference [55] and the text 'Wang et al. [55] unveiled the Latent Image Animator'.",
+      "ref_value": "Dance Any Beat: Blending Beats with Visuals in Dance Video Generation",
+      "facts": "DOC1 explicitly references 'Latent image animator: Learning to animate images via latent space navigation' as reference [55] and discusses its method in the text. It is the successor in the chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "[55] Yaohui Wang, Di Yang, Francois Bremond, and Antitza Dantcheva. Latent image animator: Learning to animate images via latent space navigation."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "distractor",
+      "verdict_reason": "Evidence explicitly states that DOC2's references and text do not cite DOC1 or DOC3, and no other provided doc cites DOC2.",
+      "ref_value": "InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation",
+      "facts": "DOC2 contains 61 references but none correspond to the other provided papers (DOC1 or DOC3). It is isolated from the citation chain.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 (InMoDeGAN) via reference '2021c' and the text 'Wang et al., 2021c' referring to InMoDeGAN.",
+      "ref_value": "LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION",
+      "facts": "DOC3 references 'Inmodegan: Interpretable motion decomposition generative adversarial network for video generation' (arXiv:2101.03049, 2021c) in its bibliography and mentions it in the context of dance video generation. It is the predecessor in the chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Yaohui Wang, Francois Bremond, and Antitza Dantcheva. Inmodegan: Interpretable motion decomposition generative adversarial network for video generation. arXiv preprint arXiv:2101.03049, 2021c."
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "A linear chain exists where DOC3 cites DOC2, and DOC1 cites DOC3, forming the sequence DOC2 -> DOC3 -> DOC1."
+  },
+  "completeness": {
+    "expected_hint": "Instruction asks for 'the longest citation chain' and 'linear and continuous' order.",
+    "selected_count": 2,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation",
+    "LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION",
+    "Dance Any Beat: Blending Beats with Visuals in Dance Video Generation"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", ...]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n    },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites DOC3 (Latent Image Animator) via reference [55] and the text 'Wang et al. [55] unveiled the Latent Image Animator'.\",\n      \"ref_value\": \"Dance Any Beat: Blending Beats with Visuals in Dance Video Generation\",\n      \"facts\": \"DOC1 explicitly references 'Latent image animator: Learning to animate images via latent space navigation' as reference [55] and discusses its method in the text. It is the successor in the chain.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"[55] Yaohui Wang, Di Yang, Francois Bremond, and Antitza Dantcheva. Latent image animator: Learning to animate images via latent space navigation.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"distractor\",\n      \"verdict_reason\": \"Evidence explicitly states that DOC2's references and text do not cite DOC1 or DOC3, and no other provided doc cites DOC2.\",\n      \"ref_value\": \"InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation\",\n      \"facts\": \"DOC2 contains 61 references but none correspond to the other provided papers (DOC1 or DOC3). It is isolated from the citation chain.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 cites DOC2 (InMoDeGAN) via reference '2021c' and the text 'Wang et al., 2021c' referring to InMoDeGAN.\",\n      \"ref_value\": \"LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION\",\n      \"facts\": \"DOC3 references 'Inmodegan: Interpretable motion decomposition generative adversarial network for video generation' (arXiv:2101.03049, 2021c) in its bibliography and mentions it in the context of dance video generation. It is the predecessor in the chain.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"Yaohui Wang, Francois Bremond, and Antitza Dantcheva. Inmodegan: Interpretable motion decomposition generative adversarial network for video generation. arXiv preprint arXiv:2101.03049, 2021c.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"A linear chain exists where DOC3 cites DOC2, and DOC1 cites DOC3, forming the sequence DOC2 -> DOC3 -> DOC1.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction asks for 'the longest citation chain' and 'linear and continuous' order.\",\n    \"selected_count\": 2,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation\",\n    \"LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION\",\n    \"Dance Any Beat: Blending Beats with Visuals in Dance Video Generation\"\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "Dance Any Beat: Blending Beats with Visuals in Dance Video Generation",
+    "DOC2": "InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation",
+    "DOC3": "LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 (Latent Image Animator) via reference [55] and the text 'Wang et al. [55] unveiled the Latent Image Animator'.",
+      "ref_value": "Dance Any Beat: Blending Beats with Visuals in Dance Video Generation",
+      "facts": "DOC1 explicitly references 'Latent image animator: Learning to animate images via latent space navigation' as reference [55] and discusses its method in the text. It is the successor in the chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "[55] Yaohui Wang, Di Yang, Francois Bremond, and Antitza Dantcheva. Latent image animator: Learning to animate images via latent space navigation."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 (InMoDeGAN) via reference '2021c' and the text 'Wang et al., 2021c' referring to InMoDeGAN.",
+      "ref_value": "LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION",
+      "facts": "DOC3 references 'Inmodegan: Interpretable motion decomposition generative adversarial network for video generation' (arXiv:2101.03049, 2021c) in its bibliography and mentions it in the context of dance video generation. It is the predecessor in the chain.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Yaohui Wang, Francois Bremond, and Antitza Dantcheva. Inmodegan: Interpretable motion decomposition generative adversarial network for video generation. arXiv preprint arXiv:2101.03049, 2021c."
+        }
+      ]
+    }
+  ],
+  "structure_description": "A linear chain exists where DOC3 cites DOC2, and DOC1 cites DOC3, forming the sequence DOC2 -> DOC3 -> DOC1.",
+  "ref_unit": "title"
+}

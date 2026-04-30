@@ -1,0 +1,148 @@
+{
+  "query_spec": {
+    "intent": "Determine the citation and reference relationships between the provided papers based on explicit mentions in their evidence.",
+    "selector": "doc must contain a verbatim mention of another provided paper's title or authors to establish a reference (if the doc mentions others) or a citation (if others mention the doc).",
+    "relator_kind": "graph",
+    "projector": {
+      "output_skeleton": {
+        "Reference": [
+          "Reference Title 1",
+          "Reference Title 2"
+        ],
+        "Citation": [
+          "Citation Title 1",
+          "Citation Title 2"
+        ]
+      },
+      "ref_unit": "title",
+      "ref_unit_justification": "The instruction explicitly requires presenting 'paper titles' in the JSON format."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 is cited by DOC3, which mentions 'A survey of hallucination in large foundation models'.",
+      "ref_value": "A Survey of Hallucination in \"Large\" Foundation Models",
+      "facts": "DOC1 is referenced in DOC3 via the span 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922.' This establishes DOC1 as a citation target for DOC3.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 references DOC3 via the span 'Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation.'",
+      "ref_value": "From Role-Play to Drama-Interaction: An LLM Solution",
+      "facts": "DOC2 explicitly references DOC3 in the text: 'Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation.' This makes DOC3 a reference for DOC2.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 references DOC1 via the span 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models...'.",
+      "ref_value": "CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation",
+      "facts": "DOC3 explicitly references DOC1 in the text: 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922.' This makes DOC1 a reference for DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922."
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "The documents form a linear citation chain where DOC2 references DOC3, and DOC3 references DOC1 (DOC2 -> DOC3 -> DOC1)."
+  },
+  "completeness": {
+    "expected_hint": "The instruction asks to determine relationships between 'the provided papers' and lists specific JSON keys for 'Reference' and 'Citation', implying a complete enumeration of all found links.",
+    "selected_count": 3,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    {
+      "doc_id": "DOC1",
+      "data": {
+        "Reference": [],
+        "Citation": [
+          "CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation"
+        ]
+      }
+    },
+    {
+      "doc_id": "DOC2",
+      "data": {
+        "Reference": [
+          "CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation"
+        ],
+        "Citation": []
+      }
+    },
+    {
+      "doc_id": "DOC3",
+      "data": {
+        "Reference": [
+          "A Survey of Hallucination in \"Large\" Foundation Models"
+        ],
+        "Citation": [
+          "From Role-Play to Drama-Interaction: An LLM Solution"
+        ]
+      }
+    }
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Determine the citation and reference relationships between the provided papers based on explicit mentions in their evidence.\",\n    \"selector\": \"doc must contain a verbatim mention of another provided paper's title or authors to establish a reference (if the doc mentions others) or a citation (if others mention the doc).\",\n    \"relator_kind\": \"graph\",\n    \"projector\": {\n      \"output_skeleton\": {\n        \"Reference\": [\n          \"Reference Title 1\",\n          \"Reference Title 2\"\n        ],\n        \"Citation\": [\n          \"Citation Title 1\",\n          \"Citation Title 2\"\n        ]\n      },\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"The instruction explicitly requires presenting 'paper titles' in the JSON format.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 is cited by DOC3, which mentions 'A survey of hallucination in large foundation models'.\",\n      \"ref_value\": \"A Survey of Hallucination in \\\"Large\\\" Foundation Models\",\n      \"facts\": \"DOC1 is referenced in DOC3 via the span 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922.' This establishes DOC1 as a citation target for DOC3.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC2 references DOC3 via the span 'Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation.'\",\n      \"ref_value\": \"From Role-Play to Drama-Interaction: An LLM Solution\",\n      \"facts\": \"DOC2 explicitly references DOC3 in the text: 'Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation.' This makes DOC3 a reference for DOC2.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 references DOC1 via the span 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models...'.\",\n      \"ref_value\": \"CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation\",\n      \"facts\": \"DOC3 explicitly references DOC1 in the text: 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922.' This makes DOC1 a reference for DOC3.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"The documents form a linear citation chain where DOC2 references DOC3, and DOC3 references DOC1 (DOC2 -> DOC3 -> DOC1).\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"The instruction asks to determine relationships between 'the provided papers' and lists specific JSON keys for 'Reference' and 'Citation', implying a complete enumeration of all found links.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"data\": {\n        \"Reference\": [],\n        \"Citation\": [\n          \"CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation\"\n        ]\n      }\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"data\": {\n        \"Reference\": [\n          \"CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation\"\n        ],\n        \"Citation\": []\n      }\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"data\": {\n        \"Reference\": [\n          \"A Survey of Hallucination in \\\"Large\\\" Foundation Models\"\n        ],\n        \"Citation\": [\n          \"From Role-Play to Drama-Interaction: An LLM Solution\"\n        ]\n      }\n    }\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "A Survey of Hallucination in \"Large\" Foundation Models",
+    "DOC2": "From Role-Play to Drama-Interaction: An LLM Solution",
+    "DOC3": "CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 is cited by DOC3, which mentions 'A survey of hallucination in large foundation models'.",
+      "ref_value": "A Survey of Hallucination in \"Large\" Foundation Models",
+      "facts": "DOC1 is referenced in DOC3 via the span 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922.' This establishes DOC1 as a citation target for DOC3.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 references DOC3 via the span 'Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation.'",
+      "ref_value": "From Role-Play to Drama-Interaction: An LLM Solution",
+      "facts": "DOC2 explicitly references DOC3 in the text: 'Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation.' This makes DOC3 a reference for DOC2.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese benchmark for role-playing conversational agent evaluation."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 references DOC1 via the span 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models...'.",
+      "ref_value": "CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation",
+      "facts": "DOC3 explicitly references DOC1 in the text: 'Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922.' This makes DOC1 a reference for DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in large foundation models arXiv preprint arXiv:2309.05922."
+        }
+      ]
+    }
+  ],
+  "structure_description": "The documents form a linear citation chain where DOC2 references DOC3, and DOC3 references DOC1 (DOC2 -> DOC3 -> DOC1).",
+  "ref_unit": "title"
+}

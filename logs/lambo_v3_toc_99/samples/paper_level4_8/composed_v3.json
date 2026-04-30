@@ -1,0 +1,107 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must be part of a continuous sequence where Paper A is cited by Paper B, and Paper B is cited by Paper C, etc., using only the provided documents.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", \"Title of Paper 3\"]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 ('Disruptive changes in field equation modeling...'), making it a successor in the chain.",
+      "ref_value": "Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System",
+      "facts": "DOC1 contains a citation to 'Disruptive changes in field equation modeling: A simple interface for wafer scale engines' (DOC3) by M. Woo et al. This establishes DOC3 as a predecessor to DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "M. Woo, T. Jordan, R. Schreiber, I. Sharapov, S. Muhammad, A. Koneru, M. James, and D. V. Essendelft, \"Disruptive changes in field equation modeling: A simple interface for wafer scale engines,\" CoRR, vol. abs/2209.13768, 2022."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "distractor",
+      "verdict_reason": "Evidence shows DOC2 cites external papers (Rocki et al., Shaw et al.) but does not cite any of the other provided documents (DOC1 or DOC3), nor is it cited by them in the provided evidence.",
+      "ref_value": "Massively scalable stencil algorithm",
+      "facts": "DOC2 cites 'Fast stencil-code computation on a waferscale processor' and 'Anton 3', neither of which are in the provided document set. It does not cite DOC1 or DOC3.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 ('Massively scalable stencil algorithm'), making it a successor to DOC2 and a predecessor to DOC1.",
+      "ref_value": "Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines",
+      "facts": "DOC3 contains a citation to 'Massively scalable stencil algorithm' (DOC2) by Jacquelin, M., Araya-Polo, M., Meng, J. This establishes DOC2 as a predecessor to DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Jacquelin, M., Araya-Polo, M., Meng, J.: Massively scalable stencil algorithm. arXiv (2022). https://doi.org/10.48550/ARXIV.2204.03775. https://arxiv.org/abs/2204.03775"
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "A linear citation chain exists where DOC2 is cited by DOC3, which is in turn cited by DOC1, forming the sequence DOC2 -> DOC3 -> DOC1."
+  },
+  "completeness": {
+    "expected_hint": "Instruction asks to 'identify and list the longest citation chain', implying a search for the maximal sequence within the set.",
+    "selected_count": 2,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "Massively scalable stencil algorithm",
+    "Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines",
+    "Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System"
+  ],
+  "warnings": [
+    "selected_count mismatch: stated=3, actual=2"
+  ],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must be part of a continuous sequence where Paper A is cited by Paper B, and Paper B is cited by Paper C, etc., using only the provided documents.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", \\\"Title of Paper 3\\\"]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites DOC3 ('Disruptive changes in field equation modeling...'), making it a successor in the chain.\",\n      \"ref_value\": \"Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System\",\n      \"facts\": \"DOC1 contains a citation to 'Disruptive changes in field equation modeling: A simple interface for wafer scale engines' (DOC3) by M. Woo et al. This establishes DOC3 as a predecessor to DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"M. Woo, T. Jordan, R. Schreiber, I. Sharapov, S. Muhammad, A. Koneru, M. James, and D. V. Essendelft, \\\"Disruptive changes in field equation modeling: A simple interface for wafer scale engines,\\\" CoRR, vol. abs/2209.13768, 2022.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"distractor\",\n      \"verdict_reason\": \"Evidence shows DOC2 cites external papers (Rocki et al., Shaw et al.) but does not cite any of the other provided documents (DOC1 or DOC3), nor is it cited by them in the provided evidence.\",\n      \"ref_value\": \"Massively scalable stencil algorithm\",\n      \"facts\": \"DOC2 cites 'Fast stencil-code computation on a waferscale processor' and 'Anton 3', neither of which are in the provided document set. It does not cite DOC1 or DOC3.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 cites DOC2 ('Massively scalable stencil algorithm'), making it a successor to DOC2 and a predecessor to DOC1.\",\n      \"ref_value\": \"Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines\",\n      \"facts\": \"DOC3 contains a citation to 'Massively scalable stencil algorithm' (DOC2) by Jacquelin, M., Araya-Polo, M., Meng, J. This establishes DOC2 as a predecessor to DOC3.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"Jacquelin, M., Araya-Polo, M., Meng, J.: Massively scalable stencil algorithm. arXiv (2022). https://doi.org/10.48550/ARXIV.2204.03775. https://arxiv.org/abs/2204.03775\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"A linear citation chain exists where DOC2 is cited by DOC3, which is in turn cited by DOC1, forming the sequence DOC2 -> DOC3 -> DOC1.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction asks to 'identify and list the longest citation chain', implying a search for the maximal sequence within the set.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"Massively scalable stencil algorithm\",\n    \"Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines\",\n    \"Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System\"\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System",
+    "DOC2": "Massively scalable stencil algorithm",
+    "DOC3": "Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 ('Disruptive changes in field equation modeling...'), making it a successor in the chain.",
+      "ref_value": "Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Scale System",
+      "facts": "DOC1 contains a citation to 'Disruptive changes in field equation modeling: A simple interface for wafer scale engines' (DOC3) by M. Woo et al. This establishes DOC3 as a predecessor to DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "M. Woo, T. Jordan, R. Schreiber, I. Sharapov, S. Muhammad, A. Koneru, M. James, and D. V. Essendelft, \"Disruptive changes in field equation modeling: A simple interface for wafer scale engines,\" CoRR, vol. abs/2209.13768, 2022."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 ('Massively scalable stencil algorithm'), making it a successor to DOC2 and a predecessor to DOC1.",
+      "ref_value": "Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines",
+      "facts": "DOC3 contains a citation to 'Massively scalable stencil algorithm' (DOC2) by Jacquelin, M., Araya-Polo, M., Meng, J. This establishes DOC2 as a predecessor to DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Jacquelin, M., Araya-Polo, M., Meng, J.: Massively scalable stencil algorithm. arXiv (2022). https://doi.org/10.48550/ARXIV.2204.03775. https://arxiv.org/abs/2204.03775"
+        }
+      ]
+    }
+  ],
+  "structure_description": "A linear citation chain exists where DOC2 is cited by DOC3, which is in turn cited by DOC1, forming the sequence DOC2 -> DOC3 -> DOC1.",
+  "ref_unit": "title"
+}

@@ -1,0 +1,83 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must be part of a continuous sequence where Paper A is cited by Paper B, and Paper B is cited by Paper C, etc., using only the provided documents.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", ...]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC2 (specifically the paper 'Semantically conditioned lstm-based natural language generation for spoken dialogue systems'), making DOC1 the successor in the chain.",
+      "ref_value": "A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data",
+      "facts": "DOC1 contains a reference to 'Semantically conditioned lstm-based natural language generation for spoken dialogue systems' (arXiv:1508.01745), which matches the title of DOC2. This establishes a citation link from DOC2 to DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "[23] Tsung-Hsien Wen, Milica Gasic, Nikola Mrksic, Pei-Hao Su, David Vandyke, and Steve Young. 2015. Semantically conditioned lstm-based natural language generation for spoken dialogue systems. arXiv preprint arXiv:1508.01745 (2015)."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 does not cite DOC1, and DOC1 cites DOC2, making DOC2 the starting point (root) of the chain.",
+      "ref_value": "Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems",
+      "facts": "DOC2 lists several references including works by Angeli et al., Bastien et al., Hochreiter et al., Graves et al., Sutskever et al., and Wen et al. (2015) on stochastic language generation, but none of these references correspond to DOC1. Thus, DOC2 is the source in the relationship.",
+      "outgoing_refs": []
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "A linear chain exists where DOC2 is cited by DOC1, forming the sequence: DOC2 -> DOC1."
+  },
+  "completeness": {
+    "expected_hint": "Instruction asks to 'identify and list the longest citation chain' and ensure it is 'linear and continuous'.",
+    "selected_count": 2,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems",
+    "A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must be part of a continuous sequence where Paper A is cited by Paper B, and Paper B is cited by Paper C, etc., using only the provided documents.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", ...]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites DOC2 (specifically the paper 'Semantically conditioned lstm-based natural language generation for spoken dialogue systems'), making DOC1 the successor in the chain.\",\n      \"ref_value\": \"A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data\",\n      \"facts\": \"DOC1 contains a reference to 'Semantically conditioned lstm-based natural language generation for spoken dialogue systems' (arXiv:1508.01745), which matches the title of DOC2. This establishes a citation link from DOC2 to DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"[23] Tsung-Hsien Wen, Milica Gasic, Nikola Mrksic, Pei-Hao Su, David Vandyke, and Steve Young. 2015. Semantically conditioned lstm-based natural language generation for spoken dialogue systems. arXiv preprint arXiv:1508.01745 (2015).\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC2 does not cite DOC1, and DOC1 cites DOC2, making DOC2 the starting point (root) of the chain.\",\n      \"ref_value\": \"Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems\",\n      \"facts\": \"DOC2 lists several references including works by Angeli et al., Bastien et al., Hochreiter et al., Graves et al., Sutskever et al., and Wen et al. (2015) on stochastic language generation, but none of these references correspond to DOC1. Thus, DOC2 is the source in the relationship.\",\n      \"outgoing_refs\": []\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"A linear chain exists where DOC2 is cited by DOC1, forming the sequence: DOC2 -> DOC1.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction asks to 'identify and list the longest citation chain' and ensure it is 'linear and continuous'.\",\n    \"selected_count\": 2,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems\",\n    \"A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data\"\n  ]\n}",
+  "doc_sheet_count": 2,
+  "evidence_found_count": 2,
+  "projection_map": {
+    "DOC1": "A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data",
+    "DOC2": "Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC2 (specifically the paper 'Semantically conditioned lstm-based natural language generation for spoken dialogue systems'), making DOC1 the successor in the chain.",
+      "ref_value": "A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for Intrusion Detection in Network Traffic Data",
+      "facts": "DOC1 contains a reference to 'Semantically conditioned lstm-based natural language generation for spoken dialogue systems' (arXiv:1508.01745), which matches the title of DOC2. This establishes a citation link from DOC2 to DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "[23] Tsung-Hsien Wen, Milica Gasic, Nikola Mrksic, Pei-Hao Su, David Vandyke, and Steve Young. 2015. Semantically conditioned lstm-based natural language generation for spoken dialogue systems. arXiv preprint arXiv:1508.01745 (2015)."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 does not cite DOC1, and DOC1 cites DOC2, making DOC2 the starting point (root) of the chain.",
+      "ref_value": "Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems",
+      "facts": "DOC2 lists several references including works by Angeli et al., Bastien et al., Hochreiter et al., Graves et al., Sutskever et al., and Wen et al. (2015) on stochastic language generation, but none of these references correspond to DOC1. Thus, DOC2 is the source in the relationship.",
+      "outgoing_refs": []
+    }
+  ],
+  "structure_description": "A linear chain exists where DOC2 is cited by DOC1, forming the sequence: DOC2 -> DOC1.",
+  "ref_unit": "title"
+}

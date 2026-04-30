@@ -1,0 +1,109 @@
+(APIServer pid=66) INFO 04-23 14:19:37 [utils.py:299] 
+(APIServer pid=66) INFO 04-23 14:19:37 [utils.py:299]        █     █     █▄   ▄█
+(APIServer pid=66) INFO 04-23 14:19:37 [utils.py:299]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.19.0
+(APIServer pid=66) INFO 04-23 14:19:37 [utils.py:299]   █▄█▀ █     █     █     █  model   /workspace/lambo/models/Qwen3.5-27B
+(APIServer pid=66) INFO 04-23 14:19:37 [utils.py:299]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=66) INFO 04-23 14:19:37 [utils.py:299] 
+(APIServer pid=66) INFO 04-23 14:19:37 [utils.py:233] non-default args: {'model_tag': '/workspace/lambo/models/Qwen3.5-27B', 'model': '/workspace/lambo/models/Qwen3.5-27B', 'max_model_len': 32768, 'enforce_eager': True, 'reasoning_parser': 'qwen3', 'tensor_parallel_size': 4, 'gpu_memory_utilization': 0.92}
+(APIServer pid=66) INFO 04-23 14:19:37 [model.py:549] Resolved architecture: Qwen3_5ForConditionalGeneration
+(APIServer pid=66) INFO 04-23 14:19:37 [model.py:1678] Using max model len 32768
+(APIServer pid=66) INFO 04-23 14:19:37 [config.py:281] Setting attention block size to 784 tokens to ensure that attention page size is >= mamba page size.
+(APIServer pid=66) INFO 04-23 14:19:37 [config.py:312] Padding mamba page size by 0.13% to ensure that mamba page size and attention page size are exactly equal.
+(APIServer pid=66) INFO 04-23 14:19:37 [vllm.py:790] Asynchronous scheduling is enabled.
+(APIServer pid=66) WARNING 04-23 14:19:37 [vllm.py:848] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(APIServer pid=66) WARNING 04-23 14:19:37 [vllm.py:859] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(APIServer pid=66) INFO 04-23 14:19:37 [vllm.py:1025] Cudagraph is disabled under eager mode
+(APIServer pid=66) INFO 04-23 14:19:37 [compilation.py:290] Enabled custom fusions: norm_quant, act_quant
+(EngineCore pid=203) INFO 04-23 14:19:51 [core.py:105] Initializing a V1 LLM engine (v0.19.0) with config: model='/workspace/lambo/models/Qwen3.5-27B', speculative_config=None, tokenizer='/workspace/lambo/models/Qwen3.5-27B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=4, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='qwen3', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=/workspace/lambo/models/Qwen3.5-27B, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_images_per_batch': 0, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+(EngineCore pid=203) WARNING 04-23 14:19:51 [multiproc_executor.py:1014] Reducing Torch parallelism from 18 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+(EngineCore pid=203) INFO 04-23 14:19:51 [multiproc_executor.py:134] DP group leader: node_rank=0, node_rank_within_dp=0, master_addr=127.0.0.1, mq_connect_ip=172.17.0.6 (local), world_size=4, local_world_size=4
+(Worker pid=316) INFO 04-23 14:19:59 [parallel_state.py:1400] world_size=4 rank=0 local_rank=0 distributed_init_method=tcp://127.0.0.1:46707 backend=nccl
+(Worker pid=317) INFO 04-23 14:20:00 [parallel_state.py:1400] world_size=4 rank=1 local_rank=1 distributed_init_method=tcp://127.0.0.1:46707 backend=nccl
+(Worker pid=319) INFO 04-23 14:20:00 [parallel_state.py:1400] world_size=4 rank=3 local_rank=3 distributed_init_method=tcp://127.0.0.1:46707 backend=nccl
+(Worker pid=318) INFO 04-23 14:20:00 [parallel_state.py:1400] world_size=4 rank=2 local_rank=2 distributed_init_method=tcp://127.0.0.1:46707 backend=nccl
+(Worker pid=319) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(Worker pid=316) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(Worker pid=316) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(Worker pid=319) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(Worker pid=317) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(Worker pid=317) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(Worker pid=316) INFO 04-23 14:20:00 [pynccl.py:111] vLLM is using nccl==2.27.5
+(Worker pid=318) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(Worker pid=318) <frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(Worker pid=316) WARNING 04-23 14:20:01 [symm_mem.py:66] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=317) WARNING 04-23 14:20:01 [symm_mem.py:66] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=319) WARNING 04-23 14:20:01 [symm_mem.py:66] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=318) WARNING 04-23 14:20:01 [symm_mem.py:66] SymmMemCommunicator: Device capability 8.6 not supported, communicator is not available.
+(Worker pid=317) WARNING 04-23 14:20:01 [custom_all_reduce.py:154] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=319) WARNING 04-23 14:20:01 [custom_all_reduce.py:154] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=318) WARNING 04-23 14:20:01 [custom_all_reduce.py:154] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=316) WARNING 04-23 14:20:01 [custom_all_reduce.py:154] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+(Worker pid=316) INFO 04-23 14:20:01 [parallel_state.py:1716] rank 0 in world size 4 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(Worker_TP0 pid=316) INFO 04-23 14:20:07 [gpu_model_runner.py:4735] Starting to load model /workspace/lambo/models/Qwen3.5-27B...
+(Worker_TP0 pid=316) INFO 04-23 14:20:08 [cuda.py:390] Using backend AttentionBackendEnum.FLASH_ATTN for vit attention
+(Worker_TP0 pid=316) INFO 04-23 14:20:08 [mm_encoder_attention.py:230] Using AttentionBackendEnum.FLASH_ATTN for MMEncoderAttention.
+(Worker_TP0 pid=316) INFO 04-23 14:20:08 [gdn_linear_attn.py:147] Using Triton/FLA GDN prefill kernel
+(Worker_TP0 pid=316) INFO 04-23 14:20:08 [cuda.py:334] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(Worker_TP0 pid=316) INFO 04-23 14:20:08 [flash_attn.py:596] Using FlashAttention version 2
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:   0% Completed | 0/11 [00:00<?, ?it/s]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:   9% Completed | 1/11 [01:44<17:29, 104.98s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  18% Completed | 2/11 [02:36<11:04, 73.80s/it]
+(Worker_TP0 pid=316)  Loading safetensors checkpoint shards:  27% Completed | 3/11 [03:35<08:55, 66.96s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  36% Completed | 4/11 [04:36<07:32, 64.66s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  45% Completed | 5/11 [05:33<06:10, 61.74s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  55% Completed | 6/11 [06:33<05:05, 61.17s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  64% Completed | 7/11 [07:32<04:01, 60.41s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  73% Completed | 8/11 [08:42<03:10, 63.51s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  82% Completed | 9/11 [09:46<02:07, 63.51s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards:  91% Completed | 10/11 [10:32<00:58, 58.18s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards: 100% Completed | 11/11 [10:53<00:00, 46.85s/it]
+(Worker_TP0 pid=316) Loading safetensors checkpoint shards: 100% Completed | 11/11 [10:53<00:00, 59.40s/it]
+(Worker_TP0 pid=316) 
+(Worker_TP0 pid=316) INFO 04-23 14:31:02 [default_loader.py:384] Loading weights took 653.55 seconds
+(Worker_TP0 pid=316) INFO 04-23 14:31:03 [gpu_model_runner.py:4820] Model loading took 13.01 GiB memory and 653.892919 seconds
+(Worker_TP0 pid=316) INFO 04-23 14:31:03 [gpu_model_runner.py:5753] Encoder cache will be initialized with a budget of 16384 tokens, and profiled with 1 image items of the maximum feature size.
+(Worker_TP0 pid=316) INFO 04-23 14:31:15 [gpu_worker.py:436] Available KV cache memory: 7.47 GiB
+(EngineCore pid=203) INFO 04-23 14:31:15 [kv_cache_utils.py:1319] GPU KV cache size: 122,304 tokens
+(EngineCore pid=203) INFO 04-23 14:31:15 [kv_cache_utils.py:1324] Maximum concurrency for 32,768 tokens per request: 13.87x
+(EngineCore pid=203) INFO 04-23 14:31:15 [core.py:283] init engine (profile, create kv cache, warmup model) took 12.69 seconds
+(EngineCore pid=203) INFO 04-23 14:31:22 [vllm.py:790] Asynchronous scheduling is enabled.
+(EngineCore pid=203) WARNING 04-23 14:31:22 [vllm.py:848] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(EngineCore pid=203) WARNING 04-23 14:31:22 [vllm.py:859] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(EngineCore pid=203) INFO 04-23 14:31:22 [vllm.py:1025] Cudagraph is disabled under eager mode
+(EngineCore pid=203) INFO 04-23 14:31:22 [compilation.py:290] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=66) INFO 04-23 14:31:23 [api_server.py:590] Supported tasks: ['generate']
+(APIServer pid=66) WARNING 04-23 14:31:23 [model.py:1435] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(APIServer pid=66) INFO 04-23 14:31:24 [hf.py:314] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(APIServer pid=66) INFO 04-23 14:31:30 [base.py:231] Multi-modal warmup completed in 5.191s
+(APIServer pid=66) INFO 04-23 14:31:30 [api_server.py:594] Starting vLLM server on http://0.0.0.0:8000
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:37] Available routes are:
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /openapi.json, Methods: HEAD, GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /docs, Methods: HEAD, GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /redoc, Methods: HEAD, GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /tokenize, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /detokenize, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /load, Methods: GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /version, Methods: GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /health, Methods: GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /metrics, Methods: GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/models, Methods: GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /ping, Methods: GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /ping, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /invocations, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/responses, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/completions, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/messages, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=66) INFO 04-23 14:31:30 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(APIServer pid=66) INFO:     Started server process [66]
+(APIServer pid=66) INFO:     Waiting for application startup.
+(APIServer pid=66) INFO:     Application startup complete.

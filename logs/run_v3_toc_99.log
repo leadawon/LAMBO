@@ -1,0 +1,161 @@
+Backend: openai
+
+==== sample paper_level3_0 (idx=0) ====
+  doc DOC1 'TinyLlama: An Open-Source Small Language' toc_sections=12
+    -> evidence_found | rounds=2 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC2 'Lory: Fully Differentiable Mixture-of-Ex' toc_sections=22
+    -> evidence_found | rounds=3 | evidence='["Fuzhao Xue, Zian Zheng, Yao Fu, Jinjie Ni, Zangwei Zheng, Wangchunshu Zhou, an'
+  doc DOC3 'OpenMoE: An Early Effort on Open Mixture' toc_sections=22
+    -> evidence_found | rounds=5 | evidence='["P. Zhang, G. Zeng, T. Wang, and W. Lu, Tinyllama: An open-source small languag'
+  composer -> ref_unit=title | structure=fan_in | match_count=0 | warnings=1
+    !! selected_count mismatch: stated=2, actual=0
+  -> answer: {'Reference': ['TinyLlama: An Open-Source Small Language Model'], 'Citation': ['Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training']}
+
+==== sample paper_level3_1 (idx=1) ====
+  doc DOC1 'A Survey of Hallucination in "Large" Fou' toc_sections=20
+    -> evidence_found | rounds=3 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC2 'From Role-Play to Drama-Interaction: An ' toc_sections=13
+    -> evidence_found | rounds=2 | evidence='["Quan Tu, Shilong Fan, Zihang Tian, and Rui Yan. 2024. Charactereval: A chinese'
+  doc DOC3 'CharacterEval: A Chinese Benchmark for R' toc_sections=22
+    -> evidence_found | rounds=3 | evidence='["Vipula Rawte, Amit Sheth, and Amitava Das. 2023. A survey of hallucination in '
+  composer -> ref_unit=title | structure=linear_chain | match_count=3 | warnings=0
+  -> answer: [{'doc_id': 'DOC1', 'data': {'Reference': [], 'Citation': ['CharacterEval: A Chinese Benchmark for Role-Playing Conversational Agent Evaluation']}}, {'doc_id': 'DOC2', 'data': {'Reference': ['Characte
+
+==== sample paper_level4_2 (idx=2) ====
+  doc DOC1 'HuBERT: Self-Supervised Speech Represent' toc_sections=24
+    -> evidence_found | rounds=1 | evidence='["A. Xiao, C. Fuegen, and A. Mohamed, \'Contrastive semi-supervised learning for '
+  doc DOC2 'CONTRASTIVE SEMI-SUPERVISED LEARNING FOR' toc_sections=22
+    -> evidence_found | rounds=3 | evidence='["Wei-Ning Hsu, Yao-Hung Hubert Tsai, Benjamin Bolte, Ruslan Salakhutdinov, and '
+  doc DOC3 'SUPERB: Speech processing Universal PERf' toc_sections=14
+    -> evidence_found | rounds=2 | evidence='["W.-N. Hsu, B. Bolte, Y.-H. H. Tsai, K. Lakhotia, R. Salakhutdinov, and A. Moha'
+  composer -> ref_unit=title | structure=fan_in | match_count=3 | warnings=0
+  -> answer: ['SUPERB: Speech processing Universal PERformance Benchmark', 'HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units', 'CONTRASTIVE SEMI-SUPERVISED LEARNING FOR A
+
+==== sample paper_level4_3 (idx=3) ====
+  doc DOC1 'A Neural Network Architecture Combining ' toc_sections=14
+    -> evidence_found | rounds=2 | evidence='["[23] Tsung-Hsien Wen, Milica Gasic, Nikola Mrksic, Pei-Hao Su, David Vandyke, '
+  doc DOC2 'Semantically Conditioned LSTM-based Natu' toc_sections=17
+    -> evidence_found | rounds=1 | evidence='["Gabor Angeli, Percy Liang, and Dan Klein. 2010. A simple domain-independent pr'
+  composer -> ref_unit=title | structure=linear_chain | match_count=2 | warnings=0
+  -> answer: ['Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems', 'A Neural Network Architecture Combining Gated Recurrent Unit (GRU) and Support Vector Machine (SVM) for
+
+==== sample paper_level4_4 (idx=4) ====
+  doc DOC1 'On the performativity of SDG classificat' toc_sections=9
+    -> evidence_found | rounds=1 | evidence='["Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrast'
+  doc DOC2 'Contrastive Decoding: Open-ended Text Ge' toc_sections=28
+    -> evidence_found | rounds=3 | evidence='["Chen An, Jiangtao Feng, Kai Lv, Lingpeng Kong, Xipeng Qiu, and Xuanjing Huang.'
+  doc DOC3 'An Empirical Study On Contrastive Search' toc_sections=7
+    -> evidence_found | rounds=2 | evidence='["Xiang Lisa Li, Ari Holtzman, Daniel Fried, Percy Liang, Jason Eisner, Tatsunor'
+  composer -> ref_unit=title | structure=linear_chain | match_count=3 | warnings=0
+  -> answer: ['Contrastive Decoding: Open-ended Text Generation as Optimization', 'An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation', 'On the performativity of SDG c
+
+==== sample paper_level4_5 (idx=5) ====
+  doc DOC1 'MUlTimodAL DeEP LEARNING OF Word-OF-MOUT' toc_sections=17
+    -> evidence_found | rounds=2 | evidence='["[9] C Gary Mena, Arno De Caigny, Kristof Coussement, Koen W De Bock, and Stefa'
+  doc DOC2 'Churn analysis using deep convolutional ' toc_sections=9
+    -> evidence_found | rounds=2 | evidence='["References: [^0]${ }^{7}$ Buja, Andreas, Werner Stuetzle, and Yi Shen. \\"Loss '
+  doc DOC3 'Churn Prediction with Sequential Data an' toc_sections=11
+    -> evidence_found | rounds=2 | evidence='["Wangperawong, A., C. Brun, O. Laudy, and R. Pavasuthipaisit (2016): \\"Churn an'
+  doc DOC4 'An Efficient Multimodal Learning Framewo' toc_sections=24
+    -> evidence_found | rounds=1 | evidence='["J. Niimi, \\"Multimodal deep learning of word-of-mouth text and demographics to'
+  composer -> ref_unit=title | structure=linear_chain | match_count=4 | warnings=0
+  -> answer: ['Churn analysis using deep convolutional neural networks and autoencoders', 'Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*', 'MUlTimodAL DeEP LEARNING OF Word
+
+==== sample paper_level3_7 (idx=7) ====
+  doc DOC1 'Benchmarking Large Language Models in Re' toc_sections=16
+    -> evidence_found | rounds=2 | evidence='[\n  "DOC1 (Benchmarking Large Language Models in Retrieval-Augmented Generation)'
+  doc DOC2 'Seven Failure Points When Engineering a ' toc_sections=19
+    -> evidence_found | rounds=2 | evidence='["Jiawei Chen, Hongyu Lin, Xianpei Han, and Le Sun. 2023. Benchmarking Large Lan'
+  doc DOC3 'When to Retrieve: Teaching LLMs to Utili' toc_sections=17
+    -> evidence_found | rounds=2 | evidence='["[3] S. Barnett, S. Kurniawan, S. Thudumu, Z. Brannelly, and M. Abdelrazek. Sev'
+  composer -> ref_unit=title | structure=linear_chain | match_count=0 | warnings=1
+    !! selected_count mismatch: stated=3, actual=0
+  -> answer: [{'Reference': [], 'Citation': []}, {'Reference': ['Benchmarking Large Language Models in Retrieval-Augmented Generation'], 'Citation': ['When to Retrieve: Teaching LLMs to Utilize Information Retriev
+
+==== sample paper_level4_8 (idx=8) ====
+  doc DOC1 'Breaking the Molecular Dynamics Timescal' toc_sections=29
+    -> evidence_found | rounds=1 | evidence='["M. Woo, T. Jordan, R. Schreiber, I. Sharapov, S. Muhammad, A. Koneru, M. James'
+  doc DOC2 'Massively scalable stencil algorithm' toc_sections=17
+    -> evidence_found | rounds=3 | evidence='["[24] K. Rocki, D. Van Essendelft, I. Sharapov, R. Schreiber, M. Morrison, V. K'
+  doc DOC3 'Disruptive Changes in Field Equation Mod' toc_sections=22
+    -> evidence_found | rounds=1 | evidence='["Jacquelin, M., Araya-Polo, M., Meng, J.: Massively scalable stencil algorithm.'
+  composer -> ref_unit=title | structure=linear_chain | match_count=2 | warnings=1
+    !! selected_count mismatch: stated=3, actual=2
+  -> answer: ['Massively scalable stencil algorithm', 'Disruptive Changes in Field Equation Modeling A Simple Interface for Wafer Scale Engines', 'Breaking the Molecular Dynamics Timescale Barrier Using a Wafer-Sc
+
+==== sample paper_level4_9 (idx=9) ====
+  doc DOC1 'Dance Any Beat: Blending Beats with Visu' toc_sections=15
+    -> evidence_found | rounds=3 | evidence='["[55] Yaohui Wang, Di Yang, Francois Bremond, and Antitza Dantcheva. Latent ima'
+  doc DOC2 'InMoDeGAN: Interpretable Motion Decompos' toc_sections=15
+    -> evidence_found | rounds=3 | evidence='["References section of DOC2 (InMoDeGAN) contains 61 references [1-61], none of '
+  doc DOC3 'LATENT IMAGE ANIMATOR: <br> LEARNING TO ' toc_sections=18
+    -> evidence_found | rounds=2 | evidence='["Yaohui Wang, Francois Bremond, and Antitza Dantcheva. Inmodegan: Interpretable'
+  composer -> ref_unit=title | structure=linear_chain | match_count=2 | warnings=0
+  -> answer: ['InMoDeGAN: Interpretable Motion Decomposition Generative Adversarial Network for Video Generation', 'LATENT IMAGE ANIMATOR: LEARNING TO ANIMATE IMAGES VIA LATENT SPACE NAVIGATION', 'Dance Any Beat: 
+
+==== sample paper_level3_10 (idx=10) ====
+  doc DOC1 'EasyTool: Enhancing LLM-based Agents wit' toc_sections=18
+    -> evidence_found | rounds=3 | evidence='["Kexun Zhang, Hongqiao Chen, Lei Li, and William Wang. 2023. Syntax error-free '
+  doc DOC2 'Don't Fine-Tune, Decode: Syntax Error-Fr' toc_sections=14
+    -> evidence_found | rounds=3 | evidence='["Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D.'
+  doc DOC3 'Smurfs: Leveraging Multiple Proficiency ' toc_sections=23
+    -> evidence_found | rounds=3 | evidence='["Siyu Yuan, Kaitao Song, Jiangjie Chen, Xu Tan, Yongliang Shen, Ren Kan, Dongsh'
+  composer -> ref_unit=title | structure=fan_in | match_count=0 | warnings=1
+    !! selected_count mismatch: stated=3, actual=0
+  -> answer: {'Reference': ["Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding"], 'Citation': ["Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding", 'Smurfs: Le
+
+==== sample paper_level4_11 (idx=11) ====
+  doc DOC1 'Fine-Tuning LLaMA for Multi-Stage Text R' toc_sections=18
+    -> evidence_found | rounds=3 | evidence='["Ronak Pradeep, Sahel Sharifymoghaddam, and Jimmy Lin. 2023. RankVicuna: Zero-s'
+  doc DOC2 'RankVicuna: Zero-Shot Listwise Document ' toc_sections=15
+    -> evidence_found | rounds=3 | evidence='["Xueguang Ma, Xinyu Zhang, Ronak Pradeep, and Jimmy Lin. 2023. Zero-shot listwi'
+  doc DOC3 'Improving Text Embeddings with Large Lan' toc_sections=18
+    -> evidence_found | rounds=3 | evidence='["Xueguang Ma, Liang Wang, Nan Yang, Furu Wei, and Jimmy Lin. Fine-tuning llama '
+  composer -> ref_unit=title | structure=linear_chain | match_count=3 | warnings=0
+  -> answer: ['RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models', 'Fine-Tuning LLaMA for Multi-Stage Text Retrieval', 'Improving Text Embeddings with Large Language Models']
+
+==== sample paper_level4_12 (idx=12) ====
+  doc DOC1 '4-clique Network Minor Embedding for Qua' toc_sections=11
+    -> evidence_found | rounds=2 | evidence='["[12] Humberto Munoz Bauza and Daniel A. Lidar. Scaling Advantage in Approximat'
+  doc DOC2 'Quantum Annealers Chain Strengths: A Sim' toc_sections=10
+    -> evidence_found | rounds=4 | evidence='["Pelofske, E.: 4-clique network minor embedding for quantum annealers. arXiv pr'
+  doc DOC3 'Scaling Advantage in Approximate Optimiz' toc_sections=23
+    -> evidence_found | rounds=3 | evidence='["[1] T. Kadowaki and H. Nishimori, Quantum annealing in the transverse Ising mo'
+  doc DOC4 'Benchmarking Quantum Annealers with Near' toc_sections=11
+    -> evidence_found | rounds=1 | evidence='["[29] V. Gilbert and S. Louise, \\"Quantum annealers chain strengths: A simple h'
+  composer -> ref_unit=title | structure=linear_chain | match_count=4 | warnings=0
+  -> answer: ['Scaling Advantage in Approximate Optimization with Quantum Annealing', '4-clique Network Minor Embedding for Quantum Annealers', 'Quantum Annealers Chain Strengths: A Simple Heuristic to Set Them Al
+
+==== sample paper_level4_13 (idx=13) ====
+  doc DOC1 'LGDE: Local Graph-based Dictionary Expan' toc_sections=27
+    -> evidence_found | rounds=3 | evidence='["Rolf Jagerman, Honglei Zhuang, Zhen Qin, Xuanhui Wang, and Michael Bendersky. '
+  doc DOC2 'Query2doc: Query Expansion with Large La' toc_sections=10
+    -> evidence_found | rounds=3 | evidence='["## References\\n\\nAlexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Sy'
+  doc DOC3 'Query Expansion by Prompting Large Langu' toc_sections=15
+    -> evidence_found | rounds=2 | evidence='["Query Expansion by Prompting Large Language Models", "Liang Wang, Nan Yang, an'
+  composer -> ref_unit=title | structure=linear_chain | match_count=3 | warnings=0
+  -> answer: ['LGDE: Local Graph-based Dictionary Expansion', 'Query Expansion by Prompting Large Language Models', 'Query2doc: Query Expansion with Large Language Models']
+
+==== sample paper_level3_15 (idx=15) ====
+  doc DOC1 'LlamaTurk: Adapting Open-Source Generati' toc_sections=19
+    -> evidence_found | rounds=2 | evidence='["Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024'
+  doc DOC2 'InstructionCP: A fast approach to transf' toc_sections=22
+    -> evidence_found | rounds=2 | evidence='["Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024'
+  doc DOC3 'LLaMA Beyond English: An Empirical Study' toc_sections=21
+    -> evidence_found | rounds=3 | evidence='[]'
+  composer -> ref_unit=title | structure=fan_in | match_count=0 | warnings=1
+    !! selected_count mismatch: stated=3, actual=0
+  -> answer: {'Reference': [], 'Citation': ['LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language', 'InstructionCP: A fast approach to transfer Large Language Models into targ
+
+==== sample paper_level3_16 (idx=16) ====
+  doc DOC1 'Mistral 7B' toc_sections=13
+    -> evidence_found | rounds=1 | evidence='{"Reference":[],"Citation":[]}'
+  doc DOC2 'Extreme Compression of Large Language Mo' toc_sections=17
+    -> evidence_found | rounds=3 | evidence='["Jiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., Casas'
+  doc DOC3 'Sparse Expansion and Neuronal Disentangl' toc_sections=20
+    -> evidence_found | rounds=4 | evidence='["[31] Vage Egiazarian, Andrei Panferov, Denis Kuznedelev, Elias Frantar, Artem '
+  composer -> ref_unit=title | structure=fan_in | match_count=0 | warnings=1
+    !! selected_count mismatch: stated=1, actual=0
+  -> answer: {'Reference': ['Mistral 7B'], 'Citation': ['Sparse Expansion and Neuronal Disentanglement']}
+
+==== sample paper_level4_17 (idx=17) ====

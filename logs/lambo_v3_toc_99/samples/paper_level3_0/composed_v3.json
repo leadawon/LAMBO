@@ -1,0 +1,78 @@
+{
+  "query_spec": {
+    "intent": "Determine the reference and citation relationships for the paper 'OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models' (DOC3) with respect to the other provided papers (DOC1 and DOC2).",
+    "selector": "A document is a 'Reference' if DOC3 mentions it; a document is a 'Citation' if it mentions DOC3.",
+    "relator_kind": "mapping",
+    "projector": {
+      "output_skeleton": {
+        "Reference": [
+          "Reference Title 1",
+          "Reference Title 2"
+        ],
+        "Citation": [
+          "Citation Title 1",
+          "Citation Title 2"
+        ]
+      },
+      "ref_unit": "title",
+      "ref_unit_justification": "The instruction explicitly requires presenting 'paper titles' in the JSON format."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC1",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC2",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC3",
+      "facts": "",
+      "outgoing_refs": []
+    }
+  ],
+  "structure": {
+    "form": "fan_in",
+    "summary": "The structure is a fan-in where DOC2 cites the target DOC3, while DOC3 cites DOC1, creating a chain of references and citations centered on DOC3."
+  },
+  "completeness": {
+    "expected_hint": "The instruction asks to determine relationships between 'the given paper' (DOC3) and 'other provided papers', implying a closed set of the three documents.",
+    "selected_count": 0,
+    "potentially_missing": []
+  },
+  "filled_skeleton": {
+    "Reference": [
+      "TinyLlama: An Open-Source Small Language Model"
+    ],
+    "Citation": [
+      "Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training"
+    ]
+  },
+  "warnings": [
+    "selected_count mismatch: stated=2, actual=0"
+  ],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Determine the reference and citation relationships for the paper 'OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models' (DOC3) with respect to the other provided papers (DOC1 and DOC2).\",\n    \"selector\": \"A document is a 'Reference' if DOC3 mentions it; a document is a 'Citation' if it mentions DOC3.\",\n    \"relator_kind\": \"mapping\",\n    \"projector\": {\n      \"output_skeleton\": {\n        \"Reference\": [\n          \"Reference Title 1\",\n          \"Reference Title 2\"\n        ],\n        \"Citation\": [\n          \"Citation Title 1\",\n          \"Citation Title 2\"\n        ]\n      },\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"The instruction explicitly requires presenting 'paper titles' in the JSON format.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"verdict\": \"distractor\",\n      \"verdict_reason\": \"DOC1 is mentioned by DOC3 as a reference, but DOC1 itself does not mention DOC3, so it is not a citation for DOC3.\",\n      \"ref_value\": \"TinyLlama: An Open-Source Small Language Model\",\n      \"facts\": \"DOC1 is identified in DOC3's evidence as 'Tinyllama: An open-source small language model' and 'TinyLLaMA-1.1B', which DOC3 compares against.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC2 explicitly cites DOC3 in its bibliography and text, making DOC2 a 'Citation' for the target paper DOC3.\",\n      \"ref_value\": \"Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training\",\n      \"facts\": \"DOC2 contains the verbatim citation: 'Fuzhao Xue... OpenMoE: An early effort on open mixture-of-experts language models. arXiv preprint arXiv:2402.01739, 2024.' and references 'Xue et al., 2024' multiple times.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"Fuzhao Xue, Zian Zheng, Yao Fu, Jinjie Ni, Zangwei Zheng, Wangchunshu Zhou, and Yang You. OpenMoE: An early effort on open mixture-of-experts language models. arXiv preprint arXiv:2402.01739, 2024.\"\n        }\n      ]\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC3 is the target paper; it mentions DOC1 as a reference, establishing the 'Reference' relationship.\",\n      \"ref_value\": \"OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models\",\n      \"facts\": \"DOC3 explicitly lists 'Tinyllama: An open-source small language model' in its references and compares its performance to 'TinyLLaMA-1.1B'.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"P. Zhang, G. Zeng, T. Wang, and W. Lu, Tinyllama: An open-source small language model, 2024. arXiv: 2401.02385 [CS.CL].\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"fan_in\",\n    \"summary\": \"The structure is a fan-in where DOC2 cites the target DOC3, while DOC3 cites DOC1, creating a chain of references and citations centered on DOC3.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"The instruction asks to determine relationships between 'the given paper' (DOC3) and 'other provided papers', implying a closed set of the three documents.\",\n    \"selected_count\": 2,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": {\n    \"Reference\": [\n      \"TinyLlama: An Open-Source Small Language Model\"\n    ],\n    \"Citation\": [\n      \"Lory: Fully Differentiable Mixture-of-Experts for Autoregressive Language Model Pre-training\"\n    ]\n  }\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "DOC1",
+    "DOC2": "DOC2",
+    "DOC3": "DOC3"
+  },
+  "records": [],
+  "structure_description": "The structure is a fan-in where DOC2 cites the target DOC3, while DOC3 cites DOC1, creating a chain of references and citations centered on DOC3.",
+  "ref_unit": "title"
+}

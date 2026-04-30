@@ -1,0 +1,78 @@
+{
+  "query_spec": {
+    "intent": "Determine the citation and reference relationships for the paper 'Extreme Compression of Large Language Models via Additive Quantization' (DOC2) based on the provided documents.",
+    "selector": "doc must be the target paper (DOC2) to determine its references (papers it cites) and citations (papers that cite it) from the provided set.",
+    "relator_kind": "mapping",
+    "projector": {
+      "output_skeleton": {
+        "Reference": [
+          "Reference Title 1",
+          "Reference Title 2"
+        ],
+        "Citation": [
+          "Citation Title 1",
+          "Citation Title 2"
+        ]
+      },
+      "ref_unit": "title",
+      "ref_unit_justification": "The instruction explicitly requires presenting 'paper titles' in the JSON format."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC1",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC2",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC3",
+      "facts": "",
+      "outgoing_refs": []
+    }
+  ],
+  "structure": {
+    "form": "fan_in",
+    "summary": "The target paper (DOC2) is the central node, citing DOC1 (Mistral 7B) and being cited by DOC3 (Sparse Expansion and Neuronal Disentanglement)."
+  },
+  "completeness": {
+    "expected_hint": "The instruction asks to determine relationships for 'a given paper' (implied to be the one matching the question title) and lists all provided papers.",
+    "selected_count": 0,
+    "potentially_missing": []
+  },
+  "filled_skeleton": {
+    "Reference": [
+      "Mistral 7B"
+    ],
+    "Citation": [
+      "Sparse Expansion and Neuronal Disentanglement"
+    ]
+  },
+  "warnings": [
+    "selected_count mismatch: stated=1, actual=0"
+  ],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Determine the citation and reference relationships for the paper 'Extreme Compression of Large Language Models via Additive Quantization' (DOC2) based on the provided documents.\",\n    \"selector\": \"doc must be the target paper (DOC2) to determine its references (papers it cites) and citations (papers that cite it) from the provided set.\",\n    \"relator_kind\": \"mapping\",\n    \"projector\": {\n      \"output_skeleton\": {\n        \"Reference\": [\n          \"Reference Title 1\",\n          \"Reference Title 2\"\n        ],\n        \"Citation\": [\n          \"Citation Title 1\",\n          \"Citation Title 2\"\n        ]\n      },\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"The instruction explicitly requires presenting 'paper titles' in the JSON format.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"verdict\": \"distractor\",\n      \"verdict_reason\": \"This document (Mistral 7B) is a reference cited by the target paper but is not the target paper itself for which the relationship map is requested.\",\n      \"ref_value\": \"Mistral 7B\",\n      \"facts\": \"The evidence for this document is empty in the provided extraction, but it is identified as a reference in DOC2's evidence.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"This is the target paper 'Extreme Compression of Large Language Models via Additive Quantization' for which the instruction asks to determine relationships.\",\n      \"ref_value\": \"Extreme Compression of Large Language Models via Additive Quantization\",\n      \"facts\": \"The evidence shows this paper references 'Mistral 7b' (Jiang et al., 2023). It is also cited by 'Sparse Expansion and Neuronal Disentanglement' (Vage Egiazarian et al., 2024) as seen in DOC3.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Jiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., Casas, D. d. 1., Bressand, F., Lengyel, G., Lample, G., Saulnier, L., et al. Mistral 7b. arXiv preprint arXiv:2310.06825, 2023.\"\n        }\n      ]\n    },\n    {\n      \"verdict\": \"distractor\",\n      \"verdict_reason\": \"This document (Sparse Expansion and Neuronal Disentanglement) cites the target paper but is not the target paper itself.\",\n      \"ref_value\": \"Sparse Expansion and Neuronal Disentanglement\",\n      \"facts\": \"The evidence shows this paper cites 'Extreme compression of large language models via additive quantization' (Vage Egiazarian et al., 2024).\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"[31] Vage Egiazarian, Andrei Panferov, Denis Kuznedelev, Elias Frantar, Artem Babenko, and Dan Alistarh. Extreme compression of large language models via additive quantization. arXiv preprint arXiv:2401.06118, 2024.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"fan_in\",\n    \"summary\": \"The target paper (DOC2) is the central node, citing DOC1 (Mistral 7B) and being cited by DOC3 (Sparse Expansion and Neuronal Disentanglement).\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"The instruction asks to determine relationships for 'a given paper' (implied to be the one matching the question title) and lists all provided papers.\",\n    \"selected_count\": 1,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": {\n    \"Reference\": [\n      \"Mistral 7B\"\n    ],\n    \"Citation\": [\n      \"Sparse Expansion and Neuronal Disentanglement\"\n    ]\n  }\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "DOC1",
+    "DOC2": "DOC2",
+    "DOC3": "DOC3"
+  },
+  "records": [],
+  "structure_description": "The target paper (DOC2) is the central node, citing DOC1 (Mistral 7B) and being cited by DOC3 (Sparse Expansion and Neuronal Disentanglement).",
+  "ref_unit": "title"
+}

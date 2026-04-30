@@ -1,0 +1,29 @@
+{
+  "projection_map": {
+    "DOC1": "LGDE: Local Graph-based Dictionary Expansion",
+    "DOC2": "Query2doc: Query Expansion with Large Language Models",
+    "DOC3": "Query Expansion by Prompting Large Language Models"
+  },
+  "structure_description": "Cross-entity ranking task to find the longest linear citation chain. Records are ordered from the earliest cited paper (start of chain) to the latest citing paper (end of chain) based on explicit citation evidence.",
+  "records": [
+    {
+      "entity": "Query Expansion by Prompting Large Language Models",
+      "role": "start_of_chain",
+      "cited_by": "Query2doc: Query Expansion with Large Language Models"
+    },
+    {
+      "entity": "Query2doc: Query Expansion with Large Language Models",
+      "role": "middle_of_chain",
+      "cites": "Query Expansion by Prompting Large Language Models",
+      "cited_by": "LGDE: Local Graph-based Dictionary Expansion"
+    },
+    {
+      "entity": "LGDE: Local Graph-based Dictionary Expansion",
+      "role": "end_of_chain",
+      "cites": "Query2doc: Query Expansion with Large Language Models"
+    }
+  ],
+  "raw_text": "{\n  \"structure_description\": \"Cross-entity ranking task to find the longest linear citation chain. Records are ordered from the earliest cited paper (start of chain) to the latest citing paper (end of chain) based on explicit citation evidence.\",\n  \"records\": [\n    {\n      \"entity\": \"Query Expansion by Prompting Large Language Models\",\n      \"role\": \"start_of_chain\",\n      \"cited_by\": \"Query2doc: Query Expansion with Large Language Models\"\n    },\n    {\n      \"entity\": \"Query2doc: Query Expansion with Large Language Models\",\n      \"role\": \"middle_of_chain\",\n      \"cites\": \"Query Expansion by Prompting Large Language Models\",\n      \"cited_by\": \"LGDE: Local Graph-based Dictionary Expansion\"\n    },\n    {\n      \"entity\": \"LGDE: Local Graph-based Dictionary Expansion\",\n      \"role\": \"end_of_chain\",\n      \"cites\": \"Query2doc: Query Expansion with Large Language Models\"\n    }\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3
+}

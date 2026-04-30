@@ -1,0 +1,79 @@
+{
+  "query_spec": {
+    "intent": "Determine the citation and reference relationships between the provided papers based on explicit mentions in their evidence.",
+    "selector": "A document is a 'reference' for the target paper if the target paper's evidence mentions it; a document is a 'citation' for the target paper if the document's evidence mentions the target paper.",
+    "relator_kind": "graph",
+    "projector": {
+      "output_skeleton": {
+        "Reference": [
+          "Reference Title 1",
+          "Reference Title 2"
+        ],
+        "Citation": [
+          "Citation Title 1",
+          "Citation Title 2"
+        ]
+      },
+      "ref_unit": "title",
+      "ref_unit_justification": "The instruction explicitly requires presenting 'paper titles' in the JSON format."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC1",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC2",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC3",
+      "facts": "",
+      "outgoing_refs": []
+    }
+  ],
+  "structure": {
+    "form": "fan_in",
+    "summary": "DOC1 is the central node being cited by both DOC2 and DOC3, while DOC1 itself cites DOC2, forming a bidirectional link between DOC1 and DOC2 and a unidirectional citation from DOC3 to DOC1."
+  },
+  "completeness": {
+    "expected_hint": "The instruction asks to 'determine the citation relationships between them' for the 'provided papers', implying a closed set analysis of all three documents.",
+    "selected_count": 0,
+    "potentially_missing": []
+  },
+  "filled_skeleton": {
+    "Reference": [
+      "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding"
+    ],
+    "Citation": [
+      "Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding",
+      "Smurfs: Leveraging Multiple Proficiency Agents with Context-Efficiency for Tool Planning"
+    ]
+  },
+  "warnings": [
+    "selected_count mismatch: stated=3, actual=0"
+  ],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Determine the citation and reference relationships between the provided papers based on explicit mentions in their evidence.\",\n    \"selector\": \"A document is a 'reference' for the target paper if the target paper's evidence mentions it; a document is a 'citation' for the target paper if the document's evidence mentions the target paper.\",\n    \"relator_kind\": \"graph\",\n    \"projector\": {\n      \"output_skeleton\": {\n        \"Reference\": [\n          \"Reference Title 1\",\n          \"Reference Title 2\"\n        ],\n        \"Citation\": [\n          \"Citation Title 1\",\n          \"Citation Title 2\"\n        ]\n      },\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"The instruction explicitly requires presenting 'paper titles' in the JSON format.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC1 evidence mentions 'Zhang et al., 2023' and 'Syntax error-free and generalizable tool use for llms via finite-state decoding', which corresponds to the content of DOC2 (Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding).\",\n      \"ref_value\": \"EasyTool: Enhancing LLM-based Agents with Concise Tool Instruction\",\n      \"facts\": \"DOC1 cites a 2023 paper by Zhang et al. regarding syntax error-free tool use, which matches the topic and authors of DOC2. The evidence states: 'As a result, these methods will lead to some failed or incorrect tool invocation (Zhang et al., 2023).'\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"Kexun Zhang, Hongqiao Chen, Lei Li, and William Wang. 2023. Syntax error-free and generalizable tool use for llms via finite-state decoding.\"\n        }\n      ]\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC2 evidence explicitly lists the full title and authors of DOC1 ('EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction'), indicating DOC2 cites DOC1.\",\n      \"ref_value\": \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding\",\n      \"facts\": \"DOC2 includes a bibliographic entry for DOC1: 'Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024.'\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Yuan, S., Song, K., Chen, J., Tan, X., Shen, Y., Kan, R., Li, D., and Yang, D. EASYTOOL: Enhancing LLM-based Agents with Concise Tool Instruction, January 2024.\"\n        }\n      ]\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC3 evidence explicitly lists the full title and authors of DOC1 ('Easytool: Enhancing llm-based agents with concise tool instruction'), indicating DOC3 cites DOC1.\",\n      \"ref_value\": \"Smurfs: Leveraging Multiple Proficiency Agents with Context-Efficiency for Tool Planning\",\n      \"facts\": \"DOC3 includes a bibliographic entry for DOC1: 'Siyu Yuan, Kaitao Song, Jiangjie Chen, Xu Tan, Yongliang Shen, Ren Kan, Dongsheng Li, and Deqing Yang. 2024. Easytool: Enhancing llm-based agents with concise tool instruction.'\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Siyu Yuan, Kaitao Song, Jiangjie Chen, Xu Tan, Yongliang Shen, Ren Kan, Dongsheng Li, and Deqing Yang. 2024. Easytool: Enhancing llm-based agents with concise tool instruction.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"fan_in\",\n    \"summary\": \"DOC1 is the central node being cited by both DOC2 and DOC3, while DOC1 itself cites DOC2, forming a bidirectional link between DOC1 and DOC2 and a unidirectional citation from DOC3 to DOC1.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"The instruction asks to 'determine the citation relationships between them' for the 'provided papers', implying a closed set analysis of all three documents.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": {\n    \"Reference\": [\n      \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding\"\n    ],\n    \"Citation\": [\n      \"Don't Fine-Tune, Decode: Syntax Error-Free Tool Use via Constrained Decoding\",\n      \"Smurfs: Leveraging Multiple Proficiency Agents with Context-Efficiency for Tool Planning\"\n    ]\n  }\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "DOC1",
+    "DOC2": "DOC2",
+    "DOC3": "DOC3"
+  },
+  "records": [],
+  "structure_description": "DOC1 is the central node being cited by both DOC2 and DOC3, while DOC1 itself cites DOC2, forming a bidirectional link between DOC1 and DOC2 and a unidirectional citation from DOC3 to DOC1.",
+  "ref_unit": "title"
+}

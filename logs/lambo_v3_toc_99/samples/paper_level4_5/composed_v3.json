@@ -1,0 +1,143 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must cite another document from the provided set to form a link in a continuous chain.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", ..., \"Title of Paper n\"]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction Requirement 1 explicitly states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 ('Churn prediction with sequential data and deep neural networks. a comparative analysis').",
+      "ref_value": "MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING",
+      "facts": "DOC1 contains a reference to 'Churn prediction with sequential data and deep neural networks. a comparative analysis' (arXiv:1909.11114), which corresponds to DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Churn prediction with sequential data and deep neural networks. a comparative analysis. arXiv preprint arXiv:1909.11114, 2019."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 is cited by DOC3, making it the start of the chain (no outgoing refs to other provided docs found).",
+      "ref_value": "Churn analysis using deep convolutional neural networks and autoencoders",
+      "facts": "DOC2 lists references to external works (e.g., Buja, Rumelhart, Zeiler) but does not cite any of the other provided documents (DOC1, DOC3, DOC4).",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 ('Churn analysis using deep convolutional neural networks and autoencoders').",
+      "ref_value": "Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*",
+      "facts": "DOC3 explicitly references 'Churn analysis using deep convolutional neural networks and autoencoders' (CoRR, abs/1604.05377), which matches DOC2.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Churn analysis using deep convolutional neural networks and autoencoders,\" CoRR, abs $/ 1604.05377$"
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC4",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC4 cites DOC1 ('Multimodal deep learning of word-of-mouth text and demographics to predict customer rating...').",
+      "ref_value": "An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention",
+      "facts": "DOC4 contains a reference to 'Multimodal deep learning of word-of-mouth text and demographics to predict customer rating: Handling consumer heterogeneity in marketing' (arXiv:2401.11888), which matches DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Multimodal deep learning of word-of-mouth text and demographics to predict customer rating: Handling consumer heterogeneity in marketing,\" arXiv preprint arXiv:2401.11888, 2024."
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "A linear citation chain exists where DOC2 is cited by DOC3, which is cited by DOC1, which is cited by DOC4 (DOC2 -> DOC3 -> DOC1 -> DOC4)."
+  },
+  "completeness": {
+    "expected_hint": "Instruction asks to 'identify and list the longest citation chain', implying a search for the maximal sequence within the set.",
+    "selected_count": 4,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "Churn analysis using deep convolutional neural networks and autoencoders",
+    "Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*",
+    "MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING",
+    "An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must cite another document from the provided set to form a link in a continuous chain.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", ..., \\\"Title of Paper n\\\"]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction Requirement 1 explicitly states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites DOC3 ('Churn prediction with sequential data and deep neural networks. a comparative analysis').\",\n      \"ref_value\": \"MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING\",\n      \"facts\": \"DOC1 contains a reference to 'Churn prediction with sequential data and deep neural networks. a comparative analysis' (arXiv:1909.11114), which corresponds to DOC3.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"Churn prediction with sequential data and deep neural networks. a comparative analysis. arXiv preprint arXiv:1909.11114, 2019.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC2 is cited by DOC3, making it the start of the chain (no outgoing refs to other provided docs found).\",\n      \"ref_value\": \"Churn analysis using deep convolutional neural networks and autoencoders\",\n      \"facts\": \"DOC2 lists references to external works (e.g., Buja, Rumelhart, Zeiler) but does not cite any of the other provided documents (DOC1, DOC3, DOC4).\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 cites DOC2 ('Churn analysis using deep convolutional neural networks and autoencoders').\",\n      \"ref_value\": \"Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*\",\n      \"facts\": \"DOC3 explicitly references 'Churn analysis using deep convolutional neural networks and autoencoders' (CoRR, abs/1604.05377), which matches DOC2.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"Churn analysis using deep convolutional neural networks and autoencoders,\\\" CoRR, abs $/ 1604.05377$\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC4\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC4 cites DOC1 ('Multimodal deep learning of word-of-mouth text and demographics to predict customer rating...').\",\n      \"ref_value\": \"An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention\",\n      \"facts\": \"DOC4 contains a reference to 'Multimodal deep learning of word-of-mouth text and demographics to predict customer rating: Handling consumer heterogeneity in marketing' (arXiv:2401.11888), which matches DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Multimodal deep learning of word-of-mouth text and demographics to predict customer rating: Handling consumer heterogeneity in marketing,\\\" arXiv preprint arXiv:2401.11888, 2024.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"A linear citation chain exists where DOC2 is cited by DOC3, which is cited by DOC1, which is cited by DOC4 (DOC2 -> DOC3 -> DOC1 -> DOC4).\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction asks to 'identify and list the longest citation chain', implying a search for the maximal sequence within the set.\",\n    \"selected_count\": 4,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"Churn analysis using deep convolutional neural networks and autoencoders\",\n    \"Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*\",\n    \"MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING\",\n    \"An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention\"\n  ]\n}",
+  "doc_sheet_count": 4,
+  "evidence_found_count": 4,
+  "projection_map": {
+    "DOC1": "MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING",
+    "DOC2": "Churn analysis using deep convolutional neural networks and autoencoders",
+    "DOC3": "Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*",
+    "DOC4": "An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 ('Churn prediction with sequential data and deep neural networks. a comparative analysis').",
+      "ref_value": "MUlTimodAL DeEP LEARNING OF Word-OF-MOUTH TEXT AND DEMOGRAPHICS TO PREDICT CUSTOMER RATING: HANDLING CONSUMER HETEROGENEITY IN MARKETING",
+      "facts": "DOC1 contains a reference to 'Churn prediction with sequential data and deep neural networks. a comparative analysis' (arXiv:1909.11114), which corresponds to DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Churn prediction with sequential data and deep neural networks. a comparative analysis. arXiv preprint arXiv:1909.11114, 2019."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 is cited by DOC3, making it the start of the chain (no outgoing refs to other provided docs found).",
+      "ref_value": "Churn analysis using deep convolutional neural networks and autoencoders",
+      "facts": "DOC2 lists references to external works (e.g., Buja, Rumelhart, Zeiler) but does not cite any of the other provided documents (DOC1, DOC3, DOC4).",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 ('Churn analysis using deep convolutional neural networks and autoencoders').",
+      "ref_value": "Churn Prediction with Sequential Data and Deep Neural Networks A Comparative Analysis*",
+      "facts": "DOC3 explicitly references 'Churn analysis using deep convolutional neural networks and autoencoders' (CoRR, abs/1604.05377), which matches DOC2.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Churn analysis using deep convolutional neural networks and autoencoders,\" CoRR, abs $/ 1604.05377$"
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC4",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC4 cites DOC1 ('Multimodal deep learning of word-of-mouth text and demographics to predict customer rating...').",
+      "ref_value": "An Efficient Multimodal Learning Framework to Comprehend Consumer Preferences Using BERT and Cross-Attention",
+      "facts": "DOC4 contains a reference to 'Multimodal deep learning of word-of-mouth text and demographics to predict customer rating: Handling consumer heterogeneity in marketing' (arXiv:2401.11888), which matches DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Multimodal deep learning of word-of-mouth text and demographics to predict customer rating: Handling consumer heterogeneity in marketing,\" arXiv preprint arXiv:2401.11888, 2024."
+        }
+      ]
+    }
+  ],
+  "structure_description": "A linear citation chain exists where DOC2 is cited by DOC3, which is cited by DOC1, which is cited by DOC4 (DOC2 -> DOC3 -> DOC1 -> DOC4).",
+  "ref_unit": "title"
+}

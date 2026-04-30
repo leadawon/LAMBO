@@ -1,0 +1,113 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", ..., \"Title of Paper n\"]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction Requirement 1 explicitly states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites 'RankVicuna' (DOC2) via the span 'RankVicuna (Pradeep et al., 2023)'.",
+      "ref_value": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+      "facts": "DOC1 references 'RankVicuna: Zero-shot listwise document reranking with open-source large language models' (DOC2) as a model that generates reordered lists. It also mentions 'LRL' and 'RankGPT' but those are not in the provided set.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "RankVicuna (Pradeep et al., 2023)"
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 cites 'Zero-shot listwise document reranking with a large language model' (LRL, Ma et al., 2023) which is not in the set, but DOC3 cites DOC1, and DOC1 cites DOC2. Wait, let's re-evaluate the chain direction. The instruction says 'Paper 1 should not cite any other works... it should be cited by the next paper'. So the chain is A <- B <- C (A is cited by B, B is cited by C). DOC3 cites DOC1. DOC1 cites DOC2. So the chain is DOC2 <- DOC1 <- DOC3. DOC2 is the start (cited by DOC1). DOC1 is the middle (cites DOC2, cited by DOC3). DOC3 is the end (cites DOC1). DOC2 does not cite any provided doc. DOC2 cites 'Zero-shot listwise...' (Ma et al) which is not in the set. So DOC2 is the root of the chain (no outgoing to set).",
+      "ref_value": "RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models",
+      "facts": "DOC2 cites 'Zero-shot listwise document reranking with a large language model' (Ma et al., 2023) and 'Llama 2'. Neither of these are in the provided document set. Thus, DOC2 has no outgoing citations to other provided docs.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites 'Fine-tuning llama for multi-stage text retrieval' (DOC1) via the span 'Fine-tuning llama for multi-stage text retrieval. ArXiv preprint, abs/2310.08319'.",
+      "ref_value": "Improving Text Embeddings with Large Language Models",
+      "facts": "DOC3 explicitly cites 'Fine-tuning llama for multi-stage text retrieval' (DOC1) in its bibliography.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Fine-tuning llama for multi-stage text retrieval. ArXiv preprint, abs/2310.08319"
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "A linear chain exists where DOC2 is cited by DOC1, and DOC1 is cited by DOC3, forming the sequence DOC2 -> DOC1 -> DOC3 (in terms of citation flow: DOC2 is cited by DOC1, DOC1 is cited by DOC3). The list order required is [Cited, Citer, Citer's Citer] i.e., [DOC2, DOC1, DOC3]."
+  },
+  "completeness": {
+    "expected_hint": "Instruction asks for 'the longest citation chain' and 'linear and continuous', implying a single maximal sequence.",
+    "selected_count": 3,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models",
+    "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+    "Improving Text Embeddings with Large Language Models"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", ..., \\\"Title of Paper n\\\"]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction Requirement 1 explicitly states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites 'RankVicuna' (DOC2) via the span 'RankVicuna (Pradeep et al., 2023)'.\",\n      \"ref_value\": \"Fine-Tuning LLaMA for Multi-Stage Text Retrieval\",\n      \"facts\": \"DOC1 references 'RankVicuna: Zero-shot listwise document reranking with open-source large language models' (DOC2) as a model that generates reordered lists. It also mentions 'LRL' and 'RankGPT' but those are not in the provided set.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"RankVicuna (Pradeep et al., 2023)\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC2 cites 'Zero-shot listwise document reranking with a large language model' (LRL, Ma et al., 2023) which is not in the set, but DOC3 cites DOC1, and DOC1 cites DOC2. Wait, let's re-evaluate the chain direction. The instruction says 'Paper 1 should not cite any other works... it should be cited by the next paper'. So the chain is A <- B <- C (A is cited by B, B is cited by C). DOC3 cites DOC1. DOC1 cites DOC2. So the chain is DOC2 <- DOC1 <- DOC3. DOC2 is the start (cited by DOC1). DOC1 is the middle (cites DOC2, cited by DOC3). DOC3 is the end (cites DOC1). DOC2 does not cite any provided doc. DOC2 cites 'Zero-shot listwise...' (Ma et al) which is not in the set. So DOC2 is the root of the chain (no outgoing to set).\",\n      \"ref_value\": \"RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models\",\n      \"facts\": \"DOC2 cites 'Zero-shot listwise document reranking with a large language model' (Ma et al., 2023) and 'Llama 2'. Neither of these are in the provided document set. Thus, DOC2 has no outgoing citations to other provided docs.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 cites 'Fine-tuning llama for multi-stage text retrieval' (DOC1) via the span 'Fine-tuning llama for multi-stage text retrieval. ArXiv preprint, abs/2310.08319'.\",\n      \"ref_value\": \"Improving Text Embeddings with Large Language Models\",\n      \"facts\": \"DOC3 explicitly cites 'Fine-tuning llama for multi-stage text retrieval' (DOC1) in its bibliography.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Fine-tuning llama for multi-stage text retrieval. ArXiv preprint, abs/2310.08319\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"A linear chain exists where DOC2 is cited by DOC1, and DOC1 is cited by DOC3, forming the sequence DOC2 -> DOC1 -> DOC3 (in terms of citation flow: DOC2 is cited by DOC1, DOC1 is cited by DOC3). The list order required is [Cited, Citer, Citer's Citer] i.e., [DOC2, DOC1, DOC3].\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction asks for 'the longest citation chain' and 'linear and continuous', implying a single maximal sequence.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models\",\n    \"Fine-Tuning LLaMA for Multi-Stage Text Retrieval\",\n    \"Improving Text Embeddings with Large Language Models\"\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+    "DOC2": "RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models",
+    "DOC3": "Improving Text Embeddings with Large Language Models"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites 'RankVicuna' (DOC2) via the span 'RankVicuna (Pradeep et al., 2023)'.",
+      "ref_value": "Fine-Tuning LLaMA for Multi-Stage Text Retrieval",
+      "facts": "DOC1 references 'RankVicuna: Zero-shot listwise document reranking with open-source large language models' (DOC2) as a model that generates reordered lists. It also mentions 'LRL' and 'RankGPT' but those are not in the provided set.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "RankVicuna (Pradeep et al., 2023)"
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 cites 'Zero-shot listwise document reranking with a large language model' (LRL, Ma et al., 2023) which is not in the set, but DOC3 cites DOC1, and DOC1 cites DOC2. Wait, let's re-evaluate the chain direction. The instruction says 'Paper 1 should not cite any other works... it should be cited by the next paper'. So the chain is A <- B <- C (A is cited by B, B is cited by C). DOC3 cites DOC1. DOC1 cites DOC2. So the chain is DOC2 <- DOC1 <- DOC3. DOC2 is the start (cited by DOC1). DOC1 is the middle (cites DOC2, cited by DOC3). DOC3 is the end (cites DOC1). DOC2 does not cite any provided doc. DOC2 cites 'Zero-shot listwise...' (Ma et al) which is not in the set. So DOC2 is the root of the chain (no outgoing to set).",
+      "ref_value": "RankVicuna: Zero-Shot Listwise Document Reranking with Open-Source Large Language Models",
+      "facts": "DOC2 cites 'Zero-shot listwise document reranking with a large language model' (Ma et al., 2023) and 'Llama 2'. Neither of these are in the provided document set. Thus, DOC2 has no outgoing citations to other provided docs.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites 'Fine-tuning llama for multi-stage text retrieval' (DOC1) via the span 'Fine-tuning llama for multi-stage text retrieval. ArXiv preprint, abs/2310.08319'.",
+      "ref_value": "Improving Text Embeddings with Large Language Models",
+      "facts": "DOC3 explicitly cites 'Fine-tuning llama for multi-stage text retrieval' (DOC1) in its bibliography.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Fine-tuning llama for multi-stage text retrieval. ArXiv preprint, abs/2310.08319"
+        }
+      ]
+    }
+  ],
+  "structure_description": "A linear chain exists where DOC2 is cited by DOC1, and DOC1 is cited by DOC3, forming the sequence DOC2 -> DOC1 -> DOC3 (in terms of citation flow: DOC2 is cited by DOC1, DOC1 is cited by DOC3). The list order required is [Cited, Citer, Citer's Citer] i.e., [DOC2, DOC1, DOC3].",
+  "ref_unit": "title"
+}

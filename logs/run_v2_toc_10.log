@@ -1,0 +1,50 @@
+Backend: openai
+
+==== sample financial_level1_914 (idx=914) ====
+  doc DOC1 '《2024年一季度报告》' toc_sections=16
+    -> evidence_found | rounds=1 | evidence='["使用权资产|74,341,718.39|82,464,551.16"]'
+  doc DOC2 '《2024年一季度报告》' toc_sections=17
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC3 '《2024年一季度报告》' toc_sections=16
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1'] | records=1
+  -> answer: 74,341,718.39
+
+==== sample legal_level1_725 (idx=725) ====
+  doc DOC1 '《判决文书1》' toc_sections=11
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC2 '《判决文书2》' toc_sections=8
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC3 '《判决文书3》' toc_sections=6
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC4 '《判决文书4》' toc_sections=7
+    -> no_evidence | rounds=2 | evidence=''
+  doc DOC5 '《判决文书5》' toc_sections=5
+    -> no_evidence | rounds=1 | evidence=''
+  doc DOC6 '《判决文书6》' toc_sections=4
+    -> no_evidence | rounds=1 | evidence=''
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3', 'DOC4', 'DOC5', 'DOC6'] | records=0
+  -> answer: []
+
+==== sample financial_level2_1065 (idx=1065) ====
+  doc DOC1 '《2024年一季度报告》' toc_sections=18
+    -> evidence_found | rounds=2 | evidence='["证券代码:300358              证券简称:楚天科技              公告编号:2024-029 号债券代码:123240    '
+  doc DOC2 '《2024年一季度报告》' toc_sections=16
+    -> evidence_found | rounds=2 | evidence='["证券代码：002588                    证券简称：史丹利                  公告编号：2024-016\\n史丹利农业集'
+  doc DOC3 '《2024年一季度报告》' toc_sections=18
+    -> evidence_found | rounds=2 | evidence='["西安晨曦航空科技股份有限公司 2024 年第一季度报告", "支付给职工以及为职工支付的现金|26,699,811.03|31,323,875.70"]'
+  composer -> projection_map keys=['DOC1', 'DOC2', 'DOC3'] | records=3
+  -> answer: 楚天科技股份有限公司
+
+==== sample legal_level2_801 (idx=801) ====
+  doc DOC1 '《判决文书1》' toc_sections=6
+    -> evidence_found | rounds=1 | evidence='.\n</think>\n\n\n<search>{"action":"stop","reason":"DOC1 is an insurance dispute cas'
+  doc DOC2 '《判决文书2》' toc_sections=5
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC3 '《判决文书3》' toc_sections=3
+    -> evidence_found | rounds=3 | evidence=", since this document does not have the case type '行政行为 - 行政强制', I should return"
+  doc DOC4 '《判决文书4》' toc_sections=6
+    -> no_evidence | rounds=3 | evidence=''
+  doc DOC5 '《判决文书5》' toc_sections=3
+    -> evidence_found | rounds=3 | evidence="since there's no evidence of the case type '行政行为-行政强制' in this document.\n</think"
+  doc DOC6 '《判决文书6》' toc_sections=7

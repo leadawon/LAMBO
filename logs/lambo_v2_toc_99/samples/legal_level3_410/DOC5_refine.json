@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC5",
+  "doc_title": "《判决文书5》",
+  "scan_result": "evidence_found",
+  "evidence": "[\"申诉人（申请执行人）：孟某。\", \"被执行人：某管理企业。\", \"孟某不服四川省高级人民法院（以下简称四川高院）（2023）川执复133号执行裁定，向本院申诉。\"]",
+  "opened_anchors": [
+    "1",
+    "2"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>The user wants me to classify legal documents into three categories: '刑事案件' (criminal cases), '执行案件' (execution cases), and '行政案件' (administrative cases). I need to extract the title of each document and determine its case type.\n\nI am currently processing DOC5 (《判决文书5》). I need to open sections to find evidence about what type of case this is.\n\nLet me start by opening the first section to understand the document structure and find clues about the case type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"当事人基本信息，可能包含案件类型线索\"}</search>\n<info anchor_id=\"1\">\n申诉人（申请执行人）：孟某。\n委托诉讼代理人：孟某某。\n利害关系人:雷某。\n被执行人：某管理企业。住所地:广东省深圳市前海深港合作区前湾一路1号A栋201室。\n执行事务合伙人：某集团有限公司。\n被执行人：某集团有限公司。\n法定代表人：徐某，该公司执行董事兼总经理。\n\n</info>\n\n--- Round 2 ---\n<think>The first section shows this is an execution case (执行案件). I can see:\n- 申诉人（申请执行人）- Applicant (execution applicant)\n- 被执行人 - Person subject to execution\n\nThese are clear indicators of an execution case. Let me check another section to confirm this classification and gather more evidence.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"案件由来与审理经过，确认案件类型\"}</search>\n<info anchor_id=\"2\">\n孟某不服四川省高级人民法院（以下简称四川高院）（2023）川\n执复133号执行裁定，向本院申诉。本院受理后，依法组成合议庭进行了审查，现已审查终结。\n\n</info>\n\n--- Round 3 ---\n<think>The second section confirms this is an execution case. I can see:\n- \"（2023）川执复133号执行裁定\" - This is an execution ruling (执行裁定)\n- \"执行复\" indicates execution review (执行复议)\n\nThis clearly confirms DOC5 is an '执行案件' (execution case).\n\nI have enough evidence to classify this document. The title is 《判决文书5》 and it's an execution case.\n\nLet me stop and provide the answer for this document.</think>\n<search>{\"action\":\"stop\",\"reason\":\"collected all needed evidence\"}</search>\n<answer>[\"申诉人（申请执行人）：孟某。\", \"被执行人：某管理企业。\", \"孟某不服四川省高级人民法院（以下简称四川高院）（2023）川执复133号执行裁定，向本院申诉。\"]</answer>\n"
+}

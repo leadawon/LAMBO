@@ -1,0 +1,113 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", ...]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 ('Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrastive decoding...'), making DOC3 the predecessor in the chain.",
+      "ref_value": "On the performativity of SDG classifications in large bibliometric databases",
+      "facts": "DOC1 contains a citation to 'An empirical study on contrastive search and contrastive decoding for open-ended text generation' (Su, Y. and J. Xu, 2022), which corresponds to DOC3. This establishes DOC3 -> DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrastive decoding for open-ended text generation. arXiv preprint arXiv:2211.10797."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2, and DOC2 does not cite any other provided doc, making it the start of the chain.",
+      "ref_value": "Contrastive Decoding: Open-ended Text Generation as Optimization",
+      "facts": "DOC2 discusses contrastive decoding and cites external works (e.g., 'Cont', 'Contrastive search is what you need'), but does not cite DOC1 or DOC3. It is cited by DOC3.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 ('Contrastive decoding: Open-ended text generation as optimization') and is cited by DOC1, placing it in the middle of the chain.",
+      "ref_value": "An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation",
+      "facts": "DOC3 explicitly cites 'Contrastive decoding: Open-ended text generation as optimization' (Li et al., 2022), which matches DOC2. This establishes DOC2 -> DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Xiang Lisa Li, Ari Holtzman, Daniel Fried, Percy Liang, Jason Eisner, Tatsunori Hashimoto, Luke Zettlemoyer, and Mike Lewis. Contrastive decoding: Open-ended text generation as optimization. arXiv preprint arXiv:2210.15097, 2022."
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "A linear citation chain exists where DOC2 is cited by DOC3, which is in turn cited by DOC1, forming the sequence DOC2 -> DOC3 -> DOC1."
+  },
+  "completeness": {
+    "expected_hint": "Instruction asks to 'identify and list the longest citation chain' and ensure it is 'linear and continuous'.",
+    "selected_count": 3,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "Contrastive Decoding: Open-ended Text Generation as Optimization",
+    "An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation",
+    "On the performativity of SDG classifications in large bibliometric databases"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", ...]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n    },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites DOC3 ('Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrastive decoding...'), making DOC3 the predecessor in the chain.\",\n      \"ref_value\": \"On the performativity of SDG classifications in large bibliometric databases\",\n      \"facts\": \"DOC1 contains a citation to 'An empirical study on contrastive search and contrastive decoding for open-ended text generation' (Su, Y. and J. Xu, 2022), which corresponds to DOC3. This establishes DOC3 -> DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrastive decoding for open-ended text generation. arXiv preprint arXiv:2211.10797.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 cites DOC2, and DOC2 does not cite any other provided doc, making it the start of the chain.\",\n      \"ref_value\": \"Contrastive Decoding: Open-ended Text Generation as Optimization\",\n      \"facts\": \"DOC2 discusses contrastive decoding and cites external works (e.g., 'Cont', 'Contrastive search is what you need'), but does not cite DOC1 or DOC3. It is cited by DOC3.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 cites DOC2 ('Contrastive decoding: Open-ended text generation as optimization') and is cited by DOC1, placing it in the middle of the chain.\",\n      \"ref_value\": \"An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation\",\n      \"facts\": \"DOC3 explicitly cites 'Contrastive decoding: Open-ended text generation as optimization' (Li et al., 2022), which matches DOC2. This establishes DOC2 -> DOC3.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"Xiang Lisa Li, Ari Holtzman, Daniel Fried, Percy Liang, Jason Eisner, Tatsunori Hashimoto, Luke Zettlemoyer, and Mike Lewis. Contrastive decoding: Open-ended text generation as optimization. arXiv preprint arXiv:2210.15097, 2022.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"A linear citation chain exists where DOC2 is cited by DOC3, which is in turn cited by DOC1, forming the sequence DOC2 -> DOC3 -> DOC1.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction asks to 'identify and list the longest citation chain' and ensure it is 'linear and continuous'.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"Contrastive Decoding: Open-ended Text Generation as Optimization\",\n    \"An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation\",\n    \"On the performativity of SDG classifications in large bibliometric databases\"\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "On the performativity of SDG classifications in large bibliometric databases",
+    "DOC2": "Contrastive Decoding: Open-ended Text Generation as Optimization",
+    "DOC3": "An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites DOC3 ('Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrastive decoding...'), making DOC3 the predecessor in the chain.",
+      "ref_value": "On the performativity of SDG classifications in large bibliometric databases",
+      "facts": "DOC1 contains a citation to 'An empirical study on contrastive search and contrastive decoding for open-ended text generation' (Su, Y. and J. Xu, 2022), which corresponds to DOC3. This establishes DOC3 -> DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC3",
+          "kind": "cites",
+          "quote": "Su, Y. and J. Xu (2022). An empirical study on contrastive search and contrastive decoding for open-ended text generation. arXiv preprint arXiv:2211.10797."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2, and DOC2 does not cite any other provided doc, making it the start of the chain.",
+      "ref_value": "Contrastive Decoding: Open-ended Text Generation as Optimization",
+      "facts": "DOC2 discusses contrastive decoding and cites external works (e.g., 'Cont', 'Contrastive search is what you need'), but does not cite DOC1 or DOC3. It is cited by DOC3.",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites DOC2 ('Contrastive decoding: Open-ended text generation as optimization') and is cited by DOC1, placing it in the middle of the chain.",
+      "ref_value": "An Empirical Study On Contrastive Search And Contrastive Decoding For Open-ended Text Generation",
+      "facts": "DOC3 explicitly cites 'Contrastive decoding: Open-ended text generation as optimization' (Li et al., 2022), which matches DOC2. This establishes DOC2 -> DOC3.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "Xiang Lisa Li, Ari Holtzman, Daniel Fried, Percy Liang, Jason Eisner, Tatsunori Hashimoto, Luke Zettlemoyer, and Mike Lewis. Contrastive decoding: Open-ended text generation as optimization. arXiv preprint arXiv:2210.15097, 2022."
+        }
+      ]
+    }
+  ],
+  "structure_description": "A linear citation chain exists where DOC2 is cited by DOC3, which is in turn cited by DOC1, forming the sequence DOC2 -> DOC3 -> DOC1.",
+  "ref_unit": "title"
+}

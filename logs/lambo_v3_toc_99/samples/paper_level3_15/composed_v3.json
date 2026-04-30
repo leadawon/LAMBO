@@ -1,0 +1,71 @@
+{
+  "query_spec": {
+    "intent": "Determine the citation and reference relationships for the paper 'LLaMA Beyond English: An Empirical Study on Language Capability Transfer' (DOC3) based on the provided documents.",
+    "selector": "doc must mention the target paper (DOC3) to be a 'Citation' (citing DOC3), or the target paper (DOC3) must mention the doc to be a 'Reference' (DOC3 citing the doc).",
+    "relator_kind": "mapping",
+    "projector": {
+      "output_skeleton": {
+        "Reference": [],
+        "Citation": []
+      },
+      "ref_unit": "title",
+      "ref_unit_justification": "The instruction explicitly requires presenting 'paper titles' in the JSON format: {\"Reference\":[\"Reference Title 1\", ...], \"Citation\":[\"Citation Title 1\", ...]}."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC1",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC2",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC3",
+      "facts": "",
+      "outgoing_refs": []
+    }
+  ],
+  "structure": {
+    "form": "fan_in",
+    "summary": "The structure is a fan-in where DOC1 and DOC2 both cite the central target paper DOC3, while DOC3 cites none of the other provided papers."
+  },
+  "completeness": {
+    "expected_hint": "The instruction asks to 'determine the citation or reference relationship between this paper and the other papers' and to 'present the paper titles' in a specific JSON format, implying a complete enumeration of all such relationships found in the provided set.",
+    "selected_count": 0,
+    "potentially_missing": []
+  },
+  "filled_skeleton": {
+    "Reference": [],
+    "Citation": [
+      "LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language",
+      "InstructionCP: A fast approach to transfer Large Language Models into target language"
+    ]
+  },
+  "warnings": [
+    "selected_count mismatch: stated=3, actual=0"
+  ],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Determine the citation and reference relationships for the paper 'LLaMA Beyond English: An Empirical Study on Language Capability Transfer' (DOC3) based on the provided documents.\",\n    \"selector\": \"doc must mention the target paper (DOC3) to be a 'Citation' (citing DOC3), or the target paper (DOC3) must mention the doc to be a 'Reference' (DOC3 citing the doc).\",\n    \"relator_kind\": \"mapping\",\n    \"projector\": {\n      \"output_skeleton\": {\n        \"Reference\": [],\n        \"Citation\": []\n      },\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"The instruction explicitly requires presenting 'paper titles' in the JSON format: {\\\"Reference\\\":[\\\"Reference Title 1\\\", ...], \\\"Citation\\\":[\\\"Citation Title 1\\\", ...]}.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC1 contains a verbatim citation of the target paper: 'Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024. Llama beyond english: An empirical study on language capability transfer.'\",\n      \"ref_value\": \"LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language\",\n      \"facts\": \"DOC1 cites the target paper (DOC3) in its bibliography and mentions 'Zhao et al., 2024' in the context of training phases and vocabulary extension. This establishes DOC1 as a paper that cites DOC3.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024. Llama beyond english: An empirical study on language capability transfer.\"\n        }\n      ]\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC2 contains a verbatim citation of the target paper: 'Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024. Llama beyond english: An empirical study on language capability transfer.' and 'Zhao et al. (2024)'\",\n      \"ref_value\": \"InstructionCP: A fast approach to transfer Large Language Models into target language\",\n      \"facts\": \"DOC2 cites the target paper (DOC3) explicitly by full title and by author/year. This establishes DOC2 as a paper that cites DOC3.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC3\",\n          \"kind\": \"cites\",\n          \"quote\": \"Jun Zhao, Zhihao Zhang, Luhui Gao, Qi Zhang, Tao Gui, and Xuanjing Huang. 2024. Llama beyond english: An empirical study on language capability transfer.\"\n        }\n      ]\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"DOC3 is the target paper itself; the task requires determining its relationships. Evidence shows it is cited by DOC1 and DOC2, but contains no evidence of citing DOC1 or DOC2.\",\n      \"ref_value\": \"LLaMA Beyond English: An Empirical Study on Language Capability Transfer\",\n      \"facts\": \"DOC3 is the subject of the query. The evidence for DOC3 is empty, meaning it does not cite DOC1 or DOC2 within the provided text snippets. However, it is the target being cited by DOC1 and DOC2.\",\n      \"outgoing_refs\": []\n    }\n  ],\n  \"structure\": {\n    \"form\": \"fan_in\",\n    \"summary\": \"The structure is a fan-in where DOC1 and DOC2 both cite the central target paper DOC3, while DOC3 cites none of the other provided papers.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"The instruction asks to 'determine the citation or reference relationship between this paper and the other papers' and to 'present the paper titles' in a specific JSON format, implying a complete enumeration of all such relationships found in the provided set.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": {\n    \"Reference\": [],\n    \"Citation\": [\n      \"LlamaTurk: Adapting Open-Source Generative Large Language Models for Low-Resource Language\",\n      \"InstructionCP: A fast approach to transfer Large Language Models into target language\"\n    ]\n  }\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "DOC1",
+    "DOC2": "DOC2",
+    "DOC3": "DOC3"
+  },
+  "records": [],
+  "structure_description": "The structure is a fan-in where DOC1 and DOC2 both cite the central target paper DOC3, while DOC3 cites none of the other provided papers.",
+  "ref_unit": "title"
+}

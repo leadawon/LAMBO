@@ -1,0 +1,125 @@
+{
+  "query_spec": {
+    "intent": "Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.",
+    "selector": "doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.",
+    "relator_kind": "sequence",
+    "projector": {
+      "output_skeleton": "[\"Title of Paper 1\", \"Title of Paper 2\", ...]",
+      "ref_unit": "title",
+      "ref_unit_justification": "Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites 'Contrastive semi-supervised learning for asr' (DOC2), making DOC1 the predecessor to DOC2 in the chain.",
+      "ref_value": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+      "facts": "DOC1 contains a citation to 'Contrastive semi-supervised learning for asr' (arXiv:2103.05149), which corresponds to DOC2. This establishes the link DOC1 -> DOC2.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "A. Xiao, C. Fuegen, and A. Mohamed, 'Contrastive semi-supervised learning for asr,' arXiv preprint arXiv:2103.05149, 2021."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 cites 'HuBERT: How much can a bad teacher benefit ASR pre-training?' which is a variant title for DOC1, making DOC2 the successor to DOC1.",
+      "ref_value": "CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR",
+      "facts": "DOC2 cites 'HuBERT: How much can a bad teacher benefit ASR pre-training?' (ICASSP, 2021). While the title in the citation differs slightly from the input title of DOC1 ('HuBERT: Self-Supervised Speech Representation Learning...'), the authors (Hsu, Tsai, Bolte, Salakhutdinov, Mohamed) and the subject (HuBERT) confirm it refers to the work in DOC1. This establishes the link DOC2 -> DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Wei-Ning Hsu, Yao-Hung Hubert Tsai, Benjamin Bolte, Ruslan Salakhutdinov, and Abdelrahman Mohamed, \"HuBERT: How much can a bad teacher benefit ASR pre-training?\" ICASSP, 2021."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites 'Hubert: Self-supervised speech representation learning by masked prediction of hidden units' (DOC1), making DOC3 a successor to DOC1.",
+      "ref_value": "SUPERB: Speech processing Universal PERformance Benchmark",
+      "facts": "DOC3 cites 'Hubert: Self-supervised speech representation learning by masked prediction of hidden units' (arXiv:2106.07447), which matches the title of DOC1. This establishes the link DOC3 -> DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "W.-N. Hsu, B. Bolte, Y.-H. H. Tsai, K. Lakhotia, R. Salakhutdinov, and A. Mohamed, \"Hubert: Self-supervised speech representation learning by masked prediction of hidden units,\" arXiv preprint arXiv:2106.07447, 2021."
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "form": "fan_in",
+    "summary": "The structure is a fan-in where DOC1 is the central node cited by both DOC2 and DOC3, but DOC1 also cites DOC2, creating a cycle (DOC1->DOC2->DOC1) and a separate branch (DOC3->DOC1). The longest linear chain without cycles is DOC3 -> DOC1 -> DOC2."
+  },
+  "completeness": {
+    "expected_hint": "Instruction asks for 'the longest citation chain' and 'linear and continuous'.",
+    "selected_count": 3,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    "SUPERB: Speech processing Universal PERformance Benchmark",
+    "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+    "CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR"
+  ],
+  "warnings": [],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Identify the longest linear citation chain among the provided papers where each paper cites the previous one in the sequence.\",\n    \"selector\": \"doc must cite another provided doc (to be the successor) or be cited by another provided doc (to be the predecessor) to form a continuous chain.\",\n    \"relator_kind\": \"sequence\",\n    \"projector\": {\n      \"output_skeleton\": \"[\\\"Title of Paper 1\\\", \\\"Title of Paper 2\\\", ...]\",\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"Instruction requirement 1 states: 'Please present the titles of the papers in the form of a list'.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"doc_id\": \"DOC1\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC1 cites 'Contrastive semi-supervised learning for asr' (DOC2), making DOC1 the predecessor to DOC2 in the chain.\",\n      \"ref_value\": \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\",\n      \"facts\": \"DOC1 contains a citation to 'Contrastive semi-supervised learning for asr' (arXiv:2103.05149), which corresponds to DOC2. This establishes the link DOC1 -> DOC2.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"A. Xiao, C. Fuegen, and A. Mohamed, 'Contrastive semi-supervised learning for asr,' arXiv preprint arXiv:2103.05149, 2021.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC2\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC2 cites 'HuBERT: How much can a bad teacher benefit ASR pre-training?' which is a variant title for DOC1, making DOC2 the successor to DOC1.\",\n      \"ref_value\": \"CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR\",\n      \"facts\": \"DOC2 cites 'HuBERT: How much can a bad teacher benefit ASR pre-training?' (ICASSP, 2021). While the title in the citation differs slightly from the input title of DOC1 ('HuBERT: Self-Supervised Speech Representation Learning...'), the authors (Hsu, Tsai, Bolte, Salakhutdinov, Mohamed) and the subject (HuBERT) confirm it refers to the work in DOC1. This establishes the link DOC2 -> DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Wei-Ning Hsu, Yao-Hung Hubert Tsai, Benjamin Bolte, Ruslan Salakhutdinov, and Abdelrahman Mohamed, \\\"HuBERT: How much can a bad teacher benefit ASR pre-training?\\\" ICASSP, 2021.\"\n        }\n      ]\n    },\n    {\n      \"doc_id\": \"DOC3\",\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 cites 'Hubert: Self-supervised speech representation learning by masked prediction of hidden units' (DOC1), making DOC3 a successor to DOC1.\",\n      \"ref_value\": \"SUPERB: Speech processing Universal PERformance Benchmark\",\n      \"facts\": \"DOC3 cites 'Hubert: Self-supervised speech representation learning by masked prediction of hidden units' (arXiv:2106.07447), which matches the title of DOC1. This establishes the link DOC3 -> DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"W.-N. Hsu, B. Bolte, Y.-H. H. Tsai, K. Lakhotia, R. Salakhutdinov, and A. Mohamed, \\\"Hubert: Self-supervised speech representation learning by masked prediction of hidden units,\\\" arXiv preprint arXiv:2106.07447, 2021.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"fan_in\",\n    \"summary\": \"The structure is a fan-in where DOC1 is the central node cited by both DOC2 and DOC3, but DOC1 also cites DOC2, creating a cycle (DOC1->DOC2->DOC1) and a separate branch (DOC3->DOC1). The longest linear chain without cycles is DOC3 -> DOC1 -> DOC2.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"Instruction asks for 'the longest citation chain' and 'linear and continuous'.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    \"SUPERB: Speech processing Universal PERformance Benchmark\",\n    \"HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units\",\n    \"CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR\"\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+    "DOC2": "CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR",
+    "DOC3": "SUPERB: Speech processing Universal PERformance Benchmark"
+  },
+  "records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC1 cites 'Contrastive semi-supervised learning for asr' (DOC2), making DOC1 the predecessor to DOC2 in the chain.",
+      "ref_value": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+      "facts": "DOC1 contains a citation to 'Contrastive semi-supervised learning for asr' (arXiv:2103.05149), which corresponds to DOC2. This establishes the link DOC1 -> DOC2.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC2",
+          "kind": "cites",
+          "quote": "A. Xiao, C. Fuegen, and A. Mohamed, 'Contrastive semi-supervised learning for asr,' arXiv preprint arXiv:2103.05149, 2021."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC2 cites 'HuBERT: How much can a bad teacher benefit ASR pre-training?' which is a variant title for DOC1, making DOC2 the successor to DOC1.",
+      "ref_value": "CONTRASTIVE SEMI-SUPERVISED LEARNING FOR ASR",
+      "facts": "DOC2 cites 'HuBERT: How much can a bad teacher benefit ASR pre-training?' (ICASSP, 2021). While the title in the citation differs slightly from the input title of DOC1 ('HuBERT: Self-Supervised Speech Representation Learning...'), the authors (Hsu, Tsai, Bolte, Salakhutdinov, Mohamed) and the subject (HuBERT) confirm it refers to the work in DOC1. This establishes the link DOC2 -> DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "Wei-Ning Hsu, Yao-Hung Hubert Tsai, Benjamin Bolte, Ruslan Salakhutdinov, and Abdelrahman Mohamed, \"HuBERT: How much can a bad teacher benefit ASR pre-training?\" ICASSP, 2021."
+        }
+      ]
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "match",
+      "verdict_reason": "Evidence shows DOC3 cites 'Hubert: Self-supervised speech representation learning by masked prediction of hidden units' (DOC1), making DOC3 a successor to DOC1.",
+      "ref_value": "SUPERB: Speech processing Universal PERformance Benchmark",
+      "facts": "DOC3 cites 'Hubert: Self-supervised speech representation learning by masked prediction of hidden units' (arXiv:2106.07447), which matches the title of DOC1. This establishes the link DOC3 -> DOC1.",
+      "outgoing_refs": [
+        {
+          "to_doc": "DOC1",
+          "kind": "cites",
+          "quote": "W.-N. Hsu, B. Bolte, Y.-H. H. Tsai, K. Lakhotia, R. Salakhutdinov, and A. Mohamed, \"Hubert: Self-supervised speech representation learning by masked prediction of hidden units,\" arXiv preprint arXiv:2106.07447, 2021."
+        }
+      ]
+    }
+  ],
+  "structure_description": "The structure is a fan-in where DOC1 is the central node cited by both DOC2 and DOC3, but DOC1 also cites DOC2, creating a cycle (DOC1->DOC2->DOC1) and a separate branch (DOC3->DOC1). The longest linear chain without cycles is DOC3 -> DOC1 -> DOC2.",
+  "ref_unit": "title"
+}

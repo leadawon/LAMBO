@@ -1,0 +1,90 @@
+{
+  "query_spec": {
+    "intent": "Determine the citation and reference relationships between the provided papers based on the evidence of which papers mention which other papers.",
+    "selector": "doc must be one of the provided papers (DOC1, DOC2, DOC3) to be analyzed for its outgoing references (what it cites) and incoming citations (who cites it).",
+    "relator_kind": "graph",
+    "projector": {
+      "output_skeleton": {
+        "Reference": [
+          "Reference Title 1",
+          "Reference Title 2"
+        ],
+        "Citation": [
+          "Citation Title 1",
+          "Citation Title 2"
+        ]
+      },
+      "ref_unit": "title",
+      "ref_unit_justification": "The instruction explicitly requires presenting 'paper titles' in the JSON format and the example shows title strings in the lists."
+    }
+  },
+  "doc_records": [
+    {
+      "doc_id": "DOC1",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC1",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC2",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC2",
+      "facts": "",
+      "outgoing_refs": []
+    },
+    {
+      "doc_id": "DOC3",
+      "verdict": "no_evidence",
+      "verdict_reason": "(auto-filled — LLM omitted this doc)",
+      "ref_value": "DOC3",
+      "facts": "",
+      "outgoing_refs": []
+    }
+  ],
+  "structure": {
+    "form": "linear_chain",
+    "summary": "The structure forms a linear chain where DOC3 cites DOC2, and DOC2 cites DOC1, with DOC1 having no outgoing references to the set and no incoming citations from the set."
+  },
+  "completeness": {
+    "expected_hint": "The instruction asks to 'determine the citation relationships between them' for the 'provided papers', implying a closed set of three documents.",
+    "selected_count": 0,
+    "potentially_missing": []
+  },
+  "filled_skeleton": [
+    {
+      "Reference": [],
+      "Citation": []
+    },
+    {
+      "Reference": [
+        "Benchmarking Large Language Models in Retrieval-Augmented Generation"
+      ],
+      "Citation": [
+        "When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively"
+      ]
+    },
+    {
+      "Reference": [
+        "Seven Failure Points When Engineering a Retrieval Augmented Generation System"
+      ],
+      "Citation": []
+    }
+  ],
+  "warnings": [
+    "selected_count mismatch: stated=3, actual=0"
+  ],
+  "raw_text": "{\n  \"query_spec\": {\n    \"intent\": \"Determine the citation and reference relationships between the provided papers based on the evidence of which papers mention which other papers.\",\n    \"selector\": \"doc must be one of the provided papers (DOC1, DOC2, DOC3) to be analyzed for its outgoing references (what it cites) and incoming citations (who cites it).\",\n    \"relator_kind\": \"graph\",\n    \"projector\": {\n      \"output_skeleton\": {\n        \"Reference\": [\n          \"Reference Title 1\",\n          \"Reference Title 2\"\n        ],\n        \"Citation\": [\n          \"Citation Title 1\",\n          \"Citation Title 2\"\n        ]\n      },\n      \"ref_unit\": \"title\",\n      \"ref_unit_justification\": \"The instruction explicitly requires presenting 'paper titles' in the JSON format and the example shows title strings in the lists.\"\n    }\n  },\n  \"doc_records\": [\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence explicitly states DOC1 does not reference DOC2 or DOC3, and no other doc mentions DOC1, resulting in empty lists for both categories.\",\n      \"ref_value\": \"Benchmarking Large Language Models in Retrieval-Augmented Generation\",\n      \"facts\": \"The evidence confirms that 'DOC1 ... does not reference DOC2 ... or DOC3'. No evidence indicates any other document cites DOC1.\",\n      \"outgoing_refs\": []\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC2 references DOC1 (via arXiv ID and title) and is cited by DOC3 (via arXiv ID and title).\",\n      \"ref_value\": \"Seven Failure Points When Engineering a Retrieval Augmented Generation System\",\n      \"facts\": \"DOC2 references 'Benchmarking Large Language Models in Retrieval-Augmented Generation' (arXiv:2309.01431) as '[3]'. DOC3 cites DOC2 as 'Seven failure points when engineering a retrieval augmented generation system' (arXiv:2401.05856) in the context of latency issues.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC1\",\n          \"kind\": \"cites\",\n          \"quote\": \"Jiawei Chen, Hongyu Lin, Xianpei Han, and Le Sun. 2023. Benchmarking Large Language Models in Retrieval-Augmented Generation. arXiv preprint arXiv:2309. 01431 (2023).\"\n        }\n      ]\n    },\n    {\n      \"verdict\": \"match\",\n      \"verdict_reason\": \"Evidence shows DOC3 references DOC2 (via arXiv ID and title) and does not reference DOC1.\",\n      \"ref_value\": \"When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively\",\n      \"facts\": \"DOC3 references 'Seven failure points when engineering a retrieval augmented generation system' (arXiv:2401.05856) as '[3]' regarding latency. No evidence shows DOC3 referencing DOC1.\",\n      \"outgoing_refs\": [\n        {\n          \"to_doc\": \"DOC2\",\n          \"kind\": \"cites\",\n          \"quote\": \"[3] S. Barnett, S. Kurniawan, S. Thudumu, Z. Brannelly, and M. Abdelrazek. Seven failure points when engineering a retrieval augmented generation system. arXiv preprint arXiv:2401.05856, 2024.\"\n        }\n      ]\n    }\n  ],\n  \"structure\": {\n    \"form\": \"linear_chain\",\n    \"summary\": \"The structure forms a linear chain where DOC3 cites DOC2, and DOC2 cites DOC1, with DOC1 having no outgoing references to the set and no incoming citations from the set.\"\n  },\n  \"completeness\": {\n    \"expected_hint\": \"The instruction asks to 'determine the citation relationships between them' for the 'provided papers', implying a closed set of three documents.\",\n    \"selected_count\": 3,\n    \"potentially_missing\": []\n  },\n  \"filled_skeleton\": [\n    {\n      \"Reference\": [],\n      \"Citation\": []\n    },\n    {\n      \"Reference\": [\n        \"Benchmarking Large Language Models in Retrieval-Augmented Generation\"\n      ],\n      \"Citation\": [\n        \"When to Retrieve: Teaching LLMs to Utilize Information Retrieval Effectively\"\n      ]\n    },\n    {\n      \"Reference\": [\n        \"Seven Failure Points When Engineering a Retrieval Augmented Generation System\"\n      ],\n      \"Citation\": []\n    }\n  ]\n}",
+  "doc_sheet_count": 3,
+  "evidence_found_count": 3,
+  "projection_map": {
+    "DOC1": "DOC1",
+    "DOC2": "DOC2",
+    "DOC3": "DOC3"
+  },
+  "records": [],
+  "structure_description": "The structure forms a linear chain where DOC3 cites DOC2, and DOC2 cites DOC1, with DOC1 having no outgoing references to the set and no incoming citations from the set.",
+  "ref_unit": "title"
+}
