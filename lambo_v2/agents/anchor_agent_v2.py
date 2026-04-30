@@ -1,118 +1,100 @@
-"""Anchor Agent v2 — structure-preserving anchor placement over raw documents.
+"""Anchor Agent v2 — hierarchical TOC builder over raw documents.
 
-This version differs from the original v2 anchor agent in one crucial way:
-the LLM is no longer tiling over heuristic fixed-size units. Instead, we first
-extract larger *structural blocks* that try to preserve document-native
-boundaries such as headings, tables, lists, references, and intact paragraphs.
-The LLM then chooses anchor boundaries over those contiguous block ranges.
+Reads one document at a time, calls an LLM to produce a hierarchical
+table of contents with LINE numbers, then converts line numbers to exact
+character offsets by looking up a pre-computed line-start table.
+
+This avoids asking the LLM to count characters (unreliable), replacing it
+with line numbers (L0001, L0002, ...) which are visible in the prompt.
 """
 
 from __future__ import annotations
 
-import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 from ..backend import GeminiClient, OpenAIClient, QwenLocalClient
 from ..common import (
-    compact_text,
-    current_query_from_record,
     ensure_dir,
     extract_json_payload,
-    instruction_from_record,
     normalize_ws,
     parse_docs_bundle,
     read_json,
     safe_filename,
-    split_long_paragraph,
     write_json,
 )
 
 
 DEFAULT_SYSTEM_PROMPT = """
-You are the Anchor Agent v2.
+You are the TOC (Table of Contents) Builder.
 
-Your job is to place anchors over ONE document so a downstream agent can search
-it without reading everything, while still preserving document structure and
-evidence locality.
+Your job is to read ONE document and produce a clean, logical, hierarchical
+table of contents that captures the document's true structure. A downstream
+agent will use this TOC to extract any single section verbatim from the
+document, so each entry MUST point to exact line numbers.
 
-Important:
-- The document below is already shown as numbered structural blocks `B001, B002, ...`.
-- These blocks are NOT arbitrary token windows. They were built to preserve raw
-  structure such as headings, table row groups, list items, reference entries,
-  and intact paragraphs.
-- You must decide the anchor boundaries yourself by grouping contiguous block
-  ranges into coherent regions.
+The document is presented to you with line numbers prefixed as:
+  L0001: <line content>
+  L0002: <line content>
+  ...
 
-What an anchor should preserve:
-- a section or subsection
-- a table together with its header / row group
-- a numbered clause or list item sequence
-- a bibliographic entry or short run of closely related entries
-- a single case-fact block / verdict block / reasoning block
-- one locally coherent paragraph group stating one idea
+For each TOC entry output exactly these fields:
+- `number`    : dotted section number, e.g. "1", "1.1", "10.2"
+- `title`     : short faithful label (2-8 words)
+- `level`     : integer 1, 2, or 3 — must equal the dot-depth of `number`
+- `start_line`: L-number where this section begins (inclusive), e.g. "L0003"
+- `end_line`  : L-number where this section ends (inclusive), e.g. "L0041"
 
-Rules:
-- Tile the full document from B001 to the last block with no gaps and no overlaps.
-- Never cut a table in half. If several adjacent table blocks share one header or
-  belong to the same statement, keep them inside one anchor.
-- Never split one bibliographic entry or one numbered clause across anchors.
-- Keep numerical values, named entities, years, verdict labels, metrics, and
-  explicit relations inside the same anchor whenever possible.
-- Target roughly 5–20 anchors per document, but coherence is more important than
-  hitting an exact count.
-- `summary` must be faithful and evidence-centric. Preserve concrete names,
-  numbers, years, and relation clues verbatim when helpful.
-- `region_type` is a short descriptive tag such as `heading`, `table`,
-  `financial_statement`, `case_facts`, `verdict`, `references`, `abstract`,
-  `method`, `results`, `narrative`, `boilerplate`.
-- `heading_path` should use document wording if visible. If not visible, provide
-  a short path based on the region itself.
+Rules for a good TOC:
 
-Output strict JSON only:
-{
-  "anchors": [
-    {
-      "anchor_title": "short label",
-      "start_block_id": "B001",
-      "end_block_id": "B004",
-      "summary": "2-6 sentences, faithful and evidence-centric",
-      "region_type": "short tag",
-      "heading_path": ["parent heading", "child heading"],
-      "key_entities": ["verbatim entity", "verbatim number"]
-    }
-  ]
-}
+1. Hierarchy is real.
+   Use dotted numbering "1, 1.1, 1.1.1". A parent's line range must exactly
+   enclose all its children: parent.start_line == first_child.start_line,
+   parent.end_line == last_child.end_line.
+
+2. Titles are faithful.
+   Copy the document's own heading when visible. Invent a short label only
+   when no heading exists. Do not fabricate content.
+
+3. Leaves tile the full document with no gaps and no overlaps.
+   The first leaf must start at L0001. The last leaf must end at the final
+   line. Consecutive leaves must meet exactly (prev.end_line + 1 == next.start_line).
+   Front matter, back matter, references, footers — include everything.
+
+4. Granularity follows the document's own structure.
+   Short docs: 4-8 sections. Long structured docs: up to 60 entries, 2-3 levels.
+
+5. Maximum depth is level 3 unless the document itself goes deeper.
+
+Output strict JSON only — a list of TOC entries in document order.
+No prose, no markdown fences, no extra fields.
 """.strip()
 
 
 DEFAULT_USER_PROMPT = """
-Question (orientation only — do not tailor anchors narrowly to it):
-{query}
+Document title: {doc_title}
+Total lines: {total_lines}
 
-Instruction (orientation only):
-{instruction}
+Document text (line-numbered):
+{numbered_text}
 
-Document title:
-{doc_title}
+Build the hierarchical TOC for this document.
 
-Number of structural blocks: {block_count}
-
-Document blocks (each block is raw document text with its id, type, and line span):
-{doc_blocks_text}
-
-Return strict JSON only. The anchors must cover every block from B001 to the last
-block exactly once with no gaps and no overlaps.
+Reminders:
+- `start_line` and `end_line` must be valid L-numbers from L0001 to L{total_lines:04d}.
+- The first leaf's start_line must be L0001.
+- The last leaf's end_line must be L{total_lines:04d}.
+- Consecutive leaves must meet: prev end_line + 1 == next start_line.
+- Parent ranges must exactly enclose their children.
+- Output a JSON list only. No other text.
 """.strip()
 
 
 class AnchorAgentV2:
-    def __init__(self,
+    def __init__(
+        self,
         llm: Union[QwenLocalClient, GeminiClient, OpenAIClient],
         prompt_dir: Optional[Path] = None,
-        max_blocks_per_doc: int = 320,
-        max_block_chars: int = 2200,
-        fallback_target_chars: int = 3200,
     ) -> None:
         self.llm = llm
         self.prompt_dir = prompt_dir
@@ -125,479 +107,167 @@ class AnchorAgentV2:
                 self.system_prompt = system_path.read_text(encoding="utf-8").strip()
             if user_path.exists():
                 self.user_prompt_template = user_path.read_text(encoding="utf-8").strip()
-        self.max_blocks_per_doc = max_blocks_per_doc
-        self.max_block_chars = max_block_chars
-        self.fallback_target_chars = fallback_target_chars
 
     @staticmethod
-    def _line_offsets(text: str) -> Tuple[List[str], List[int]]:
-        lines = text.split("\n")
-        starts: List[int] = []
+    def _number_lines(doc_text: str) -> Tuple[List[str], List[int], str]:
+        """Split text into lines, compute char offsets, return numbered text.
+
+        Returns:
+            lines        : raw line strings (without newline)
+            line_starts  : char offset of the start of each line in doc_text
+            numbered_text: the prompt-ready string with L0001: ... prefixes
+        """
+        lines = doc_text.split("\n")
+        line_starts: List[int] = []
         cursor = 0
         for line in lines:
-            starts.append(cursor)
-            cursor += len(line) + 1
-        return lines, starts
+            line_starts.append(cursor)
+            cursor += len(line) + 1  # +1 for the '\n'
+
+        numbered_lines = [
+            f"L{i + 1:04d}: {line}" for i, line in enumerate(lines)
+        ]
+        numbered_text = "\n".join(numbered_lines)
+        return lines, line_starts, numbered_text
 
     @staticmethod
-    def _is_heading(line: str) -> bool:
-        s = line.strip()
-        if not s or len(s) > 120:
-            return False
-        if re.fullmatch(r"(?:第[一二三四五六七八九十百零]+[章节部分篇]|[一二三四五六七八九十]+[、.．]|[(（][一二三四五六七八九十0-9]+[)）]|[0-9]+[.．、])\s*.*", s):
-            return True
-        if re.fullmatch(r"[A-Z][A-Z0-9 .:/_-]{2,}", s):
-            return True
-        keywords = ("摘要", "引言", "前言", "结论", "附录", "参考文献", "审理查明", "本院认为", "裁定如下")
-        return any(s.startswith(keyword) for keyword in keywords)
+    def _parse_lnum(lnum_str: str) -> int:
+        """Convert 'L0003' → 2 (0-based line index). Returns -1 on failure."""
+        s = str(lnum_str).strip().lstrip("Ll")
+        try:
+            return int(s) - 1  # 1-based → 0-based
+        except ValueError:
+            return -1
 
-    @staticmethod
-    def _is_reference_entry(line: str) -> bool:
-        s = line.strip()
-        return bool(
-            s
-            and (
-                re.match(r"^\[[0-9]{1,3}\]\s+", s)
-                or re.match(r"^[0-9]{1,3}\.\s+", s)
-                or re.match(r"^[A-Z][A-Za-z'`-]+,\s*[A-Z]\.", s)
-            )
-        )
-
-    @staticmethod
-    def _is_list_item(line: str) -> bool:
-        s = line.strip()
-        return bool(
-            s
-            and re.match(
-                r"^(?:[-*•▪◦]|\(?[0-9]{1,3}\)|[0-9]{1,3}[.)]|[a-zA-Z][.)]|[一二三四五六七八九十]+[、.．])\s+",
-                s,
-            )
-        )
-
-    @staticmethod
-    def _is_table_like(line: str) -> bool:
-        s = line.rstrip()
-        if not s:
-            return False
-        if "|" in s or "\t" in s:
-            return True
-        if re.search(r"\b(?:项目|期末余额|期初余额|本期|上期|金额|比例|单位)\b", s) and re.search(r"\d", s):
-            return True
-        separators = len(re.findall(r"\s{2,}", s))
-        numeric_cells = len(re.findall(r"[-+]?\d[\d,]*(?:\.\d+)?%?", s))
-        return separators >= 2 and numeric_cells >= 1
-
-    def _line_kind(self, line: str) -> str:
-        if self._is_heading(line):
-            return "heading"
-        if self._is_reference_entry(line):
-            return "reference_entry"
-        if self._is_table_like(line):
-            return "table"
-        if self._is_list_item(line):
-            return "list_item"
-        return "paragraph"
-
-    def _make_block(
+    def _lines_to_char_span(
         self,
-        *,
-        text: str,
-        kind: str,
-        line_start: int,
-        line_end: int,
-        char_start: int,
-        char_end: int,
-    ) -> Dict[str, Any]:
-        return {
-            "block_id": "",
-            "block_type": kind,
-            "line_span": [line_start + 1, line_end + 1],
-            "char_span": [char_start, char_end],
-            "text": text,
-            "preview": compact_text(text, limit=260),
-        }
+        start_line_str: str,
+        end_line_str: str,
+        line_starts: List[int],
+        lines: List[str],
+        doc_text: str,
+    ) -> Tuple[int, int]:
+        """Convert L-number strings to (char_start, char_end) in doc_text."""
+        n = len(lines)
+        si = self._parse_lnum(start_line_str)
+        ei = self._parse_lnum(end_line_str)
 
-    def _split_overlong_block(self, block: Dict[str, Any]) -> List[Dict[str, Any]]:
-        text = block["text"]
-        if len(text) <= self.max_block_chars or block["block_type"] not in {"paragraph", "list_item"}:
-            return [block]
+        si = max(0, min(si, n - 1))
+        ei = max(si, min(ei, n - 1))
 
-        pieces = split_long_paragraph(text, target_chars=self.max_block_chars)
-        if len(pieces) <= 1:
-            return [block]
+        char_start = line_starts[si]
+        # char_end = start of the line AFTER end_line (exclusive)
+        if ei + 1 < n:
+            char_end = line_starts[ei + 1]
+        else:
+            char_end = len(doc_text)
 
-        result: List[Dict[str, Any]] = []
-        local_cursor = 0
-        base_char = block["char_span"][0]
-        line_start = block["line_span"][0] - 1
-        line_end = block["line_span"][1] - 1
-        for piece in pieces:
-            idx = text.find(piece, local_cursor)
-            if idx < 0:
-                idx = local_cursor
-            char_start = base_char + idx
-            char_end = char_start + len(piece)
-            local_cursor = idx + len(piece)
-            result.append(
-                self._make_block(
-                    text=piece,
-                    kind=block["block_type"],
-                    line_start=line_start,
-                    line_end=line_end,
-                    char_start=char_start,
-                    char_end=char_end,
-                )
-            )
-        return result
+        return char_start, char_end
 
-    def _coarsen_blocks(self, blocks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        if len(blocks) <= self.max_blocks_per_doc:
-            return blocks
-
-        merged: List[Dict[str, Any]] = []
-        pending: Optional[Dict[str, Any]] = None
-        for block in blocks:
-            if pending is None:
-                pending = dict(block)
-                continue
-
-            compatible = pending["block_type"] in {"paragraph", "list_item"} and block["block_type"] == pending["block_type"]
-            short_enough = len(pending["text"]) + len(block["text"]) <= self.fallback_target_chars
-            if compatible and short_enough:
-                pending["text"] = pending["text"].rstrip() + "\n" + block["text"].lstrip()
-                pending["char_span"][1] = block["char_span"][1]
-                pending["line_span"][1] = block["line_span"][1]
-                pending["preview"] = compact_text(pending["text"], limit=260)
-            else:
-                merged.append(pending)
-                pending = dict(block)
-        if pending is not None:
-            merged.append(pending)
-        return merged
-
-    def _build_structural_blocks(self, document_text: str) -> List[Dict[str, Any]]:
-        text = (document_text or "").replace("\r\n", "\n").replace("\r", "\n")
-        lines, line_starts = self._line_offsets(text)
-        blocks: List[Dict[str, Any]] = []
-        index = 0
-
-        while index < len(lines):
-            raw_line = lines[index]
-            if not raw_line.strip():
-                index += 1
-                continue
-
-            kind = self._line_kind(raw_line)
-            start = index
-            bucket = [raw_line]
-            index += 1
-
-            if kind == "heading":
-                pass
-            elif kind == "table":
-                while index < len(lines):
-                    line = lines[index]
-                    if not line.strip() or self._line_kind(line) != "table":
-                        break
-                    bucket.append(line)
-                    index += 1
-            elif kind == "reference_entry":
-                while index < len(lines):
-                    line = lines[index]
-                    if not line.strip():
-                        break
-                    next_kind = self._line_kind(line)
-                    if next_kind in {"heading", "table"} or self._is_reference_entry(line):
-                        break
-                    bucket.append(line)
-                    index += 1
-            elif kind == "list_item":
-                while index < len(lines):
-                    line = lines[index]
-                    if not line.strip():
-                        break
-                    next_kind = self._line_kind(line)
-                    if next_kind in {"heading", "table", "reference_entry"} or self._is_list_item(line):
-                        break
-                    bucket.append(line)
-                    index += 1
-            else:
-                while index < len(lines):
-                    line = lines[index]
-                    if not line.strip():
-                        break
-                    next_kind = self._line_kind(line)
-                    if next_kind in {"heading", "table", "reference_entry", "list_item"}:
-                        break
-                    bucket.append(line)
-                    index += 1
-
-            end = start + len(bucket) - 1
-            char_start = line_starts[start]
-            char_end = line_starts[end] + len(lines[end])
-            block = self._make_block(
-                text="\n".join(bucket).strip(),
-                kind=kind,
-                line_start=start,
-                line_end=end,
-                char_start=char_start,
-                char_end=char_end,
-            )
-            blocks.extend(self._split_overlong_block(block))
-
-        blocks = self._coarsen_blocks(blocks)
-        for block_index, block in enumerate(blocks, start=1):
-            block["block_id"] = f"B{block_index:03d}"
-        return blocks
-
-    @staticmethod
-    def _serialize_blocks(blocks: List[Dict[str, Any]]) -> str:
-        chunks: List[str] = []
-        for block in blocks:
-            line_span = f"L{block['line_span'][0]}-L{block['line_span'][1]}"
-            chunks.append(
-                f"[{block['block_id']}] type={block['block_type']} lines={line_span}\n{block['text']}"
-            )
-        return "\n\n".join(chunks)
-
-    def _build_anchor_record(
+    def _build_toc_entry(
         self,
         *,
         doc_id: str,
         doc_title: str,
-        blocks: List[Dict[str, Any]],
-        start_idx: int,
-        end_idx: int,
-        anchor_index: int,
-        anchor_title: str,
-        summary: str,
-        key_entities: List[str],
-        region_type: str,
-        heading_path: List[str],
+        doc_text: str,
+        lines: List[str],
+        line_starts: List[int],
+        item: Dict[str, Any],
     ) -> Dict[str, Any]:
-        span = blocks[start_idx : end_idx + 1]
-        text = "\n\n".join(block["text"] for block in span).strip()
-        clean_heading = [normalize_ws(item) for item in heading_path if normalize_ws(item)][:4]
+        char_start, char_end = self._lines_to_char_span(
+            item["start_line"],
+            item["end_line"],
+            line_starts,
+            lines,
+            doc_text,
+        )
         return {
-            "anchor_id": f"{doc_id}_A{anchor_index}",
+            "number": str(item.get("number", "")),
+            "title": normalize_ws(str(item.get("title", ""))),
+            "level": int(item.get("level", 1)),
+            "start_line": str(item["start_line"]),
+            "end_line": str(item["end_line"]),
+            "char_start": char_start,
+            "char_end": char_end,
+            "text": doc_text[char_start:char_end],
             "doc_id": doc_id,
             "doc_title": doc_title,
-            "order": anchor_index,
-            "anchor_title": normalize_ws(anchor_title) or f"Anchor {anchor_index}",
-            "summary": normalize_ws(summary) or compact_text(text, limit=200),
-            "key_entities": [normalize_ws(entity) for entity in key_entities if normalize_ws(entity)][:8],
-            "packet_span": f"{span[0]['block_id']}..{span[-1]['block_id']}",
-            "char_span": [span[0]["char_span"][0], span[-1]["char_span"][1]],
-            "line_span": [span[0]["line_span"][0], span[-1]["line_span"][1]],
-            "block_ids": [block["block_id"] for block in span],
-            "text": text,
-            "preview": compact_text(text, limit=300),
-            "region_type": normalize_ws(region_type) or span[0]["block_type"],
-            "heading_path": clean_heading or [normalize_ws(anchor_title) or span[0]["block_type"]],
-            "navigation_summary": normalize_ws(summary) or compact_text(text, limit=200),
-            "prev_anchor_id": "",
-            "next_anchor_id": "",
         }
 
-    def _fallback_cover(self, *, doc_id: str, doc_title: str, blocks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        anchors: List[Dict[str, Any]] = []
-        start = 0
-        current_chars = 0
-        for idx, block in enumerate(blocks):
-            block_chars = len(block["text"])
-            should_break = (
-                idx > start
-                and current_chars >= self.fallback_target_chars
-                and block["block_type"] in {"heading", "table", "reference_entry"}
-            )
-            if should_break:
-                anchor_index = len(anchors) + 1
-                anchors.append(
-                    self._build_anchor_record(
-                        doc_id=doc_id,
-                        doc_title=doc_title,
-                        blocks=blocks,
-                        start_idx=start,
-                        end_idx=idx - 1,
-                        anchor_index=anchor_index,
-                        anchor_title=compact_text(blocks[start]["text"], limit=50),
-                        summary=compact_text(
-                            " ".join(block_item["preview"] for block_item in blocks[start:idx]),
-                            limit=240,
-                        ),
-                        key_entities=[],
-                        region_type=blocks[start]["block_type"],
-                        heading_path=[blocks[start]["block_type"]],
-                    )
-                )
-                start = idx
-                current_chars = 0
-            current_chars += block_chars
+    def _fallback_toc(self, *, doc_id: str, doc_title: str, doc_text: str, total_lines: int) -> List[Dict[str, Any]]:
+        return [
+            {
+                "number": "1",
+                "title": doc_title or "Document",
+                "level": 1,
+                "start_line": "L0001",
+                "end_line": f"L{total_lines:04d}",
+                "char_start": 0,
+                "char_end": len(doc_text),
+                "text": doc_text,
+                "doc_id": doc_id,
+                "doc_title": doc_title,
+            }
+        ]
 
-        if start < len(blocks):
-            anchor_index = len(anchors) + 1
-            anchors.append(
-                self._build_anchor_record(
-                    doc_id=doc_id,
-                    doc_title=doc_title,
-                    blocks=blocks,
-                    start_idx=start,
-                    end_idx=len(blocks) - 1,
-                    anchor_index=anchor_index,
-                    anchor_title=compact_text(blocks[start]["text"], limit=50),
-                    summary=compact_text(
-                        " ".join(block["preview"] for block in blocks[start:]),
-                        limit=240,
-                    ),
-                    key_entities=[],
-                    region_type=blocks[start]["block_type"],
-                    heading_path=[blocks[start]["block_type"]],
-                )
-            )
-
-        for i, anchor in enumerate(anchors):
-            if i > 0:
-                anchor["prev_anchor_id"] = anchors[i - 1]["anchor_id"]
-            if i < len(anchors) - 1:
-                anchor["next_anchor_id"] = anchors[i + 1]["anchor_id"]
-        return anchors
-
-    def _repair_tiling(self, parsed: List[Dict[str, Any]], blocks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        parsed.sort(key=lambda item: (item["start_idx"], item["end_idx"]))
-        repaired: List[Dict[str, Any]] = []
-        cursor = 0
-        total = len(blocks)
-
-        for item in parsed:
-            start_idx = max(item["start_idx"], cursor)
-            end_idx = max(item["end_idx"], start_idx)
-            if start_idx >= total:
-                break
-
-            if start_idx > cursor:
-                repaired.append(
-                    {
-                        "start_idx": cursor,
-                        "end_idx": start_idx - 1,
-                        "anchor_title": "Bridge",
-                        "summary": "",
-                        "key_entities": [],
-                        "region_type": "",
-                        "heading_path": [],
-                    }
-                )
-
-            repaired.append(
-                {
-                    **item,
-                    "start_idx": start_idx,
-                    "end_idx": min(end_idx, total - 1),
-                }
-            )
-            cursor = min(end_idx, total - 1) + 1
-
-        if cursor < total:
-            repaired.append(
-                {
-                    "start_idx": cursor,
-                    "end_idx": total - 1,
-                    "anchor_title": "Remainder",
-                    "summary": "",
-                    "key_entities": [],
-                    "region_type": "",
-                    "heading_path": [],
-                }
-            )
-
-        return repaired
-
-    def _anchor_doc_with_llm(
+    def _build_toc_with_llm(
         self,
         *,
-        query: str,
-        instruction: str,
         doc: Dict[str, Any],
-        blocks: List[Dict[str, Any]],
     ) -> Tuple[List[Dict[str, Any]], str]:
+        doc_text: str = doc.get("content", "")
+        lines, line_starts, numbered_text = self._number_lines(doc_text)
+        total_lines = len(lines)
+
         user_prompt = self.user_prompt_template.format(
-            query=query or "(empty)",
-            instruction=instruction or "(none)",
             doc_title=doc["doc_title"],
-            block_count=len(blocks),
-            doc_blocks_text=self._serialize_blocks(blocks),
+            total_lines=total_lines,
+            numbered_text=numbered_text,
         )
         raw_text = self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=4000,
+            max_output_tokens=8192,
             metadata={"module": "anchor_agent_v2", "doc_title": doc["doc_title"]},
         )
 
         payload = extract_json_payload(raw_text)
-        if not isinstance(payload, dict) or not isinstance(payload.get("anchors"), list):
-            return self._fallback_cover(doc_id=doc["doc_id"], doc_title=doc["doc_title"], blocks=blocks), raw_text
+        if isinstance(payload, list):
+            toc_items = payload
+        elif isinstance(payload, dict) and isinstance(payload.get("toc"), list):
+            toc_items = payload["toc"]
+        else:
+            return self._fallback_toc(
+                doc_id=doc["doc_id"], doc_title=doc["doc_title"],
+                doc_text=doc_text, total_lines=total_lines,
+            ), raw_text
 
-        id_to_idx = {block["block_id"]: idx for idx, block in enumerate(blocks)}
-        parsed: List[Dict[str, Any]] = []
-        for item in payload["anchors"]:
+        toc: List[Dict[str, Any]] = []
+        for item in toc_items:
             if not isinstance(item, dict):
                 continue
-            start_id = normalize_ws(str(item.get("start_block_id", "")))
-            end_id = normalize_ws(str(item.get("end_block_id", "")))
-            if start_id not in id_to_idx or end_id not in id_to_idx:
+            if "start_line" not in item or "end_line" not in item:
                 continue
-            start_idx = id_to_idx[start_id]
-            end_idx = id_to_idx[end_id]
-            if end_idx < start_idx:
-                start_idx, end_idx = end_idx, start_idx
-            heading_path = item.get("heading_path", [])
-            if isinstance(heading_path, str):
-                heading_path = [heading_path]
-            elif not isinstance(heading_path, list):
-                heading_path = []
-            key_entities = item.get("key_entities", [])
-            if not isinstance(key_entities, list):
-                key_entities = []
-            parsed.append(
-                {
-                    "start_idx": start_idx,
-                    "end_idx": end_idx,
-                    "anchor_title": str(item.get("anchor_title", "")),
-                    "summary": str(item.get("summary", "")),
-                    "key_entities": [str(entity) for entity in key_entities],
-                    "region_type": str(item.get("region_type", "")),
-                    "heading_path": [str(path) for path in heading_path],
-                }
-            )
-
-        if not parsed:
-            return self._fallback_cover(doc_id=doc["doc_id"], doc_title=doc["doc_title"], blocks=blocks), raw_text
-
-        repaired = self._repair_tiling(parsed, blocks)
-        anchors: List[Dict[str, Any]] = []
-        for anchor_index, item in enumerate(repaired, start=1):
-            anchors.append(
-                self._build_anchor_record(
+            try:
+                entry = self._build_toc_entry(
                     doc_id=doc["doc_id"],
                     doc_title=doc["doc_title"],
-                    blocks=blocks,
-                    start_idx=item["start_idx"],
-                    end_idx=item["end_idx"],
-                    anchor_index=anchor_index,
-                    anchor_title=item["anchor_title"],
-                    summary=item["summary"],
-                    key_entities=item.get("key_entities") or [],
-                    region_type=item.get("region_type", ""),
-                    heading_path=item.get("heading_path") or [],
+                    doc_text=doc_text,
+                    lines=lines,
+                    line_starts=line_starts,
+                    item=item,
                 )
-            )
+            except (KeyError, TypeError, ValueError):
+                continue
+            toc.append(entry)
 
-        for i, anchor in enumerate(anchors):
-            if i > 0:
-                anchor["prev_anchor_id"] = anchors[i - 1]["anchor_id"]
-            if i < len(anchors) - 1:
-                anchor["next_anchor_id"] = anchors[i + 1]["anchor_id"]
-        return anchors, raw_text
+        if not toc:
+            return self._fallback_toc(
+                doc_id=doc["doc_id"], doc_title=doc["doc_title"],
+                doc_text=doc_text, total_lines=total_lines,
+            ), raw_text
+
+        return toc, raw_text
 
     def run(
         self,
@@ -611,49 +281,17 @@ class AnchorAgentV2:
         if cache_path.exists() and not force:
             return read_json(cache_path)
 
-        query = current_query_from_record(
-            str(record.get("question", "")).strip(),
-            str(record.get("instruction", "")).strip(),
-        )
-        instruction = instruction_from_record(str(record.get("instruction", "")).strip())
-
         docs = parse_docs_bundle(record.get("docs", ""))
         doc_payloads: List[Dict[str, Any]] = []
         for doc in docs:
-            blocks = self._build_structural_blocks(doc["content"])
-            anchors, raw_response = self._anchor_doc_with_llm(
-                query=query,
-                instruction=instruction,
-                doc=doc,
-                blocks=blocks,
-            )
+            toc, raw_response = self._build_toc_with_llm(doc=doc)
             doc_payloads.append(
                 {
                     "doc_id": doc["doc_id"],
                     "doc_title": doc["doc_title"],
-                    "unit_count": len(blocks),
-                    "block_count": len(blocks),
-                    "anchor_count": len(anchors),
-                    "block_map": [
-                        {
-                            "block_id": block["block_id"],
-                            "block_type": block["block_type"],
-                            "line_span": block["line_span"],
-                            "preview": block["preview"],
-                        }
-                        for block in blocks
-                    ],
-                    "anchors": anchors,
-                    "doc_map": [
-                        {
-                            "anchor_id": anchor["anchor_id"],
-                            "anchor_title": anchor["anchor_title"],
-                            "summary": anchor["summary"],
-                            "key_entities": anchor["key_entities"],
-                        }
-                        for anchor in anchors
-                    ],
-                    "anchor_generation_raw": raw_response,
+                    "toc_count": len(toc),
+                    "toc": toc,
+                    "toc_generation_raw": raw_response,
                 }
             )
             write_json(
@@ -670,8 +308,7 @@ class AnchorAgentV2:
             "sample_id": safe_filename(
                 f"{record.get('type', '?')}_level{record.get('level', '?')}_{record.get('id', '?')}"
             ),
-            "query": query,
-            "segmentation_mode": "structure_preserving_blocks",
+            "segmentation_mode": "hierarchical_toc_line_anchored",
             "docs": doc_payloads,
         }
         write_json(cache_path, payload)

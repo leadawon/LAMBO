@@ -1,6 +1,6 @@
-"""Run the LAMBO v2 pipeline on set-1 Loong samples.
+"""Run the LAMBO v3 pipeline (AnchorAgentV2 + DocRefineAgentV2 + GlobalComposerV3 + GeneratorV2).
 
-Pipeline: AnchorAgent → DocRefineAgent (per-doc) → GlobalComposer → Generator
+Pipeline: AnchorAgentV2 → DocRefineAgentV2 (per-doc) → GlobalComposerV3 → GeneratorV2
 Evaluation: structured_eval (EM, F1) + LLM judge (1-100)
 """
 
@@ -18,10 +18,10 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from lambo_v2.agents.anchor_agent import AnchorAgent
-from lambo_v2.agents.doc_refine_agent import DocRefineAgent
-from lambo_v2.agents.global_composer import GlobalComposer
-from lambo_v2.agents.generator import Generator
+from lambo_v2.agents.anchor_agent_v2 import AnchorAgentV2
+from lambo_v2.agents.doc_refine_agent_v2 import DocRefineAgentV2
+from lambo_v2.agents.global_composer_v3 import GlobalComposerV3
+from lambo_v2.agents.generator_v2 import GeneratorV2
 from lambo_v2.backend import get_default_client
 from lambo_v2.common import (
     current_query_from_record,
@@ -38,11 +38,14 @@ from lambo_v2.manifest import build_set1_manifest, load_records, save_manifest
 
 
 DEFAULT_INPUT_PATH = PROJECT_ROOT / "reference" / "Loong" / "data" / "loong_process.jsonl"
-DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "logs" / "lambo_v2_set1_10"
+DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "logs" / "lambo_v3_toc_10"
+
+MAX_OUTPUT_TOKENS = 50000
+MAX_INPUT_TOKENS = 50000
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run LAMBO v2 AutoRefine pipeline on set1 samples.")
+    parser = argparse.ArgumentParser(description="Run LAMBO v3 (composer v3 + generator v2) pipeline.")
     parser.add_argument("--input_path", type=str, default=str(DEFAULT_INPUT_PATH))
     parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--max_items", type=int, default=None)
@@ -63,9 +66,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--backend",
         type=str,
-        default="local",
+        default="openai",
         choices=["local", "gemini", "openai"],
-        help="LLM backend: 'local' for Qwen2.5-32B, 'gemini' for Gemini API, 'openai' for OpenAI API",
+        help="LLM backend: 'openai' for vLLM server (default), 'gemini', 'local'",
     )
     return parser.parse_args()
 
@@ -85,23 +88,13 @@ def main() -> None:
     args = parse_args()
     input_path = Path(args.input_path)
 
-    # Default output_dir depends on backend
-    if args.output_dir is not None:
-        output_dir = Path(args.output_dir)
-    elif args.backend == "gemini":
-        output_dir = PROJECT_ROOT / "logs" / "lambo_v2_set1_10_gemini"
-    elif args.backend == "openai":
-        output_dir = PROJECT_ROOT / "logs" / "lambo_v2_set1_10_openai"
-    else:
-        output_dir = DEFAULT_OUTPUT_DIR
-
+    output_dir = Path(args.output_dir) if args.output_dir else DEFAULT_OUTPUT_DIR
     layout = ensure_layout(output_dir)
 
     records = load_records(input_path)
     wanted = set()
     if args.selected_indices_path.strip():
-        import json as _json
-        raw = _json.load(open(args.selected_indices_path))
+        raw = json.load(open(args.selected_indices_path))
         idx_list = raw["indices"] if isinstance(raw, dict) and "indices" in raw else raw
         wanted = {int(i) for i in idx_list}
     if args.selected_indices.strip():
@@ -136,13 +129,16 @@ def main() -> None:
     print(f"Backend: {args.backend}", flush=True)
     llm = get_default_client(backend=args.backend)
 
-    anchor_agent = AnchorAgent(llm=llm)
-    doc_refine_agent = DocRefineAgent(
+    if hasattr(llm, '_default_max_output_tokens'):
+        llm._default_max_output_tokens = MAX_OUTPUT_TOKENS
+
+    anchor_agent = AnchorAgentV2(llm=llm)
+    doc_refine_agent = DocRefineAgentV2(
         llm=llm,
         max_rounds=args.max_refine_rounds,
     )
-    composer = GlobalComposer(llm=llm)
-    generator = Generator(llm=llm)
+    composer = GlobalComposerV3(llm=llm)
+    generator = GeneratorV2(llm=llm)
 
     prediction_rows: List[Dict[str, Any]] = []
     errors: List[Dict[str, Any]] = []
@@ -162,27 +158,25 @@ def main() -> None:
                 str(record.get("instruction", "")).strip(),
             )
 
-            # Stage 1: Anchor Agent
             anchor_payload = anchor_agent.run(
                 record=record, sample_dir=sample_dir, force=args.force,
             )
 
-            # Stage 2: DocRefineAgent per document (single think→search→info loop)
             doc_sheets: List[Dict[str, Any]] = []
             other_docs_list = [
                 {"doc_id": d["doc_id"], "doc_title": d.get("doc_title", "")}
                 for d in anchor_payload["docs"]
             ]
             for doc_payload in anchor_payload["docs"]:
+                toc_count = doc_payload.get("toc_count", len(doc_payload.get("toc", [])))
                 print(
                     f"  doc {doc_payload['doc_id']} '{doc_payload['doc_title'][:40]}' "
-                    f"anchors={doc_payload['anchor_count']}",
+                    f"toc_sections={toc_count}",
                     flush=True,
                 )
-                # Dynamic max_rounds: anchor_count rounds to open + 1 synthesis round to stop+answer
                 doc_refine_agent.max_rounds = min(
                     args.max_refine_rounds,
-                    max(1, doc_payload["anchor_count"] + 1),
+                    max(1, toc_count + 1),
                 )
                 sheet = doc_refine_agent.run(
                     question=question,
@@ -196,13 +190,11 @@ def main() -> None:
                 evidence_preview = (sheet.get("evidence", "") or "")[:80]
                 print(
                     f"    -> {sheet['scan_result']} "
-                    f"| rounds={sheet.get('rounds_used',0)} "
+                    f"| rounds={sheet.get('rounds_used', 0)} "
                     f"| evidence={evidence_preview!r}",
                     flush=True,
                 )
 
-            # Stage 3: Global Composer (also sees anchor-level entity candidates to
-            # build a faithful projection_map when refined evidence lacks entity names)
             composed = composer.run(
                 question=question,
                 instruction=instruction,
@@ -211,13 +203,21 @@ def main() -> None:
                 sample_dir=sample_dir,
                 force=args.force,
             )
+            ref_unit = (
+                (composed.get("query_spec") or {}).get("projector") or {}
+            ).get("ref_unit", "")
+            structure_form = (composed.get("structure") or {}).get("form", "")
+            warnings = composed.get("warnings") or []
             print(
-                f"  composer -> projection_map keys={list(composed.get('projection_map',{}).keys())} "
-                f"| records={len(composed.get('records', []))}",
+                f"  composer -> ref_unit={ref_unit} | structure={structure_form} "
+                f"| match_count={len([r for r in composed.get('doc_records', []) if r.get('verdict') == 'match'])} "
+                f"| warnings={len(warnings)}",
                 flush=True,
             )
+            if warnings:
+                for w in warnings:
+                    print(f"    !! {w}", flush=True)
 
-            # Stage 4: Generator
             doc_title_list = {
                 d["doc_id"]: d.get("doc_title", d["doc_id"])
                 for d in anchor_payload["docs"]
@@ -252,7 +252,6 @@ def main() -> None:
 
     prediction_path = write_jsonl(layout["root"] / "lambo_predictions.jsonl", prediction_rows)
 
-    # Structured evaluation
     try:
         structured_summary = evaluate_predictions(
             [
@@ -273,7 +272,6 @@ def main() -> None:
     write_json(layout["reports"] / "structured_eval.json", structured_summary)
     write_json(layout["reports"] / "errors.json", {"count": len(errors), "errors": errors})
 
-    # LLM judge
     try:
         judge_out = run_llm_judge(llm=llm, prediction_rows=prediction_rows)
     except Exception as exc:  # noqa: BLE001
