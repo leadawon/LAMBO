@@ -13,6 +13,7 @@ The repo carries multiple pipeline generations (`v1` → `v2` → `v2-toc` → `
 - [Pipeline Versions](#pipeline-versions)
 - [Repository Layout](#repository-layout)
 - [Experiment Logs Layout](#experiment-logs-layout)
+- [Webapp Visualizer](#webapp-visualizer)
 - [Reproducing Experiments](#reproducing-experiments)
 - [Environment](#environment)
 - [Results Summary](#results-summary)
@@ -232,6 +233,30 @@ logs/<experiment_name>/
     ├── llm_judge.json                  # 1-100 verdicts per sample + summary
     └── errors.json
 ```
+
+---
+
+## Webapp Visualizer
+
+The [webapp/](webapp/) directory contains a Streamlit UI for inspecting a single LAMBO run end to end. It defaults to `logs/lambo_v2_toc_99`, but the sidebar can point to any `logs/<experiment_name>/` directory with `samples/`, `manifest.json`, `lambo_predictions.jsonl`, and `reports/`.
+
+The visualizer shows:
+
+- **Question / gold / model answer / judge score** for the selected sample.
+- **Document Browser** reconstructed from `anchors_v2.json`, with TOC sections, opened-section badges, and inline `<mark>` highlights for evidence spans.
+- **Search Trace** with color-coded `<think>`, `<search>`, `<info>`, and `<answer>` blocks. Evidence extracted from both `DOC*_refine.json:evidence` and trace `<answer>...</answer>` payloads is highlighted back inside matching `<info>` text.
+- **Composer / Generator audit view** for `projection_map`, `records`, `query_spec`, `filled_skeleton`, and final answer.
+
+Run it from the repo root:
+
+```bash
+streamlit run webapp/app.py \
+  --server.address 0.0.0.0 \
+  --server.port 8501 \
+  --server.headless true
+```
+
+See [webapp/README.md](webapp/README.md) for the Docker/venv command used in the experiment environment.
 
 ---
 
