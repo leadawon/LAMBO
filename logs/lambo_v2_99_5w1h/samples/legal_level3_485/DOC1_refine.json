@@ -1,0 +1,35 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书1》",
+      "what": "本案系劳务合同纠纷，属于合同纠纷类型",
+      "when": "—",
+      "where": "[4] 法院审查意见",
+      "why": "按照5种案由对判决文书进行分类",
+      "how": "classification_cue",
+      "source": {
+        "section": "4",
+        "section_title": "法院审查意见",
+        "verbatim": "本案系原告丁某某组织工人为被告提供泥工劳务，并以此获取报酬，案涉合同性质应为劳务合同而非建设工程合同，双方在履行合同过程中发生的纠纷属于劳务合同纠纷",
+        "char_start": 43,
+        "char_end": 117
+      },
+      "found_relation": {
+        "subject": "《判决文书1》",
+        "predicate": "属于",
+        "object": "合同，无因管理，不当得利纠纷"
+      }
+    }
+  ],
+  "evidence": "本案系原告丁某某组织工人为被告提供泥工劳务，并以此获取报酬，案涉合同性质应为劳务合同而非建设工程合同，双方在履行合同过程中发生的纠纷属于劳务合同纠纷",
+  "opened_anchors": [
+    "1",
+    "3",
+    "4"
+  ],
+  "rounds_used": 3,
+  "trace": "\n--- Round 1 ---\n<think>This is the first round for DOC1 (《判决文书1》). I need to classify this judgment document into one of the 5 case types:\n1. 物权保护纠纷 (Property rights protection dispute)\n2. 合同，无因管理，不当得利纠纷 (Contract, unjust enrichment, negotiorum gestio dispute)\n3. 侵权责任纠纷 (Tort liability dispute)\n4. 行政主体-劳动和社会保障行政管理（劳动，社会保障）(Administrative subject - Labor and social security administration)\n5. 行政行为-行政征收 (Administrative act - Administrative expropriation)\n\nI need to read the document to determine its case type. Let me start by opening the first section to understand the document's content.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"Basic information about the parties and case type\"}</search>\n<info anchor_id=\"1\">\n原告：丁某某，男，1965年3月22日出生，汉族，住重庆市江津区。\n被告：唐某，男，1985年6月7日出生，汉族，住重庆市江北区。\n\n</info>\n\n--- Round 2 ---\n<think>I've opened section 1 which contains basic party information (plaintiff: 丁某某, defendant: 唐某). This doesn't tell me the case type yet. I need to read more sections to understand what kind of dispute this is. Let me open section 3 (原告诉称事实与理由) which should contain the plaintiff's claims and the nature of the dispute.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"3\",\"expected_evidence\":\"Plaintiff's claims and the nature of the dispute to determine case type\"}</search>\n<info anchor_id=\"3\">\n原告丁某某诉称，请求：1.被告支付原告劳务费120000元并支付利息；2.诉讼费用由被告承担。事实与理由：2019年11月，原告应被告要求，带领工人为被告承包的位于贵州省毕节市洪南路的梵程酒店做泥工工作，2020年9月完工，但被告并未将劳务费用支付完毕。2022年3月25日，被告向原告出具《工程款欠条》一张，载明：“今丁某某班组施工毕节梵程酒店泥工班组，尚有12万元人工费未支付，现双方友好协商，唐某根据丁某某提供的身份证和卡号支付工程欠款，每一个月支付款项不超过5000元，预计10-12次付清，”被告在其上签字捺印予以确认。之后，被告并未按约支付上述款项，原告屡次催促，被告置之不理，故诉至法院。\n\n</info>\n\n--- Round 3 ---\n<think>Based on section 3, I can see this is a dispute about unpaid labor fees (劳务费). The plaintiff (丁某某) claims the defendant (唐某) owes 120,000 yuan for labor work done at a hotel construction project. The defendant issued a debt acknowledgment (《工程款欠条》) but failed to pay.\n\nThis appears to be a contract-related dispute (contract for labor services, debt acknowledgment). This would fall under \"合同，无因管理，不当得利纠纷\" (Contract, unjust enrichment, negotiorum gestio dispute).\n\nLet me check section 4 (法院审查意见) to confirm the court's classification of this case type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"4\",\"expected_evidence\":\"Court's opinion and case type classification\"}</search>\n<info anchor_id=\"4\">\n本院经审查认为，从原告丁某某的诉讼主张、重庆江北法院询问笔录和案涉《工程款欠条》来看，本案系原告丁某某组织工人为被告提供泥工劳务，并以此获取报酬，案涉合同性质应为劳务合同而非建设工程合同，双方在履行合同过程中发生的纠纷属于劳务合同纠纷。《中华人民共和国民事诉讼法》第二十四条规定：“因合同纠纷提起的诉讼，由被告住所地或者合同履行地人民法院管辖。”本案中，原告丁某某选择向被告唐某住所地重庆江北法院提起诉讼，重庆江北法院依法对本案具有管辖权。\n\n</info>\n\n--- Round 4 ---\n<think>Based on the information I've gathered from sections 1, 3, and 4:\n\n1. Section 1: Basic party information (plaintiff 丁某某, defendant 唐某)\n2. Section 3: Plaintiff's claim - unpaid labor fees of 120,000 yuan for construction work, with a debt acknowledgment (《工程款欠条》)\n3. Section 4: Court's opinion - explicitly states \"本案系原告丁某某组织工人为被告提供泥工劳务，并以此获取报酬，案涉合同性质应为劳务合同而非建设工程合同，双方在履行合同过程中发生的纠纷属于劳务合同纠纷\" (This case is about plaintiff organizing workers to provide masonry labor services to defendant and obtain remuneration, the contract nature should be a labor service contract, not a construction contract, the dispute arising during contract performance belongs to labor service contract dispute)\n\nThis clearly classifies as \"合同，无因管理，不当得利纠纷\" (Contract, unjust enrichment, negotiorum gestio dispute) since it's a labor service contract dispute (劳务合同纠纷).\n\nI have sufficient evidence to classify this document. I can now stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"collected all needed evidence to classify the case type\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书1》\",\n      \"what\": \"本案系劳务合同纠纷，属于合同纠纷类型\",\n      \"when\": \"—\",\n      \"where\": \"[4] 法院审查意见\",\n      \"why\": \"按照5种案由对判决文书进行分类\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"4\",\n        \"section_title\": \"法院审查意见\",\n        \"verbatim\": \"本案系原告丁某某组织工人为被告提供泥工劳务，并以此获取报酬，案涉合同性质应为劳务合同而非建设工程合同，双方在履行合同过程中发生的纠纷属于劳务合同纠纷\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书1》\",\n        \"predicate\": \"属于\",\n        \"object\": \"合同，无因管理，不当得利纠纷\"\n      }\n    }\n  ]\n}</answer>\n"
+}

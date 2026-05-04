@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《判决文书2》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书2》",
+      "what": "提供劳务者受害责任纠纷案件",
+      "when": "—",
+      "where": "[2] 案件由来与审理经过",
+      "why": "按照6种案由对判决文书进行分类",
+      "how": "classification_cue",
+      "source": {
+        "section": "2",
+        "section_title": "案件由来与审理经过",
+        "verbatim": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案",
+        "char_start": 0,
+        "char_end": 65
+      },
+      "found_relation": {
+        "subject": "《判决文书2》",
+        "predicate": "属于",
+        "object": "侵权责任纠纷"
+      }
+    }
+  ],
+  "evidence": "再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案",
+  "opened_anchors": [
+    "2"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>This is a document classification task. I need to read the judgment document (DOC2) and determine which of the 6 case types it belongs to:\n1. 适用特殊程序案件案由\n2. 侵权责任纠纷\n3. 民间借贷纠纷\n4. 行政行为-行政监督\n5. 渎职罪\n6. 行政主体-房屋拆迁管理（拆迁）\n\nI need to extract evidence from the document to classify it. Let me start by opening sections to understand the case type. I'll begin with section [2] 案件由来与审理经过 which typically contains information about the case type and cause of action.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"案件类型、案由信息\"}</search>\n<info anchor_id=\"2\">\n再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3180号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\n\n</info>\n\n--- Round 2 ---\n<think>From the <info> block for section [2], I can see this is a \"提供劳务者受害责任纠纷\" case (liability dispute for harm suffered by a service provider). This is a type of tort liability dispute (侵权责任纠纷).\n\nThe key evidence is: \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案\"\n\nThis clearly indicates the case type is \"提供劳务者受害责任纠纷\" which falls under \"侵权责任纠纷\" (tort liability dispute).\n\nI have found sufficient evidence to classify this document. Let me stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found sufficient evidence to classify the document as 侵权责任纠纷\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书2》\",\n      \"what\": \"提供劳务者受害责任纠纷案件\",\n      \"when\": \"—\",\n      \"where\": \"[2] 案件由来与审理经过\",\n      \"why\": \"按照6种案由对判决文书进行分类\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"2\",\n        \"section_title\": \"案件由来与审理经过\",\n        \"verbatim\": \"再审申请人新疆某某食品开发有限公司乌鲁木齐万科分店（以下简称某某万科分店）因与被申请人梁某及原审被告李某提供劳务者受害责任纠纷一案\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书2》\",\n        \"predicate\": \"属于\",\n        \"object\": \"侵权责任纠纷\"\n      }\n    }\n  ]\n}</answer>\n"
+}

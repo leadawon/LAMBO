@@ -1,0 +1,34 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书7》",
+      "what": "股权转让纠纷案件，涉及再审申请人乔某某与被申请人新疆某投资有限公司之间的民事纠纷",
+      "when": "—",
+      "where": "[2] 案件由来与审查经过",
+      "why": "按照5种案由对判决文书进行分类，确定该文书属于哪一类案由",
+      "how": "classification_cue",
+      "source": {
+        "section": "2",
+        "section_title": "案件由来与审查经过",
+        "verbatim": "再审申请人乔某某因与被申请人新疆某投资有限公司（以下简称某投资公司）股权转让纠纷一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院（2023）新28民终874号民事判决，向本院申请再审。",
+        "char_start": 0,
+        "char_end": 96
+      },
+      "found_relation": {
+        "subject": "《判决文书7》",
+        "predicate": "属于",
+        "object": "与公司，证券，保险，票据等有关的民事纠纷"
+      }
+    }
+  ],
+  "evidence": "再审申请人乔某某因与被申请人新疆某投资有限公司（以下简称某投资公司）股权转让纠纷一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院（2023）新28民终874号民事判决，向本院申请再审。",
+  "opened_anchors": [
+    "1",
+    "2"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>The user wants me to classify a judgment document (DOC7: 《判决文书7》) into one of 5 case types:\n1. '行政行为-行政监督' (Administrative act - Administrative supervision)\n2. '执行案由-对下级法院执行异议裁定的复议' (Execution cause - Review of ruling on execution objection by lower court)\n3. '行政行为-行政合同' (Administrative act - Administrative contract)\n4. '行政主体-民政行政管理（民政）' (Administrative subject - Civil affairs administration)\n5. '与公司，证券，保险，票据等有关的民事纠纷' (Civil disputes related to companies, securities, insurance, bills, etc.)\n\nI need to read the document to determine which category it belongs to. Let me start by opening the first section to understand the nature of the case.\n\nI'll start with section [1] 当事人基本信息 (Basic information of parties) to see who the parties are and what kind of case this is.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"Basic information about parties to understand the nature of the case\"}</search>\n<info anchor_id=\"1\">\n再审申请人（一审被告、二审上诉人）：乔某某，男，1964年2月18日出生，住新疆维吾尔自治区巴音郭楞蒙古自治州和硕县。\n被申请人（一审原告、二审被上诉人）：新疆某投资有限公司，住所地新疆维吾尔自治区巴音郭楞蒙古自治州库尔勒市。\n法定代表人：陈某，该公司总经理。\n\n</info>\n\n--- Round 2 ---\n<think>From section [1], I can see:\n- 再审申请人（一审被告、二审上诉人）：乔某某 (individual)\n- 被申请人（一审原告、二审被上诉人）：新疆某投资有限公司 (investment company)\n\nThis appears to be a civil dispute involving an investment company. The parties are an individual and a company, which suggests this could be related to '与公司，证券，保险，票据等有关的民事纠纷' (Civil disputes related to companies, securities, insurance, bills, etc.).\n\nHowever, I need more information to confirm the nature of the case. Let me check section [2] 案件由来与审查经过 (Case origin and review process) to understand what type of case this is.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"Case origin and type to determine the cause of action\"}</search>\n<info anchor_id=\"2\">\n再审申请人乔某某因与被申请人新疆某投资有限公司（以下简称某投资公司）股权转让纠纷一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院（2023）新28民终874号民事判决，向本院申请再审。本院依法组成合议庭进行了审查，现已审查终结。\n\n</info>\n\n--- Round 3 ---\n<think>From section [2], I found crucial information:\n- 再审申请人乔某某因与被申请人新疆某投资有限公司（以下简称某投资公司）**股权转让纠纷**一案\n- This is a \"股权转让纠纷\" (equity transfer dispute) case\n- The case number is (2023) 新28民终874号, which is a civil judgment (民事判决)\n\nThis clearly falls under '与公司，证券，保险，票据等有关的民事纠纷' (Civil disputes related to companies, securities, insurance, bills, etc.) because:\n1. It involves an investment company (新疆某投资有限公司)\n2. It's about equity transfer (股权转让), which is a company-related civil dispute\n\nI have enough evidence to classify this document. The document title is 《判决文书7》 and it belongs to the category '与公司，证券，保险，票据等有关的民事纠纷'.\n\nLet me stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"Found sufficient evidence to classify the document. Section [2] clearly states this is a '股权转让纠纷' (equity transfer dispute) case involving an investment company, which falls under '与公司，证券，保险，票据等有关的民事纠纷' category.\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书7》\",\n      \"what\": \"股权转让纠纷案件，涉及再审申请人乔某某与被申请人新疆某投资有限公司之间的民事纠纷\",\n      \"when\": \"—\",\n      \"where\": \"[2] 案件由来与审查经过\",\n      \"why\": \"按照5种案由对判决文书进行分类，确定该文书属于哪一类案由\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"2\",\n        \"section_title\": \"案件由来与审查经过\",\n        \"verbatim\": \"再审申请人乔某某因与被申请人新疆某投资有限公司（以下简称某投资公司）股权转让纠纷一案，不服新疆维吾尔自治区巴音郭楞蒙古自治州中级人民法院（2023）新28民终874号民事判决，向本院申请再审。\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书7》\",\n        \"predicate\": \"属于\",\n        \"object\": \"与公司，证券，保险，票据等有关的民事纠纷\"\n      }\n    }\n  ]\n}</answer>\n"
+}

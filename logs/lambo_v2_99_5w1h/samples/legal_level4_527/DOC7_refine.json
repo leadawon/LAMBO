@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC7",
+  "doc_title": "《判决文书7》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "郭某辰、郭某勋、黄某芳",
+      "what": "驳回郭某辰、郭某勋、黄某芳的再审申请",
+      "when": "—",
+      "where": "[7] 裁定结果",
+      "why": "Match the judgment result of DOC7 to one of the 10 provided judgment results",
+      "how": "lookup_value",
+      "source": {
+        "section": "7",
+        "section_title": "裁定结果",
+        "verbatim": "驳回郭某辰、郭某勋、黄某芳的再审申请。",
+        "char_start": 103,
+        "char_end": 122
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "驳回郭某辰、郭某勋、黄某芳的再审申请。",
+  "opened_anchors": [
+    "7"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to read a judgment document (DOC7: 《判决文书7》) and determine which of the 10 provided judgment results (判决结果1-10) most likely matches this document.\n\nI need to:\n1. Open sections of DOC7 to understand its content\n2. Find the actual judgment result in the document\n3. Match it to one of the 10 provided judgment results\n4. Output the evidence in the required JSON format\n\nLet me start by opening the most relevant section - section [7] 裁定结果 (Judgment Result) which should contain the actual ruling.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"7\",\"expected_evidence\":\"The actual judgment result/ruling of this case\"}</search>\n<info anchor_id=\"7\">\n综上，再审申请人郭某辰、郭某勋、黄某芳的再审申请不符合《中华人民共和国行政诉讼法》第九十一条规定的情形。依照《最高人民法院关于适用<中华人民共和国行政诉讼法>的解释》第一百一十六条第二款之规定，裁定如下：\n驳回郭某辰、郭某勋、黄某芳的再审申请。\n</info>\n\n--- Round 2 ---\n<think>Let me analyze what I found in section [7] 裁定结果:\n\nThe document shows:\n- 再审申请人 (retrial applicants): 郭某辰、郭某勋、黄某芳\n- The court ruled: 驳回郭某辰、郭某勋、黄某芳的再审申请 (Reject the retrial application of Guo Mou Chen, Guo Mou Xun, Huang Mou Fang)\n\nNow I need to match this to one of the 10 provided judgment results:\n\n判决结果1: 驳回某某甲公司的复议申请... (about administrative reconsideration)\n判决结果2: 驳回吴某某的再审申请。 (reject Wu Mou Mou's retrial application)\n判决结果3: 本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查... (about transferring a case)\n判决结果4: 维持山西转型综合改革示范区人民法院... (about traffic offense case)\n判决结果5: 撤销湖南省高级人民法院... (about execution ruling)\n判决结果6: 准许上诉人（原审被告人）刘某某撤回上诉... (about withdrawing appeal)\n判决结果7: 驳回郭某辰、郭某勋、黄某芳的再审申请。 (reject Guo Mou Chen, Guo Mou Xun, Huang Mou Fang's retrial application)\n判决结果8: 驳回上诉，维持原判... (reject appeal, maintain original judgment)\n\n\n判决结果9: 驳回上诉，维持一审判决... (reject appeal, maintain first instance judgment)\n判决结果10: 驳回上诉，维持原判... (reject appeal, maintain original judgment)\n\nThe document's ruling matches 判决结果7 exactly - both reject the retrial application of 郭某辰、郭某勋、黄某芳. I have sufficient evidence to make this determination.</think>\n<search>{\"action\":\"stop\",\"reason\":\"Found the judgment result in section [7] which matches 判决结果7 exactly - both reject the retrial application of 郭某辰、郭某勋、黄某芳\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"郭某辰、郭某勋、黄某芳\",\n      \"what\": \"驳回郭某辰、郭某勋、黄某芳的再审申请\",\n      \"when\": \"—\",\n      \"where\": \"[7] 裁定结果\",\n      \"why\": \"Match the judgment result of DOC7 to one of the 10 provided judgment results\",\n      \"how\": \"lookup_value\",\n      \"source\": {\n        \"section\": \"7\",\n        \"section_title\": \"裁定结果\",\n        \"verbatim\": \"驳回郭某辰、郭某勋、黄某芳的再审申请。\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

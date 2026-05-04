@@ -1,6 +1,10 @@
-"""Run the LAMBO v2 pipeline (AnchorAgentV2 + DocRefineAgentV2) on set-1 Loong samples.
+"""Run the LAMBO v2 pipeline on set-1 Loong samples.
 
-Pipeline: AnchorAgentV2 → DocRefineAgentV2 (per-doc) → GlobalComposer → Generator
+Pipeline:
+    AnchorAgentV2  →  DocRefineAgentV2 (per-doc, 5W1H records)
+                  →  GlobalComposerV2  (reading_trace flow)
+                  →  GeneratorV2       (instruction-format renderer)
+
 Evaluation: structured_eval (EM, F1) + LLM judge (1-100)
 """
 
@@ -21,7 +25,7 @@ if str(PROJECT_ROOT) not in sys.path:
 from lambo_v2.agents.anchor_agent_v2 import AnchorAgentV2
 from lambo_v2.agents.doc_refine_agent_v2 import DocRefineAgentV2
 from lambo_v2.agents.global_composer_v2 import GlobalComposerV2
-from lambo_v2.agents.generator import Generator
+from lambo_v2.agents.generator_v2 import GeneratorV2
 from lambo_v2.backend import get_default_client
 from lambo_v2.common import (
     current_query_from_record,
@@ -139,7 +143,7 @@ def main() -> None:
         max_rounds=args.max_refine_rounds,
     )
     composer = GlobalComposerV2(llm=llm)
-    generator = Generator(llm=llm)
+    generator = GeneratorV2(llm=llm)
 
     prediction_rows: List[Dict[str, Any]] = []
     errors: List[Dict[str, Any]] = []

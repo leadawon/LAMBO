@@ -227,7 +227,7 @@ class AnchorAgentV2:
         raw_text = self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=8192,
+            max_output_tokens=16384,
             metadata={"module": "anchor_agent_v2", "doc_title": doc["doc_title"]},
         )
 

@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书3》",
+      "what": "所有权确认纠纷",
+      "when": "—",
+      "where": "[1] 当事人及案件基本信息",
+      "why": "classify the judgment document into one of the 5 case types",
+      "how": "classification_cue",
+      "source": {
+        "section": "1",
+        "section_title": "当事人及案件基本信息",
+        "verbatim": "上诉人隋某青因与被上诉人隋某梁所有权确认纠纷一案",
+        "char_start": 135,
+        "char_end": 159
+      },
+      "found_relation": {
+        "subject": "《判决文书3》",
+        "predicate": "belongs_to",
+        "object": "物权保护纠纷"
+      }
+    }
+  ],
+  "evidence": "上诉人隋某青因与被上诉人隋某梁所有权确认纠纷一案",
+  "opened_anchors": [
+    "1"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>I need to classify this judgment document (DOC3: 《判决文书3》) into one of the 5 case types:\n1. 物权保护纠纷\n2. 合同，无因管理，不当得利纠纷\n3. 侵权责任纠纷\n4. 行政主体-劳动和社会保障行政管理（劳动，社会保障）\n5. 行政行为-行政征收\n\nTo do this, I need to find the case type/causes of action (案由) in the document. This is typically found in the basic case information section. Let me start by opening section [1] 当事人及案件基本信息 which should contain the case type information.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"案由 (case type) information to classify the document\"}</search>\n<info anchor_id=\"1\">\n上诉人（原审被告）：隋某青，男，2004年1月28日出生，汉族，住乳山市。\n委托诉讼代理人：肖紫恒，山东齐鲁（威海）律师事务所律师。\n被上诉人（原审原告）：隋某梁，男，1964年11月7日出生，汉族，住乳山市。\n委托诉讼代理人：殷萌，北京市百瑞（济南）律师事务所律师。\n上诉人隋某青因与被上诉人隋某梁所有权确认纠纷一案，不服山东省乳山市人民法院（2023）鲁1083民初2991号民事判决，向本院提起上诉。本院于2024年1月4日立案后，依法组成合议庭进行了审理。本案现已审理终结。\n\n</info>\n\n--- Round 2 ---\n<think>The <info> block from section [1] contains the key information I need. It states:\n\n\"上诉人隋某青因与被上诉人隋某梁所有权确认纠纷一案\"\n\nThis indicates the case type is \"所有权确认纠纷\" (ownership confirmation dispute). This falls under \"物权保护纠纷\" (property rights protection dispute) category.\n\nI have found the evidence needed to classify this document. The case is about ownership confirmation, which is a property rights matter.\n\nLet me now stop and provide the answer with the evidence record.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found the case type information needed for classification\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书3》\",\n      \"what\": \"所有权确认纠纷\",\n      \"when\": \"—\",\n      \"where\": \"[1] 当事人及案件基本信息\",\n      \"why\": \"classify the judgment document into one of the 5 case types\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"1\",\n        \"section_title\": \"当事人及案件基本信息\",\n        \"verbatim\": \"上诉人隋某青因与被上诉人隋某梁所有权确认纠纷一案\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书3》\",\n        \"predicate\": \"belongs_to\",\n        \"object\": \"物权保护纠纷\"\n      }\n    }\n  ]\n}</answer>\n"
+}

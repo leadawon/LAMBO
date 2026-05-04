@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书3》",
+      "what": "行政案件 - 再审申请人吴某某诉被申请人东莞市生态环境局罚款案，案号（2023）粤19行终1137号行政判决",
+      "when": "2023",
+      "where": "[2] 案件由来与审理经过",
+      "why": "按照'民事案件' '执行案件' '行政案件'这3种案件类型对判决文书进行分类",
+      "how": "classification_cue",
+      "source": {
+        "section": "2",
+        "section_title": "案件由来与审理经过",
+        "verbatim": "再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。",
+        "char_start": 0,
+        "char_end": 68
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。",
+  "opened_anchors": [
+    "1",
+    "2"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>I need to classify this judgment document (DOC3: 《判决文书3》) into one of three categories: '民事案件' (civil case), '执行案件' (execution case), or '行政案件' (administrative case).\n\nTo determine the case type, I should look for:\n1. The case type designation in the document header or title\n2. Keywords indicating the nature of the case (e.g., \"民事\" for civil, \"执行\" for execution, \"行政\" for administrative)\n3. The court's reasoning and the type of dispute\n\nLet me start by opening section [1] 当事人基本信息 (Basic Information of Parties) to see if there's any indication of the case type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"Case type information or keywords indicating civil/administrative/execution case\"}</search>\n<info anchor_id=\"1\">\n再审申请人（一审原告、二审上诉人）：吴某某，男，汉族，1965年5月6日出生，身份证住址贵州省。\n委托代理人：王本权，贵州省遵义市新蒲新区新舟镇法律服务所法律服务工作者。\n被申请人（一审被告、二审被上诉人）：东莞市生态环境局。住所地：广东省东莞市南城街道宏伟二路南城段9号其中第1至14层。\n法定代表人：胡毅峰，局长。\n\n</info>\n\n--- Round 2 ---\n<think>In section [1], I can see:\n- 再审申请人（一审原告、二审上诉人）：吴某某 (individual plaintiff)\n- 被申请人（一审被告、二审被上诉人）：东莞市生态环境局 (Dongguan Ecology and Environment Bureau)\n\nThe fact that one party is a government bureau (东莞市生态环境局 - Dongguan Ecology and Environment Bureau) suggests this could be an administrative case (行政案件), where a citizen is suing a government agency.\n\nHowever, I need more evidence to confirm the case type. Let me check section [2] 案件由来与审理经过 (Case Origin and Trial Process) which typically contains the case type designation.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"Case type designation (民事/行政/执行) in the case origin section\"}</search>\n<info anchor_id=\"2\">\n再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n\n</info>\n\n--- Round 3 ---\n<think>In section [2], I found clear evidence:\n- \"再审申请人吴某某诉被申请人东莞市生态环境局罚款案\" - This is a case about a fine imposed by the Ecology and Environment Bureau\n- \"（2023）粤19行终1137号行政判决\" - The case number contains \"行\" which indicates \"行政\" (administrative), and it explicitly says \"行政判决\" (administrative judgment)\n\nThis is definitive evidence that DOC3 (《判决文书3》) is an administrative case (行政案件).\n\nI have sufficient evidence to classify this document. I can now stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"Found clear evidence that this is an administrative case (行政案件) based on the case number containing '行' and explicit mention of '行政判决'\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书3》\",\n      \"what\": \"行政案件 - 再审申请人吴某某诉被申请人东莞市生态环境局罚款案，案号（2023）粤19行终1137号行政判决\",\n      \"when\": \"2023\",\n      \"where\": \"[2] 案件由来与审理经过\",\n      \"why\": \"按照'民事案件' '执行案件' '行政案件'这3种案件类型对判决文书进行分类\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"2\",\n        \"section_title\": \"案件由来与审理经过\",\n        \"verbatim\": \"再审申请人吴某某诉被申请人东莞市生态环境局罚款案，不服广东省东莞市中级人民法院（2023）粤19行终1137号行政判决，向本院申请再审。\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

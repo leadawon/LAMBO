@@ -1,0 +1,9 @@
+{
+  "final_answer": [
+    "MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing",
+    "Understanding the Difficulty of Training Transformers",
+    "Very Deep Transformers for Neural Machine Translation"
+  ],
+  "raw_text": "[\"MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing\", \"Understanding the Difficulty of Training Transformers\", \"Very Deep Transformers for Neural Machine Translation\"]",
+  "answer_basis": "The Generator should construct a linear citation chain using the following sequence of titles, supported by the evidence units:\n1. \"MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing\" (from DOC1, U1), which cites the next paper.\n2. \"Understanding the Difficulty of Training Transformers\" (from DOC3, U3), which is cited by the first paper and cites the third paper.\n3. \"Very Deep Transformers for Neural Machine Translation\" (from DOC2, U2), which is cited by the second paper.\n\nThis sequence is derived from the relation R1 (U1 -> U3 -> U2 path) and excludes the cyclic relation R2 (U2 -> U3) to maintain linearity. The chain is: [\"MonaCoBERT: Monotonic attention based ConvBERT for Knowledge Tracing\", \"Understanding the Difficulty of Training Transformers\", \"Very Deep Transformers for Neural Machine Translation\"]."
+}

@@ -1,14 +1,17 @@
-"""GeneratorV2 — paired with GlobalComposerV3.
+"""GeneratorV2 — paired with GlobalComposerV2 (reading_trace flow).
 
-Consumes the composer v3 handoff (query_spec / doc_records / structure /
-completeness / filled_skeleton) and emits the user-facing answer. The
-generator does NOT redo cross-doc reasoning — its job is to verify the
-filled_skeleton conforms to the instruction's exact format and emit it.
+Consumes the Composer's tagged plain-text package
+    reading_trace / evidence_units / evidence_relations / answer_basis /
+    uncertainty
+and emits the user-facing answer in the exact format requested by the
+instruction. The Composer never prescribes the answer's surface form;
+the Generator reads the instruction and picks the right surface from
+the answer_basis (paired with concrete entities / values / doc_ids /
+doc_titles inside the evidence_units block).
 """
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from typing import Any, Dict, Optional, Union
 
@@ -16,13 +19,21 @@ from ..backend import GeminiClient, OpenAIClient, QwenLocalClient
 from ..common import extract_json_payload, read_json, write_json
 
 
+# Generous output budget — long reading_trace / evidence_units / multi-doc
+# legal cases can require headroom. The runner can override via the
+# `max_output_tokens` constructor argument.
+DEFAULT_MAX_OUTPUT_TOKENS = 16384
+
+
 class GeneratorV2:
     def __init__(
         self,
         llm: Union[QwenLocalClient, GeminiClient, OpenAIClient],
         prompt_dir: Optional[Path] = None,
+        max_output_tokens: int = DEFAULT_MAX_OUTPUT_TOKENS,
     ) -> None:
         self.llm = llm
+        self.max_output_tokens = max_output_tokens
         pdir = prompt_dir or Path(__file__).resolve().parents[1] / "prompts" / "generate_v2"
         self.system_prompt = (pdir / "system.txt").read_text(encoding="utf-8").strip()
         self.user_template = (pdir / "user.txt").read_text(encoding="utf-8").strip()
@@ -35,39 +46,39 @@ class GeneratorV2:
         composed: Dict[str, Any],
         sample_dir: Path,
         force: bool = False,
-        doc_title_list: Optional[Dict[str, str]] = None,
+        doc_title_list: Optional[Dict[str, str]] = None,  # accepted for back-compat; ignored
     ) -> Dict[str, Any]:
         cache_path = sample_dir / "generator.json"
         if cache_path.exists() and not force:
             return read_json(cache_path)
 
-        query_spec = composed.get("query_spec", {}) or {}
-        doc_records = composed.get("doc_records", []) or []
-        structure = composed.get("structure", {}) or {}
-        completeness = composed.get("completeness", {}) or {}
-        filled_skeleton = composed.get("filled_skeleton", None)
+        # All doc identity (doc_id + doc_title) and entity material is
+        # carried inside evidence_units / answer_basis. We do NOT pass a
+        # separate doc_title bundle.
+        reading_trace      = composed.get("reading_trace", "")
+        evidence_units     = composed.get("evidence_units", "")
+        evidence_relations = composed.get("evidence_relations", "")
+        answer_basis       = composed.get("answer_basis", "")
+        uncertainty        = composed.get("uncertainty", "")
 
-        title_list = doc_title_list or {}
         user_prompt = self.user_template.format(
             question=question,
             instruction=instruction,
-            doc_title_list=json.dumps(title_list, ensure_ascii=False, indent=2),
-            query_spec_json=json.dumps(query_spec, ensure_ascii=False, indent=2),
-            doc_records_json=json.dumps(doc_records, ensure_ascii=False, indent=2),
-            structure_json=json.dumps(structure, ensure_ascii=False, indent=2),
-            completeness_json=json.dumps(completeness, ensure_ascii=False, indent=2),
-            filled_skeleton_json=json.dumps(
-                filled_skeleton, ensure_ascii=False, indent=2
-            ),
+            reading_trace=reading_trace,
+            evidence_units=evidence_units,
+            evidence_relations=evidence_relations,
+            answer_basis=answer_basis,
+            uncertainty=uncertainty,
         )
 
         raw_text = self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=8192,
+            max_output_tokens=self.max_output_tokens,
             metadata={"module": "generator_v2"},
         )
 
+        # Try to parse as JSON first; fall back to the raw string.
         final_answer: Any = raw_text.strip()
         parsed = extract_json_payload(raw_text)
         if parsed is not None:
@@ -76,8 +87,7 @@ class GeneratorV2:
         result = {
             "final_answer": final_answer,
             "raw_text": raw_text,
-            "filled_skeleton": filled_skeleton,
-            "ref_unit": (query_spec.get("projector") or {}).get("ref_unit", ""),
+            "answer_basis": answer_basis,
         }
         write_json(cache_path, result)
         return result

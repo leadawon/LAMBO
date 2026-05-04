@@ -3,8 +3,12 @@
 Identical loop to DocRefineAgent (think→search→info) but consumes the TOC-based
 doc_payload produced by AnchorAgentV2 instead of the block-based anchor payload.
 
-Inputs per doc: doc_title + toc (list of {number, title, level, char_start, char_end, text}).
-The LLM references sections by their dotted number (e.g. "3.2").
+Inputs per doc: doc_title + toc (list of {number, title, level, char_start,
+char_end, text}). The LLM references sections by their dotted number (e.g.
+"3.2"). The agent now expects the LLM's <answer> to be a single JSON object
+with `scan_result` and `records[]`, where each record carries 5W1H slots, a
+verbatim source span, and an optional `found_relation` triple. The raw verbatim
+text is preserved alongside as `evidence` for backward compatibility.
 """
 
 from __future__ import annotations
@@ -20,6 +24,22 @@ from ..common import (
     read_json,
     write_json,
 )
+
+
+VALID_SCAN_RESULTS = {
+    "evidence_found",
+    "negative_evidence_found",
+    "irrelevant_document",
+    "insufficient_evidence",
+}
+
+VALID_HOW_TAGS = {
+    "lookup_value",
+    "rank_input",
+    "classification_cue",
+    "constraint_check",
+    "relation_evidence",
+}
 
 
 class DocRefineAgentV2:
@@ -73,9 +93,130 @@ class DocRefineAgentV2:
         return self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=8192,
+            max_output_tokens=12288,
             metadata={"module": "doc_refine_v2", "phase": "plan_search", "doc_id": doc_id},
         )
+
+    @staticmethod
+    def _normalise_record(
+        rec: Any,
+        section_by_id: Dict[str, Dict[str, Any]],
+    ) -> Optional[Dict[str, Any]]:
+        """Return a cleaned record dict, or None if it lacks a verbatim
+        source span. Computes char_start/char_end relative to the opened
+        section text whenever the verbatim string is found there."""
+        if not isinstance(rec, dict):
+            return None
+        src = rec.get("source")
+        if not isinstance(src, dict):
+            return None
+        verbatim = str(src.get("verbatim", "")).strip()
+        if not verbatim:
+            return None
+        section_id = str(src.get("section", "")).strip()
+        section_title = str(src.get("section_title", "")).strip()
+        if not section_title and section_id in section_by_id:
+            section_title = str(section_by_id[section_id].get("title", ""))
+
+        # Post-hoc char-span lookup (best effort)
+        char_start, char_end = -1, -1
+        section_text = ""
+        if section_id in section_by_id:
+            section_text = section_by_id[section_id].get("text", "") or ""
+            idx = section_text.find(verbatim)
+            if idx >= 0:
+                char_start, char_end = idx, idx + len(verbatim)
+
+        cleaned_source: Dict[str, Any] = {
+            "section": section_id,
+            "section_title": section_title,
+            "verbatim": verbatim,
+            "char_start": char_start,
+            "char_end": char_end,
+        }
+
+        # Optional generic relation triple (subject, predicate, object).
+        # Polarity is intentionally NOT separately tracked — the
+        # predicate carries any negation, and document-level absence is
+        # already represented by scan_result="negative_evidence_found".
+        rel_raw = rec.get("found_relation")
+        cleaned_rel: Optional[Dict[str, Any]] = None
+        if isinstance(rel_raw, dict):
+            subj = str(rel_raw.get("subject", "")).strip()
+            pred = str(rel_raw.get("predicate", "")).strip().lower()
+            obj = str(rel_raw.get("object", "")).strip()
+            if subj or pred or obj:
+                cleaned_rel = {
+                    "subject": subj,
+                    "predicate": pred,
+                    "object": obj,
+                }
+
+        how = str(rec.get("how", "")).strip().lower()
+        if how not in VALID_HOW_TAGS:
+            # Default to lookup_value if missing/unknown
+            how = "lookup_value"
+
+        return {
+            "who":   str(rec.get("who", "")).strip(),
+            "what":  str(rec.get("what", "")).strip(),
+            "when":  str(rec.get("when", "—")).strip() or "—",
+            "where": str(rec.get("where", "")).strip(),
+            "why":   str(rec.get("why", "")).strip(),
+            "how":   how,
+            "source": cleaned_source,
+            "found_relation": cleaned_rel,
+        }
+
+    @staticmethod
+    def _parse_answer_block(
+        answer_text: str,
+        section_by_id: Dict[str, Dict[str, Any]],
+    ) -> Dict[str, Any]:
+        """Parse the LLM's <answer> JSON; tolerate missing fields and
+        legacy verbatim-only output. Always returns a dict with
+        scan_result, records, and a flat verbatim-string fallback."""
+        if not answer_text or not answer_text.strip():
+            return {
+                "scan_result": "insufficient_evidence",
+                "records": [],
+                "verbatim_blob": "",
+            }
+
+        payload = extract_json_payload(answer_text)
+        if isinstance(payload, dict):
+            scan = str(payload.get("scan_result", "")).strip()
+            if scan not in VALID_SCAN_RESULTS:
+                scan = "evidence_found" if payload.get("records") else "insufficient_evidence"
+            raw_records = payload.get("records", [])
+            records: List[Dict[str, Any]] = []
+            if isinstance(raw_records, list):
+                for rec in raw_records:
+                    cleaned = DocRefineAgentV2._normalise_record(rec, section_by_id)
+                    if cleaned is not None:
+                        records.append(cleaned)
+            verbatim_blob = "\n".join(
+                r["source"]["verbatim"] for r in records if r.get("source", {}).get("verbatim")
+            )
+            if scan == "evidence_found" and not records:
+                # Promised evidence but no usable record — downgrade
+                scan = "insufficient_evidence"
+            return {
+                "scan_result": scan,
+                "records": records,
+                "verbatim_blob": verbatim_blob,
+            }
+
+        # Legacy fallback: payload was a list of strings or a single string.
+        if isinstance(payload, list):
+            blob = "\n".join(str(x) for x in payload if x)
+        else:
+            blob = answer_text.strip()
+        return {
+            "scan_result": "evidence_found" if blob else "insufficient_evidence",
+            "records": [],
+            "verbatim_blob": blob,
+        }
 
     def run(
         self,
@@ -109,7 +250,8 @@ class DocRefineAgentV2:
         opened_sections: List[str] = []
         accumulated_trace = ""
 
-        scan_result = "no_evidence"
+        scan_result = "insufficient_evidence"
+        evidence_records: List[Dict[str, Any]] = []
         evidence_text = ""
 
         all_numbers = [str(e.get("number", "")) for e in toc]
@@ -151,8 +293,12 @@ class DocRefineAgentV2:
                 else:
                     if answer_text:
                         accumulated_trace += f"<answer>{answer_text}</answer>\n"
-                        evidence_text = answer_text.strip()
-                        scan_result = "evidence_found" if evidence_text else "no_evidence"
+                        parsed = self._parse_answer_block(answer_text, section_by_id)
+                        scan_result = parsed["scan_result"]
+                        evidence_records = parsed["records"]
+                        evidence_text = parsed["verbatim_blob"]
+                    else:
+                        scan_result = "insufficient_evidence"
                     break
 
             if not anchor_id:
@@ -161,7 +307,6 @@ class DocRefineAgentV2:
                 else:
                     break
 
-            # Validate; fall back to first unopened section
             if anchor_id not in section_by_id or anchor_id in opened_sections:
                 fallback_id = ""
                 for num in all_numbers:
@@ -180,7 +325,8 @@ class DocRefineAgentV2:
             "doc_id": doc_id,
             "doc_title": doc_title,
             "scan_result": scan_result,
-            "evidence": evidence_text,
+            "evidence_records": evidence_records,
+            "evidence": evidence_text,           # backward-compat: verbatim blob
             "opened_anchors": opened_sections,
             "rounds_used": len(opened_sections),
             "trace": accumulated_trace,

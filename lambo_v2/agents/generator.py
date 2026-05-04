@@ -1,9 +1,12 @@
 """Generator — final answer serialization.
 
-Consumes the composed cross-document analysis `{projection_map, records,
-structure_description}` and emits the user-facing answer in the exact format
-requested by the question/instruction. All internal DOC ids are resolved to real
-entity names through the projection_map before the answer is returned.
+Consumes the Composer's tagged plain-text package
+    reading_trace / evidence_units / evidence_relations / answer_basis /
+    uncertainty
+and emits the user-facing answer in the exact format requested by the
+instruction. The Composer never prescribes the answer's surface form;
+the Generator reads the instruction and picks the right surface from
+the answer_basis.
 """
 
 from __future__ import annotations
@@ -35,34 +38,36 @@ class Generator:
         composed: Dict[str, Any],
         sample_dir: Path,
         force: bool = False,
-        doc_title_list: Optional[Dict[str, str]] = None,
+        doc_title_list: Optional[Dict[str, str]] = None,  # accepted for backward compat; ignored
     ) -> Dict[str, Any]:
         cache_path = sample_dir / "generator.json"
         if cache_path.exists() and not force:
             return read_json(cache_path)
 
-        projection_map = composed.get("projection_map", {})
-        records = composed.get("records", [])
-        structure_description = composed.get("structure_description", "")
+        # All doc identity (doc_id + doc_title) and entity material is
+        # carried inside the Composer's evidence_units / answer_basis.
+        # We do NOT pass a separate doc_title bundle — the Generator
+        # reads identities from the Composer output itself.
+        reading_trace      = composed.get("reading_trace", "")
+        evidence_units     = composed.get("evidence_units", "")
+        evidence_relations = composed.get("evidence_relations", "")
+        answer_basis       = composed.get("answer_basis", "")
+        uncertainty        = composed.get("uncertainty", "")
 
-        composed_compact = {
-            "structure_description": structure_description,
-            "records": records,
-        }
-
-        title_list = doc_title_list or {}
         user_prompt = self.user_template.format(
             question=question,
             instruction=instruction,
-            doc_title_list=json.dumps(title_list, ensure_ascii=False, indent=2),
-            projection_map=json.dumps(projection_map, ensure_ascii=False, indent=2),
-            composed_json=json.dumps(composed_compact, ensure_ascii=False, indent=2),
+            reading_trace=reading_trace,
+            evidence_units=evidence_units,
+            evidence_relations=evidence_relations,
+            answer_basis=answer_basis,
+            uncertainty=uncertainty,
         )
 
         raw_text = self.llm.generate_text(
             system_prompt=self.system_prompt,
             user_prompt=user_prompt,
-            max_output_tokens=8192,
+            max_output_tokens=16384,
             metadata={"module": "generator"},
         )
 
@@ -75,7 +80,7 @@ class Generator:
         result = {
             "final_answer": final_answer,
             "raw_text": raw_text,
-            "projection_map": projection_map,
+            "answer_basis": answer_basis,
         }
         write_json(cache_path, result)
         return result

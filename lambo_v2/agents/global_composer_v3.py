@@ -40,18 +40,48 @@ class GlobalComposerV3:
         }
 
     @staticmethod
+    def _format_record_card(rec: Dict[str, Any], idx: int) -> str:
+        src = rec.get("source") or {}
+        rel = rec.get("found_relation")
+        lines = [
+            f"  Record {idx}:",
+            f"    who   : {rec.get('who','')}",
+            f"    what  : {rec.get('what','')}",
+            f"    when  : {rec.get('when','—')}",
+            f"    where : {rec.get('where','')}",
+            f"    why   : {rec.get('why','')}",
+            f"    how   : {rec.get('how','')}",
+            f"    source.section       : {src.get('section','')}",
+            f"    source.section_title : {src.get('section_title','')}",
+            f"    source.verbatim      : {src.get('verbatim','')!r}",
+        ]
+        if isinstance(rel, dict):
+            lines.append(
+                f"    found_relation       : "
+                f"{rel.get('subject','')!r} --[{rel.get('predicate','')}]--> "
+                f"{rel.get('object','')!r}"
+            )
+        return "\n".join(lines)
+
+    @staticmethod
     def _prepare_sheets_for_prompt(doc_sheets: List[Dict[str, Any]]) -> str:
         parts: List[str] = []
         for sheet in doc_sheets:
             doc_id = sheet["doc_id"]
             title = sheet.get("doc_title", "")
-            status = sheet.get("scan_result", "no_evidence")
-            evidence = (sheet.get("evidence", "") or "").strip()
+            status = sheet.get("scan_result", "insufficient_evidence")
+            records = sheet.get("evidence_records") or []
+            verbatim_blob = (sheet.get("evidence", "") or "").strip()
 
             block = f"### {doc_id}: {title}\n"
             block += f"Status: {status}\n"
-            if evidence:
-                block += f"Evidence:\n{evidence}\n"
+            if isinstance(records, list) and records:
+                block += "Evidence records (5W1H):\n"
+                for i, rec in enumerate(records, 1):
+                    if isinstance(rec, dict):
+                        block += GlobalComposerV3._format_record_card(rec, i) + "\n"
+            elif verbatim_blob:
+                block += f"Verbatim evidence (legacy):\n{verbatim_blob}\n"
             else:
                 block += "Evidence: (none)\n"
             parts.append(block)

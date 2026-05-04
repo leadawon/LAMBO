@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书1》",
+      "what": "驳回上诉，维持原判。二审案件受理费5354元，由上诉人某电力公司负担。本判决为终审判决。",
+      "when": "—",
+      "where": "[8] 二审判决结果与终审声明",
+      "why": "判断该判决文书对应的判决结果序号",
+      "how": "lookup_value",
+      "source": {
+        "section": "8",
+        "section_title": "二审判决结果与终审声明",
+        "verbatim": "驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。",
+        "char_start": 89,
+        "char_end": 135
+      },
+      "found_relation": {
+        "subject": "《判决文书1》",
+        "predicate": "matches",
+        "object": "判决结果10"
+      }
+    }
+  ],
+  "evidence": "驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。",
+  "opened_anchors": [
+    "8"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to read a judgment document (DOC1: 《判决文书1》) and determine which of the 10 provided judgment results (判决结果1-10) matches this document.\n\nI need to:\n1. Open sections of the document to find the actual judgment result\n2. Compare it with the 10 provided options\n3. Output the matching result in the specified JSON format\n\nLet me start by opening the section that contains the judgment result. Based on the document structure, section [8] \"二审判决结果与终审声明\" (Second Instance Judgment Result and Final Judgment Declaration) should contain the judgment result.\n\nLet me open that section first.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"8\",\"expected_evidence\":\"二审判决结果的具体内容，包括是否驳回上诉、维持原判、案件受理费负担等\"}</search>\n<info anchor_id=\"8\">\n综上，某电力公司的上诉理由不能成立，本院不予支持。一审法院认定事实清楚，适用法律正确，实体处理得当。依照《中华人民共和国民事诉讼法》第一百七十七条第一款第一项之规定，判决如下：\n驳回上诉，维持原判。\n二审案件受理费5354元，由上诉人某电力公司负担。\n本判决为终审判决。\n</info>\n\n--- Round 2 ---\n<think>I found the judgment result in section [8]. Let me analyze what I found:\n\nThe judgment result in DOC1 (《判决文书1》) is:\n- 驳回上诉，维持原判。\n- 二审案件受理费5354元，由上诉人某电力公司负担。\n- 本判决为终审判决。\n\nNow I need to compare this with the 10 provided judgment results:\n\n判决结果1: 驳回上诉，维持原判。\\n二审案件受理费4389元。由上诉人赵某负担50元，上诉人某保险公司负担4339元。\\n本判决为终审判决。\n- Different fee amount (4389 vs 5354)\n- Different parties (赵某/某保险公司 vs 某电力公司)\n\n判决结果2: 驳回上诉，维持原判。\\n二审案件受理费50元，由上诉人石家庄市新华区人民政府负担。\\n本判决为终审判决。\n- Different fee amount (50 vs 5354)\n- Different party (石家庄市新华区人民政府 vs 某电力公司)\n\n判决结果3: 被告张某某、周某于本判决生效后十日内协助原告张某办理将西安市曲江新区××路*号*幢*室房屋所有权转移登记至原告张某名下的过户手续...\n- This is a first instance judgment about property transfer, not a second instance appeal judgment\n\n判决结果4: 驳回复议申请人李某妮的复议申请，维持朝阳市中级人民法院（2023）辽13执恢46号拘留决定。\n- This is about a detention decision, not a civil appeal\n\n判决结果5: 一、指令辽宁省朝阳市中级人民法院对本案进行再审；\\n二、本案再审期间不停止原判决、裁定的执行。\n- This is about ordering a retrial, not a final judgment\n\n判决结果6: 一、维持广东省广州市白云区人民法院(2022)粤0111民初21727号民事判决第一项至第十一项；\\n二、撤销广东省广州市白云区人民法院(2022)粤0111民初21727号民事判决第十二项；...\n- This is a more complex judgment with multiple items, different from DOC1\n\n判决结果7: 一、变更广东省广州市海珠区人民法院（2023）粤0105民初12767号民事判决第一项为...\n- This is about inheritance, different from DOC1\n\n判决结果8: 一、维持鞍山市千山区人民法院（2023）辽0311刑初137号刑事判决中对上诉人路某的定罪部分。\n- This is a criminal judgment, not civil\n\n判决结果9: 一、维持河南省南阳市卧龙区人民法院（2023）豫1303民初7817号民事判决第二项及诉讼费用负担部分；...\n- This is about returning betrothal gifts, different from DOC1\n\n判决结果10: 驳回上诉，维持原判。\\n二审案件受理费5354元，由上诉人某电力公司负担。\\n本判决为终审判决。\n- This matches exactly! Same fee amount (5354元), same party (某电力公司), same structure\n\nSo DOC1 (《判决文书1》) matches 判决结果10.\n\nI have found the evidence. Now I need to stop and output the answer in the required format.</think>\n<search>{\"action\":\"stop\",\"reason\":\"Found the judgment result in section [8] which matches 判决结果10 exactly - same fee amount (5354元), same party (某电力公司), same structure (驳回上诉，维持原判，二审案件受理费，终审判决)\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书1》\",\n      \"what\": \"驳回上诉，维持原判。二审案件受理费5354元，由上诉人某电力公司负担。本判决为终审判决。\",\n      \"when\": \"—\",\n      \"where\": \"[8] 二审判决结果与终审声明\",\n      \"why\": \"判断该判决文书对应的判决结果序号\",\n      \"how\": \"lookup_value\",\n      \"source\": {\n        \"section\": \"8\",\n        \"section_title\": \"二审判决结果与终审声明\",\n        \"verbatim\": \"驳回上诉，维持原判。\\n二审案件受理费5354元，由上诉人某电力公司负担。\\n本判决为终审判决。\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书1》\",\n        \"predicate\": \"matches\",\n        \"object\": \"判决结果10\"\n      }\n    }\n  ]\n}</answer>\n"
+}

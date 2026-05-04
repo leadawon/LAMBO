@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书3》",
+      "what": "本案系行政非诉执行案件",
+      "when": "—",
+      "where": "[7] 本院认为",
+      "why": "classify judgment document into one of 5 case types: 海事海商纠纷 / 执行案由-行政非诉执行 / 行政主体-房屋拆迁管理（拆迁） / 刑事赔偿 / 行政主体-劳动和社会保障行政管理（劳动，社会保障）",
+      "how": "classification_cue",
+      "source": {
+        "section": "7",
+        "section_title": "本院认为",
+        "verbatim": "本案系行政非诉执行案件",
+        "char_start": 117,
+        "char_end": 128
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "本案系行政非诉执行案件",
+  "opened_anchors": [
+    "2",
+    "7"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>The user wants me to classify a judgment document (DOC3: 《判决文书3》) into one of 5 case types:\n1. 海事海商纠纷 (Maritime and Commercial Disputes)\n2. 执行案由 - 行政非诉执行 (Administrative Non-litigation Execution)\n3. 行政主体 - 房屋拆迁管理（拆迁） (Administrative Subject - House Demolition Management)\n4. 刑事赔偿 (Criminal Compensation)\n5. 行政主体 - 劳动和社会保障行政管理（劳动，社会保障） (Administrative Subject - Labor and Social Security Administration)\n\nI need to read the document to determine which category it belongs to. I should start by opening sections that typically contain case type information, such as the case origin (案件由来) or the court's opinion (本院认为).\n\nLet me start by opening section [2] 案件由来与审理经过 (Case Origin and Trial Process) as this often contains the case type or cause of action.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"case type, cause of action, or case category information\"}</search>\n<info anchor_id=\"2\">\n复议申请人唐晓梅不服渝中区人民法院（以下简称渝中法院）（2023）渝0103执异73号裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，现已审查终结。\n\n</info>\n\n--- Round 2 ---\n<think>The user wants me to classify DOC3 (《判决文书3》) into one of 5 case types. I've opened section [2] 案件由来与审理经过 which shows this is a case about \"复议申请人唐晓梅不服渝中区人民法院（以下简称渝中法院）（2023）渝0103执异73号裁定，向本院申请复议\" - this is about an administrative reconsideration (复议) regarding an execution objection ruling (执异裁定).\n\nThe case type \"执异\" (execution objection) suggests this might be related to \"执行案由-行政非诉执行\" (Administrative Non-litigation Execution). However, I need more information to confirm this classification.\n\nLet me check section [7] 本院认为 (Court's Opinion) which typically contains the court's reasoning and may clarify the case type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"7\",\"expected_evidence\":\"court's reasoning about case type or cause of action\"}</search>\n<info anchor_id=\"7\">\n本院认为，依照《最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定》第七条第三款：“除本规定第十九条规定的情形外，被执行人以执行依据生效之前的实体事由提出排除执行异议的，人民法院应当告知其依法申请再审或者通过其他程序解决。”本案系行政非诉执行案件，围绕渝中府征补[2018]21号《关于征收渝中区渝铁村xx号x-x-x号房屋的补偿决定》，已经过本院、重庆市高级人民法院相关判决认定其效力，渝中法院（2021）渝0103行审18号行政裁定书裁定准予强制执行该征收决定。从被执行人唐晓梅所提出异议所依据的事实和理由看，其认为重庆市渝中区人民政府征收过程存在违法和不合理及未提交申请强制执行所应当提供的材料，实质是对《关于征收渝中区渝铁村xx号x-x-x号房屋的补偿决定》的作出过程和渝中法院（2021）渝0103行审18号行政裁定作出的过程提出异议，不符合执行异议的受理条件。因此，复议申请人的复议理由不成立，本院不予支持。\n\n</info>\n\n--- Round 3 ---\n<think>From section [7] 本院认为, I found clear evidence about the case type:\n\n\"本案系行政非诉执行案件\" - This explicitly states \"This case is an administrative non-litigation execution case\"\n\nThis directly matches one of the 5 categories: \"执行案由-行政非诉执行\" (Administrative Non-litigation Execution)\n\nThe document also mentions:\n- 渝中府征补[2018]21号《关于征收渝中区渝铁村xx号x-x-x号房屋的补偿决定》 - This is about house demolition/compensation (房屋征收补偿决定)\n- 渝中法院（2021）渝0103行审18号行政裁定书裁定准予强制执行该征收决定\n\nHowever, the court explicitly classifies this as \"行政非诉执行案件\" (administrative non-litigation execution case), which is the primary classification I should use.\n\nI have sufficient evidence to classify this document. The case type is clearly stated as \"行政非诉执行案件\" which corresponds to \"执行案由-行政非诉执行\".\n\nI should now stop and provide the answer with the evidence record.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found clear evidence of case type classification\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书3》\",\n      \"what\": \"本案系行政非诉执行案件\",\n      \"when\": \"—\",\n      \"where\": \"[7] 本院认为\",\n      \"why\": \"classify judgment document into one of 5 case types: 海事海商纠纷 / 执行案由-行政非诉执行 / 行政主体-房屋拆迁管理（拆迁） / 刑事赔偿 / 行政主体-劳动和社会保障行政管理（劳动，社会保障）\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"7\",\n        \"section_title\": \"本院认为\",\n        \"verbatim\": \"本案系行政非诉执行案件\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

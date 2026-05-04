@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "DOC1公司",
+      "what": "营业收入较上一报告期变化为20.76%",
+      "when": "2024年一季度",
+      "where": "[2.1] 主要会计数据和财务指标 · 营业收入行",
+      "why": "找出'营业收入较上一报告期变化'最高的公司",
+      "how": "rank_input",
+      "source": {
+        "section": "2.1",
+        "section_title": "主要会计数据和财务指标",
+        "verbatim": "营业收入（元）|1,192,456,727.58|987,449,350.03|20.76%",
+        "char_start": 90,
+        "char_end": 136
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "营业收入（元）|1,192,456,727.58|987,449,350.03|20.76%",
+  "opened_anchors": [
+    "2.1"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to find which company has the highest change in operating revenue compared to the previous reporting period. I need to look at financial reports from multiple companies (DOC1, DOC2, DOC3) and compare their operating revenue changes.\n\nI'm currently processing DOC1 (《2024年一季度报告》). I need to find the operating revenue (营业收入) and its change compared to the previous period.\n\nThe most relevant section would be [2.1] 主要会计数据和财务指标 (Main accounting data and financial indicators) or [5.1.2] 合并利润表 (Consolidated Income Statement).\n\nLet me start by opening section [2.1] which typically contains key financial data including operating revenue and year-over-year changes.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2.1\",\"expected_evidence\":\"营业收入数据及较上一报告期的变化百分比\"}</search>\n<info anchor_id=\"2.1\">\n（一）主要会计数据和财务指标\n公司是否需追溯调整或重述以前年度会计数据\n□是 区否\n|-|本报告期|上年同期|本报告期比上年同期增减（%）|\n|---|---|---|---|\n|营业收入（元）|1,192,456,727.58|987,449,350.03|20.76%|\n|归属于上市公司股东的净利润（元）|23,049,805.44|-26,222,417.80|187.90%|\n|归属于上市公司股东的扣除非经常性损益的净利润<br>（元）|12,016,299.06|-55,683,498.11|121.58%|\n|经营活动产生的现金流量净额（元）|134,010,794.82|-24,340,660.30|650.56%|\n|基本每股收益（元/股）|0.0131|-0.0149|187.92%|\n|稀释每股收益（元/股）|0.0131|-0.0149|187.92%|\n|加权平均净资产收益率|0.51%|-0.55%|191.85%|\n|-|本报告期末|上年度末|本报告期末比上年度末增减（%）|\n|总资产（元）|7,326,716,263.80|7,577,226,723.08|-3.31%|\n|归属于上市公司股东的所有者权益（元）|4,572,925,116.94|4,553,023,720.41|0.44%|（二）非经常性损益项目和金额\n\n</info>\n\n--- Round 2 ---\n<think>I found the operating revenue data in section [2.1] of DOC1. The key information is:\n- 营业收入（元）: 1,192,456,727.58 (current period)\n- 上年同期: 987,449,350.03 (previous period)\n- 本报告期比上年同期增减（%）: 20.76%\n\nThis shows that for DOC1, the operating revenue change compared to the previous reporting period is 20.76%.\n\nHowever, I need to compare this with DOC2 and DOC3 to find which company has the highest change. Since I'm only processing DOC1 in this round, I should extract this evidence and then the system will process the other documents.\n\nLet me record this evidence and stop for DOC1.</think>\n<search></search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"DOC1公司\",\n      \"what\": \"营业收入较上一报告期变化为20.76%\",\n      \"when\": \"2024年一季度\",\n      \"where\": \"[2.1] 主要会计数据和财务指标 · 营业收入行\",\n      \"why\": \"找出'营业收入较上一报告期变化'最高的公司\",\n      \"how\": \"rank_input\",\n      \"source\": {\n        \"section\": \"2.1\",\n        \"section_title\": \"主要会计数据和财务指标\",\n        \"verbatim\": \"营业收入（元）|1,192,456,727.58|987,449,350.03|20.76%\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

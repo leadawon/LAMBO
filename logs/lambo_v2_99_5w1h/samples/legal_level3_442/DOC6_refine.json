@@ -1,0 +1,34 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书6》",
+      "what": "案外人执行异议之诉",
+      "when": "—",
+      "where": "[2] 案件由来与审理经过",
+      "why": "classify judgment document into one of 6 case types",
+      "how": "classification_cue",
+      "source": {
+        "section": "2",
+        "section_title": "案件由来与审理经过",
+        "verbatim": "再审申请人吴某因与被申请人赵某、原审被告李某某案外人执行异议之诉一案",
+        "char_start": 0,
+        "char_end": 34
+      },
+      "found_relation": {
+        "subject": "《判决文书6》",
+        "predicate": "classified_as",
+        "object": "适用特殊程序案件案由"
+      }
+    }
+  ],
+  "evidence": "再审申请人吴某因与被申请人赵某、原审被告李某某案外人执行异议之诉一案",
+  "opened_anchors": [
+    "1",
+    "2"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>I need to classify this judgment document (DOC6: 《判决文书6》) into one of the 6 case types:\n1. 适用特殊程序案件案由\n2. 侵权责任纠纷\n3. 民间借贷纠纷\n4. 行政行为-行政监督\n5. 渎职罪\n6. 行政主体-房屋拆迁管理（拆迁）\n\nTo do this, I need to find the case type/cause of action (案由) in the document. Let me start by opening section [1] 当事人基本信息 which typically contains basic case information including the case type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"案件案由/案件类型信息\"}</search>\n<info anchor_id=\"1\">\n再审申请人（申请执行人、一审被告、二审上诉人）：吴某，男，1974年1月2日出生，汉族，新疆某房地产开发有限公司董事长，住新疆维吾尔自治区乌鲁木齐市头屯河区。\n委托诉讼代理人：李某，男，住新疆维吾尔自治区乌鲁木齐市天山区，由新疆某供应链管理有限公司推荐。\n被申请人（案外人、一审原告、二审被上诉人）：赵某，女，1965年6月10日出生，汉族，住新疆维吾尔自治区乌鲁木齐市天山区。\n委托诉讼代理人：马金芳，上海市海华永泰（乌鲁木齐）律师事务所律师。\n二审被上诉人（被执行人、一审被告）：李某某，男，1964年7月30日出生，汉族，住新疆维吾尔自治区乌鲁木齐市新市区。\n\n</info>\n\n--- Round 2 ---\n<think>I opened section [1] 当事人基本信息 which contains party information but does not show the case type/cause of action (案由). I need to find where the case type is specified. Let me check section [2] 案件由来与审理经过 which typically contains information about the case origin and type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"案件案由/案件类型信息\"}</search>\n<info anchor_id=\"2\">\n再审申请人吴某因与被申请人赵某、原审被告李某某案外人执行异议之诉一案，不服新疆维吾尔自治区乌鲁木齐市中级人民法院（2023）新01民终3632号民事判决，向本院提起再审。本院于2024年3月5日立案后，依法组成合议庭进行审查，现已审查终结。\n\n</info>\n\n--- Round 3 ---\n<think>From section [2] 案件由来与审理经过, I found the key information: \"再审申请人吴某因与被申请人赵某、原审被告李某某案外人执行异议之诉一案\". This indicates the case type is \"案外人执行异议之诉\" (third-party execution objection lawsuit).\n\nNow I need to classify this into one of the 6 categories:\n1. 适用特殊程序案件案由\n2. 侵权责任纠纷\n3. 民间借贷纠纷\n4. 行政行为-行政监督\n5. 渎职罪\n6. 行政主体-房屋拆迁管理（拆迁）\n\n\"案外人执行异议之诉\" is a civil procedure case related to execution proceedings. This type of case typically falls under \"适用特殊程序案件案由\" (special procedure case causes) as it involves special civil procedure rules for execution objections.\n\nLet me verify this by checking if there's more information in other sections that might clarify the case type. However, the information from section [2] seems sufficient to identify the case type.\n\nI have enough evidence to classify this document. The case is \"案外人执行异议之诉\" which belongs to \"适用特殊程序案件案由\".\n\nLet me stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found case type information in section [2] - 案外人执行异议之诉 belongs to 适用特殊程序案件案由\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书6》\",\n      \"what\": \"案外人执行异议之诉\",\n      \"when\": \"—\",\n      \"where\": \"[2] 案件由来与审理经过\",\n      \"why\": \"classify judgment document into one of 6 case types\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"2\",\n        \"section_title\": \"案件由来与审理经过\",\n        \"verbatim\": \"再审申请人吴某因与被申请人赵某、原审被告李某某案外人执行异议之诉一案\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书6》\",\n        \"predicate\": \"classified_as\",\n        \"object\": \"适用特殊程序案件案由\"\n      }\n    }\n  ]\n}</answer>\n"
+}

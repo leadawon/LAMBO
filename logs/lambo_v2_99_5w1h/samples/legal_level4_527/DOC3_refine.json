@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC3",
+  "doc_title": "《判决文书3》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书3》",
+      "what": "本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。特此通知。",
+      "when": "—",
+      "where": "[1] 申诉通知全文",
+      "why": "判断该判决文书最可能的判决结果",
+      "how": "lookup_value",
+      "source": {
+        "section": "1",
+        "section_title": "申诉通知全文",
+        "verbatim": "本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。\n特此通知。",
+        "char_start": 59,
+        "char_end": 110
+      },
+      "found_relation": {
+        "subject": "《判决文书3》",
+        "predicate": "matches",
+        "object": "判决结果3"
+      }
+    }
+  ],
+  "evidence": "本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。\n特此通知。",
+  "opened_anchors": [
+    "1"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to read a judgment document (DOC3: 《判决文书3》) and determine which of the 10 provided judgment results (判决结果1-10) most likely matches this document.\n\nLet me first understand the task:\n1. I need to read DOC3 (《判决文书3》)\n2. Compare its content with the 10 provided judgment results\n3. Determine which judgment result matches this document\n4. Output in JSON format mapping document title to judgment result number\n\nI'm currently at Round 1 for DOC3. I need to open section [1] \"申诉通知全文\" to see the content of this document.\n\nLet me start by opening the first section to see what this document contains.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"Content of the judgment document to compare with the 10 provided judgment results\"}</search>\n<info anchor_id=\"1\">\n史成金：\n你因非法吸收公众存款一案，不服辽宁省凤城市人民法院（2017）辽0682刑初213号刑事判决，向本院申诉。\n本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。\n特此通知。\n</info>\n\n--- Round 2 ---\n<think>Let me analyze the document content I just retrieved:\n\nThe document (DOC3: 《判决文书3》) is a notification about a complaint/appeal case. The key content is:\n- Person: 史成金 (Shi Chengjin)\n- Case: 非法吸收公众存款一案 (illegal absorption of public deposits case)\n- Original judgment: 辽宁省凤城市人民法院（2017）辽0682刑初213号刑事判决\n- Court's decision: 本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。\n- Document type: 特此通知 (This is a notification)\n\nNow I need to compare this with the 10 provided judgment results:\n\n判决结果1: 驳回某某甲公司的复议申请，维持湖北省恩施土家族苗族自治州中级人民法院（2023）鄂28执异10号执行裁定。本裁定为终审裁定。\n- About administrative reconsideration, not matching\n\n判决结果2: 驳回吴某某的再审申请。\n- About rejecting retrial application, not matching\n\n判决结果3: 本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。特此通知。\n- This EXACTLY matches the content of DOC3!\n\n判决结果4-10: Various other judgment results about different cases\n\nThe document content matches 判决结果3 almost verbatim. The key phrase \"本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。特此通知。\" appears in both.\n\n\nI have sufficient evidence to conclude that DOC3 corresponds to 判决结果3. I can now stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"Found matching judgment result. The document content exactly matches 判决结果3\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书3》\",\n      \"what\": \"本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。特此通知。\",\n      \"when\": \"—\",\n      \"where\": \"[1] 申诉通知全文\",\n      \"why\": \"判断该判决文书最可能的判决结果\",\n      \"how\": \"lookup_value\",\n      \"source\": {\n        \"section\": \"1\",\n        \"section_title\": \"申诉通知全文\",\n        \"verbatim\": \"本院审查后，决定将你申诉一案指令辽宁省凤城市人民法院审查。请你与辽宁省凤城市人民法院联系。\\n特此通知。\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书3》\",\n        \"predicate\": \"matches\",\n        \"object\": \"判决结果3\"\n      }\n    }\n  ]\n}</answer>\n"
+}

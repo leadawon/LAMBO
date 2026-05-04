@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书1》",
+      "what": "本案为复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议的案件",
+      "when": "2022年4月27日",
+      "where": "[1] 当事人及案件基本信息",
+      "why": "按照5种案由对判决文书进行分类，确定该文书属于'执行案由-对下级法院执行异议裁定的复议'",
+      "how": "classification_cue",
+      "source": {
+        "section": "1",
+        "section_title": "当事人及案件基本信息",
+        "verbatim": "复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议",
+        "char_start": 91,
+        "char_end": 140
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议",
+  "opened_anchors": [
+    "1"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>I need to classify this judgment document (DOC1: 《判决文书1》) into one of the 5 case types:\n1. '执行案由-对下级法院执行异议裁定的复议'\n2. '产品责任纠纷'\n3. '行政行为-行政受理'\n4. '知识产权与竞争'\n5. '不动产登记纠纷'\n\nLooking at the document structure, I can see sections like:\n- [2] 原执行法院查明事实与裁定 (Original execution court's findings and ruling)\n- [3] 复议申请理由与请求 (Reconsideration application reasons and requests)\n- [4] 本院审查意见 (This court's review opinion)\n- [5] 裁定结果 (Ruling result)\n\nThe terms \"执行\" (execution), \"复议\" (reconsideration), \"执行异议\" (execution objection) strongly suggest this is about \"执行案由-对下级法院执行异议裁定的复议\" (Execution case - reconsideration of lower court's execution objection ruling).\n\nLet me open section [1] first to get the basic case information and confirm the case type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"案件基本信息，包括案由、当事人等\"}</search>\n<info anchor_id=\"1\">\n复议申请人（案外人）：杨某，男，1984年5月20日出生，蒙古族。\n委托诉讼代理人：张昌银，四川及第（德阳）律师事务所律师。\n被执行人：金某爱，女，1963年4月1日出生，朝鲜族。\n复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议，本院受理后，依法组成合议庭进行审查，并于2022年4月27日举行了听证，复议申请人杨某及其委托诉讼代理人张昌银参加了听证。现已审查终结。\n\n</info>\n\n--- Round 2 ---\n<think>The <info> block from section [1] provides clear evidence about the case type:\n\n1. \"复议申请人（案外人）：杨某\" - Reconsideration applicant (outsider): Yang Mou\n2. \"复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议\" - Reconsideration applicant Yang Mou is dissatisfied with the execution ruling (2021) Chuan 01 Zhi Yi 2998 of Chengdu Intermediate People's Court and applies for reconsideration to this court\n\nThis clearly indicates this is a case about \"执行案由-对下级法院执行异议裁定的复议\" (Execution case - reconsideration of lower court's execution objection ruling).\n\nThe key evidence is:\n- \"执行裁定\" (execution ruling)\n- \"申请复议\" (apply for reconsideration)\n- \"（2021）川01执异2998号\" - the case number format indicates execution objection case\n\nI have sufficient evidence to classify this document. I should stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"collected all needed evidence\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书1》\",\n      \"what\": \"本案为复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议的案件\",\n      \"when\": \"2022年4月27日\",\n      \"where\": \"[1] 当事人及案件基本信息\",\n      \"why\": \"按照5种案由对判决文书进行分类，确定该文书属于'执行案由-对下级法院执行异议裁定的复议'\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"1\",\n        \"section_title\": \"当事人及案件基本信息\",\n        \"verbatim\": \"复议申请人杨某不服四川省成都市中级人民法院（2021）川01执异2998号执行裁定，向本院申请复议\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

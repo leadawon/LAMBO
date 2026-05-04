@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC4",
+  "doc_title": "《判决文书4》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书4》",
+      "what": "本案为民间借贷纠纷案件，原告陈某文与被告赵某等因借款1258000元及利息产生纠纷",
+      "when": "2022年7月5日立案",
+      "where": "[2] 案件背景与管辖权异议",
+      "why": "按照6种案由对判决文书进行分类，需要确定该文书属于哪一类案由",
+      "how": "classification_cue",
+      "source": {
+        "section": "2",
+        "section_title": "案件背景与管辖权异议",
+        "verbatim": "原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。",
+        "char_start": 0,
+        "char_end": 43
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。",
+  "opened_anchors": [
+    "1",
+    "2"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>I need to classify this judgment document (DOC4: 《判决文书4》) into one of the 6 case types:\n1. 适用特殊程序案件案由\n2. 侵权责任纠纷\n3. 民间借贷纠纷\n4. 行政行为-行政监督\n5. 渎职罪\n6. 行政主体-房屋拆迁管理（拆迁）\n\nTo do this, I need to read the document content to understand what type of case this is. Let me start by opening the first section to get an overview of the case.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"Case type information, parties involved, and basic case details\"}</search>\n<info anchor_id=\"1\">\n原告：陈某文，女，1971年12月22日出生，汉族，住新疆维吾尔自治区乌鲁木齐市头屯河区。\n被告：赵某，男，1970年12月28日出生，汉族，住河北省唐山市丰润区。\n被告：刘某冉，女，1988年12月23日出生，汉族，住北京市顺义区。\n被告：陈某毅，男，1986年4月5日出生，汉族，住山西省榆林市神木市。\n被告：李某生，男，1983年8月24日出生，汉族。户籍地：北京市丰台区。\n\n</info>\n\n--- Round 2 ---\n<think>I've opened section 1 which shows the basic party information - plaintiff and defendants with their personal details. This doesn't tell me what type of case this is. I need to look at other sections to understand the nature of the dispute.\n\nLet me open section 2 which should contain the case background and jurisdictional objection - this might give me more information about what type of case this is.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"Case background information that reveals the nature of the dispute and case type\"}</search>\n<info anchor_id=\"2\">\n原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\n陈某文诉称，其与赵某系同学关系，赵某因做生意投资，先后向陈某文借款1258000元，其中，850000元由刘某冉、陈某毅、李某生提供担保。后借款到期赵某未偿还，故提起诉讼，请求判令赵某偿还借款本金1258000元及利息，刘某冉、陈某毅、李某生承担连带保证责任。\n李某生在提交答辩状期间，对管辖权提出异议。李某生认为其经常居住地为北京市平谷区金海湖镇，本案应由北京市平谷区人民法院管辖。\n北京市丰台区人民法院认为，被告赵某、刘某冉、陈某毅的住所地均不在北京市丰台区，李某生的户籍地虽为北京市丰台区，但其经常居住地为北京市平谷区。因此，管辖权异议成立，本案应由北京市平谷区人民法院管辖。2022年10月20日，北京市丰台区人民法院作出（2022）京0106民初13596号之一民事裁定，将本案移送北京市平谷区人民法院处理。\n\n</info>\n\n--- Round 3 ---\n<think>In Round 2, I opened section 2 which contains crucial information about the case type. The text clearly states:\n\n\"原告陈某文与被告赵某等民间借贷纠纷一案\"\n\nThis explicitly identifies this as a \"民间借贷纠纷\" (private lending dispute) case. The case involves:\n- Plaintiff: 陈某文\n- Defendants: 赵某, 刘某冉, 陈某毅, 李某生\n- Nature: 民间借贷纠纷 (private lending dispute)\n- Amount: 1258000 yuan\n- Issue: Borrowing money for business investment, with guarantees\n\nThis is clear evidence that DOC4 (《判决文书4》) should be classified under \"民间借贷纠纷\".\n\nI have found the evidence I need. The case type is explicitly stated in section 2. I can now stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"Found clear evidence of case type in section 2 - explicitly stated as 民间借贷纠纷\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书4》\",\n      \"what\": \"本案为民间借贷纠纷案件，原告陈某文与被告赵某等因借款1258000元及利息产生纠纷\",\n      \"when\": \"2022年7月5日立案\",\n      \"where\": \"[2] 案件背景与管辖权异议\",\n      \"why\": \"按照6种案由对判决文书进行分类，需要确定该文书属于哪一类案由\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"2\",\n        \"section_title\": \"案件背景与管辖权异议\",\n        \"verbatim\": \"原告陈某文与被告赵某等民间借贷纠纷一案，北京市丰台区人民法院于2022年7月5日立案。\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

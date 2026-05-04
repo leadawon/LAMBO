@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC6",
+  "doc_title": "《判决文书6》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书6》",
+      "what": "本案为不动产登记纠纷案件",
+      "when": "2024年1月15日立案",
+      "where": "[2] 案件审理经过",
+      "why": "按照6种案由对判决文书进行分类",
+      "how": "classification_cue",
+      "source": {
+        "section": "2",
+        "section_title": "案件审理经过",
+        "verbatim": "原告张某与被告张某某、周某不动产登记纠纷一案，本院于2024年1月15日立案后，依法适用简易程序，公开开庭进行了审理。",
+        "char_start": 0,
+        "char_end": 59
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "原告张某与被告张某某、周某不动产登记纠纷一案，本院于2024年1月15日立案后，依法适用简易程序，公开开庭进行了审理。",
+  "opened_anchors": [
+    "1",
+    "2"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>The user wants me to classify a judgment document (DOC6) into one of 6 case types:\n1. 行政主体-房屋拆迁管理（拆迁）\n2. 刑事赔偿\n3. 不动产登记纠纷\n4. 知识产权与竞争\n5. 产品责任纠纷\n6. 行政行为-行政给付\n\nI need to read the document to determine its case type. I should start by opening sections that typically contain the case type information, such as the title, parties, or the court's reasoning. Let me start with section [1] 当事人基本信息 (Basic Information of Parties) or [2] 案件审理经过 (Case Trial Process) to understand the nature of the case.\n\nActually, the case type is often mentioned in the header or in the \"本院认为\" (Court's Opinion) section. Let me start by opening section [1] to see the basic information.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"Basic information about the parties and the case type\"}</search>\n<info anchor_id=\"1\">\n原告：张某，男，19**年**月**日出生，汉族，住西安市雁塔区。\n委托诉讼代理人：张某某，上海某某律师事务所律师。\n被告：张某某，男，19**年**月**日出生，汉族，住西安市莲湖区。\n被告：周某，女，19**年**月**日出生，汉族，住西安市莲湖区。\n\n</info>\n\n--- Round 2 ---\n<think>The user wants me to classify DOC6 into one of 6 case types. I've opened section [1] which shows basic party information - it's a civil case with plaintiff 张某 and defendants 张某某 and 周某. This doesn't give me the case type yet.\n\nI need to look at other sections to determine the case type. The case type is often mentioned in:\n- Section [2] 案件审理经过 (Case Trial Process) - might mention the cause of action\n- Section [3] 原告诉称 (Plaintiff's Claims) - describes what the plaintiff is suing about\n- Section [7] 本院认为 (Court's Opinion) - often states the legal basis and case type\n\nLet me open section [2] to see if it contains information about the case type.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"Case trial process information including case type or cause of action\"}</search>\n<info anchor_id=\"2\">\n原告张某与被告张某某、周某不动产登记纠纷一案，本院于2024年1月15日立案后，依法适用简易程序，公开开庭进行了审理。当事人及委托诉讼代理人均到庭参加了诉讼。本案现已审理终结。\n\n</info>\n\n--- Round 3 ---\n<think>In Round 2, I opened section [2] 案件审理经过 and found the key information:\n\n\"原告张某与被告张某某、周某不动产登记纠纷一案\"\n\nThis clearly states that this is an \"不动产登记纠纷\" (Real Estate Registration Dispute) case. This directly matches one of the 6 case types I need to classify into.\n\nNow I have sufficient evidence to classify DOC6 (《判决文书6》) as belonging to the \"不动产登记纠纷\" category.\n\nI should stop and emit the answer with the evidence record.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found the case type in section [2] - this is an 不动产登记纠纷 case\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书6》\",\n      \"what\": \"本案为不动产登记纠纷案件\",\n      \"when\": \"2024年1月15日立案\",\n      \"where\": \"[2] 案件审理经过\",\n      \"why\": \"按照6种案由对判决文书进行分类\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"2\",\n        \"section_title\": \"案件审理经过\",\n        \"verbatim\": \"原告张某与被告张某某、周某不动产登记纠纷一案，本院于2024年1月15日立案后，依法适用简易程序，公开开庭进行了审理。\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

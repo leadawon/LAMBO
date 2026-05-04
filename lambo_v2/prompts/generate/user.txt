@@ -4,13 +4,19 @@ Question:
 Instruction:
 {instruction}
 
-Document title list (DOC id → original document title):
-{doc_title_list}
+Composer — reading_trace:
+{reading_trace}
 
-Projection map (DOC id → entity name):
-{projection_map}
+Composer — evidence_units:
+{evidence_units}
 
-Composed analysis:
-{composed_json}
+Composer — evidence_relations:
+{evidence_relations}
 
-Return ONLY the final answer. Follow the instruction's explicit format exactly (keys, units, precision, language, ordering). No commentary, no markdown fences, no preface or suffix.
+Composer — answer_basis:
+{answer_basis}
+
+Composer — uncertainty:
+{uncertainty}
+
+Return ONLY the final answer. Every doc identity (doc_id and doc_title) you need is already paired with its evidence inside the Composer's evidence_units and answer_basis — read the values from there. Follow the instruction's explicit format exactly (keys, units, precision, language, ordering). No commentary, no markdown fences, no preface or suffix.

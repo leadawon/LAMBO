@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "DOC1公司",
+      "what": "归属于上市公司股东的净利润为-24,229,758.80元（本报告期）",
+      "when": "2024年一季度（本报告期）",
+      "where": "[2.1] 主要会计数据和财务指标 · 表格行'归属于上市公司股东的净利润（元）'",
+      "why": "问题要求找出归属于母公司股东的净利润最低的公司，需要提取各公司的该指标值进行比较",
+      "how": "rank_input",
+      "source": {
+        "section": "2.1",
+        "section_title": "主要会计数据和财务指标",
+        "verbatim": "归属于上市公司股东的净利润（元）|-24,229,758.80|-46,301,393.53|47.67%",
+        "char_start": 145,
+        "char_end": 198
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "归属于上市公司股东的净利润（元）|-24,229,758.80|-46,301,393.53|47.67%",
+  "opened_anchors": [
+    "2.1"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to find which company has the lowest net profit attributable to shareholders of the parent company (归属于母公司股东的净利润).\n\nI need to look at the financial statements in this document (DOC1) to find the net profit attributable to shareholders of the parent company. This is typically found in the income statement (利润表).\n\nLet me start by opening section [2.1] 主要会计数据和财务指标 which should contain key financial data, or [5.1.2] 合并利润表 which is the consolidated income statement.\n\nLet me first check section [2.1] as it's likely to have summarized financial data.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2.1\",\"expected_evidence\":\"归属于母公司股东的净利润数值\"}</search>\n<info anchor_id=\"2.1\">\n一、主要财务数据\n（一）主要会计数据和财务指标\n公司是否需追溯调整或重述以前年度会计数据\n□是 区否\n|-|本报告期|上年同期|本报告期比上年同期增减（%）|\n|---|---|---|---|\n|营业收入（元）|45,188,663.74|73,588,468.84|-38.59%|\n|归属于上市公司股东的净利润（元）|-24,229,758.80|-46,301,393.53|47.67%|\n|归属于上市公司股东的扣除非经常性损益的净利润<br>（元）|-22,571,399.16|-44,655,334.39|49.45%|\n|经营活动产生的现金流量净额（元）|-60,231,664.42|67,735,516.37|-188.92%|\n|基本每股收益（元/股）|-0.02|-0.04|50.00%|\n|稀释每股收益（元/股）|-0.02|-0.04|50.00%|\n|加权平均净资产收益率|-0.54%|-1.04%|增加 0.50个百分点|\n|-|本报告期末|上年度末|本报告期末比上年度末增减（%）|\n|总资产（元）|6,794,012,871.36|7,018,721,817.27|-3.20%|\n|归属于上市公司股东的所有者权益（元）|4,446,238,366.31|4,470,393,889.16|-0.54%|（二）非经常性损益项目和金额\n\n</info>\n\n--- Round 2 ---\n<think>I found the key financial data in section [2.1]. The document shows:\n\n\"归属于上市公司股东的净利润（元）|-24,229,758.80|-46,301,393.53|47.67%\"\n\nThis means the net profit attributable to shareholders of the parent company (归属于母公司股东的净利润) for this company (DOC1) is -24,229,758.80 yuan for the current reporting period.\n\nHowever, I need to note that this is only DOC1. The question asks me to compare multiple companies (DOC1, DOC2, DOC3) to find which one has the lowest net profit. I can only extract evidence from this document (DOC1) and provide the value for this company. The comparison across documents will be handled by the Composer.\n\nLet me extract this evidence and then stop, as I have found the relevant data for this document.</think>\n<search>{\"action\":\"stop\",\"reason\":\"found the net profit attributable to shareholders of the parent company for DOC1\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"DOC1公司\",\n      \"what\": \"归属于上市公司股东的净利润为-24,229,758.80元（本报告期）\",\n      \"when\": \"2024年一季度（本报告期）\",\n      \"where\": \"[2.1] 主要会计数据和财务指标 · 表格行'归属于上市公司股东的净利润（元）'\",\n      \"why\": \"问题要求找出归属于母公司股东的净利润最低的公司，需要提取各公司的该指标值进行比较\",\n      \"how\": \"rank_input\",\n      \"source\": {\n        \"section\": \"2.1\",\n        \"section_title\": \"主要会计数据和财务指标\",\n        \"verbatim\": \"归属于上市公司股东的净利润（元）|-24,229,758.80|-46,301,393.53|47.67%\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

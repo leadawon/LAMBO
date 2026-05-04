@@ -1,0 +1,33 @@
+{
+  "doc_id": "DOC1",
+  "doc_title": "《判决文书1》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书1》",
+      "what": "案件涉及唐山市路南区人力资源和社会保障局作为被申请人，属于劳动和社会保障行政管理类案件",
+      "when": "—",
+      "where": "[1] 当事人基本信息",
+      "why": "按照5种案由对判决文书进行分类，需要确定该文书属于哪一类案由",
+      "how": "classification_cue",
+      "source": {
+        "section": "1",
+        "section_title": "当事人基本信息",
+        "verbatim": "被申请人（一审被告、二审被上诉人）唐山市路南区人力资源和社会保障局。住所地：唐山市路南区。",
+        "char_start": 62,
+        "char_end": 107
+      },
+      "found_relation": {
+        "subject": "《判决文书1》",
+        "predicate": "classified_as",
+        "object": "行政主体-劳动和社会保障行政管理（劳动，社会保障）"
+      }
+    }
+  ],
+  "evidence": "被申请人（一审被告、二审被上诉人）唐山市路南区人力资源和社会保障局。住所地：唐山市路南区。",
+  "opened_anchors": [
+    "1"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>This is the first round for DOC1 (《判决文书1》). I need to classify this judgment document into one of 5 case types:\n1. 执行案由-刑事 (Execution case - Criminal)\n2. 执行案由-行政非诉执行 (Execution case - Administrative non-litigation execution)\n3. 海事海商纠纷 (Maritime and commercial disputes)\n4. 知识产权与竞争 (Intellectual property and competition)\n5. 行政主体-劳动和社会保障行政管理（劳动，社会保障）(Administrative subject - Labor and social security administration)\n\nI need to open sections to find evidence about what type of case this is. Let me start by opening section [1] 当事人基本信息 (Basic party information) to understand the nature of the case.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"Information about the case type, parties involved, and nature of the dispute\"}</search>\n<info anchor_id=\"1\">\n再审申请人（一审原告、二审上诉人）石家庄某某集团有限公司。住所地：石家庄市新华区。\n委托代理人李某强。\n委托代理人曹某科。\n被申请人（一审被告、二审被上诉人）唐山市路南区人力资源和社会保障局。住所地：唐山市路南区。\n原审第三人孙某仓，男，1967年5月16日出生，汉族，住河南省安阳市滑县。\n\n</info>\n\n--- Round 2 ---\n<think>From the <info> block for section [1], I can see:\n- 再审申请人（一审原告、二审上诉人）: 石家庄某某集团有限公司 (a company)\n- 被申请人（一审被告、二审被上诉人）: 唐山市路南区人力资源和社会保障局 (Tangshan Lunan District Human Resources and Social Security Bureau)\n- 原审第三人: 孙某仓 (an individual)\n\nThe key evidence here is that one of the parties is \"唐山市路南区人力资源和社会保障局\" (Human Resources and Social Security Bureau). This strongly suggests this case falls under \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\" (Administrative subject - Labor and social security administration).\n\nThis is a clear classification cue. The document involves a labor and social security administrative body as a party, which directly matches one of the 5 case types.\n\nI have sufficient evidence to classify this document. Let me stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"Found clear evidence that this case involves a labor and social security administrative body (唐山市路南区人力资源和社会保障局) as a party, which classifies it under '行政主体-劳动和社会保障行政管理（劳动，社会保障）'\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书1》\",\n      \"what\": \"案件涉及唐山市路南区人力资源和社会保障局作为被申请人，属于劳动和社会保障行政管理类案件\",\n      \"when\": \"—\",\n      \"where\": \"[1] 当事人基本信息\",\n      \"why\": \"按照5种案由对判决文书进行分类，需要确定该文书属于哪一类案由\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"1\",\n        \"section_title\": \"当事人基本信息\",\n        \"verbatim\": \"被申请人（一审被告、二审被上诉人）唐山市路南区人力资源和社会保障局。住所地：唐山市路南区。\"\n      },\n      \"found_relation\": {\n        \"subject\": \"《判决文书1》\",\n        \"predicate\": \"classified_as\",\n        \"object\": \"行政主体-劳动和社会保障行政管理（劳动，社会保障）\"\n      }\n    }\n  ]\n}</answer>\n"
+}

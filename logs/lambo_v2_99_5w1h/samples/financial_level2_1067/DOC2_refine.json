@@ -1,0 +1,29 @@
+{
+  "doc_id": "DOC2",
+  "doc_title": "《2024年一季度报告》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "DOC2公司",
+      "what": "营业收入较上一报告期变化为 8.03%",
+      "when": "2024年一季度",
+      "where": "[2.1] 主要会计数据和财务指标 · 营业收入行",
+      "why": "回答'营业收入较上一报告期变化'最高的公司是哪一个",
+      "how": "rank_input",
+      "source": {
+        "section": "2.1",
+        "section_title": "主要会计数据和财务指标",
+        "verbatim": "营业收入（元）|16,254,884,718.38|15,046,180,974.50|8.03%",
+        "char_start": 90,
+        "char_end": 139
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "营业收入（元）|16,254,884,718.38|15,046,180,974.50|8.03%",
+  "opened_anchors": [
+    "2.1"
+  ],
+  "rounds_used": 1,
+  "trace": "\n--- Round 1 ---\n<think>The user is asking me to find which company has the highest change in operating revenue compared to the previous reporting period. I need to look at financial reports from multiple companies (DOC1, DOC2, DOC3) and compare their operating revenue changes.\n\nI'm currently processing DOC2 (《2024年一季度报告》). I need to find the operating revenue (营业收入) and its change compared to the previous period.\n\nThe most relevant section would be [2.1] 主要会计数据和财务指标 (Main accounting data and financial indicators) or [5.1.2] 合并利润表 (Consolidated income statement).\n\nLet me start by opening section [2.1] which typically contains key financial data including operating revenue and year-over-year changes.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2.1\",\"expected_evidence\":\"营业收入数据及其较上一报告期的变化百分比\"}</search>\n<info anchor_id=\"2.1\">\n（一）主要会计数据和财务指标\n公司是否需追溯调整或重述以前年度会计数据\n□是 口否\n|-|本报告期|上年同期|本报告期比上年同期增减（%）|\n|---|---|---|---|\n|营业收入（元）|16,254,884,718.38|15,046,180,974.50|8.03%|\n|归属于上市公司股东的净利润（元）|6,055,230,532.04|5,766,047,982.64|5.02%|\n|归属于上市公司股东的扣除非经常性损益的净利润（元）|6,050,415,450.86|5,665,647,207.53|6.79%|\n|经营活动产生的现金流量净额（元）|4,850,465,091.64|1,402,723,384.09|245.79%|\n|基本每股收益（元/股）|4.0195|3.8276|5.01%|\n|稀释每股收益（元/股）|4.0195|3.8276|5.01%|\n|加权平均净资产收益率|11.02%|11.45%|-0.43%|\n|-|本报告期末|上年度末|本报告期末比上年度末增减（%）|\n|总资产（元）|72,405,328,586.55|69,792,287,455.91|3.74%|\n|归属于上市公司股东的所有者权益（元）|57,990,087,095.67|51,938,515,345.20|11.65%|（二）非经常性损益项目和金额\n\n</info>\n\n--- Round 2 ---\n<think>I found the operating revenue data in section [2.1] of DOC2. The key information is:\n\n- 营业收入（元）: 16,254,884,718.38 (current period)\n- 上年同期: 15,046,180,974.50 (previous period)\n- 本报告期比上年同期增减（%）: 8.03%\n\nSo for DOC2, the operating revenue change compared to the previous reporting period is 8.03%.\n\nHowever, I need to compare this with DOC1 and DOC3 to determine which company has the highest change. Since I'm only processing DOC2 in this round, I should extract this evidence and then stop. The system will process other documents in separate rounds.\n\nLet me create a record for this finding:\n- who: The company in DOC2 (I don't have the company name from this section, but I can use \"DOC2\" or note that the company name is not specified in this section)\n- what: 营业收入较上一报告期变化为 8.03%\n- when: 2024年一季度 (from the document title)\n- where: [2.1] 主要会计数据和财务指标\n- why: To answer which company has the highest operating revenue change\n- how: rank_input (this is a numeric value for comparison)\n- source: section 2.1, with verbatim from the table\n\nActually, looking at the instruction again, I'm told to process ONE document at a time through an iterative loop. The question asks me to compare multiple companies, but I should only extract evidence from DOC2 and let the system handle the comparison across documents.\n\nLet me stop and emit the evidence I found from DOC2.</think>\n<search>{\"action\":\"stop\",\"reason\":\"collected operating revenue change data from DOC2 section 2.1\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"DOC2公司\",\n      \"what\": \"营业收入较上一报告期变化为 8.03%\",\n      \"when\": \"2024年一季度\",\n      \"where\": \"[2.1] 主要会计数据和财务指标 · 营业收入行\",\n      \"why\": \"回答'营业收入较上一报告期变化'最高的公司是哪一个\",\n      \"how\": \"rank_input\",\n      \"source\": {\n        \"section\": \"2.1\",\n        \"section_title\": \"主要会计数据和财务指标\",\n        \"verbatim\": \"营业收入（元）|16,254,884,718.38|15,046,180,974.50|8.03%\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}

@@ -1,0 +1,30 @@
+{
+  "doc_id": "DOC13",
+  "doc_title": "《判决文书13》",
+  "scan_result": "evidence_found",
+  "evidence_records": [
+    {
+      "who": "《判决文书13》",
+      "what": "案件类型为行政行为-行政登记，涉及不动产抵押登记争议",
+      "when": "—",
+      "where": "[2] 案件由来与申请理由",
+      "why": "按照7种案由对判决文书进行分类",
+      "how": "classification_cue",
+      "source": {
+        "section": "2",
+        "section_title": "案件由来与申请理由",
+        "verbatim": "再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。",
+        "char_start": 0,
+        "char_end": 79
+      },
+      "found_relation": null
+    }
+  ],
+  "evidence": "再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。",
+  "opened_anchors": [
+    "1",
+    "2"
+  ],
+  "rounds_used": 2,
+  "trace": "\n--- Round 1 ---\n<think>I need to classify this judgment document (DOC13: 《判决文书13》) into one of the 7 case types:\n1. 行政行为-行政登记\n2. 与公司，证券，保险，票据等有关的民事纠纷\n3. 执行案由-先予执行\n4. 执行案由-对下级法院执行异议裁定的复议\n5. 行政行为-行政裁决\n6. 刑事赔偿\n7. 执行案由-其他案由\n\nI need to read the document to determine its case type. Let me start by opening the first section to understand the nature of this case.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"1\",\"expected_evidence\":\"当事人信息，了解案件当事人和案件性质\"}</search>\n<info anchor_id=\"1\">\n再审申请人（一审第三人、二审上诉人）北京某某担保有限公司。\n被申请人（一审原告、二审被上诉人）沈某。\n一审被告北京市规划和自然资源委员会海淀分局。\n\n</info>\n\n--- Round 2 ---\n<think>From the first section (当事人信息), I can see:\n- 再审申请人（一审第三人、二审上诉人）: 北京某某担保有限公司\n- 被申请人（一审原告、二审被上诉人）: 沈某\n- 一审被告: 北京市规划和自然资源委员会海淀分局\n\nThe defendant is \"北京市规划和自然资源委员会海淀分局\" (Haidian Branch of Beijing Municipal Commission of Planning and Natural Resources), which is a government administrative body. This suggests this is an administrative case (行政行为).\n\nNow I need to determine whether it's \"行政行为-行政登记\" or \"行政行为-行政裁决\". Let me read more sections to understand the nature of the administrative act involved.</think>\n<search>{\"action\":\"open\",\"anchor_id\":\"2\",\"expected_evidence\":\"案件由来与申请理由，了解案件的具体争议内容和行政行为类型\"}</search>\n<info anchor_id=\"2\">\n再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。本院依法组成合议庭对本案进行了审查，现已审查终结。\n某某担保公司申请再审称，原审存在超越法定职权、滥用裁量权、混淆基本法律概念、适用法律错误等情形。请求撤销原审判决；指令原审法院对本案予以再审，或者由本院提审。\n\n</info>\n\n--- Round 3 ---\n<think>From section 2 (案件由来与申请理由), I found key evidence:\n- \"因不动产抵押登记一案\" - This is about \"immovable property mortgage registration\"\n- \"不服北京市第一中级人民法院(2023)京01行终167号行政判决\" - This is an administrative judgment (行政判决)\n- The case involves \"不动产抵押登记\" (immovable property mortgage registration)\n\nThis clearly indicates this is an administrative case related to registration (行政登记). The defendant is a planning and natural resources committee (规划和自然资源委员会), which handles property registration matters.\n\nThe case type should be \"行政行为-行政登记\" (Administrative Act - Administrative Registration).\n\nI have enough evidence to classify this document. Let me stop and provide the answer.</think>\n<search>{\"action\":\"stop\",\"reason\":\"collected all needed evidence to classify the document\"}</search>\n<answer>{\n  \"scan_result\": \"evidence_found\",\n  \"records\": [\n    {\n      \"who\": \"《判决文书13》\",\n      \"what\": \"案件类型为行政行为-行政登记，涉及不动产抵押登记争议\",\n      \"when\": \"—\",\n      \"where\": \"[2] 案件由来与申请理由\",\n      \"why\": \"按照7种案由对判决文书进行分类\",\n      \"how\": \"classification_cue\",\n      \"source\": {\n        \"section\": \"2\",\n        \"section_title\": \"案件由来与申请理由\",\n        \"verbatim\": \"再审申请人北京某某担保有限公司（以下简称某某担保公司）因不动产抵押登记一案，不服北京市第一中级人民法院(2023)京01行终167号行政判决，向本院申请再审。\"\n      },\n      \"found_relation\": null\n    }\n  ]\n}</answer>\n"
+}
